@@ -31,7 +31,7 @@ $bg-minHeight: 720px;
 		top: 50%;
 		margin-top: - $ht / 2;
 		text-align: center;
-		
+
 		.logo {
 			$wd-ht: 120px;
 			box-sizing: border-box;
@@ -48,12 +48,12 @@ $bg-minHeight: 720px;
 				top: 42px;
 				left: 2px;
 			}
-		}	
+		}
 		.inp, .btn-login {
 			height: 29px;
 		}
 		.inp {
-			@extend %inp-txt-base;
+			@include form-base;
 			width: 100%;
 			border: 1px solid #414147;
 			box-shadow: 0px 1px 1px #dddddd;
@@ -66,7 +66,7 @@ $bg-minHeight: 720px;
 			}
 		}
 		.btn-login {
-			@extend %btn-base;
+			@include btn-base;
 			padding: 0 30px;
 			margin-top: 20px;
 			background: #ad9779;
@@ -78,7 +78,7 @@ $bg-minHeight: 720px;
 	}
 	.row-forgot {
 		position: absolute;
-		width: 100%; 
+		width: 100%;
 		left: 0;
 		bottom: 40px;
 		text-align: center;
@@ -145,7 +145,7 @@ $bg-minHeight: 720px;
 			margin-top: 30px;
 		}
 		.logo {
-			
+
 		}
 		.row {
 			text-align: left;
@@ -160,7 +160,7 @@ $bg-minHeight: 720px;
 			height: 51px;
 		}
 		.inp {
-			@extend %inp-txt-base;
+			@include form-base;
 			width: 100%;
 			font-size: 16px;
 			padding: 0 10px;
@@ -168,7 +168,7 @@ $bg-minHeight: 720px;
 			border-radius: 0;
 		}
 		.btn-login {
-			@extend %btn-base;
+			@include btn-base;
 			width: 100%;
 			padding: 0 30px;
 			margin-top: 20px;
@@ -177,7 +177,7 @@ $bg-minHeight: 720px;
 			color: rgba(255,255,255, 0.9);
 			text-shadow: 0px -1px rgba(0,0,0, 0.3);
 			border-radius: 0;
-			letter-spacing: 0;			
+			letter-spacing: 0;
 			font-size: 20px;
 		}
 		.row-txt {
@@ -221,9 +221,9 @@ $bg-minHeight: 720px;
 }
 /* ID 찾기 */
 .cont-forgot-id {
-	
+
 }
 /* PW 찾기 */
 .cont-forgot-pw {
-	
+
 }

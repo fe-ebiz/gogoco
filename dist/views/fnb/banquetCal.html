@@ -455,12 +455,13 @@
             <script>
                 $(function() {
                 				$(".cal-tab").on("click", function() {
-                
+                					var idx = $(this).index();
+                					$(".month-day-list").eq(idx).show().siblings().hide();
                 				});
                 			});
             </script>
             <div class="cf cont-container-f">
-                <div class="grid-toolbar">
+                <div class="grid-toolbar top">
                     <button type="button" class="btn-gray today">Today</button>
                     <button type="button" class="btn-gray prev"><span>◀</span>
                     </button>
@@ -471,14 +472,14 @@
 
                     <span class="pull-right cal-tab">
 
-					<button type="button" class="btn-gray m on">Month</button>
+					<button type="button" class="btn-gray m">Month</button>
 
-					<button type="button" class="btn-gray d">Day</button>
+					<button type="button" class="btn-gray d on">Day</button>
 
 				</span>
                 </div>
                 <!-- /.grid-toolbar -->
-                <div class="cont-area">
+                <div class="cont-area month-day-list">
                     <div class="cont-month">
                         <table class="month-tbl">
                             <colgroup>
@@ -620,243 +621,28 @@
                         </table>
                     </div>
                     <!-- //.cont-month -->
-                    <div class="cont-day">
-                        <ul class="day-top">
-                            <li>
-                                <dl>
-                                    <dt></dt>
-                                    <dd>Tue 3/26</dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt>all day</dt>
-                                    <dd></dd>
-                                </dl>
-                            </li>
-                        </ul>
-                        <div class="day-body-scroller">
-                            <ul class="day-body">
-                                <li>
-                                    <dl>
-                                        <dt>12:00 AM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>1:00 AM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>2:00 AM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>3:00 AM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>4:00 AM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>5:00 AM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>6:00 AM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>7:00 AM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>8:00 AM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>9:00 AM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>10:00 AM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>11:00 AM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>12:00 PM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>1:00 PM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>2:00 PM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>3:00 PM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>4:00 PM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>5:00 PM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>6:00 PM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>7:00 PM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>8:00 PM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>9:00 PM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>10:00 PM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>11:00 PM</dt>
-                                        <dd>
-                                            <div class="row-1"></div>
-                                            <div class="row-2"></div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                            </ul>
+                    <div class="cont-day on">
+                        <table class="top-tbl">
+                            <colgroup>
+                                <col style="width: 70px">
+                                    <col style="width: *">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th></th>
+                                    <td>Tue 3/26</td>
+                                </tr>
+                                <tr>
+                                    <th>all day</th>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="body-scrollar">
+
                         </div>
-                        <div class="grid-toolbar">
-                            <button type="button"><span class="icon ic-clock"></span> Show business hours</button>
+                        <div class="grid-toolbar bottom">
+                            <button type="button" class="btn-gray"><span class="icon ic-clock"></span> Show business hours</button>
                         </div>
                     </div>
                     <!-- /.cont-day -->

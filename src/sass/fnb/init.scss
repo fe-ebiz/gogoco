@@ -1,7 +1,8 @@
 @charset "utf-8";
 
-@import "../parts/variables";
-@import "../parts/mixins";
+// @import "../parts/variables";
+// @import "../parts/mixins";
+@import "../parts/common";
 
 /* 업장 */
 .outlet-contents {
@@ -494,6 +495,12 @@
 		}
 	}
 	.cont-area {
+		> div {
+			display: none;
+			&.on {
+				display: block;
+			}
+		}
 		.cont-month {
 			.month-tbl {
 				position: relative;
@@ -552,7 +559,33 @@
 			}
 		}
 		.cont-day {
+			.top-tbl {
+				position: relative;
+				table-layout: fixed;
+				width: 100%;
+				th, td {
+					@include ft(12px, null, 700);
+					border: 1px solid $bor-gray-table;
+					text-align: center;
+					height: 26px;
+					padding: 3px 5px;
+					box-sizing: border-box;
+				}
+				th {
+					text-align: right;
+					border-right: 1px solid $bor-gray-table;
+				}
+				td {
+					background: #f8f8f8;
+					.cell:first-child {
+						border-bottom: 1px dotted #c5c5c5;
+					}
+				}
+			}
 
+			.grid-toolbar.bottom {
+				border-top: 0;
+			}
 		}
 	}
 }

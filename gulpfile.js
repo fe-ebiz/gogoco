@@ -19,6 +19,7 @@ var del      = require('del'),
 	fileinclude = require('gulp-file-include'),
 	ejs      = require('gulp-ejs'),
 	sass	 = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
 	plumber  = require('gulp-plumber'),
 	watch    = require('gulp-watch'),
 	prettify = require('gulp-html-prettify'),
@@ -28,7 +29,7 @@ var del      = require('del'),
 
 	// 환경설정 ./config.js
 	config   = require('./config')();
-	
+
 /**
  * Gulp 업무(Tasks) 정의
  */
@@ -147,6 +148,10 @@ gulp.task('sass', function() {
 	gulp.src( config.sass.src )
 		.pipe( plumber() )
 		.pipe( sass({outputStyle: 'compact'}).on('error', sass.logError)) // {outputStyle: nested} expanded, compact, compressed
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
 		.pipe( gulp.dest( config.sass.dest ) )
 		.pipe(browerSync.reload({stream: true}));
 });
