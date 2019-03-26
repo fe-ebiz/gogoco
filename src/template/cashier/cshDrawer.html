@@ -1,0 +1,293 @@
+@@include('../include/_head.html', {
+	"page": "cashier"
+})
+
+<!-- 페이지 전용 -->
+
+<body class="page-cashier">
+
+<!-- @@include('../include/pop/pop_rsv.html') -->
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="cf contents cshDraw-contents">
+
+		<div class="row-top-btn">
+			<button type="button" class="btn-green" onclick="popFn.show('.')">환율설정</button>
+			<button type="button" class="btn-green">NEW</button>
+		</div>
+
+		@@include('../include/_row_h2.html', {
+			"page-title": "금전 출납"
+		})
+
+		<div class="cf cont-container-f">
+			<div class="cont-property">
+				<div class="grid-wrap">
+					<div class="grid-contents">
+						<table class="grid-tbl tbl-property">
+							<colgroup>
+								<col style="width:90px">
+								<col style="width:250px">
+								<col style="width:90px">
+								<col style="width:120px">
+								<col style="width:90px">
+								<col style="width:*">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th><div class="cell">날짜</div></th>
+									<td>
+										<div class="cell">
+											<span class="cal-box">
+												<input type="text" class="appe-reset inp-cal date-ui">
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+											</span>
+											<span class="mg-">~</span>
+											<span class="cal-box">
+												<input type="text" class="appe-reset inp-cal date-ui">
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+											</span>
+										</div>
+									</td>
+									<th><div class="cell">통화</div></th>
+									<td>
+										<div class="cell">
+											<select name="" id="" class="form-select">
+												<option value="">KRW</option>
+												<option value="">USD</option>
+												<option value="">JPY</option>
+											</select>
+										</div>
+									</td>
+									<th><div class="cell">항목</div></th>
+									<td>
+										<div class="cell">
+											<input type="text" class="form-input name">
+											<button type="button" class="btn-brown">SEARCH</button>
+											<button type="button" class="btn-brown">CLEAR</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- //.cont-property -->
+			<div class="cont-area area-1">
+				<div class="cont-list">
+					<div class="grid-toolbar">
+						<button type="button" class="btn-gray btn-changes"><span class="icon ic-excel"></span> Export to Excel</button>
+						<button type="button" class="btn-gray btn-changes"><span class="icon ic-plus"></span> Add new record</button>
+					</div>
+					<!-- /.grid-toolbar -->
+					<div class="grid-wrap scr-wrap">
+						<div class="grid-scrollable-x">
+							<div class="grid-area grid-head">
+								<div class="grid-scrollable">
+									<table class="grid-tbl">
+										<colgroup>
+											<col style="width:70px">
+											<col style="width:60px">
+											<col style="width:150px">
+											<col style="width:100px">
+											<col style="width:100px">
+											<col style="width:100px">
+											<col style="width:80px">
+											<col style="width:370px">
+											<col style="width:80px">
+											<col style="width:100px">
+										</colgroup>
+										<thead class="rowgroup">
+											<tr>
+												<th><div class="cell">날짜</div></th>
+												<th><div class="cell">시간</div></th>
+												<th><div class="cell">항목</div></th>
+												<th><div class="cell">In</div></th>
+												<th><div class="cell">Out</div></th>
+												<th><div class="cell">Balance</div></th>
+												<th><div class="cell">Currency</div></th>
+												<th><div class="cell">비고</div></th>
+												<th><div class="cell">생성자</div></th>
+												<th><div class="cell"></div></th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+							</div>
+							<div class="grid-area grid-contents">
+								<table class="grid-tbl">
+									<colgroup>
+										<col style="width:70px">
+										<col style="width:60px">
+										<col style="width:150px">
+										<col style="width:100px">
+										<col style="width:100px">
+										<col style="width:100px">
+										<col style="width:80px">
+										<col style="width:370px">
+										<col style="width:80px">
+										<col style="width:100px">
+									</colgroup>
+									<tbody class="rowgroup">
+										<!-- Add new record 클릭시 -->
+										<tr>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"><input type="text" class="form-input"></div></td>
+											<td><div class="cell"><input type="number" class="form-input" placeholder="￦0"></div></td>
+											<td><div class="cell"><input type="number" class="form-input" placeholder="￦0"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"><input type="text" class="form-input"></div></td>
+											<td><div class="cell"></div></td>
+											<td>
+												<div class="cell">
+													<button type="button" class="btn-orange"><span class="icon ic-check"></span> <span>Update</span></button>
+													<button type="button" class="btn-gray" onclick="$(this).closest('tr').hide()"><span class="icon ic-cancel"></span> <span>Cancel</span></button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td><div class="cell">2019-03-17</div></td>
+											<td><div class="cell">23:01:32</div></td>
+											<td><div class="cell">체크인 결제</div></td>
+											<td class="co-blue"><div class="cell">￦60,000</div></td>
+											<td class="co-red"><div class="cell">￦0</div></td>
+											<td><div class="cell">￦72,114,623</div></td>
+											<td><div class="cell">KRW</div></td>
+											<td><div class="cell">CHK# : KSG1903158935</div></td>
+											<td><div class="cell">강형진</div></td>
+											<td><div class="cell"><button type="button" class="btn-gray"><span class="icon ic-edit"></span> Edit</button></div></td>
+										</tr>
+										<tr>
+											<td><div class="cell">2019-03-17</div></td>
+											<td><div class="cell">23:01:32</div></td>
+											<td><div class="cell">체크인 결제</div></td>
+											<td class="co-blue"><div class="cell">￦60,000</div></td>
+											<td class="co-red"><div class="cell">￦0</div></td>
+											<td><div class="cell">￦72,114,623</div></td>
+											<td><div class="cell">KRW</div></td>
+											<td><div class="cell">CHK# : KSG1903158935</div></td>
+											<td><div class="cell">강형진</div></td>
+											<td><div class="cell"><button type="button" class="btn-gray"><span class="icon ic-edit"></span> Edit</button></div></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- //.grid-wrap -->
+					<div class="cf grid-bottom">
+						<a href="#" class="prev st">&lt;&lt;</a>
+						<a href="#" class="prev">&lt;</a>
+						<span class="num">0</span>
+						<a href="#" class="next">&gt;</a>
+	  					<a href="#" class="next st">&gt;&gt;</a>
+						<span class="count">1 - 100 of 158 items</span>
+					</div>
+					<!-- //.grid-bottom-->
+				</div>
+				<!-- //.cont-list -->
+			</div>
+			<div class="cont-area area-2">
+				<div class="grid-wrap">
+					<div class="grid-contents">
+						<table class="grid-tbl">
+							<colgroup>
+								<col style="width: 100px">
+								<col style="width: 80px">
+								<col style="width: *">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th><div class="cell">Cash on hand</div></th>
+									<td colspan="2" class="fw-b">
+										<div class="cell">￦564,000</div>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<div class="cell">50,000 원</div>
+									</th>
+									<td><div class="cell"><input type="text" class="form-input ta-right" value="8"></div></td>
+									<td class="ta-right"><div class="cell">￦400,000</div></td>
+								</tr>
+								<tr>
+									<th>
+										<div class="cell">10,000 원</div>
+									</th>
+									<td><div class="cell"><input type="text" class="form-input ta-right" value="15"></div></td>
+									<td class="ta-right"><div class="cell">￦150,000</div></td>
+								</tr>
+								<tr>
+									<th>
+										<div class="cell">5,000 원</div>
+									</th>
+									<td><div class="cell"><input type="text" class="form-input ta-right" value="2"></div></td>
+									<td class="ta-right"><div class="cell">￦10,000</div></td>
+								</tr>
+								<tr>
+									<th>
+										<div class="cell">1,000 원</div>
+									</th>
+									<td><div class="cell"><input type="text" class="form-input ta-right" value="4"></div></td>
+									<td class="ta-right"><div class="cell">￦4,000</div></td>
+								</tr>
+								<tr>
+									<th>
+										<div class="cell">500 원</div>
+									</th>
+									<td><div class="cell"><input type="text" class="form-input ta-right" value="0"></div></td>
+									<td class="ta-right"><div class="cell">￦0</div></td>
+								</tr>
+								<tr>
+									<th>
+										<div class="cell">100 원</div>
+									</th>
+									<td><div class="cell"><input type="text" class="form-input ta-right" value="0"></div></td>
+									<td class="ta-right"><div class="cell">￦0</div></td>
+								</tr>
+								<tr>
+									<th>
+										<div class="cell">50 원</div>
+									</th>
+									<td><div class="cell"><input type="text" class="form-input ta-right" value="0"></div></td>
+									<td class="ta-right"><div class="cell">￦0</div></td>
+								</tr>
+								<tr>
+									<th>
+										<div class="cell">10 원</div>
+									</th>
+									<td><div class="cell"><input type="text" class="form-input ta-right" value="0"></div></td>
+									<td class="ta-right"><div class="cell">￦0</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- /.grid-wrap -->
+				<div class="row"><button type="button" class="pull-right btn-blue">SAVE</button></div>
+				<div class="row ta-right">
+					<span class="cal-box">
+						<input type="text" class="appe-reset inp-cal date-ui">
+						<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+					</span>
+					<span class="mg-">~</span>
+					<span class="cal-box">
+						<input type="text" class="appe-reset inp-cal date-ui">
+						<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+					</span>
+					<button type="button" class="btn-brown">LOAD</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //.contents -->
+
+</div>
+
+</body>
+</html>

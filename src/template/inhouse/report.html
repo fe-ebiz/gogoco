@@ -1,0 +1,147 @@
+@@include('../include/_head.html', {
+	"page": "inhouse"
+})
+
+<body class="page-inhouse">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="cf contents arvList-contents">
+		@@include('../include/_row_h2.html', {
+			"page-title": "도착 목록"
+		})
+		<div class="cf cont-container-f">
+			<div class="cont-property">
+				<div class="grid-wrap">
+					<div class="grid-contents">
+						<table class="grid-tbl tbl-property">
+							<colgroup>
+								<col style="width: 120px">
+								<col style="width: 180px">
+								<col style="width: *">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th><div class="cell">도착 날짜</div></th>
+									<td>
+										<div class="cell">
+											<span class="cal-box">
+												<input type="text" class="appe-reset inp-cal date-ui" value="2019-03-20">
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+											</span>
+										</div>
+									</td>
+									<td>
+										<div class="cell">
+										    <span class="pull-right">
+												<button type="button" class="btn-brown">SEARCH</button>
+												<button type="button" class="btn-gray btn-i"><span class="icon ic-excel"></span>Excel</button>
+												<button type="button" class="btn-gray btn-i"><span class="icon ic-pdf"></span>PDF</button>
+											</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="cont-list">
+				<div class="grid-wrap scr-wrap">
+					<div class="grid-scrollable-x">
+						<div class="grid-area grid-head">
+							<div class="grid-scrollable">
+								<table class="grid-tbl">
+									<colgroup>
+										<col style="width:70px">
+										<col style="width:185px">
+										<col style="width:115px">
+										<col style="width:95px">
+										<col style="width:95px">
+										<col style="width:50px">
+										<col style="width:60px">
+										<col style="width:60px">
+										<col style="width:155px">
+										<col style="width:80px">
+										<col style="width:125px">
+										<col style="width:105px">
+										<col style="width:105px">
+										<col style="width:105px">
+										<col style="width:*">
+									</colgroup>
+									<thead class="rowgroup">
+										<tr>
+											<th><div class="cell">객실#</div></th>
+											<th><div class="cell">이름</div></th>
+											<th><div class="cell">ACCT #</div></th>
+											<th><div class="cell">도착 날짜</div></th>
+											<th><div class="cell">출발 날짜</div></th>
+											<th><div class="cell">Nts</div></th>
+											<th><div class="cell">Ad/Ch</div></th>
+											<th><div class="cell">GRP/FIT</div></th>
+											<th><div class="cell">계정</div></th>
+											<th><div class="cell">R-Type</div></th>
+											<th><div class="cell">패키지</div></th>
+											<th><div class="cell">국가</div></th>
+											<th><div class="cell">R.Rate</div></th>
+											<th><div class="cell">T.Rate</div></th>
+											<th><div class="cell">RMK</div></th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div class="grid-area grid-contents">
+							<table class="grid-tbl">
+								<colgroup>
+									<col style="width:70px">
+									<col style="width:185px">
+									<col style="width:115px">
+									<col style="width:95px">
+									<col style="width:95px">
+									<col style="width:50px">
+									<col style="width:60px">
+									<col style="width:60px">
+									<col style="width:155px">
+									<col style="width:80px">
+									<col style="width:125px">
+									<col style="width:105px">
+									<col style="width:105px">
+									<col style="width:105px">
+									<col style="width:*">
+								</colgroup>
+								<tbody class="rowgroup">
+									<tr>
+										<td><div class="cell"></div></td>
+										<td><div class="cell">손정일</div></td>
+										<td><div class="cell">G1902020044</div></td>
+										<td><div class="cell">2019-03-20</div></td>
+										<td><div class="cell">2019-03-21</div></td>
+										<td><div class="cell">1</div></td>
+										<td><div class="cell">2 / 0</div></td>
+										<td><div class="cell">F.I.T</div></td>
+										<td><div class="cell">고코투어(가자닷컴)</div></td>
+										<td><div class="cell">DSB</div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td class="ta-right"><div class="cell">30,000</div></t>
+										<td class="ta-right"><div class="cell">30,000</div></td>
+										<td class="ta-left"><div class="cell">대외후불 고코투어 디럭스슈퍼더블 30000 박재훈</div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //.grid-wrap -->
+			</div>
+			<!-- //.cont-list -->
+		</div>
+	</div>
+	<!-- //.contents -->
+
+
+</div>
+</body>
+</html>
