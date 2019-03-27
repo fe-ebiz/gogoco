@@ -16,7 +16,7 @@
         }
 	}
     .cont-property {
-        .tbl-property {
+        .property-tbl {
             @include tbl-style-1;
             td {
                 .cell {
@@ -122,7 +122,7 @@
         }
 	}
     .cont-property {
-        .tbl-property {
+        .property-tbl {
             @include tbl-style-1;
             td {
                 .cell {
@@ -229,7 +229,7 @@
     .cont-area.area-1 {
         margin-top: 0;
         .cont-property {
-            .tbl-property {
+            .property-tbl {
                 @include tbl-style-1;
                 td {
                     .cell {
@@ -331,7 +331,7 @@
 /* 연회 */
 .bq-contents {
 	.cont-property {
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
             border-right: 1px solid $bdg-tblBase;
             width: 100%;
@@ -390,7 +390,7 @@
 /* 아침 식사 */
 .bf-contents {
 	.cont-property {
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
             border-right: 1px solid $bdg-tblBase;
             width: 100%;

@@ -9,7 +9,7 @@
 		background: #f0f0f0;
 		padding: 10px;
 		border-radius: 4px;
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {
@@ -128,7 +128,7 @@
 		background: #f0f0f0;
 		padding: 10px;
 		border-radius: 4px;
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {
@@ -254,7 +254,7 @@
 		background: #f0f0f0;
 		padding: 10px;
 		border-radius: 4px;
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {
@@ -373,7 +373,7 @@
 		background: #f0f0f0;
 		padding: 10px;
 		border-radius: 4px;
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {
@@ -1363,7 +1363,7 @@
 /* 로그 북 */
 .lgBook-contents {
 	.cont-property {
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {
@@ -1432,7 +1432,7 @@
 /* 컴플레인 */
 .complain-contents {
 	.cont-property {
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {
@@ -1501,7 +1501,7 @@
 /* 게스트 프로필 */
 .gstProfile-contents {
 	.cont-property {
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {

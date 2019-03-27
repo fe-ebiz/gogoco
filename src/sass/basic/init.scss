@@ -5,36 +5,76 @@
 @import "../parts/common";
 
 /* 업장 */
-.myInfo-contents {
-	.grid-tbl {
-		@include tbl-base;
-		td {
-			.cell {
-				.w-1 {
-					width: 150px;
-				}
-				.w-2 {
-					width: 300px;
-				}
-				.tel {
-					width: 70px;
-				}
-				.tel-2 {
-					width: 55px;
-				}
-				.form-input {
-					&.addr-1 {
-						width: 80px;
+.cmCode-contents {
+	.cont-property {
+        .property-tbl {
+            @include tbl-style-1;
+            td {
+                .cell {
+					.form-input {
+						&.option {
+							width: 150px;
+						}
+					}
+					.w-1 {
+						width: 100px;
+					}
+                    button {
+                        letter-spacing: 0;
+                    }
+                }
+            }
+        }
+    }
+	.row-cont {
+		.split {
+			@include float;
+			box-sizing: border-box;
+			margin-top: 10px;
+			h3 {
+				font-size: 13px;
+				margin-bottom: 5px;
+			}
+		}
+		.split.cont-code {
+			width: 400px;
+			.scrollbar {
+				height: 500px;
+				overflow-y: auto;
+				border: 1px solid #aaa;
+			}
+			.code-list {
+				font-size: 12px;
+				li {
+					position: relative;
+					> a {
+						@include dp(block);
+						padding: 5px 0;
+						&:hover {
+							background: #e7f1fa;
+						}
+						&.on {
+							background: #d2d9df;
+						}
+						> .d {
+							position: relative;
+						}
 					}
 				}
 			}
-			& + th {
-				border-left: 1px dashed $bdg-tblBase;
+			$total: 5;
+			@for $i from 1 to $total {
+				.dep-#{$i} {
+					li > a {
+						padding-left: (20px * $i) + 5px;
+					}
+				}
 			}
 		}
-	}
-	.grid-tbl.tbl-1 {}
-	.grid-tbl.tbl-2 {
-		margin-top: 10px;
+		.split.cont-data {
+			width: calc(100% - 400px);
+			padding-left: 10px;
+
+		}
 	}
 }

@@ -4,7 +4,7 @@ body { font-family: "Nanum Gothic", Dotum, Sans-serif; line-height: 1.5; letter-
 
 img { max-width: 100%; }
 
-input[type=password] { font-family: "Nanum Gothic", Dotum, Sans-serif; }
+input[type=password] { font-family: sans-serif; }
 
 label { position: relative; vertical-align: middle; display: inline-block; line-height: 1; }
 
@@ -175,6 +175,16 @@ label > * { position: relative; vertical-align: middle; display: inline-block; }
 .icon-trees.folder { background-position: -5px center; top: -1px; }
 
 .icon-trees.file { background-position: -155px center; }
+
+.icon-treeArr { position: relative; display: inline-block; vertical-align: middle; width: 16px; height: 16px; overflow: hidden; background: url(../img/icon/treeArrows.png) no-repeat; font-size: 0; line-height: 0; text-align: center; position: absolute; left: -20px; width: 20px; height: 20px; }
+
+.icon-treeArr.expand { background-position: -95px center; }
+
+.icon-treeArr.expand:hover { background-position: -35px center; }
+
+.icon-treeArr.indent { background-position: -65px center; }
+
+.icon-treeArr.indent:hover { background-position: -5px center; }
 
 /* 페이지 - 공통 */
 .cont-container, .cont-container-f { position: relative; margin-top: 10px; }

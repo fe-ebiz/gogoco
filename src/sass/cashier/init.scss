@@ -12,7 +12,7 @@
 		}
 	}
 	.cont-property {
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {
@@ -87,7 +87,7 @@
 /* 교환 */
 .exchange-contents {
 	.cont-property {
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
             border-right: 1px solid $bdg-tblBase;
             width: 100%;
@@ -142,7 +142,7 @@
 /* 현금 서랍 */
 .cshDraw-contents {
 	.cont-property {
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
             border-right: 1px solid $bdg-tblBase;
             width: 100%;
@@ -243,7 +243,7 @@
 /* 예치금 */
 .advDeposit-contents {
 	.cont-property {
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
             border-right: 1px solid $bdg-tblBase;
             width: 100%;
@@ -299,7 +299,7 @@
 /* cashier close */
 .cshClose-contents {
 	.cont-property {
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
             border-right: 1px solid $bdg-tblBase;
             width: 100%;
@@ -510,7 +510,7 @@
 		}
 	}
 	.cont-property {
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {

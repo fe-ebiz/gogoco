@@ -183,7 +183,7 @@
 			.grid-tbl {
 				@include tbl-base;
 			}
-			.tbl-name {
+			.name-tbl {
 				width: 306px;
 				th, td {
 
@@ -236,7 +236,7 @@
 					}
 				}
 			}
-			.tbl-assign {
+			.assign-tbl {
 				width: 270px;
 				th, td {
 
@@ -304,7 +304,7 @@
 		}
 		.cont-booker {
 			// 테이블 내 form 요소 및 기타 관리
-			.tbl-booker {
+			.booker-tbl {
 				@include tbl-base;
 				th, td {
 
@@ -427,7 +427,7 @@
 				}
 			}
 			// 테이블 내 form 요소 및 기타 관리
-			.tbl-guest {
+			.guest-tbl {
 				@include tbl-base;
 				width: 295px;
 				th, td {
@@ -588,7 +588,7 @@
 				.cell {
 				}
 			}
-			.tbl-name {
+			.name-tbl {
 				width: 306px;
 				th, td {
 
@@ -641,7 +641,7 @@
 					}
 				}
 			}
-			.tbl-assign {
+			.assign-tbl {
 				width: 270px;
 				th, td {
 
@@ -709,7 +709,7 @@
 		}
 		.cont-booker {
 			// 테이블 내 form 요소 및 기타 관리
-			.tbl-booker {
+			.booker-tbl {
 				@include tbl-base;
 				th, td {
 
@@ -917,7 +917,7 @@
 /* 객실 목록 */
 .contents.roomInv-contents {
 	.cont-property {
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {
@@ -1115,7 +1115,7 @@
 /* 블럭 룸 */
 .rmBlock-contents {
 	.cont-property {
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {
@@ -1175,7 +1175,7 @@
 		background: #f0f0f0;
 		padding: 10px;
 		border-radius: 4px;
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {
@@ -1285,7 +1285,7 @@
 	.cont-property {
 		padding-bottom: 10px;
 		border-bottom: 1px dashed #ccc;
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			border-left: 0;
 			border-right: 0;
@@ -1478,7 +1478,7 @@
 	.cont-property {
 		padding-bottom: 10px;
 		border-bottom: 1px dashed #ccc;
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			border-left: 0;
 			border-right: 0;
@@ -1787,7 +1787,7 @@
 				border-top: 1px solid #9f9f9f;
 				margin-top: -1px;
 				padding-top: 10px;
-				.tbl-property {
+				.property-tbl {
 					@include tbl-style-1;
 					border-left: 0;
 					border-right: 0;

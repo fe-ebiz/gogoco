@@ -7,7 +7,7 @@
 /* 청소 일정 */
 .maidSch-contents {
 	.cont-property {
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {
@@ -60,7 +60,7 @@
 .rmClean-contents {
 	.cont-property {
         @include cont-tit;
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {
@@ -82,7 +82,7 @@
 .arvList-contents {
     .cont-property {
         @include cont-tit;
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {
@@ -135,7 +135,7 @@
 /* 분실물 */
 .lf-contents {
     .cont-property {
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {
@@ -194,7 +194,7 @@
 /* exb-status */
 .exb-contents {
     .cont-property {
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {
@@ -247,7 +247,7 @@
 /* 청소 배정 */
 .maidAss-contents {
     .cont-property {
-		.tbl-property {
+		.property-tbl {
 			@include tbl-style-1;
 			td {
 				.cell {

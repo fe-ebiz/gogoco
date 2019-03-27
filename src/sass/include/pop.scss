@@ -186,7 +186,7 @@
 					}
 				}
 				.cont-property {
-					.tbl-property {
+					.property-tbl {
 						@include tbl-style-1;
 						border-right: 0;
 						&, th:first-child {
@@ -443,7 +443,7 @@
 				background: #f0f0f0;
 				padding: 15px;
 				border-radius: 4px;
-				.tbl-property {
+				.property-tbl {
 					@include tbl-base;
 					td {
 						padding-right: 15px;
@@ -539,7 +539,7 @@
 				background: #f0f0f0;
 				padding: 15px;
 				border-radius: 4px;
-				.tbl-property {
+				.property-tbl {
 					@include tbl-base;
 					td {
 						background: #fff;
@@ -615,7 +615,7 @@
 				background: #f0f0f0;
 				padding: 15px;
 				border-radius: 4px;
-				.tbl-property {
+				.property-tbl {
 					@include tbl-base;
 					td {
 						padding-right: 15px;
@@ -700,7 +700,7 @@
 				background: #f0f0f0;
 				padding: 15px;
 				border-radius: 4px;
-				.tbl-property {
+				.property-tbl {
 					@include tbl-base;
 					td {
 						background: #fff;
@@ -736,7 +736,7 @@
 				background: #f0f0f0;
 				padding: 10px;
 				border-radius: 4px;
-				.tbl-property {
+				.property-tbl {
 					@include tbl-style-1;
 					td {
 						.cell {
@@ -878,7 +878,7 @@
 					}
 				}
 				.cont-property {
-					.tbl-property {
+					.property-tbl {
 						@include tbl-style-1;
 						border-left: 0;
 						border-right: 0;
@@ -917,7 +917,7 @@
 					margin-top: 15px;
 					padding-top: 15px;
 					border-top: 1px dashed #ccc;
-					.tbl-property {
+					.property-tbl {
 						border-right: 1px solid $bdg-tblBase;
 						border-left: 1px solid $bdg-tblBase;
 						td {
