@@ -921,7 +921,7 @@
 
 .bqCal-contents .grid-toolbar button.today, .bqCal-contents .grid-toolbar button.m { border-top-right-radius: 0; border-bottom-right-radius: 0; }
 
-.bqCal-contents .grid-toolbar button.prev span, .bqCal-contents .grid-toolbar button.next span { font-size: 11px; }
+.bqCal-contents .grid-toolbar button.prev span, .bqCal-contents .grid-toolbar button.next span { position: relative; top: -1px; font-size: 10px; }
 
 .bqCal-contents .grid-toolbar button.prev { border-radius: 0; border-left: 0; border-right: 0; }
 
@@ -931,13 +931,13 @@
 
 .bqCal-contents .grid-toolbar .date img.cal { position: relative; top: -2px; margin-right: 2px; }
 
-.bqCal-contents .grid-toolbar .cal-tab { font-size: 0; }
+.bqCal-contents .grid-toolbar .tab-list { font-size: 0; }
 
-.bqCal-contents .grid-toolbar .cal-tab button.m { border-right: 0; }
+.bqCal-contents .grid-toolbar .tab-list button.m { border-right: 0; }
 
-.bqCal-contents .grid-toolbar .cal-tab button.d { border-left: 0; }
+.bqCal-contents .grid-toolbar .tab-list button.d { border-left: 0; }
 
-.bqCal-contents .grid-toolbar .cal-tab button.on { color: #fff; background: #ed550b; border-color: #dd4c06; }
+.bqCal-contents .grid-toolbar .tab-list button.on { color: #fff; background: #ed550b; border-color: #dd4c06; }
 
 .bqCal-contents .cont-area > div { display: none; }
 
@@ -961,20 +961,40 @@
 
 .bqCal-contents .cont-area .cont-month .month-tbl td .cell .row-1 { text-align: right; }
 
-.bqCal-contents .cont-area .cont-month .month-tbl td .cell .row-item { background: #FF9D67; padding: 0 3px; border-radius: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bqCal-contents .cont-area .cont-month .month-tbl td .cell .row-item { position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; height: 20px; overflow: auto; background: #FF9D67; padding: 0 20px 0 3px; border-radius: 4px; cursor: default; }
+
+.bqCal-contents .cont-area .cont-month .month-tbl td .cell .row-item .ic-x { display: none; position: absolute; top: 2px; right: 1px; cursor: pointer; }
+
+.bqCal-contents .cont-area .cont-month .month-tbl td .cell .row-item:hover .ic-x { display: block; }
 
 .bqCal-contents .cont-area .cont-month .month-tbl td.out .cell .row-1 { color: #c3c3c3; }
 
 .bqCal-contents .cont-area .cont-month .month-tbl td.today .cell { background: #f8f8f8; }
 
-.bqCal-contents .cont-area .cont-day .top-tbl { position: relative; table-layout: fixed; width: 100%; }
+.bqCal-contents .cont-area .cont-day .scrollbar.top { padding-right: 17px; border-right: 1px solid #c5c5c5; }
 
-.bqCal-contents .cont-area .cont-day .top-tbl th, .bqCal-contents .cont-area .cont-day .top-tbl td { font-size: 12px; font-weight: 700; border: 1px solid #c5c5c5; text-align: center; height: 26px; padding: 3px 5px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.bqCal-contents .cont-area .cont-day .scrollbar.body { overflow-y: scroll; border-right: 1px solid #c5c5c5; }
 
-.bqCal-contents .cont-area .cont-day .top-tbl th { text-align: right; border-right: 1px solid #c5c5c5; }
+.bqCal-contents .cont-area .cont-day .scrollbar .body-cont { height: 650px; }
+
+.bqCal-contents .cont-area .cont-day .tbl { position: relative; table-layout: fixed; width: 100%; }
+
+.bqCal-contents .cont-area .cont-day .tbl th, .bqCal-contents .cont-area .cont-day .tbl td { font-size: 12px; font-weight: 700; border: 1px solid #c5c5c5; text-align: center; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.bqCal-contents .cont-area .cont-day .tbl th { height: 26px; padding: 3px 5px; text-align: right; border-right: 1px solid #c5c5c5; }
+
+.bqCal-contents .cont-area .cont-day .tbl td { background: #f8f8f8; }
+
+.bqCal-contents .cont-area .cont-day .tbl td .cell { -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 26px; padding: 5px 5px; }
+
+.bqCal-contents .cont-area .cont-day .tbl td .cell:first-child { border-bottom: 1px dotted #c5c5c5; }
 
 .bqCal-contents .cont-area .cont-day .top-tbl td { background: #f8f8f8; }
 
-.bqCal-contents .cont-area .cont-day .top-tbl td .cell:first-child { border-bottom: 1px dotted #c5c5c5; }
+.bqCal-contents .cont-area .cont-day .top-tbl td .cell:first-child { border-bottom: none; }
 
-.bqCal-contents .cont-area .cont-day .grid-toolbar.bottom { border-top: 0; }
+.bqCal-contents .cont-area .cont-day .body-tbl { height: 10px; }
+
+.bqCal-contents .cont-area .cont-day .body-tbl th, .bqCal-contents .cont-area .cont-day .body-tbl td { border-top: none; }
+
+.bqCal-contents .cont-area .cont-day .body-tbl th { vertical-align: top; }

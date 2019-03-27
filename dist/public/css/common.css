@@ -96,6 +96,8 @@ label > * { position: relative; vertical-align: middle; display: inline-block; }
 
 .icon.ic-cancel { background-position: -48px -48px; top: -1px; }
 
+.icon.ic-x { background-position: -48px -16px; top: -1px; }
+
 .icon.ic-edit { background-position: -48px 0; margin-left: -2px; top: -1px; }
 
 .icon.ic-del { background-position: -48px -16px; margin-left: -2px; top: -1px; }

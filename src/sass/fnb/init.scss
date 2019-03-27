@@ -457,7 +457,8 @@
 			}
 			&.prev, &.next {
 				span {
-					font-size: 11px;
+					@include position(relative, -1px);
+					font-size: 10px;
 				}
 			}
 			&.prev {
@@ -477,7 +478,7 @@
 				margin-right: 2px;
 			}
 		}
-		.cal-tab {
+		.tab-list {
 			font-size: 0;
 			button {
 				&.m {
@@ -535,12 +536,24 @@
 							text-align: right;
 						}
 						.row-item {
+							@include bx;
+							height: 20px;
+							overflow: auto;
 							background: #FF9D67;
-							padding: 0 3px;
+							padding: 0 20px 0 3px;
 							border-radius: 4px;
-							white-space: nowrap;
-							overflow: hidden;
-							text-overflow: ellipsis;
+							cursor: default;
+							// white-space: nowrap;
+							// overflow: hidden;
+							// text-overflow: ellipsis;
+							.ic-x {
+								display: none;
+								@include position(absolute, 2px, null, null, 1px);
+								cursor: pointer;
+							}
+							&:hover .ic-x {
+								display: block;
+							}
 						}
 					}
 				}
@@ -559,7 +572,20 @@
 			}
 		}
 		.cont-day {
-			.top-tbl {
+			.scrollbar {
+				&.top {
+					padding-right: 17px;
+					border-right: 1px solid $bor-gray-table;
+				}
+				&.body {
+					overflow-y: scroll;
+					border-right: 1px solid $bor-gray-table;
+				}
+				.body-cont {
+					height: 650px;
+				}
+			}
+			.tbl {
 				position: relative;
 				table-layout: fixed;
 				width: 100%;
@@ -567,24 +593,45 @@
 					@include ft(12px, null, 700);
 					border: 1px solid $bor-gray-table;
 					text-align: center;
-					height: 26px;
-					padding: 3px 5px;
 					box-sizing: border-box;
 				}
 				th {
+					height: 26px;
+					padding: 3px 5px;
 					text-align: right;
 					border-right: 1px solid $bor-gray-table;
 				}
 				td {
 					background: #f8f8f8;
-					.cell:first-child {
-						border-bottom: 1px dotted #c5c5c5;
+					.cell {
+						box-sizing: border-box;
+						min-height: 26px;
+						padding: 5px 5px;
+						&:first-child {
+							border-bottom: 1px dotted #c5c5c5;
+						}
 					}
 				}
 			}
-
+			.top-tbl {
+				td {
+					background: #f8f8f8;
+					.cell:first-child {
+						border-bottom: none;
+					}
+				}
+			}
+			.body-tbl {
+				height: 10px;
+				th, td {
+					border-top: none;
+				}
+				th {
+					vertical-align: top;
+				}
+			}
 			.grid-toolbar.bottom {
-				border-top: 0;
+				// border-top: none;
 			}
 		}
 	}
