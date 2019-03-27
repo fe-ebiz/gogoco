@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+// @import "../parts/variables";
+// @import "../parts/mixins";
+@import "../parts/common";
+
+/* 업장 */
+.myInfo-contents {
+	.grid-tbl {
+		@include tbl-base;
+		td {
+			.cell {
+				.w-1 {
+					width: 150px;
+				}
+				.w-2 {
+					width: 300px;
+				}
+				.tel {
+					width: 70px;
+				}
+				.tel-2 {
+					width: 55px;
+				}
+				.form-input {
+					&.addr-1 {
+						width: 80px;
+					}
+				}
+			}
+			& + th {
+				border-left: 1px dashed $bdg-tblBase;
+			}
+		}
+	}
+	.grid-tbl.tbl-1 {}
+	.grid-tbl.tbl-2 {
+		margin-top: 10px;
+	}
+}

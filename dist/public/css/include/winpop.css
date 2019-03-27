@@ -393,9 +393,7 @@
 
 .wpop-contents.trace-contents .cont-trace .grid-wrap.scr-wrap .grid-tbl th:first-child, .wpop-contents.trace-contents .cont-trace .grid-wrap.scr-wrap .grid-tbl td:first-child { border-left: none; }
 
-.wpop-contents.trace-contents .cont-trace .grid-wrap.scr-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.wpop-contents.trace-contents .cont-trace .grid-wrap.scr-wrap .grid-tbl th .cell { font-weight: 700; }
+.wpop-contents.trace-contents .cont-trace .grid-wrap.scr-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .wpop-contents.trace-contents .cont-trace .grid-wrap.scr-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 

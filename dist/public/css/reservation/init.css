@@ -232,9 +232,7 @@
 
 .contents.resFit-contents .split-1 .cont-message .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl th:first-child, .contents.resFit-contents .split-1 .cont-message .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl td:first-child { border-left: none; }
 
-.contents.resFit-contents .split-1 .cont-message .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.contents.resFit-contents .split-1 .cont-message .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl th .cell { font-weight: 700; }
+.contents.resFit-contents .split-1 .cont-message .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .contents.resFit-contents .split-1 .cont-message .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -440,9 +438,7 @@
 
 .contents.resFit-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap .grid-tbl th:first-child, .contents.resFit-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap .grid-tbl td:first-child { border-left: none; }
 
-.contents.resFit-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.contents.resFit-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap .grid-tbl th .cell { font-weight: 700; }
+.contents.resFit-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .contents.resFit-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -675,9 +671,7 @@
 
 .contents.rsvGroup-contents .split-1 .cont-message .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl th:first-child, .contents.rsvGroup-contents .split-1 .cont-message .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl td:first-child { border-left: none; }
 
-.contents.rsvGroup-contents .split-1 .cont-message .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.contents.rsvGroup-contents .split-1 .cont-message .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl th .cell { font-weight: 700; }
+.contents.rsvGroup-contents .split-1 .cont-message .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .contents.rsvGroup-contents .split-1 .cont-message .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -753,9 +747,7 @@
 
 .contents.rsvGroup-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap.grid-wrap-1 .grid-tbl th:first-child, .contents.rsvGroup-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap.grid-wrap-1 .grid-tbl td:first-child { border-left: none; }
 
-.contents.rsvGroup-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap.grid-wrap-1 .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.contents.rsvGroup-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap.grid-wrap-1 .grid-tbl th .cell { font-weight: 700; }
+.contents.rsvGroup-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap.grid-wrap-1 .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .contents.rsvGroup-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap.grid-wrap-1 .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -833,9 +825,7 @@
 
 .contents.rsvGroup-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap.grid-wrap-2 .grid-tbl th:first-child, .contents.rsvGroup-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap.grid-wrap-2 .grid-tbl td:first-child { border-left: none; }
 
-.contents.rsvGroup-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap.grid-wrap-2 .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.contents.rsvGroup-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap.grid-wrap-2 .grid-tbl th .cell { font-weight: 700; }
+.contents.rsvGroup-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap.grid-wrap-2 .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .contents.rsvGroup-contents .split-2 .cont-rsvList .grid-wrap.scr-wrap.grid-wrap-2 .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -1200,9 +1190,7 @@
 
 .rmBlock-contents .cont-list .grid-wrap .grid-tbl th:first-child, .rmBlock-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.rmBlock-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.rmBlock-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.rmBlock-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .rmBlock-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -1335,9 +1323,7 @@
 
 .rsvList-contents .cont-list .grid-wrap .grid-tbl th:first-child, .rsvList-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.rsvList-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.rsvList-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.rsvList-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .rsvList-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -1687,9 +1673,7 @@
 
 .account-contents .cont-list .grid-wrap .grid-tbl th:first-child, .account-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.account-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.account-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.account-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .account-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -1895,9 +1879,7 @@
 
 .account-contents .cont-addInfo .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl th:first-child, .account-contents .cont-addInfo .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl td:first-child { border-left: none; }
 
-.account-contents .cont-addInfo .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.account-contents .cont-addInfo .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl th .cell { font-weight: 700; }
+.account-contents .cont-addInfo .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .account-contents .cont-addInfo .item-list .grid-container .grid-wrap.scr-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -2032,9 +2014,7 @@
 
 .maList-contents .item-list .item-container .cont-list .grid-wrap .grid-tbl th:first-child, .maList-contents .item-list .item-container .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.maList-contents .item-list .item-container .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.maList-contents .item-list .item-container .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.maList-contents .item-list .item-container .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .maList-contents .item-list .item-container .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 

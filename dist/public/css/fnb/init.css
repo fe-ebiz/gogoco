@@ -701,9 +701,7 @@
 
 .bq-contents .cont-list .grid-wrap .grid-tbl th:first-child, .bq-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.bq-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.bq-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.bq-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .bq-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -842,9 +840,7 @@
 
 .bf-contents .cont-list .grid-wrap .grid-tbl th:first-child, .bf-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.bf-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.bf-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.bf-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .bf-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 

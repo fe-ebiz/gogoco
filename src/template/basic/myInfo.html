@@ -1,0 +1,134 @@
+@@include('../include/_head.html', {
+	"page": "basic"
+})
+
+<body class="page-basic">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="cf contents myInfo-contents">
+
+		@@include('../include/_row_h2.html', {
+			"page-title": "나의 정보"
+		})
+
+		<div class="cf cont-container-f">
+            <table class="grid-tbl tbl-1">
+                <colgroup>
+                    <col class="nth-1" style="width: 90px">
+                    <col class="nth-1" style="width: 810px">
+                    <col class="nth-1" style="width: 90px">
+                    <col class="nth-2" style="width: *">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><div class="cell necess">아이디</div></th>
+                        <td>
+                            <div class="cell"><input type="text" class="form-input w-1" readonly value="admin"></div>
+                        </td>
+                        <th><div class="cell necess">비밀번호</div></th>
+                        <td>
+                            <div class="cell"><input type="text" class="form-input w-1"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><div class="cell necess">이름</div></th>
+                        <td>
+                            <div class="cell"><input type="text" class="form-input w-1" value="관리자"></div>
+                        </td>
+                        <th><div class="cell necess">이름(영문)</div></th>
+                        <td>
+                            <div class="cell"><input type="text" class="form-input w-1" value="admin"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- /.tbl-1 -->
+            <table class="grid-tbl tbl-2">
+                <colgroup>
+                    <col class="nth-1" style="width: 90px">
+                    <col class="nth-1" style="width: 810px">
+                    <col class="nth-1" style="width: 90px">
+                    <col class="nth-2" style="width: *">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><div class="cell">E-mail</div></th>
+                        <td>
+                            <div class="cell"><input type="text" class="form-input w-2"></div>
+                        </td>
+                        <th><div class="cell">속성</div></th>
+                        <td>
+                            <div class="cell">
+                                <select name="" id="" class="form-select w-1" diasabled>
+                                    <option value="">Ramada pt</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><div class="cell">휴대전화/내선</div></th>
+                        <td>
+                            <div class="cell">
+                                <select name="" id="" class="form-select tel">
+                                    <option value=""></option>
+                                    <option value="">010</option>
+                                    <option value="">011</option>
+                                    <option value="">016</option>
+                                    <option value="">017</option>
+                                    <option value="">018</option>
+                                    <option value="">019</option>
+                                </select>
+                                <input type="text" class="form-input tel-2">
+                                <input type="text" class="form-input tel-2">
+                                <span class="mg-">/</span>
+                                <input type="text" class="form-input tel">
+                            </div>
+                        </td>
+                        <th><div class="cell">비상연락처</div></th>
+                        <td>
+                            <div class="cell">
+                                <select name="" id="" class="form-select tel">
+                                    <option value=""></option>
+                                    <option value="">010</option>
+                                    <option value="">011</option>
+                                    <option value="">016</option>
+                                    <option value="">017</option>
+                                    <option value="">018</option>
+                                    <option value="">019</option>
+                                </select>
+                                <input type="text" class="form-input tel-2">
+                                <input type="text" class="form-input tel-2">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><div class="cell">주소</div></th>
+                        <td colspan="3">
+                            <div class="cell">
+                                <input type="text" class="form-input addr-1" readonly>
+                                <button type="button" class="btn-gray">주소검색</button>
+                                <input type="text" class="form-input w-2" readonly>
+                                <input type="text" class="form-input w-2">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><div class="cell">사진</div></th>
+                        <td colspan="3">
+                            <div class="cell">
+                                <input type="file">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- /.tbl-2 -->
+		</div>
+	</div>
+	<!--//.contents-->
+
+</div>
+</body>
+</html>

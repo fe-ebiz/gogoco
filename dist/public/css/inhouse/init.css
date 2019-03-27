@@ -222,9 +222,7 @@
 
 .arvList-contents .cont-list .grid-wrap .grid-tbl th:first-child, .arvList-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.arvList-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.arvList-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.arvList-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .arvList-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -359,9 +357,7 @@
 
 .lf-contents .cont-list .grid-wrap .grid-tbl th:first-child, .lf-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.lf-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.lf-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.lf-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .lf-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -502,9 +498,7 @@
 
 .exb-contents .cont-list .grid-wrap .grid-tbl th:first-child, .exb-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.exb-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.exb-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.exb-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .exb-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 

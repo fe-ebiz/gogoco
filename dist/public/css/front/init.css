@@ -86,9 +86,7 @@
 
 .chkIn-contents .cont-list .grid-wrap .grid-tbl th:first-child, .chkIn-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.chkIn-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.chkIn-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.chkIn-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .chkIn-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -249,9 +247,7 @@
 
 .inHouse-contents .cont-list .grid-wrap .grid-tbl th:first-child, .inHouse-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.inHouse-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.inHouse-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.inHouse-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .inHouse-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -420,9 +416,7 @@
 
 .dep-contents .cont-list .grid-wrap .grid-tbl th:first-child, .dep-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.dep-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.dep-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.dep-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .dep-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -583,9 +577,7 @@
 
 .rmStay-contents .cont-list .grid-wrap .grid-tbl th:first-child, .rmStay-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.rmStay-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.rmStay-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.rmStay-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .rmStay-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -1097,9 +1089,7 @@
 
 .rmStaList-contents .cont-list .grid-wrap .grid-tbl th:first-child, .rmStaList-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.rmStaList-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.rmStaList-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.rmStaList-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .rmStaList-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -1220,9 +1210,7 @@
 
 .lgBook-contents .cont-list .grid-wrap .grid-tbl th:first-child, .lgBook-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.lgBook-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.lgBook-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.lgBook-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .lgBook-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -1361,9 +1349,7 @@
 
 .complain-contents .cont-list .grid-wrap .grid-tbl th:first-child, .complain-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.complain-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.complain-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.complain-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .complain-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -1500,9 +1486,7 @@
 
 .gstProfile-contents .cont-list .grid-wrap .grid-tbl th:first-child, .gstProfile-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.gstProfile-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.gstProfile-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.gstProfile-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .gstProfile-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -1728,9 +1712,7 @@
 
 .gstProfile-contents .row-cont .cont-rmStay .grid-wrap .grid-tbl th:first-child, .gstProfile-contents .row-cont .cont-rmStay .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.gstProfile-contents .row-cont .cont-rmStay .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.gstProfile-contents .row-cont .cont-rmStay .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.gstProfile-contents .row-cont .cont-rmStay .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .gstProfile-contents .row-cont .cont-rmStay .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 

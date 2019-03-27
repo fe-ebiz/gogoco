@@ -160,9 +160,7 @@
 
 .pop-container.pkg-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-tbl th:first-child, .pop-container.pkg-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.pop-container.pkg-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.pop-container.pkg-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.pop-container.pkg-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .pop-container.pkg-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -483,9 +481,7 @@
 
 .pop-container.accomp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl th:first-child, .pop-container.accomp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.pop-container.accomp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.pop-container.accomp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.pop-container.accomp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .pop-container.accomp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -713,9 +709,7 @@
 
 .pop-container.gp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl th:first-child, .pop-container.gp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.pop-container.gp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.pop-container.gp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.pop-container.gp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .pop-container.gp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -923,9 +917,7 @@
 
 .pop-container.sltParty-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl th:first-child, .pop-container.sltParty-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.pop-container.sltParty-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.pop-container.sltParty-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.pop-container.sltParty-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .pop-container.sltParty-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -1217,9 +1209,7 @@
 
 .spReq-container .pop-wrap .pop-contents .item-list .common .grid-wrap.scr-wrap .grid-tbl th:first-child, .spReq-container .pop-wrap .pop-contents .item-list .common .grid-wrap.scr-wrap .grid-tbl td:first-child { border-left: none; }
 
-.spReq-container .pop-wrap .pop-contents .item-list .common .grid-wrap.scr-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.spReq-container .pop-wrap .pop-contents .item-list .common .grid-wrap.scr-wrap .grid-tbl th .cell { font-weight: 700; }
+.spReq-container .pop-wrap .pop-contents .item-list .common .grid-wrap.scr-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .spReq-container .pop-wrap .pop-contents .item-list .common .grid-wrap.scr-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 

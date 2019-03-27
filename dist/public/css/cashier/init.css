@@ -72,9 +72,7 @@
 
 .cashier-contents .cont-list .grid-wrap .grid-tbl th:first-child, .cashier-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.cashier-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.cashier-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.cashier-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .cashier-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -213,9 +211,7 @@
 
 .exchange-contents .cont-list .grid-wrap .grid-tbl th:first-child, .exchange-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.exchange-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.exchange-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.exchange-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .exchange-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -334,9 +330,7 @@
 
 .cshDraw-contents .cont-area.area-1 .cont-list .grid-wrap .grid-tbl th:first-child, .cshDraw-contents .cont-area.area-1 .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.cshDraw-contents .cont-area.area-1 .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.cshDraw-contents .cont-area.area-1 .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.cshDraw-contents .cont-area.area-1 .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .cshDraw-contents .cont-area.area-1 .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -521,9 +515,7 @@
 
 .advDeposit-contents .cont-list .grid-wrap .grid-tbl th:first-child, .advDeposit-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.advDeposit-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.advDeposit-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.advDeposit-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .advDeposit-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -672,9 +664,7 @@
 
 .cshClose-contents .item-list .grid-wrap.scr-wrap .grid-tbl th:first-child, .cshClose-contents .item-list .grid-wrap.scr-wrap .grid-tbl td:first-child { border-left: none; }
 
-.cshClose-contents .item-list .grid-wrap.scr-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.cshClose-contents .item-list .grid-wrap.scr-wrap .grid-tbl th .cell { font-weight: 700; }
+.cshClose-contents .item-list .grid-wrap.scr-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .cshClose-contents .item-list .grid-wrap.scr-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
@@ -963,9 +953,7 @@
 
 .accRcc-contents .cont-list .grid-wrap .grid-tbl th:first-child, .accRcc-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.accRcc-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-.accRcc-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.accRcc-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c5c5c5; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
 
 .accRcc-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
