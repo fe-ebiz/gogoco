@@ -850,12 +850,12 @@ $btn-lh: 1.5;
 			.grid-tbl {
 				tr:nth-child(2n-1) {
 					th, td {
-						background: #f7f7f7;
+						background: #fff;
 					}
 				}
 				tr:nth-child(2n) {
 					th, td {
-						background: #fff;
+						background: #f7f7f7;
 					}
 				}
 				tr:hover {

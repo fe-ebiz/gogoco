@@ -102,9 +102,9 @@
 
 .outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
-.outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #f7f7f7; }
+.outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
-.outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #fff; }
+.outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
 
 .outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
 
@@ -291,9 +291,9 @@
 
 .menu-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
-.menu-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .menu-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #f7f7f7; }
+.menu-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .menu-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
-.menu-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .menu-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #fff; }
+.menu-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .menu-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
 
 .menu-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
 
@@ -482,9 +482,9 @@
 
 .inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
-.inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #f7f7f7; }
+.inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
-.inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #fff; }
+.inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
 
 .inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
 
@@ -580,9 +580,9 @@
 
 .inv-contents .cont-area.area-2 .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
-.inv-contents .cont-area.area-2 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .inv-contents .cont-area.area-2 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #f7f7f7; }
+.inv-contents .cont-area.area-2 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .inv-contents .cont-area.area-2 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
-.inv-contents .cont-area.area-2 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .inv-contents .cont-area.area-2 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #fff; }
+.inv-contents .cont-area.area-2 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .inv-contents .cont-area.area-2 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
 
 .inv-contents .cont-area.area-2 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
 

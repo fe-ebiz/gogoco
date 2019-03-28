@@ -804,9 +804,9 @@
 
 .cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
-.cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #f7f7f7; }
+.cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
-.cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #fff; }
+.cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
 
 .cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
 

@@ -1664,9 +1664,9 @@
 
 .gstProfile-contents .row-cont .cont-hist .grid-wrap.scr-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
-.gstProfile-contents .row-cont .cont-hist .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .gstProfile-contents .row-cont .cont-hist .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #f7f7f7; }
+.gstProfile-contents .row-cont .cont-hist .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .gstProfile-contents .row-cont .cont-hist .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
-.gstProfile-contents .row-cont .cont-hist .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .gstProfile-contents .row-cont .cont-hist .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #fff; }
+.gstProfile-contents .row-cont .cont-hist .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .gstProfile-contents .row-cont .cont-hist .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
 
 .gstProfile-contents .row-cont .cont-hist .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
 
