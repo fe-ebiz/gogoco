@@ -497,9 +497,13 @@ $btn-lh: 1.5;
 		@include ft(12px, #918884);
 		@include sizes(26px);
 		line-height: 26px;
-		color: #fff;
-		background-color: #f35800;
-		border-color: #f85a00;
+		background: #000;
+		border: 1px solid #d2d2d2;
+		&.on {
+			color: #fff;
+			border-color: #f85a00;
+			background-color: #f35800;
+		}
 	}
 	.next {
 		text-indent: 3px;

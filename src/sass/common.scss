@@ -80,11 +80,7 @@ $sidebar-wd: 96px;
 .wrap {
 	box-sizing: border-box;
 }
-.cf, .row {
-	position: relative;
-	@include clearfix;
-}
-.row {
+.cf, .row, .cont-area {
 	position: relative;
 	@include clearfix;
 }

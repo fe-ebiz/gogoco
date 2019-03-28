@@ -132,7 +132,9 @@
 
 .cashier-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.cashier-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.cashier-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+
+.cashier-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .cashier-contents .cont-list .grid-bottom .next { text-indent: 3px; }
 
@@ -390,7 +392,9 @@
 
 .cshDraw-contents .cont-area.area-1 .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.cshDraw-contents .cont-area.area-1 .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.cshDraw-contents .cont-area.area-1 .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+
+.cshDraw-contents .cont-area.area-1 .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .cshDraw-contents .cont-area.area-1 .cont-list .grid-bottom .next { text-indent: 3px; }
 
@@ -571,7 +575,9 @@
 
 .advDeposit-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.advDeposit-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.advDeposit-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+
+.advDeposit-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .advDeposit-contents .cont-list .grid-bottom .next { text-indent: 3px; }
 
@@ -722,7 +728,9 @@
 
 .cshClose-contents .item-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.cshClose-contents .item-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.cshClose-contents .item-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+
+.cshClose-contents .item-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .cshClose-contents .item-list .grid-bottom .next { text-indent: 3px; }
 
@@ -1013,7 +1021,9 @@
 
 .accRcc-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.accRcc-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.accRcc-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+
+.accRcc-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .accRcc-contents .cont-list .grid-bottom .next { text-indent: 3px; }
 

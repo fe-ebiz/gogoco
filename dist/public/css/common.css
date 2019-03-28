@@ -48,21 +48,13 @@ label > * { position: relative; vertical-align: middle; display: inline-block; }
 
 .wrap { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.cf, .row { position: relative; }
+.cf, .row, .cont-area { position: relative; }
 
-.cf::before, .cf::after, .row::before, .row::after { content: ''; display: table; }
+.cf::before, .cf::after, .row::before, .row::after, .cont-area::before, .cont-area::after { content: ''; display: table; }
 
-.cf::after, .row::after { clear: both; }
+.cf::after, .row::after, .cont-area::after { clear: both; }
 
-.ie8 .cf, .ie8 .row { zoom: 1; }
-
-.row { position: relative; }
-
-.row::before, .row::after { content: ''; display: table; }
-
-.row::after { clear: both; }
-
-.ie8 .row { zoom: 1; }
+.ie8 .cf, .ie8 .row, .ie8 .cont-area { zoom: 1; }
 
 .fw-b { font-weight: 700 !important; }
 

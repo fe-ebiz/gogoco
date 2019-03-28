@@ -1389,7 +1389,9 @@
 
 .rsvList-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.rsvList-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.rsvList-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+
+.rsvList-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .rsvList-contents .cont-list .grid-bottom .next { text-indent: 3px; }
 
@@ -1739,7 +1741,9 @@
 
 .account-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.account-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.account-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+
+.account-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .account-contents .cont-list .grid-bottom .next { text-indent: 3px; }
 
@@ -2076,7 +2080,9 @@
 
 .maList-contents .item-list .item-container .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.maList-contents .item-list .item-container .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.maList-contents .item-list .item-container .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+
+.maList-contents .item-list .item-container .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .maList-contents .item-list .item-container .cont-list .grid-bottom .next { text-indent: 3px; }
 

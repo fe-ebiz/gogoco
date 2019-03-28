@@ -436,7 +436,11 @@
         <!--//.sidebar.left-->
 
 
-        <div class="cf contents myInfo-contents">
+        <div class="cf contents cal-contents">
+
+            <div class="row-top-btn">
+                <button type="button" class="btn-green add" onclick="popFn.show('.rmBlock-container')">ADD</button>
+            </div>
 
             <div class="cf row-h2">
                 <h2 class="page-title">나의 정보</h2>
@@ -447,7 +451,377 @@
             </div>
 
             <div class="cf cont-container-f">
+                <div class="row row-btn">
+                    <button type="button" class="btn-gray" disabled>Today</button>
+                    <button type="button" class="btn-gray prev"><span>◀</span>
+                    </button>
+                    <button type="button" class="btn-gray next"><span>▶</span>
+                    </button>
+                </div>
+                <!-- /.row row-btn -->
+                <div class="cont-area">
+                    <div class="cont-month on">
+                        <table class="month-tbl">
+                            <colgroup>
+                                <col style="width:14.28%;">
+                                    <col style="width:14.28%;">
+                                        <col style="width:14.28%;">
+                                            <col style="width:14.28%;">
+                                                <col style="width:14.28%;">
+                                                    <col style="width:14.28%;">
+                                                        <col style="width:14.28%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="sun">Sunday</th>
+                                    <th>Monday</th>
+                                    <th>Tuesday</th>
+                                    <th>Wednseday</th>
+                                    <th>Thursday</th>
+                                    <th>Friday</th>
+                                    <th class="sat">Saturday</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- 그 달에 쉬는 날 : out 클래스 추가, 당일 : today  -->
+                                <tr>
+                                    <td class="out">
+                                        <div class="cell">
+                                            <p class="row row-1">24</p>
+                                        </div>
+                                    </td>
+                                    <td class="out">
+                                        <div class="cell">
+                                            <p class="row row-1">25</p>
+                                        </div>
+                                    </td>
+                                    <td class="out">
+                                        <div class="cell">
+                                            <p class="row row-1">26</p>
+                                        </div>
+                                    </td>
+                                    <td class="out">
+                                        <div class="cell">
+                                            <p class="row row-1">27</p>
+                                        </div>
+                                    </td>
+                                    <td class="out">
+                                        <div class="cell">
+                                            <p class="row row-1">28</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">01</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">02</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="out">
+                                        <div class="cell">
+                                            <p class="row row-1">03</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">04</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">05</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">06</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">07</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">08</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">09</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="out">
+                                        <div class="cell">
+                                            <p class="row row-1">05</p>
+                                        </div>
+                                    </td>
+                                    <td class="today">
+                                        <div class="cell">
+                                            <p class="row row-1">06</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">07</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">08</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">09</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">10</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">11</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="out">
+                                        <div class="cell">
+                                            <p class="row row-1">24</p>
+                                        </div>
+                                    </td>
+                                    <td class="out">
+                                        <div class="cell">
+                                            <p class="row row-1">25</p>
+                                        </div>
+                                    </td>
+                                    <td class="out">
+                                        <div class="cell">
+                                            <p class="row row-1">26</p>
+                                        </div>
+                                    </td>
+                                    <td class="out">
+                                        <div class="cell">
+                                            <p class="row row-1">27</p>
+                                        </div>
+                                    </td>
+                                    <td class="out">
+                                        <div class="cell">
+                                            <p class="row row-1">28</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">01</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">02</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="out">
+                                        <div class="cell">
+                                            <p class="row row-1">03</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">04</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">05</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">06</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">07</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">08</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">09</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="out">
+                                        <div class="cell">
+                                            <p class="row row-1">05</p>
+                                        </div>
+                                    </td>
+                                    <td class="today">
+                                        <div class="cell">
+                                            <p class="row row-1">06</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">07</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">08</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">09</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">10</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="cell">
+                                            <p class="row row-1">11</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //.cont-month -->
+                    <div class="cont-name">
+                        <div class="grid-wrap scr-wrap">
+                            <div class="grid-scrollable-x">
+                                <div class="grid-area grid-head">
+                                    <div class="grid-scrollable">
+                                        <table class="grid-tbl">
+                                            <colgroup>
+                                                <col style="width:240px">
+                                                    <col style="width:835px">
+                                                        <col style="width:60px">
+                                                            <col style="width:120px">
+                                                                <col style="width:200px">
+                                                                    <col style="width:120px">
+                                                                        <col>
+                                            </colgroup>
+                                            <thead class="rowgroup">
+                                                <tr>
+                                                    <th>
+                                                        <div class="cell">패키지명</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">설명</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">Y/N</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">생성자</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">생성일</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">변경자</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">변경일</div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="grid-area grid-contents">
+                                    <table class="grid-tbl">
+                                        <colgroup>
+                                            <col style="width:240px">
+                                                <col style="width:835px">
+                                                    <col style="width:60px">
+                                                        <col style="width:120px">
+                                                            <col style="width:200px">
+                                                                <col style="width:120px">
+                                                                    <col>
+                                        </colgroup>
+                                        <tbody class="rowgroup">
+                                            <tr>
+                                                <td>
+                                                    <div class="cell">조식 1+1 패키지</div>
+                                                </td>
+                                                <td class="ta-left">
+                                                    <div class="cell">조식 1+1 패키지</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">Y</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">문고은</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">2017-06-30</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">문고은</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">2017-06-30</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td class="ta-left">
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
 
+                            </div>
+                        </div>
+                        <!-- //.grid-wrap -->
+                    </div>
+                    <!-- /.cont-name -->
+                </div>
+                <!-- /.cont-area -->
             </div>
         </div>
         <!--//.contents-->

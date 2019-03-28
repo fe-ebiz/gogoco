@@ -154,7 +154,9 @@
 
 .chkIn-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.chkIn-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.chkIn-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+
+.chkIn-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .chkIn-contents .cont-list .grid-bottom .next { text-indent: 3px; }
 
@@ -319,7 +321,9 @@
 
 .inHouse-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.inHouse-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.inHouse-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+
+.inHouse-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .inHouse-contents .cont-list .grid-bottom .next { text-indent: 3px; }
 
@@ -484,7 +488,9 @@
 
 .dep-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.dep-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.dep-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+
+.dep-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .dep-contents .cont-list .grid-bottom .next { text-indent: 3px; }
 
@@ -649,7 +655,9 @@
 
 .rmStay-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.rmStay-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.rmStay-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+
+.rmStay-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .rmStay-contents .cont-list .grid-bottom .next { text-indent: 3px; }
 
@@ -1270,7 +1278,9 @@
 
 .lgBook-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.lgBook-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.lgBook-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+
+.lgBook-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .lgBook-contents .cont-list .grid-bottom .next { text-indent: 3px; }
 
@@ -1409,7 +1419,9 @@
 
 .complain-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.complain-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.complain-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+
+.complain-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .complain-contents .cont-list .grid-bottom .next { text-indent: 3px; }
 
@@ -1546,7 +1558,9 @@
 
 .gstProfile-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.gstProfile-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.gstProfile-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+
+.gstProfile-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .gstProfile-contents .cont-list .grid-bottom .next { text-indent: 3px; }
 
