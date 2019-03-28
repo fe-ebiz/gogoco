@@ -134,7 +134,7 @@
 
 .outlet-contents .cont-area.area-1 .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.outlet-contents .cont-area.area-1 .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+.outlet-contents .cont-area.area-1 .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
 
 .outlet-contents .cont-area.area-1 .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
@@ -325,7 +325,7 @@
 
 .menu-contents .cont-area.area-1 .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.menu-contents .cont-area.area-1 .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+.menu-contents .cont-area.area-1 .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
 
 .menu-contents .cont-area.area-1 .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
@@ -518,7 +518,7 @@
 
 .inv-contents .cont-area.area-1 .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.inv-contents .cont-area.area-1 .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+.inv-contents .cont-area.area-1 .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
 
 .inv-contents .cont-area.area-1 .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
@@ -618,7 +618,7 @@
 
 .inv-contents .cont-area.area-2 .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.inv-contents .cont-area.area-2 .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+.inv-contents .cont-area.area-2 .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
 
 .inv-contents .cont-area.area-2 .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
@@ -767,7 +767,7 @@
 
 .bq-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.bq-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+.bq-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
 
 .bq-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
@@ -906,7 +906,7 @@
 
 .bf-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.bf-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+.bf-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
 
 .bf-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 

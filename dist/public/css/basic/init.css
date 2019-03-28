@@ -209,7 +209,7 @@
 
 .cmCode-contents .row-cont .split.cont-data .grid-bottom .prev.st { text-indent: -5px; }
 
-.cmCode-contents .row-cont .split.cont-data .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+.cmCode-contents .row-cont .split.cont-data .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
 
 .cmCode-contents .row-cont .split.cont-data .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
@@ -382,7 +382,7 @@
 
 .prCode-contents .row-cont .split.cont-data .grid-bottom .prev.st { text-indent: -5px; }
 
-.prCode-contents .row-cont .split.cont-data .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+.prCode-contents .row-cont .split.cont-data .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
 
 .prCode-contents .row-cont .split.cont-data .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
@@ -555,7 +555,7 @@
 
 .spCode-contents .row-cont .split.cont-data .grid-bottom .prev.st { text-indent: -5px; }
 
-.spCode-contents .row-cont .split.cont-data .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+.spCode-contents .row-cont .split.cont-data .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
 
 .spCode-contents .row-cont .split.cont-data .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
@@ -696,7 +696,7 @@
 
 .pkgSet-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.pkgSet-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+.pkgSet-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
 
 .pkgSet-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
@@ -839,7 +839,7 @@
 
 .mailTem-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.mailTem-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; background: #000; border: 1px solid #d2d2d2; }
+.mailTem-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
 
 .mailTem-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
