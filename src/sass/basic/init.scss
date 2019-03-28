@@ -493,7 +493,7 @@
 			}
 			.grid-area.grid-contents {
 				background: #fff;
-				height: 350px;
+				height: 700px;
 				.grid-tbl {
 					td {
 						text-align: center;
@@ -510,6 +510,141 @@
 		.grid-bottom {
 			@include grid-bottom-page;
 			border-radius: 0;
+		}
+	}
+}
+
+/* 달력 */
+.cal-contents {
+	.row-btn {
+		button {
+			&.prev, &.next {
+				span {
+					@include position(relative, -1px);
+					font-size: 10px;
+				}
+			}
+		}
+	}
+	.cont-area {
+		margin-top: 10px;
+		> div[class*=cont-] {
+			@include float;
+			box-sizing: border-box;
+		}
+		$wh: 1380px;
+		.cont-month {
+			width: $wh;
+		}
+		.cont-name {
+			width: calc(100% - #{$wh});
+			padding-left: 5px;
+		}
+		.cont-month {
+			.month-tbl {
+				position: relative;
+				width: 100%;
+				table-layout: fixed;
+				border-collapse: collapse;
+				th, td {
+					font-size: 12px;
+					border: 1px solid $bdg-tblBase;
+					&.sun {
+						color: $fg-sun;
+					}
+					&.sat {
+						color: $fg-sat;
+					}
+					.cell {
+						position: relative;
+						height: 100%;
+					}
+				}
+				th {
+					font-weight: 700;
+					text-align: center;
+					height: 28px;
+					letter-spacing: 0;
+					background: url(../../img/gridheadBg.png) repeat-x;
+				}
+				td {
+					height: 120px;
+					.cell {
+						padding: 5px;
+						.row {
+							margin-top: 2px;
+							&:first-child {
+								margin-top: 0;
+							}
+						}
+						.row-1 {}
+						.row-item {
+							@include bx;
+							height: 20px;
+							overflow: auto;
+							background: #FF9D67;
+							padding: 0 20px 0 3px;
+							border-radius: 4px;
+							cursor: default;
+							// white-space: nowrap;
+							// overflow: hidden;
+							// text-overflow: ellipsis;
+							.ic-x {
+								display: none;
+								@include position(absolute, 2px, null, null, 1px);
+								cursor: pointer;
+							}
+							&:hover .ic-x {
+								display: block;
+							}
+						}
+					}
+				}
+				td.out {
+					.cell {
+						.row-1 {
+							color: #c3c3c3;
+						}
+					}
+				}
+				td.today {
+					.cell {
+						background: #ffdfdf;
+					}
+				}
+			}
+		}
+		.cont-name {
+			.grid-wrap {
+				@include grid-scr-brown(null, 100%, 0);
+				.grid-area.grid-head {
+					th {
+						&.bor {
+							border-bottom: 1px solid $bor-gray-table;
+						}
+					}
+				}
+				.grid-area.grid-contents {
+					background: #fff;
+					height: 696px;
+					.grid-tbl {
+						td {
+							text-align: center;
+						}
+					}
+				}
+				.grid-area.grid-total {
+					.grid-tbl {
+						th, td { }
+						td { }
+					}
+				}
+			}
+			.grid-bottom {
+				@include grid-bottom-page;
+				border-radius: 0;
+				.count {top: 0px;}
+			}
 		}
 	}
 }

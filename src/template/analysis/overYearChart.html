@@ -3,7 +3,7 @@
 })
 
 
-<body class="page-inhouse">
+<body class="page-analysis">
 
 <div class="wrapper">
 	@@include('../include/_header.html')
@@ -56,48 +56,32 @@
                 <!-- 표 -->
 				<div class="grid-tbl-container">
                     <div class="grid-wrap">
-                        <div class="grid-scrollable-x">
-							<div class="grid-area grid-head">
-								<div class="grid-scrollable">
-                                    <table class="grid-tbl">
-                                        <colgroup>
-                                            <col style="width:52px">
-                                            <col style="width:81px">
-                                            <col style="width:81px">
-                                        </colgroup>
-                                        <thead class="rowgroup">
-                                            <tr>
-                                                <th><div class="cell">월</div></th>
-                                                <th><div class="cell"></div></th>
-                                                <th><div class="cell"></div></th>
-                                            </tr>
-                                        </thead>
-                                    </table>
-                                </div>
-                            </div>
-							<div class="grid-area grid-contents">
-								<div class="grid-scrollable">
-                                    <table class="grid-tbl">
-                                        <colgroup>
-                                            <col style="width:52px">
-                                            <col style="width:81px">
-                                            <col style="width:81px">
-                                        </colgroup>
-                                        <tbody class="rowgroup">
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                        <table class="grid-tbl">
+                            <colgroup>
+                                <col style="width:52px">
+                                <col style="width:81px">
+                                <col style="width:81px">
+                            </colgroup>
+                            <thead class="theadgroup">
+                                <tr>
+                                    <th><div class="cell">월</div></th>
+                                    <th><div class="cell"></div></th>
+                                    <th><div class="cell"></div></th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbodygroup">
+                            </tbody>
+                        </table>
                     </div>
 			    </div>
 			    
+                <!-- 차트 -->
 				<div class="grid-chart-container">
                    <div class="grid-wrap">
                         <p class="tit-chart">
-                            Over Last Year Chart(<span>2018</span>-<span>2019</span>)
+                            Over Last Year Chart
                         </p>
-                        <!-- 차트 -->
+                        <!-- chart graph -->
                         <div class="grid-chart-area">
                             <canvas id="chart"></canvas>
                         </div>

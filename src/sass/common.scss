@@ -80,11 +80,7 @@ $sidebar-wd: 96px;
 .wrap {
 	box-sizing: border-box;
 }
-.cf, .row {
-	position: relative;
-	@include clearfix;
-}
-.row {
+.cf, .row, .cont-area {
 	position: relative;
 	@include clearfix;
 }
@@ -400,11 +396,12 @@ $sidebar-wd: 96px;
 			background-image: none,linear-gradient(to bottom,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
 			background-position: 50% 50%;
 			background-color: #eae8e8;
-            z-index: 1;
 			img {
-				position: relative;
-				top: 1px;
+				@include position(absolute, 3px, 4px);
 			}
+		}
+		.inp-cal[disabled] + .i-cal {
+			z-index: 1;
 		}
         .mg- {
             vertical-align: middle;

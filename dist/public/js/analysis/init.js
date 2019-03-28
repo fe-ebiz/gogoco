@@ -5,9 +5,12 @@ $(function() {
         dataNt = [141061577, 133769949, 121899293, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     
     var chart = $('#chart'),
-        tblHd = $('.grid-tbl-container .grid-head .grid-tbl .rowgroup'),
-        tblCon = $('.grid-tbl-container .grid-contents .grid-tbl .rowgroup');
+        chartTit = $('.grid-chart-container .tit-chart'),
+        tblHd = $('.grid-tbl-container .grid-tbl .theadgroup'),
+        tblCon = $('.grid-tbl-container .grid-tbl .tbodygroup');
 
+    //chart 년도 추가 
+    chartTit.append('('+year[0]+'-'+year[1]+')');
     //table
     //년도 추가
     for( var y = 0 ; y < year.length ; y++ ){

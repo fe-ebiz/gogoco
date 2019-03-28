@@ -342,9 +342,9 @@
 
 .contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
-.contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #f7f7f7; }
+.contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
-.contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #fff; }
+.contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
 
 .contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
 
@@ -1389,7 +1389,9 @@
 
 .rsvList-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.rsvList-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.rsvList-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
+
+.rsvList-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .rsvList-contents .cont-list .grid-bottom .next { text-indent: 3px; }
 
@@ -1508,9 +1510,9 @@
 
 .rateSch-contents .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
-.rateSch-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .rateSch-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #f7f7f7; }
+.rateSch-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .rateSch-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
-.rateSch-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .rateSch-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #fff; }
+.rateSch-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .rateSch-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
 
 .rateSch-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
 
@@ -1739,7 +1741,9 @@
 
 .account-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.account-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.account-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
+
+.account-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .account-contents .cont-list .grid-bottom .next { text-indent: 3px; }
 
@@ -2076,7 +2080,9 @@
 
 .maList-contents .item-list .item-container .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.maList-contents .item-list .item-container .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 26px; color: #fff; background-color: #f35800; border-color: #f85a00; }
+.maList-contents .item-list .item-container .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
+
+.maList-contents .item-list .item-container .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
 .maList-contents .item-list .item-container .cont-list .grid-bottom .next { text-indent: 3px; }
 
