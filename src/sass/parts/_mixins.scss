@@ -1042,7 +1042,7 @@ $btn-lh: 1.5;
 			height: 100px;
 			background: #fff;
 			.grid-tbl {
-				tr:nth-child(2n-1) {
+				tr:nth-child(2n) {
 					th, td {
 						background: #fbfbfb;
 						background: #f1f1f1;

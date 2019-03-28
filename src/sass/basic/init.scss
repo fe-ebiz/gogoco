@@ -386,3 +386,130 @@
 		}
 	}
 }
+
+/* 패키지 설정 */
+.pkgSet-contents {
+	.cont-property {
+        .property-tbl {
+            @include tbl-style-1;
+            td {
+                .cell {
+					.form-input {
+						&.pkg {
+							width: 200px;
+						}
+					}
+                    .form-select { }
+                    .rdo-box {
+                        @include va;
+                        padding: 0 3px;
+                        label {
+                            margin-right: 0px;
+                        }
+                        &.n {
+                            margin-right: 15px;
+                        }
+                    }
+                    button {
+                        letter-spacing: 0;
+                    }
+                }
+            }
+        }
+    }
+	.cont-list {
+		margin-top: 10px;
+		.grid-wrap {
+			@include grid-scr-x(null, 100%, 0);
+			.grid-area.grid-head {
+				th {
+					&.bor {
+						border-bottom: 1px solid $bor-gray-table;
+					}
+				}
+			}
+			.grid-area.grid-contents {
+				background: #fff;
+				height: 700px;
+				.grid-tbl {
+					td {
+						text-align: center;
+					}
+				}
+			}
+			.grid-area.grid-total {
+				.grid-tbl {
+					th, td { }
+					td { }
+				}
+			}
+		}
+		.grid-bottom {
+			@include grid-bottom-page;
+			border-radius: 0;
+		}
+	}
+}
+
+/* 메일템플릿 */
+.mailTem-contents {
+	.cont-property {
+        .property-tbl {
+            @include tbl-style-1;
+            td {
+                .cell {
+                    .form-select {
+						&.w-1 {
+							width: 200px;
+						}
+					}
+                    .rdo-box {
+                        @include va;
+                        padding: 0 3px;
+                        label {
+                            margin-right: 0px;
+                        }
+                        &.n {
+                            margin-right: 15px;
+                        }
+                    }
+                    button {
+                        letter-spacing: 0;
+                    }
+                }
+            }
+        }
+    }
+	.cont-list {
+		margin-top: 10px;
+		.grid-wrap {
+			@include grid-scr-brown(null, 100%, 0);
+			.grid-area.grid-head {
+				th {
+					&.bor {
+						border-bottom: 1px solid $bor-gray-table;
+					}
+				}
+			}
+			.grid-area.grid-contents {
+				background: #fff;
+				height: 350px;
+				.grid-tbl {
+					td {
+						text-align: center;
+					}
+				}
+			}
+			.grid-area.grid-total {
+				.grid-tbl {
+					th, td { }
+					td { }
+				}
+			}
+		}
+		.grid-bottom {
+			@include grid-bottom-page;
+			border-radius: 0;
+		}
+	}
+}
