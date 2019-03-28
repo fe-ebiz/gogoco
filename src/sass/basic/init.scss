@@ -516,11 +516,13 @@
 
 /* 달력 */
 .cal-contents {
-	button {
-		&.prev, &.next {
-			span {
-				@include position(relative, -1px);
-				font-size: 10px;
+	.row-btn {
+		button {
+			&.prev, &.next {
+				span {
+					@include position(relative, -1px);
+					font-size: 10px;
+				}
 			}
 		}
 	}
@@ -529,17 +531,13 @@
 		> div[class*=cont-] {
 			@include float;
 			box-sizing: border-box;
-			display: none;
-			&.on {
-				display: block;
-			}
 		}
 		$wh: 1380px;
 		.cont-month {
 			width: $wh;
 		}
 		.cont-name {
-			width: calc(100% - $wh);
+			width: calc(100% - #{$wh});
 			padding-left: 5px;
 		}
 		.cont-month {
@@ -565,7 +563,7 @@
 				th {
 					font-weight: 700;
 					text-align: center;
-					height: 30px;
+					height: 28px;
 					letter-spacing: 0;
 					background: url(../../img/gridheadBg.png) repeat-x;
 				}
@@ -618,7 +616,7 @@
 		}
 		.cont-name {
 			.grid-wrap {
-				@include grid-scr-x(null, 100%, 0);
+				@include grid-scr-brown(null, 100%, 0);
 				.grid-area.grid-head {
 					th {
 						&.bor {
@@ -628,7 +626,7 @@
 				}
 				.grid-area.grid-contents {
 					background: #fff;
-					height: 700px;
+					height: 696px;
 					.grid-tbl {
 						td {
 							text-align: center;
@@ -641,6 +639,11 @@
 						td { }
 					}
 				}
+			}
+			.grid-bottom {
+				@include grid-bottom-page;
+				border-radius: 0;
+				.count {top: 0px;}
 			}
 		}
 	}
