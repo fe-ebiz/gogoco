@@ -450,22 +450,6 @@
                 <button class="btn-default" onclick="window.open('../winpop/winpop_trace.html', 'winpop', 'width=1800, height=900')">TRACE</button>
             </div>
 
-            <script>
-                $(function() {
-                				// Month, Day 탭 버튼
-                				$(".tab-list > button").on("click", function() {
-                					var idx = $(this).index();
-                					console.log(idx);
-                					$(this).addClass("on").siblings().removeClass("on");
-                					$(".item-list > div").eq(idx).show().siblings().hide();
-                				});
-                
-                				// x 버튼
-                				$(".month-tbl .row-item .ic-x").on("click", function() {
-                					$(this).closest(".row-item").remove();
-                				});
-                			});
-            </script>
             <div class="cf cont-container-f">
                 <div class="grid-toolbar top">
                     <button type="button" class="btn-gray today">Today</button>

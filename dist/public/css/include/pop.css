@@ -192,7 +192,7 @@
 
 .pop-container.pkg-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; }
 
-.pop-container.pkg-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .pop-container.pkg-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #fbfbfb; background: #f1f1f1; }
+.pop-container.pkg-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .pop-container.pkg-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fbfbfb; background: #f1f1f1; }
 
 .pop-container.pkg-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
 
@@ -513,7 +513,7 @@
 
 .pop-container.accomp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; }
 
-.pop-container.accomp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .pop-container.accomp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #fbfbfb; background: #f1f1f1; }
+.pop-container.accomp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .pop-container.accomp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fbfbfb; background: #f1f1f1; }
 
 .pop-container.accomp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
 
@@ -741,7 +741,7 @@
 
 .pop-container.gp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; }
 
-.pop-container.gp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .pop-container.gp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #fbfbfb; background: #f1f1f1; }
+.pop-container.gp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .pop-container.gp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fbfbfb; background: #f1f1f1; }
 
 .pop-container.gp-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
 
@@ -947,7 +947,7 @@
 
 .pop-container.sltParty-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; }
 
-.pop-container.sltParty-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .pop-container.sltParty-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #fbfbfb; background: #f1f1f1; }
+.pop-container.sltParty-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .pop-container.sltParty-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fbfbfb; background: #f1f1f1; }
 
 .pop-container.sltParty-container .pop-wrap .pop-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
 
@@ -1112,9 +1112,9 @@
 
 .pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
-.pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
+.pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #f7f7f7; }
 
-.pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
+.pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #fff; }
 
 .pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
 
@@ -1239,7 +1239,7 @@
 
 .spReq-container .pop-wrap .pop-contents .item-list .common .grid-wrap.scr-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; }
 
-.spReq-container .pop-wrap .pop-contents .item-list .common .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .spReq-container .pop-wrap .pop-contents .item-list .common .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #fbfbfb; background: #f1f1f1; }
+.spReq-container .pop-wrap .pop-contents .item-list .common .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .spReq-container .pop-wrap .pop-contents .item-list .common .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fbfbfb; background: #f1f1f1; }
 
 .spReq-container .pop-wrap .pop-contents .item-list .common .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
 

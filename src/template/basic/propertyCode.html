@@ -7,14 +7,271 @@
 <div class="wrapper">
 	@@include('../include/_header.html')
 
-	<div class="cf contents myInfo-contents">
+	<div class="cf contents cmCode-contents">
 
 		@@include('../include/_row_h2.html', {
-			"page-title": "나의 정보"
+			"page-title": "속성 코드"
 		})
 
 		<div class="cf cont-container-f">
+			<div class="cont-property">
+				<div class="grid-wrap">
+					<div class="grid-contents">
+						<table class="grid-tbl property-tbl">
+							<colgroup>
+								<col style="width:100px">
+								<col style="width:*">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th><div class="cell">검색옵션</div></th>
+									<td>
+                                        <div class="cell">
+											<select name="" id="" class="form-select gray w-1">
+												<option value="">선택</option>
+												<option value="">코드</option>
+												<option value="">코드데이터</option>
+											</select>
+											<input type="text" class="form-input option">
+											<button type="button" class="btn-brown">SEARCH</button>
+											<button type="button" class="btn-brown">RELOAD</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- //.cont-property -->
 
+			<div class="row row-cont">
+				<div class="split cont-code">
+					<h3>코드</h3>
+					<div class="scrollbar">
+						<ul class="dep-1 code-list">
+							<li>
+								<a href="javascript:;" class="on">
+									<div class="d">
+										<span class="icon-treeArr indent"></span><span class="icon-trees folder"></span>
+										<span class="fw-b">KSG</span>
+										: 라마다 평택 (KSG)
+									</div>
+								</a>
+								<ul class="dep-2" class="expand">
+									<li>
+										<a href="javascript:;">
+											<div class="d">
+												<span class="icon-treeArr indent"></span><span class="icon-trees folder"></span>
+												<span class="fw-b">001</span>
+												: 영업장구분 (KSG)
+											</div>
+										</a>
+										<ul class="dep-3">
+											<li>
+												<a href="javascript:;">
+													<div class="d">
+														<span class="icon-treeArr indent"></span><span class="icon-trees folder"></span>
+														<span class="fw-b">001001</span>
+														: 객실 (KSG)
+													</div>
+												</a>
+												<ul class="dep-4">
+													<li>
+														<a href="javascript:;">
+															<div class="d">
+																<span class="icon-trees file"></span>
+																<span class="fw-b">00100111</span>
+																: Room (KSG)
+															</div>
+														</a>
+													</li>
+													<li>
+														<a href="javascript:;">
+															<div class="d">
+																<span class="icon-trees file"></span>
+																<span class="fw-b">00100112</span>
+																: Mini Bar (KSG)
+															</div>
+														</a>
+													</li>
+													<li>
+														<a href="javascript:;">
+															<div class="d">
+																<span class="icon-trees file"></span>
+																<span class="fw-b">00100113</span>
+																: Telephone (KSG)
+															</div>
+														</a>
+													</li>
+													<li>
+														<a href="javascript:;">
+															<div class="d">
+																<span class="icon-trees file"></span>
+																<span class="fw-b">00100114</span>
+																: Laundry (KSG)
+															</div>
+														</a>
+													</li>
+													<li>
+														<a href="javascript:;">
+															<div class="d">
+																<span class="icon-trees file"></span>
+																<span class="fw-b">00100115</span>
+																: Fax (KSG)
+															</div>
+														</a>
+													</li>
+													<li>
+														<a href="javascript:;">
+															<div class="d">
+																<span class="icon-trees file"></span>
+																<span class="fw-b">00100116</span>
+																: Misc (KSG)
+															</div>
+														</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a href="javascript:;"><span class="icon-trees file"></span> : F&B (KSG)</a>
+											</li>
+											<li>
+												<a href="javascript:;"><span class="icon-trees file"></span> : 대관 (KSG)</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="javascript:;">
+											<div class="d">
+												<span class="icon-treeArr indent"></span><span class="icon-trees folder"></span>
+												<span class="fw-b">002</span>
+												: 객실타입 (KSG)
+											</div>
+										</a>
+										<ul class="dep-3">
+											<li>
+												<a href="javascript:;">
+													<div class="d">
+														<span class="icon-trees file"></span>
+														<span class="fw-b">002000</span>
+														: Standard (KSG)
+													</div>
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<!-- /.cont-code -->
+				<div class="split cont-data">
+					<h3>코드 데이터</h3>
+					<div class="grid-wrap scr-wrap">
+						<div class="grid-scrollable-x">
+							<div class="grid-area grid-head">
+								<div class="grid-scrollable">
+									<table class="grid-tbl">
+										<colgroup>
+											<col style="width:120px">
+											<col style="width:150px">
+											<col style="width:300px">
+											<col style="width:40px">
+											<col style="width:80px">
+											<col style="width:100px">
+											<col style="width:100px">
+											<col style="width:80px">
+											<col style="width:100px">
+											<col style="width:100px">
+											<col style="width:100px">
+											<col style="width:*">
+										</colgroup>
+										<thead class="rowgroup">
+											<tr>
+												<th><div class="cell">데이터코드</div></th>
+												<th><div class="cell">데이터명</div></th>
+												<th><div class="cell">설명</div></th>
+												<th><div class="cell">순서</div></th>
+												<th><div class="cell">사용여부</div></th>
+												<th><div class="cell">문자열속성</div></th>
+												<th><div class="cell">숫자열속성</div></th>
+												<th><div class="cell">정수열속성</div></th>
+												<th><div class="cell">rmk1-문자열</div></th>
+												<th><div class="cell">rmk2-문자열</div></th>
+												<th><div class="cell">rmk3-문자열</div></th>
+												<th><div class="cell">rmk4-문자열</div></th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+							</div>
+							<div class="grid-area grid-contents">
+								<table class="grid-tbl">
+									<colgroup>
+										<col style="width:120px">
+										<col style="width:150px">
+										<col style="width:300px">
+										<col style="width:40px">
+										<col style="width:80px">
+										<col style="width:100px">
+										<col style="width:100px">
+										<col style="width:80px">
+										<col style="width:100px">
+										<col style="width:100px">
+										<col style="width:100px">
+										<col style="width:*">
+									</colgroup>
+									<tbody class="rowgroup">
+										<tr>
+											<td><div class="cell">0010011100</div></td>
+											<td class="ta-left"><div class="cell">객실판매</div></td>
+											<td class="ta-left"><div class="cell">객실 1 2 3</div></td>
+											<td><div class="cell">1</div></td>
+											<td><div class="cell">N</div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+										</tr>
+										<tr>
+											<td><div class="cell"></div></td>
+											<td class="ta-left"><div class="cell"></div></td>
+											<td class="ta-left"><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+						</div>
+					</div>
+					<!-- //.grid-wrap -->
+					<div class="cf grid-bottom">
+						<a href="#" class="prev st">&lt;&lt;</a>
+						<a href="#" class="prev">&lt;</a>
+						<span class="num">0</span>
+						<a href="#" class="next">&gt;</a>
+	  					<a href="#" class="next st">&gt;&gt;</a>
+						<span class="count"><span class="co">0</span> Count</span>
+					</div>
+					<!-- /.grid-bottom -->
+				</div>
+				<!-- /.cont-cdData -->
+			</div>
 		</div>
 	</div>
 	<!--//.contents-->

@@ -4,7 +4,42 @@
 // @import "../parts/mixins";
 @import "../parts/common";
 
-/* 업장 */
+/* 나의정보 */
+.myInfo-contents {
+	.grid-tbl {
+		@include tbl-base;
+		td {
+			.cell {
+				.w-1 {
+					width: 150px;
+				}
+				.w-2 {
+					width: 300px;
+				}
+				.tel {
+					width: 70px;
+				}
+				.tel-2 {
+					width: 55px;
+				}
+				.form-input {
+					&.addr-1 {
+						width: 80px;
+					}
+				}
+			}
+			& + th {
+				border-left: 1px dashed $bdg-tblBase;
+			}
+		}
+	}
+	.grid-tbl.tbl-1 {}
+	.grid-tbl.tbl-2 {
+		margin-top: 10px;
+	}
+}
+
+/* 공통코드 */
 .cmCode-contents {
 	.cont-property {
         .property-tbl {
@@ -32,14 +67,14 @@
 			box-sizing: border-box;
 			margin-top: 10px;
 			h3 {
-				font-size: 13px;
-				margin-bottom: 5px;
+				font-size: 12px;
+				margin-bottom: 2px;
 			}
 		}
 		.split.cont-code {
 			width: 400px;
 			.scrollbar {
-				height: 500px;
+				height: 700px;
 				overflow-y: auto;
 				border: 1px solid #aaa;
 			}
@@ -60,6 +95,12 @@
 							position: relative;
 						}
 					}
+					[class*=dep-] {
+						display: none;
+					}
+					[class*=dep-].expand {
+						display: block;
+					}
 				}
 			}
 			$total: 5;
@@ -74,7 +115,274 @@
 		.split.cont-data {
 			width: calc(100% - 400px);
 			padding-left: 10px;
+            .grid-wrap.scr-wrap {
+                @include grid-scr-brown(null, 100%, 0);
+                .grid-area.grid-head {
+                    th { }
+                }
+                .grid-area.grid-contents {
+                    background: #fff;
+                    height: 634px;
+                    .grid-tbl {
+                        td {
+                            text-align: center;
+							border-bottom: none;
+                        }
+                        tr.depth-2 {
+                            td:first-child {
+                                padding-left: 35px;
+                            }
+                        }
+						tr:last-child {
+							td {
+								border-bottom: 1px solid $bdg-tblBase;
+							}
+						}
+                    }
+                }
+                .grid-area.grid-total {
+                    .grid-tbl {
+                        th, td { }
+                        td { }
+                    }
+                }
+            }
+            .grid-bottom {
+                @include grid-bottom-page;
+                border-radius: 0;
+            }
+		}
+	}
+}
 
+/* 속성코드 */
+.prCode-contents {
+	.cont-property {
+        .property-tbl {
+            @include tbl-style-1;
+            td {
+                .cell {
+					.form-input {
+						&.option {
+							width: 150px;
+						}
+					}
+					.w-1 {
+						width: 100px;
+					}
+                    button {
+                        letter-spacing: 0;
+                    }
+                }
+            }
+        }
+    }
+	.row-cont {
+		.split {
+			@include float;
+			box-sizing: border-box;
+			margin-top: 10px;
+			h3 {
+				font-size: 12px;
+				margin-bottom: 2px;
+			}
+		}
+		.split.cont-code {
+			width: 400px;
+			.scrollbar {
+				height: 700px;
+				overflow-y: auto;
+				border: 1px solid #aaa;
+			}
+			.code-list {
+				font-size: 12px;
+				li {
+					position: relative;
+					> a {
+						@include dp(block);
+						padding: 5px 0;
+						&:hover {
+							background: #e7f1fa;
+						}
+						&.on {
+							background: #d2d9df;
+						}
+						> .d {
+							position: relative;
+						}
+					}
+					[class*=dep-] {
+						display: none;
+					}
+					[class*=dep-].expand {
+						display: block;
+					}
+				}
+			}
+			$total: 5;
+			@for $i from 1 to $total {
+				.dep-#{$i} {
+					li > a {
+						padding-left: (20px * $i) + 5px;
+					}
+				}
+			}
+		}
+		.split.cont-data {
+			width: calc(100% - 400px);
+			padding-left: 10px;
+            .grid-wrap.scr-wrap {
+                @include grid-scr-brown(null, 100%, 0);
+                .grid-area.grid-head {
+                    th { }
+                }
+                .grid-area.grid-contents {
+                    background: #fff;
+                    height: 634px;
+                    .grid-tbl {
+                        td {
+                            text-align: center;
+							border-bottom: none;
+                        }
+                        tr.depth-2 {
+                            td:first-child {
+                                padding-left: 35px;
+                            }
+                        }
+						tr:last-child {
+							td {
+								border-bottom: 1px solid $bdg-tblBase;
+							}
+						}
+                    }
+                }
+                .grid-area.grid-total {
+                    .grid-tbl {
+                        th, td { }
+                        td { }
+                    }
+                }
+            }
+            .grid-bottom {
+                @include grid-bottom-page;
+                border-radius: 0;
+            }
+		}
+	}
+}
+
+/* 스폐셜코드 */
+.spCode-contents {
+	.cont-property {
+        .property-tbl {
+            @include tbl-style-1;
+            td {
+                .cell {
+					.form-input {
+						&.option {
+							width: 150px;
+						}
+					}
+					.w-1 {
+						width: 100px;
+					}
+                    button {
+                        letter-spacing: 0;
+                    }
+                }
+            }
+        }
+    }
+	.row-cont {
+		.split {
+			@include float;
+			box-sizing: border-box;
+			margin-top: 10px;
+			h3 {
+				font-size: 12px;
+				margin-bottom: 2px;
+			}
+		}
+		.split.cont-code {
+			width: 400px;
+			.scrollbar {
+				height: 700px;
+				overflow-y: auto;
+				border: 1px solid #aaa;
+			}
+			.code-list {
+				font-size: 12px;
+				li {
+					position: relative;
+					> a {
+						@include dp(block);
+						padding: 5px 0;
+						&:hover {
+							background: #e7f1fa;
+						}
+						&.on {
+							background: #d2d9df;
+						}
+						> .d {
+							position: relative;
+						}
+					}
+					[class*=dep-] {
+						display: none;
+					}
+					[class*=dep-].expand {
+						display: block;
+					}
+				}
+			}
+			$total: 5;
+			@for $i from 1 to $total {
+				.dep-#{$i} {
+					li > a {
+						padding-left: (20px * $i) + 5px;
+					}
+				}
+			}
+		}
+		.split.cont-data {
+			width: calc(100% - 400px);
+			padding-left: 10px;
+            .grid-wrap.scr-wrap {
+                @include grid-scr-brown(null, 100%, 0);
+                .grid-area.grid-head {
+                    th { }
+                }
+                .grid-area.grid-contents {
+                    background: #fff;
+                    height: 634px;
+                    .grid-tbl {
+                        td {
+                            text-align: center;
+							border-bottom: none;
+                        }
+                        tr.depth-2 {
+                            td:first-child {
+                                padding-left: 35px;
+                            }
+                        }
+						tr:last-child {
+							td {
+								border-bottom: 1px solid $bdg-tblBase;
+							}
+						}
+                    }
+                }
+                .grid-area.grid-total {
+                    .grid-tbl {
+                        th, td { }
+                        td { }
+                    }
+                }
+            }
+            .grid-bottom {
+                @include grid-bottom-page;
+                border-radius: 0;
+            }
 		}
 	}
 }
