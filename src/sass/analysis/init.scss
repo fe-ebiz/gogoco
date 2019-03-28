@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+@import "../parts/variables";
+@import "../parts/mixins";
+
+
+/* 작년도 매출 비교 */
+.maidSch-contents {
+	.cont-property {
+		.tbl-property {
+			@include tbl-style-1;
+			td {
+				.cell {
+					.form-select {
+                        width: 120px;
+					}
+					.rdo-box {
+						padding: 0 8px;
+						label {
+							margin-right: 5px;
+						}
+					}
+					.cal-box {
+						.inp-cal {
+							width: 100px;
+						}
+					}
+				}
+			}
+		}
+	}
+    
+	.cont-list {
+        padding-top: 10px;
+        .grid-tbl-container {
+            @include float;
+            box-sizing: border-box;
+            width: 15%;
+            padding-right: 10px;
+            .grid-wrap {
+                @include grid-scr-x($scr-wth: null);
+                border-right: 0;
+                border-bottom: 0;
+                
+                .grid-scrollable-x {
+                    .grid-head {
+                        .grid-scrollable {
+                            .grid-tbl {
+                                width: 100%;
+                                tr {
+                                    th {
+                                        .cell {
+                                            text-align: left;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .grid-contents {
+                        overflow: hidden;
+                        height: auto;
+                        .grid-scrollable {
+                            .grid-tbl {
+                                overflow: hidden;
+                                width: 100%;
+                                tr {
+                                    td {
+                                        .cell {
+                                            letter-spacing: -1px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .grid-chart-container {
+            @include float($l : right);
+            box-sizing: border-box;
+            width: 85%;
+            .grid-wrap {
+                @include bx;
+                padding: 5px 5px 20px;
+                border: 1px solid #a6a6a6;
+                .tit-chart {
+                    margin-bottom: 20px;
+                    padding-left: 10px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 48px;
+                    color: $fg-brown-2;
+                }
+                
+                .grid-chart-area {
+                    @include bx;
+                    height: 400px;
+                    #chart {
+                    }
+                }
+            }
+        }
+	}
+}
+
+
