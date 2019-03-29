@@ -10,7 +10,6 @@ _media/
 _tmp/
 img/
 .sass-cache/
-dis/views/
 
 #fontFile
 *.ttf
