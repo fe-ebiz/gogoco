@@ -439,7 +439,7 @@
 
         <div class="cf contents maidSch-contents">
             <div class="cf row-h2">
-                <h2 class="page-title">작년도 매출 비교 test</h2>
+                <h2 class="page-title">작년도 매출 비교</h2>
                 <button class="btn-default" onclick="window.open('../winpop/winpop_roomInventory.html', 'winpop', 'width=1800, height=900')">ROOM</button>
                 <button class="btn-default" onclick="window.open('../winpop/winpop_itemInventory.html', 'winpop', 'width=1800, height=900')">ITEM</button>
                 <button class="btn-default" onclick="window.open('../winpop/winpop_houseStatus.html', 'winpop', 'width=1000, height=800')">HOUSE</button>
@@ -476,9 +476,9 @@
                                             <div class="cell">
                                                 <span class="cal-box">
 
-											    <!-- 멀티클래스 type-year 추가 -->
+											    <!-- 멀티클래스 date-ui 제거 type-year 추가 -->
 
-												<input type="text" class="appe-reset inp-cal date-ui type-year">
+												<input type="text" class="appe-reset inp-cal type-year">
 
 												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
                                                 </span>
@@ -496,28 +496,34 @@
                     <!-- 표 -->
                     <div class="grid-tbl-container">
                         <div class="grid-wrap">
-                            <table class="grid-tbl">
-                                <colgroup>
-                                    <col style="width:52px">
-                                        <col style="width:81px">
-                                            <col style="width:81px">
-                                </colgroup>
-                                <thead class="theadgroup">
-                                    <tr>
-                                        <th>
-                                            <div class="cell">월</div>
-                                        </th>
-                                        <th>
-                                            <div class="cell"></div>
-                                        </th>
-                                        <th>
-                                            <div class="cell"></div>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody class="tbodygroup">
-                                </tbody>
-                            </table>
+                            <div class="grid-area grid-head">
+                                <div class="grid-scrollable">
+                                    <table class="grid-tbl">
+                                        <colgroup>
+                                            <col style="width:52px">
+                                                <col style="width:81px">
+                                                    <col style="width:81px">
+                                        </colgroup>
+                                        <thead class="rowgroup">
+
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="grid-area grid-contents">
+                                <div class="grid-scrollable">
+                                    <table class="grid-tbl">
+                                        <colgroup>
+                                            <col style="width:52px">
+                                                <col style="width:81px">
+                                                    <col style="width:81px">
+                                        </colgroup>
+                                        <tbody class="rowgroup">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -541,6 +547,8 @@
 
 
     </div>
+    <!-- 달력 스크립트 -->
+    <script src="../../public/js/yearpicker.js"></script>
 
     <!-- 차트 스크립트 -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>

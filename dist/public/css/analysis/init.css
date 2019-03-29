@@ -1,4 +1,24 @@
 @charset "UTF-8";
+:root { --background-color: #fff; --border-color: #ccc; --text-color: #555; --selected-text-color: #C0392B; --hover-background-color: #eee; }
+
+.yearpicker-container { position: absolute; color: var(--text-color); width: 280px; border: 1px solid var(--border-color); border-radius: 3px; font-size: 1rem; -webkit-box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.2); box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.2); background-color: var(--background-color); }
+
+.yearpicker-header { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; height: 2.5rem; border-bottom: 1px solid var(--border-color); -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-pack: distribute; justify-content: space-around; }
+
+.yearpicker-prev, .yearpicker-next { cursor: pointer; font-size: 2rem; }
+
+.yearpicker-prev:hover, .yearpicker-next:hover { color: var(--selected-text-color); }
+
+.yearpicker-year { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; text-align: center; padding: 0.5rem; }
+
+.yearpicker-items { list-style: none; padding: 1rem 0.5rem; -webkit-box-flex: 0; -ms-flex: 0 0 33.3%; flex: 0 0 33.3%; width: 100%; }
+
+.yearpicker-items:hover { background-color: var(--hover-background-color); color: var(--selected-text-color); cursor: pointer; }
+
+.yearpicker-items.selected { color: var(--selected-text-color); }
+
+.hide { display: none; }
+
 /* 작년도 매출 비교 */
 .maidSch-contents .cont-property .tbl-property { width: 100%; border: 1px solid #c0b5a6; border-bottom: none; table-layout: fixed; }
 
@@ -46,27 +66,33 @@
 
 .maidSch-contents .cont-list .grid-tbl-container { position: relative; float: left; -webkit-box-sizing: border-box; box-sizing: border-box; width: 15%; padding-right: 10px; }
 
-.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl { overflow: hidden; width: 100%; table-layout: fixed; border-collapse: collapse; border: 1px solid #d5d5d5; }
+.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area { border: 1px solid #d5d5d5; border-right-width: 0; }
 
-.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl th, .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl td { height: 27px; color: #313131; font-size: 12px; border-left: 1px solid #d5d5d5; }
+.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area .grid-scrollable .grid-tbl { overflow: hidden; width: 100%; table-layout: fixed; border-collapse: collapse; border-bottom: 0; }
 
-.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl th .cell, .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl td .cell { position: relative; padding: 3px 7px; }
+.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area .grid-scrollable .grid-tbl tr th, .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area .grid-scrollable .grid-tbl tr td { height: 27px; color: #313131; font-size: 12px; border-right: 1px solid #d5d5d5; }
 
-.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl th .cell::before, .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl th .cell::after, .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl td .cell::before, .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl td .cell::after { content: ''; display: table; }
+.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area .grid-scrollable .grid-tbl tr th .cell, .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area .grid-scrollable .grid-tbl tr td .cell { position: relative; padding: 3px 7px; }
 
-.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl th .cell::after, .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl td .cell::after { clear: both; }
+.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area .grid-scrollable .grid-tbl tr th .cell::before, .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area .grid-scrollable .grid-tbl tr th .cell::after, .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area .grid-scrollable .grid-tbl tr td .cell::before, .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area .grid-scrollable .grid-tbl tr td .cell::after { content: ''; display: table; }
 
-.ie8 .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl th .cell, .ie8 .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl td .cell { zoom: 1; }
+.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area .grid-scrollable .grid-tbl tr th .cell::after, .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area .grid-scrollable .grid-tbl tr td .cell::after { clear: both; }
 
-.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl th:first-child, .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl td:first-child { border-left: none; }
+.ie8 .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area .grid-scrollable .grid-tbl tr th .cell, .ie8 .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area .grid-scrollable .grid-tbl tr td .cell { zoom: 1; }
 
-.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl .theadgroup tr th { border-bottom: 1px solid #c5c5c5; background: #E7E4E2; background-image: none, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0))); background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0) 100%); background-position: 50% 50%; background-color: #eae8e8; }
+.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area.grid-head { border-bottom: 1px solid #c5c5c5; }
 
-.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl .tbodygroup tr td { border-top: 1px solid #d5d5d5; }
+.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area.grid-head .grid-scrollable { background: #E7E4E2; background-image: none, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0))); background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0) 100%); background-position: 50% 50%; background-color: #eae8e8; }
 
-.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl .tbodygroup tr:nth-child(2n) { background: #f1f1f1; }
+.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area.grid-contents { border-top: 0; max-height: 336px; overflow: hidden; overflow-y: auto; }
 
-.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-tbl .tbodygroup tr:hover td { background: #dad3d0; }
+.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area.grid-contents .grid-scrollable .grid-tbl tr th, .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area.grid-contents .grid-scrollable .grid-tbl tr td { border-top: 1px solid #d5d5d5; }
+
+.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area.grid-contents .grid-scrollable .grid-tbl tr:first-child th, .maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area.grid-contents .grid-scrollable .grid-tbl tr:first-child td { border-top: 0; }
+
+.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area.grid-contents .grid-scrollable .grid-tbl tr:nth-child(2n) { background: #f1f1f1; }
+
+.maidSch-contents .cont-list .grid-tbl-container .grid-wrap .grid-area.grid-contents .grid-scrollable .grid-tbl tr:hover td { background: #dad3d0; }
 
 .maidSch-contents .cont-list .grid-chart-container { position: relative; float: right; -webkit-box-sizing: border-box; box-sizing: border-box; width: 85%; }
 
@@ -75,3 +101,34 @@
 .maidSch-contents .cont-list .grid-chart-container .grid-wrap .tit-chart { margin-bottom: 20px; padding-left: 10px; font-size: 18px; font-weight: 600; line-height: 48px; color: #908270; }
 
 .maidSch-contents .cont-list .grid-chart-container .grid-wrap .grid-chart-area { position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; height: 400px; }
+
+/* 달력 */
+.yearpicker-container { width: 200px; }
+
+.yearpicker-container .yearpicker-header { position: relative; height: 28px; font-size: 13px; border-bottom: 0; background: #eae8e8; }
+
+.yearpicker-container .yearpicker-header .yearpicker-prev { position: absolute; top: 50%; display: inline-block; width: 20px; height: 20px; margin-top: -10px; border: 1px solid transparent; left: 3px; }
+
+.yearpicker-container .yearpicker-header .yearpicker-prev:before { content: ''; position: absolute; top: 50%; left: 50%; display: inline-block; width: 0px; height: 0px; margin-top: -3px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+.yearpicker-container .yearpicker-header .yearpicker-prev:hover { border-color: #ccc; border-radius: 4px; background: #bcb4b0; background-image: none, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.4)), to(rgba(255, 255, 255, 0))); background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0, rgba(255, 255, 255, 0) 100%); background-position: 50% 50%; background-color: #bcb4b0; }
+
+.yearpicker-container .yearpicker-header .yearpicker-prev:before { margin-left: -2px; border-right: 6px solid transparent; border-bottom: 6px solid #2e2e2e; }
+
+.yearpicker-container .yearpicker-header .yearpicker-next { position: absolute; top: 50%; display: inline-block; width: 20px; height: 20px; margin-top: -10px; border: 1px solid transparent; right: 3px; }
+
+.yearpicker-container .yearpicker-header .yearpicker-next:before { content: ''; position: absolute; top: 50%; left: 50%; display: inline-block; width: 0px; height: 0px; margin-top: -3px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+.yearpicker-container .yearpicker-header .yearpicker-next:hover { border-color: #ccc; border-radius: 4px; background: #bcb4b0; background-image: none, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.4)), to(rgba(255, 255, 255, 0))); background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0, rgba(255, 255, 255, 0) 100%); background-position: 50% 50%; background-color: #bcb4b0; }
+
+.yearpicker-container .yearpicker-header .yearpicker-next:before { margin-left: -5px; border-left: 6px solid transparent; border-top: 6px solid #2e2e2e; }
+
+.yearpicker-container .yearpicker-body { font-size: 12px; }
+
+.yearpicker-container .yearpicker-body .yearpicker-year { padding: 1px; }
+
+.yearpicker-container .yearpicker-body .yearpicker-year .yearpicker-items { -webkit-box-sizing: border-box; box-sizing: border-box; padding: 1rem 0rem; -ms-flex: 0 0 25%; -webkit-box-flex: 0; flex: 0 0 25%; color: #2e2e2e; border: 1px solid transparent; border-radius: 4px; }
+
+.yearpicker-container .yearpicker-body .yearpicker-year .yearpicker-items:hover { border-color: #ccc; background: #bcb4b0; background-image: none, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.4)), to(rgba(255, 255, 255, 0))); background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0, rgba(255, 255, 255, 0) 100%); background-position: 50% 50%; background-color: #bcb4b0; }
+
+.yearpicker-container .yearpicker-body .yearpicker-year .yearpicker-items.selected { color: #fff; border-color: #aeaeae; background: #f35800; background-image: none, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0))); background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0) 100%); background-color: #f35800; }
