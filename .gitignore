@@ -9,6 +9,7 @@ _work/
 _media/
 _tmp/
 img/
+dist/views/
 .sass-cache/
 
 #fontFile
@@ -18,7 +19,7 @@ img/
 *.eot
 *.otf
 
-#sftpFile, zipÆÄÀÏ
+#sftpFile, zipï¿½ï¿½ï¿½ï¿½
 *.json
 *.zip
 
