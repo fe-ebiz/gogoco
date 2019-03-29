@@ -1,148 +1,148 @@
 @charset "UTF-8";
 /* 권한코드 */
-.roldCode-contents .cont-property .property-tbl { width: 100%; border: 1px solid #c0b5a6; border-bottom: none; table-layout: fixed; }
+.roleCode-contents .cont-property .property-tbl { width: 100%; border: 1px solid #c0b5a6; border-bottom: none; table-layout: fixed; }
 
-.roldCode-contents .cont-property .property-tbl th, .roldCode-contents .cont-property .property-tbl td { height: 28px; border-bottom: 1px solid #c0b5a6; background: #f4f1ee; color: #666; font-size: 12px; }
+.roleCode-contents .cont-property .property-tbl th, .roleCode-contents .cont-property .property-tbl td { height: 28px; border-bottom: 1px solid #c0b5a6; background: #f4f1ee; color: #666; font-size: 12px; }
 
-.roldCode-contents .cont-property .property-tbl th .cell, .roldCode-contents .cont-property .property-tbl td .cell { position: relative; padding: 3px 7px; }
+.roleCode-contents .cont-property .property-tbl th .cell, .roleCode-contents .cont-property .property-tbl td .cell { position: relative; padding: 3px 7px; }
 
-.roldCode-contents .cont-property .property-tbl th .cell::before, .roldCode-contents .cont-property .property-tbl th .cell::after, .roldCode-contents .cont-property .property-tbl td .cell::before, .roldCode-contents .cont-property .property-tbl td .cell::after { content: ''; display: table; }
+.roleCode-contents .cont-property .property-tbl th .cell::before, .roleCode-contents .cont-property .property-tbl th .cell::after, .roleCode-contents .cont-property .property-tbl td .cell::before, .roleCode-contents .cont-property .property-tbl td .cell::after { content: ''; display: table; }
 
-.roldCode-contents .cont-property .property-tbl th .cell::after, .roldCode-contents .cont-property .property-tbl td .cell::after { clear: both; }
+.roleCode-contents .cont-property .property-tbl th .cell::after, .roleCode-contents .cont-property .property-tbl td .cell::after { clear: both; }
 
-.ie8 .roldCode-contents .cont-property .property-tbl th .cell, .ie8 .roldCode-contents .cont-property .property-tbl td .cell { zoom: 1; }
+.ie8 .roleCode-contents .cont-property .property-tbl th .cell, .ie8 .roleCode-contents .cont-property .property-tbl td .cell { zoom: 1; }
 
-.roldCode-contents .cont-property .property-tbl th .cell.pd-0, .roldCode-contents .cont-property .property-tbl td .cell.pd-0 { padding-top: 0; padding-bottom: 0px; }
+.roleCode-contents .cont-property .property-tbl th .cell.pd-0, .roleCode-contents .cont-property .property-tbl td .cell.pd-0 { padding-top: 0; padding-bottom: 0px; }
 
-.roldCode-contents .cont-property .property-tbl th .cell.necess, .roldCode-contents .cont-property .property-tbl td .cell.necess { background: url("../../img/tick-small-red.png") no-repeat 100% 58%; }
+.roleCode-contents .cont-property .property-tbl th .cell.necess, .roleCode-contents .cont-property .property-tbl td .cell.necess { background: url("../../img/tick-small-red.png") no-repeat 100% 58%; }
 
-.roldCode-contents .cont-property .property-tbl th { height: 33px; border-left: 1px dashed #c0b5a6; overflow: visible; color: #444; text-align: center; }
+.roleCode-contents .cont-property .property-tbl th { height: 33px; border-left: 1px dashed #c0b5a6; overflow: visible; color: #444; text-align: center; }
 
-.roldCode-contents .cont-property .property-tbl th .cell { font-weight: 700; }
+.roleCode-contents .cont-property .property-tbl th .cell { font-weight: 700; }
 
-.roldCode-contents .cont-property .property-tbl th .cell.order-ui { cursor: pointer; }
+.roleCode-contents .cont-property .property-tbl th .cell.order-ui { cursor: pointer; }
 
-.roldCode-contents .cont-property .property-tbl th .cell.order-ui:after { content: "▼"; position: relative; display: none; margin-left: 2px; font-size: 10px; color: #73787D; }
+.roleCode-contents .cont-property .property-tbl th .cell.order-ui:after { content: "▼"; position: relative; display: none; margin-left: 2px; font-size: 10px; color: #73787D; }
 
-.roldCode-contents .cont-property .property-tbl th .cell.order-ui:hover:after { display: inline; }
+.roleCode-contents .cont-property .property-tbl th .cell.order-ui:hover:after { display: inline; }
 
-.roldCode-contents .cont-property .property-tbl th .cell.order-ui.ascending:after { content: "▲"; }
+.roleCode-contents .cont-property .property-tbl th .cell.order-ui.ascending:after { content: "▲"; }
 
-.roldCode-contents .cont-property .property-tbl td { border-left: 1px dashed #c0b5a6; }
+.roleCode-contents .cont-property .property-tbl td { border-left: 1px dashed #c0b5a6; }
 
-.roldCode-contents .cont-property .property-tbl td .cell .chk-box input, .roldCode-contents .cont-property .property-tbl td .cell .rdo-box input { margin-right: 3px; }
+.roleCode-contents .cont-property .property-tbl td .cell .chk-box input, .roleCode-contents .cont-property .property-tbl td .cell .rdo-box input { margin-right: 3px; }
 
-.roldCode-contents .cont-property .property-tbl td .cell .chk-box + .chk-box, .roldCode-contents .cont-property .property-tbl td .cell .chk-box + .rdo-box, .roldCode-contents .cont-property .property-tbl td .cell .rdo-box + .chk-box, .roldCode-contents .cont-property .property-tbl td .cell .rdo-box + .rdo-box { margin-left: 5px; }
+.roleCode-contents .cont-property .property-tbl td .cell .chk-box + .chk-box, .roleCode-contents .cont-property .property-tbl td .cell .chk-box + .rdo-box, .roleCode-contents .cont-property .property-tbl td .cell .rdo-box + .chk-box, .roleCode-contents .cont-property .property-tbl td .cell .rdo-box + .rdo-box { margin-left: 5px; }
 
-.roldCode-contents .cont-property .property-tbl td .cell .form-input.option { width: 150px; }
+.roleCode-contents .cont-property .property-tbl td .cell .form-input.option { width: 150px; }
 
-.roldCode-contents .cont-property .property-tbl td .cell .form-select.option { width: 100px; }
+.roleCode-contents .cont-property .property-tbl td .cell .form-select.option { width: 100px; }
 
-.roldCode-contents .cont-property .property-tbl td .cell button { letter-spacing: 0; }
+.roleCode-contents .cont-property .property-tbl td .cell button { letter-spacing: 0; }
 
-.roldCode-contents .cont-list { margin-top: 10px; }
+.roleCode-contents .cont-list { margin-top: 10px; }
 
-.roldCode-contents .cont-list .grid-wrap { width: 100%; border: 1px solid #c0b5a6; overflow: hidden; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0; }
+.roleCode-contents .cont-list .grid-wrap { width: 100%; border: 1px solid #c0b5a6; overflow: hidden; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-tbl { width: 100%; table-layout: fixed; border: none; border-right: 1px solid #c0b5a6; }
+.roleCode-contents .cont-list .grid-wrap .grid-tbl { width: 100%; table-layout: fixed; border: none; border-right: 1px solid #c0b5a6; }
 
-.ie8 .roldCode-contents .cont-list .grid-wrap .grid-tbl { width: 1740px; }
+.ie8 .roleCode-contents .cont-list .grid-wrap .grid-tbl { width: 1740px; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-tbl th, .roldCode-contents .cont-list .grid-wrap .grid-tbl td { height: 28px; border-bottom: 1px solid #c0b5a6; color: #666; font-size: 12px; }
+.roleCode-contents .cont-list .grid-wrap .grid-tbl th, .roleCode-contents .cont-list .grid-wrap .grid-tbl td { height: 28px; border-bottom: 1px solid #c0b5a6; color: #666; font-size: 12px; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-tbl th .cell, .roldCode-contents .cont-list .grid-wrap .grid-tbl td .cell { position: relative; padding: 3px 7px; }
+.roleCode-contents .cont-list .grid-wrap .grid-tbl th .cell, .roleCode-contents .cont-list .grid-wrap .grid-tbl td .cell { position: relative; padding: 3px 7px; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-tbl th .cell::before, .roldCode-contents .cont-list .grid-wrap .grid-tbl th .cell::after, .roldCode-contents .cont-list .grid-wrap .grid-tbl td .cell::before, .roldCode-contents .cont-list .grid-wrap .grid-tbl td .cell::after { content: ''; display: table; }
+.roleCode-contents .cont-list .grid-wrap .grid-tbl th .cell::before, .roleCode-contents .cont-list .grid-wrap .grid-tbl th .cell::after, .roleCode-contents .cont-list .grid-wrap .grid-tbl td .cell::before, .roleCode-contents .cont-list .grid-wrap .grid-tbl td .cell::after { content: ''; display: table; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-tbl th .cell::after, .roldCode-contents .cont-list .grid-wrap .grid-tbl td .cell::after { clear: both; }
+.roleCode-contents .cont-list .grid-wrap .grid-tbl th .cell::after, .roleCode-contents .cont-list .grid-wrap .grid-tbl td .cell::after { clear: both; }
 
-.ie8 .roldCode-contents .cont-list .grid-wrap .grid-tbl th .cell, .ie8 .roldCode-contents .cont-list .grid-wrap .grid-tbl td .cell { zoom: 1; }
+.ie8 .roleCode-contents .cont-list .grid-wrap .grid-tbl th .cell, .ie8 .roleCode-contents .cont-list .grid-wrap .grid-tbl td .cell { zoom: 1; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-tbl th .cell.pd-0, .roldCode-contents .cont-list .grid-wrap .grid-tbl td .cell.pd-0 { padding-top: 0; padding-bottom: 0px; }
+.roleCode-contents .cont-list .grid-wrap .grid-tbl th .cell.pd-0, .roleCode-contents .cont-list .grid-wrap .grid-tbl td .cell.pd-0 { padding-top: 0; padding-bottom: 0px; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-tbl th .cell.necess, .roldCode-contents .cont-list .grid-wrap .grid-tbl td .cell.necess { background: url("../../img/tick-small-red.png") no-repeat 100% 58%; }
+.roleCode-contents .cont-list .grid-wrap .grid-tbl th .cell.necess, .roleCode-contents .cont-list .grid-wrap .grid-tbl td .cell.necess { background: url("../../img/tick-small-red.png") no-repeat 100% 58%; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-tbl th:first-child, .roldCode-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
+.roleCode-contents .cont-list .grid-wrap .grid-tbl th:first-child, .roleCode-contents .cont-list .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c0b5a6; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.roleCode-contents .cont-list .grid-wrap .grid-tbl th { border-left: 1px solid #c0b5a6; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.roleCode-contents .cont-list .grid-wrap .grid-tbl th .cell { font-weight: 700; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
+.roleCode-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui:after { content: "▼"; position: relative; display: none; margin-left: 2px; font-size: 10px; color: #73787D; }
+.roleCode-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui:after { content: "▼"; position: relative; display: none; margin-left: 2px; font-size: 10px; color: #73787D; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui:hover:after { display: inline; }
+.roleCode-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui:hover:after { display: inline; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui.ascending:after { content: "▲"; }
+.roleCode-contents .cont-list .grid-wrap .grid-tbl th .cell.order-ui.ascending:after { content: "▲"; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-tbl td { border-left: 1px dashed #c0b5a6; }
+.roleCode-contents .cont-list .grid-wrap .grid-tbl td { border-left: 1px dashed #c0b5a6; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-tbl td .cell .chk-box input, .roldCode-contents .cont-list .grid-wrap .grid-tbl td .cell .rdo-box input { margin-right: 3px; }
+.roleCode-contents .cont-list .grid-wrap .grid-tbl td .cell .chk-box input, .roleCode-contents .cont-list .grid-wrap .grid-tbl td .cell .rdo-box input { margin-right: 3px; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-tbl td .cell .chk-box + .chk-box, .roldCode-contents .cont-list .grid-wrap .grid-tbl td .cell .chk-box + .rdo-box, .roldCode-contents .cont-list .grid-wrap .grid-tbl td .cell .rdo-box + .chk-box, .roldCode-contents .cont-list .grid-wrap .grid-tbl td .cell .rdo-box + .rdo-box { margin-left: 5px; }
+.roleCode-contents .cont-list .grid-wrap .grid-tbl td .cell .chk-box + .chk-box, .roleCode-contents .cont-list .grid-wrap .grid-tbl td .cell .chk-box + .rdo-box, .roleCode-contents .cont-list .grid-wrap .grid-tbl td .cell .rdo-box + .chk-box, .roleCode-contents .cont-list .grid-wrap .grid-tbl td .cell .rdo-box + .rdo-box { margin-left: 5px; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-scrollable-x { position: relative; overflow-x: hidden; }
+.roleCode-contents .cont-list .grid-wrap .grid-scrollable-x { position: relative; overflow-x: hidden; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area { position: relative; }
+.roleCode-contents .cont-list .grid-wrap .grid-area { position: relative; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area.grid-head .grid-scrollable { border-bottom: 1px solid #c0b5a6; background: url(../../img/gridheadBg.png) repeat-x; }
+.roleCode-contents .cont-list .grid-wrap .grid-area.grid-head .grid-scrollable { border-bottom: 1px solid #c0b5a6; background: url(../../img/gridheadBg.png) repeat-x; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area.grid-head .grid-tbl { width: calc(100% - 17px); }
+.roleCode-contents .cont-list .grid-wrap .grid-area.grid-head .grid-tbl { width: calc(100% - 17px); }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area.grid-head .grid-tbl th { border-bottom: none; background: url(../../img/gridheadBg.png) repeat-x; }
+.roleCode-contents .cont-list .grid-wrap .grid-area.grid-head .grid-tbl th { border-bottom: none; background: url(../../img/gridheadBg.png) repeat-x; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
+.roleCode-contents .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
+.roleCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
+.roleCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
+.roleCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .roldCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
+.roleCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .roleCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .roldCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
+.roleCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .roleCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
+.roleCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area.grid-total .grid-tbl { border-top: 1px solid #c5c5c5; border-right: 0; }
+.roleCode-contents .cont-list .grid-wrap .grid-area.grid-total .grid-tbl { border-top: 1px solid #c5c5c5; border-right: 0; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area.grid-total .grid-tbl th, .roldCode-contents .cont-list .grid-wrap .grid-area.grid-total .grid-tbl td { background: #f5f5f5; color: #2e2e2e; border-bottom: 0; }
+.roleCode-contents .cont-list .grid-wrap .grid-area.grid-total .grid-tbl th, .roleCode-contents .cont-list .grid-wrap .grid-area.grid-total .grid-tbl td { background: #f5f5f5; color: #2e2e2e; border-bottom: 0; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area.grid-total .grid-tbl td.last .cell.inBl { margin-right: 17px; }
+.roleCode-contents .cont-list .grid-wrap .grid-area.grid-total .grid-tbl td.last .cell.inBl { margin-right: 17px; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area.grid-total .grid-tbl td.last .square { position: absolute; top: 0; right: 0; display: inline-block; height: 100%; padding: 0; border-left: 1px solid #c5c5c5; width: 17px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.roleCode-contents .cont-list .grid-wrap .grid-area.grid-total .grid-tbl td.last .square { position: absolute; top: 0; right: 0; display: inline-block; height: 100%; padding: 0; border-left: 1px solid #c5c5c5; width: 17px; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area.grid-head th.bor { border-bottom: 1px solid #c5c5c5; }
+.roleCode-contents .cont-list .grid-wrap .grid-area.grid-head th.bor { border-bottom: 1px solid #c5c5c5; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area.grid-contents { background: #fff; height: 650px; }
+.roleCode-contents .cont-list .grid-wrap .grid-area.grid-contents { background: #fff; height: 650px; }
 
-.roldCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td { text-align: center; }
+.roleCode-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td { text-align: center; }
 
-.roldCode-contents .cont-list .grid-bottom { background: #E7E4E2; border-bottom: 1px solid #c5c5c5; background-image: none, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0))); background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0) 100%); background-position: 50% 50%; background-color: #eae8e8; border-radius: 0 0 4px 4px; padding: 5px; border: 1px solid #c5c5c5; border-top: 0; border-radius: 0; }
+.roleCode-contents .cont-list .grid-bottom { background: #E7E4E2; border-bottom: 1px solid #c5c5c5; background-image: none, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0))); background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0) 100%); background-position: 50% 50%; background-color: #eae8e8; border-radius: 0 0 4px 4px; padding: 5px; border: 1px solid #c5c5c5; border-top: 0; border-radius: 0; }
 
-.roldCode-contents .cont-list .grid-bottom > * { position: relative; vertical-align: middle; display: inline-block; position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; border-radius: 50%; font-weight: 700; }
+.roleCode-contents .cont-list .grid-bottom > * { position: relative; vertical-align: middle; display: inline-block; position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; border-radius: 50%; font-weight: 700; }
 
-.roldCode-contents .cont-list .grid-bottom .prev, .roldCode-contents .cont-list .grid-bottom .next { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background-color: #fff; border: 1px solid #d2d2d2; }
+.roleCode-contents .cont-list .grid-bottom .prev, .roleCode-contents .cont-list .grid-bottom .next { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background-color: #fff; border: 1px solid #d2d2d2; }
 
-.roldCode-contents .cont-list .grid-bottom .prev.st, .roldCode-contents .cont-list .grid-bottom .next.st { letter-spacing: -3px; }
+.roleCode-contents .cont-list .grid-bottom .prev.st, .roleCode-contents .cont-list .grid-bottom .next.st { letter-spacing: -3px; }
 
-.roldCode-contents .cont-list .grid-bottom .prev { text-indent: -3px; }
+.roleCode-contents .cont-list .grid-bottom .prev { text-indent: -3px; }
 
-.roldCode-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
+.roleCode-contents .cont-list .grid-bottom .prev.st { text-indent: -5px; }
 
-.roldCode-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
+.roleCode-contents .cont-list .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
 
-.roldCode-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
+.roleCode-contents .cont-list .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
-.roldCode-contents .cont-list .grid-bottom .next { text-indent: 3px; }
+.roleCode-contents .cont-list .grid-bottom .next { text-indent: 3px; }
 
-.roldCode-contents .cont-list .grid-bottom .next.st { text-indent: 0px; }
+.roleCode-contents .cont-list .grid-bottom .next.st { text-indent: 0px; }
 
-.roldCode-contents .cont-list .grid-bottom .count { position: relative; float: right; font-size: 12px; color: #313131; font-weight: 400; padding-right: 12px; top: 3px; }
+.roleCode-contents .cont-list .grid-bottom .count { position: relative; float: right; font-size: 12px; color: #313131; font-weight: 400; padding-right: 12px; top: 3px; }
 
-.roldCode-contents .cont-list .grid-bottom .count .co { color: #ed550b; }
+.roleCode-contents .cont-list .grid-bottom .count .co { color: #ed550b; }
 
 /* 사용자권한 */
 .roleUser-contents .common[class*=cont-] { position: relative; float: left; -webkit-box-sizing: border-box; box-sizing: border-box; margin-top: 10px; }
@@ -397,7 +397,7 @@
 /* 메뉴권한 */
 .roleMenu-contents .common[class*=cont-] { position: relative; float: left; -webkit-box-sizing: border-box; box-sizing: border-box; margin-top: 10px; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap { width: 100%; border: 1px solid #c0b5a6; overflow: hidden; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0; }
+.roleMenu-contents .common[class*=cont-] .grid-wrap { width: 100%; border: 1px solid #c0b5a6; overflow: hidden; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 4px; }
 
 .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl { width: 100%; table-layout: fixed; border: none; border-right: 1px solid #c0b5a6; }
 

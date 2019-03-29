@@ -3,7 +3,7 @@
 @import "../parts/common";
 
 /* 권한코드 */
-.roldCode-contents {
+.roleCode-contents {
 	.cont-property {
         .property-tbl {
             @include tbl-style-1;
@@ -145,7 +145,7 @@
 		box-sizing: border-box;
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-brown(null, 100%, 0);
+			@include grid-scr-brown(null, 100%, 4px);
 			.grid-area.grid-contents {
 				background: #fff;
 				height: 650px;
