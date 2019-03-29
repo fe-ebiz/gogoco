@@ -1,7 +1,7 @@
 y.pub
 y
 
-# etc
+#etc
 _bak/
 _document/
 _draft/
@@ -9,8 +9,8 @@ _work/
 _media/
 _tmp/
 img/
-dist/views/
 .sass-cache/
+dis/views/
 
 #fontFile
 *.ttf
