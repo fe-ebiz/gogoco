@@ -19,7 +19,7 @@ dist/views/
 *.eot
 *.otf
 
-#sftpFile, zip����
+#sftpFile, zip
 *.json
 *.zip
 
