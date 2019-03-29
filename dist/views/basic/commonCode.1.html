@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="../../public/css/common.css">
     <link rel="stylesheet" href="../../public/css/include/winpop.css">
     <link rel="stylesheet" href="../../public/css/include/pop.css">
-    <link rel="stylesheet" href="../../public/css/adm/init.css">
+    <link rel="stylesheet" href="../../public/css/basic/init.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/detectizr/1.5.0/detectizr.min.js"></script>
@@ -56,7 +56,7 @@
 
     <!--개별 Js-->
     <script src="../../public/js/common.js"></script>
-    <script src="../../public/js/adm/init.js"></script>
+    <script src="../../public/js/basic/init.js"></script>
 
     <!--[if lt IE 9]>
 		<script type="text/javascript" src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -64,7 +64,7 @@
 
 </head>
 
-<body class="page-adm">
+<body class="page-basic">
 
     <div class="wrapper">
         <header class="header">
@@ -436,15 +436,10 @@
         <!--//.sidebar.left-->
 
 
-        <div class="cf contents userRegist-contents">
-
-            <div class="row-top-btn">
-                <button type="button" class="btn-red" onclick="popFn.show()">새로만들기</button>
-                <button type="button" class="btn-red">새로고침</button>
-            </div>
+        <div class="cf contents cmCode-contents">
 
             <div class="cf row-h2">
-                <h2 class="page-title">사용자등록</h2>
+                <h2 class="page-title">공통 코드</h2>
                 <button class="btn-default" onclick="window.open('../winpop/winpop_roomInventory.html', 'winpop', 'width=1800, height=900')">ROOM</button>
                 <button class="btn-default" onclick="window.open('../winpop/winpop_itemInventory.html', 'winpop', 'width=1800, height=900')">ITEM</button>
                 <button class="btn-default" onclick="window.open('../winpop/winpop_houseStatus.html', 'winpop', 'width=1000, height=800')">HOUSE</button>
@@ -458,34 +453,19 @@
                             <table class="grid-tbl property-tbl">
                                 <colgroup>
                                     <col style="width:100px">
-                                        <col style="width:160px">
+                                        <col style="width:120px">
                                             <col style="width:100px">
-                                                <col style="width:120px">
-                                                    <col style="width:100px">
-                                                        <col>
+                                                <col>
                                 </colgroup>
                                 <tbody>
                                     <tr>
                                         <th>
-                                            <div class="cell">아이디</div>
+                                            <div class="cell">분류</div>
                                         </th>
                                         <td>
                                             <div class="cell">
-                                                <input type="text" class="form-input">
-                                            </div>
-                                        </td>
-                                        <th>
-                                            <div class="cell">상태</div>
-                                        </th>
-                                        <td>
-                                            <div class="cell">
-                                                <select name="" id="" class="form-select gray">
-                                                    <option value="">전체</option>
-                                                    <option value="">1. 직원</option>
-                                                    <option value="">2. 계약직</option>
-                                                    <option value="">3. 퇴사자</option>
-                                                    <option value="">4. 메이드</option>
-                                                    <option value="">5. 기타사용자</option>
+                                                <select name="" id="" class="form-select gray w-1">
+                                                    <option value="">호텔관리</option>
                                                 </select>
                                             </div>
                                         </td>
@@ -494,12 +474,14 @@
                                         </th>
                                         <td>
                                             <div class="cell">
-                                                <select name="" id="" class="form-select gray option">
+                                                <select name="" id="" class="form-select gray w-1">
                                                     <option value="">선택</option>
-                                                    <option value="">이름</option>
+                                                    <option value="">코드</option>
+                                                    <option value="">코드데이터</option>
                                                 </select>
                                                 <input type="text" class="form-input option">
                                                 <button type="button" class="btn-brown">SEARCH</button>
+                                                <button type="button" class="btn-brown">RELOAD</button>
                                             </div>
                                         </td>
                                     </tr>
@@ -510,136 +492,294 @@
                 </div>
                 <!-- //.cont-property -->
 
-                <div class="cont-list">
-                    <div class="grid-wrap scr-wrap">
-                        <div class="grid-scrollable-x">
-                            <div class="grid-area grid-head">
-                                <div class="grid-scrollable">
+                <div class="row row-cont">
+                    <div class="split cont-code">
+                        <h3>코드</h3>
+                        <div class="scrollbar">
+                            <ul class="dep-1 code-list">
+                                <li>
+                                    <a href="javascript:;" class="on">
+                                        <div class="d">
+                                            <span class="icon-treeArr indent"></span><span class="icon-trees folder"></span>
+                                            <span class="fw-b">HMS</span>: 호텔관리 (HMS)
+                                        </div>
+                                    </a>
+                                    <ul class="dep-2" class="expand">
+                                        <li>
+                                            <a href="javascript:;">
+                                                <div class="d">
+                                                    <span class="icon-treeArr indent"></span><span class="icon-trees folder"></span>
+                                                    <span class="fw-b">001</span>: 영업장구분 (HMS)
+                                                </div>
+                                            </a>
+                                            <ul class="dep-3">
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <div class="d">
+                                                            <span class="icon-treeArr indent"></span><span class="icon-trees folder"></span>
+                                                            <span class="fw-b">001001</span>: 객실 (HMS)
+                                                        </div>
+                                                    </a>
+                                                    <ul class="dep-4">
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <div class="d">
+                                                                    <span class="icon-trees file"></span>
+                                                                    <span class="fw-b">00100111</span>: 객실판매 (HMS)
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <div class="d">
+                                                                    <span class="icon-trees file"></span>
+                                                                    <span class="fw-b">00100112</span>: Mini Bar (HMS)
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <div class="d">
+                                                                    <span class="icon-trees file"></span>
+                                                                    <span class="fw-b">00100113</span>: 전화료 (HMS)
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <div class="d">
+                                                                    <span class="icon-trees file"></span>
+                                                                    <span class="fw-b">00100114</span>: Laundry (HMS)
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <div class="d">
+                                                                    <span class="icon-trees file"></span>
+                                                                    <span class="fw-b">00100115</span>: Fax (HMS)
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <div class="d">
+                                                                    <span class="icon-trees file"></span>
+                                                                    <span class="fw-b">00100116</span>: 기타서비스 (HMS)
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;"><span class="icon-trees file"></span> : F&B (HMS)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;"><span class="icon-trees file"></span> : 대관 (HMS)</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <div class="d">
+                                                    <span class="icon-treeArr indent"></span><span class="icon-trees folder"></span>
+                                                    <span class="fw-b">002</span>: 입금구분 (HMS)
+                                                </div>
+                                            </a>
+                                            <ul class="dep-3">
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <div class="d">
+                                                            <span class="icon-trees file"></span>
+                                                            <span class="fw-b">002000</span>: POS (HMS)
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- /.cont-code -->
+                    <div class="split cont-data">
+                        <h3>코드 데이터</h3>
+                        <div class="grid-wrap scr-wrap">
+                            <div class="grid-scrollable-x">
+                                <div class="grid-area grid-head">
+                                    <div class="grid-scrollable">
+                                        <table class="grid-tbl">
+                                            <colgroup>
+                                                <col style="width:120px">
+                                                    <col style="width:150px">
+                                                        <col style="width:300px">
+                                                            <col style="width:40px">
+                                                                <col style="width:80px">
+                                                                    <col style="width:100px">
+                                                                        <col style="width:100px">
+                                                                            <col style="width:80px">
+                                                                                <col style="width:100px">
+                                                                                    <col style="width:100px">
+                                                                                        <col style="width:100px">
+                                                                                            <col>
+                                            </colgroup>
+                                            <thead class="rowgroup">
+                                                <tr>
+                                                    <th>
+                                                        <div class="cell">데이터코드</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">데이터명</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">설명</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">순서</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">사용여부</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">문자열속성</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">숫자열속성</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">정수열속성</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">rmk1-문자열</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">rmk2-문자열</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">rmk3-문자열</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">rmk4-문자열</div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="grid-area grid-contents">
                                     <table class="grid-tbl">
                                         <colgroup>
-                                            <col style="width:100px">
+                                            <col style="width:120px">
                                                 <col style="width:150px">
-                                                    <col style="width:150px">
-                                                        <col style="width:80px">
-                                                            <col style="width:250px">
-                                                                <col style="width:150px">
-                                                                    <col style="width:250px">
-                                                                        <col>
+                                                    <col style="width:300px">
+                                                        <col style="width:40px">
+                                                            <col style="width:80px">
+                                                                <col style="width:100px">
+                                                                    <col style="width:100px">
+                                                                        <col style="width:80px">
+                                                                            <col style="width:100px">
+                                                                                <col style="width:100px">
+                                                                                    <col style="width:100px">
+                                                                                        <col>
                                         </colgroup>
-                                        <thead class="rowgroup">
+                                        <tbody class="rowgroup">
                                             <tr>
-                                                <th>
-                                                    <div class="cell">아이디</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">이름</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">영문이름</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">상태</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">이메일</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">휴대폰</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">주소</div>
-                                                </th>
-                                                <th>
+                                                <td>
+                                                    <div class="cell">0010021100</div>
+                                                </td>
+                                                <td class="ta-left">
+                                                    <div class="cell">Cafe</div>
+                                                </td>
+                                                <td class="ta-left">
+                                                    <div class="cell">식음료</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">1</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">Y</div>
+                                                </td>
+                                                <td>
                                                     <div class="cell"></div>
-                                                </th>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
                                             </tr>
-                                        </thead>
+                                            <tr>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td class="ta-left">
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td class="ta-left">
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
                                     </table>
                                 </div>
-                            </div>
-                            <div class="grid-area grid-contents">
-                                <table class="grid-tbl">
-                                    <colgroup>
-                                        <col style="width:100px">
-                                            <col style="width:150px">
-                                                <col style="width:150px">
-                                                    <col style="width:80px">
-                                                        <col style="width:250px">
-                                                            <col style="width:150px">
-                                                                <col style="width:250px">
-                                                                    <col>
-                                    </colgroup>
-                                    <tbody class="rowgroup">
-                                        <tr>
-                                            <td>
-                                                <div class="cell">cody</div>
-                                            </td>
-                                            <td class="ta-left">
-                                                <div class="cell">cody 운영팀 ramadapt</div>
-                                            </td>
-                                            <td class="ta-left">
-                                                <div class="cell">cody</div>
-                                            </td>
-                                            <td>
-                                                <div class="cell">직원</div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td class="ta-left">
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td class="ta-left">
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
 
+                            </div>
                         </div>
+                        <!-- //.grid-wrap -->
+                        <div class="cf grid-bottom">
+                            <a href="#" class="prev st">&lt;&lt;</a>
+                            <a href="#" class="prev">&lt;</a>
+                            <span class="num">0</span>
+                            <a href="#" class="next">&gt;</a>
+                            <a href="#" class="next st">&gt;&gt;</a>
+                            <span class="count"><span class="co">0</span> Count</span>
+                        </div>
+                        <!-- /.grid-bottom -->
                     </div>
-                    <!-- //.grid-wrap -->
-                    <div class="cf grid-bottom">
-                        <a href="#" class="prev st">&lt;&lt;</a>
-                        <a href="#" class="prev">&lt;</a>
-                        <span class="num">0</span>
-                        <a href="#" class="next">&gt;</a>
-                        <a href="#" class="next st">&gt;&gt;</a>
-                        <span class="count"><span class="co">22</span> Count</span>
-                    </div>
-                    <!-- //.grid-bottom-->
+                    <!-- /.cont-cdData -->
                 </div>
-                <!-- //.cont-list -->
             </div>
         </div>
         <!--//.contents-->

@@ -145,107 +145,107 @@
 .roleCode-contents .cont-list .grid-bottom .count .co { color: #ed550b; }
 
 /* 사용자권한 */
-.roleUser-contents .common[class*=cont-] { position: relative; float: left; -webkit-box-sizing: border-box; box-sizing: border-box; margin-top: 10px; }
+.roleUser-contents .split[class*=cont-] { position: relative; float: left; -webkit-box-sizing: border-box; box-sizing: border-box; margin-top: 10px; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap { width: 100%; border: 1px solid #c0b5a6; overflow: hidden; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0; }
+.roleUser-contents .split[class*=cont-] .grid-wrap { width: 100%; border: 1px solid #c0b5a6; overflow: hidden; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl { width: 100%; table-layout: fixed; border: none; border-right: 1px solid #c0b5a6; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl { width: 100%; table-layout: fixed; border: none; border-right: 1px solid #c0b5a6; }
 
-.ie8 .roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl { width: 1740px; }
+.ie8 .roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl { width: 1740px; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl th, .roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl td { height: 28px; border-bottom: 1px solid #c0b5a6; color: #666; font-size: 12px; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl th, .roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl td { height: 28px; border-bottom: 1px solid #c0b5a6; color: #666; font-size: 12px; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell, .roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell { position: relative; padding: 3px 7px; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell, .roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell { position: relative; padding: 3px 7px; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell::before, .roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell::after, .roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell::before, .roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell::after { content: ''; display: table; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell::before, .roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell::after, .roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell::before, .roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell::after { content: ''; display: table; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell::after, .roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell::after { clear: both; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell::after, .roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell::after { clear: both; }
 
-.ie8 .roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell, .ie8 .roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell { zoom: 1; }
+.ie8 .roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell, .ie8 .roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell { zoom: 1; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell.pd-0, .roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell.pd-0 { padding-top: 0; padding-bottom: 0px; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell.pd-0, .roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell.pd-0 { padding-top: 0; padding-bottom: 0px; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell.necess, .roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell.necess { background: url("../../img/tick-small-red.png") no-repeat 100% 58%; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell.necess, .roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell.necess { background: url("../../img/tick-small-red.png") no-repeat 100% 58%; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl th:first-child, .roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl td:first-child { border-left: none; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl th:first-child, .roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl th { border-left: 1px solid #c0b5a6; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl th { border-left: 1px solid #c0b5a6; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell { font-weight: 700; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell.order-ui:after { content: "▼"; position: relative; display: none; margin-left: 2px; font-size: 10px; color: #73787D; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell.order-ui:after { content: "▼"; position: relative; display: none; margin-left: 2px; font-size: 10px; color: #73787D; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell.order-ui:hover:after { display: inline; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell.order-ui:hover:after { display: inline; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell.order-ui.ascending:after { content: "▲"; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell.order-ui.ascending:after { content: "▲"; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl td { border-left: 1px dashed #c0b5a6; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl td { border-left: 1px dashed #c0b5a6; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell .chk-box input, .roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell .rdo-box input { margin-right: 3px; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell .chk-box input, .roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell .rdo-box input { margin-right: 3px; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell .chk-box + .chk-box, .roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell .chk-box + .rdo-box, .roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell .rdo-box + .chk-box, .roleUser-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell .rdo-box + .rdo-box { margin-left: 5px; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell .chk-box + .chk-box, .roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell .chk-box + .rdo-box, .roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell .rdo-box + .chk-box, .roleUser-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell .rdo-box + .rdo-box { margin-left: 5px; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-scrollable-x { position: relative; overflow-x: hidden; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-scrollable-x { position: relative; overflow-x: hidden; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-area { position: relative; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-area { position: relative; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-head .grid-scrollable { border-bottom: 1px solid #c0b5a6; background: url(../../img/gridheadBg.png) repeat-x; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-head .grid-scrollable { border-bottom: 1px solid #c0b5a6; background: url(../../img/gridheadBg.png) repeat-x; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-head .grid-tbl { width: calc(100% - 17px); }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-head .grid-tbl { width: calc(100% - 17px); }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-head .grid-tbl th { border-bottom: none; background: url(../../img/gridheadBg.png) repeat-x; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-head .grid-tbl th { border-bottom: none; background: url(../../img/gridheadBg.png) repeat-x; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl { border-top: 1px solid #c5c5c5; border-right: 0; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl { border-top: 1px solid #c5c5c5; border-right: 0; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl th, .roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl td { background: #f5f5f5; color: #2e2e2e; border-bottom: 0; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl th, .roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl td { background: #f5f5f5; color: #2e2e2e; border-bottom: 0; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl td.last .cell.inBl { margin-right: 17px; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl td.last .cell.inBl { margin-right: 17px; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl td.last .square { position: absolute; top: 0; right: 0; display: inline-block; height: 100%; padding: 0; border-left: 1px solid #c5c5c5; width: 17px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl td.last .square { position: absolute; top: 0; right: 0; display: inline-block; height: 100%; padding: 0; border-left: 1px solid #c5c5c5; width: 17px; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents { background: #fff; height: 650px; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents { background: #fff; height: 650px; }
 
-.roleUser-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl td { text-align: center; }
+.roleUser-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl td { text-align: center; }
 
-.roleUser-contents .common[class*=cont-] .grid-bottom { background: #E7E4E2; border-bottom: 1px solid #c5c5c5; background-image: none, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0))); background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0) 100%); background-position: 50% 50%; background-color: #eae8e8; border-radius: 0 0 4px 4px; padding: 5px; border: 1px solid #c5c5c5; border-top: 0; border-radius: 0; }
+.roleUser-contents .split[class*=cont-] .grid-bottom { background: #E7E4E2; border-bottom: 1px solid #c5c5c5; background-image: none, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0))); background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0) 100%); background-position: 50% 50%; background-color: #eae8e8; border-radius: 0 0 4px 4px; padding: 5px; border: 1px solid #c5c5c5; border-top: 0; border-radius: 0; }
 
-.roleUser-contents .common[class*=cont-] .grid-bottom > * { position: relative; vertical-align: middle; display: inline-block; position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; border-radius: 50%; font-weight: 700; }
+.roleUser-contents .split[class*=cont-] .grid-bottom > * { position: relative; vertical-align: middle; display: inline-block; position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; border-radius: 50%; font-weight: 700; }
 
-.roleUser-contents .common[class*=cont-] .grid-bottom .prev, .roleUser-contents .common[class*=cont-] .grid-bottom .next { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background-color: #fff; border: 1px solid #d2d2d2; }
+.roleUser-contents .split[class*=cont-] .grid-bottom .prev, .roleUser-contents .split[class*=cont-] .grid-bottom .next { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background-color: #fff; border: 1px solid #d2d2d2; }
 
-.roleUser-contents .common[class*=cont-] .grid-bottom .prev.st, .roleUser-contents .common[class*=cont-] .grid-bottom .next.st { letter-spacing: -3px; }
+.roleUser-contents .split[class*=cont-] .grid-bottom .prev.st, .roleUser-contents .split[class*=cont-] .grid-bottom .next.st { letter-spacing: -3px; }
 
-.roleUser-contents .common[class*=cont-] .grid-bottom .prev { text-indent: -3px; }
+.roleUser-contents .split[class*=cont-] .grid-bottom .prev { text-indent: -3px; }
 
-.roleUser-contents .common[class*=cont-] .grid-bottom .prev.st { text-indent: -5px; }
+.roleUser-contents .split[class*=cont-] .grid-bottom .prev.st { text-indent: -5px; }
 
-.roleUser-contents .common[class*=cont-] .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
+.roleUser-contents .split[class*=cont-] .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
 
-.roleUser-contents .common[class*=cont-] .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
+.roleUser-contents .split[class*=cont-] .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
-.roleUser-contents .common[class*=cont-] .grid-bottom .next { text-indent: 3px; }
+.roleUser-contents .split[class*=cont-] .grid-bottom .next { text-indent: 3px; }
 
-.roleUser-contents .common[class*=cont-] .grid-bottom .next.st { text-indent: 0px; }
+.roleUser-contents .split[class*=cont-] .grid-bottom .next.st { text-indent: 0px; }
 
-.roleUser-contents .common[class*=cont-] .grid-bottom .count { position: relative; float: right; font-size: 12px; color: #313131; font-weight: 400; padding-right: 12px; top: 3px; }
+.roleUser-contents .split[class*=cont-] .grid-bottom .count { position: relative; float: right; font-size: 12px; color: #313131; font-weight: 400; padding-right: 12px; top: 3px; }
 
-.roleUser-contents .common[class*=cont-] .grid-bottom .count .co { color: #ed550b; }
+.roleUser-contents .split[class*=cont-] .grid-bottom .count .co { color: #ed550b; }
 
 .roleUser-contents .cont-code { width: 450px; }
 
@@ -395,108 +395,132 @@
 .userRegist-contents .cont-list .grid-bottom .count .co { color: #ed550b; }
 
 /* 메뉴권한 */
-.roleMenu-contents .common[class*=cont-] { position: relative; float: left; -webkit-box-sizing: border-box; box-sizing: border-box; margin-top: 10px; }
+.roleMenu-contents .split[class*=cont-] { position: relative; float: left; -webkit-box-sizing: border-box; box-sizing: border-box; margin-top: 10px; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap { width: 100%; border: 1px solid #c0b5a6; overflow: hidden; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 4px; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap { width: 100%; border: 1px solid #c0b5a6; overflow: hidden; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 0; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl { width: 100%; table-layout: fixed; border: none; border-right: 1px solid #c0b5a6; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl { width: 100%; table-layout: fixed; border: none; border-right: 1px solid #c0b5a6; }
 
-.ie8 .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl { width: 1740px; }
+.ie8 .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl { width: 1740px; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl th, .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl td { height: 28px; border-bottom: 1px solid #c0b5a6; color: #666; font-size: 12px; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl th, .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl td { height: 28px; border-bottom: 1px solid #c0b5a6; color: #666; font-size: 12px; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell, .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell { position: relative; padding: 3px 7px; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell, .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell { position: relative; padding: 3px 7px; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell::before, .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell::after, .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell::before, .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell::after { content: ''; display: table; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell::before, .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell::after, .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell::before, .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell::after { content: ''; display: table; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell::after, .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell::after { clear: both; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell::after, .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell::after { clear: both; }
 
-.ie8 .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell, .ie8 .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell { zoom: 1; }
+.ie8 .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell, .ie8 .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell { zoom: 1; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell.pd-0, .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell.pd-0 { padding-top: 0; padding-bottom: 0px; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell.pd-0, .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell.pd-0 { padding-top: 0; padding-bottom: 0px; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell.necess, .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell.necess { background: url("../../img/tick-small-red.png") no-repeat 100% 58%; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell.necess, .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell.necess { background: url("../../img/tick-small-red.png") no-repeat 100% 58%; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl th:first-child, .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl td:first-child { border-left: none; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl th:first-child, .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl td:first-child { border-left: none; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl th { border-left: 1px solid #c0b5a6; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl th { border-left: 1px solid #c0b5a6; overflow: visible; color: #444; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell { font-weight: 700; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell { font-weight: 700; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell.order-ui { cursor: pointer; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell.order-ui:after { content: "▼"; position: relative; display: none; margin-left: 2px; font-size: 10px; color: #73787D; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell.order-ui:after { content: "▼"; position: relative; display: none; margin-left: 2px; font-size: 10px; color: #73787D; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell.order-ui:hover:after { display: inline; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell.order-ui:hover:after { display: inline; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl th .cell.order-ui.ascending:after { content: "▲"; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl th .cell.order-ui.ascending:after { content: "▲"; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl td { border-left: 1px dashed #c0b5a6; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl td { border-left: 1px dashed #c0b5a6; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell .chk-box input, .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell .rdo-box input { margin-right: 3px; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell .chk-box input, .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell .rdo-box input { margin-right: 3px; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell .chk-box + .chk-box, .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell .chk-box + .rdo-box, .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell .rdo-box + .chk-box, .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-tbl td .cell .rdo-box + .rdo-box { margin-left: 5px; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell .chk-box + .chk-box, .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell .chk-box + .rdo-box, .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell .rdo-box + .chk-box, .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-tbl td .cell .rdo-box + .rdo-box { margin-left: 5px; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-scrollable-x { position: relative; overflow-x: hidden; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-scrollable-x { position: relative; overflow-x: hidden; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area { position: relative; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area { position: relative; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-head .grid-scrollable { border-bottom: 1px solid #c0b5a6; background: url(../../img/gridheadBg.png) repeat-x; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-head .grid-scrollable { border-bottom: 1px solid #c0b5a6; background: url(../../img/gridheadBg.png) repeat-x; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-head .grid-tbl { width: calc(100% - 17px); }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-head .grid-tbl { width: calc(100% - 17px); }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-head .grid-tbl th { border-bottom: none; background: url(../../img/gridheadBg.png) repeat-x; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-head .grid-tbl th { border-bottom: none; background: url(../../img/gridheadBg.png) repeat-x; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl tr:hover td { background: #dad3d0; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl { border-top: 1px solid #c5c5c5; border-right: 0; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl { border-top: 1px solid #c5c5c5; border-right: 0; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl th, .roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl td { background: #f5f5f5; color: #2e2e2e; border-bottom: 0; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl th, .roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl td { background: #f5f5f5; color: #2e2e2e; border-bottom: 0; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl td.last .cell.inBl { margin-right: 17px; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl td.last .cell.inBl { margin-right: 17px; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl td.last .square { position: absolute; top: 0; right: 0; display: inline-block; height: 100%; padding: 0; border-left: 1px solid #c5c5c5; width: 17px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-total .grid-tbl td.last .square { position: absolute; top: 0; right: 0; display: inline-block; height: 100%; padding: 0; border-left: 1px solid #c5c5c5; width: 17px; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents { background: #fff; height: 650px; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents { background: #fff; height: 650px; }
 
-.roleMenu-contents .common[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl td { text-align: center; }
+.roleMenu-contents .split[class*=cont-] .grid-wrap .grid-area.grid-contents .grid-tbl td { text-align: center; }
 
-.roleMenu-contents .common[class*=cont-] .grid-bottom { background: #E7E4E2; border-bottom: 1px solid #c5c5c5; background-image: none, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0))); background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0) 100%); background-position: 50% 50%; background-color: #eae8e8; border-radius: 0 0 4px 4px; padding: 5px; border: 1px solid #c5c5c5; border-top: 0; border-radius: 0; }
+.roleMenu-contents .split[class*=cont-] .grid-bottom { background: #E7E4E2; border-bottom: 1px solid #c5c5c5; background-image: none, -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0))); background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0) 100%); background-position: 50% 50%; background-color: #eae8e8; border-radius: 0 0 4px 4px; padding: 5px; border: 1px solid #c5c5c5; border-top: 0; border-radius: 0; }
 
-.roleMenu-contents .common[class*=cont-] .grid-bottom > * { position: relative; vertical-align: middle; display: inline-block; position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; border-radius: 50%; font-weight: 700; }
+.roleMenu-contents .split[class*=cont-] .grid-bottom > * { position: relative; vertical-align: middle; display: inline-block; position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; border-radius: 50%; font-weight: 700; }
 
-.roleMenu-contents .common[class*=cont-] .grid-bottom .prev, .roleMenu-contents .common[class*=cont-] .grid-bottom .next { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background-color: #fff; border: 1px solid #d2d2d2; }
+.roleMenu-contents .split[class*=cont-] .grid-bottom .prev, .roleMenu-contents .split[class*=cont-] .grid-bottom .next { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background-color: #fff; border: 1px solid #d2d2d2; }
 
-.roleMenu-contents .common[class*=cont-] .grid-bottom .prev.st, .roleMenu-contents .common[class*=cont-] .grid-bottom .next.st { letter-spacing: -3px; }
+.roleMenu-contents .split[class*=cont-] .grid-bottom .prev.st, .roleMenu-contents .split[class*=cont-] .grid-bottom .next.st { letter-spacing: -3px; }
 
-.roleMenu-contents .common[class*=cont-] .grid-bottom .prev { text-indent: -3px; }
+.roleMenu-contents .split[class*=cont-] .grid-bottom .prev { text-indent: -3px; }
 
-.roleMenu-contents .common[class*=cont-] .grid-bottom .prev.st { text-indent: -5px; }
+.roleMenu-contents .split[class*=cont-] .grid-bottom .prev.st { text-indent: -5px; }
 
-.roleMenu-contents .common[class*=cont-] .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
+.roleMenu-contents .split[class*=cont-] .grid-bottom .num { font-size: 12px; color: #918884; width: 26px; height: 26px; line-height: 24px; background: #fff; border: 1px solid #d2d2d2; }
 
-.roleMenu-contents .common[class*=cont-] .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
+.roleMenu-contents .split[class*=cont-] .grid-bottom .num.on { color: #fff; border-color: #f85a00; background-color: #f35800; }
 
-.roleMenu-contents .common[class*=cont-] .grid-bottom .next { text-indent: 3px; }
+.roleMenu-contents .split[class*=cont-] .grid-bottom .next { text-indent: 3px; }
 
-.roleMenu-contents .common[class*=cont-] .grid-bottom .next.st { text-indent: 0px; }
+.roleMenu-contents .split[class*=cont-] .grid-bottom .next.st { text-indent: 0px; }
 
-.roleMenu-contents .common[class*=cont-] .grid-bottom .count { position: relative; float: right; font-size: 12px; color: #313131; font-weight: 400; padding-right: 12px; top: 3px; }
+.roleMenu-contents .split[class*=cont-] .grid-bottom .count { position: relative; float: right; font-size: 12px; color: #313131; font-weight: 400; padding-right: 12px; top: 3px; }
 
-.roleMenu-contents .common[class*=cont-] .grid-bottom .count .co { color: #ed550b; }
+.roleMenu-contents .split[class*=cont-] .grid-bottom .count .co { color: #ed550b; }
 
-.roleMenu-contents .cont-code { width: 450px; }
+.roleMenu-contents .split.cont-code { width: 450px; }
 
-.roleMenu-contents .cont-list { width: calc(100% - 450px); padding-left: 10px; }
+.roleMenu-contents .split.cont-code .grid-wrap .grid-tbl { width: 100% !important; border-right: none; }
+
+.roleMenu-contents .split.cont-code .grid-wrap .grid-area.grid-contents { overflow: auto; }
+
+.roleMenu-contents .split.cont-list { width: calc(100% - 450px); padding-left: 10px; }
+
+.roleMenu-contents .split.cont-list .grid-tbl tr.on { background: red; }
+
+.roleMenu-contents .split.cont-list .grid-tbl .dep-1 td .cell { padding-left: 25px; }
+
+.roleMenu-contents .split.cont-list .grid-tbl .dep-1 td .cell .icon-treeArr { left: 5px; }
+
+.roleMenu-contents .split.cont-list .grid-tbl .dep-2 td .cell { padding-left: 45px; }
+
+.roleMenu-contents .split.cont-list .grid-tbl .dep-2 td .cell .icon-treeArr { left: 10px; }
+
+.roleMenu-contents .split.cont-list .grid-tbl .dep-3 td .cell { padding-left: 65px; }
+
+.roleMenu-contents .split.cont-list .grid-tbl .dep-3 td .cell .icon-treeArr { left: 15px; }
+
+.roleMenu-contents .split.cont-list .grid-tbl .dep-4 td .cell { padding-left: 85px; }
+
+.roleMenu-contents .split.cont-list .grid-tbl .dep-4 td .cell .icon-treeArr { left: 20px; }
+
+.roleMenu-contents .split.cont-list .grid-tbl td:first-child .cell { padding-left: 7px; }

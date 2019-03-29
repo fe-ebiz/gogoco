@@ -62,7 +62,7 @@
 
 /* 사용자권한 */
 .roleUser-contents {
-	.common[class*=cont-] {
+	.split[class*=cont-] {
 		@include float;
 		box-sizing: border-box;
 		margin-top: 10px;
@@ -140,12 +140,12 @@
 
 /* 메뉴권한 */
 .roleMenu-contents {
-	.common[class*=cont-] {
+	.split[class*=cont-] {
 		@include float;
 		box-sizing: border-box;
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-brown(null, 100%, 4px);
+			@include grid-scr-brown(null, 100%, 0);
 			.grid-area.grid-contents {
 				background: #fff;
 				height: 650px;
@@ -162,11 +162,50 @@
 		}
 	}
 	$wh: 450px;
-	.cont-code {
+	.split.cont-code {
 		width: $wh;
+		.grid-wrap {
+			.grid-tbl {
+				width: 100% !important;
+				border-right: none;
+			}
+			.grid-area.grid-contents {
+				overflow: auto;
+			}
+		}
 	}
-	.cont-list {
+	.split.cont-list {
 		width: calc(100% - #{$wh});
 		padding-left: 10px;
+		.grid-tbl {
+			tr.on {
+				background: red;
+			}
+			.dep-1 {
+				td {
+					.cell {
+
+					}
+				}
+			}
+			$total: 5;
+			@for $i from 1 to $total {
+				.dep-#{$i} {
+					td {
+						.cell {
+							padding-left: (20px * $i) + 5px;
+							.icon-treeArr {
+								left: (5px * $i);
+							}
+						}
+					}
+				}
+			}
+			td:first-child {
+				.cell {
+					padding-left: 7px;
+				}
+			}
+		}
 	}
 }
