@@ -38,38 +38,60 @@
             width: 15%;
             padding-right: 10px;
             .grid-wrap {
-                @include grid-scr-x($scr-wth: null);
-                border-right: 0;
-                border-bottom: 0;
-                
-                .grid-scrollable-x {
-                    .grid-head {
-                        .grid-scrollable {
-                            .grid-tbl {
-                                width: 100%;
-                                tr {
-                                    th {
-                                        .cell {
-                                            text-align: left;
-                                        }
-                                    }
+                .grid-tbl {
+                    overflow: hidden;
+                    width: 100%;
+                    table-layout: fixed;
+                    border-collapse: collapse;
+                    border: 1px solid #d5d5d5;
+                    //공통
+                    th, td {
+                        height: 27px;
+                        color: #313131;
+                        font-size: 12px;
+                        border-left: 1px solid #d5d5d5;
+                        .cell {
+                            position: relative;
+                            @include clearfix;
+                            padding: 3px 7px;
+                        }
+                    }
+                    th:first-child, td:first-child {
+                        border-left: none;
+                    }
+                    
+                    .theadgroup {
+                        tr {
+                            th {
+                                border-bottom: 1px solid $bor-gray-table;
+                                background: $bg-tblBase-th;
+                                background-image: none,-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.6)),to(rgba(255,255,255,0)));
+                                background-image: none,-webkit-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+                                background-image: none,linear-gradient(to bottom,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+                                background-position: 50% 50%;
+                                background-color: #eae8e8;
+                                .cell {
+                                    
                                 }
                             }
                         }
                     }
-                    .grid-contents {
-                        overflow: hidden;
-                        height: auto;
-                        .grid-scrollable {
-                            .grid-tbl {
-                                overflow: hidden;
-                                width: 100%;
-                                tr {
-                                    td {
-                                        .cell {
-                                            letter-spacing: -1px;
-                                        }
-                                    }
+                    .tbodygroup {
+                        tr {
+                            
+                            td {
+                                border-top: 1px solid #d5d5d5;
+                                .cell {
+                                }
+                            }
+                            
+                            &:nth-child(2n) {
+                                background: #f1f1f1;
+                            }
+                            
+                            &:hover {
+                                td {
+                                    background: #dad3d0;
                                 }
                             }
                         }
@@ -79,7 +101,7 @@
         }
         
         .grid-chart-container {
-            @include float($l : right);
+            @include float(right);
             box-sizing: border-box;
             width: 85%;
             .grid-wrap {
