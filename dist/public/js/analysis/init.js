@@ -7,9 +7,12 @@ $(function() {
 
 /* 달력 - 년도별 */
 function yearCal(){
-    var yearTxt = new Array();
-        
-    $('input.type-year').yearpicker();
+    $('input.type-year').datepicker({
+        minViewMode: 'years',
+        format: 'yyyy',
+        //todayBtn: true,
+        autoclose: true
+    });
 }
 
 /* 테이블 & 차트 */
@@ -31,7 +34,7 @@ function overLastYearChart() {
     for ( var y=0 ; y < year.length ; y++ ) {
         hdHtml += '<th><div class="cell">' + year[y] + '</div></th>';
     }
-    hdHtml += "/<tr>";
+    hdHtml += "</tr>";
     tblHd.append(hdHtml);
     
     // tbody
