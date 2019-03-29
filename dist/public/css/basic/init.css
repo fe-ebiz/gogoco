@@ -175,6 +175,12 @@
 
 .cmCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
+.cmCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
+
+.cmCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
+
+.cmCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
+
 .cmCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .cmCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
 .cmCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .cmCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
@@ -348,6 +354,12 @@
 
 .prCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
+.prCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
+
+.prCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
+
+.prCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
+
 .prCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .prCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
 .prCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .prCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
@@ -520,6 +532,12 @@
 .spCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-head .grid-tbl th { border-bottom: none; background: url(../../img/gridheadBg.png) repeat-x; }
 
 .spCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
+
+.spCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
+
+.spCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
+
+.spCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
 
 .spCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .spCode-contents .row-cont .split.cont-data .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
@@ -807,6 +825,12 @@
 
 .mailTem-contents .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
+.mailTem-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
+
+.mailTem-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
+
+.mailTem-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
+
 .mailTem-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .mailTem-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
 .mailTem-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .mailTem-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
@@ -943,6 +967,12 @@
 .cal-contents .cont-area .cont-name .grid-wrap .grid-area.grid-head .grid-tbl th { border-bottom: none; background: url(../../img/gridheadBg.png) repeat-x; }
 
 .cal-contents .cont-area .cont-name .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
+
+.cal-contents .cont-area .cont-name .grid-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
+
+.cal-contents .cont-area .cont-name .grid-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
+
+.cal-contents .cont-area .cont-name .grid-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
 
 .cal-contents .cont-area .cont-name .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .cal-contents .cont-area .cont-name .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 

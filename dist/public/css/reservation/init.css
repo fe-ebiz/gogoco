@@ -342,6 +342,12 @@
 
 .contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
+.contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
+
+.contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
+
+.contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
+
 .contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
 .contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .contents.resFit-contents .split-2 .cont-guestinfo .grid-container .flt-box .grid-wrap.scr-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
@@ -1509,6 +1515,12 @@
 .rateSch-contents .cont-list .grid-wrap .grid-area.grid-head .grid-tbl th { border-bottom: none; background: url(../../img/gridheadBg.png) repeat-x; }
 
 .rateSch-contents .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
+
+.rateSch-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
+
+.rateSch-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
+
+.rateSch-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
 
 .rateSch-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .rateSch-contents .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 

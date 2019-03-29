@@ -436,7 +436,12 @@
         <!--//.sidebar.left-->
 
 
-        <div class="cf contents code-contents">
+        <div class="cf contents roleCode-contents">
+
+            <div class="row-top-btn">
+                <button type="button" class="btn-red" onclick="popFn.show()">새로만들기</button>
+                <button type="button" class="btn-red">새로고침</button>
+            </div>
 
             <div class="cf row-h2">
                 <h2 class="page-title">권한코드</h2>
@@ -460,23 +465,25 @@
                                 <tbody>
                                     <tr>
                                         <th>
-                                            <div class="cell">속성</div>
+                                            <div class="cell">권한코드</div>
                                         </th>
                                         <td>
                                             <div class="cell">
-                                                <select name="" id="" class="form-select">
-                                                    <option value="">Ramada pt</option>
-                                                </select>
+                                                <input type="text" class="form-input">
                                             </div>
                                         </td>
                                         <th>
-                                            <div class="cell">패키지</div>
+                                            <div class="cell">검색옵션</div>
                                         </th>
                                         <td>
                                             <div class="cell">
-                                                <input type="text" class="form-input pkg">
+                                                <select name="" id="" class="form-select gray option">
+                                                    <option value="">설명</option>
+                                                    <option value="">권한명</option>
+                                                    <option value="">설명</option>
+                                                </select>
+                                                <input type="text" class="form-input option">
                                                 <button type="button" class="btn-brown">SEARCH</button>
-                                                <button type="button" class="btn-brown">RELOAD</button>
                                             </div>
                                         </td>
                                     </tr>
@@ -494,36 +501,28 @@
                                 <div class="grid-scrollable">
                                     <table class="grid-tbl">
                                         <colgroup>
-                                            <col style="width:240px">
-                                                <col style="width:835px">
-                                                    <col style="width:60px">
-                                                        <col style="width:120px">
-                                                            <col style="width:200px">
-                                                                <col style="width:120px">
-                                                                    <col>
+                                            <col style="width:100px">
+                                                <col style="width:250px">
+                                                    <col style="width:300px">
+                                                        <col style="width:80px">
+                                                            <col>
                                         </colgroup>
                                         <thead class="rowgroup">
                                             <tr>
                                                 <th>
-                                                    <div class="cell">패키지명</div>
+                                                    <div class="cell">권한코드</div>
+                                                </th>
+                                                <th>
+                                                    <div class="cell">권한명</div>
                                                 </th>
                                                 <th>
                                                     <div class="cell">설명</div>
                                                 </th>
                                                 <th>
-                                                    <div class="cell">Y/N</div>
+                                                    <div class="cell">권한</div>
                                                 </th>
                                                 <th>
-                                                    <div class="cell">생성자</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">생성일</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">변경자</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">변경일</div>
+                                                    <div class="cell"></div>
                                                 </th>
                                             </tr>
                                         </thead>
@@ -533,36 +532,28 @@
                             <div class="grid-area grid-contents">
                                 <table class="grid-tbl">
                                     <colgroup>
-                                        <col style="width:240px">
-                                            <col style="width:835px">
-                                                <col style="width:60px">
-                                                    <col style="width:120px">
-                                                        <col style="width:200px">
-                                                            <col style="width:120px">
-                                                                <col>
+                                        <col style="width:100px">
+                                            <col style="width:250px">
+                                                <col style="width:300px">
+                                                    <col style="width:80px">
+                                                        <col>
                                     </colgroup>
                                     <tbody class="rowgroup">
                                         <tr>
                                             <td>
-                                                <div class="cell">조식 1+1 패키지</div>
+                                                <div class="cell">ADMIN</div>
                                             </td>
                                             <td class="ta-left">
-                                                <div class="cell">조식 1+1 패키지</div>
+                                                <div class="cell">업무관리자</div>
+                                            </td>
+                                            <td class="ta-left">
+                                                <div class="cell">업무관리자</div>
                                             </td>
                                             <td>
-                                                <div class="cell">Y</div>
+                                                <div class="cell">2</div>
                                             </td>
                                             <td>
-                                                <div class="cell">문고은</div>
-                                            </td>
-                                            <td>
-                                                <div class="cell">2017-06-30</div>
-                                            </td>
-                                            <td>
-                                                <div class="cell">문고은</div>
-                                            </td>
-                                            <td>
-                                                <div class="cell">2017-06-30</div>
+                                                <div class="cell"></div>
                                             </td>
                                         </tr>
                                         <tr>
@@ -572,13 +563,7 @@
                                             <td class="ta-left">
                                                 <div class="cell"></div>
                                             </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
+                                            <td class="ta-left">
                                                 <div class="cell"></div>
                                             </td>
                                             <td>
@@ -601,7 +586,7 @@
                         <span class="num">0</span>
                         <a href="#" class="next">&gt;</a>
                         <a href="#" class="next st">&gt;&gt;</a>
-                        <span class="count">1-2 of 2 items</span>
+                        <span class="count"><span class="co">7</span> Count</span>
                     </div>
                     <!-- //.grid-bottom-->
                 </div>

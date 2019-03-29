@@ -1114,6 +1114,12 @@
 
 .pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
+.pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
+
+.pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
+
+.pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
+
 .pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
 .pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .pop-container.chGrade-container .pop-wrap .pop-contents .popcont-container .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }

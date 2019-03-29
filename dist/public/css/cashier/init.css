@@ -812,6 +812,12 @@
 
 .cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
+.cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
+
+.cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
+
+.cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
+
 .cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
 .cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .cshClose-contents .item-list .item-container.credit .grid-wrap.scr-wrap-brown .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }

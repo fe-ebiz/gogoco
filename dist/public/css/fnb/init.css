@@ -102,6 +102,12 @@
 
 .outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
+.outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
+
+.outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
+
+.outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
+
 .outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
 .outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .outlet-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
@@ -292,6 +298,12 @@
 .menu-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-head .grid-tbl th { border-bottom: none; background: url(../../img/gridheadBg.png) repeat-x; }
 
 .menu-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
+
+.menu-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
+
+.menu-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
+
+.menu-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
 
 .menu-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .menu-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
@@ -486,6 +498,12 @@
 
 .inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
 
+.inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
+
+.inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
+
+.inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
+
 .inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
 .inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) th, .inv-contents .cont-area.area-1 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n) td { background: #f7f7f7; }
@@ -585,6 +603,12 @@
 .inv-contents .cont-area.area-2 .cont-list .grid-wrap .grid-area.grid-head .grid-tbl th { border-bottom: none; background: url(../../img/gridheadBg.png) repeat-x; }
 
 .inv-contents .cont-area.area-2 .cont-list .grid-wrap .grid-area.grid-contents { overflow-y: scroll; height: 100px; background: #fff; background: #f4f1ee; }
+
+.inv-contents .cont-area.area-2 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: none; }
+
+.inv-contents .cont-area.area-2 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td .ie8 .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
+
+.inv-contents .cont-area.area-2 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:last-child td { border-bottom: 1px solid #c0b5a6; }
 
 .inv-contents .cont-area.area-2 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) th, .inv-contents .cont-area.area-2 .cont-list .grid-wrap .grid-area.grid-contents .grid-tbl tr:nth-child(2n-1) td { background: #fff; }
 
