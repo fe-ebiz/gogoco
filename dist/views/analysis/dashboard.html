@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="../../public/css/common.css">
     <link rel="stylesheet" href="../../public/css/include/winpop.css">
     <link rel="stylesheet" href="../../public/css/include/pop.css">
-    <link rel="stylesheet" href="../../public/css/analysis/init.css">
+    <link rel="stylesheet" href="../../public/css/dashboard/init.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/detectizr/1.5.0/detectizr.min.js"></script>
@@ -56,7 +56,7 @@
 
     <!--개별 Js-->
     <script src="../../public/js/common.js"></script>
-    <script src="../../public/js/analysis/init.js"></script>
+    <script src="../../public/js/dashboard/init.js"></script>
 
     <!--[if lt IE 9]>
 		<script type="text/javascript" src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -65,7 +65,7 @@
 </head>
 
 
-<body class="page-analysis">
+<body class="page-dashboard">
 
     <div class="wrapper">
         <header class="header">
@@ -437,109 +437,9 @@
         <!--//.sidebar.left-->
 
 
-        <div class="cf contents lastYear-contents">
-            <div class="cf row-h2">
-                <h2 class="page-title">작년도 매출 비교</h2>
-                <button class="btn-default" onclick="window.open('../winpop/winpop_roomInventory.html', 'winpop', 'width=1800, height=900')">ROOM</button>
-                <button class="btn-default" onclick="window.open('../winpop/winpop_itemInventory.html', 'winpop', 'width=1800, height=900')">ITEM</button>
-                <button class="btn-default" onclick="window.open('../winpop/winpop_houseStatus.html', 'winpop', 'width=1000, height=800')">HOUSE</button>
-                <button class="btn-default" onclick="window.open('../winpop/winpop_trace.html', 'winpop', 'width=1800, height=900')">TRACE</button>
-            </div>
+        <div class="cf contents dboard-contents">
             <div class="cf cont-container-f">
-                <div class="cont-property">
-                    <div class="grid-wrap">
-                        <div class="grid-contents">
-                            <table class="grid-tbl tbl-property">
-                                <colgroup>
-                                    <col style="width: 90px">
-                                        <col style="width: 250px">
-                                            <col style="width: 90px">
-                                                <col>
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <th>
-                                            <div class="cell">자산</div>
-                                        </th>
-                                        <td>
-                                            <div class="cell">
-                                                <select name="" id="" class="form-select property">
-                                                    <option value=""></option>
-                                                    <option value="">1. 루미아</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                        <th>
-                                            <div class="cell">년도</div>
-                                        </th>
-                                        <td>
-                                            <div class="cell">
-                                                <span class="cal-box">
-
-											    <!-- 멀티클래스 date-ui 제거 type-year 추가 -->
-
-												<input type="text" class="appe-reset inp-cal type-year">
-
-												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
-                                                </span>
-                                                <button type="button" class="btn-brown">SEARCH</button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cont-list">
-                    <!-- 표 -->
-                    <div class="grid-tbl-container">
-                        <div class="grid-wrap">
-                            <div class="grid-area grid-head">
-                                <div class="grid-scrollable">
-                                    <table class="grid-tbl">
-                                        <colgroup>
-                                            <col style="width:52px">
-                                                <col style="width:81px">
-                                                    <col style="width:81px">
-                                        </colgroup>
-                                        <thead class="rowgroup">
-
-                                        </thead>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="grid-area grid-contents">
-                                <div class="grid-scrollable">
-                                    <table class="grid-tbl">
-                                        <colgroup>
-                                            <col style="width:52px">
-                                                <col style="width:81px">
-                                                    <col style="width:81px">
-                                        </colgroup>
-                                        <tbody class="rowgroup">
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 차트 -->
-                    <div class="grid-chart-container">
-                        <div class="grid-wrap">
-                            <p class="tit-chart">
-                                Over Last Year Chart
-                            </p>
-                            <!-- chart graph -->
-                            <div class="grid-chart-area">
-                                <canvas id="chart"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                대시보드
                 <!--//.cont-name-->
             </div>
         </div>
@@ -547,10 +447,6 @@
 
 
     </div>
-    <!-- 달력 스크립트 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
 
     <!-- 차트 스크립트 -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>

@@ -3,7 +3,153 @@
 @import "../parts/variables";
 @import "../parts/mixins";
 //year picker css 추가
-@import "../yearpicker";
+//year picker css 추가
+@import "../bootstrap";
+
+/* 달력 */
+.page-analysis {
+    .datepicker {
+        padding: 0;
+        &:before, &:after {
+            content: none;
+            display: none;
+        }
+        .datepicker-days, .datepicker-months {
+           display: none;
+        }
+        .datepicker-years {
+            display: block;
+            &:before {
+                content: '';
+                z-index: 1;
+                position: absolute;
+                width: 100%;
+                height: 28px;
+                top: 0;
+                left: 0;
+                background: #eae8e8;
+            }
+            .table-condensed {
+                z-index: 2;
+                position: relative;
+                thead {
+                    position: relative;
+                    font-size: 13px;
+                    //height: 28px;
+                    tr {
+                        position: relative;
+                        th {
+                            position: relative;
+                            &:hover {
+                                background: none;
+                            }
+                            //좌우버튼 공통
+                            @mixin yearbtn-com {
+                                width: 20px;
+                                height: 20px;
+                                margin-top: 4px;
+                                text-indent: -9999px;
+                                font-size: 0;
+                                border: 1px solid transparent;
+                                .ie8 & {
+                                    text-indent: 0;
+                                    font-size: 12px;
+                                    color: #2e2e2e;
+                                }
+
+                                &:before {
+                                    content: '';
+                                    @include position(absolute, 50%, 50%);
+                                    display: inline-block;
+                                    width: 0px;
+                                    height: 0px;
+                                    margin-top: -3px;
+                                    -webkit-transform: rotate(45deg);
+                                    transform: rotate(45deg);
+                                    .ie & {
+                                        top: auto;
+                                    }
+                                    .ie8 & {
+                                        content: none;
+                                    }
+                                }
+
+                                &:hover {
+                                    border-color: #ccc;
+                                    border-radius: 4px;
+                                    background: #bcb4b0;
+                                    background-image: none,-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.4)),to(rgba(255,255,255,0)));
+                                    background-image: none,-webkit-linear-gradient(top,rgba(255,255,255,.4) 0,rgba(255,255,255,0) 100%);
+                                    background-image: none,linear-gradient(to bottom,rgba(255,255,255,.4) 0,rgba(255,255,255,0) 100%);
+                                    background-position: 50% 50%;
+                                    background-color: #bcb4b0;
+                                }
+                            }
+                            &.prev {
+                                @include yearbtn-com;
+                                &:before {
+                                    margin-left: -2px;
+                                    border-right: 6px solid transparent;
+                                    border-bottom: 6px solid #2e2e2e; 
+                                }
+                            }
+                            &.next {
+                                @include yearbtn-com;
+                                &:before {
+                                    margin-left: -5px;
+                                    border-left: 6px solid transparent;
+                                    border-top: 6px solid #2e2e2e; 
+                                }
+                            }
+                        }
+                    }
+                }
+                tbody {
+                    font-size: 12px;
+                    tr {
+                        td {
+                            padding: 1px;
+                            .year {
+                                box-sizing: border-box;
+                                width: 25%;
+                                margin: 0;
+                                color: #2e2e2e;
+                                border: 1px solid transparent;
+                                border-radius: 4px;
+                                
+                                &.old, &.new {
+                                    color: #c3c3c3;
+                                }
+                                
+                                &:hover {
+                                    color: #2e2e2e;
+                                    border-color: #ccc;
+                                    background: #bcb4b0;
+                                    background-image: none,-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.4)),to(rgba(255,255,255,0)));
+                                    background-image: none,-webkit-linear-gradient(top,rgba(255,255,255,.4) 0,rgba(255,255,255,0) 100%);
+                                    background-image: none,linear-gradient(to bottom,rgba(255,255,255,.4) 0,rgba(255,255,255,0) 100%);
+                                    background-position: 50% 50%;
+                                    background-color: #bcb4b0;
+                                }
+                                
+                                &.active {
+                                    color: #fff;
+                                    border-color: #aeaeae;
+                                    background: #f35800;
+                                    background-image: none,-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.2)),to(rgba(255,255,255,0)));
+                                    background-image: none,-webkit-linear-gradient(top,rgba(255,255,255,.2) 0,rgba(255,255,255,0) 100%);
+                                    background-image: none,linear-gradient(to bottom,rgba(255,255,255,.2) 0,rgba(255,255,255,0) 100%);
+                                    background-color: #f35800;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 /* 작년도 매출 비교 */
@@ -154,104 +300,4 @@
             }
         }
 	}
-}
-
-/* 달력 */
-.yearpicker-container {
-    width: 200px;
-    .yearpicker-header {
-        position: relative;
-        height: 28px;
-        font-size: 13px;
-        border-bottom: 0;
-        background: #eae8e8;
-        
-        //좌우버튼 공통
-        @mixin yearbtn-com {
-            @include position(absolute, 50%);
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            margin-top: -10px;
-            border: 1px solid transparent;
-            
-            &:before {
-                content: '';
-                @include position(absolute, 50%, 50%);
-                display: inline-block;
-                width: 0px;
-                height: 0px;
-                margin-top: -3px;
-                -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
-            }
-            
-            &:hover {
-                border-color: #ccc;
-                border-radius: 4px;
-                background: #bcb4b0;
-                background-image: none,-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.4)),to(rgba(255,255,255,0)));
-                background-image: none,-webkit-linear-gradient(top,rgba(255,255,255,.4) 0,rgba(255,255,255,0) 100%);
-                background-image: none,linear-gradient(to bottom,rgba(255,255,255,.4) 0,rgba(255,255,255,0) 100%);
-                background-position: 50% 50%;
-                background-color: #bcb4b0;
-            }
-        }
-        
-        .yearpicker-prev {
-            @include yearbtn-com;
-            left: 3px;
-            &:before {
-                margin-left: -2px;
-                border-right: 6px solid transparent;
-                border-bottom: 6px solid #2e2e2e; 
-            }
-        }
-        
-        .yearpicker-next {
-            @include yearbtn-com;
-            
-            right: 3px;
-            &:before {
-                margin-left: -5px;
-                border-left: 6px solid transparent;
-                border-top: 6px solid #2e2e2e; 
-            }
-        }
-    }
-    
-    //년도 리스트
-    .yearpicker-body {
-        font-size: 12px;
-        .yearpicker-year {
-            padding: 1px;
-            .yearpicker-items {
-                box-sizing: border-box;
-                padding: 1rem 0rem;
-                -ms-flex: 0 0 25%;
-                flex: 0 0 25%;
-                color: #2e2e2e;
-                border: 1px solid transparent;
-                border-radius: 4px;
-                &:hover {
-                    border-color: #ccc;
-                    background: #bcb4b0;
-                    background-image: none,-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.4)),to(rgba(255,255,255,0)));
-                    background-image: none,-webkit-linear-gradient(top,rgba(255,255,255,.4) 0,rgba(255,255,255,0) 100%);
-                    background-image: none,linear-gradient(to bottom,rgba(255,255,255,.4) 0,rgba(255,255,255,0) 100%);
-                    background-position: 50% 50%;
-                    background-color: #bcb4b0;
-                }
-                &.selected {
-                    color: #fff;
-                    border-color: #aeaeae;
-                    background: #f35800;
-                    background-image: none,-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.2)),to(rgba(255,255,255,0)));
-                    background-image: none,-webkit-linear-gradient(top,rgba(255,255,255,.2) 0,rgba(255,255,255,0) 100%);
-                    background-image: none,linear-gradient(to bottom,rgba(255,255,255,.2) 0,rgba(255,255,255,0) 100%);
-                    background-color: #f35800;
-                }
-            }
-        }
-    }
 }
