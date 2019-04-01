@@ -60,84 +60,6 @@
 	}
 }
 
-/* 사용자권한 */
-.roleUser-contents {
-	.split[class*=cont-] {
-		@include float;
-		box-sizing: border-box;
-		margin-top: 10px;
-		.grid-wrap {
-			@include grid-scr-brown(null, 100%, 0);
-			.grid-area.grid-contents {
-				background: #fff;
-				height: 650px;
-				.grid-tbl {
-					td {
-						text-align: center;
-					}
-				}
-			}
-		}
-		.grid-bottom {
-			@include grid-bottom-page;
-			border-radius: 0;
-		}
-	}
-	$wh: 450px;
-	.cont-code {
-		width: $wh;
-	}
-	.cont-list {
-		width: calc(100% - #{$wh});
-		padding-left: 10px;
-	}
-}
-
-/* 사용자등록 */
-.userRegist-contents {
-	.cont-property {
-        .property-tbl {
-            @include tbl-style-1;
-            td {
-                .cell {
-					.form-input {
-						&.option {
-							width: 150px;
-						}
-					}
-                    .form-select { 
-						&.option {
-							width: 100px;
-						}
-					}
-                    button {
-                        letter-spacing: 0;
-                    }
-                }
-            }
-        }
-    }
-	.cont-list {
-		margin-top: 10px;
-		.grid-wrap {
-			@include grid-scr-brown(null, 100%, 0);
-			.grid-area.grid-contents {
-				background: #fff;
-				height: 650px;
-				.grid-tbl {
-					td {
-						text-align: center;
-					}
-				}
-			}
-		}
-		.grid-bottom {
-			@include grid-bottom-page;
-			border-radius: 0;
-		}
-	}
-}
-
 /* 메뉴권한 */
 .roleMenu-contents {
 	.split[class*=cont-] {
@@ -220,6 +142,93 @@
 			.grid-area.grid-contents .grid-tbl td {
 				border-bottom: 1px solid $bdg-tblBase;
 			}
+		}
+	}
+}
+
+/* 사용자권한 */
+.roleUser-contents {
+	.split[class*=cont-] {
+		@include float;
+		box-sizing: border-box;
+		margin-top: 10px;
+		.grid-wrap {
+			@include grid-scr-brown(null, 100%, 0);
+			.grid-area.grid-contents {
+				background: #fff;
+				height: 650px;
+				.grid-tbl {
+					td {
+						text-align: center;
+					}
+				}
+			}
+		}
+		.grid-bottom {
+			@include grid-bottom-page;
+			border-radius: 0;
+		}
+	}
+	$wh: 450px;
+	.split.cont-code {
+		width: $wh;
+		.grid-wrap {
+			.grid-tbl {
+				width: 100% !important;
+				border-right: none;
+			}
+			.grid-area.grid-contents {
+				overflow: auto;
+			}
+		}
+	}
+	.split.cont-list {
+		width: calc(100% - #{$wh});
+		padding-left: 10px;
+	}
+}
+
+/* 사용자등록 */
+.userRegist-contents {
+	.cont-property {
+        .property-tbl {
+            @include tbl-style-1;
+            td {
+                .cell {
+					.form-input {
+						&.option {
+							width: 150px;
+						}
+					}
+                    .form-select { 
+						&.option {
+							width: 100px;
+						}
+					}
+                    button {
+                        letter-spacing: 0;
+                    }
+                }
+            }
+        }
+    }
+	.cont-list {
+		margin-top: 10px;
+		.grid-wrap {
+			@include grid-scr-brown(null, 100%, 0);
+			.grid-area.grid-contents {
+				background: #fff;
+				height: 650px;
+				.grid-tbl {
+					td {
+						text-align: center;
+					}
+				}
+			}
+		}
+		.grid-bottom {
+			@include grid-bottom-page;
+			border-radius: 0;
 		}
 	}
 }
