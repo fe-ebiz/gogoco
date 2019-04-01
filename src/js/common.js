@@ -65,7 +65,7 @@ function depUlClk() {
     });
     // 폴더 expand 기능
     $(".fn-fold .icon-treeArr").on("click", function() {
-        console.log("ok");
+        // console.log("ok");
         if ( $(this).hasClass("indent") == true ) {
             $(this).removeClass("indent").addClass("expand");
         } else if ( $(this).hasClass("expand") == true ) {
@@ -74,17 +74,43 @@ function depUlClk() {
         $(this).closest("a").next().toggleClass("expand");
     });
 }
+
 function depTblClk() {
-	// 클릭 on 기능
-	
+    // 클릭 on 기능
+    $(".fn-fold tr").on("click", function() {
+        $(this).toggleClass("on").siblings().removeClass("on");
+    });
+
     // 폴더 expand 기능
-    $(".fn-fold .icon-treeArr").on("click", function() {
-        console.log("ok");
-        if ( $(this).hasClass("indent") == true ) {
+    $(".fn-fold .icon-treeArr").on("click", function () {
+        // console.log("ok");
+        var lineRef = $(this).closest("tr").attr("ref");
+        console.log(lineRef);
+
+        // 아이콘 변경 및 목록 펼치기
+        if ($(this).hasClass("indent") == true) {
+            console.log("indent : " + $(this).hasClass("indent"));
             $(this).removeClass("indent").addClass("expand");
-        } else if ( $(this).hasClass("expand") == true ) {
+            if (lineRef == "line000") {
+                $(".fn-fold tr.dep-2").show();
+            } else {
+                lineRef += "-0";
+                console.log(lineRef);
+                $(".fn-fold tr[ref='" + lineRef + "']").show();
+            }
+        } else if ($(this).hasClass("expand") == true) {
+            console.log("expand : " + $(this).hasClass("expand"));
             $(this).removeClass("expand").addClass("indent");
+            if (lineRef == "line000") {
+                $(".fn-fold tr[ref]").not("tr[ref='line000']").hide();
+                $(".fn-fold .icon-treeArr").removeClass("expand").addClass("indent");
+            } else {
+                lineRef += "-0";
+                console.log(lineRef);
+                $(".fn-fold tr[ref*='" + lineRef + "']").hide();
+                $(".fn-fold tr[ref*='" + lineRef + "']").find(".icon-treeArr").removeClass("expand").addClass("indent");
+            }
         }
-        $(this).closest("a").next().toggleClass("expand");
+
     });
 }

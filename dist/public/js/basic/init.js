@@ -1,5 +1,6 @@
 $(function() {
 
-    depUlClk();
+    // depUlClk();
+    depTblClk();
     
 });

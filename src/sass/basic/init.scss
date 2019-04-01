@@ -73,6 +73,61 @@
 		}
 		.split.cont-code {
 			width: 400px;
+			.grid-wrap {
+				@include grid-scr-x(null, 100%, 0);
+				.grid-tbl {
+					width: 100% !important;
+					border-right: none;
+					tr {
+						td {
+							background: #fff !important;
+							border-bottom: none !important;
+						}
+						&:hover td {
+							background: #e7f1fa !important;
+						}
+						&.on td {
+							background: #d2d9df !important;
+						}
+					}
+					td {
+						.cell {
+							position: relative;
+						}
+					}
+					$total: 5;
+					@for $i from 1 to $total {
+						.dep-#{$i} {
+							td {
+								.cell {
+									padding-left: (20px * $i) + 5px;
+									.icon-treeArr {
+										left: (20px * $i) - 15px;
+									}
+								}
+							}
+						}
+					}
+					[class*='dep-'] {
+						display: none;
+					}
+					.dep-1 {
+						display: table-row;
+						td {
+							.cell {
+		
+							}
+						}
+					}
+				}
+				.grid-area.grid-contents {
+					height: 700px;
+					overflow: auto;
+					.grid-tbl td {
+						border-bottom: 1px solid $bor-gray-table;
+					}
+				}
+			}
 			.scrollbar {
 				height: 700px;
 				overflow-y: auto;

@@ -177,34 +177,48 @@
 	.split.cont-list {
 		width: calc(100% - #{$wh});
 		padding-left: 10px;
-		.grid-tbl {
-			tr.on {
-				background: red;
-			}
-			.dep-1 {
+		.grid-wrap {
+			.grid-tbl {
+				tr.on {
+					background: red;
+				}
 				td {
 					.cell {
-
+						position: relative;
 					}
 				}
-			}
-			$total: 5;
-			@for $i from 1 to $total {
-				.dep-#{$i} {
-					td {
-						.cell {
-							padding-left: (20px * $i) + 5px;
-							.icon-treeArr {
-								left: (5px * $i);
+				$total: 5;
+				@for $i from 1 to $total {
+					.dep-#{$i} {
+						td {
+							.cell {
+								padding-left: (20px * $i) + 5px;
+								.icon-treeArr {
+									left: (20px * $i) - 15px;
+								}
 							}
 						}
 					}
 				}
-			}
-			td:first-child {
-				.cell {
-					padding-left: 7px;
+				td:first-child {
+					.cell {
+						padding-left: 7px;
+					}
 				}
+				[class*='dep-'] {
+					display: none;
+				}
+				.dep-1 {
+					display: table-row;
+					td {
+						.cell {
+	
+						}
+					}
+				}
+			}
+			.grid-area.grid-contents .grid-tbl td {
+				border-bottom: 1px solid $bdg-tblBase;
 			}
 		}
 	}

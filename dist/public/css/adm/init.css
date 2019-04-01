@@ -505,22 +505,30 @@
 
 .roleMenu-contents .split.cont-list { width: calc(100% - 450px); padding-left: 10px; }
 
-.roleMenu-contents .split.cont-list .grid-tbl tr.on { background: red; }
+.roleMenu-contents .split.cont-list .grid-wrap .grid-tbl tr.on { background: red; }
 
-.roleMenu-contents .split.cont-list .grid-tbl .dep-1 td .cell { padding-left: 25px; }
+.roleMenu-contents .split.cont-list .grid-wrap .grid-tbl td .cell { position: relative; }
 
-.roleMenu-contents .split.cont-list .grid-tbl .dep-1 td .cell .icon-treeArr { left: 5px; }
+.roleMenu-contents .split.cont-list .grid-wrap .grid-tbl .dep-1 td .cell { padding-left: 25px; }
 
-.roleMenu-contents .split.cont-list .grid-tbl .dep-2 td .cell { padding-left: 45px; }
+.roleMenu-contents .split.cont-list .grid-wrap .grid-tbl .dep-1 td .cell .icon-treeArr { left: 5px; }
 
-.roleMenu-contents .split.cont-list .grid-tbl .dep-2 td .cell .icon-treeArr { left: 10px; }
+.roleMenu-contents .split.cont-list .grid-wrap .grid-tbl .dep-2 td .cell { padding-left: 45px; }
 
-.roleMenu-contents .split.cont-list .grid-tbl .dep-3 td .cell { padding-left: 65px; }
+.roleMenu-contents .split.cont-list .grid-wrap .grid-tbl .dep-2 td .cell .icon-treeArr { left: 25px; }
 
-.roleMenu-contents .split.cont-list .grid-tbl .dep-3 td .cell .icon-treeArr { left: 15px; }
+.roleMenu-contents .split.cont-list .grid-wrap .grid-tbl .dep-3 td .cell { padding-left: 65px; }
 
-.roleMenu-contents .split.cont-list .grid-tbl .dep-4 td .cell { padding-left: 85px; }
+.roleMenu-contents .split.cont-list .grid-wrap .grid-tbl .dep-3 td .cell .icon-treeArr { left: 45px; }
 
-.roleMenu-contents .split.cont-list .grid-tbl .dep-4 td .cell .icon-treeArr { left: 20px; }
+.roleMenu-contents .split.cont-list .grid-wrap .grid-tbl .dep-4 td .cell { padding-left: 85px; }
 
-.roleMenu-contents .split.cont-list .grid-tbl td:first-child .cell { padding-left: 7px; }
+.roleMenu-contents .split.cont-list .grid-wrap .grid-tbl .dep-4 td .cell .icon-treeArr { left: 65px; }
+
+.roleMenu-contents .split.cont-list .grid-wrap .grid-tbl td:first-child .cell { padding-left: 7px; }
+
+.roleMenu-contents .split.cont-list .grid-wrap .grid-tbl [class*='dep-'] { display: none; }
+
+.roleMenu-contents .split.cont-list .grid-wrap .grid-tbl .dep-1 { display: table-row; }
+
+.roleMenu-contents .split.cont-list .grid-wrap .grid-area.grid-contents .grid-tbl td { border-bottom: 1px solid #c0b5a6; }
