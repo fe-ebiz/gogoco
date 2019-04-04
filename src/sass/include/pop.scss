@@ -17,7 +17,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	.bg-back, .pop-wrap {
+	.bg-back, .pop-wrapper {
 		z-index: 20;
 	}
 	.bg-back {
@@ -30,7 +30,7 @@
 		opacity: 0.3;
 		filter: alpha(opacity=30);
 	}
-	.pop-wrap {
+	.pop-wrapper {
 		position: relative;
 		width: 1000px;
 //		min-height: 500px;
@@ -162,7 +162,7 @@
 
 /* 패키지 설정 */
 .pop-container.pkg-container {
-	.pop-wrap {
+	.pop-wrapper {
 		.pop-header {
 			@include pop-header-base;
 		}
@@ -234,7 +234,7 @@
 
 /* 세금 설정 */
 .pop-container.rate-container {
-	.pop-wrap {
+	.pop-wrapper {
 		width: 1190px;
 		.pop-header {
 			@include pop-header-base;
@@ -345,7 +345,7 @@
 
 /* 게스트 정보수정 */
 .pop-container.gm-container {
-	.pop-wrap {
+	.pop-wrapper {
 		width: 350px;
 		.pop-header {
 			@include pop-header-base;
@@ -410,7 +410,7 @@
 
 /* Accompany 설정 */
 .pop-container.accomp-container {
-	.pop-wrap {
+	.pop-wrapper {
 		width: 1100px;
 		.pop-header {
 			@include pop-header-base;
@@ -506,7 +506,7 @@
 
 /* 계정 세부사항 */
 .pop-container.account-container {
-	.pop-wrap {
+	.pop-wrapper {
 		width: 1100px;
 		.pop-header {
 			@include pop-header-base;
@@ -583,7 +583,7 @@
 
 /* 게스트 프로필 */
 .pop-container.gp-container {
-	.pop-wrap {
+	.pop-wrapper {
 		width: 1000px;
 		.pop-header {
 			@include pop-header-base;
@@ -678,7 +678,7 @@
 
 /* 블럭 룸 세이브 */
 .pop-container.rmBlock-container {
-	.pop-wrap {
+	.pop-wrapper {
 		width: 850px;
 		.pop-header {
 			@include pop-header-base;
@@ -724,7 +724,7 @@
 
 /* 파티 선택 */
 .pop-container.sltParty-container {
-	.pop-wrap {
+	.pop-wrapper {
 		margin-top: 60px;
 		width: 1000px;
 		.pop-header {
@@ -858,7 +858,7 @@
 
 /* 등급 변경 */
 .pop-container.chGrade-container {
-	.pop-wrap {
+	.pop-wrapper {
 		.pop-header {
 			@include pop-header-base;
 		}
@@ -957,7 +957,7 @@
 
 /* 특별 요구사 */
 .spReq-container {
-	.pop-wrap {
+	.pop-wrapper {
 		width: 500px;
 		.pop-header {
 			@include pop-header-base;
@@ -1023,6 +1023,15 @@
 		}
 		.pop-footer {
 			@include pop-footer-base;
+		}
+	}
+}
+
+/* 예약 팝업 */
+.rv-container {
+	.pop-wrapper {
+		.pop-header {
+			// @include 
 		}
 	}
 }
