@@ -49,9 +49,6 @@ $bg-minHeight: 720px;
 				left: 2px;
 			}
 		}
-		.inp, .btn-login {
-			height: 29px;
-		}
 		.inp {
 			@include form-base;
 			width: 100%;
@@ -74,6 +71,9 @@ $bg-minHeight: 720px;
 			color: rgba(255,255,255, 0.9);
 			text-shadow: 0px -1px rgba(0,0,0, 0.3);
 			letter-spacing: 0;
+		}
+		.inp, .btn-login {
+			height: 29px;
 		}
 	}
 	.row-forgot {
@@ -156,9 +156,6 @@ $bg-minHeight: 720px;
 			margin-top: 15px;
 			font-weight: 700;
 		}
-		.inp, .btn-login {
-			height: 51px;
-		}
 		.inp {
 			@include form-base;
 			width: 100%;
@@ -179,6 +176,9 @@ $bg-minHeight: 720px;
 			border-radius: 0;
 			letter-spacing: 0;
 			font-size: 20px;
+		}
+		.inp, .btn-login {
+			height: 51px;
 		}
 		.row-txt {
 			$fg-color: #666;
