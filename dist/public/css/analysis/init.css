@@ -100,7 +100,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 html { font-size: 62.5%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
-body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.428571429; color: #333333; background-color: #ffffff; }
+body { font-family: "Nanum Gothic", Helvetica, Arial, sans-serif; /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */ font-size: 14px; line-height: 1.428571429; color: #333333; background-color: #ffffff; }
 
 input, button, select, textarea { font-family: inherit; font-size: inherit; line-height: inherit; }
 
@@ -2581,7 +2581,7 @@ th.visible-print, td.visible-print { display: none !important; }
 
 .dboard-contents .cont-container-f .cont-list .row-contents .row-cont.cont-rvn .grid-area .grid-tbl { width: 100%; table-layout: fixed; border-collapse: collapse; }
 
-.dboard-contents .cont-container-f .cont-list .row-contents .row-cont.cont-rvn .grid-area .grid-tbl tr th, .dboard-contents .cont-container-f .cont-list .row-contents .row-cont.cont-rvn .grid-area .grid-tbl tr td { font-size: 12px; font-weight: 600; text-align: center; color: #000; border: 1px solid #c0b5a6; }
+.dboard-contents .cont-container-f .cont-list .row-contents .row-cont.cont-rvn .grid-area .grid-tbl tr th, .dboard-contents .cont-container-f .cont-list .row-contents .row-cont.cont-rvn .grid-area .grid-tbl tr td { background: #f4f1ee; font-size: 12px; font-weight: 600; text-align: center; color: #000; border: 1px solid #c0b5a6; }
 
 .dboard-contents .cont-container-f .cont-list .row-contents .row-cont.cont-rvn .grid-area .grid-tbl tr th .cell, .dboard-contents .cont-container-f .cont-list .row-contents .row-cont.cont-rvn .grid-area .grid-tbl tr td .cell { padding: 7px 7px; }
 

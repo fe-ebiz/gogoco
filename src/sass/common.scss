@@ -1,10 +1,10 @@
 @charset "utf-8";
 
 // 공통
- @import "./parts/variables";
- @import "./parts/mixins";
- @import "./include/pop";
-//@import "parts/_common.scss";
+//  @import "./parts/variables";
+//  @import "./parts/mixins";
+@import "./parts/common";
+@import "./include/pop";
 
 // Footer
 //@import url(//static.go.co.kr/css/footer.css);
