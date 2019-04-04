@@ -1,9 +1,9 @@
 @@include('../include/_head.html', {
-	"page": "dashboard"
+	"page": "analysis"
 })
 
 
-<body class="page-dashboard">
+<body class="page-analysis">
 
 <div class="wrapper">
 	@@include('../include/_header.html')
@@ -378,17 +378,17 @@
                         <p class="row-tit">수익 통계</p>
                         <div class="btn-box">
                             <button type="button" class="btn-gray prev">이전 달</button>
-                            <button type="button" class="btn-gray now">현재 달</button>
+                            <button type="button" class="btn-gray now">이번 달</button>
                             <button type="button" class="btn-gray next">다음 달</button>
                         </div>
                         <!-- chart graph -->
                         <div class="chart-area">
-                            <canvas id="chart-rst"></canvas>
+                            <canvas id="chart-rst" class="chart-rst"></canvas>
                         </div>
                     </div>
                     
                     <!-- Occupancy Statistics -->
-                    <div class="row-cont cont-rst">
+                    <div class="row-cont cont-ost">
                         <p class="row-tit">점유율 통계</p>
                         <div class="btn-box">
                             <button type="button" class="btn-gray nation">회원</button>
@@ -398,7 +398,7 @@
                         </div>
                         <!-- chart graph -->
                         <div class="chart-area">
-                            <canvas id="chart-"></canvas>
+                            <canvas id="chart-ost"></canvas>
                         </div>
                     </div>
                 </div>
