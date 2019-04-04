@@ -2503,7 +2503,7 @@ th.visible-print, td.visible-print { display: none !important; }
 
 .dboard-contents .cont-container-f .cont-list .row-contents.row-3 .row-cont { height: 515px; }
 
-.dboard-contents .cont-container-f .cont-list .row-contents .row-cont { position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; float: left; width: 49.5%; margin-left: 1%; border: 1px solid #a6a6a6; /* row 타이틀 */ /* 버튼 */ /* 공통 - 그래프 제외 부모요소 */ /* 스크롤 테이블 공통 */ /* Revenue */ /* Notice */ /* Room Analysis */ /* VIP */ /* Revenue Statistics */ }
+.dboard-contents .cont-container-f .cont-list .row-contents .row-cont { position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; float: left; width: 49.5%; margin-left: 1%; border: 1px solid #a6a6a6; /* row 타이틀 */ /* 버튼 */ /* 공통 - 그래프 제외 부모요소 */ /* 스크롤 테이블 공통 */ /* Revenue */ /* Notice */ /* Room Analysis */ /* VIP */ /* Revenue Statistics */ /* Occupancy Statistics */ }
 
 .dboard-contents .cont-container-f .cont-list .row-contents .row-cont:first-child { margin-left: 0; }
 
@@ -2618,3 +2618,5 @@ th.visible-print, td.visible-print { display: none !important; }
 .dboard-contents .cont-container-f .cont-list .row-contents .row-cont.cont-vip .scr-wrap .grid-area.grid-contents { height: 150px; }
 
 .dboard-contents .cont-container-f .cont-list .row-contents .row-cont.cont-rst .chart-area { position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; margin-top: 20px; height: 400px; }
+
+.dboard-contents .cont-container-f .cont-list .row-contents .row-cont.cont-ost .chart-area { position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; margin-top: 20px; height: 400px; }
