@@ -1,24 +1,29 @@
 //대시보드 전역변수 설정
-var myBarChart, myChartAChart, dbLegend;
+var rstChartBar, rstChartAChartBar, ostChartBar, dbLegend;
 var dbLabel = new Array();
 
 $(function() {
-    // 현재 달 지정 (이전 0, 현재 1, 다음 2)
-    var num = 1;
+    //변수 선언
+    var num = 1; // 현재 달 지정 (이전 0, 현재 1, 다음 2)
+    var ostBtnTxt = $('.cont-ost .btn-box .btn-gray.nation').text();//점유율 통계 범례 기본값 '국적'
     
     /* 함수실행 */
     yearCal();
     overLastYearChart();
-    rstChart(num);
+    rstChart(num); //수익 통계 차트
+    //ostChart(num, ostBtnTxt); //점유율 통계 차트
+    ostChart(ostBtnTxt);
     
-    /* 수익통계 버튼 */
+    /* 수익통 계 버튼 */
     $('.cont-rst .btn-gray').on('click', function(){
         //상세차트가 on되어있을 경우 
         if( $('.chart-rst').hasClass('on') ){
-            myChartAChart.destroy();
             $('.chart-rst').removeClass('on');
+            rstChartAChartBar.destroy();
         }
-        myBarChart.destroy();
+        rstChartBar.destroy();
+        ostChartBar.destroy();
+        ostChart(ostBtnTxt);
         if( $(this).hasClass('prev') ){ //이전 달
             //$(this).addClass('on');
             rstChart(0);
@@ -29,18 +34,25 @@ $(function() {
         }
     });
     
-    /* 수익통계 차트 클릭 시 */
+    /* 점유율 통계 버튼 */
+    $('.cont-ost .btn-gray').on('click', function(){
+        var ostTxt = $(this).text();
+        ostChartBar.destroy();
+        ostChart(ostTxt);
+    });
+    
+    /* 수익 통계 차트 클릭 시 */
     $('#chart-rst').on('click', function(evt){
         $('.chart-rst').addClass('on'); //달버튼 클릭시 차트 제거를 위해
         
-        var activePoint = myBarChart.getElementAtEvent(event);
+        var activePoint = rstChartBar.getElementAtEvent(event);
         
         if( activePoint.length > 0 ) {
             var clickedElementindex = activePoint[0]._index;
-            var label = myBarChart.data.labels[clickedElementindex];
+            var label = rstChartBar.data.labels[clickedElementindex];
             //console.log(label);
             
-            myBarChart.destroy();
+            rstChartBar.destroy();
             rstChartAChart(label);
             
             /*if( clickedElementindex == 0 ){
@@ -218,13 +230,24 @@ function rstChart(num) {
     calendarFn(num);
     
     //값
-    if( num == 0 ) {
+    switch (num) {
+        case 0 :
+            chartDate = chartDatePv;
+            break;
+        case 2 :
+            chartDate = chartDateNt;
+            break;
+        default :
+            chartDate = chartDateNow;
+            break;    
+    }
+    /*if( num == 0 ) {
         chartDate = chartDatePv;
     }else if ( num == 2 ) {
         chartDate = chartDateNt;
     }else {
         chartDate = chartDateNow;
-    }
+    }*/
     
     //chart
     var barChartData = {        
@@ -300,7 +323,7 @@ function rstChart(num) {
     
     var ctx = $('#chart-rst').get(0).getContext('2d'); 
     
-    myBarChart = Chart.Bar(ctx, options);	
+    rstChartBar = new Chart(ctx, options);	
     
 }
 
@@ -332,18 +355,7 @@ function rstChartAChart(cacLgd) {
                         color: '#c7c7c7'
                     },
                     ticks: {
-                        fontStyle: 'normal'
-                    },
-                    categoryPercentage: 0.7,
-                    //barThickness: 11
-                }],
-                yAxes: [{ 
-                    gridLines: {
-                        color: '#c7c7c7'
-                    },
-                    ticks: {
-                        beginAtZero: true,
-                        fontColor: '#999',
+                        fontStyle: 'normal',
                         callback: function(value, index, values) {
                             value = value.toString();
                             if( value.length < 4 ) {}
@@ -355,7 +367,18 @@ function rstChartAChart(cacLgd) {
                             value = value.concat(' 천원');
                             return value;
                         }
-                    }
+                    },
+                    categoryPercentage: 0.7,
+                }],
+                yAxes: [{ 
+                    gridLines: {
+                        color: '#c7c7c7'
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                        fontColor: '#999'
+                    },
+                    barThickness: 13
                 }]
             },
             legend: { 
@@ -371,7 +394,7 @@ function rstChartAChart(cacLgd) {
                 callbacks: {
                     title: function() {},
                     label: function(tooltipItem, data) {
-                        return String(tooltipItem.xLabel).toLocaleString() + ' : ' + Number(tooltipItem.yLabel).toLocaleString();
+                        return String(tooltipItem.yLabel).toLocaleString() + ' : ' + Number(tooltipItem.xLabel).toLocaleString();
                     }
                 }
             },
@@ -380,6 +403,108 @@ function rstChartAChart(cacLgd) {
     
     var ctx = $('#chart-rst').get(0).getContext('2d'); 
     
-    myChartAChart = Chart.Bar(ctx, options);	
+    rstChartAChartBar = new Chart(ctx, options);	
      
+}
+
+/* 점유율 통계 차트 - ALL */
+function ostChart(ostBtnTxt) {
+        //국적
+    var natLabel = ['NONE', '한국', '일본'],
+        natDate = [94, 5.2, 0.8],
+        //계정
+        accLabel = ['지솔루션/기아차 협력', '윈덤', '고코투어(가자닷컴)', '다이렉트', '창평고', '호텔나우', '광주수피아여자중학교', '아고다', '호텔타임', '주식회사 보아기연'],
+        accDate = [21.8, 15.8, 9.5, 9.1, 8.3, 5.9, 5.6, 5.2, 3.1, 2.5],
+        //시장
+        mkLabel = ['온라인 여행사', 'DIRECTG', 'DIRECTF', 'CORFIT'],
+        mkDate = [46, 43, 9.1, 1.9],
+        //출처
+        socLabel = ['핸드폰', '이메일', '기타', '팩스', '홈페이지', '방문'],
+        socDate = [33.5, 29.4, 13.6, 12.3, 6.7, 4.4];
+    
+    var ostLabel = new Array(),
+        ostDate = new Array();
+    
+    //값
+    switch (ostBtnTxt) {
+        case '계정' :
+            ostLabel = accLabel;
+            ostDate = accDate;
+            break;
+        case '시장' :
+            ostLabel = mkLabel;
+            ostDate = mkDate;
+            break;
+        case '출처' :
+            ostLabel = socLabel;
+            ostDate = socDate;
+            break;
+        default :
+            ostLabel = natLabel;
+            ostDate = natDate;
+            break;
+    }
+    
+    
+    //chart
+    var barChartData = {        
+        labels: ostLabel,
+        datasets: [{
+            label: ostBtnTxt,
+            backgroundColor: '#ff8632',
+            data: ostDate
+        }]
+    };
+     
+    //차트 옵션
+    var options  = {
+        type: 'horizontalBar',
+        data: barChartData,
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+                xAxes: [{ 
+                    display: true,
+                    gridLines: {
+                        color: '#c7c7c7'
+                    },
+                    ticks: {
+                        fontStyle: 'normal'
+                    },
+                    categoryPercentage: 0.7,
+                }],
+                yAxes: [{ 
+                    gridLines: {
+                        color: '#c7c7c7'
+                    },
+                    ticks: {
+                        beginAtZero: true
+                    },
+                    minBarLength: 11,
+                    maxBarThickness: 131
+                }]
+            },
+            legend: { 
+                labels: {
+                    boxWidth: 0,
+                    fontSize: 17 
+                },
+                onClick: function(e){
+                    e.stopPropagation();
+                }
+            },
+            tooltips: {
+                callbacks: {
+                    title: function() {},
+                    label: function(tooltipItem, data) {
+                        return String(tooltipItem.yLabel).toLocaleString() + ' - ' + Number(tooltipItem.xLabel).toLocaleString();
+                    }
+                }
+            },
+        }  
+    };
+    
+    var ctx = $('#chart-ost').get(0).getContext('2d'); 
+    
+    ostChartBar = new Chart(ctx, options);
 }

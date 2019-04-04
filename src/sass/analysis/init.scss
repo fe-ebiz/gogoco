@@ -497,6 +497,15 @@
                             height: 400px;
                         }
                     }
+                    
+                    /* Occupancy Statistics */
+                    &.cont-ost {
+                        .chart-area {
+                            @include bx;
+                            margin-top: 20px;
+                            height: 400px;
+                        }
+                    }
                 }
             }
         }
