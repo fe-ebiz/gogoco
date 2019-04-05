@@ -2,6 +2,7 @@ y.pub
 y
 
 #etc
+node_modules
 _bak/
 _document/
 _draft/
@@ -74,3 +75,4 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+node_modules

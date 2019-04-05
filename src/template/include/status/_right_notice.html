@@ -1,0 +1,31 @@
+	<aside class="sidebar right-reservation">
+		<div class="folder">
+			<a href="javascript:;" class="btn-a-folder"><span class="ic-lArrow"></span><span class="ic-lArrow"></span></a>
+		</div>
+		<ul class="cf tab-list">
+<!--
+			<li class="tab"><a href="javascript:;">Mail</a></li>
+			<li class="tab"><a href="javascript:;">CMS</a></li>
+			<li class="tab"><a href="javascript:;">iCODY</a></li>
+-->
+			<li class="tab on"><a href="javascript:;">Notice</a></li>
+		</ul>
+		<div class="side-contents cont-logbook">
+			<h2><strong>Notice</strong></h2>
+			<div class="box-contents notice-box">
+				<h3><strong>해당주 금,토요일 판매량 목표치</strong></h3>
+				<div class="cont-body">
+					<p class="row">체크인 일주일 전까지 40~50% </p>
+					<p class="row">6일전~3일전(4일간, 일 ~ 수요일까지) 20~25%</p>
+					<p class="row">2일전~당일(3일간, 목~토요일까지) 25~30% (당일 15~20%)</p>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function() {
+				$(".sidebar.right-reservation .btn-a-folder").on("click", function() {
+					$(this).closest(".sidebar.right-reservation").toggleClass("unfold");
+				});
+			});
+		</script>
+	</aside>
