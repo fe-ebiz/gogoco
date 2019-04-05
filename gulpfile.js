@@ -11,7 +11,6 @@
  * [gulp-connect-multi] - 웹 서버
  */
 var del      = require('del'),
-	// jade     = require('gulp-jade'),
 	compass  = require('gulp-compass'),
 	gulp     = require('gulp'),
 	gulpif   = require('gulp-if'),
@@ -19,19 +18,20 @@ var del      = require('del'),
 	fileinclude = require('gulp-file-include'),
 	ejs      = require('gulp-ejs'),
 	sass	 = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
+	autoprefixer = require('gulp-autoprefixer'),
 	plumber  = require('gulp-plumber'),
 	watch    = require('gulp-watch'),
 	prettify = require('gulp-html-prettify'),
-	connect  = require('gulp-connect-multi')(),
-	preen		 = require('preen'),
 	browerSync = require('browser-sync').create(), // browser-sync 호출
 
-	// 환경설정 ./config.js
 	config   = require('./config')();
+	// jade     = require('gulp-jade'),
+	// connect  = require('gulp-connect-multi')(),
+	// preen		 = require('preen'),
+	// 환경설정 ./config.js
 
 /**
- * Gulp 업무(Tasks) 정의
+ * Gulp 업무(Tasks) 정의 v3.9.1
  */
 
 // 기본
@@ -96,33 +96,43 @@ gulp.task('clean:js', function(){
 	del(config.js.dest);
 });
 
-// Bower 패키지에서 필요한 파일만 골라내기(Preen)
-gulp.task('preen', function(cb) {
-	preen.preen({}, cb);
-});
-// Bower 패키지 복사
-gulp.task('bower:copy', function() {
-	// susy
-	gulp.src(config.bower.susy.src)
-		.pipe( gulp.dest(config.bower.susy.dest) );
-	gulp.src(config.bower.breakpoint.src)
-		.pipe( gulp.dest(config.bower.breakpoint.dest) );
-	// fontawesome
-	gulp.src(config.bower.fontawesome.src)
-		.pipe( gulp.dest(config.bower.fontawesome.dest) );
-	// jquery, modernizr, detectizr
-	gulp.src(config.bower.others.src)
-		.pipe( gulp.dest(config.bower.others.dest) );
-});
-
-// 웹 서버
-// gulp.task('connect', connect.server( config.sev ) );
-
 // HTML 템플릿(template)
 gulp.task('template', function(){
-	gulp.src(config.template.src)
+	return gulp.src(config.template.src)
 		.pipe( plumber() )
-//		.pipe( jade() )
+		.pipe( fileinclude({
+			prefix: '@@',
+			basepath: '@file'
+		}))
+		.pipe( prettify( config.htmlPrettify) )
+		.pipe( gulp.dest( config.template.dest ) )
+		// .pipe( connect.reload() );
+		.pipe(browerSync.reload({stream: true}));
+});
+
+gulp.task('sass', function() {
+	return gulp.src( config.sass.src )
+		.pipe( plumber() )
+		.pipe( sass({outputStyle: 'compact'}).on('error', sass.logError)) // {outputStyle: nested} expanded, compact, compressed
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+		.pipe( gulp.dest( config.sass.dest ) )
+		.pipe(browerSync.reload({stream: true}));
+});
+
+gulp.task('js', function(){
+	return gulp.src(config.js.src)
+		.pipe( plumber() )
+		.pipe( gulp.dest(config.js.dest) )
+		.pipe(browerSync.reload({stream: true}));
+});
+
+////////////////////////////////////////////////
+gulp.task('html', function(){
+	return gulp.src(config.template.src)
+		.pipe( plumber() )
 		.pipe( fileinclude({
 			prefix: '@@',
 			basepath: '@file'
@@ -144,17 +154,6 @@ gulp.task('compass', function() {
 		.pipe( gulp.dest( config.sass.dest ) )
 		.pipe(browerSync.reload({stream: true}));
 });
-gulp.task('sass', function() {
-	gulp.src( config.sass.src )
-		.pipe( plumber() )
-		.pipe( sass({outputStyle: 'compact'}).on('error', sass.logError)) // {outputStyle: nested} expanded, compact, compressed
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-		.pipe( gulp.dest( config.sass.dest ) )
-		.pipe(browerSync.reload({stream: true}));
-});
 
 gulp.task('css', function(){
 	gulp.src(config.css.src)
@@ -163,9 +162,21 @@ gulp.task('css', function(){
 		.pipe(browerSync.reload({stream: true}));
 });
 
-gulp.task('js', function(){
-	gulp.src(config.js.src)
-		.pipe( plumber() )
-		.pipe( gulp.dest(config.js.dest) )
-		.pipe(browerSync.reload({stream: true}));
+// Bower 패키지에서 필요한 파일만 골라내기(Preen)
+gulp.task('preen', function(cb) {
+	preen.preen({}, cb);
+});
+// Bower 패키지 복사
+gulp.task('bower:copy', function() {
+	// susy
+	gulp.src(config.bower.susy.src)
+		.pipe( gulp.dest(config.bower.susy.dest) );
+	gulp.src(config.bower.breakpoint.src)
+		.pipe( gulp.dest(config.bower.breakpoint.dest) );
+	// fontawesome
+	gulp.src(config.bower.fontawesome.src)
+		.pipe( gulp.dest(config.bower.fontawesome.dest) );
+	// jquery, modernizr, detectizr
+	gulp.src(config.bower.others.src)
+		.pipe( gulp.dest(config.bower.others.dest) );
 });
