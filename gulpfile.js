@@ -13,18 +13,18 @@
 var del      = require('del'),
 	compass  = require('gulp-compass'),
 	gulp     = require('gulp'),
-	gulpif   = require('gulp-if'),
-	rename   = require('gulp-rename'),
 	fileinclude = require('gulp-file-include'),
-	ejs      = require('gulp-ejs'),
 	sass	 = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	plumber  = require('gulp-plumber'),
 	watch    = require('gulp-watch'),
 	prettify = require('gulp-html-prettify'),
 	browerSync = require('browser-sync').create(), // browser-sync 호출
-
+	
 	config   = require('./config')();
+	// gulpif   = require('gulp-if'),
+	// rename   = require('gulp-rename'),
+	// ejs      = require('gulp-ejs'),
 	// jade     = require('gulp-jade'),
 	// connect  = require('gulp-connect-multi')(),
 	// preen		 = require('preen'),
