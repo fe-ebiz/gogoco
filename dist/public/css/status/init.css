@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* 우측 사이드 콘텐츠 */
+.sidebar.right-reservation { position: fixed; z-index: 1; -webkit-box-sizing: border-box; box-sizing: border-box; top: 40px; right: 0; min-width: 290px; height: 100%; background: #fff; border-left: 1px solid #dbdbdb; }
+
+.sidebar.right-reservation .folder { position: relative; background: #c0b5a6; height: 30px; }
+
+.sidebar.right-reservation .folder .btn-a-folder { display: inline-block; height: 100%; padding: 0 10px; }
+
+.sidebar.right-reservation .folder .btn-a-folder .ic-lArrow { position: relative; left: -3px; }
+
+.sidebar.right-reservation .folder .btn-a-folder .ic-lArrow:after { border-color: #fff; top: 3px; width: 8px; height: 8px; border-width: 2px; }
+
+.sidebar.right-reservation .folder .btn-a-folder .ic-lArrow + .ic-lArrow:after { right: auto; left: -3px; }
+
+.sidebar.right-reservation .tab-list { background: #f0f0f0; padding: 12px; }
+
+.sidebar.right-reservation .tab-list .tab { position: relative; float: left; margin-right: 5px; }
+
+.sidebar.right-reservation .tab-list .tab > a { display: block; padding: 5px 10px; background: #fff; color: #968571; border-radius: 5px; font-size: 13px; }
+
+.sidebar.right-reservation .tab-list .tab:hover > a { background: #d4c9bb; }
+
+.sidebar.right-reservation .tab-list .tab.on > a { background: #968571; color: #fff; }
+
+.sidebar.right-reservation .side-contents { background: #fff; padding: 0 12px; padding-top: 10px; font-size: 12px; }
+
+.sidebar.right-reservation .side-contents h2 { font-size: 16px; }
+
+.sidebar.right-reservation .side-contents h2 strong { font-weight: 700; }
+
+.sidebar.right-reservation .side-contents h2 + .box-contents { margin-top: 15px; }
+
+.sidebar.right-reservation .side-contents .box-contents { margin-top: 10px; }
+
+.sidebar.right-reservation .side-contents .box-contents h3 { text-align: center; background: #E7E4E2; border: 1px solid #c0b5a6; padding: 5px 0; }
+
+.sidebar.right-reservation .side-contents .box-contents h3 strong { font-weight: 700; }
+
+.sidebar.right-reservation .side-contents .box-contents .cont-body { padding: 10px 8px; border: 1px solid #c0b5a6; border-top: none; color: #666; font-weight: 700; word-break: keep-all; }
+
+.sidebar.right-reservation .side-contents .box-contents .cont-body p.row { line-height: 2; }
+
+.sidebar.right-reservation.unfold .side-contents.cont-logbook { width: 600px; }
+
+/* 판매채널 일별 */
