@@ -71,9 +71,608 @@
 
 
     <div class="wrapper">
-        <header class="header">
-            <div class="group cont-header">
-                <h1 class="logo">
+        <<<<<<< HEAD <!-- 미수금 원장 지불 팝업-->
+            <div class="pop-container ctLdpaym-container">
+                <div class="bg-back"></div>
+
+                <div class="pop-wrapper">
+                    <div class="pop-header">
+                        <h2>미수금 원장 지불</h2>
+                        <span class="a-i-x i-x fn-cls"></span>
+                    </div>
+                    <div class="cf pop-contents">
+                        <div class="popcont-container">
+                            <div class="grid-wrap">
+                                <div class="grid-contents">
+                                    <table class="grid-tbl name-tbl">
+                                        <colgroup>
+                                            <col class="nth-1" style="width: 90px">
+                                                <col class="nth-2" style="width: *">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell">계정</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <input type="text" class="form-input" disabled>
+                                                        <button type="button" class="btn-green">SEARCH</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell necess">날짜</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <input type="text" class="form-input w-1" value="" disabled>
+                                                        <span class="slt-box date-txt">입력할 날짜</span>
+                                                        <span class="cal-box">
+
+												<input type="text" class="appe-reset inp-cal date-ui w-1" value="">
+
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell necess">금액</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <input type="text" class="form-input ta-right w-1" value="0">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell necess">방식</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <select name="" id="" class="form-select gray method-1">
+                                                            <option value=""></option>
+                                                            <option value="">BANK (통장)</option>
+                                                            <option value="">VASH_NOBILL (현금영수증을 하지 않은 현금결재)</option>
+                                                            <option value="">CARD_EXTERNAL (카드 외부승인)</option>
+                                                        </select>
+                                                        <select name="" id="" class="form-select gray method-2">
+                                                            <option value=""></option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell">결재 정보</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <input type="text" class="form-input">
+                                                    </div>
+                                                    <!-- CARD_EXTERNAL (카드 외부승인) 을 선택할 경우 -->
+                                                    <!--<div class="cell">
+                                            <span class="slt-box">Card No.</span>
+                                            <input type="text" class="form-input">
+                                        </div>-->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell">메모</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <textarea name="" id="" cols="30" rows="10" class="textarea-etc"></textarea>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- //.grid-wrap -->
+                        </div>
+                    </div>
+                    <div class="pop-footer">
+                        <div class="row-btn">
+                            <button type="button" class="btn-red fn-cls">APPLY</button>
+                            <button type="button" class="btn-gray fn-cls">CLOSE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //.ctLdpaym-container-->
+
+            <!-- 교환 저장 팝업 -->
+            <div class="pop-container exChgSv-container">
+                <div class="bg-back"></div>
+
+                <div class="pop-wrapper">
+                    <div class="pop-header">
+                        <h2>교환 저장</h2>
+                        <span class="a-i-x i-x fn-cls"></span>
+                    </div>
+                    <div class="cf pop-contents">
+                        <div class="popcont-container">
+
+                            <div class="grid-wrap">
+                                <div class="grid-contents">
+                                    <table class="grid-tbl name-tbl">
+                                        <colgroup>
+                                            <col class="nth-1" style="width: 140px">
+                                                <col class="nth-2" style="width: *">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell necess">교환할 날짜</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <span class="cal-box">
+
+												<input type="text" class="appe-reset inp-cal date-ui">
+
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell necess">통화</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <select name="" id="" class="form-select gray">
+                                                            <option value=""></option>
+                                                            <option value="">미국 USD</option>
+                                                            <option value="">일본 JYP</option>
+                                                            <option value="">유럽 EUR</option>
+                                                            <option value="">중국 CNY</option>
+                                                            <option value="">호주 AUD</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell">환율</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <input type="text" class="form-input" value="0" disabled>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell necess">수령 금액</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <input type="text" class="form-input" value="0">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell">교환 금액</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <input type="text" class="form-input" value="" disabled>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell necess">게스트</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <input type="text" class="form-input">
+                                                        <!-- 누르면 게스트 설정 팝업 등장 -->
+                                                        <button type="button" class="btn-green">SET</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell necess">국적</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <input type="text" class="form-input">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell necess">여권 번호</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <input type="text" class="form-input">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell">인증서 번호</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <input type="text" class="form-input">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell">메모</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <textarea name="" id="" cols="30" rows="10" class="textarea-etc"></textarea>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- //.grid-wrap -->
+                        </div>
+                    </div>
+                    <div class="pop-footer">
+                        <div class="row-btn">
+                            <button type="button" class="btn-blue fn-cls">SAVE</button>
+                            <button type="button" class="btn-red fn-cls">VOID</button>
+                            <button type="button" class="btn-brown fn-cls">PRINT</button>
+                            <button type="button" class="btn-gray fn-cls">CLOSE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //.exChgSv-container-->
+
+            <!-- 게스트 설정 팝업 -->
+            <div class="pop-container gstSt-container">
+                <div class="bg-back"></div>
+
+                <div class="pop-wrapper">
+                    <div class="pop-header">
+                        <h2>게스트 설정</h2>
+                        <span class="a-i-x i-x fn-cls"></span>
+                    </div>
+                    <div class="cf pop-contents">
+                        <div class="popcont-container">
+                            <div class="grid-wrap">
+                                <div class="grid-contents">
+                                    <table class="grid-tbl property-tbl">
+                                        <colgroup>
+                                            <col style="width: 65px">
+                                                <col style="width: 120px">
+                                                    <col style="width: 65px">
+                                                        <col style="width: 190px">
+                                                            <col style="width: 65px">
+                                                                <col style="width: *">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell necess">날짜</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <span class="cal-box">
+
+												<input type="text" class="appe-reset inp-cal date-ui" value="">
+
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <th>
+                                                    <div class="cell necess">게스트</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <input type="text" class="form-input">
+                                                    </div>
+                                                </td>
+                                                <th>
+                                                    <div class="cell necess">객실#</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell rooms">
+                                                        <input type="text" class="form-input">
+                                                        <button type="button" class="btn-brown">SEARCH</button>
+                                                        <button type="button" class="btn-brown">CLEAR</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="scr-wrap">
+                                <div class="grid-scrollable-x">
+                                    <div class="grid-area grid-head">
+                                        <div class="grid-scrollable">
+                                            <table class="grid-tbl">
+                                                <colgroup>
+                                                    <col style="width:65px">
+                                                        <col style="width:120px">
+                                                            <col style="width:*">
+                                                                <col style="width:150px">
+                                                                    <col style="width:150px">
+                                                </colgroup>
+                                                <thead class="rowgroup">
+                                                    <tr>
+                                                        <th>
+                                                            <div class="cell order-ui">Sts</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="cell order-ui">객실#</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="cell order-ui">게스트 이름</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="cell order-ui">도착 날짜</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="cell order-ui">출발 날짜</div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="grid-area grid-contents">
+                                        <table class="grid-tbl">
+                                            <colgroup>
+                                                <col style="width:65px">
+                                                    <col style="width:120px">
+                                                        <col style="width:*">
+                                                            <col style="width:150px">
+                                                                <col style="width:150px">
+                                            </colgroup>
+                                            <tbody class="rowgroup">
+                                                <tr>
+                                                    <td>
+                                                        <div class="cell"></div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell">417</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell ta-left">김경준(쓰레기형)</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell">2019-04-04</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell">2019-05-04</div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="cell"></div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell">915</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell ta-left">LIAO</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell">2019-03-31</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell">2019-04-30</div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //.scr-wrap -->
+                            <div class="cf grid-bottom">
+                                <a href="#" class="prev st">&lt;&lt;</a>
+                                <a href="#" class="prev">&lt;</a>
+                                <span class="num">0</span>
+                                <a href="#" class="next">&gt;</a>
+                                <a href="#" class="next st">&gt;&gt;</a>
+                                <span class="count">1 - 20 of 28 items</span>
+                            </div>
+                            <!-- //.grid-bottom-->
+                        </div>
+                    </div>
+                    <div class="pop-footer">
+                        <div class="row-btn">
+                            <button type="button" class="btn-blue fn-cls">SAVE</button>
+                            <button type="button" class="btn-gray fn-cls">CLOSE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //.gstSt-container-->
+
+            <!-- 환율 설정 팝업 -->
+            <div class="pop-container rateSt-container">
+                <div class="bg-back"></div>
+
+                <div class="pop-wrapper">
+                    <div class="pop-header">
+                        <h2>환율 설정</h2>
+                        <span class="a-i-x i-x fn-cls"></span>
+                    </div>
+                    <div class="cf pop-contents">
+                        <div class="popcont-container">
+                            <div class="grid-wrap">
+                                <div class="grid-contents">
+                                    <table class="grid-tbl name-tbl">
+                                        <colgroup>
+                                            <col class="nth-1" style="width: 120px">
+                                                <col class="nth-2" style="width: *">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell necess">통화</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <input type="text" class="form-input" value="" disabled>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell necess">국가</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <input type="text" class="form-input">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="cell necess">환율</div>
+                                                </th>
+                                                <td>
+                                                    <div class="cell">
+                                                        <input type="text" class="form-input" value="0">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- //.grid-wrap -->
+
+                            <div class="scr-wrap">
+                                <div class="grid-scrollable-x">
+                                    <div class="grid-area grid-head">
+                                        <div class="grid-scrollable">
+                                            <table class="grid-tbl">
+                                                <colgroup>
+                                                    <col style="width:250px">
+                                                        <col style="width:250px">
+                                                            <col style="width:*">
+                                                </colgroup>
+                                                <thead class="rowgroup">
+                                                    <tr>
+                                                        <th>
+                                                            <div class="cell order-ui">통화</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="cell order-ui">국가</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="cell order-ui">환율</div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="grid-area grid-contents">
+                                        <table class="grid-tbl">
+                                            <colgroup>
+                                                <col style="width:250px">
+                                                    <col style="width:250px">
+                                                        <col style="width:*">
+                                            </colgroup>
+                                            <tbody class="rowgroup">
+                                                <tr>
+                                                    <td>
+                                                        <div class="cell">USD</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell">USA</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell ta-right">1060.57</div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="cell">JPY</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell">JAPAN</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell ta-right">9.35</div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="cell">EUR</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell">EURO</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell ta-right">1156.27</div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="cell">CNY</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell">CHINA</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell ta-right">148.4</div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="cell">AUD</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell">AUSTRALIA</div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="cell ta-right">782.79</div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //.scr-wrap -->
+                        </div>
+                    </div>
+                    <div class="pop-footer">
+                        <div class="row-btn">
+                            <button type="button" class="btn-blue fn-cls">SAVE</button>
+                            <button type="button" class="btn-gray fn-cls">CLOSE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //.rateSt-container-->
+
+            ======= >>>>>>> 9e204e8536689b57426d7cbed425a25d4f0e782f
+            <header class="header">
+                <div class="group cont-header">
+                    <h1 class="logo">
 
 				<a href="/" class="logo-a">
 
@@ -90,133 +689,133 @@
 				</a>
 
 			</h1>
-                <nav class="cf gnb">
-                    <ul class="menu dep-1">
-                        <li>
-                            <a href="" class="ic-reservation">예약</a>
-                            <ul class="dep-2">
-                                <li><a href="../reservation/reservationFit.html">예약 조건</a>
-                                </li>
-                                <li><a href="../reservation/reservationGroup.html">예약 그룹</a>
-                                </li>
-                                <li><a href="../reservation/assignStatus.html">할당 현황</a>
-                                </li>
-                                <li><a href="../reservation/roomBlock.html">블럭 룸</a>
-                                </li>
-                                <li><a href="../reservation/reservationList.html">예약 목록</a>
-                                </li>
-                                <li><a href="../reservation/roomInventory.html">객실 목록</a>
-                                </li>
-                                <li><a href="../reservation/rateSchedule.html">요금 일정</a>
-                                </li>
-                                <li><a href="../reservation/account.html">계정</a>
-                                </li>
-                                <li><a href="../reservation/mailList.html">메일 목록</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="" class="ic-front">프론트</a>
-                            <ul class="dep-2">
-                                <li><a href="../front/chkIn.html">체크인</a>
-                                </li>
-                                <li><a href="../front/inHouse.html">사내</a>
-                                </li>
-                                <li><a href="../front/departures.html">출발</a>
-                                </li>
-                                <li><a href="../front/roomStay.html">숙박</a>
-                                </li>
-                                <li><a href="../front/roomStatus.html">객실 현황</a>
-                                </li>
-                                <li><a href="../front/roomStatusList.html">객실 현황 목록</a>
-                                </li>
-                                <li><a href="../front/logBook.html">Log Book</a>
-                                </li>
-                                <li><a href="../front/guestProfile.html">투숙객 정보</a>
-                                </li>
-                                <li><a href="../front/complain.html">컴플레인</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="" class="ic-cash">캐셔링</a>
-                            <ul class="dep-2">
-                                <li><a href="../cashier/cashier.html">C/L 캐셔링</a>
-                                </li>
-                                <li><a href="../cashier/exchange.html">교환</a>
-                                </li>
-                                <li><a href="../cashier/cshDrawer.html">금전 출납</a>
-                                </li>
-                                <li><a href="../cashier/advDeposit.html">예치금</a>
-                                </li>
-                                <li><a href="../cashier/cshClose.html">현금출납계</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="" class="ic-cash">미수금</a>
-                            <ul class="dep-2">
-                                <li><a href="../cashier/accRec.html">미수금</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="" class="ic-housekeep">시설 관리</a>
-                            <ul class="dep-2">
-                                <li><a href="../inhouse/maidSchedule.html">청소 일정</a>
-                                </li>
-                                <li><a href="../inhouse/maidAssign.html">청소 배정</a>
-                                </li>
-                                <li><a href="../inhouse/roomCleaning.html">객실 청소</a>
-                                </li>
-                                <li><a href="../front/roomStatus.html">객실 현황</a>
-                                </li>
-                                <li><a href="../inhouse/report.html">도착 목록</a>
-                                </li>
-                                <li><a href="../inhouse/report.html">사내 목록</a>
-                                </li>
-                                <li><a href="../inhouse/report.html">출발 목록</a>
-                                </li>
-                                <li><a href="../inhouse/lostFound.html">분실물</a>
-                                </li>
-                                <li><a href="../inhouse/exbStatus.html">EX-B 현황</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="" class="ic-fnb">음식료품</a>
-                            <ul class="dep-2">
-                                <li><a href="../fnb/outlet.html">업장</a>
-                                </li>
-                                <li><a href="../fnb/menu.html">메뉴</a>
-                                </li>
-                                <li><a href="../fnb/inventory.html">목록</a>
-                                </li>
-                                <li><a href="../fnb/banquet.html">연회 목록</a>
-                                </li>
-                                <li><a href="../fnb/breakfast.html">아침식사</a>
-                                </li>
-                                <li><a href="../fnb/banquetCal.html">연회 일정</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="" class="ic-report">현황</a>
-                            <ul class="dep-2">
-                                <li><a href="../status/agency_day.html">판매채널 일별(결제)</a>
-                                    <li>
+                    <nav class="cf gnb">
+                        <ul class="menu dep-1">
+                            <li>
+                                <a href="" class="ic-reservation">예약</a>
+                                <ul class="dep-2">
+                                    <li><a href="../reservation/reservationFit.html">예약 조건</a>
+                                    </li>
+                                    <li><a href="../reservation/reservationGroup.html">예약 그룹</a>
+                                    </li>
+                                    <li><a href="../reservation/assignStatus.html">할당 현황</a>
+                                    </li>
+                                    <li><a href="../reservation/roomBlock.html">블럭 룸</a>
+                                    </li>
+                                    <li><a href="../reservation/reservationList.html">예약 목록</a>
+                                    </li>
+                                    <li><a href="../reservation/roomInventory.html">객실 목록</a>
+                                    </li>
+                                    <li><a href="../reservation/rateSchedule.html">요금 일정</a>
+                                    </li>
+                                    <li><a href="../reservation/account.html">계정</a>
+                                    </li>
+                                    <li><a href="../reservation/mailList.html">메일 목록</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" class="ic-front">프론트</a>
+                                <ul class="dep-2">
+                                    <li><a href="../front/chkIn.html">체크인</a>
+                                    </li>
+                                    <li><a href="../front/inHouse.html">사내</a>
+                                    </li>
+                                    <li><a href="../front/departures.html">출발</a>
+                                    </li>
+                                    <li><a href="../front/roomStay.html">숙박</a>
+                                    </li>
+                                    <li><a href="../front/roomStatus.html">객실 현황</a>
+                                    </li>
+                                    <li><a href="../front/roomStatusList.html">객실 현황 목록</a>
+                                    </li>
+                                    <li><a href="../front/logBook.html">Log Book</a>
+                                    </li>
+                                    <li><a href="../front/guestProfile.html">투숙객 정보</a>
+                                    </li>
+                                    <li><a href="../front/complain.html">컴플레인</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" class="ic-cash">캐셔링</a>
+                                <ul class="dep-2">
+                                    <li><a href="../cashier/cashier.html">C/L 캐셔링</a>
+                                    </li>
+                                    <li><a href="../cashier/exchange.html">교환</a>
+                                    </li>
+                                    <li><a href="../cashier/cshDrawer.html">금전 출납</a>
+                                    </li>
+                                    <li><a href="../cashier/advDeposit.html">예치금</a>
+                                    </li>
+                                    <li><a href="../cashier/cshClose.html">현금출납계</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" class="ic-cash">미수금</a>
+                                <ul class="dep-2">
+                                    <li><a href="../cashier/accRec.html">미수금</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" class="ic-housekeep">시설 관리</a>
+                                <ul class="dep-2">
+                                    <li><a href="../inhouse/maidSchedule.html">청소 일정</a>
+                                    </li>
+                                    <li><a href="../inhouse/maidAssign.html">청소 배정</a>
+                                    </li>
+                                    <li><a href="../inhouse/roomCleaning.html">객실 청소</a>
+                                    </li>
+                                    <li><a href="../front/roomStatus.html">객실 현황</a>
+                                    </li>
+                                    <li><a href="../inhouse/report.html">도착 목록</a>
+                                    </li>
+                                    <li><a href="../inhouse/report.html">사내 목록</a>
+                                    </li>
+                                    <li><a href="../inhouse/report.html">출발 목록</a>
+                                    </li>
+                                    <li><a href="../inhouse/lostFound.html">분실물</a>
+                                    </li>
+                                    <li><a href="../inhouse/exbStatus.html">EX-B 현황</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" class="ic-fnb">음식료품</a>
+                                <ul class="dep-2">
+                                    <li><a href="../fnb/outlet.html">업장</a>
+                                    </li>
+                                    <li><a href="../fnb/menu.html">메뉴</a>
+                                    </li>
+                                    <li><a href="../fnb/inventory.html">목록</a>
+                                    </li>
+                                    <li><a href="../fnb/banquet.html">연회 목록</a>
+                                    </li>
+                                    <li><a href="../fnb/breakfast.html">아침식사</a>
+                                    </li>
+                                    <li><a href="../fnb/banquetCal.html">연회 일정</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" class="ic-report">현황</a>
+                                <ul class="dep-2">
+                                    <li><a href="../status/agency_day.html">판매채널 일별(결제)</a>
                                         <li>
-                                            <a href=""></a>
                                             <li>
+                                                <a href=""></a>
                                                 <li>
-                                                    <a href=""></a>
                                                     <li>
+                                                        <a href=""></a>
                                                         <li>
-                                                            <a href=""></a>
                                                             <li>
-                                                                <li><a href="../status/rmLayout.html">객실현황</a>
-                                                                    <li>
-                                                                        <!-- <li>
+                                                                <a href=""></a>
+                                                                <li>
+                                                                    <li><a href="../status/rmLayout.html">객실현황</a>
+                                                                        <li>
+                                                                            <!-- <li>
 								<a href="">프론트</a>
 								<ul class="dep-3">
 									<li><a href="">판매채널 일별(결제)</a></li>
@@ -276,207 +875,270 @@
 									<li><a href="">기간별 수입 현황</a></li>
 								</ul>
 							</li> -->
-                            </ul>
-                            </li>
-                            <li>
-                                <a href="" class="ic-report">분석</a>
-                                <ul class="dep-2">
-                                    <li><a href="../analysis/dashboard.html">대시보드</a>
-                                    </li>
-                                    <li><a href="../analysis/overYearChart.html">전년대비 매출액 현황(월별)</a>
-                                    </li>
                                 </ul>
+                                </li>
+                                <li>
+                                    <a href="" class="ic-report">분석</a>
+                                    <ul class="dep-2">
+                                        <li><a href="../analysis/dashboard.html">대시보드</a>
+                                        </li>
+                                        <li><a href="../analysis/overYearChart.html">전년대비 매출액 현황(월별)</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="" class="ic-basic">기본</a>
+                                    <ul class="dep-2">
+                                        <li><a href="../basic/myInfo.html">내 정보</a>
+                                        </li>
+                                        <li><a href="../basic/commonCode.html">공통 코드</a>
+                                        </li>
+                                        <li><a href="../basic/propertyCode.html">속성 코드</a>
+                                        </li>
+                                        <li><a href="../basic/specialCode.html">특별 코드</a>
+                                        </li>
+                                        <li><a href="../basic/pkgSetting.html">패키지 설정</a>
+                                        </li>
+                                        <li><a href="../basic/calendar.html">달력</a>
+                                        </li>
+                                        <li><a href="../basic/mailTemplate.html">메일 템플릿</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="" class="ic-config">관리자</a>
+                                    <ul class="dep-2">
+                                        <li>
+                                            <a href="">시스템 관리</a>
+                                            <ul class="dep-3">
+                                                <li>
+                                                    <a href="">권한관리</a>
+                                                    <ul class="dep-4">
+                                                        <li><a href="../adm/role_code.html">권한 코드</a>
+                                                        </li>
+                                                        <li><a href="../adm/role_menu.html">메뉴 권한</a>
+                                                        </li>
+                                                        <li><a href="../adm/role_user.html">사용자 권한</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="">사용자 관리</a>
+                                                    <ul class="dep-4">
+                                                        <li><a href="../adm/user_regist.html">사용자 등록</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                        </ul>
+                    </nav>
+                    <nav class="user-bar">
+                        <span class="user">2018-12-13 관리자님 <i class="fa fa-user-circle"></i></span>
+                        <ul class="menu cf">
+                            <li class="item item-1"><a href="/"><i class="fa fa-home"></i> <span class="hidden">홈</span></a>
                             </li>
-                            <li>
-                                <a href="" class="ic-basic">기본</a>
-                                <ul class="dep-2">
-                                    <li><a href="../basic/myInfo.html">내 정보</a>
-                                    </li>
-                                    <li><a href="../basic/commonCode.html">공통 코드</a>
-                                    </li>
-                                    <li><a href="../basic/propertyCode.html">속성 코드</a>
-                                    </li>
-                                    <li><a href="../basic/specialCode.html">특별 코드</a>
-                                    </li>
-                                    <li><a href="../basic/pkgSetting.html">패키지 설정</a>
-                                    </li>
-                                    <li><a href="../basic/calendar.html">달력</a>
-                                    </li>
-                                    <li><a href="../basic/mailTemplate.html">메일 템플릿</a>
-                                    </li>
-                                </ul>
+                            <li class="item item-2"><a href=""><i class="fa fa-internet-explorer"></i> <span class="hidden">바로가기</span></a>
                             </li>
-                            <li>
-                                <a href="" class="ic-config">관리자</a>
-                                <ul class="dep-2">
-                                    <li>
-                                        <a href="">시스템 관리</a>
-                                        <ul class="dep-3">
-                                            <li>
-                                                <a href="">권한관리</a>
-                                                <ul class="dep-4">
-                                                    <li><a href="../adm/role_code.html">권한 코드</a>
-                                                    </li>
-                                                    <li><a href="../adm/role_menu.html">메뉴 권한</a>
-                                                    </li>
-                                                    <li><a href="../adm/role_user.html">사용자 권한</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="">사용자 관리</a>
-                                                <ul class="dep-4">
-                                                    <li><a href="../adm/user_regist.html">사용자 등록</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                            <li class="item item-2"><a href=""><i class="fa fa-sign-out"></i> <span class="hidden">로그아웃</span></a>
                             </li>
-                    </ul>
-                </nav>
-                <nav class="user-bar">
-                    <span class="user">2018-12-13 관리자님 <i class="fa fa-user-circle"></i></span>
+                            <li class="item item-1"><a href="javascript:;" onclick="popFn.show('.pop-profile')"><i class="fa fa-gears"></i> <span class="hidden">정보수정</span></a>
+                            </li>
+                        </ul>
+                        <div class="site-info">
+                            <!-- <span class="siteName">오션투유리조트속초설악비치호텔앤콘도</span> -->
+
+                            <select name="" id="" class="slt-site">
+                                <option value="">오션투유리조트속초설악비치호텔앤콘도</option>
+                                <option value="">연호리조트</option>
+                                <option value="">BS콘도도고온천호텔앤리조트</option>
+                                <option value="">라마다앙코르평택</option>
+                                <option value="">지리산남원중앙하이츠콘도</option>
+                            </select>
+
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <!--//.header-->
+
+            <aside class="sidebar left">
+                <h2 class="hidden">사이드 네비게이션</h2>
+                <div class="lnb">
+                    <a href="javascrtip:;" class="btna quick-plus">
+                        <img src="../../public/img/icon/quick/quickMenuPlus.png" alt="즐겨찾기 메뉴 추가">
+                    </a>
+                    <!-- 메뉴 없을 시 노출 -->
+                    <a href="javascript:;" class="btna quick-none">
+                        <img src="../../public/img/icon/quick/split.png" alt="즐겨찾기 메뉴 없음">
+                    </a>
                     <ul class="menu cf">
-                        <li class="item item-1"><a href="/"><i class="fa fa-home"></i> <span class="hidden">홈</span></a>
-                        </li>
-                        <li class="item item-2"><a href=""><i class="fa fa-internet-explorer"></i> <span class="hidden">바로가기</span></a>
-                        </li>
-                        <li class="item item-2"><a href=""><i class="fa fa-sign-out"></i> <span class="hidden">로그아웃</span></a>
-                        </li>
-                        <li class="item item-1"><a href="javascript:;" onclick="popFn.show('.pop-profile')"><i class="fa fa-gears"></i> <span class="hidden">정보수정</span></a>
-                        </li>
-                    </ul>
-                    <div class="site-info">
-                        <!-- <span class="siteName">오션투유리조트속초설악비치호텔앤콘도</span> -->
-
-                        <select name="" id="" class="slt-site">
-                            <option value="">오션투유리조트속초설악비치호텔앤콘도</option>
-                            <option value="">연호리조트</option>
-                            <option value="">BS콘도도고온천호텔앤리조트</option>
-                            <option value="">라마다앙코르평택</option>
-                            <option value="">지리산남원중앙하이츠콘도</option>
-                        </select>
-
-                    </div>
-                </nav>
-            </div>
-        </header>
-        <!--//.header-->
-
-        <aside class="sidebar left">
-            <h2 class="hidden">사이드 네비게이션</h2>
-            <div class="lnb">
-                <a href="javascrtip:;" class="btna quick-plus">
-                    <img src="../../public/img/icon/quick/quickMenuPlus.png" alt="즐겨찾기 메뉴 추가">
-                </a>
-                <!-- 메뉴 없을 시 노출 -->
-                <a href="javascript:;" class="btna quick-none">
-                    <img src="../../public/img/icon/quick/split.png" alt="즐겨찾기 메뉴 없음">
-                </a>
-                <ul class="menu cf">
-                    <!-- 메뉴 dep-1 카테고리별 이미지(캐셔링, 미수금 - front 이미지사용)-->
-                    <!-- <img src="../../public/img/icon/quick/reservation.png" alt="예약">
+                        <!-- 메뉴 dep-1 카테고리별 이미지(캐셔링, 미수금 - front 이미지사용)-->
+                        <!-- <img src="../../public/img/icon/quick/reservation.png" alt="예약">
 				<img src="../../public/img/icon/quick/front.png" alt="프론트">
 				<img src="../../public/img/icon/quick/housekeep.png" alt="시설관리">
 				<img src="../../public/img/icon/quick/fnb.png" alt="음식료품">
 				<img src="../../public/img/icon/quick/report.png" alt="보고서">
 				<img src="../../public/img/icon/quick/basic.png" alt="기본">
 				<img src="../../public/img/icon/quick/admin.png" alt="관리자"> -->
-                    <li class="item on">
-                        <a href="javascript:;">
-                            <img src="../../public/img/icon/quick/front.png" alt="프론트">
-                            <span class="lbl">프론트</span>
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="javascript:;">
-                            <img src="../../public/img/icon/quick/report.png" alt="보고서">
-                            <span class="lbl">전년대비 매출액 현황</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-        <!--//.sidebar.left-->
+                        <li class="item on">
+                            <a href="javascript:;">
+                                <img src="../../public/img/icon/quick/front.png" alt="프론트">
+                                <span class="lbl">프론트</span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:;">
+                                <img src="../../public/img/icon/quick/report.png" alt="보고서">
+                                <span class="lbl">전년대비 매출액 현황</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!--//.sidebar.left-->
 
 
-        <div class="cf contents exchange-contents">
+            <div class="cf contents exchange-contents">
 
-            <div class="row-top-btn">
-                <button type="button" class="btn-green" onclick="popFn.show('.')">환율설정</button>
-                <button type="button" class="btn-green">NEW</button>
-            </div>
+                <div class="row-top-btn">
+                    <button type="button" class="btn-green" onclick="popFn.show('.rateSt-container')">환율설정</button>
+                    <button type="button" class="btn-green" onclick="popFn.show('.exChgSv-container')">NEW</button>
+                </div>
 
-            <div class="cf row-h2">
-                <h2 class="page-title">교환</h2>
-                <button class="btn-default" onclick="window.open('../winpop/winpop_roomInventory.html', 'winpop', 'width=1800, height=900')">ROOM</button>
-                <button class="btn-default" onclick="window.open('../winpop/winpop_itemInventory.html', 'winpop', 'width=1800, height=900')">ITEM</button>
-                <button class="btn-default" onclick="window.open('../winpop/winpop_houseStatus.html', 'winpop', 'width=1000, height=800')">HOUSE</button>
-                <button class="btn-default" onclick="window.open('../winpop/winpop_trace.html', 'winpop', 'width=1800, height=900')">TRACE</button>
-            </div>
+                <div class="cf row-h2">
+                    <h2 class="page-title">교환</h2>
+                    <button class="btn-default" onclick="window.open('../winpop/winpop_roomInventory.html', 'winpop', 'width=1800, height=900')">ROOM</button>
+                    <button class="btn-default" onclick="window.open('../winpop/winpop_itemInventory.html', 'winpop', 'width=1800, height=900')">ITEM</button>
+                    <button class="btn-default" onclick="window.open('../winpop/winpop_houseStatus.html', 'winpop', 'width=1000, height=800')">HOUSE</button>
+                    <button class="btn-default" onclick="window.open('../winpop/winpop_trace.html', 'winpop', 'width=1800, height=900')">TRACE</button>
+                </div>
 
-            <div class="cf cont-container-f">
-                <div class="cont-property">
-                    <div class="grid-wrap">
-                        <div class="grid-contents">
-                            <table class="grid-tbl property-tbl">
-                                <colgroup>
-                                    <col style="width:125px">
-                                        <col style="width:285px">
-                                            <col style="width:125px">
-                                                <col>
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <th>
-                                            <div class="cell">날짜</div>
-                                        </th>
-                                        <td>
-                                            <div class="cell">
-                                                <span class="cal-box">
-
-												<input type="text" class="appe-reset inp-cal date-ui">
-
-												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
-                                                </span>
-                                                <span class="mg-">~</span>
-                                                <span class="cal-box">
+                <div class="cf cont-container-f">
+                    <div class="cont-property">
+                        <div class="grid-wrap">
+                            <div class="grid-contents">
+                                <table class="grid-tbl property-tbl">
+                                    <colgroup>
+                                        <col style="width:125px">
+                                            <col style="width:285px">
+                                                <col style="width:125px">
+                                                    <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                <div class="cell">날짜</div>
+                                            </th>
+                                            <td>
+                                                <div class="cell">
+                                                    <span class="cal-box">
 
 												<input type="text" class="appe-reset inp-cal date-ui">
 
 												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <th>
-                                            <div class="cell">게스트 이름</div>
-                                        </th>
-                                        <td>
-                                            <div class="cell">
-                                                <input type="text" class="form-input name">
-                                                <button type="button" class="btn-brown">SEARCH</button>
-                                                <button type="button" class="btn-brown">CLEAR</button>
-                                                <div class="pull-right">
-                                                    <button type="button" class="btn-gray btn-i"><span class="icon ic-excel"></span>Excel</button>
-                                                    <button type="button" class="btn-gray btn-i"><span class="icon ic-pdf"></span>PDF</button>
+                                                    </span>
+                                                    <span class="mg-">~</span>
+                                                    <span class="cal-box">
+
+												<input type="text" class="appe-reset inp-cal date-ui">
+
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                                    </span>
                                                 </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                            </td>
+                                            <th>
+                                                <div class="cell">게스트 이름</div>
+                                            </th>
+                                            <td>
+                                                <div class="cell">
+                                                    <input type="text" class="form-input name">
+                                                    <button type="button" class="btn-brown">SEARCH</button>
+                                                    <button type="button" class="btn-brown">CLEAR</button>
+                                                    <div class="pull-right">
+                                                        <button type="button" class="btn-gray btn-i"><span class="icon ic-excel"></span>Excel</button>
+                                                        <button type="button" class="btn-gray btn-i"><span class="icon ic-pdf"></span>PDF</button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- //.cont-property -->
+                    <!-- //.cont-property -->
 
-                <div class="cont-list">
-                    <div class="grid-wrap scr-wrap">
-                        <div class="grid-scrollable-x">
-                            <div class="grid-area grid-head">
-                                <div class="grid-scrollable">
+                    <div class="cont-list">
+                        <div class="grid-wrap scr-wrap">
+                            <div class="grid-scrollable-x">
+                                <div class="grid-area grid-head">
+                                    <div class="grid-scrollable">
+                                        <table class="grid-tbl">
+                                            <colgroup>
+                                                <col style="width:45px">
+                                                    <col style="width:150px">
+                                                        <col style="width:85px">
+                                                            <col style="width:150px">
+                                                                <col style="width:150px">
+                                                                    <col style="width:150px">
+                                                                        <col style="width:150px">
+                                                                            <col style="width:150px">
+                                                                                <col style="width:150px">
+                                                                                    <col style="width:150px">
+                                                                                        <col style="width:150px">
+                                                                                            <col style="width:116px">
+                                                                                                <col>
+                                            </colgroup>
+                                            <thead class="rowgroup">
+                                                <tr>
+                                                    <th>
+                                                        <div class="cell"></div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">교환 날짜</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">통화</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">환율</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">수령액</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">교환 금액</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">게스트</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">국적</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">여권 번호</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">인증서 번호</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">말</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">생성자</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell">생성날짜</div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="grid-area grid-contents">
                                     <table class="grid-tbl">
                                         <colgroup>
                                             <col style="width:45px">
@@ -493,122 +1155,59 @@
                                                                                         <col style="width:116px">
                                                                                             <col>
                                         </colgroup>
-                                        <thead class="rowgroup">
+                                        <tbody class="rowgroup">
                                             <tr>
-                                                <th>
+                                                <td>
                                                     <div class="cell"></div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">교환 날짜</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">통화</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">환율</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">수령액</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">교환 금액</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">게스트</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">국적</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">여권 번호</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">인증서 번호</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">말</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">생성자</div>
-                                                </th>
-                                                <th>
-                                                    <div class="cell">생성날짜</div>
-                                                </th>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell"></div>
+                                                </td>
                                             </tr>
-                                        </thead>
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
-                            <div class="grid-area grid-contents">
-                                <table class="grid-tbl">
-                                    <colgroup>
-                                        <col style="width:45px">
-                                            <col style="width:150px">
-                                                <col style="width:85px">
-                                                    <col style="width:150px">
-                                                        <col style="width:150px">
-                                                            <col style="width:150px">
-                                                                <col style="width:150px">
-                                                                    <col style="width:150px">
-                                                                        <col style="width:150px">
-                                                                            <col style="width:150px">
-                                                                                <col style="width:150px">
-                                                                                    <col style="width:116px">
-                                                                                        <col>
-                                    </colgroup>
-                                    <tbody class="rowgroup">
-                                        <tr>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                            <td>
-                                                <div class="cell"></div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
                         </div>
+                        <!-- //.grid-wrap -->
                     </div>
-                    <!-- //.grid-wrap -->
+                    <!-- //.cont-list -->
                 </div>
-                <!-- //.cont-list -->
             </div>
-        </div>
-        <!-- //.contents -->
+            <!-- //.contents -->
 
     </div>
 

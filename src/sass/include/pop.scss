@@ -954,7 +954,7 @@
 	}
 }
 
-/* 특별 요구사 */
+/* 특별 요구사항 */
 .spReq-container {
 	.pop-wrapper {
 		width: 500px;
@@ -1034,3 +1034,219 @@
 		}
 	}
 }
+
+/*
+ * 캐셔링
+ */
+/* 미수금 원장 지불 */
+.pop-container.ctLdpaym-container {
+	.pop-wrapper {
+        width: 850px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+            padding: 20px;
+            .popcont-container {
+                .grid-tbl {
+                    @include tbl-base;
+                    width: 100%;
+                    th, td {
+
+                    }
+                    th {
+                        .cell {
+                        }
+                    }
+                    td {
+                        .cell {
+                            .form-input {
+                                width: 210px;
+                                &.w-1 {
+                                    width: 100px;
+                                }
+                            }
+                            .form-select {
+                                &.method-1 {
+                                    width: 300px;
+                                }
+                                &.method-2 {
+                                    width: 200px;
+                                }
+                            }
+                            .textarea-etc {
+                                width: 100%;
+                                height: 160px;
+                            }
+                            
+                            .slt-box {
+                                //날짜 텍스트
+                                &.date-txt{
+                                    padding-left: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+
+/* 교환 저장 */
+.pop-container.exChgSv-container {
+	.pop-wrapper {
+        width: 800px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+            padding: 20px;
+            .popcont-container {
+                .grid-tbl {
+                    @include tbl-base;
+                    width: 100%;
+                    th, td {
+
+                    }
+                    th {
+                        .cell {
+                        }
+                    }
+                    td {
+                        .cell {
+                            .form-input, .form-select {
+                                width: 136px;
+                            }
+                            .textarea-etc {
+                                width: 100%;
+                                height: 52px;
+                            }
+                        }
+                    }
+                }
+            }
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+
+/* 게스트 설정 */
+.pop-container.gstSt-container {
+	.pop-wrapper {
+        width: 800px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+            padding: 20px;
+            .popcont-container {
+                .property-tbl {
+					@include tbl-base;
+                    th {
+                        border-left: 1px dashed #c0b5a6;
+                    }
+					td {
+						padding-right: 15px;
+						background: #fff;
+						.cell {
+							.form-input {
+                                width: 170px;
+							}
+							.cal-box {
+								width: 100%;
+							}
+                            //room
+                            &.rooms {
+                                width: 100%;
+                                text-align: right;
+                                .form-input {
+                                    float: left;
+                                    width: 90px;
+                                }
+                            }
+						}
+					}
+				}
+
+                .scr-wrap {
+                    margin-top: 10px;
+                    @include grid-scr-x(null, 100%, 0);
+                    td {
+                        text-align: center;
+                    }
+                }
+                .grid-bottom {
+                    @include grid-bottom-page;
+                }
+            }
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+
+/* 환율 설정 */
+.pop-container.rateSt-container {
+	.pop-wrapper {
+        width: 800px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+            padding: 20px;
+            .popcont-container {
+                .grid-tbl {
+                    @include tbl-base;
+                    width: 100%;
+                    th, td {
+
+                    }
+                    th {
+                        .cell {
+                        }
+                    }
+                    td {
+                        .cell {
+                            .form-input {
+                                width: 170px;
+                            }
+                        }
+                    }
+                }
+                
+                .scr-wrap {
+                    margin-top: 10px;
+                    @include grid-scr-x(null, 100%, 0);
+                    td {
+                        text-align: center;
+                    }
+                    .grid-area {
+                        &.grid-contents {
+                            height: 420px;
+                        }
+                    }
+                }
+            }
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+
+/*
+ * 시설 관리
+ */
+
+
+
+
+
+
