@@ -11,6 +11,7 @@ _media/
 _tmp/
 img/
 dist/
+gulpfile.js
 .sass-cache/
 
 #fontFile
