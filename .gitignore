@@ -2,7 +2,6 @@ y.pub
 y
 
 #etc
-node_modules
 _bak/
 _document/
 _draft/
@@ -11,7 +10,6 @@ _media/
 _tmp/
 img/
 dist/
-gulpfile.js
 .sass-cache/
 
 #fontFile
@@ -78,3 +76,4 @@ Network Trash Folder
 Temporary Items
 .apdisk
 node_modules
+gulpfile.js
