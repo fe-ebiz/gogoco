@@ -10,6 +10,7 @@ _work/
 _media/
 _tmp/
 img/
+dist/
 .sass-cache/
 
 #fontFile
