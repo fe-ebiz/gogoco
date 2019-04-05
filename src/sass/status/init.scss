@@ -95,14 +95,22 @@
 				color: #666;
 				font-weight: 700;
 				word-break: keep-all;
-				p.row {
-					line-height: 2;
+				.row {
+					position: relative;
+					line-height: 1.6;
+				}
+				.row.dot {
+					padding-left: 10px;
+					&.hyp:after {
+						content: "-";
+						@include position(absolute, 0px, 0px);
+					}
 				}
 			}
 		}
 	}
 	.side-contents.cont-logbook {
-
+		width: 290px;
 	}
 	&.unfold {
 		.side-contents.cont-logbook {
@@ -113,5 +121,32 @@
 
 /* 판매채널 일별 */
 .agencyday-contents {
-	
+	.cont-property {
+		.property-tbl {
+			@include tbl-style-1;
+			td {
+				.cell {
+					.rdo-box {
+						padding: 0 8px;
+						label {
+							margin-right: 5px;
+						}
+					}
+					.cal-box {
+						.inp-cal {
+							width: 100px;
+						}
+					}
+					.btn-gray {
+						.prev, .next {
+							position: relative;
+							top: -1px;
+							color: #6E7A86;
+							padding: 0 5px;
+						}
+					}
+				}
+			}
+		}
+	}
 }

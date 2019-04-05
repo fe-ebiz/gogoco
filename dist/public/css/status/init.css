@@ -38,8 +38,55 @@
 
 .sidebar.right-reservation .side-contents .box-contents .cont-body { padding: 10px 8px; border: 1px solid #c0b5a6; border-top: none; color: #666; font-weight: 700; word-break: keep-all; }
 
-.sidebar.right-reservation .side-contents .box-contents .cont-body p.row { line-height: 2; }
+.sidebar.right-reservation .side-contents .box-contents .cont-body .row { position: relative; line-height: 1.6; }
+
+.sidebar.right-reservation .side-contents .box-contents .cont-body .row.dot { padding-left: 10px; }
+
+.sidebar.right-reservation .side-contents .box-contents .cont-body .row.dot.hyp:after { content: "-"; position: absolute; top: 0px; left: 0px; }
+
+.sidebar.right-reservation .side-contents.cont-logbook { width: 290px; }
 
 .sidebar.right-reservation.unfold .side-contents.cont-logbook { width: 600px; }
 
 /* 판매채널 일별 */
+.agencyday-contents .cont-property .property-tbl { width: 100%; border: 1px solid #c0b5a6; border-bottom: none; table-layout: fixed; }
+
+.agencyday-contents .cont-property .property-tbl th, .agencyday-contents .cont-property .property-tbl td { height: 28px; border-bottom: 1px solid #c0b5a6; background: #f4f1ee; color: #666; font-size: 12px; }
+
+.agencyday-contents .cont-property .property-tbl th .cell, .agencyday-contents .cont-property .property-tbl td .cell { position: relative; padding: 3px 7px; }
+
+.agencyday-contents .cont-property .property-tbl th .cell::before, .agencyday-contents .cont-property .property-tbl th .cell::after, .agencyday-contents .cont-property .property-tbl td .cell::before, .agencyday-contents .cont-property .property-tbl td .cell::after { content: ''; display: table; }
+
+.agencyday-contents .cont-property .property-tbl th .cell::after, .agencyday-contents .cont-property .property-tbl td .cell::after { clear: both; }
+
+.ie8 .agencyday-contents .cont-property .property-tbl th .cell, .ie8 .agencyday-contents .cont-property .property-tbl td .cell { zoom: 1; }
+
+.agencyday-contents .cont-property .property-tbl th .cell.pd-0, .agencyday-contents .cont-property .property-tbl td .cell.pd-0 { padding-top: 0; padding-bottom: 0px; }
+
+.agencyday-contents .cont-property .property-tbl th .cell.necess, .agencyday-contents .cont-property .property-tbl td .cell.necess { background: url("../../img/tick-small-red.png") no-repeat 100% 58%; }
+
+.agencyday-contents .cont-property .property-tbl th { height: 33px; border-left: 1px dashed #c0b5a6; overflow: visible; color: #444; text-align: center; }
+
+.agencyday-contents .cont-property .property-tbl th .cell { font-weight: 700; }
+
+.agencyday-contents .cont-property .property-tbl th .cell.order-ui { cursor: pointer; }
+
+.agencyday-contents .cont-property .property-tbl th .cell.order-ui:after { content: "▼"; position: relative; display: none; margin-left: 2px; font-size: 10px; color: #73787D; }
+
+.agencyday-contents .cont-property .property-tbl th .cell.order-ui:hover:after { display: inline; }
+
+.agencyday-contents .cont-property .property-tbl th .cell.order-ui.ascending:after { content: "▲"; }
+
+.agencyday-contents .cont-property .property-tbl td { border-left: 1px dashed #c0b5a6; }
+
+.agencyday-contents .cont-property .property-tbl td .cell .chk-box input, .agencyday-contents .cont-property .property-tbl td .cell .rdo-box input { margin-right: 3px; }
+
+.agencyday-contents .cont-property .property-tbl td .cell .chk-box + .chk-box, .agencyday-contents .cont-property .property-tbl td .cell .chk-box + .rdo-box, .agencyday-contents .cont-property .property-tbl td .cell .rdo-box + .chk-box, .agencyday-contents .cont-property .property-tbl td .cell .rdo-box + .rdo-box { margin-left: 5px; }
+
+.agencyday-contents .cont-property .property-tbl td .cell .rdo-box { padding: 0 8px; }
+
+.agencyday-contents .cont-property .property-tbl td .cell .rdo-box label { margin-right: 5px; }
+
+.agencyday-contents .cont-property .property-tbl td .cell .cal-box .inp-cal { width: 100px; }
+
+.agencyday-contents .cont-property .property-tbl td .cell .btn-gray .prev, .agencyday-contents .cont-property .property-tbl td .cell .btn-gray .next { position: relative; top: -1px; color: #6E7A86; padding: 0 5px; }

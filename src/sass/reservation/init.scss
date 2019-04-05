@@ -95,14 +95,22 @@
 				color: #666;
 				font-weight: 700;
 				word-break: keep-all;
-				p.row {
-					line-height: 2;
+				.row {
+					position: relative;
+					line-height: 1.6;
+				}
+				.row.dot {
+					padding-left: 10px;
+					&.hyp:after {
+						content: "-";
+						@include position(absolute, 0px, 0px);
+					}
 				}
 			}
 		}
 	}
 	.side-contents.cont-logbook {
-
+		width: 290px;
 	}
 	&.unfold {
 		.side-contents.cont-logbook {

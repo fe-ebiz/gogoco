@@ -38,7 +38,13 @@
 
 .sidebar.right-reservation .side-contents .box-contents .cont-body { padding: 10px 8px; border: 1px solid #c0b5a6; border-top: none; color: #666; font-weight: 700; word-break: keep-all; }
 
-.sidebar.right-reservation .side-contents .box-contents .cont-body p.row { line-height: 2; }
+.sidebar.right-reservation .side-contents .box-contents .cont-body .row { position: relative; line-height: 1.6; }
+
+.sidebar.right-reservation .side-contents .box-contents .cont-body .row.dot { padding-left: 10px; }
+
+.sidebar.right-reservation .side-contents .box-contents .cont-body .row.dot.hyp:after { content: "-"; position: absolute; top: 0px; left: 0px; }
+
+.sidebar.right-reservation .side-contents.cont-logbook { width: 290px; }
 
 .sidebar.right-reservation.unfold .side-contents.cont-logbook { width: 600px; }
 
