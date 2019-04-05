@@ -148,5 +148,28 @@
 				}
 			}
 		}
+	} // cont-property
+	.cont-list {
+		margin-top: 10px;
+		.grid-wrap {
+			@include grid-scr-x(1850px, 100%, 4px);
+			.grid-tbl {
+				.ie8 & {
+					width: 1850px;
+				}
+				th, td {
+					text-align: center;
+					.cell { }
+				}
+				td:first-child {
+					.cell {
+						line-height: 1;
+					}
+				}
+			}
+			.grid-area.grid-contents {
+				height: 300px;
+			}
+		}
 	}
 }
