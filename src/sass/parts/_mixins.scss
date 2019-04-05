@@ -646,7 +646,7 @@ $btn-lh: 1.5;
 // 테이블 - 스타일1 property-tbl 스타일
 // th, td {background: $bg-tblBase;}
 // th {border-left: 1px solid #dashed $bd-c;}
-@mixin tbl-style-1($bd-c: $bdg-tblBase) {
+@mixin tbl-style-1($bd-c: $bdg-tblBase, $bg: $bg-tblBase) {
 	width: 100%;
 	border: 1px solid $bd-c;
 	border-bottom: none;
@@ -655,7 +655,7 @@ $btn-lh: 1.5;
 		// min-height: 39px;
 		height: 28px;
 		border-bottom: 1px solid $bd-c;
-		background: $bg-tblBase;
+		background: $bg;
 		color: #666;
 		font-size: 12px;
 		.cell {
