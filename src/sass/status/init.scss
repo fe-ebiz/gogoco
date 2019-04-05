@@ -148,5 +148,86 @@
 				}
 			}
 		}
-	}
+	} // cont-property
+	.cont-list {
+		margin-top: 10px;
+		.grid-wrap {
+			@include grid-scr-x(1850px, 100%, 4px);
+			.grid-tbl {
+				.ie8 & {
+					width: 1850px;
+				}
+				th, td {
+					text-align: center;
+					.cell { }
+				}
+				td:first-child {
+					.cell {
+						line-height: 1;
+					}
+				}
+			}
+			.grid-area.grid-contents {
+				height: 300px;
+			}
+		}
+	} // cont-list
+	.cont-market {
+		margin-top: 10px;
+		.tab-list {
+			margin-top: 15px;
+			> * {
+				position: relative;
+				float: left;
+				color: #444;
+			}
+			.tab {
+				display: inline-block;
+				padding: 5px 12px;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				background: #f7f7f7;
+				border: 1px solid #c5c5c5;
+				font-size: 12px;
+				border-bottom-color: #9f9f9f;
+				& + .tab {
+					margin-left: 2px;
+				}
+				&.on {
+					z-index: 1;
+					background: #fff;
+					border-color: #9f9f9f;
+					border-bottom-color: #fff;
+				}
+			}
+		}
+		.item-list {
+			border-top: 1px solid #9f9f9f;
+			padding-top: 10px;
+			margin-top: -1px;
+			.item {
+				display: none;
+				&.on {
+					display: block;
+				}
+				.grid-wrap {
+					@include grid-scr-x(null, 100%, 4px);
+					.grid-tbl {
+						th, td {
+							text-align: center;
+							.cell { }
+						}
+						td:first-child {
+							.cell {
+								line-height: 1;
+							}
+						}
+					}
+					.grid-area.grid-contents {
+						height: 300px;
+					}
+				}
+			}
+		}
+	} // cont-market
 }

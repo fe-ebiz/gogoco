@@ -1245,6 +1245,172 @@
  * 시설 관리
  */
 
+/* 청소 층 배정 */
+.pop-container.maidFlSt-container {
+	.pop-wrapper {
+        width: 850px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+            padding: 20px;
+            .popcont-container {
+                .pop-cont-date {
+                    margin-top: 5px;
+                    font-size: 15px; 
+                    font-weight: bold;
+                }
+                
+                .scr-wrap {
+                    margin-top: 5px;
+                    @include grid-scr-x(null, 100%, 0);
+                    td {
+                        text-align: center;
+                    }
+                    .grid-area {
+                        &.grid-contents {
+                            height: 470px;
+                        }
+                    }
+                }
+            }
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+
+/* 분실물 */
+.pop-container.lstFund-container {
+	.pop-wrapper {
+        width: 600px;
+		.pop-header {
+			@include pop-header-base;
+		}
+
+        .pop-contents {
+            padding: 20px 20px 0;
+
+            .tab-list {
+                > * {
+                    position: relative;
+                    float: left;
+                    color: #444;
+                }
+                .tab {
+                    display: inline-block;
+                    padding: 5px 12px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    background: #f7f7f7;
+                    border: 1px solid #c5c5c5;
+                    font-size: 12px;
+                    border-bottom-color: #9f9f9f;
+                    cursor: pointer;
+                    & + .tab {
+                        left: -1px;
+                    }
+                    &.on {
+                        z-index: 1;
+                        background: #fff;
+                        border-color: #9f9f9f;
+                        border-bottom-color: #fff;
+                    }
+                    .plus {
+                        vertical-align: middle;
+                    }
+                }
+                label {
+                    @include lbl;
+                    top: 2px;
+                    margin-left: 15px;
+                }
+            }
+        }
+        
+
+        .item-list {
+            //height: 100%;
+            .common {
+                display: none;
+                padding: 0 20px 20px;
+                background: #fff;
+                &.on {
+                    display: block;
+                }
+                .popcont-container {
+                    margin-top: -1px;
+                    padding: 5px 0 10px;
+                    border-top: 1px solid #a9a9a9;
+                }
+
+                &.form-container {
+                    .grid-tbl {
+                        @include tbl-base;
+                        width: 100%;
+                        th, td {
+
+                        }
+                        th {
+                            .cell {
+                            }
+                        }
+                        td {
+                            .cell {
+                                .form-input {
+                                    width: 210px;
+                                    &.lost {
+                                        width: 310px;
+                                    }
+                                }
+                                .textarea-etc {
+                                    width: 100%;
+                                    height: 52px;
+                                    &.notice {
+                                        height: 130px;
+                                    }
+                                }
+                                .cal-box {
+                                    .inp-cal {
+                                        width: 110px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.history-container {
+                    .scr-wrap {
+                        @include grid-scr-x(880px, 100%, 0 0 4px 4px);
+                        .grid-area {
+                            &.grid-contents {
+                                height: 262px;
+                                td {
+                                    padding: 20px 0;
+                                    background: #f4f1ee;
+                                }
+                            }
+                        }
+                    }
+                    .grid-bottom {
+                        @include grid-bottom-page;
+                        .count {
+                            em {
+                                color: $fg-orange-2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
 
 
 
