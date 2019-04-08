@@ -508,7 +508,7 @@
         }
     }
 	.cont-list {
-		.grid-container {//($l-wth: 180px, $scr-wth: 580px, $wth: 100%, $bd-r: null, $bd-c: $bor-gray-table)
+		.grid-container {
 			@include grid-scr-x2r(80px, 3000px, 100%, 4px);
 			.scr-wrap {
 				.grid-tbl {
