@@ -1244,7 +1244,6 @@
 /*
  * 시설 관리
  */
-
 /* 청소 층 배정 */
 .pop-container.maidFlSt-container {
 	.pop-wrapper {
@@ -1412,7 +1411,234 @@
 	}
 }
 
+/*
+ * 음식료품
+ */
+/* 예약확인 상세 */
+.pop-container.rsvConfmt-container {
+	.pop-wrapper {
+        width: 850px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+			padding: 20px;
+            
+            .tab-list {
+                > * {
+                    position: relative;
+                    float: left;
+                    color: #444;
+                }
+                .tab {
+                    display: inline-block;
+                    padding: 5px 12px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    background: #f7f7f7;
+                    border: 1px solid #c5c5c5;
+                    font-size: 12px;
+                    border-bottom-color: #9f9f9f;
+                    cursor: pointer;
+                    & + .tab {
+                        left: -1px;
+                    }
+                    &.on {
+                        z-index: 1;
+                        background: #fff;
+                        border-color: #9f9f9f;
+                        border-bottom-color: #fff;
+                    }
+                    .plus {
+                        vertical-align: middle;
+                    }
+                }
+                label {
+                    @include lbl;
+                    top: 2px;
+                    margin-left: 15px;
+                }
+            }
+            
+            .item-list {
+                margin-top: -1px;
+                padding: 10px 0 10px;
+                border-top: 1px solid #a9a9a9;
+                
+                .common {
+                    display: none;
+                    @include bx;
+                    background: #f0f0f0;
+                    padding: 10px 15px;
+                    border-radius: 4px;
+                    &.on {
+                        display: block;
+                    }
+
+                    &.infomation-container {
+                        .cont-sub-tit {
+                            padding-bottom: 5px;
+                            font-size: 13px;
+                        }
+                        .grid-tbl {
+                            @include tbl-base;
+                            td + th {
+                                border-left: 1px dashed #c0b5a6;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+/* 아침식사(조식) 상세 */
+.pop-container.bkfastDtil-container {
+	.pop-wrapper {
+        width: 1500px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+			padding: 20px;
+            .cont-property {
+                .property-tbl {
+                    @include tbl-style-1;
+                    .cell {
+                        .pull-right {
+                            padding-right: 10px;
+                        }
+                    }
+                }
+            }
+            .cont-area {
+                margin-top: 13px;
+                .grid-toolbar {
+                    @include bx;
+                    @include gray-gradient;
+                    width: 100%;
+                    border: 1px solid $bor-gray-table;
+                    border-top-left-radius: 4px;
+                    border-top-right-radius: 4px;
+                    padding: 4px;
+                    margin-bottom: -1px;
+                    p {
+                        font-size: 12px;
+                    }
+                }
+                .grid-wrap {
+                    @include grid-scr-x(null, 100%, 4px 4px 0 0);
+                    .grid-area.grid-contents {
+                        background: #fff;
+                        height: 500px;
+                    }
+                    .grid-tbl {
+                        th, td {
+                            text-align: center;
+                        }
+                        th {
+                            .cell {
+                                text-overflow: inherit;
+                            }
+                        }
+                        td {
+                            .cell {
+                                button.action {
+                                    @include btn-pd-lr;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
 
 
+
+
+
+
+
+
+
+
+
+
+/*
+ * 관리자
+ */
+/* 사용자 관리등록 상세 */
+.pop-container.userMgmRegt-container {
+	.pop-wrapper {
+        width: 950px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+			padding: 20px;
+            .grid-area {
+                & + .grid-area {
+                    margin-top: 5px;
+                }
+                .grid-tbl {
+                    @include tbl-base;
+                    td + th {
+                        border-left: 1px dashed #c0b5a6;
+                    }
+                    td {
+                        .cell {
+                            .form-input {
+                                &.inId {
+                                    width: 110px;
+                                }
+                                &.reg {
+                                    width: 70px;
+                                }
+                                &.email {
+                                    width: 300px;
+                                }
+                                &.telNum {
+                                    width: 40px;
+                                    &.last {
+                                        width: 50px;
+                                    }
+                                }
+                                &.addr-1 {
+                                    width: 60px;
+                                }
+                                &.addr-2 {
+                                    width: 310px;
+                                }
+                            }
+                            .form-select {
+                                &.stCode {
+                                    width: 110px;
+                                }
+                                &.propty {
+                                    width: 150px;
+                                }
+                                &.telNum {
+                                    width: 50px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
 
 

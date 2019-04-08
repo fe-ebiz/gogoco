@@ -501,18 +501,33 @@
 
 /* 청소날짜상태 */
 .wpop-contents.maidSt-contents {
+    min-width: 1600px;
+    width: 100%;
     padding: 20px;
     .cont-property {
 		.property-tbl {
 			@include tbl-style-1;
         }
     }
-	.cont-list {
+	.cont-area {
 		.grid-container {
-			@include grid-scr-x2r(80px, 3000px, 100%, 4px);
+			@include grid-scr-x2r(80px, 5000px, 100%, 4px);
+            .grid-area {
+                &.grid-contents {
+                    height: 350px;
+                }
+                .grid-tbl {
+                    th {
+                        .cell {
+                            text-overflow: inherit;
+                        }
+                    }
+                }
+            }
 			.scr-wrap {
 				.grid-tbl {
 					th {
+                        min-width: 50px;
 						&.sat {
 							color: blue;
 						}
@@ -524,6 +539,5 @@
 			}
 		}
 	}
-    
 }
 

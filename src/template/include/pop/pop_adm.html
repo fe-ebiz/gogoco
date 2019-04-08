@@ -1,0 +1,216 @@
+<!-- 사용자 관리등록 팝업-->
+<div class="pop-container userMgmRegt-container">
+	<div class="bg-back"></div>
+
+	<div class="pop-wrapper">
+		<div class="pop-header">
+			<h2>사용자 관리등록</h2>
+			<span class="a-i-x i-x fn-cls"></span>
+		</div>
+		<div class="cf pop-contents">
+			<div class="popcont-container">
+                <div class="grid-area grid-area-1">
+                    <div class="grid-contents">
+                        <table class="grid-tbl">
+                            <colgroup>
+                                <col style="width: 90px">
+                                <col style="width: 364px">
+                                <col style="width: 90px">
+                                <col style="width: 364px">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><div class="cell necess">아이디</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <input type="text" class="form-input inId">
+                                        </div>
+                                    </td>
+                                    <th><div class="cell necess">비밀번호</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <input type="password" class="form-input">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell necess">이름</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <input type="text" class="form-input">
+                                        </div>
+                                    </td>
+                                    <th><div class="cell necess">이름(영문)</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <input type="text" class="form-input">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell necess">상태코드</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <select name="" id="" class="form-select gray stCode">
+                                                <option value="">전체</option>
+                                                <option value="">1. 직원</option>
+                                                <option value="">2. 계약직</option>
+                                                <option value="">3. 퇴사자</option>
+                                                <option value="">4. 메이드</option>
+                                                <option value="">5. 기타사용자</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <th><div class="cell necess">Property</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <select name="" id="" class="form-select gray propty">
+                                                <option value="">Ramada Pt</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="grid-area grid-area-2">
+                    <div class="grid-contents">
+                        <table class="grid-tbl">
+                            <colgroup>
+                                <col style="width: 90px">
+                                <col style="width: 364px">
+                                <col style="width: 90px">
+                                <col style="width: 364px">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><div class="cell">주민등록번호</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <input type="text" class="form-input reg" disabled>
+                                            <span>-</span>
+                                            <input type="text" class="form-input reg" disabled>
+                                        </div>
+                                    </td>
+                                    <th><div class="cell">E-Mail</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <input type="text" class="form-input email">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">휴대전화/내선</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <select name="" id="" class="form-select gray telNum">
+                                                <option value=""></option>
+                                                <option value="">010</option>
+                                                <option value="">011</option>
+                                                <option value="">016</option>
+                                            </select>
+                                            <input type="text" class="form-input telNum">
+                                            <input type="text" class="form-input telNum">
+                                            <span>/</span>
+                                            <input type="text" class="form-input telNum last">
+                                        </div>
+                                    </td>
+                                    <th><div class="cell">비상연락처</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <select name="" id="" class="form-select gray telNum">
+                                                <option value=""></option>
+                                                <option value="">010</option>
+                                                <option value="">011</option>
+                                                <option value="">016</option>
+                                            </select>
+                                            <input type="text" class="form-input telNum">
+                                            <input type="text" class="form-input telNum">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">주소</div></th>
+                                    <td colspan="3">
+                                        <div class="cell">
+                                            <input type="text" class="form-input addr-1" readonly>
+                                            <button type="button" class="btn-gray">주소검색</button>
+                                            <input type="text" class="form-input addr-2" readonly>
+                                            <input type="text" class="form-input addr-2">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">사진</div></th>
+                                    <td colspan="3">
+                                        <div class="cell">
+                                            <input type="file">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<!-- //.pop-contents-->
+		<div class="pop-footer">
+			<div class="row-btn">
+				<button type="button" class="btn-blue fn-cls">SAVE</button>
+				<button type="button" class="btn-red fn-cls" disabled>DELETE</button>
+				<button type="button" class="btn-gray fn-cls">CLOSE</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //.userMgmRegt-container -->
+
+<!-- aaaaaa 팝업-->
+<div class="pop-container aaaaaa-container">
+	<div class="bg-back"></div>
+
+	<div class="pop-wrapper">
+		<div class="pop-header">
+			<h2>aaaaaa</h2>
+			<span class="a-i-x i-x fn-cls"></span>
+		</div>
+		<div class="cf pop-contents">
+			<div class="popcont-container">
+                
+			</div>
+		</div>
+		<!-- //.pop-contents-->
+		<div class="pop-footer">
+			<div class="row-btn">
+				<button type="button" class="btn-gray fn-cls">CLOSE</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //.aaaaaa-container -->
+
+<!-- aaaaaa 팝업-->
+<div class="pop-container aaaaaa-container">
+	<div class="bg-back"></div>
+
+	<div class="pop-wrapper">
+		<div class="pop-header">
+			<h2>aaaaaa</h2>
+			<span class="a-i-x i-x fn-cls"></span>
+		</div>
+		<div class="cf pop-contents">
+			<div class="popcont-container">
+                
+			</div>
+		</div>
+		<!-- //.pop-contents-->
+		<div class="pop-footer">
+			<div class="row-btn">
+				<button type="button" class="btn-gray fn-cls">CLOSE</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //.aaaaaa-container -->
