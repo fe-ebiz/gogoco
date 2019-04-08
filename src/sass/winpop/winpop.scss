@@ -498,3 +498,15 @@
 
 	}
 }
+
+/* 청소날짜상태 */
+.wpop-contents.maidSt-contents {
+    padding: 20px;
+    .cont-property {
+		.property-tbl {
+			@include tbl-style-1;
+        }
+    }
+    
+}
+
