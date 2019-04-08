@@ -167,50 +167,144 @@
 </div>
 <!-- //.userMgmRegt-container -->
 
-<!-- aaaaaa 팝업-->
-<div class="pop-container aaaaaa-container">
+<!-- 권한코드 등록 팝업-->
+<div class="pop-container authCodeRegt-container">
 	<div class="bg-back"></div>
 
 	<div class="pop-wrapper">
 		<div class="pop-header">
-			<h2>aaaaaa</h2>
+			<h2>권한코드 등록</h2>
 			<span class="a-i-x i-x fn-cls"></span>
 		</div>
 		<div class="cf pop-contents">
 			<div class="popcont-container">
-                
+                <div class="grid-area">
+                    <div class="grid-contents">
+                        <table class="grid-tbl">
+                            <colgroup>
+                                <col style="width: 82px">
+                                <col style="width: *">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><div class="cell">권한코드</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <input type="text" class="form-input" placeholder="권한코드">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">권한명</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <input type="text" class="form-input" placeholder="권한명">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">설명</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <textarea name="" id="" cols="30" rows="10" class="textarea-etc" placeholder="설명"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">권한</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <input type="text" class="form-input codeNum" value="0">
+                                            <span>비트 연산 2진수 입력</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 			</div>
 		</div>
 		<!-- //.pop-contents-->
 		<div class="pop-footer">
 			<div class="row-btn">
+				<button type="button" class="btn-blue fn-cls">SAVE</button>
+				<button type="button" class="btn-red fn-cls">DELETE</button>
 				<button type="button" class="btn-gray fn-cls">CLOSE</button>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- //.aaaaaa-container -->
+<!-- //.authCodeRegt-container -->
 
-<!-- aaaaaa 팝업-->
-<div class="pop-container aaaaaa-container">
+<!-- 사용자권한 등록 팝업-->
+<div class="pop-container userCodeRegt-container" style="display: block">
 	<div class="bg-back"></div>
 
 	<div class="pop-wrapper">
 		<div class="pop-header">
-			<h2>aaaaaa</h2>
+			<h2>사용자권한 등록</h2>
 			<span class="a-i-x i-x fn-cls"></span>
 		</div>
 		<div class="cf pop-contents">
 			<div class="popcont-container">
-                
+                <div class="grid-area">
+                    <div class="grid-contents">
+                        <table class="grid-tbl">
+                            <colgroup>
+                                <col style="width: 120px">
+                                <col style="width: 180px">
+                                <col style="width: 120px">
+                                <col style="width: 180px">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><div class="cell">권한</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <input type="text" class="form-input" value="업무관리자" disabled>
+                                        </div>
+                                    </td>
+                                    <th><div class="cell">Property</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <select name="" id="" class="form-select gray">
+                                                <option value="">Ramada Pt</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">사용자</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <select name="" id="" class="form-select gray">
+                                                <option value="">송진아</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <th><div class="cell">아이디</div></th>
+                                    <td><div class="cell">송진아</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="btn-box">
+                        <button type="button" class="btn-gray prev"><span>이전</span></button> 
+                        <span class="txt-num">1 / 4</span>
+                        <button type="button" class="btn-gray next"><span>다음</span></button>
+                    </div>
+                </div>
 			</div>
 		</div>
 		<!-- //.pop-contents-->
 		<div class="pop-footer">
 			<div class="row-btn">
+				<button type="button" class="btn-blue fn-cls">SAVE</button>
+				<button type="button" class="btn-red fn-cls">DELETE</button>
 				<button type="button" class="btn-gray fn-cls">CLOSE</button>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- //.aaaaaa-container -->
+<!-- //.userCodeRegt-container -->

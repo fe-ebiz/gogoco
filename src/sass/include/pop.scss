@@ -1576,7 +1576,7 @@
 /*
  * 관리자
  */
-/* 사용자 관리등록 상세 */
+/* 사용자 관리등록 */
 .pop-container.userMgmRegt-container {
 	.pop-wrapper {
         width: 950px;
@@ -1634,6 +1634,61 @@
                     }
                 }
             }
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+/* 권한코드 등록 */
+.pop-container.authCodeRegt-container {
+	.pop-wrapper {
+        width: 640px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+			padding: 20px;
+            .grid-tbl {
+                @include tbl-base;
+                td {
+                    .cell {
+                        .form-input, .textarea-etc {
+                            width: 210px;
+                            &.codeNum {
+                                width: 110px;
+                            }
+                        }
+                    }
+                }
+            }
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+/* 사용자권한 등록 */
+.pop-container.userCodeRegt-container {
+	.pop-wrapper {
+        width: 640px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+			padding: 20px;
+            .grid-tbl {
+                @include tbl-base;
+            }
+            .btn-box {
+                margin: 12px auto 0; 
+                text-align: center;
+                .txt-num {
+                    display: inline-block;
+                    padding: 0 5px;
+                    font-size: 12px;
+                }
+             }
 		}
 		.pop-footer {
 			@include pop-footer-base;
