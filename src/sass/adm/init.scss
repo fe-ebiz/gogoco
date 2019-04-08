@@ -148,6 +148,28 @@
 
 /* 사용자권한 */
 .roleUser-contents {
+	.cont-property {
+        .property-tbl {
+            @include tbl-style-1;
+            td {
+                .cell {
+					.form-input {
+						&.option {
+							width: 150px;
+						}
+					}
+                    .form-select { 
+						&.option {
+							width: 100px;
+						}
+					}
+                    button {
+                        letter-spacing: 0;
+                    }
+                }
+            }
+        }
+    }
 	.split[class*=cont-] {
 		@include float;
 		box-sizing: border-box;

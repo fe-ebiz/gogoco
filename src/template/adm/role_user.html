@@ -9,11 +9,48 @@
 
 	<div class="cf contents roleUser-contents">
 
+		<div class="row-top-btn">
+			<button type="button" class="btn-red" onclick="popFn.show('.userMgmRegt-container')">새로만들기</button>
+			<button type="button" class="btn-red">새로고침</button>
+		</div>
+		
 		@@include('../include/_row_h2.html', {
 			"page-title": "사용자권한"
 		})
 
 		<div class="cf cont-container-f">
+			<div class="cont-property">
+				<div class="grid-wrap">
+					<div class="grid-contents">
+						<table class="grid-tbl property-tbl">
+							<colgroup>
+								<col style="width:100px">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th><div class="cell">검색옵션</div></th>
+									<td>
+										<div class="cell">
+											<select name="" id="" class="form-select gray option">
+												<option value="">아이디</option>
+												<option value="">이름</option>
+												<option value="">상태</option>
+												<option value=""></option>
+												<option value=""></option>
+											</select>
+											<input type="text" class="form-input option">
+											<button type="button" class="btn-brown">SEARCH</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- //.cont-property -->
+			
 			<div class="split cont-code">
 				<div class="grid-wrap scr-wrap">
 					<div class="grid-scrollable-x">

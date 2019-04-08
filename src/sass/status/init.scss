@@ -2,6 +2,9 @@
 
 @import "../parts/common";
 
+.contents {min-width: 1900px;}
+.cont-container {}
+
 /* 우측 사이드 콘텐츠 */
 .sidebar.right-reservation {
 	position: fixed;
@@ -159,16 +162,31 @@
 				}
 				th, td {
 					text-align: center;
-					.cell { }
-				}
-				td:first-child {
-					.cell {
-						line-height: 1;
-					}
+					letter-spacing: -0.5px;
 				}
 			}
 			.grid-area.grid-contents {
-				height: 300px;
+				height: 270px;
+				tr {
+					td {
+						background: #fff !important;
+					}
+					&.sat {
+						td {
+							background: $bg-sat-td !important;
+						}
+					}
+					&.sun {
+						td {
+							background: $bg-sun-td !important;
+						}
+					}
+					&:hover {
+						td {
+							background: #f8f8f8 !important;
+						}
+					}
+				}
 			}
 		}
 	} // cont-list
@@ -215,16 +233,31 @@
 					.grid-tbl {
 						th, td {
 							text-align: center;
-							.cell { }
-						}
-						td:first-child {
-							.cell {
-								line-height: 1;
-							}
+							letter-spacing: -0.5px;
 						}
 					}
 					.grid-area.grid-contents {
-						height: 300px;
+						height: 270px;
+						tr {
+							td {
+								background: #fff !important;
+							}
+							&.sat {
+								td {
+									background: $bg-sat-td !important;
+								}
+							}
+							&.sun {
+								td {
+									background: $bg-sun-td !important;
+								}
+							}
+							&:hover {
+								td {
+									background: #f8f8f8 !important;
+								}
+							}
+						}
 					}
 				}
 			}
