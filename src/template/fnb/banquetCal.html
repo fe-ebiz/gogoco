@@ -71,11 +71,13 @@
 								<td><div class="cell"><p class="row row-1">05</p></div></td>
 								<td><div class="cell"><p class="row row-1">06</p></div></td>
 								<td><div class="cell"><p class="row row-1">07</p></div></td>
-								<td><div class="cell"><p class="row row-1">08</p></div></td>
+								<!-- 예시 팝업 1 -->
+								<td onclick="popFn.show('.bqCalEvent-container')"><div class="cell"><p class="row row-1">08</p></div></td>
 								<td>
 									<div class="cell">
 										<p class="row row-1">09</p>
-										<p class="row row-item">12:00 AM ~ 12:00 AM 내쇼날모터스 <span class="icon ic-x"></span></p>
+								        <!-- 예시 팝업 2 - 생성된 일정을 수정할 때는 DELETE도 나타남 -->
+										<p class="row row-item" onclick="popFn.show('.bqCalEvent-container')">12:00 AM ~ 12:00 AM 내쇼날모터스 <span class="icon ic-x"></span></p>
 										<p class="row row-item">12:00 AM ~ 12:00 AM 내쇼날모터스 <span class="icon ic-x"></span></p>
 									</div>
 								</td>

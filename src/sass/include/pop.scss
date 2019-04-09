@@ -1095,7 +1095,6 @@
 		}
 	}
 }
-
 /* 교환 저장 */
 .pop-container.exChgSv-container {
 	.pop-wrapper {
@@ -1135,7 +1134,6 @@
 		}
 	}
 }
-
 /* 게스트 설정 */
 .pop-container.gstSt-container {
 	.pop-wrapper {
@@ -1148,6 +1146,7 @@
             .popcont-container {
                 .property-tbl {
 					@include tbl-base;
+                    
                     th {
                         border-left: 1px dashed #c0b5a6;
                     }
@@ -1177,6 +1176,14 @@
                 .scr-wrap {
                     margin-top: 10px;
                     @include grid-scr-x(null, 100%, 0);
+                    .grid-tbl {
+                        .ie8 & {
+                            width: 740px;
+                        }
+                        th {
+
+                        }
+                    }
                     td {
                         text-align: center;
                     }
@@ -1191,7 +1198,6 @@
 		}
 	}
 }
-
 /* 환율 설정 */
 .pop-container.rateSt-container {
 	.pop-wrapper {
@@ -1224,6 +1230,14 @@
                 .scr-wrap {
                     margin-top: 10px;
                     @include grid-scr-x(null, 100%, 0);
+                    .grid-tbl {
+                        .ie8 & {
+                            width: 740px;
+                        }
+                        th {
+
+                        }
+                    }
                     td {
                         text-align: center;
                     }
@@ -1279,7 +1293,6 @@
 		}
 	}
 }
-
 /* 분실물 */
 .pop-container.lstFund-container {
 	.pop-wrapper {
@@ -1383,6 +1396,14 @@
                 &.history-container {
                     .scr-wrap {
                         @include grid-scr-x(880px, 100%, 0 0 4px 4px);
+                        .grid-tbl {
+                            .ie8 & {
+                                width: 862px;
+                            }
+                            th {
+
+                            }
+                        }
                         .grid-area {
                             &.grid-contents {
                                 height: 262px;
@@ -1414,6 +1435,161 @@
 /*
  * 음식료품
  */
+/* 연회목록 신규 */
+.pop-container.bnqNew-container {
+	.pop-wrapper {
+        width: 1600px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+			padding: 20px;
+            .popcont-container {
+				@include bx;
+                margin-top: 15px;
+                .row-contents {
+				    @include bx;
+                    .cont-tit {
+                        @include position(absolute, -20px, 15px);
+                        color: $fg-legend;
+                        font-size: 13px;
+                        padding: 5px 10px;
+                        background: #f0f0f0;
+                        border-radius: 5px;
+                        strong, label {
+                            font-weight: 700;
+                        }
+                    }
+                    .row-cont {
+				        @include bx;
+			            padding: 15px;
+                        border-radius: 5px;
+                        background: #f0f0f0;
+                        float: left;
+
+                        .scr-wrap {
+                            .grid-area {
+                                &.grid-contents {
+                                    .grid-tbl {
+                                        tr {
+                                            td {
+                                                .cell {
+                                                    padding: 35px 7px;
+                                                    background: #f4f1ee;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .grid-bottom {
+                            @include grid-bottom-page;
+                            .count {
+                                em {
+                                    color: $fg-orange-2;
+                                }
+                            }
+                        }
+                        
+                        &.cont-resvt {
+                            width: 63%;
+                            .grid-contents {
+                                .grid-tbl {
+                                    @include tbl-base;
+                                    td + th {
+                                        border-left: 1px dashed #c0b5a6;
+                                    }
+                                    td {
+                                        .cell {
+                                            .cal-box {
+                                                .inp-cal {
+                                                    width: 97px;
+                                                }
+                                                & + .form-input {
+                                                    margin-left: 7px;
+                                                }
+                                            }
+                                            .form-input {
+                                                &.w-1 {
+                                                    width: 56px;
+                                                }
+                                                &.name {
+                                                    width: 160px;
+                                                }
+                                                &.nameTel {
+                                                    width: 110px;
+                                                }
+                                                &.deposit {
+                                                    width: 130px;
+                                                }
+                                                &.addr {
+                                                    width: 66%;
+                                                }
+                                            }
+                                            .textarea-etc {
+                                                width: 100%;
+                                                height: 51px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        &.cont-cusmr { 
+                            width: 36%;
+                            margin-left: 1%;
+                            .scr-wrap {
+                                @include grid-scr-x(600px, 100%, 0);
+                                .grid-tbl {
+                                    .ie8 & {
+                                        width: 582px;
+                                    }
+                                    th {
+
+                                    }
+                                }
+                                .grid-area {
+                                    &.grid-contents {
+                                        height: 220px;
+                                    }
+                                }
+                            }
+                        }
+                        
+                        &.cont-recmd { 
+                            clear: both;
+                            float: none;
+                            width: 100%;
+                            margin-top: 30px;
+                            .scr-wrap {
+                                @include grid-scr-x(1660px, 100%, 0);
+                                .grid-tbl {
+                                    .ie8 & {
+                                        width: 1643px;
+                                    }
+                                    th {
+
+                                    }
+                                }
+                                .grid-area {
+                                    &.grid-contents {
+                                        height: 180px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
 /* 예약확인 상세 */
 .pop-container.rsvConfmt-container {
 	.pop-wrapper {
@@ -1532,6 +1708,14 @@
                 }
                 .grid-wrap {
                     @include grid-scr-x(null, 100%, 4px 4px 0 0);
+                    .grid-tbl {
+                        .ie8 & {
+                            width: 1440px;
+                        }
+                        th {
+
+                        }
+                    }
                     .grid-area.grid-contents {
                         background: #fff;
                         height: 500px;
@@ -1561,17 +1745,86 @@
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
+/* 연회일정 */
+.pop-container.bqCalEvent-container {
+	.pop-wrapper {
+		.pop-header {
+			//@include pop-header-base;
+            padding: 8px 15px;
+            color: #313131;
+            background: #f3f2f2;
+            h2 {
+                font-weight: 700;
+                letter-spacing: 0;
+            }
+            .i-x {
+                width: 20px;
+                height: 20px;
+                &:before, &:after {
+                    top: 8px;
+                    background: #807772;
+                    width: 20px;
+                    height: 3px;
+                }
+            }
+            
+		}
+		.pop-contents {
+			padding: 20px;
+            .grid-tbl {
+                @include tbl-base;
+                td {
+                    .cell {
+                        .form-input {
+                            &.w-1 {
+                                width: 150px;
+                            }
+                            &.w-2 {
+                                width: 70px;
+                            }
+                        }
+                        .form-select {
+                            width: 150px;
+                        }
+                        .textarea-etc {
+                            width: 100%;
+                            height: 100px;
+                        }
+                        .cal-box {
+                            .inp-cal {
+                                width: 148px;
+                            }
+                        }
+                        .time-box {
+                            position: relative;
+                            -webkit-box-sizing: border-box;
+                            box-sizing: border-box;
+                            display: inline-block;
+                            vertical-align: middle;
+                            background: #fff;
+                            .form-select {
+                                z-index: 1;
+                                -webkit-appearance: none;
+                                width: 110px;
+                                background: none;
+                            }
+                            .i-cal {
+                                z-index: 0;
+                                position: absolute;
+                                top: 3px;
+                                right: 3px;
+                                background: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
 
 /*
  * 관리자
