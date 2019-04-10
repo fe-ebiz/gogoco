@@ -4,7 +4,7 @@
 //  @import "./parts/variables";
 //  @import "./parts/mixins";
 @import "./parts/common";
-@import "./include/pop";
+// @import "./include/pop";
 
 // Footer
 //@import url(//static.go.co.kr/css/footer.css);
@@ -120,6 +120,9 @@ $sidebar-wd: 96px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+.co-black {
+	color: black !important;
 }
 .co-blue {
 	color: blue !important;
@@ -458,13 +461,16 @@ $sidebar-wd: 96px;
 .header, .sidebar.left {
 	z-index: 10;
 }
+.header {
+	z-index: 11;
+}
 // $header-ht: 40px;
 .header {
 	position: relative;
 	height: $header-ht;
 	font-family: $font-nnGothic;
 	// border-bottom: 1px solid #cecece;
-	z-index: 99;
+	// z-index: 99;
 	.cont-header {
 		position: fixed;
 		top: 0;
