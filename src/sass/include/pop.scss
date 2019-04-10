@@ -1989,7 +1989,7 @@
 	}
 }
 /* 예약 조건 */
-.pop-container.rsvGroup-container {
+.pop-container.rsvFit-container {
 	.pop-wrapper {
 		width: 1490px;
 		margin-top: 30px;
@@ -2412,3 +2412,510 @@
 		}
 	}
 }
+/* 예약 그룹 */
+.pop-container.rsvGroup-container {
+	.pop-wrapper {
+		$wh-full: 1600px;
+        width: $wh-full;
+		margin-top: 30px;
+		.pop-header {
+			@include pop-header-base;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			.i-x {top: 0;}
+		}
+		.pop-contents {
+			padding: 20px;
+			padding-top: 10px;
+            &.rsvGroup-contents {
+				$wh-split: 620px;
+				.split-1 {
+					@include float;
+					width: $wh-split;
+					.cont-secondBook {
+						// width: 625px;
+						.cont-tit {
+							color: #000;
+							label {
+								span + input {
+									top: 1px;
+								}
+							}
+							strong {
+								margin-right: 0;
+							}
+						}
+						.grid-container {
+							.grid-wrap {
+								@include float;
+								+ .grid-wrap {
+									margin-left: 15px;
+								}
+								.grid-contents {
+								}
+							}
+						}
+						.grid-tbl {
+							@include tbl-base;
+							.cell {
+							}
+						}
+						.name-tbl {
+							width: 306px;
+							th, td {
+			
+							}
+							th {
+								.cell {
+								}
+							}
+							td {
+								// min-width: 206px;
+								.cell {
+									$account-wth: 49%;
+									.form-input {
+										&.nights {
+											width: 30px;
+										}
+										&.pnum {
+											// width: 51px;
+											width: 26%;
+										}
+										&.account {
+											width: $account-wth;
+										}
+										&.package {
+											width: 55%;
+										}
+										&.rate {
+											width: 70%;
+										}
+									}
+									.form-select {
+										&.rmType {
+											// width: 105px;
+											width: 54%;
+										}
+										&.account {
+											width: $account-wth;
+										}
+									}
+									.cal-box {
+										// width: 105px;
+										width: 54%;
+										+ .rdo-box {
+											margin-left: 10px;
+										}
+									}
+									.add-rtxt {
+										// margin-left: 2px;
+									}
+								}
+							}
+						}
+						.assign-tbl {
+							width: 270px;
+							th, td {
+			
+							}
+							th {
+								.cell {
+			
+								}
+							}
+							td {
+								// min-width: 206px;
+								.cell {
+									$account-wth: 49%;
+									.form-input {
+										&.assign {
+											width: 30%;
+										}
+										&.time {
+											// width: 51px;
+											width: 35%;
+											text-align: center;
+										}
+										&.deposit {
+											width: 65%;
+										}
+										&.exp {
+											width: 23%;
+											text-align: center;
+										}
+										&.sperson {
+											width: 95%;
+										}
+										&.req {
+											width: 67%;
+										}
+										&.accompany {
+											width: 75%;
+										}
+									}
+									.form-select {
+										&.rmType {
+											// width: 105px;
+											width: 54%;
+										}
+										&.account {
+											width: $account-wth;
+										}
+									}
+									.cal-box {
+										// width: 105px;
+										width: 54%;
+										+ .rdo-box {
+											margin-left: 10px;
+										}
+									}
+									.add-rtxt {
+										// margin-left: 2px;
+									}
+									.mg- {
+										margin: 0 5px;
+									}
+								}
+							}
+						}
+					}
+					.cont-message {
+						@include bx;
+						margin-top: 10px;
+						background: #F6F5F5;
+						padding: 5px;
+						height: 200px;
+						@include bdr(#c5c5c5);
+						.tab-list {
+							> * {
+								position: relative;
+								float: left;
+								color: #444;
+							}
+							.tab {
+								display: inline-block;
+								padding: 5px 12px;
+								border-top-left-radius: 5px;
+								border-top-right-radius: 5px;
+								background: #f7f7f7;
+								border: 1px solid #c5c5c5;
+								font-size: 12px;
+								border-bottom-color: #9f9f9f;
+								& + .tab {
+									left: -1px;
+								}
+								&.on {
+									z-index: 1;
+									background: #fff;
+									border-color: #9f9f9f;
+									border-bottom-color: #fff;
+								}
+								.plus {
+									vertical-align: middle;
+								}
+							}
+							label {
+								@include lbl;
+								top: 2px;
+								margin-left: 15px;
+							}
+						}
+						.item-list {
+							position: relative;
+							.grid-container {
+								display: none;
+								@include position(absolute, 0, 0);
+								padding: 12px;
+								background: #fff;
+								border: 1px solid #a9a9a9;
+								margin-top: -1px;
+								.grid-wrap.scr-wrap {
+									@include grid-scr-x(null, 100%, 4px);
+									.grid-tbl {
+										.ie8 & {
+											width: 581px;
+										}
+									}
+								}
+								&.on {
+									display: block;
+								}
+							}
+			
+						}
+					}
+					.row-btn {margin-top: 10px;}
+				}
+				.split-2 {
+					@include float;
+					width: $wh-full - $wh-split -60px;
+					margin-left: 20px;
+					.cont-rsvList {
+						.cont-tit {
+							.form-select {
+								&.type {
+									margin-left: 0;
+								}
+							}
+							.inTxt {
+								color: #000;
+								margin-left: 10px;
+							}
+						}
+						float: none;
+						.grid-wrap.scr-wrap.grid-wrap-2 {
+							@include grid-scr-x(null, 100%, 0);
+							.grid-area.grid-contents {
+								background: #fff;
+								height: 410px;
+							}
+							.grid-tbl {
+								th, td {
+									text-align: center;
+									.cell { }
+								}
+								td:first-child {
+									.cell {
+										line-height: 1;
+									}
+								}
+							}
+						}
+			
+					}
+					.cont-booker {
+						// 테이블 내 form 요소 및 기타 관리
+						.booker-tbl {
+							@include tbl-base;
+							th, td {
+			
+							}
+							th {
+								.cell {
+								}
+							}
+							td {
+								+ th {
+									border-left: 1px solid $bdg-tblBase;
+								}
+								.cell {
+			
+								}
+							}
+						}
+					}
+					.row-btn {
+						margin-top: 10px;
+						$btn-lh: 1.5;
+						button[class*=btn-] {
+							letter-spacing: 0;
+						}
+						.btn-gray, .btn-green, .btn-red, .btn-blue, .btn-brown {
+							padding: 3px 12px 2px;
+						}
+						button:first-child {
+							margin-right: 15px;
+						}
+						.wd-space {
+							margin-right: 80px;
+						}
+					}
+				}
+			
+				.cont-booker {
+					margin-top: 30px;
+				}
+			
+			}
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+/* room assign */
+.pop-container.rmAss-container {
+	.pop-wrapper {
+        width: 1800px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+			padding: 20px;
+			.split {
+				@include float;
+			}
+            .cont-property {
+				.grid-tbl {
+					@include tbl-style-1;
+					td {
+						.cell {}
+					}
+				}
+			} // cont-property
+			.split-1 {
+				width: 1260px;
+				.cont-property {
+					.grid-tbl {
+						td {
+							.cell {
+								.w-1 {width: 150px;}
+							}
+						}
+					}
+				} // cont-property
+				.cont-list {
+					margin-top: 10px;
+					.grid-wrap {
+						@include grid-scr-x(null, 100%, 0);
+						.grid-tbl {
+							td {
+								text-align: center;
+							}
+						}
+						.grid-area.grid-contents {
+							height: 600px;
+						}
+					}
+
+				} // cont-list
+			}
+			.split-3 {
+				width: 60px;
+				.row-btn {
+					text-align: center;
+					padding-top: 300px;
+					button {
+						font-family: "Nanum Gothic", sans-serif;
+						&:first-child {
+							margin-bottom: 10px;
+						}
+						span {position: relative;}
+						&.btn-blue {
+							span {
+								left: -1px;
+							}
+						}
+						&.btn-red {
+							span {
+								left: 1px;
+							}
+						}
+					}
+				}
+			}
+			.split-2 {
+				width: 440px;
+				.cont-property {
+					.grid-tbl {
+						td {
+							.cell {
+								.w-1 {width: 100px;}
+							}
+						}
+					}
+				} // cont-property
+				.cont-asschk {
+					@include bx;
+					background: #f0f0f0;
+					padding: 15px;
+					border-radius: 4px;
+					margin-top: 10px;
+					.scrollbox {
+						height: 565px;
+						// height: 50px;
+						overflow: auto;
+						.scrollbar {
+							.list {
+								@include position(relative, null, -15px);
+								.item {
+									float: left;
+									padding: 0 20px;
+									font-size: 13px;
+								}
+							}
+						}
+					}
+				} // cont-asschk
+			}
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+/* assign block */
+.pop-container.assBl-container {
+	.pop-wrapper {
+        width: 500px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+			padding: 20px;
+            .cont-property {
+				.grid-tbl {
+					@include tbl-style-1;
+					td {
+						.cell {
+							.w-1 {width: 100px;}
+						}
+					}
+				}
+			} // cont-property
+			.cont-asschk {
+				@include bx;
+				background: #f0f0f0;
+				padding: 15px;
+				border-radius: 4px;
+				margin-top: 10px;
+				.scrollbox {
+					height: 500px;
+					// height: 50px;
+					overflow: auto;
+					.scrollbar {
+						.list {
+							@include position(relative, null, -15px);
+							.item {
+								float: left;
+								padding: 0 20px;
+								font-size: 13px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+/*
+.pop-container.rsvFit-container {
+	.pop-wrapper {
+        width: 640px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+			padding: 20px;
+            .grid-tbl {
+                @include tbl-base;
+            }
+            .btn-box {
+                margin: 12px auto 0; 
+                text-align: center;
+                .txt-num {
+                    display: inline-block;
+                    padding: 0 5px;
+                    font-size: 12px;
+                }
+             }
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+*/

@@ -73,6 +73,7 @@ $sidebar-wd: 96px;
 	@include clearfix;
 	min-width:1200px;
 }
+.scrollbar {position: relative;}
 .area {
 	position: relative;
 	box-sizing: border-box;
