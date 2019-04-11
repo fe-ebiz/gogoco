@@ -2891,6 +2891,591 @@
 		}
 	}
 }
+/* 분실물 */
+.pop-container.gstComplain-container {
+	.pop-wrapper {
+        width: 600px;
+		.pop-header {
+			@include pop-header-base;
+		}
+
+        .pop-contents {
+            padding: 20px 20px 0;
+
+            .tab-list {
+                > * {
+                    position: relative;
+                    float: left;
+                    color: #444;
+                }
+                .tab {
+                    display: inline-block;
+                    padding: 5px 12px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    background: #f7f7f7;
+                    border: 1px solid #c5c5c5;
+                    font-size: 12px;
+                    border-bottom-color: #9f9f9f;
+                    cursor: pointer;
+                    & + .tab {
+                        left: -1px;
+                    }
+                    &.on {
+                        z-index: 1;
+                        background: #fff;
+                        border-color: #9f9f9f;
+                        border-bottom-color: #fff;
+                    }
+                    .plus {
+                        vertical-align: middle;
+                    }
+                }
+                label {
+                    @include lbl;
+                    top: 2px;
+                    margin-left: 15px;
+                }
+            }
+        }
+        
+
+        .item-list {
+            //height: 100%;
+            .common {
+                display: none;
+                padding: 0 20px 20px;
+                background: #fff;
+                &.on {
+                    display: block;
+                }
+                .popcont-container {
+                    margin-top: -1px;
+                    padding: 5px 0 10px;
+                    border-top: 1px solid #a9a9a9;
+                }
+
+                &.form-container {
+                    .grid-tbl {
+                        @include tbl-base;
+                        width: 100%;
+                        th, td {
+
+                        }
+                        th {
+                            .cell {
+                            }
+                        }
+                        td {
+                            .cell {
+                                .form-input {
+                                    width: 210px;
+                                    &.lost {
+                                        width: 310px;
+                                    }
+                                }
+                                .textarea-etc {
+                                    width: 100%;
+                                    height: 52px;
+                                    &.notice {
+                                        height: 130px;
+                                    }
+                                }
+                                .cal-box {
+                                    .inp-cal {
+                                        width: 110px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.history-container {
+                    .scr-wrap {
+                        @include grid-scr-x(880px, 100%, 0 0 4px 4px);
+                        .grid-tbl {
+                            .ie8 & {
+                                width: 862px;
+                            }
+                            th {
+
+                            }
+                        }
+                        .grid-area {
+                            &.grid-contents {
+                                height: 262px;
+                                td {
+                                    padding: 20px 0;
+                                    background: #f4f1ee;
+                                }
+                            }
+                        }
+                    }
+                    .grid-bottom {
+                        @include grid-bottom-page;
+                        .count {
+                            em {
+                                color: $fg-orange-2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+/* 예약 조건 */
+.pop-container.inhouse-container {
+	.pop-wrapper {
+		width: 1490px;
+		margin-top: 30px;
+		.pop-header {
+			@include pop-header-base;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			.i-x {top: 0;}
+		}
+		.pop-contents {
+			padding: 20px;
+			padding-top: 10px;
+            &.resFit-contents {
+				.split-1 {
+					@include float;
+					width: 622px;
+					.cont-secondBook {
+						// width: 625px;
+						.cont-tit {
+							color: #000;
+							label {
+								span + input {
+									top: 1px;
+								}
+							}
+							strong {
+								margin-right: 0;
+							}
+						}
+						.grid-container {
+							.grid-wrap {
+								@include float;
+								+ .grid-wrap {
+									margin-left: 15px;
+								}
+								.grid-contents {
+								}
+							}
+						}
+						.grid-tbl {
+							@include tbl-base;
+						}
+						.name-tbl {
+							width: 306px;
+							th, td {
+			
+							}
+							th {
+								.cell {
+								}
+							}
+							td {
+								// min-width: 206px;
+								.cell {
+									$account-wth: 49%;
+									.form-input {
+										&.nights {
+											width: 30px;
+										}
+										&.pnum {
+											// width: 51px;
+											width: 26%;
+										}
+										&.account {
+											width: $account-wth;
+										}
+										&.package {
+											width: 55%;
+										}
+										&.rate {
+											width: 70%;
+										}
+									}
+									.form-select {
+										&.rmType {
+											// width: 105px;
+											width: 54%;
+										}
+										&.account {
+											width: $account-wth;
+										}
+									}
+									.cal-box {
+										// width: 105px;
+										width: 54%;
+										+ .rdo-box {
+											margin-left: 10px;
+										}
+									}
+									.add-rtxt {
+										// margin-left: 2px;
+									}
+								}
+							}
+						}
+						.assign-tbl {
+							width: 270px;
+							th, td {
+			
+							}
+							th {
+								.cell {
+			
+								}
+							}
+							td {
+								// min-width: 206px;
+								.cell {
+									$account-wth: 49%;
+									.form-input {
+										&.assign {
+											width: 30%;
+										}
+										&.time {
+											// width: 51px;
+											width: 35%;
+											text-align: center;
+										}
+										&.deposit {
+											width: 65%;
+										}
+										&.exp {
+											width: 23%;
+											text-align: center;
+										}
+										&.sperson {
+											width: 95%;
+										}
+										&.req {
+											width: 67%;
+										}
+										&.accompany {
+											width: 75%;
+										}
+									}
+									.form-select {
+										&.rmType {
+											// width: 105px;
+											width: 54%;
+										}
+										&.account {
+											width: $account-wth;
+										}
+									}
+									.cal-box {
+										// width: 105px;
+										width: 54%;
+										+ .rdo-box {
+											margin-left: 10px;
+										}
+									}
+									.add-rtxt {
+										// margin-left: 2px;
+									}
+									.mg- {
+										margin: 0 5px;
+									}
+								}
+							}
+						}
+					}
+					.cont-billing {
+						.grid-tbl {
+							@include tbl-base;
+							th, td {
+			
+							}
+							th {
+								.cell {
+								}
+							}
+							td {
+								+ th {
+									border-left: 1px solid $bdg-tblBase;
+								}
+								.cell {
+			
+								}
+							}
+						}
+					}
+					.cont-message {
+						@include bx;
+						margin-top: 10px;
+						background: #F6F5F5;
+						padding: 5px;
+						height: 205px;
+						@include bdr(#c5c5c5);
+						.tab-list {
+							> * {
+								position: relative;
+								float: left;
+								color: #444;
+							}
+							.tab {
+								display: inline-block;
+								padding: 5px 12px;
+								border-top-left-radius: 5px;
+								border-top-right-radius: 5px;
+								background: #f7f7f7;
+								border: 1px solid #c5c5c5;
+								font-size: 12px;
+								border-bottom-color: #9f9f9f;
+								& + .tab {
+									left: -1px;
+								}
+								&.on {
+									z-index: 1;
+									background: #fff;
+									border-color: #9f9f9f;
+									border-bottom-color: #fff;
+								}
+								.plus {
+									vertical-align: middle;
+								}
+							}
+							label {
+								@include lbl;
+								top: 2px;
+								margin-left: 15px;
+							}
+						}
+						.item-list {
+							position: relative;
+							.grid-container {
+								display: none;
+								@include position(absolute, 0, 0);
+								padding: 12px;
+								background: #fff;
+								border: 1px solid #a9a9a9;
+								margin-top: -1px;
+								.grid-wrap.scr-wrap {
+									@include grid-scr-x(null, 100%, 4px);
+									.grid-tbl {
+										.ie8 & {
+											width: 581px;
+										}
+									}
+									.grid-area.grid-contents {
+										height: 107px;
+									}
+								}
+								&.on {
+									display: block;
+								}
+							}
+						}
+					}
+					.row-btn {
+						margin-top: 10px;
+					}
+				}
+				.split-2 {
+					@include float;
+					width: 808px;
+					margin-left: 20px;
+					.cont-guestinfo {
+			//			width: 805px;
+						.cont-tit {
+							label {
+								span + input {
+									top: 1px;
+								}
+							}
+						}
+						.grid-container {
+							.grid-wrap, .flt-box {
+								position: relative;
+								@include float;
+								box-sizing: border-box;
+							}
+							.grid-wrap {
+								+ .flt-box {
+									margin-left: 15px;
+								}
+								.grid-contents {
+								}
+							}
+							.flt-box {
+								width: 464px;
+								.grid-wrap.scr-wrap {
+									@include grid-scr-brown(580px, 464px);
+									.grid-tbl {
+										.ie8 & {
+											width: 462px;
+										}
+									}
+								} // .grie-wrap
+							}
+						}
+						// 테이블 내 form 요소 및 기타 관리
+						.guest-tbl {
+							@include tbl-base;
+							width: 295px;
+							th, td {
+			
+							}
+							th {
+								.cell {
+								}
+							}
+							td {
+								.cell {
+									.form-input {
+									}
+									.form-select {
+										&.lang {
+											width: 65%;
+										}
+									}
+									.cal-box {
+										// width: 105px;
+										width: 54%;
+										+ .rdo-box {
+											margin-left: 10px;
+										}
+									}
+									.add-rtxt {
+										// margin-left: 2px;
+									}
+									.mg- {
+										margin: 0 5px;
+									}
+								}
+							}
+						}
+						.row-txt {
+							clear: both;
+							border: 1px solid $bdg-tblBase;
+							border-top: none;
+							padding: 8px 7px;
+							text-align: right;
+							font-size: 12px;
+							color: #666;
+							line-height: 1.2;
+							background: #fafafa;
+							background-color: #eae8e8;
+							background-image: none,-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.8)),to(rgba(255,255,255,0)));
+							background-image: none,-webkit-linear-gradient(top,rgba(255,255,255,.8) 0,rgba(255,255,255,0) 100%);
+							background-image: none,linear-gradient(to bottom,rgba(255,255,255,.8) 0,rgba(255,255,255,0) 100%);
+							background-position: 50% 50%;
+							.num {
+								color: $fg-orange-2;
+							}
+						}
+						.row-tit {
+							margin-top: 2px;
+							padding: 3px 0;
+							font-size: 12px;
+							line-height: 1.5;
+							strong {
+								font-weight: 700;
+							}
+						}
+						.box-common {
+							background: #fff;
+							box-sizing: border-box;
+							padding: 5px 4px;
+							font-size: 12px;
+							border: 1px solid #c1c1c1;
+							overflow: auto;
+							&.history-box {
+								height: 30px;
+							}
+							&.notice-box {
+								width: 100%;
+								resize: none;
+								height: 143px;
+							}
+						}
+			
+					}
+					.cont-booker {
+						// 테이블 내 form 요소 및 기타 관리
+						.booker-tbl {
+							@include tbl-base;
+							th, td {
+			
+							}
+							th {
+								.cell {
+								}
+							}
+							td {
+								+ th {
+									border-left: 1px solid $bdg-tblBase;
+								}
+								.cell {
+			
+								}
+							}
+						}
+					}
+					.cont-rsvList {
+						float: none;
+						.grid-wrap.scr-wrap {
+							@include grid-scr-x(null, 100%, 4px);
+							.grid-area.grid-contents {
+								background: #fff;
+								height: 80px;
+							}
+							.grid-tbl {
+								.ie8 & {
+									width: 777px;
+								}
+								th, td {
+									text-align: center;
+									.cell { }
+								}
+								td:first-child {
+									.cell {
+										line-height: 1;
+									}
+								}
+							}
+						}
+					}
+					.row-btn {
+						margin-top: 10px;
+						button[class*=btn-] {
+							letter-spacing: 0;
+						}
+						.btn-gray, .btn-green, .btn-red, .btn-blue {
+							padding: 3px 12px 2px;
+						}
+						button:first-child {
+							margin-right: 15px;
+						}
+						.wd-space {
+							margin-right: 80px;
+						}
+					}
+				}
+			
+				.cont-billing, .cont-booker, .cont-rsvList {
+					margin-top: 30px;
+				}
+			
+			}
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
 /*
 .pop-container.rsvFit-container {
 	.pop-wrapper {
