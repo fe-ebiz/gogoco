@@ -3476,6 +3476,51 @@
 		}
 	}
 }
+/* 정보 확인 */
+.pop-container.chkInf-container {
+	.pop-wrapper {
+		width: 950px;
+		margin-top: 35px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+			padding: 20px;
+			.grid-tbl {
+				@include tbl-base;
+			}
+			.btn-box {
+				margin: 12px auto 0; 
+				text-align: center;
+				.txt-num {
+					display: inline-block;
+					padding: 0 5px;
+					font-size: 12px;
+				}
+			 }
+			.popcont-container {
+				@include bx;
+				background: #f0f0f0;
+				padding: 10px 15px;
+				border-radius: 4px;
+				margin-top: 10px;
+				&:first-child {
+					margin-top: 0;
+				}
+				.common {
+					h1 {
+						font-size: 13px;
+						margin-bottom: 5px;
+						line-height: 1;
+					}
+				}
+			}
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
 /*
 .pop-container.rsvFit-container {
 	.pop-wrapper {
