@@ -3618,14 +3618,10 @@
                                 text-overflow: inherit;
                             }
                         }
-                        td {
-                            .cell {
-                                button.action {
-                                    @include btn-pd-lr;
-                                }
-                            }
-                        }
                     }
+                }
+                .grid-bottom {
+                    @include grid-bottom-page;
                 }
             }
 		}
