@@ -3627,7 +3627,57 @@
 		}
 	}
 }
+/* logBook */
+.pop-container.logBookAdd-container {
+	.pop-wrapper {
+        width: 785px;
+        font-family: "Nanum Gothic", Dotum, Sans-serif;
+		.pop-header {
+			@include pop-header-base;
+            h2 {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: 17px;
+            }
+		}
+		.pop-contents {
+			padding: 20px;
+            
+		    .popcont-container {
+                .grid-tbl {
+                    @include tbl-base;
+                    width: 100%;
+                    th, td {
 
+                    }
+                    th {
+                        .cell {
+                        }
+                    }
+                    td {
+                        .cell {
+                            .form-select {
+                                width: 120px;
+                            }
+                            .textarea-etc {
+                                width: 99.5%;
+                                height: 390px;
+                            }
+                            iframe {
+                                position: relative;
+                                box-sizing: border-box;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
 /* 룸 서비스 상태 */
 .pop-container.rmSvcStus-container {
 	.pop-wrapper {

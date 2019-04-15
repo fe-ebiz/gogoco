@@ -5650,13 +5650,15 @@ body.modal-open,
   background-clip: padding-box;
 }
 
+/* 기존 팝업 창 백드롭과 겹치는 bg라서 그냥 z-index 뒤로 뺌 */
 .modal-backdrop {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1030;
+  /*z-index: 1030;*/
+  z-index: 19;
   background-color: #000000;
 }
 
@@ -5666,8 +5668,8 @@ body.modal-open,
 }
 
 .modal-backdrop.in {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+  opacity: 0.1;
+  filter: alpha(opacity=10);
 }
 
 .modal-header {

@@ -3310,9 +3310,93 @@
 </div>
 <!-- / .inGrpAdd-container -->		
 
-<!-- logBook팝업 들어가야함  -->
+<!-- logBook팝업 -->
+<div class="pop-container logBookAdd-container" style="display: block">
+	<div class="bg-back"></div>
 
-<!-- / .logBookkkkkk-container -->		
+	<div class="pop-wrapper">
+		<div class="pop-header">
+			<h2>Log Book</h2>
+			<span class="a-i-x i-x fn-cls"></span>
+		</div>
+		<div class="cf pop-contents">
+			<div class="cf popcont-container">
+                
+                <div class="grid-wrap">
+                    <div class="grid-contents">
+                        <table class="grid-tbl">
+                            <colgroup>
+                                <col class="nth-1" style="width: 102px">
+                                <col class="nth-2" style="width: *">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><div class="cell">카테고리</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <select name="" id="" class="form-select">
+                                                <option value=""></option>
+                                                <option value="">PRICE</option>
+                                                <option value="">INFO</option>
+                                                <option value="">PERSONAL</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">내용</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <textarea name="editNote" id="editNote" class="textarea-etc" rows="10" cols="100"> </textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">표시</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <select name="" id="" class="form-select">
+                                                <option value="">Yes</option>
+                                                <option value="">No</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- //.grid-wrap -->
+			</div>
+			<!-- /.popcont-container -->
+		</div>
+        <div class="pop-footer">
+			<div class="row-btn">
+				<button type="button" class="btn-blue fn-cls">SAVE</button>
+				<button type="button" class="btn-red fn-cls">DEL</button>
+				<button type="button" class="btn-gray fn-cls">CLOSE</button>
+			</div>
+        </div>
+	</div>
+</div>
+<script type="text/javascript" src="../../public/js/editPlugin/js/service/HuskyEZCreator.js" charset="utf-8"></script>
+<script type="text/javascript">
+    var oEditors = [];
+    
+      nhn.husky.EZCreator.createInIFrame({
+        oAppRef : oEditors,
+        elPlaceHolder: "editNote",
+        sSkinURI: "../../public/js/editPlugin/SmartEditor2Skin.html",
+
+        htParams : {
+            bUseToolbar : true,
+            bUseVerticalResizer : false,
+            bUseModeChanger : false,
+        }
+      });
+
+</script>
+<!-- / .logBookAdd-container -->		
 
 <!-- 룸 서비스 상태 팝업  -->
 <div class="pop-container rmSvcStus-container">
