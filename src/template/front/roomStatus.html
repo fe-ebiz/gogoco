@@ -83,7 +83,7 @@
 									<ul class="list-tab">
 										<li class="tab Info on">Info</li>
 										<li class="tab Status">Status</li>
-										<li class="tab-btn service"><button type="buton" class="btn-serv">Status Service</button></li>
+										<li class="tab-btn service"><button type="buton" class="btn-serv" onclick="popFn.show('.stusSvc-container')">Status Service</button></li>
 									</ul>
 									<div class="cont-tab">
 										<div class="tab-type tab-info on">
@@ -393,7 +393,8 @@
 					<div class="cont-center">
 						<ul class="cf list-room">
 							<!--기본 스타일 .base , 체크 인 스타일 .chkIn , 클릭 스타일 .clk 추가-->
-							<li class="item-room base">
+							<!-- 룸 서비스 상태 팝업 예시 -->
+							<li class="item-room base" onclick="popFn.show('.rmSvcStus-container')">
 								<div class="cf roomNo">
 									<span class="left num">1701</span>
 									<span class="center name">RST</span>

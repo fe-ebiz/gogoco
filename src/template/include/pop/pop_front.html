@@ -2883,7 +2883,7 @@
 <!-- /.inhouse-container -->
 
 <!-- assign room 클릭시 - 정보 확인  -->
-<div class="pop-container chkInf-container" style="display: block">
+<div class="pop-container chkInf-container">
 	<div class="bg-back"></div>
 
 	<div class="pop-wrapper">
@@ -3096,3 +3096,711 @@
 		</div>
 	</div>
 </div>
+
+
+<!-- inhouse팝업 - GROUP ADD 클릭시  -->
+<div class="pop-container inGrpAdd-container">
+	<div class="bg-back"></div>
+
+	<div class="pop-wrapper">
+		<div class="pop-header">
+			<h2>그룹 추가</h2>
+			<span class="a-i-x i-x fn-cls"></span>
+		</div>
+		<div class="cf pop-contents">
+			<div class="cf popcont-container">
+                <div class="cont-property">
+                    <div class="grid-wrap">
+                        <div class="grid-contents">
+                            <table class="grid-tbl property-tbl">
+                                <colgroup>
+                                    <col style="width: 92px">
+                                    <col style="width: 253px">
+                                    <col style="width: 92px">
+                                    <col style="width: 253px">
+                                    <col style="width: 92px">
+                                    <col style="width: 138px">
+                                    <col style="width: 92px">
+                                    <col style="width: *">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th><div class="cell">도착 날짜</div></th>
+                                        <td>
+                                            <div class="cell">
+                                                <span class="cal-box">
+                                                    <input type="text" class="appe-reset inp-cal date-ui">
+                                                    <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                                </span>
+                                                <span>~</span>
+                                                <span class="cal-box">
+                                                    <input type="text" class="appe-reset inp-cal date-ui">
+                                                    <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <th><div class="cell">출발 날짜</div></th>
+                                        <td>
+                                            <div class="cell">
+                                                <span class="cal-box">
+                                                    <input type="text" class="appe-reset inp-cal date-ui">
+                                                    <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                                </span>
+                                                <span>~</span>
+                                                <span class="cal-box">
+                                                    <input type="text" class="appe-reset inp-cal date-ui">
+                                                    <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <th><div class="cell">객실#</div></th>
+                                        <td>
+                                            <div class="cell">
+                                                <input type="text" class="form-input">
+                                            </div>
+                                        </td>
+                                        <th><div class="cell">Chk/Rsvn-No.</div></th>
+                                        <td>
+                                            <div class="cell">
+                                                <input type="text" class="form-input">
+                                                <button type="button" class="btn-brown">SEARCH</button>
+                                                <button type="button" class="btn-brown">CLEAR</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cont-area">
+                    <div class="grid-toolbar">
+                        <p>열 그룹을 끌어서 이곳에 놓어 해당 열별로 그룹화 하십시오.</p>
+                    </div>
+                    <!-- /.grid-toolbar -->
+					<div class="grid-wrap scr-wrap">
+						<div class="grid-scrollable-x">
+							<div class="grid-area grid-head">
+								<div class="grid-scrollable">
+									<table class="grid-tbl">
+										<colgroup>
+											<col style="width: 52px">
+											<col style="width: 40px">
+											<col style="width: 60px">
+											<col style="width: 140px">
+											<col style="width: 70px">
+											<col style="width: 90px">
+											<col style="width: 40px">
+											<col style="width: 90px">
+											<col style="width: 67px">
+											<col style="width: 60px">
+											<col style="width: 160px">
+											<col style="width: 80px">
+											<col style="width: 90px">
+											<col style="width: 110px">
+											<col style="width: 67px">
+											<col style="width: 80px">
+											<col style="width: *">
+										</colgroup>
+										<thead class="rowgroup">
+											<tr>
+												<th><div class="cell order-ui">A</div></th>
+												<th><div class="cell order-ui">VIP</div></th>
+												<th><div class="cell order-ui">객실#</div></th>
+												<th><div class="cell order-ui">회원명</div></th>
+												<th><div class="cell order-ui">객실유형</div></th>
+												<th><div class="cell order-ui">도착 날짜</div></th>
+												<th><div class="cell order-ui">Nts</div></th>
+												<th><div class="cell order-ui">출발 날짜</div></th>
+												<th><div class="cell order-ui">어른/아이</div></th>
+												<th><div class="cell order-ui">상태</div></th>
+												<th><div class="cell order-ui">계정</div></th>
+												<th><div class="cell order-ui">Rm Rate</div></th>
+												<th><div class="cell order-ui">금액</div></th>
+												<th><div class="cell order-ui">Chk.Num</div></th>
+												<th><div class="cell order-ui">그룹/개별</div></th>
+												<th><div class="cell order-ui">객실료</div></th>
+												<th><div class="cell order-ui">그룹명</div></th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+							</div>
+							<div class="grid-area grid-contents">
+								<table class="grid-tbl">
+									<colgroup>
+                                        <col style="width: 52px">
+                                        <col style="width: 40px">
+                                        <col style="width: 60px">
+                                        <col style="width: 140px">
+                                        <col style="width: 70px">
+                                        <col style="width: 90px">
+                                        <col style="width: 40px">
+                                        <col style="width: 90px">
+                                        <col style="width: 67px">
+                                        <col style="width: 60px">
+                                        <col style="width: 160px">
+                                        <col style="width: 80px">
+                                        <col style="width: 90px">
+                                        <col style="width: 110px">
+                                        <col style="width: 67px">
+                                        <col style="width: 80px">
+                                        <col style="width: *">
+									</colgroup>
+									<tbody class="rowgroup">
+									    <tr>
+									        <td><div class="cell"><button type="button" class="btn-blue">ADD</button></div></td>
+									        <td><div class="cell"></div></td>
+									        <td><div class="cell">0417</div></td>
+									        <td class="ta-left"><div class="cell">김경준(쓰레기형)</div></td>
+									        <td><div class="cell">DTW</div></td>
+									        <td><div class="cell">2019-04-04</div></td>
+									        <td><div class="cell">30</div></td>
+									        <td><div class="cell">2019-05-04</div></td>
+									        <td><div class="cell">2 / 0</div></td>
+									        <td><div class="cell">C/IN</div></td>
+									        <td class="ta-left"><div class="cell">다이렉트</div></td>
+									        <td class="ta-right"><div class="cell">10,000</div></td>
+									        <td class="ta-right"><div class="cell">330,000</div></td>
+									        <td class="ta-left"><div class="cell">KSG1904041702</div></td>
+									        <td><div class="cell">F.I.T</div></td>
+									        <td class="ta-right"><div class="cell">10,000</div></td>
+									        <td class="ta-left"><div class="cell"></div></td>
+									    </tr>
+									    <tr>
+									        <td><div class="cell"><button type="button" class="btn-blue">ADD</button></div></td>
+									        <td><div class="cell"></div></td>
+									        <td><div class="cell">1004</div></td>
+									        <td class="ta-left"><div class="cell">이주수</div></td>
+									        <td><div class="cell">DTW</div></td>
+									        <td><div class="cell">2019-04-08</div></td>
+									        <td><div class="cell">6</div></td>
+									        <td><div class="cell">2019-04-14</div></td>
+									        <td><div class="cell">2 / 0</div></td>
+									        <td><div class="cell">C/IN</div></td>
+									        <td class="ta-left"><div class="cell">다이렉트</div></td>
+									        <td class="ta-right"><div class="cell">45,455</div></td>
+									        <td class="ta-right"><div class="cell">300,000</div></td>
+									        <td class="ta-left"><div class="cell">KSG1904041702</div></td>
+									        <td><div class="cell">GROUP</div></td>
+									        <td class="ta-right"><div class="cell">45,455</div></td>
+									        <td class="ta-left"><div class="cell">이주수</div></td>
+									    </tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- //.grid-wrap -->
+                    <div class="cf grid-bottom">
+                        <a href="#" class="prev st">&lt;&lt;</a>
+                        <a href="#" class="prev">&lt;</a>
+                        <span class="num">0</span>
+                        <a href="#" class="next">&gt;</a>
+                        <a href="#" class="next st">&gt;&gt;</a>
+                        <span class="count">1 - 40 of 40 items</span>
+                    </div>
+                    <!-- //.grid-bottom-->
+                </div>
+			</div>
+			<!-- /.popcont-container -->
+		</div>
+	</div>
+</div>
+<!-- / .inGrpAdd-container -->		
+
+<!-- logBook팝업 -->
+<div class="pop-container logBookAdd-container" style="display: block">
+	<div class="bg-back"></div>
+
+	<div class="pop-wrapper">
+		<div class="pop-header">
+			<h2>Log Book</h2>
+			<span class="a-i-x i-x fn-cls"></span>
+		</div>
+		<div class="cf pop-contents">
+			<div class="cf popcont-container">
+                
+                <div class="grid-wrap">
+                    <div class="grid-contents">
+                        <table class="grid-tbl">
+                            <colgroup>
+                                <col class="nth-1" style="width: 102px">
+                                <col class="nth-2" style="width: *">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><div class="cell">카테고리</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <select name="" id="" class="form-select">
+                                                <option value=""></option>
+                                                <option value="">PRICE</option>
+                                                <option value="">INFO</option>
+                                                <option value="">PERSONAL</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">내용</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <textarea name="editNote" id="editNote" class="textarea-etc" rows="10" cols="100"> </textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">표시</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <select name="" id="" class="form-select">
+                                                <option value="">Yes</option>
+                                                <option value="">No</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- //.grid-wrap -->
+			</div>
+			<!-- /.popcont-container -->
+		</div>
+        <div class="pop-footer">
+			<div class="row-btn">
+				<button type="button" class="btn-blue fn-cls">SAVE</button>
+				<button type="button" class="btn-red fn-cls">DEL</button>
+				<button type="button" class="btn-gray fn-cls">CLOSE</button>
+			</div>
+        </div>
+	</div>
+</div>
+<script type="text/javascript" src="../../public/js/editPlugin/js/service/HuskyEZCreator.js" charset="utf-8"></script>
+<script type="text/javascript">
+    var oEditors = [];
+    
+      nhn.husky.EZCreator.createInIFrame({
+        oAppRef : oEditors,
+        elPlaceHolder: "editNote",
+        sSkinURI: "../../public/js/editPlugin/SmartEditor2Skin.html",
+
+        htParams : {
+            bUseToolbar : true,
+            bUseVerticalResizer : false,
+            bUseModeChanger : false,
+        }
+      });
+
+</script>
+<!-- / .logBookAdd-container -->		
+
+<!-- 룸 서비스 상태 팝업  -->
+<div class="pop-container rmSvcStus-container">
+	<div class="bg-back"></div>
+
+	<div class="pop-wrapper">
+		<div class="pop-header">
+			<h2>룸 서비스 상태</h2>
+			<span class="a-i-x i-x fn-cls"></span>
+		</div>
+		<div class="cf pop-contents">
+			<div class="cf popcont-container">
+                <div class="cont-property">
+                    <div class="grid-wrap">
+                        <div class="grid-contents">
+                            <table class="grid-tbl property-tbl">
+                                <colgroup>
+                                    <col style="width: 100px">
+                                    <col style="width: 160px">
+                                    <col style="width: 100px">
+                                    <col style="width: *">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th><div class="cell">속성</div></th>
+                                        <td>
+                                            <div class="cell">
+                                                <select name="" id="" class="form-select w-1">
+                                                    <option value=""></option>
+                                                    <option value="">1. 루미아</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <th><div class="cell">서비스</div></th>
+                                        <td>
+                                            <div class="cell">
+                                                <select name="" id="" class="form-select w-2">
+                                                    <option value=""></option>
+                                                    <option value="">O.O.O</option>
+                                                    <option value="">O.O.S</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><div class="cell">날짜</div></th>
+                                        <td colspan="3">
+                                            <div class="cell">
+                                                <span class="cal-box">
+                                                    <input type="text" class="appe-reset inp-cal date-ui">
+                                                    <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                                </span>
+                                                <span>~</span>
+                                                <span class="cal-box">
+                                                    <input type="text" class="appe-reset inp-cal date-ui">
+                                                    <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                                </span>
+                                                <button type="button" class="btn-brown">SEARCH</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cont-area">
+					<div class="grid-toolbar">
+						<button type="button" class="btn-gray"><span class="icon ic-excel"></span> Export to Excel</button>
+						<button type="button" class="btn-gray"><span class="icon ic-pdf"></span> Export to PDF</button>
+					</div>
+                    <div class="grid-toolbar">
+                        <p>열 그룹을 끌어서 이곳에 놓어 해당 열별로 그룹화 하십시오.</p>
+                    </div>
+                    <!-- /.grid-toolbar -->
+					<div class="grid-wrap scr-wrap">
+						<div class="grid-scrollable-x">
+							<div class="grid-area grid-head">
+								<div class="grid-scrollable">
+									<table class="grid-tbl">
+										<colgroup>
+											<col style="width: 100px">
+											<col style="width: 70px">
+											<col style="width: 60px">
+											<col style="width: *">
+											<col style="width: 97px">
+											<col style="width: 97px">
+											<col style="width: 170px">
+											<col style="width: 95px">
+										</colgroup>
+										<thead class="rowgroup">
+											<tr>
+												<th><div class="cell order-ui">Svc.Date</div></th>
+												<th><div class="cell order-ui">객실#</div></th>
+												<th><div class="cell order-ui">서비스</div></th>
+												<th><div class="cell order-ui">이유</div></th>
+												<th><div class="cell order-ui">From</div></th>
+												<th><div class="cell order-ui">To</div></th>
+												<th><div class="cell order-ui">수정시간</div></th>
+												<th><div class="cell order-ui">수정자</div></th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+							</div>
+							<div class="grid-area grid-contents">
+								<table class="grid-tbl">
+									<colgroup>
+                                        <col style="width: 100px">
+                                        <col style="width: 70px">
+                                        <col style="width: 60px">
+                                        <col style="width: *">
+                                        <col style="width: 97px">
+                                        <col style="width: 97px">
+                                        <col style="width: 170px">
+                                        <col style="width: 95px">
+									</colgroup>
+									<tbody class="rowgroup">
+									    <tr>
+									        <td><div class="cell">2019-04-12</div></td>
+									        <td><div class="cell">0301</div></td>
+									        <td><div class="cell">O.O.O</div></td>
+									        <td class="ta-left"><div class="cell">F&B 알바 사용</div></td>
+									        <td><div class="cell">2018-11-05</div></td>
+									        <td><div class="cell">2019-12-31</div></td>
+									        <td><div class="cell">2019-03-28 15:33:12</div></td>
+									        <td><div class="cell">한애순</div></td>
+									    </tr>
+									    <tr>
+									        <td><div class="cell">2019-04-12</div></td>
+									        <td><div class="cell">1311</div></td>
+									        <td><div class="cell">O.O.O</div></td>
+									        <td class="ta-left"><div class="cell">히터 고장으로 인한 판매 불가 정비 완료</div></td>
+									        <td><div class="cell">2019-02-03</div></td>
+									        <td><div class="cell">2019-04-30</div></td>
+									        <td><div class="cell">2019-03-23 14:59:10</div></td>
+									        <td><div class="cell">한애순</div></td>
+									    </tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- //.grid-wrap -->
+                    <div class="cf grid-bottom">
+                        <a href="#" class="prev st">&lt;&lt;</a>
+                        <a href="#" class="prev">&lt;</a>
+                        <span class="num">0</span>
+                        <a href="#" class="next">&gt;</a>
+                        <a href="#" class="next st">&gt;&gt;</a>
+                        <span class="count">1 - 127 of 127 items</span>
+                    </div>
+                    <!-- //.grid-bottom-->
+                </div>
+			</div>
+			<!-- /.popcont-container -->
+		</div>
+        <div class="pop-footer">
+			<div class="row-btn">
+				<button type="button" class="btn-gray fn-cls">CLOSE</button>
+			</div>
+        </div>
+	</div>
+</div>
+<!-- / .rmSvcStus-container -->		
+
+<!-- 상태 서비스 팝업 (same Assign Block) -->
+<div class="pop-container stusSvc-container">
+	<div class="bg-back"></div>
+
+	<div class="pop-wrapper">
+		<div class="pop-header">
+			<h2>상태 서비스</h2>
+			<span class="a-i-x i-x fn-cls"></span>
+		</div>
+		<div class="cf pop-contents">
+		    <div class="cf popcont-container">
+                <div class="cont-property">
+                    <div class="grid-wrap">
+                        <div class="grid-area grid-contents">
+                            <table class="grid-tbl property-tbl">
+                                <colgroup>
+                                    <col style="width: 100px">
+                                    <col style="">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <div class="cell">서비스</div>
+                                        </th>
+                                        <td>
+                                            <div class="cell">
+                                                <select name="" id="" class="form-select w-1">
+                                                    <option value=""></option>
+                                                    <option value="">O.O.O</option>
+                                                    <option value="">O.O.S</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="cell">층</div>
+                                        </th>
+                                        <td>
+                                            <div class="cell">
+                                                <select name="" id="" class="form-select w-1">
+                                                    <option value="">17</option>
+                                                    <option value="">16</option>
+                                                    <option value="">15</option>
+                                                    <option value="">14</option>
+                                                    <option value="">13</option>
+                                                    <option value="">12</option>
+                                                    <option value="">11</option>
+                                                    <option value="">10</option>
+                                                    <option value="">9</option>
+                                                    <option value="">8</option>
+                                                    <option value="">7</option>
+                                                    <option value="">6</option>
+                                                    <option value="">5</option>
+                                                    <option value="">4</option>
+                                                    <option value="">3</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="cell">날짜</div>
+                                        </th>
+                                        <td>
+                                            <div class="cell">
+                                                <span class="cal-box">
+                                                    <input type="text" class="appe-reset inp-cal date-ui">
+                                                    <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                                </span>
+                                                <span>~</span>
+                                                <span class="cal-box">
+                                                    <input type="text" class="appe-reset inp-cal date-ui">
+                                                    <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                                </span>
+                                                <label><input type="checkbox"> <span class="txt">ALL</span></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="cell">기타</div>
+                                        </th>
+                                        <td>
+                                            <div class="cell">
+                                                <textarea name="" id="" cols="30" rows="10" class="textarea-etc"></textarea>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--//.cont-property-->
+
+                <div class="cont-asschk">
+                    <div class="scrollbox">
+                        <div class="scrollbar">
+                            <!-- icon-status 상태 클래스 추가 - vi, vw, vc, vd,  -->
+                            <ul class="cf list">
+                                <li class="item"><label><input type="checkbox"> <span class="txt">1701</span> <span class="icon-status vi"></span> <span class="txt">RST</span></label></li>
+                                <li class="item"><label><input type="checkbox"> <span class="txt">1702</span> <span class="icon-status vw"></span> <span class="txt">FTW</span></label></li>
+                                <li class="item"><label><input type="checkbox"> <span class="txt">1703</span> <span class="icon-status vc"></span> <span class="txt">DSB</span></label></li>
+                                <li class="item"><label><input type="checkbox"> <span class="txt">1704</span> <span class="icon-status vd"></span> <span class="txt">DSB</span></label></li>
+                                <li class="item"><label><input type="checkbox"> <span class="txt">603</span> <span class="icon-status vd"></span> <span class="txt">DTW</span></label></li>
+                                <li class="item"><label><input type="checkbox"> <span class="txt">604</span> <span class="icon-status vd"></span> <span class="txt">DTW</span></label></li>
+                                <li class="item"><label><input type="checkbox"> <span class="txt">605</span> <span class="icon-status vd"></span> <span class="txt">DTW</span></label></li>
+                                <li class="item"><label><input type="checkbox"> <span class="txt">606</span> <span class="icon-status vd"></span> <span class="txt">DTW</span></label></li>
+                                <li class="item"><label><input type="checkbox"> <span class="txt">607</span> <span class="icon-status vd"></span> <span class="txt">DTW</span></label></li>
+                                <li class="item"><label><input type="checkbox"> <span class="txt">608</span> <span class="icon-status vd"></span> <span class="txt">DTW</span></label></li>
+                                <li class="item"><label><input type="checkbox"> <span class="txt">609</span> <span class="icon-status vd"></span> <span class="txt">DTW</span></label></li>
+                                <li class="item"><label><input type="checkbox"> <span class="txt">610</span> <span class="icon-status vd"></span> <span class="txt">FTW</span></label></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- / .cont-asschk -->
+            </div>
+		</div>
+		<!-- / .assBl-contents -->
+		<div class="pop-footer">
+			<div class="row-btn">
+				<button type="button" class="btn-blue fn-cls">SAVE</button>
+				<button type="button" class="btn-green fn-cls">CLEAR</button>
+				<button type="button" class="btn-gray fn-cls">CLOSE</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- / .stusSvc-container -->		
+
+<!-- 객실현황 목록 수정 (Edit) 팝업 -->
+<div class="pop-container rmListEdit-container">
+	<div class="bg-back"></div>
+
+	<div class="pop-wrapper">
+		<div class="pop-header">
+			<h2>Edit</h2>
+			<span class="a-i-x i-x fn-cls"></span>
+		</div>
+		<div class="cf pop-contents">
+		    <div class="cf popcont-container">
+                <div class="grid-wrap">
+                    <div class="grid-contents">
+                        <table class="grid-tbl">
+                            <colgroup>
+                                <col class="nth-1" style="width: 120px">
+                                <col class="nth-2" style="width: *">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><div class="cell">객실 상태</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <label><input type="radio" name="roomStatus" value="goOut"> <span class="icon-status goOut"></span></label>
+                                            <label><input type="radio" name="roomStatus" value="inHouse"> <span class="icon-status inHouse"></span></label>
+                                            <label><input type="radio" name="roomStatus" value="empty"> <span class="icon-status empty"></span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">청소 상태</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <label><input type="radio" name="cleanStatus" value="vd"> <span class="icon-status vd"></span></label>
+                                            <label><input type="radio" name="cleanStatus" value="vw"> <span class="icon-status vw"></span></label>
+                                            <label><input type="radio" name="cleanStatus" value="vc"> <span class="icon-status vc"></span></label>
+                                            <label><input type="radio" name="cleanStatus" value="vi"> <span class="icon-status vi"></span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">Ex-Bad 상태</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <label><input type="radio" name="ExBadStatus" value="in-r"> <span class="icon-status in-r"></span></label>
+                                            <label><input type="radio" name="ExBadStatus" value="in"> <span class="icon-status in"></span></label>
+                                            <label><input type="radio" name="ExBadStatus" value="out-r"> <span class="icon-status out-r"></span></label>
+                                            <label><input type="radio" name="ExBadStatus" value="out"> <span class="icon-status out"></span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">Do Not Disturb</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <label><input type="radio" name="doNotDisturb" value="yes"> <span class="txt">Y</span></label>
+                                            <label><input type="radio" name="doNotDisturb" value="no"> <span class="txt">N</span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">서비스 상태</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <select name="" id="" class="form-select gray">
+                                                <option value=""></option>
+                                                <option value="">O.O.O</option>
+                                                <option value="">O.O.S</option>
+                                            </select>
+                                        </div>
+                                        <div class="cell">
+                                            <span class="cal-box">
+                                                <input type="text" class="appe-reset inp-cal date-ui">
+                                                <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                            </span>
+                                            <span>~</span>
+                                            <span class="cal-box">
+                                                <input type="text" class="appe-reset inp-cal date-ui">
+                                                <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">비고</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <textarea name="" id="" cols="30" rows="10" class="textarea-etc"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- //.grid-wrap -->
+		    </div>
+		</div>
+		<!-- / .assBl-contents -->
+		<div class="pop-footer">
+			<div class="row-btn">
+				<button type="button" class="btn-orange fn-cls"><span class="icon ic-check"></span>UPDATE</button>
+				<button type="button" class="btn-gray fn-cls"><span class="icon ic-cancel"></span>CLOSE</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- / .rmListEdit-container -->		
