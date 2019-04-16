@@ -680,7 +680,9 @@ $btn-lh: 1.5;
 	border: 1px solid $bd-c;
 	border-bottom: none;
 	table-layout: fixed;
-
+	&.auto {
+		table-layout: auto;
+	}
 	th,
 	td {
 		// min-height: 39px;
@@ -774,7 +776,9 @@ $btn-lh: 1.5;
 	border: 1px solid $bd-c;
 	border-bottom: none;
 	table-layout: fixed;
-
+	&.auto {
+		table-layout: auto;
+	}
 	th,
 	td {
 		// min-height: 39px;
