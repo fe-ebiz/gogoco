@@ -183,7 +183,7 @@
 		}
 		.row-subtit {
 			@include position(relative, null, -120px);
-			margin: 60px auto 50px;
+			margin: 60px auto;
 			text-align: center;
 			.subtit {
 				@include va;
@@ -478,6 +478,7 @@
 				}
 				.ic-i {
 					position: relative;
+					top: 1px;
 					margin-left: 4px;
 					.btn-i {
 						position: relative;
@@ -490,6 +491,7 @@
 						text-align: center;
 						font-size: 14px;
 						line-height: 1.2;
+						text-indent: -1px;
 						font-weight: 700;
 						border-radius: 50%;
 						color: #fff;
@@ -536,6 +538,9 @@
 					}
 					.i-box.on {
 						display: block;
+					}
+					& + .t {
+						@include position(relative, 2px);
 					}
 				}
 				.non-table {
