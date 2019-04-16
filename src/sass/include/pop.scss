@@ -3493,6 +3493,25 @@
 			.grid-tbl {
 				@include tbl-base;
 			}
+			.cont-prc {
+				.grid-tbl {
+					td {
+						background: #FCF7E2;
+						text-align: center;
+						.cell {
+							.zero-box {
+								.wd-space {
+									@include dp;
+									width: 10px;
+								}
+								& + .zero-box {
+									margin-left: 80px;
+								}
+							}
+						}
+					}
+				}
+			}
 			.btn-box {
 				margin: 12px auto 0; 
 				text-align: center;
