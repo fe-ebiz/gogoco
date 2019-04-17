@@ -11,8 +11,50 @@ $(function() {
 var popFn = {
 	show: function(obj_name) {
 		$(obj_name).show();
+	},
+	show_flag: function(obj_name, obj_this, flag) {
+        if (flag == false) {
+            console.log('bef');
+            console.log(obj_this);
+            $(obj_this).closest(".pop-container").children(".bg-back").hide();
+            console.log('aft');
+
+        }
+		$(obj_name).show();
+    },
+    close_flag: function(obj_name, obj_this, flag) {
+        if (flag == true) {
+            console.log('bef');
+            console.log(obj_name);
+            $(obj_name).closest(".pop-container").children(".bg-back").show();
+            console.log('aft');
+
+        }
+        $(obj_name).show();
+		$(obj_this).closest(".pop-container").hide();
 	}
 }
+
+
+var page = {
+	layer: function(a, b, c) {
+		$.ajax({		
+			type: 'post',
+			url: './layer/' + a + '.php',
+			data: 'val=' + c,
+			success: function(e) {
+				popFn.show(b);
+
+				console.log(a);
+				console.log(b);
+				console.log(c);
+				console.log(e);
+			}
+		});
+	}
+}
+
+
 
 // 팝업 닫기 기능
 function popClsFn() {
