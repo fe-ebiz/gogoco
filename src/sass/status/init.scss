@@ -183,13 +183,14 @@
 		}
 		.row-subtit {
 			@include position(relative, null, -120px);
-			margin: 60px auto;
+			// margin: 60px auto;
+			margin: 10px auto 30px;
 			text-align: center;
 			.subtit {
 				@include va;
 				// top: -1px;
 				margin: 0 15px;
-				font-size: 28px;
+				font-size: 26px;
 				font-family: $font-ntss;
 			}
 		}

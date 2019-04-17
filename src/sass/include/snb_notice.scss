@@ -112,7 +112,7 @@
                     padding-left: 10px;
                     &.hyp:after {
                         content: "-";
-                        @include position(absolute, 0px, 0px);
+                        @include position(absolute, 0px, 2px);
                     }
                 }
             }
