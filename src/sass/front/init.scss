@@ -1062,7 +1062,7 @@
 						}
 					}
 					/*클릭시 테두리 변경 .clk*/
-					&.clk {
+					&.on {
 						border-color: #666 !important;
 					}
 				}
@@ -1079,19 +1079,21 @@
 				.tit {
 					color: #c0b5a6;
 				}
-				.floor.total {
-					background-color: #c0b5a6;
-					color:#fff;
+				.floor.on {
 				}
 				.floor {
 					width:43px;
 					height:28px;
+					background-color: #c0b5a6;
 					border:2px solid #c0b5a6;
-					background: #fff;
-					color: #c0b5a6;
+					color:#fff;
 					padding-top: 10px;
-					margin-bottom:2px;
-					cursor:pointer;
+					margin-bottom: 2px;
+					cursor: pointer;
+					&.on {
+						background: #fff;
+						color: #c0b5a6;
+					}
 				}
 			}
 		}
