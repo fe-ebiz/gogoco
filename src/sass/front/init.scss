@@ -708,8 +708,8 @@
 					fieldset {
 						legend {
 							display: block;
-							background: #f0f0f0;
-							color: #968571;
+							background: #fff;
+							color: $fg-legend;
 							font-weight: 700;
 							font-size: 13px;
 							padding: 8px 10px 0;
@@ -720,7 +720,7 @@
 						.cont-box {
 							width: $wth;
 							min-height: 500px;
-							background: #f0f0f0;
+							background: #fff;
 							border-radius: 2px;
 							padding: 20px 15px 15px;
 							border-radius: 4px;
@@ -768,7 +768,7 @@
 							.cont-tab {
 								.tab-type {
 									h4.tit {
-										color: #968571;
+										color: $fg-legend;
 										font-size: 14px;
 										font-weight: bold;
 										line-height: 1.2;
@@ -780,7 +780,8 @@
 									margin-top: 5px;
 									font-family: 'Nanum Gothic';
 									border-spacing: 0px;
-									border: 1px solid #c0b5a6;
+									border: 1px solid $bor-gray-table;
+									// border-top: 2px solid $bdg-tblTop;
 									border-bottom: 0px none;
 									width: 100%;
 									table-layout: fixed;
@@ -802,7 +803,7 @@
 										th, td {
 											min-height: 39px;
 											height: 30px;
-											border-bottom: 1px solid #c0b5a6;
+											border-bottom: 1px solid $bor-gray-table;
 											color: #666;
 											.cell {
 												@include clearfix;
@@ -814,7 +815,7 @@
 											}
 										}
 										th {
-											background: #E7E4E2;
+											background: $bg-tblBase-th;
 											overflow: visible;
 											color: #444;
 											.cell {
@@ -825,7 +826,7 @@
 											}
 										}
 										td {
-											border-left: 1px dashed #c0b5a6;
+											border-left: 1px dashed $bor-gray-table;
 											text-align: right;
 											.cell { }
 										}
@@ -856,7 +857,7 @@
 										th, td {
 											min-height: 39px;
 											height: 39px;
-											border-bottom: 1px solid #c0b5a6;
+											border-bottom: 1px solid $bor-gray-table;
 											color: #666;
 											.cell {
 												@include clearfix;
@@ -868,7 +869,7 @@
 											}
 										}
 										th {
-											background: #E7E4E2;
+											background: $bg-tblBase-th;
 											overflow: visible;
 											color: #444;
 											text-align: center;
@@ -877,7 +878,7 @@
 											}
 										}
 										td {
-											border-left: 1px dashed #c0b5a6;
+											border-left: 1px dashed $bor-gray-table;
 											.cell {
 												.hSpace-5 {
 													font-size: 1px;

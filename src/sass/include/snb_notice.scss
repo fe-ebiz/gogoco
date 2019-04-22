@@ -16,15 +16,15 @@
     width: 0;
     height: 100%;
     background: #fff;
-    border-left: 1px solid #dbdbdb;
+    border-left: 1px solid $bor-gray-table;
     .folder {
         position: relative;
-        background: $bdg_tblBase;
+        background: $bdg-tblTop;
         height: 30px;
         .btn-a-folder {
             @include position(absolute, null, -35px);
             display: inline-block;
-            background: $bdg_tblBase;
+            background: $bdg-tblTop;
             // background: #968571;
             // background: #000000;
             height: 100%;
@@ -60,15 +60,12 @@
                 display: block;
                 padding: 5px 10px;
                 background: #fff;
-                color: #968571;
-                border-radius: 5px;
+                color: #333;
+                // border-radius: 5px;
                 font-size: 13px;
             }
-            &:hover > a {
-                background: #d4c9bb;
-            }
             &.on > a {
-                background: $fg-legend;
+                background: #333;
                 color: #fff;
             }
         }
@@ -91,7 +88,8 @@
             h3 {
                 text-align: center;
                 background: $bg-tblBase-th;
-                border: 1px solid $bdg-tblBase;
+                border: 1px solid $bor-gray-table;
+                border-top: 2px solid $bdg-tblTop;
                 padding: 5px 0;
                 strong {
                     font-weight: 700;
@@ -99,7 +97,7 @@
             }
             .cont-body {
                 padding: 10px 8px;
-                border: 1px solid $bdg-tblBase;
+                border: 1px solid $bor-gray-table;
                 border-top: none;
                 color: #666;
                 font-weight: 700;

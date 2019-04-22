@@ -15,19 +15,27 @@ $header-ht: 40px;
 $contents-minwth: 1695px;
 
 // 색상
-$primary-color: #111;
+$primary-color: #333;
 
 // 네비게이션 컬러
-$fg-gnb: #afafaf;
-$fg-gnb-hover: #c0b09d;
+// $fg-gnb: #afafaf;
+// $fg-gnb-hover: #c0b09d;
+$fg-gnb-hover: #f4774d;
+// 페이지 타이틀 컬러
+$fg-page-tit: #f4774d;
+// $fg-page-tit: #908270;
+// 테이블 상단 경계선 컬러
+$bdg-tblTop: #333;
 // 테이블 기본 경계선 컬러
 $bdg-tblBase: #c0b5a6;
 // 테이블 해더 컬러
-$bg-tblBase-th: #E7E4E2;
+$bg-tblBase-th: #ebebeb;
+// $bg-tblBase-th: #E7E4E2;
 // 테이블 배경 컬러
 $bg-tblBase: #f4f1ee;
 // 레전드 컬러
-$fg-legend: #968571;
+$fg-legend: #808080;
+// $fg-legend: #968571;
 
 //roomLayout 페이지 폰트 컬러
 $fg-blue-1: #04003C;
@@ -90,7 +98,8 @@ $bg-primary-dark: #735247;
 
 //테이블 상단 경계선 컬러
 $bor-gray-tableTop: #a6a6a6;
-$bor-gray-table: #c5c5c5;
+$bor-gray-table: #c7c7c7;
+// $bor-gray-table: #c5c5c5;
 // $bor-gray-table: #e4e5e7;
 
 // 금토 배경

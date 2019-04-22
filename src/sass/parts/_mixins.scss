@@ -204,11 +204,12 @@
 	box-sizing: border-box;
 	display: inline-block;
 	vertical-align: middle;
-	border: 1px solid #b6b6b6;
+	// border: 1px solid #b6b6b6;
+	border: 1px solid #c7c7c7;
 	background: #fff;
 	//    box-shadow: inset 0px 1px 2px #ddd;
-	box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .1);
-	border-radius: 4px;
+	// box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .1);
+	// border-radius: 4px;
 	line-height: 1.6;
 
 	&[disabled],
@@ -216,6 +217,9 @@
 		// background: #eee;
 		background: #f9f8f8;
 		color: #676767;
+	}
+	&:focus {
+		outline-color: $fg-page-tit;
 	}
 }
 
@@ -233,16 +237,19 @@
 	border: 1px solid #b6b6b6;
 	background: #fff;
 	//	box-shadow: 0px 1px 1px #e9eced;
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, .1);
-	border-radius: 4px;
+	// box-shadow: 0px 1px 1px rgba(0, 0, 0, .1);
+	// border-radius: 4px;
 	min-width: 50px;
 
 	&[disabled],
 	&[readonly] {
 		// background: #fff;
 		// background: #f9f8f8;
-		background: #d6d6d6;
-		color: gray;
+		background: #d2d2d2;
+		color: 808080;
+	}
+	&:focus {
+		outline-color: $fg-page-tit;
 	}
 
 	&.white {
@@ -260,7 +267,7 @@
 
 $btn-lh: 1.5;
 
-@mixin btn-base($wth: null, $he: null, $bg: fff, $bdc: #cdcdcd, $c: #333, $tsh-c: transparent) {
+@mixin btn-base($wth: null, $he: null, $bg: fff, $bdc: #c7c7c7, $c: #333, $tsh-c: transparent) {
 	position: relative;
 	display: inline-block;
 	width: $wth;
@@ -269,8 +276,8 @@ $btn-lh: 1.5;
 	background-color: $bg;
 	border-color: $bdc;
 	color: $c;
-	box-shadow: 0px 1px rgba(217, 217, 217, 0.75);
-	text-shadow: 0px -1px $tsh-c;
+	// box-shadow: 0px 1px rgba(217, 217, 217, 0.75);
+	// text-shadow: 0px -1px $tsh-c;
 	padding: 1px 5px 0px;
 	margin: 0 auto;
 	box-sizing: border-box;
@@ -279,17 +286,18 @@ $btn-lh: 1.5;
 	line-height: 1.6;
 	letter-spacing: -0.5px;
 	cursor: pointer;
-	border-radius: 3px;
+	// border-radius: 3px;
 
 	&[disabled],
 	&[disabled]:hover {
-		background: #ccc;
+		// background: #ccc;
+		background: #aaa;
 		border-color: #ccc;
 		//		background: #d6d6d6;
 		//		border-color: #d6d6d6;
 		color: #fff;
-		text-shadow: 0px -1px #aeaeae;
-		box-shadow: none;
+		// text-shadow: 0px -1px #aeaeae;
+		// box-shadow: none;
 	}
 }
 
@@ -297,7 +305,7 @@ $btn-lh: 1.5;
 	position: relative;
 	display: inline-block;
 	width: $wth;
-	height: $he;
+	height: $he; 
 	padding: 1px 5px 0px;
 	margin: 0 auto;
 	box-sizing: border-box;
@@ -305,7 +313,7 @@ $btn-lh: 1.5;
 	font-size: 13px;
 	line-height: 1.6;
 	cursor: pointer;
-	border-radius: 3px;
+	// border-radius: 3px;
 	background: #fff;
 	border-color: #cdcdcd;
 	color: #444;
@@ -313,8 +321,8 @@ $btn-lh: 1.5;
 
 // 색상별 버튼
 @mixin btn-gray($wth: null, $he:null, $fz: null, $pd: null) {
-	//	@include btn-base(null, null, #f7f7f7, #b9babc, #6e7a86);
-	@include btn-base(null, null, #f2f0f0, #b9babc, #333);
+	// @include btn-base(null, null, #f2f0f0, #b9babc, #333);
+	@include btn-base(null, null, #fff, #c7c7c7, #333);
 	width: $wth;
 	height: $he;
 	font-size: $fz;
@@ -326,8 +334,9 @@ $btn-lh: 1.5;
 	background-position: 50% 50%;
 
 	&:hover {
-		text-shadow: 0px 1px #fff;
-		background: #dae3e7;
+		// text-shadow: 0px 1px #fff;
+		// background: #dae3e7;
+		background: #dcdcdc;
 	}
 
 	//	&[disabled] {
@@ -346,9 +355,9 @@ $btn-lh: 1.5;
 		text-shadow: none;
 	}
 }
-
+// 디자인 변경으로 green은 orange로 
 @mixin btn-green($wth: null, $he:null, $fz: null, $pd: null) {
-	@include btn-base(null, null, #84c35c, #69994d, #deffbb, #729a59);
+	@include btn-base(null, null, #f4774d, #e0592c, #fff);
 	width: $wth;
 	height: $he;
 	font-size: $fz;
@@ -356,12 +365,25 @@ $btn-lh: 1.5;
 
 	&:hover {
 		color: #fff;
-		background: #66ba2c;
+		background: #e23900;
+		border-color: #e0592c;
 	}
 }
+// @mixin btn-green($wth: null, $he:null, $fz: null, $pd: null) {
+// 	@include btn-base(null, null, #84c35c, #69994d, #deffbb, #729a59);
+// 	width: $wth;
+// 	height: $he;
+// 	font-size: $fz;
+// 	padding: $pd;
+
+// 	&:hover {
+// 		color: #fff;
+// 		background: #66ba2c;
+// 	}
+// }
 
 @mixin btn-red($wth: null, $he:null, $fz: null, $pd: null) {
-	@include btn-base(null, null, #BB4749, #882f29, #ffccc8, #9a4040);
+	@include btn-base(null, null, #e44e4e, #821800, #fff);
 	width: $wth;
 	height: $he;
 	font-size: $fz;
@@ -369,12 +391,12 @@ $btn-lh: 1.5;
 
 	&:hover {
 		color: #fff;
-		background: #ba383a;
+		background: #be1c1c;
 	}
 }
 
 @mixin btn-blue($wth: null, $he:null, $fz: null, $pd: null) {
-	@include btn-base(null, null, #5394cc, #1a70ba, #dfeffc, #34668c);
+	@include btn-base(null, null, #3580b9, #004982, #fff);
 	width: $wth;
 	height: $he;
 	font-size: $fz;
@@ -382,7 +404,7 @@ $btn-lh: 1.5;
 
 	&:hover {
 		color: #fff;
-		background: #237dc9;
+		background: #0e65a7;
 	}
 }
 
@@ -400,7 +422,7 @@ $btn-lh: 1.5;
 }
 
 @mixin btn-orange($wth: null, $he:null, $fz: null, $pd: null) {
-	@include btn-base(null, null, #f77c25, rgba(0, 0, 0, .15), rgba(255, 255, 255, .85), rgba(0, 0, 0, .2));
+	@include btn-base(null, null, #f4774d, #e0592c, #fff);
 	width: $wth;
 	height: $he;
 	font-size: $fz;
@@ -408,9 +430,22 @@ $btn-lh: 1.5;
 
 	&:hover {
 		color: #fff;
-		background: #f76803;
+		background: #e23900;
+		border-color: #e0592c;
 	}
 }
+// @mixin btn-orange($wth: null, $he:null, $fz: null, $pd: null) {
+// 	@include btn-base(null, null, #f77c25, rgba(0, 0, 0, .15), rgba(255, 255, 255, .85), rgba(0, 0, 0, .2));
+// 	width: $wth;
+// 	height: $he;
+// 	font-size: $fz;
+// 	padding: $pd;
+
+// 	&:hover {
+// 		color: #fff;
+// 		background: #f76803;
+// 	}
+// }
 
 @mixin btn-pd-lr($pl: 15px, $pr: 15px, $ls: 0, $fz: null) {
 	padding-left: $pl;
@@ -431,7 +466,7 @@ $btn-lh: 1.5;
 	font-size: $fz;
 	padding: $pd;
 	font-family: $font-ntss;
-	color: #908270;
+	color: $fg-page-tit;
 }
 
 // cont-tit
@@ -441,7 +476,7 @@ $btn-lh: 1.5;
 	background: #f0f0f0;
 	padding: 20px 15px 15px 15px;
 	margin-top: 20px;
-	border-radius: 5px;
+	// border-radius: 5px;
 
 	.cont-tit {
 		@include position(absolute, -20px, 15px);
@@ -450,7 +485,7 @@ $btn-lh: 1.5;
 		font-size: 13px;
 		padding: 5px 10px;
 		background: #f0f0f0;
-		border-radius: 5px;
+		// border-radius: 5px;
 
 		strong,
 		label {
@@ -675,9 +710,11 @@ $btn-lh: 1.5;
 }
 
 // 테이블
-@mixin tbl-base($bd-c: $bdg-tblBase, $th-bg: $bg-tblBase-th, $td-bg: #fff) {
+// @mixin tbl-base($bd-c: $bdg-tblBase, $th-bg: $bg-tblBase-th, $td-bg: #fff) {
+@mixin tbl-base($bd-c: $bor-gray-table, $th-bg: $bg-tblBase-th, $td-bg: #fff) {
 	width: 100%;
 	border: 1px solid $bd-c;
+	border-top: 2px solid $bdg-tblTop;
 	border-bottom: none;
 	table-layout: fixed;
 	&.auto {
@@ -733,7 +770,7 @@ $btn-lh: 1.5;
 				// margin-left: -5px;
 				margin-left: 2px;
 				font-size: 10px;
-				color: #73787D;
+				color: #444;
 			}
 
 			&:hover:after {
@@ -771,7 +808,8 @@ $btn-lh: 1.5;
 // 테이블 - 스타일1 property-tbl 스타일
 // th, td {background: $bg-tblBase;}
 // th {border-left: 1px solid #dashed $bd-c;}
-@mixin tbl-style-1($bd-c: $bdg-tblBase, $bg: $bg-tblBase) {
+// @mixin tbl-style-1($bd-c: $bdg-tblBase, $bg: $bg-tblBase) {
+@mixin tbl-style-1($bd-c: $bor-gray-table, $bg: #fff) {
 	width: 100%;
 	border: 1px solid $bd-c;
 	border-bottom: none;
@@ -828,7 +866,7 @@ $btn-lh: 1.5;
 				// margin-left: -5px;
 				margin-left: 2px;
 				font-size: 10px;
-				color: #73787D;
+				color: #444;
 			}
 
 			&:hover:after {
@@ -866,269 +904,265 @@ $btn-lh: 1.5;
 }
 
 // x측 스크롤 테이블 - brown 테마
-@mixin grid-scr-brown($scr-wth: 580px, $wth: 100%, $bd-r: null, $bd-c: $bdg-tblBase) {
-	width: $wth;
-	border: 1px solid $bd-c;
-	overflow: hidden;
-	box-sizing: border-box;
-	border-radius: $bd-r;
-	$ie8-wth: 1740px;
+// @mixin grid-scr-brown($scr-wth: 580px, $wth: 100%, $bd-r: null, $bd-c: $bdg-tblBase) {
+// 	width: $wth;
+// 	border: 1px solid $bd-c;
+// 	overflow: hidden;
+// 	box-sizing: border-box;
+// 	border-radius: $bd-r;
+// 	$ie8-wth: 1740px;
 
-	.grid-tbl {
-		.ie8 & {
-			width: $ie8-wth;
-		}
+// 	.grid-tbl {
+// 		.ie8 & {
+// 			width: $ie8-wth;
+// 		}
 
-		width: 100%;
-		table-layout: fixed;
-		border: none;
-		border-right: 1px solid $bd-c;
+// 		width: 100%;
+// 		table-layout: fixed;
+// 		border: none;
+// 		border-right: 1px solid $bd-c;
 
-		th,
-		td {
-			// min-height: 39px;
-			height: 28px;
-			border-bottom: 1px solid $bd-c;
-			color: #666;
-			font-size: 12px;
+// 		th,
+// 		td {
+// 			height: 28px;
+// 			border-bottom: 1px solid $bd-c;
+// 			color: #666;
+// 			font-size: 12px;
 
-			.cell {
-				position: relative;
-				@include clearfix;
-				padding: 3px 7px;
+// 			.cell {
+// 				position: relative;
+// 				@include clearfix;
+// 				padding: 3px 7px;
 
-				&.pd-0 {
-					padding-top: 0;
-					padding-bottom: 0px;
-				}
+// 				&.pd-0 {
+// 					padding-top: 0;
+// 					padding-bottom: 0px;
+// 				}
 
-				&.necess {
-					background: url("../../img/tick-small-red.png") no-repeat 100% 58%;
-				}
-			}
-		}
+// 				&.necess {
+// 					background: url("../../img/tick-small-red.png") no-repeat 100% 58%;
+// 				}
+// 			}
+// 		}
 
-		th:first-child,
-		td:first-child {
-			border-left: none;
-		}
+// 		th:first-child,
+// 		td:first-child {
+// 			border-left: none;
+// 		}
 
-		th {
-			border-left: 1px solid $bd-c;
-			overflow: visible;
-			color: #444;
-			text-align: center;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			white-space: nowrap;
+// 		th {
+// 			border-left: 1px solid $bd-c;
+// 			overflow: visible;
+// 			color: #444;
+// 			text-align: center;
+// 			overflow: hidden;
+// 			text-overflow: ellipsis;
+// 			white-space: nowrap;
 
-			.cell {
-				font-weight: 700;
-			}
+// 			.cell {
+// 				font-weight: 700;
+// 			}
 
-			.cell.order-ui {
-				cursor: pointer;
+// 			.cell.order-ui {
+// 				cursor: pointer;
 
-				&:after {
-					content: "▼";
-					position: relative;
-					display: none;
-					margin-left: 2px;
-					font-size: 10px;
-					color: #73787D;
-				}
+// 				&:after {
+// 					content: "▼";
+// 					position: relative;
+// 					display: none;
+// 					margin-left: 2px;
+// 					font-size: 10px;
+// 					color: #444;
+// 				}
 
-				&:hover:after {
-					display: inline;
-				}
+// 				&:hover:after {
+// 					display: inline;
+// 				}
 
-				&.ascending:after {
-					content: "▲";
-				}
-			}
-		}
+// 				&.ascending:after {
+// 					content: "▲";
+// 				}
+// 			}
+// 		}
 
-		td {
-			border-left: 1px dashed $bd-c;
+// 		td {
+// 			border-left: 1px dashed $bd-c;
 
-			.cell {
+// 			.cell {
 
-				.chk-box,
-				.rdo-box {
-					input {
-						margin-right: 3px;
-					}
+// 				.chk-box,
+// 				.rdo-box {
+// 					input {
+// 						margin-right: 3px;
+// 					}
 
-					&+.chk-box,
-					&+.rdo-box {
-						margin-left: 5px;
-					}
-				}
+// 					&+.chk-box,
+// 					&+.rdo-box {
+// 						margin-left: 5px;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
 
-				.form-select {
-					// padding: 2px;
-				}
-			}
-		}
-	}
+// 	.grid-scrollable-x {
+// 		position: relative;
 
-	.grid-scrollable-x {
-		position: relative;
+// 		@if $scr-wth !=null {
+// 			overflow-x: scroll;
 
-		@if $scr-wth !=null {
-			overflow-x: scroll;
+// 			&:after {
+// 				content: "";
+// 				position: absolute;
+// 				left: 0;
+// 				bottom: 0;
+// 				display: block;
+// 				height: 1px;
+// 				width: $scr-wth;
+// 				background: $bd-c;
+// 			}
+// 		}
 
-			&:after {
-				content: "";
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				display: block;
-				height: 1px;
-				width: $scr-wth;
-				background: $bd-c;
-			}
-		}
+// 		@else {
+// 			overflow-x: hidden;
+// 		}
+// 	}
 
-		@else {
-			overflow-x: hidden;
-		}
-	}
+// 	.grid-area {
+// 		position: relative;
+// 		width: $scr-wth;
 
-	.grid-area {
-		position: relative;
-		width: $scr-wth;
+// 		&.grid-head {
+// 			.grid-scrollable {
+// 				width: $scr-wth;
+// 				border-bottom: 1px solid $bd-c;
+// 				background: url(../../img/gridheadBg.png) repeat-x;
+// 			}
 
-		&.grid-head {
-			.grid-scrollable {
-				width: $scr-wth;
-				// background: $bg-tblBase-th;
-				border-bottom: 1px solid $bd-c;
-				background: url(../../img/gridheadBg.png) repeat-x;
-			}
+// 			.grid-tbl {
+// 				@if $scr-wth !=null {
+// 					width: calc(#{$scr-wth} - 17px);
+// 				}
 
-			.grid-tbl {
-				@if $scr-wth !=null {
-					width: calc(#{$scr-wth} - 17px);
-				}
+// 				@else {
+// 					width: -webkit-calc(#{$wth} - 17px);
+// 					width: -moz-calc(#{$wth} - 17px);
+// 					width: calc(#{$wth} - 17px);
+// 				}
 
-				@else {
-					width: -webkit-calc(#{$wth} - 17px);
-					width: -moz-calc(#{$wth} - 17px);
-					width: calc(#{$wth} - 17px);
-				}
+// 				th {
+// 					border-bottom: none;
+// 					background: url(../../img/gridheadBg.png) repeat-x;
+// 				}
+// 			}
+// 		}
 
-				th {
-					border-bottom: none;
-					background: url(../../img/gridheadBg.png) repeat-x;
-				}
-			}
-		}
+// 		&.grid-contents {
+// 			overflow-y: scroll;
+// 			height: 100px;
+// 			background: #fff;
+// 			background: $bg-tblBase;
 
-		&.grid-contents {
-			overflow-y: scroll;
-			height: 100px;
-			background: #fff;
-			background: $bg-tblBase;
+// 			.grid-tbl {
+// 				td {
+// 					border-bottom: none;
 
-			.grid-tbl {
-				td {
-					border-bottom: none;
+// 					.ie8 .grid-tbl {
+// 						td {
+// 							border-bottom: 1px solid $bdg-tblBase;
+// 						}
+// 					}
+// 				}
 
-					.ie8 .grid-tbl {
-						td {
-							border-bottom: 1px solid $bdg-tblBase;
-						}
-					}
-				}
+// 				tr:last-child {
+// 					td {
+// 						border-bottom: 1px solid $bdg-tblBase;
+// 					}
+// 				}
 
-				tr:last-child {
-					td {
-						border-bottom: 1px solid $bdg-tblBase;
-					}
-				}
+// 				tr:nth-child(2n-1) {
 
-				tr:nth-child(2n-1) {
+// 					th,
+// 					td {
+// 						background: #fff;
+// 					}
+// 				}
 
-					th,
-					td {
-						background: #fff;
-					}
-				}
+// 				tr:nth-child(2n) {
 
-				tr:nth-child(2n) {
+// 					th,
+// 					td {
+// 						background: #f7f7f7;
+// 					}
+// 				}
 
-					th,
-					td {
-						background: #f7f7f7;
-					}
-				}
+// 				tr:hover {
+// 					td {
+// 						background: #fde9d9;
+// 					}
+// 				}
+// 			}
+// 		}
 
-				tr:hover {
-					td {
-						background: #dad3d0;
-					}
-				}
-			}
-		}
+// 		&.grid-total {
+// 			.grid-tbl {
+// 				border-top: 1px solid $bor-gray-table;
+// 				border-right: 0;
+// 				th,
+// 				td {
+// 					background: #f5f5f5;
+// 					color: #2e2e2e;
+// 					border-bottom: 0;
+// 				}
+// 				td {
+// 					&.last {
+// 						.cell.inBl {
+// 							margin-right: 17px;
+// 						}
 
-		&.grid-total {
-			.grid-tbl {
-				border-top: 1px solid $bor-gray-table;
-				border-right: 0;
-				th,
-				td {
-					background: #f5f5f5;
-					color: #2e2e2e;
-					border-bottom: 0;
-				}
-				td {
-					&.last {
-						.cell.inBl {
-							margin-right: 17px;
-						}
-
-						.square {
-							position: absolute;
-							top: 0;
-							right: 0;
-							display: inline-block;
-							height: 100%;
-							padding: 0;
-							border-left: 1px solid #c5c5c5;
-							width: 17px;
-							box-sizing: border-box;
-						}
-					}
-				}
-			}
-			.grid-scrollable {
-				width: $scr-wth;
-				background-color: #f5f5f5;
-				border-top: 1px solid $bor-gray-table;
-				.grid-tbl {
-					border-top: 0;
-					border-right: 1px solid $bor-gray-table;
+// 						.square {
+// 							position: absolute;
+// 							top: 0;
+// 							right: 0;
+// 							display: inline-block;
+// 							height: 100%;
+// 							padding: 0;
+// 							border-left: 1px solid #c5c5c5;
+// 							width: 17px;
+// 							box-sizing: border-box;
+// 						}
+// 					}
+// 				}
+// 			}
+// 			.grid-scrollable {
+// 				width: $scr-wth;
+// 				background-color: #f5f5f5;
+// 				border-top: 1px solid $bor-gray-table;
+// 				.grid-tbl {
+// 					border-top: 0;
+// 					border-right: 1px solid $bor-gray-table;
 	
-					@if $scr-wth !=null {
-						width: calc(#{$scr-wth} - 17px);
-					}
+// 					@if $scr-wth !=null {
+// 						width: calc(#{$scr-wth} - 17px);
+// 					}
 	
-					@else {
-						width: -webkit-calc(#{$wth} - 17px);
-						width: -moz-calc(#{$wth} - 17px);
-						width: calc(#{$wth} - 17px);
-					}
-				}
-			}
-		}
-	}
-}
+// 					@else {
+// 						width: -webkit-calc(#{$wth} - 17px);
+// 						width: -moz-calc(#{$wth} - 17px);
+// 						width: calc(#{$wth} - 17px);
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 // x측 스크롤 테이블 - gray 테마
 @mixin grid-scr-x($scr-wth: 580px, $wth: 100%, $bd-r: null, $bd-c: $bor-gray-table) {
 	width: $wth;
+	background: #ffffff;
 	border: 1px solid $bd-c;
+	border-top: 2px solid $bdg-tblTop;
 	overflow: hidden;
 	box-sizing: border-box;
 	border-radius: $bd-r;
@@ -1198,7 +1232,7 @@ $btn-lh: 1.5;
 					// margin-left: -5px;
 					margin-left: 2px;
 					font-size: 10px;
-					color: #73787D;
+					color: #444;
 				}
 
 				&:hover:after {
@@ -1317,7 +1351,259 @@ $btn-lh: 1.5;
 
 				tr:hover {
 					td {
-						background: #dad3d0;
+						// background: #dad3d0;
+						background: #fde9d9;
+					}
+				}
+			}
+		}
+
+		&.grid-total {
+			.grid-tbl {
+				border-top: 1px solid $bor-gray-table;
+				border-right: 0;
+				th,
+				td {
+					background: #f5f5f5;
+					color: #2e2e2e;
+					border-bottom: 0;
+				}
+				td {
+					&.last {
+						.cell.inBl {
+							margin-right: 17px;
+						}
+
+						.square {
+							position: absolute;
+							top: 0;
+							right: 0;
+							display: inline-block;
+							height: 100%;
+							padding: 0;
+							border-left: 1px solid #c5c5c5;
+							width: 17px;
+							box-sizing: border-box;
+						}
+					}
+				}
+			}
+			.grid-scrollable {
+				width: $scr-wth;
+				background-color: #f5f5f5;
+				border-top: 1px solid #c5c5c5;
+				.grid-tbl {
+					border-top: 0;
+					border-right: 1px solid #c5c5c5;
+	
+					@if $scr-wth !=null {
+						width: calc(#{$scr-wth} - 17px);
+					}
+	
+					@else {
+						width: -webkit-calc(#{$wth} - 17px);
+						width: -moz-calc(#{$wth} - 17px);
+						width: calc(#{$wth} - 17px);
+					}
+				}
+			}
+		}
+	}
+}
+@mixin grid-scr-brown($scr-wth: 580px, $wth: 100%, $bd-r: null, $bd-c: $bor-gray-table) {
+	width: $wth;
+	background: #ffffff;
+	border: 1px solid $bd-c;
+	border-top: 2px solid $bdg-tblTop;
+	overflow: hidden;
+	box-sizing: border-box;
+	border-radius: $bd-r;
+	$ie8-wth: 1740px;
+
+	.grid-tbl {
+		.ie8 & {
+			width: $ie8-wth;
+		}
+
+		width: 100%;
+		table-layout: fixed;
+		border: none;
+		border-right: 1px solid $bd-c;
+
+		th,
+		td {
+			// min-height: 39px;
+			height: 28px;
+			border-bottom: 1px solid $bd-c;
+			color: #666;
+			font-size: 12px;
+
+			.cell {
+				position: relative;
+				@include clearfix;
+				padding: 3px 7px;
+
+				&.pd-0 {
+					padding-top: 0;
+					padding-bottom: 0px;
+				}
+
+				&.necess {
+					background: url("../../img/tick-small-red.png") no-repeat 100% 58%;
+				}
+			}
+		}
+
+		th:first-child,
+		td:first-child {
+			border-left: none;
+		}
+
+		th {
+			border-left: 1px solid $bd-c;
+			overflow: visible;
+			color: #444;
+			text-align: center;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			font-weight: 700;
+
+			.cell {}
+
+			.cell.order-ui {
+				cursor: pointer;
+
+				&:after {
+					content: "▼";
+					position: relative;
+					display: none;
+					// position: absolute;
+					// top: -6px;
+					// left: 50%;
+					// margin-left: -5px;
+					margin-left: 2px;
+					font-size: 10px;
+					color: #444;
+				}
+
+				&:hover:after {
+					display: inline;
+				}
+
+				&.ascending:after {
+					content: "▲";
+				}
+			}
+		}
+
+		td {
+			border-left: 1px solid $bd-c;
+
+			.cell {
+
+				.chk-box,
+				.rdo-box {
+					input {
+						margin-right: 3px;
+					}
+
+					&+.chk-box,
+					&+.rdo-box {
+						margin-left: 5px;
+					}
+				}
+
+				.form-select {
+					// padding: 2px;
+				}
+			}
+		}
+	}
+
+	.grid-scrollable-x {
+		position: relative;
+
+		@if $scr-wth !=null {
+			overflow-x: scroll;
+
+			&:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				display: block;
+				height: 1px;
+				width: $scr-wth;
+				background: $bd-c;
+			}
+		}
+
+		@else {
+			overflow-x: hidden;
+		}
+	}
+
+	.grid-area {
+		position: relative;
+		width: $scr-wth;
+
+		&.grid-head {
+			.grid-scrollable {
+				width: $scr-wth;
+				background: $bg-tblBase-th;
+				border-bottom: 1px solid $bd-c;
+				background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
+				background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+				background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+				background-position: 50% 50%;
+				background-color: #eae8e8;
+			}
+
+			.grid-tbl {
+				@if $scr-wth !=null {
+					width: calc(#{$scr-wth} - 17px);
+				}
+
+				@else {
+					width: -webkit-calc(#{$wth} - 17px);
+					width: -moz-calc(#{$wth} - 17px);
+					width: calc(#{$wth} - 17px);
+				}
+
+				th {
+					border-bottom: none;
+					background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
+					background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+					background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+					background-position: 50% 50%;
+					background-color: #eae8e8;
+
+					&.bor {
+						border-bottom: 1px solid $bd-c;
+					}
+				}
+			}
+		}
+
+		&.grid-contents {
+			overflow-y: scroll;
+			height: 100px;
+			background: #fff;
+
+			.grid-tbl {
+				tr:nth-child(2n) {
+
+					th,
+					td {
+						background: #fbfbfb;
+						background: #f1f1f1;
+					}
+				}
+
+				tr:hover {
+					td {
+						background: #fde9d9;
 					}
 				}
 			}
@@ -1378,6 +1664,7 @@ $btn-lh: 1.5;
 
 // 좌측 락 포함
 @mixin grid-scr-x2($l-wth: 180px, $scr-wth: 580px, $wth: 100%, $bd-r: null, $bd-c: $bor-gray-table) {
+	background: #ffffff;
 	$gridContents-he: 613px;
 	margin-top: 10px;
 	border: 1px solid $bd-c;
@@ -1442,7 +1729,7 @@ $btn-lh: 1.5;
 					// margin-left: -5px;
 					margin-left: 2px;
 					font-size: 10px;
-					color: #73787D;
+					color: #444;
 				}
 
 				&:hover:after {
@@ -1598,6 +1885,7 @@ $btn-lh: 1.5;
 // 좌측 락 포함 + 우측 스크롤바
 @mixin grid-scr-x2r($l-wth: 180px, $scr-wth: 580px, $wth: 100%, $bd-r: null, $bd-c: $bor-gray-table) {
 	//	$scr-wth: $scr;
+	background: #ffffff;
 	$gridContents-he: 613px;
 	$gridContents-he: 213px;
 	margin-top: 10px;
@@ -1757,7 +2045,7 @@ $btn-lh: 1.5;
 						// margin-left: -5px;
 						margin-left: 2px;
 						font-size: 10px;
-						color: #73787D;
+						color: #444;
 					}
 
 					&:hover:after {
@@ -1814,152 +2102,3 @@ $btn-lh: 1.5;
 // .grie-wrap
 
 
-// 이전 mixins
-
-// 기존 버튼, 그리드
-@mixin btn-default($fz: 14px, $pd: 4px 12px) {
-	display: inline-block;
-	font-size: $fz;
-	padding: $pd;
-	box-sizing: border-box;
-	margin-bottom: 0;
-	line-height: 20px;
-	color: #333333;
-	text-align: center;
-	//    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-	vertical-align: middle;
-	cursor: pointer;
-	background-color: #f5f5f5;
-	background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-	background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
-	background-repeat: repeat-x;
-	border: 1px solid #cccccc;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
-	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	font-family: $font-ntss;
-}
-
-// 그리드 스타일1
-@mixin grid-wrap-style1 {
-	margin-top: 5px;
-	font-size: 12px;
-	$grid-bor-1: 1px solid $bor-gray-table;
-
-	.grid-area {
-		.grid-tbl {
-			border-collapse: collapse;
-			width: 100%;
-			border-top: 2px solid $bor-gray-tableTop;
-
-			tr {
-
-				th,
-				td {
-					position: relative;
-					border-left: $grid-bor-1;
-					border-bottom: $grid-bor-1;
-					box-sizing: border-box;
-					padding: 8px;
-					padding-top: 8px;
-					padding-bottom: 7px;
-					vertical-align: middle;
-					line-height: normal;
-
-					&:first-child {
-						border-left: 0;
-					}
-				}
-
-				&.division {
-
-					th,
-					td {
-						border: $grid-bor-1;
-						border-color: $grid-bor-division;
-						padding: 0;
-						line-height: 0;
-					}
-				}
-
-				th {
-					background: #f4f5f7;
-				}
-
-				&:nth-child(2n-1) {
-					//					background: #f1f1f1;
-				}
-
-				td {
-					padding-top: 6px;
-					padding-bottom: 6px;
-
-					&.nothing {
-						padding: 15px 8px;
-					}
-				}
-			}
-		}
-	}
-}
-
-// 페이지 버튼
-@mixin pagenation {
-	margin-top: 20px;
-	font-family: $font-ntss;
-	text-align: center;
-	font-size: 0;
-
-	a {
-		display: inline-block;
-		font-size: 13px;
-		width: 32px;
-		height: 32px;
-		vertical-align: middle;
-		line-height: 33px;
-		border: 1px solid #ccc;
-		color: #919191;
-		font-family: "Nanum Gothic";
-		font-weight: 600;
-		margin-left: 2px;
-		margin-right: 2px;
-
-		&:hover {
-			border: 1px solid #000;
-			color: #000;
-		}
-	}
-
-	a[class*="prev"],
-	a[class*="next"] {
-		font-size: 12px;
-		line-height: 32px;
-		letter-spacing: -2px;
-	}
-
-	a.on {
-		border: 1px solid #000;
-		color: #000;
-	}
-
-	a.prev {
-		text-indent: -4px;
-	}
-
-	a.pprev {
-		text-indent: -3px;
-	}
-
-	a.next {
-		text-indent: 1px;
-	}
-}

@@ -1,24 +1,25 @@
 @charset "utf-8";
 
 @import "../parts/common";
-@import "../include/snb_notice";
+@import "../include/snb_notice.scss";
 
 /* 공통 스타일 */
 .contents .cont-common-1 {
 	position: relative;
 	box-sizing: border-box;
-	background: #f0f0f0;
-	padding: 20px 15px;
-	margin-top: 20px;
-	border-radius: 5px;
+	// background: #f0f0f0;
+	background: #fff;
+	padding: 45px 15px 15px;
+	// margin-top: 20px;
+	// border-radius: 5px;
 	.cont-tit {
-		@include position(absolute, -20px, 15px);
+		@include position(absolute, 12px);
 		@include show-reset;
 		color: $fg-legend;
 		font-size: 13px;
-		padding: 5px 10px;
-		background: #f0f0f0;
-		border-radius: 5px;
+		// padding: 5px 10px;
+		// background: #f0f0f0;
+		// border-radius: 5px;
 		strong, label {
 			font-weight: 700;
 		}
@@ -38,7 +39,7 @@
 			}
 		}
 	}
-	.btn-gray, .btn-green, .btn-green, .btn-red, .btn-blue {
+	.btn-gray, .btn-green, .btn-green, .btn-red, .btn-blue, .btn-brown {
 		font-size: 11px;
 		padding: 2px 4px;
 	}
@@ -230,8 +231,8 @@
 				.tab {
 					display: inline-block;
 					padding: 5px 12px;
-					border-top-left-radius: 5px;
-					border-top-right-radius: 5px;
+					// border-top-left-radius: 5px;
+					// border-top-right-radius: 5px;
 					background: #f7f7f7;
 					border: 1px solid #c5c5c5;
 					font-size: 12px;
@@ -265,7 +266,7 @@
 					border: 1px solid #a9a9a9;
 					margin-top: -1px;
 					.grid-wrap.scr-wrap {
-						@include grid-scr-x(null, 100%, 4px);
+						@include grid-scr-x(null, 100%);
 						.grid-tbl {
 							.ie8 & {
 								width: 581px;
@@ -354,20 +355,15 @@
 				}
 			}
 			.row-txt {
+				@include gray-gradient;
 				clear: both;
-				border: 1px solid $bdg-tblBase;
+				border: 1px solid $bor-gray-table;
 				border-top: none;
 				padding: 8px 7px;
 				text-align: right;
 				font-size: 12px;
 				color: #666;
 				line-height: 1.2;
-				background: #fafafa;
-				background-color: #eae8e8;
-				background-image: none,-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.8)),to(rgba(255,255,255,0)));
-				background-image: none,-webkit-linear-gradient(top,rgba(255,255,255,.8) 0,rgba(255,255,255,0) 100%);
-				background-image: none,linear-gradient(to bottom,rgba(255,255,255,.8) 0,rgba(255,255,255,0) 100%);
-				background-position: 50% 50%;
 				.num {
 					color: $fg-orange-2;
 				}
@@ -402,7 +398,7 @@
 		.cont-rsvList {
 			float: none;
 			.grid-wrap.scr-wrap {
-				@include grid-scr-x(null, 100%, 4px);
+				@include grid-scr-x(null, 100%);
 				.grid-area.grid-contents {
 					background: #fff;
 					height: 200px;
@@ -441,7 +437,7 @@
 	}
 
 	.cont-booker, .cont-rsvList {
-		margin-top: 30px;
+		margin-top: 15px;
 	}
 
 }
@@ -635,8 +631,8 @@
 				.tab {
 					display: inline-block;
 					padding: 5px 12px;
-					border-top-left-radius: 5px;
-					border-top-right-radius: 5px;
+					// border-top-left-radius: 5px;
+					// border-top-right-radius: 5px;
 					background: #f7f7f7;
 					border: 1px solid #c5c5c5;
 					font-size: 12px;
@@ -670,7 +666,7 @@
 					border: 1px solid #a9a9a9;
 					margin-top: -1px;
 					.grid-wrap.scr-wrap {
-						@include grid-scr-x(null, 100%, 4px);
+						@include grid-scr-x(null, 100%);
 						.grid-tbl {
 							.ie8 & {
 								width: 581px;
@@ -703,7 +699,7 @@
 			}
 			float: none;
 			.grid-wrap.scr-wrap.grid-wrap-1 {
-				@include grid-scr-x(null, 100%, 4px);
+				@include grid-scr-x(null, 100%);
 				.grid-area.grid-contents {
 					background: #fff;
 					height: 200px;
@@ -729,8 +725,8 @@
 				$btn-lh: 1.5;
 				width: 100%;
 				border: 1px solid $bor-gray-table;
-				border-top-left-radius: 4px;
-				border-top-right-radius: 4px;
+				// border-top-left-radius: 4px;
+				// border-top-right-radius: 4px;
 				padding: 4px;
 				margin-top: 10px;
 				margin-bottom: -1px;
@@ -747,7 +743,7 @@
 				}
 			}
 			.grid-wrap.scr-wrap.grid-wrap-2 {
-				@include grid-scr-x(1440px, 100%, 0 0 4px 4px);
+				@include grid-scr-x(1440px, 100%);
 				.grid-area.grid-contents {
 					background: #fff;
 					height: 380px;
@@ -799,8 +795,8 @@
 		}
 	}
 
-	.cont-booker, .cont-rsvList {
-		margin-top: 30px;
+	.cont-booker {
+		margin-top: 15px;
 	}
 
 }
@@ -837,7 +833,7 @@
 	}
 	.cont-roomInv {
 		.grid-container {
-			@include grid-scr-x2(180px, 2000px, 100%, 4px);
+			@include grid-scr-x2(180px, 2000px, 100%);
 			$ie8-wth: 1583px;
 			.ie8 .grid-area.grid-locked {
 				width: 180px;
@@ -1036,7 +1032,7 @@
 	.cont-list {
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-x(null, 100%, 4px);
+			@include grid-scr-x(null, 100%);
 			.grid-area.grid-contents {
 				background: #fff;
 				height: 700px;
@@ -1065,7 +1061,7 @@
 	.cont-property {
 		background: #f0f0f0;
 		padding: 10px;
-		border-radius: 4px;
+		// border-radius: 4px;
 		.property-tbl {
 			@include tbl-style-1;
 			td {
@@ -1125,7 +1121,7 @@
 	.cont-list {
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-x(4989px, 100%, 4px 4px 0 0);
+			@include grid-scr-x(4989px, 100%);
 			$ie8-wth: 4989px;
 			.grid-area.grid-head {
 				.grid-tbl {
@@ -1421,7 +1417,7 @@
 	.cont-list {
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-x(2700px, 100%, 4px 4px 0 0);
+			@include grid-scr-x(2700px, 100%);
 			.grid-area.grid-contents {
 				background: #fff;
 				height: 377px;
@@ -1474,8 +1470,8 @@
 			.tab {
 				display: inline-block;
 				padding: 5px 20px;
-				border-top-left-radius: 5px;
-				border-top-right-radius: 5px;
+				// border-top-left-radius: 5px;
+				// border-top-right-radius: 5px;
 				background: #f7f7f7;
 				border: 1px solid #c5c5c5;
 				font-size: 12px;
@@ -1599,8 +1595,8 @@
 					$btn-lh: 1.5;
 					width: 100%;
 					border: 1px solid $bor-gray-table;
-					border-top-left-radius: 4px;
-					border-top-right-radius: 4px;
+					// border-top-left-radius: 4px;
+					// border-top-right-radius: 4px;
 					padding: 4px;
 					margin-top: 10px;
 					margin-bottom: -1px;
@@ -1618,7 +1614,7 @@
 					}
 				}
 				.grid-wrap.scr-wrap {
-					@include grid-scr-x(null, 100%, 4px);
+					@include grid-scr-x(null, 100%);
 					.grid-tbl {
 						.ie8 & {
 							width: 581px;
@@ -1652,8 +1648,8 @@
 		.tab {
 			display: inline-block;
 			padding: 5px 20px;
-			border-top-left-radius: 5px;
-			border-top-right-radius: 5px;
+			// border-top-left-radius: 5px;
+			// border-top-right-radius: 5px;
 			background: #f7f7f7;
 			border: 1px solid #c5c5c5;
 			font-size: 12px;
@@ -1724,7 +1720,7 @@
 			.cont-list {
 				margin-top: 10px;
 				.grid-wrap {
-					@include grid-scr-x(null, 100%, 4px);
+					@include grid-scr-x(null, 100%);
 					.grid-area.grid-contents {
 						background: #fff;
 						height: 630px;
