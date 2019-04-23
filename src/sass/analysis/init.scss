@@ -38,17 +38,25 @@
                         position: relative;
                         th {
                             position: relative;
+                            padding: 4px;
+                            &.datepicker-switch {
+                                padding-left: 20px;
+                                padding-right: 20px;
+                            }
                             &:hover {
                                 background: none;
                             }
                             //좌우버튼 공통
                             @mixin yearbtn-com {
+                                position: absolute;
+                                z-index: 10;
                                 width: 20px;
                                 height: 20px;
-                                margin-top: 4px;
+                                top: 0;
+                                margin-top: 0;
                                 text-indent: -9999px;
                                 font-size: 0;
-                                border: 1px solid transparent;
+                                border: 0;
                                 .ie8 & {
                                     text-indent: 0;
                                     font-size: 12px;
@@ -73,7 +81,6 @@
                                 }
 
                                 &:hover {
-                                    border-color: #ccc;
                                     border-radius: 4px;
                                     background: #bcb4b0;
                                     background-image: none,-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.4)),to(rgba(255,255,255,0)));
@@ -85,6 +92,7 @@
                             }
                             &.prev {
                                 @include yearbtn-com;
+                                left: 0;
                                 &:before {
                                     margin-left: -2px;
                                     border-right: 6px solid transparent;
@@ -93,6 +101,7 @@
                             }
                             &.next {
                                 @include yearbtn-com;
+                                right: 0;
                                 &:before {
                                     margin-left: -5px;
                                     border-left: 6px solid transparent;
@@ -199,7 +208,10 @@
                                 height: 27px;
                                 color: #313131;
                                 font-size: 12px;
-                                border-right: 1px solid $bor-gray-table;
+                                border-left: 1px solid $bor-gray-table;
+                                &:first-child {
+                                    border-left: 0;
+                                }
                                 .cell {
                                     position: relative;
                                     @include clearfix;
