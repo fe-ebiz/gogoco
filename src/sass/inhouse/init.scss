@@ -34,7 +34,7 @@
 	}
 	.cont-list {
 		.grid-container {
-			@include grid-scr-x2(245px, null, 100%, 4px);
+			@include grid-scr-x2(245px, null, 100%);
 			.scr-wrap {
 				.grid-tbl {
 					th {
@@ -79,7 +79,6 @@
 /* 도착목록 */
 .arvList-contents {
     .cont-property {
-        @include cont-tit;
 		.property-tbl {
 			@include tbl-style-1;
 			td {
@@ -99,7 +98,7 @@
     .cont-list {
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-x(null, 100%, 4px);
+			@include grid-scr-x(null, 100%);
 			.grid-area.grid-contents {
 				background: #fff;
 				height: 650px;
@@ -155,7 +154,7 @@
     .cont-list {
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-x(null, 100%, 4px 4px 0 0);
+			@include grid-scr-x(null, 100%);
 			.grid-area.grid-contents {
 				background: #fff;
 				height: 620px;
@@ -214,7 +213,7 @@
     .cont-list {
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-x(null, 100%, 4px 4px 0 0);
+			@include grid-scr-x(null, 100%);
 			.grid-area.grid-contents {
 				background: #fff;
 				height: 620px;

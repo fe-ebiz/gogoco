@@ -5,9 +5,9 @@
 /* 체크인 */
 .chkIn-contents {
 	.cont-property {
-		background: #f0f0f0;
-		padding: 10px;
-		border-radius: 4px;
+		// background: #f0f0f0;
+		// padding: 10px;
+		// border-radius: 4px;
 		.property-tbl {
 			@include tbl-style-1;
 			td {
@@ -71,7 +71,7 @@
 	.cont-list {
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-x(4050px, 100%, 4px 4px 0 0);
+			@include grid-scr-x(4050px, 100%);
 			$ie8-wth: 4050px;
 			.grid-area.grid-head {
 				.grid-tbl {
@@ -124,9 +124,6 @@
 /* 사내 */
 .inHouse-contents {
 	.cont-property {
-		background: #f0f0f0;
-		padding: 10px;
-		border-radius: 4px;
 		.property-tbl {
 			@include tbl-style-1;
 			td {
@@ -186,7 +183,7 @@
 	.cont-list {
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-x(3720px, 100%, 4px 4px 0 0);
+			@include grid-scr-x(3720px, 100%);
 			$ie8-wth: 3720px;
 			.grid-area.grid-head {
 				.grid-tbl {
@@ -250,9 +247,6 @@
 /* 출발 */
 .dep-contents {
 	.cont-property {
-		background: #f0f0f0;
-		padding: 10px;
-		border-radius: 4px;
 		.property-tbl {
 			@include tbl-style-1;
 			td {
@@ -316,7 +310,7 @@
 	.cont-list {
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-x(3450px, 100%, 4px 4px 0 0);
+			@include grid-scr-x(3450px, 100%);
 			$ie8-wth: 3450px;
 			.grid-area.grid-head {
 				.grid-tbl {
@@ -369,9 +363,6 @@
 /* 숙박 */
 .rmStay-contents {
 	.cont-property {
-		background: #f0f0f0;
-		padding: 10px;
-		border-radius: 4px;
 		.property-tbl {
 			@include tbl-style-1;
 			td {
@@ -431,7 +422,7 @@
 	.cont-list {
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-x(3720px, 100%, 4px 4px 0 0);
+			@include grid-scr-x(3720px, 100%);
 			$ie8-wth: 3720px;
 			.grid-area.grid-head {
 				.grid-tbl {
@@ -730,21 +721,28 @@
 								width: 50%;
 								padding-right: 30px;
 								border-bottom: 1px solid #b9babc;
+								font-size: 0;
 								.tab, .tabBtn {
 									position: relative;
 									display: inline-block;
-									background: #fff;
+									background: #f0f0f0;
 									border: 1px solid #b9babc;
+									font-size: 13px;
 									color: #6e6e6e;
 									padding: 2px 10px 0px;
 									line-height: 22px;
-									border-top-left-radius: 5px;
-									border-top-right-radius: 5px;
 									margin-bottom: -1px;
+									// border-top-left-radius: 5px;
+									// border-top-right-radius: 5px;
 									cursor: pointer;
+									margin-left: -1px;
+									&:first-child {
+										margin-left: 0;
+									}
 									&.on {
-										border-bottom-color: #f0f0f0;
-										background: #f0f0f0;
+										z-index: 1;
+										border-bottom-color: #fff;
+										background: #fff;
 									}
 								}
 								.tab-btn {
@@ -878,7 +876,7 @@
 											}
 										}
 										td {
-											border-left: 1px dashed $bor-gray-table;
+											border-left: 1px solid $bor-gray-table;
 											.cell {
 												.hSpace-5 {
 													font-size: 1px;
@@ -904,7 +902,7 @@
 													// 	outline: none;
 													// }
 													.inp-cal {
-														// @include form-base(100%, null, 4px);
+														// @include form-base(100%, null,;
 														// box-shadow: none;
 														// border: none;
 														// background: none;
@@ -940,7 +938,7 @@
 													}
 												}
 												.textarea-etc {
-													// @include form-base(150px, 80px, 4px);
+													// @include form-base(150px, 80px,;
 													width: 150px;
 													height: 80px;
 													padding: 4px;
@@ -1311,26 +1309,10 @@
 	.cont-list {
 		margin-top: 10px;
 		.grid-toolbar {
-			@include bx;
-			@include gray-gradient;
-			$btn-lh: 1.5;
-			width: 100%;
-			border: 1px solid $bor-gray-table;
-			border-top-left-radius: 4px;
-			border-top-right-radius: 4px;
-			padding: 4px;
-			margin-top: 10px;
-			margin-bottom: -1px;
-			button {
-				.icon {
-				}
-			}
-			.btn-gray {
-				color: #000;
-			}
+			@include grid-toolbar;
 		}
 		.grid-wrap {
-			@include grid-scr-x(null, 100%, 4px);
+			@include grid-scr-x(null, 100%);
 			.grid-tbl {
 				th, td {
 					text-align: center;
@@ -1391,26 +1373,10 @@
 	.cont-list {
 		margin-top: 10px;
 		.grid-toolbar {
-			@include bx;
-			@include gray-gradient;
-			$btn-lh: 1.5;
-			width: 100%;
-			border: 1px solid $bor-gray-table;
-			border-top-left-radius: 4px;
-			border-top-right-radius: 4px;
-			padding: 4px;
-			margin-top: 10px;
-			margin-bottom: -1px;
-			button {
-				.icon {
-				}
-			}
-			.btn-gray {
-				color: #000;
-			}
+			@include grid-toolbar;
 		}
 		.grid-wrap {
-			@include grid-scr-x(null, 100%, 4px 0 0 4px);
+			@include grid-scr-x(null, 100%);
 			.grid-area.grid-contents {
 				background: #fff;
 				height: 650px;
@@ -1460,23 +1426,7 @@
 	.cont-list {
 		margin-top: 10px;
 		.grid-toolbar {
-			@include bx;
-			@include gray-gradient;
-			$btn-lh: 1.5;
-			width: 100%;
-			border: 1px solid $bor-gray-table;
-			border-top-left-radius: 4px;
-			border-top-right-radius: 4px;
-			padding: 4px;
-			margin-top: 10px;
-			margin-bottom: -1px;
-			button {
-				.icon {
-				}
-			}
-			.btn-gray {
-				color: #000;
-			}
+			@include grid-toolbar;
 		}
 		.grid-wrap {
 			@include grid-scr-x(null, 100%, 0);
@@ -1522,23 +1472,7 @@
 	.cont-list {
 		margin-top: 10px;
 		.grid-toolbar {
-			@include bx;
-			@include gray-gradient;
-			$btn-lh: 1.5;
-			width: 100%;
-			border: 1px solid $bor-gray-table;
-			border-top-left-radius: 4px;
-			border-top-right-radius: 4px;
-			padding: 4px;
-			margin-top: 10px;
-			margin-bottom: -1px;
-			button {
-				.icon {
-				}
-			}
-			.btn-gray {
-				color: #000;
-			}
+			@include grid-toolbar;
 		}
 		.grid-wrap {
 			@include grid-scr-x(null, 100%, 0);
@@ -1621,7 +1555,7 @@
 		}
 		.cont-rmStay {
 			.grid-wrap {
-				@include grid-scr-x(null, 100%, 4px 4px 0 0);
+				@include grid-scr-x(null, 100%);
 				.grid-area.grid-contents {
 					background: #fff;
 					height: 150px;
@@ -1634,7 +1568,7 @@
 			}
 			.grid-bottom {
 				@include gray-gradient;
-				@include bdr-r(0, 0, 4px, 4px);
+				// @include bdr-r(0, 0, 4px,;
 				padding: 5px;
 				border: 1px solid $bor-gray-table;
 				border-top: 0;

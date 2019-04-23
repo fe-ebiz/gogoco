@@ -212,14 +212,15 @@
 	// border-radius: 4px;
 	line-height: 1.6;
 
+	&:focus {
+		outline-color: $fg-page-tit;
+	}
 	&[disabled],
 	&[readonly] {
 		// background: #eee;
 		background: #f9f8f8;
 		color: #676767;
-	}
-	&:focus {
-		outline-color: $fg-page-tit;
+		outline: none;
 	}
 }
 
@@ -298,6 +299,7 @@ $btn-lh: 1.5;
 		color: #fff;
 		// text-shadow: 0px -1px #aeaeae;
 		// box-shadow: none;
+		cursor: default;
 	}
 }
 
@@ -344,16 +346,15 @@ $btn-lh: 1.5;
 	//		background: #ccc;
 	//		text-shadow: 0px -1px #b7b7b7;
 	//	}
-	&.btn-i {
-		background: #f2f2f2;
-		border-color: #d4d4d4;
-		color: #2e2e2e;
-	}
-
-	&.btn-i:hover {
-		background: #bcb4b0;
-		text-shadow: none;
-	}
+	// &.btn-i {
+	// 	background: #f2f2f2;
+	// 	border-color: #d4d4d4;
+	// 	color: #2e2e2e;
+	// }
+	// &.btn-i:hover {
+	// 	background: #bcb4b0;
+	// 	text-shadow: none;
+	// }
 }
 // 디자인 변경으로 green은 orange로 
 @mixin btn-green($wth: null, $he:null, $fz: null, $pd: null) {
@@ -409,7 +410,7 @@ $btn-lh: 1.5;
 }
 
 @mixin btn-brown($wth: null, $he:null, $fz: null, $pd: null) {
-	@include btn-base(null, null, #b29b7a, #624f31, #f2dfc3, #8e7d64);
+	@include btn-base(null, null, #b29b7a, #624f31, #fff);
 	width: $wth;
 	height: $he;
 	font-size: $fz;
@@ -473,17 +474,19 @@ $btn-lh: 1.5;
 @mixin cont-tit {
 	position: relative;
 	box-sizing: border-box;
-	background: #f0f0f0;
-	padding: 20px 15px 15px 15px;
+	// background: #f0f0f0;
+	// padding: 20px 15px 15px 15px;
+	padding: 20px 0 15px;
 	margin-top: 20px;
 	// border-radius: 5px;
 
 	.cont-tit {
-		@include position(absolute, -20px, 15px);
+		@include position(absolute, -20px);
 		@include show-reset;
 		color: $fg-legend;
 		font-size: 13px;
 		padding: 5px 10px;
+		padding-left: 0;
 		background: #f0f0f0;
 		// border-radius: 5px;
 
@@ -509,18 +512,15 @@ $btn-lh: 1.5;
 	$btn-lh: 1.5;
 	width: 100%;
 	border: 1px solid $bor-gray-table;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
+	// border-top-left-radius: 4px;
+	// border-top-right-radius: 4px;
 	padding: 4px;
 	margin-bottom: -1px;
-
 	button {
 		.icon {}
 	}
-
 	.btn-gray {
 		color: #000;
-
 		&.btn-changes {
 			padding-left: 5px;
 			padding-right: 5px;
@@ -584,7 +584,7 @@ $btn-lh: 1.5;
 // grid-bottom-page
 @mixin grid-bottom-page($bdg: $bor-gray-table) {
 	@include gray-gradient;
-	@include bdr-r(0, 0, 4px, 4px);
+	// @include bdr-r(0, 0, 4px, 4px);
 	padding: 5px;
 	border: 1px solid $bdg;
 	border-top: 0;
@@ -593,7 +593,7 @@ $btn-lh: 1.5;
 		@include va;
 		@include bx;
 		text-align: center;
-		border-radius: 50%;
+		// border-radius: 50%;
 		font-weight: 700;
 	}
 
@@ -653,41 +653,38 @@ $btn-lh: 1.5;
 }
 
 // tab-list
-@mixin tab-list {
+@mixin tab-list($bg: #f7f7f7) {
 	margin-top: 15px;
-
-	>* {
+	> * {
 		position: relative;
 		float: left;
 		color: #444;
 	}
-
 	.tab {
 		display: inline-block;
 		padding: 5px 12px;
-		border-top-left-radius: 5px;
-		border-top-right-radius: 5px;
+		// border-top-left-radius: 5px;
+		// border-top-right-radius: 5px;
 		background: #f7f7f7;
 		border: 1px solid #c5c5c5;
 		font-size: 12px;
 		border-bottom-color: #9f9f9f;
-
-		&+.tab {
-			left: -1px;
+		margin-left: -1px;
+		&:first-child {
+			margin-left: 0px;
 		}
-
 		&.on {
 			z-index: 1;
-			background: #fff;
 			border-color: #9f9f9f;
-			border-bottom-color: #fff;
+			background: #f0f0f0;
+			border-bottom-color: #f0f0f0;
 		}
 	}
 }
 
 // item-list
 @mixin item-list {
-	border-top: 1px solid #9f9f9f;
+	border-top: 1px solid #f0f0f0;
 	padding-top: 10px;
 	margin-top: -1px;
 
@@ -745,6 +742,7 @@ $btn-lh: 1.5;
 	}
 
 	th {
+		background: $bg-tblBase-th;
 		height: 33px;
 		background: $th-bg;
 		//		background: $bg-tblBase-th;
@@ -752,7 +750,6 @@ $btn-lh: 1.5;
 		overflow: visible;
 		color: #444;
 		text-align: center;
-
 		.cell {
 			font-weight: 700;
 		}
@@ -786,7 +783,7 @@ $btn-lh: 1.5;
 	td {
 		background: $td-bg;
 		//		background: #fff;
-		border-left: 1px dashed $bd-c;
+		border-left: 1px solid $bd-c;
 
 		.cell {
 
@@ -843,12 +840,12 @@ $btn-lh: 1.5;
 	}
 
 	th {
+		background: $bg-tblBase-th;
 		height: 33px;
-		border-left: 1px dashed $bd-c;
+		border-left: 1px solid $bd-c;
 		overflow: visible;
 		color: #444;
 		text-align: center;
-
 		.cell {
 			font-weight: 700;
 		}
@@ -880,7 +877,7 @@ $btn-lh: 1.5;
 	}
 
 	td {
-		border-left: 1px dashed $bd-c;
+		border-left: 1px solid $bd-c;
 
 		.cell {
 
@@ -986,7 +983,7 @@ $btn-lh: 1.5;
 // 		}
 
 // 		td {
-// 			border-left: 1px dashed $bd-c;
+// 			border-left: 1px solid $bd-c;
 
 // 			.cell {
 
@@ -1301,11 +1298,11 @@ $btn-lh: 1.5;
 				width: $scr-wth;
 				background: $bg-tblBase-th;
 				border-bottom: 1px solid $bd-c;
-				background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
-				background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
-				background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
-				background-position: 50% 50%;
-				background-color: #eae8e8;
+				// background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
+				// background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+				// background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+				// background-position: 50% 50%;
+				// background-color: #eae8e8;
 			}
 
 			.grid-tbl {
@@ -1320,13 +1317,13 @@ $btn-lh: 1.5;
 				}
 
 				th {
+					background: $bg-tblBase-th;
 					border-bottom: none;
-					background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
-					background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
-					background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
-					background-position: 50% 50%;
-					background-color: #eae8e8;
-
+					// background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
+					// background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+					// background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+					// background-position: 50% 50%;
+					// background-color: #eae8e8;
 					&.bor {
 						border-bottom: 1px solid $bd-c;
 					}
@@ -1553,11 +1550,11 @@ $btn-lh: 1.5;
 				width: $scr-wth;
 				background: $bg-tblBase-th;
 				border-bottom: 1px solid $bd-c;
-				background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
-				background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
-				background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
-				background-position: 50% 50%;
-				background-color: #eae8e8;
+				// background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
+				// background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+				// background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+				// background-position: 50% 50%;
+				// background-color: #eae8e8;
 			}
 
 			.grid-tbl {
@@ -1572,12 +1569,13 @@ $btn-lh: 1.5;
 				}
 
 				th {
+					background: $bg-tblBase-th;
 					border-bottom: none;
-					background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
-					background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
-					background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
-					background-position: 50% 50%;
-					background-color: #eae8e8;
+					// background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
+					// background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+					// background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+					// background-position: 50% 50%;
+					// background-color: #eae8e8;
 
 					&.bor {
 						border-bottom: 1px solid $bd-c;
@@ -1708,13 +1706,13 @@ $btn-lh: 1.5;
 		th {
 			font-weight: 700;
 			height: 33px;
-			// border-bottom: none;
+			background: $bg-tblBase-th;
 			border-bottom: none;
-			background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
-			background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
-			background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
-			background-position: 50% 50%;
-			background-color: #eae8e8;
+			// background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
+			// background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+			// background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+			// background-position: 50% 50%;
+			// background-color: #eae8e8;
 
 			.cell.order-ui {
 				cursor: pointer;
@@ -1847,11 +1845,11 @@ $btn-lh: 1.5;
 				width: $scr-wth;
 				background: $bg-tblBase-th;
 				border-bottom: 1px solid $bd-c;
-				background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
-				background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
-				background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
-				background-position: 50% 50%;
-				background-color: #eae8e8;
+				// background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
+				// background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+				// background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+				// background-position: 50% 50%;
+				// background-color: #eae8e8;
 			}
 
 			.grid-tbl {
@@ -1963,11 +1961,11 @@ $btn-lh: 1.5;
 				width: $scr-wth;
 				background: $bg-tblBase-th;
 				border-bottom: 1px solid $bd-c;
-				background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
-				background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
-				background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
-				background-position: 50% 50%;
-				background-color: #eae8e8;
+				// background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
+				// background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+				// background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+				// background-position: 50% 50%;
+				// background-color: #eae8e8;
 			}
 
 			.grid-tbl {
@@ -2024,13 +2022,13 @@ $btn-lh: 1.5;
 
 			th {
 				height: 33px;
-				// border-bottom: none;
+				background: $bg-tblBase-th;
 				border-bottom: none;
-				background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
-				background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
-				background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
-				background-position: 50% 50%;
-				background-color: #eae8e8;
+				// background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
+				// background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+				// background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .6) 0, rgba(255, 255, 255, 0) 100%);
+				// background-position: 50% 50%;
+				// background-color: #eae8e8;
 
 				.cell.order-ui {
 					cursor: pointer;
@@ -2097,8 +2095,4 @@ $btn-lh: 1.5;
 			}
 		}
 	}
-}
-
-// .grie-wrap
-
-
+} // .grie-wrap

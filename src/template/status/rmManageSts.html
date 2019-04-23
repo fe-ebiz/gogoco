@@ -998,7 +998,7 @@
 					<script>
 						$("#table-box .row-box .btn-area .btn-a").on("click", function () {
 							var idx = $(this).closest(".row-box").index();
-							console.log(idx);
+							// console.log(idx);
 							$(this).toggleClass("on");
 							$(this).closest(".row-box").next(".row-box.pkg").toggleClass("on");
 							$("#left-box .l-table").eq(idx + 1).toggleClass("on");
@@ -1020,7 +1020,7 @@
 						// 높이 조절
 						//var ht = $("#table-box .d-table").height();
 						var ht = $("#table-box .d-ht").height();
-						console.log(ht);
+						// console.log(ht);
 						$("#table-box .non-table").height(ht);
 						/*var $_trHeight = $("#table-box tr");
 						console.log($_trHeight);

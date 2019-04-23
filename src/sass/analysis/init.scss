@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-@import "../parts/common";
 //year picker css 추가
 @import "../bootstrap";
+@import "../parts/common";
 
 /* 달력 */
 .page-analysis {
@@ -183,28 +183,27 @@
             width: 15%;
             padding-right: 10px;
             .grid-wrap {
+                border: 1px solid $bor-gray-table;
                 .grid-area {
                     //공통
-                    border: 1px solid #d5d5d5;
-                    border-right-width: 0;
-                    .grid-scrollable {
-                        .grid-tbl {
-                            overflow: hidden;
-                            width: 100%;
-                            table-layout: fixed;
-                            border-collapse: collapse;
-                            border-bottom: 0;
-                            tr {
-                                th, td {
-                                    height: 27px;
-                                    color: #313131;
-                                    font-size: 12px;
-                                    border-right: 1px solid #d5d5d5;
-                                    .cell {
-                                        position: relative;
-                                        @include clearfix;
-                                        padding: 3px 7px;
-                                    }
+                    // border-right-width: 0;
+                    .grid-tbl {
+                        background: #ffffff;
+                        overflow: hidden;
+                        width: 100%;
+                        table-layout: fixed;
+                        border-collapse: collapse;
+                        border-bottom: 0;
+                        tr {
+                            th, td {
+                                height: 27px;
+                                color: #313131;
+                                font-size: 12px;
+                                border-right: 1px solid $bor-gray-table;
+                                .cell {
+                                    position: relative;
+                                    @include clearfix;
+                                    padding: 3px 7px;
                                 }
                             }
                         }
@@ -212,15 +211,12 @@
                     
                     //head 
                     &.grid-head {  
-                        border-bottom: 1px solid $bor-gray-table;   
                         .grid-scrollable {
+                            border-bottom: 1px solid $bor-gray-table;
                             background: $bg-tblBase-th;
-                            background-image: none,-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.6)),to(rgba(255,255,255,0)));
-                            background-image: none,-webkit-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
-                            background-image: none,linear-gradient(to bottom,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
-                            background-position: 50% 50%;
-                            background-color: #eae8e8;
                             .grid-tbl {
+
+                                background: $bg-tblBase-th;
                                 tr {
                                     th, td {
                                         .cell {
@@ -234,7 +230,6 @@
                     
                     //body
                     &.grid-contents {
-                        border-top: 0;
                         max-height: 336px; //max height : 12개월일때의 높이로 설정
                         overflow: hidden;
                         overflow-y: auto;
@@ -242,7 +237,7 @@
                             .grid-tbl {
                                 tr {
                                     th, td {
-                                        border-top: 1px solid #d5d5d5;
+                                        border-top: 1px solid $bor-gray-table;
                                         .cell {
 
                                         }
@@ -273,12 +268,13 @@
         //chart
         .grid-chart-container {
             @include float(right);
+            background: #ffffff;
             box-sizing: border-box;
             width: 85%;
             .grid-wrap {
                 @include bx;
                 padding: 5px 5px 20px;
-                border: 1px solid #a6a6a6;
+                border: 1px solid $bor-gray-table;
                 .tit-chart {
                     margin-bottom: 20px;
                     padding-left: 10px;
@@ -313,8 +309,7 @@
             .row-contents {
                 @include clearfix;
                 margin-top: 10px;
-                padding-bottom: 20px;
-                
+                padding-bottom: 10px;
                 //높이
                 &.row-1 {
                     .row-cont {
@@ -331,13 +326,13 @@
                         height: 515px;
                     }
                 }
-                
                 .row-cont {
                     @include bx;
                     float: left;
                     width: 49.5%;
                     margin-left: 1%;
-                    border: 1px solid #a6a6a6;
+                    background: #ffffff;
+                    // border: 1px solid $bor-gray-table;
                     &:first-child {
                         margin-left: 0;
                     }
@@ -369,7 +364,7 @@
                     
                     /* 스크롤 테이블 공통 */
                     .scr-wrap {
-                        @include grid-scr-x(null, 100%, 4px);
+                        @include grid-scr-x(null, 100%);
                     }
                     
                     /* Revenue */
