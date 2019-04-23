@@ -384,8 +384,7 @@ $sidebar-wd: 96px;
 			background: none;
 			text-align: left;
 			position: relative;
-			line-height: 1;
-			top: 1px;
+			top: -1px;
 			z-index: 1;
 		}
 		.i-cal {
@@ -476,6 +475,7 @@ $sidebar-wd: 96px;
 	position: relative;
 	height: $header-ht;
 	font-family: $font-nnGothic;
+	box-sizing: border-box;
 	// border-bottom: 1px solid #cecece;
 	// z-index: 99;
 	.cont-header {
@@ -483,6 +483,7 @@ $sidebar-wd: 96px;
 		top: 0;
 		left: 0;
 		width: 100%;
+		box-sizing: border-box;
 		min-width: 1450px;
 		height: $header-ht;
 		// background: #353632;
