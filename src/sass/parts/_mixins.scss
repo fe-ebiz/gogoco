@@ -193,7 +193,7 @@
 }
 
 // 폼 베이스
-@mixin form-base($wth: null, $he: 25px, $pd: 1px 2px 2px) {
+@mixin form-base($wth: null, $he: 25px, $pd: 1px 2px 2px 5px) {
 	position: relative;
 	width: $wth;
 	height: $he;
