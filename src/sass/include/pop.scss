@@ -26,8 +26,8 @@
 		width: 100%;
 		height: 100%;
 		background: #000;
-		opacity: 0.3;
-		filter: alpha(opacity=30);
+		opacity: 0.7;
+		filter: alpha(opacity=70);
 	}
 	.pop-wrapper {
 		position: relative;
@@ -82,7 +82,7 @@
 		box-sizing: border-box;
 		background: #fff;
 		border: 1px solid $bor-gray-table;
-		border-radius: 4px;
+		// border-radius: 4px;
 		> * {
 			outline: none;
 		}
@@ -93,8 +93,7 @@
 			background: none;
 			text-align: left;
 			position: relative;
-			line-height: 1;
-			top: 1px;
+			top: -1px;
 			z-index: 1;
 		}
 		.i-cal {
@@ -104,22 +103,28 @@
 			right: 0;
 			width: 24px;
 			height: 100%;
-			border-radius: 4px;
+			// border-radius: 4px;
 			border-top-left-radius: 0;
 			border-bottom-left-radius: 0;
 			text-align: center;
 			cursor: pointer;
 			border-left: 1px solid $bor-gray-table;
-			background-image: none,-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.6)),to(rgba(255,255,255,0)));
-			background-image: none,-webkit-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
-			background-image: none,linear-gradient(to bottom,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
-			background-position: 50% 50%;
-			background-color: #eae8e8;
+			// background-image: none,-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.6)),to(rgba(255,255,255,0)));
+			// background-image: none,-webkit-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+			// background-image: none,linear-gradient(to bottom,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+			// background-position: 50% 50%;
+			// background-color: #eae8e8;
+			background: #ebebeb;
 			img {
-				position: relative;
-				top: 1px;
+				@include position(absolute, 3px, 4px);
 			}
 		}
+		.inp-cal[disabled] + .i-cal {
+			z-index: 1;
+		}
+        .mg- {
+            vertical-align: middle;
+        }
 	}
 	.textarea-etc {
 		@include texta-base(150px, 80px, vertical);
@@ -128,9 +133,10 @@
 	}
 }
 @mixin pop-header-base {
-	background: $bg-brown-1;
+	// background: $bg-brown-1;
+	background: $primary-color;
 	padding: 15px;
-	color: $fg-brown-popHd;
+	color: #fff;
 	h2 {
 		font-weight: 700;
 		letter-spacing: 0;
@@ -146,7 +152,13 @@
 		}
 	}
 }
+@mixin pop-contents-base {
+	padding: 20px;
+	padding-bottom: 5px;
+}
 @mixin pop-footer-base {
+	padding: 20px;
+	padding-top: 0;
 	.row-btn {
 		background: #f0f0f0;
 		padding: 15px 0;
@@ -166,7 +178,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
 			padding-top: 40px;
 			.popcont-container	{
 				@include bx;
@@ -239,7 +251,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
 			padding-top: 40px;
 			.popcont-container	{
 				@include float;
@@ -350,7 +362,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
 			.grid-tbl {
 				@include tbl-base;
 				width: 306px;
@@ -415,7 +427,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
 			padding-top: 30px;
 			.row-add {
 				text-align: right;
@@ -466,7 +478,7 @@
 			.cont-list {
 				margin-top: 10px;
 				.grid-wrap {
-					@include grid-scr-x(100%, null, 4px);
+					@include grid-scr-x(100%, null);
 					.grid-scrollable-x {
 						overflow-x: auto;
 						&:after {
@@ -511,7 +523,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
 			padding-top: 30px;
 			.row-add {
 				text-align: right;
@@ -588,7 +600,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
 			.row-add {
 				text-align: right;
 				padding-bottom: 15px;
@@ -683,7 +695,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
 			padding-top: 30px;
 			.row-add {
 				text-align: right;
@@ -730,7 +742,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
 			.cont-property {
 				background: #f0f0f0;
 				padding: 10px;
@@ -862,7 +874,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
 			.popcont-container	{
 				@include bx;
 				.cont-tit {
@@ -962,7 +974,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
 			.tab-list {
 				> * {
 					position: relative;
@@ -1046,7 +1058,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-            padding: 20px;
+            @include pop-contents-base;
             .popcont-container {
                 .grid-tbl {
                     @include tbl-base;
@@ -1103,7 +1115,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-            padding: 20px;
+            @include pop-contents-base;
             .popcont-container {
                 .grid-tbl {
                     @include tbl-base;
@@ -1142,7 +1154,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-            padding: 20px;
+            @include pop-contents-base;
             .popcont-container {
                 .property-tbl {
 					@include tbl-base;
@@ -1206,7 +1218,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-            padding: 20px;
+            @include pop-contents-base;
             .popcont-container {
                 .grid-tbl {
                     @include tbl-base;
@@ -1266,7 +1278,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-            padding: 20px;
+            @include pop-contents-base;
             .popcont-container {
                 .pop-cont-date {
                     margin-top: 5px;
@@ -1443,7 +1455,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
             .popcont-container {
 				@include bx;
                 margin-top: 15px;
@@ -1598,7 +1610,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
             
             .tab-list {
                 > * {
@@ -1680,7 +1692,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
             .cont-property {
                 .property-tbl {
                     @include tbl-style-1;
@@ -1770,7 +1782,7 @@
             
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
             .grid-tbl {
                 @include tbl-base;
                 td {
@@ -1837,7 +1849,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
             .grid-area {
                 & + .grid-area {
                     margin-top: 5px;
@@ -1901,7 +1913,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
             .grid-tbl {
                 @include tbl-base;
                 td {
@@ -1929,7 +1941,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
             .grid-tbl {
                 @include tbl-base;
             }
@@ -2004,7 +2016,7 @@
 			.i-x {top: 0;}
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
 			padding-top: 10px;
             &.resFit-contents {
 				.split-1 {
@@ -2429,7 +2441,7 @@
 			.i-x {top: 0;}
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
 			padding-top: 10px;
             &.rsvGroup-contents {
 				$wh-split: 620px;
@@ -2745,7 +2757,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
 			.split {
 				@include float;
 			}
@@ -2856,7 +2868,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
             .cont-property {
 				.grid-tbl {
 					@include tbl-style-1;
@@ -3045,7 +3057,7 @@
 			.i-x {top: 0;}
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
 			padding-top: 10px;
             &.resFit-contents {
 				.split-1 {
@@ -3489,7 +3501,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
 			.grid-tbl {
 				@include tbl-base;
 			}
@@ -3552,7 +3564,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
             .grid-tbl {
                 @include tbl-base;
             }
@@ -3582,7 +3594,7 @@
 			@include pop-header-base;
 		}
         .pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
             .cont-property {
                 .property-tbl {
                     @include tbl-style-1;
@@ -3660,7 +3672,7 @@
             }
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
             
 		    .popcont-container {
                 .grid-tbl {
@@ -3705,7 +3717,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
             .cont-property {
                 .property-tbl {
                     @include tbl-style-1;
@@ -3785,7 +3797,7 @@
 			@include pop-header-base;
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
             .cont-property {
 				.grid-tbl {
 					@include tbl-style-1;
@@ -3866,7 +3878,7 @@
             
 		}
 		.pop-contents {
-			padding: 20px;
+			@include pop-contents-base;
 		    .popcont-container {
                 .grid-tbl {
                     @include tbl-base;

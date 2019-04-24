@@ -620,7 +620,8 @@ $btn-lh: 1.5;
 
 	.num {
 		@include ft(12px, #918884);
-		@include sizes(26px);
+		min-width: 26px;
+		height: 26px;
 		line-height: 24px;
 		background: #fff;
 		border: 1px solid #d2d2d2;
