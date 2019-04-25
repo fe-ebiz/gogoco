@@ -520,7 +520,6 @@
 		}
 		.pop-contents {
 			@include pop-contents-base;
-			padding-top: 30px;
 			.row-add {
 				text-align: right;
 				padding-bottom: 15px;
@@ -532,20 +531,21 @@
 			}
 			.cont-property {
 				.cont-tit {
-					@include position(absolute, -20px, 15px);
-					color: $fg-legend;
-					font-size: 13px;
-					padding: 5px 10px;
-					background: #f0f0f0;
-					border-radius: 5px;
-					strong, label {
-						font-weight: 700;
-					}
+					@include text-hide;
+					// @include position(absolute, -20px, 15px);
+					// color: $fg-legend;
+					// font-size: 13px;
+					// padding: 5px 10px;
+					// background: #f0f0f0;
+					// border-radius: 5px;
+					// strong, label {
+					// 	font-weight: 700;
+					// }
 				}
-				@include bx;
-				background: #f0f0f0;
-				padding: 15px;
-				border-radius: 4px;
+				// @include bx;
+				// background: #f0f0f0;
+				// padding: 15px;
+				// border-radius: 4px;
 				.property-tbl {
 					@include tbl-base;
 					td {
@@ -875,8 +875,10 @@
 				}
 				.cont-property {
 					.property-tbl {
-						@include tbl-style-2;
+						@include tbl-base;
+						border-bottom: 2px solid $primary-color;
 						td {
+							background: $bg-tblBase-th;
 							.cell {
 								.form-input {
 									&.search {
@@ -908,6 +910,12 @@
 					margin-top: 15px;
 					padding-top: 15px;
 					border-top: 1px dashed #ccc;
+					.property-tbl {
+						border-bottom: 1px solid $bor-gray-table;
+						td {
+							background: #ffffff;
+						}
+					}
 				}
 				.cont-list {
 					margin-top: 10px;
@@ -1205,7 +1213,6 @@
             @include pop-contents-base;
             .popcont-container {
                 .pop-cont-date {
-                    margin-top: 5px;
                     font-size: 15px; 
                     font-weight: bold;
                 }
@@ -1333,11 +1340,13 @@
                     }
                 }
             }
+			.pop-footer {
+				@include pop-footer-base;
+				padding: 0;
+				margin-top: 0px;
+			}
         }
         
-		.pop-footer {
-			@include pop-footer-base;
-		}
 	}
 }
 
@@ -1510,39 +1519,7 @@
 			@include pop-contents-base;
             
             .tab-list {
-                > * {
-                    position: relative;
-                    float: left;
-                    color: #444;
-                }
-                .tab {
-                    display: inline-block;
-                    padding: 5px 12px;
-                    border-top-left-radius: 5px;
-                    border-top-right-radius: 5px;
-                    background: #f7f7f7;
-                    border: 1px solid #c5c5c5;
-                    font-size: 12px;
-                    border-bottom-color: #9f9f9f;
-                    cursor: pointer;
-                    & + .tab {
-                        left: -1px;
-                    }
-                    &.on {
-                        z-index: 1;
-                        background: #fff;
-                        border-color: #9f9f9f;
-                        border-bottom-color: #fff;
-                    }
-                    .plus {
-                        vertical-align: middle;
-                    }
-                }
-                label {
-                    @include lbl;
-                    top: 2px;
-                    margin-left: 15px;
-                }
+                @include tab-list(#f7f7f7, #fff);
             }
             
             .item-list {
@@ -1592,7 +1569,7 @@
 			@include pop-contents-base;
             .cont-property {
                 .property-tbl {
-                    @include tbl-style-1;
+                    @include tbl-style-2;
                     .cell {
                         .pull-right {
                             padding-right: 10px;
@@ -1603,17 +1580,7 @@
             .cont-area {
                 margin-top: 13px;
                 .grid-toolbar {
-                    @include bx;
-                    @include gray-gradient;
-                    width: 100%;
-                    border: 1px solid $bor-gray-table;
-                    border-top-left-radius: 4px;
-                    border-top-right-radius: 4px;
-                    padding: 4px;
-                    margin-bottom: -1px;
-                    p {
-                        font-size: 12px;
-                    }
+                    display: none;
                 }
                 .grid-wrap {
                     @include grid-scr-x(null, 100%);
@@ -1658,25 +1625,24 @@
 .pop-container.bqCalEvent-container {
 	.pop-wrapper {
 		.pop-header {
-			//@include pop-header-base;
-            padding: 8px 15px;
-            color: #313131;
-            background: #f3f2f2;
-            h2 {
-                font-weight: 700;
-                letter-spacing: 0;
-            }
-            .i-x {
-                width: 20px;
-                height: 20px;
-                &:before, &:after {
-                    top: 8px;
-                    background: #807772;
-                    width: 20px;
-                    height: 3px;
-                }
-            }
-            
+			@include pop-header-base;
+            // padding: 8px 15px;
+            // color: #313131;
+            // background: #f3f2f2;
+            // h2 {
+            //     font-weight: 700;
+            //     letter-spacing: 0;
+            // }
+            // .i-x {
+            //     width: 20px;
+            //     height: 20px;
+            //     &:before, &:after {
+            //         top: 8px;
+            //         background: #807772;
+            //         width: 20px;
+            //         height: 3px;
+            //     }
+            // }
 		}
 		.pop-contents {
 			@include pop-contents-base;
@@ -1706,7 +1672,7 @@
                         }
                         .time-box {
                             position: relative;
-                            -webkit-box-sizing: border-box;
+                            -weit-box-sizing: border-box;
                             box-sizing: border-box;
                             display: inline-block;
                             vertical-align: middle;
@@ -1719,7 +1685,7 @@
                             }
                             .i-cal {
                                 z-index: 0;
-                                @include position(absolute, 3px, 4px);
+                                @include position(absolute, 3px, null, null, 4px);
                                 background: #fff;
                             }
                         }
@@ -1841,7 +1807,7 @@
                 @include tbl-base;
             }
             .btn-box {
-                margin: 12px auto 0; 
+                margin: 10px auto; 
                 text-align: center;
                 .txt-num {
                     display: inline-block;
@@ -2091,33 +2057,7 @@
 						height: 163px;
 						@include bdr(#c5c5c5);
 						.tab-list {
-							> * {
-								position: relative;
-								float: left;
-								color: #444;
-							}
-							.tab {
-								display: inline-block;
-								padding: 5px 12px;
-								// border-top-left-radius: 5px;
-								// border-top-right-radius: 5px;
-								background: #f7f7f7;
-								border: 1px solid #c5c5c5;
-								font-size: 12px;
-								border-bottom-color: #9f9f9f;
-								& + .tab {
-									left: -1px;
-								}
-								&.on {
-									z-index: 1;
-									background: #fff;
-									border-color: #9f9f9f;
-									border-bottom-color: #fff;
-								}
-								.plus {
-									vertical-align: middle;
-								}
-							}
+							@include tab-list(#f7f7f7, #fff);
 							label {
 								@include lbl;
 								top: 2px;

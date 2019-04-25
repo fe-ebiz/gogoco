@@ -309,31 +309,8 @@
 		}
 	}
 	.tab-list {
+		@include tab-list;
 		margin-top: 15px;
-		> * {
-			position: relative;
-			float: left;
-			color: #444;
-		}
-		.tab {
-			display: inline-block;
-			padding: 5px 12px;
-			border-top-left-radius: 5px;
-			border-top-right-radius: 5px;
-			background: #f7f7f7;
-			border: 1px solid #c5c5c5;
-			font-size: 12px;
-			border-bottom-color: #9f9f9f;
-			& + .tab {
-				margin-left: 2px;
-			}
-			&.on {
-				z-index: 1;
-				background: #fff;
-				border-color: #9f9f9f;
-				border-bottom-color: #fff;
-			}
-		}
 	}
 	.item-list {
 		border-top: 1px solid #9f9f9f;

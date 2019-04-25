@@ -1538,11 +1538,11 @@
 			.grid-wrap.scr-wrap {
 				@include grid-scr-brown(null, 100%);
 				.grid-area.grid-contents {
-					height: 236px;
+					height: 233px;
 				}
 			} // .grie-wrap
 			.grid-bottom {
-				@include grid-bottom($bdg-tblBase);
+				@include grid-bottom;
 			}
 		}
 		.row-btn {

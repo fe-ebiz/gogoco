@@ -660,7 +660,7 @@ $btn-lh: 1.5;
 }
 
 // tab-list
-@mixin tab-list($bg: #f7f7f7, $bg-h: #f0f0f0) {
+@mixin tab-list($bg: #fbfbfb, $bg-h: #f0f0f0) {
 	> * {
 		position: relative;
 		float: left;
@@ -669,6 +669,7 @@ $btn-lh: 1.5;
 	.tab {
 		display: inline-block;
 		padding: 5px 12px;
+		cursor: pointer;
 		// border-top-left-radius: 5px;
 		// border-top-right-radius: 5px;
 		background: $bg;

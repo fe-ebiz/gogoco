@@ -599,6 +599,7 @@
 				width: 100%;
 				table-layout: fixed;
 				border-collapse: collapse;
+				background: #fff;
 				th, td {
 					font-size: 12px;
 					border: 1px solid $bdg-tblBase;
@@ -670,6 +671,7 @@
 		.cont-name {
 			.grid-wrap {
 				@include grid-scr-brown(null, 100%, 0);
+				border-top-width: 1px;
 				.grid-area.grid-head {
 					th {
 						&.bor {
