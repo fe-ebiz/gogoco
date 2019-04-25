@@ -70,6 +70,12 @@
 	line-height: normal;
 	visibility: visible;
 }
+@mixin text-hide {
+	position: absolute;
+	width: 0;
+	height: 0;
+	font: 0/0 sans-serif;
+}
 
 // 중앙 정렬
 @mixin centerThis($width: 1200px) {
@@ -654,8 +660,7 @@ $btn-lh: 1.5;
 }
 
 // tab-list
-@mixin tab-list($bg: #f7f7f7) {
-	margin-top: 15px;
+@mixin tab-list($bg: #f7f7f7, $bg-h: #f0f0f0) {
 	> * {
 		position: relative;
 		float: left;
@@ -666,19 +671,21 @@ $btn-lh: 1.5;
 		padding: 5px 12px;
 		// border-top-left-radius: 5px;
 		// border-top-right-radius: 5px;
-		background: #f7f7f7;
+		background: $bg;
 		border: 1px solid #c5c5c5;
 		font-size: 12px;
 		border-bottom-color: #9f9f9f;
-		margin-left: -1px;
-		&:first-child {
-			margin-left: 0px;
+		& + .tab {
+			margin-left: -1px;
 		}
 		&.on {
 			z-index: 1;
 			border-color: #9f9f9f;
-			background: #f0f0f0;
-			border-bottom-color: #f0f0f0;
+			background: $bg-h;
+			border-bottom-color: $bg-h;
+		}
+		.plus {
+			vertical-align: middle;
 		}
 	}
 }
@@ -874,6 +881,103 @@ $btn-lh: 1.5;
 			&.ascending:after {
 				content: "▲";
 			}
+		}
+	}
+
+	td {
+		border-left: 1px solid $bd-c;
+
+		.cell {
+
+			.chk-box,
+			.rdo-box {
+				input {
+					margin-right: 3px;
+				}
+
+				&+.chk-box,
+				&+.rdo-box {
+					margin-left: 5px;
+				}
+			}
+
+			.form-select {
+				// padding: 2px;
+			}
+		}
+	}
+}
+// 배경 색상 변경 
+@mixin tbl-style-2($bd-c: $bor-gray-table, $bg: $bg-tblBase-th) {
+	width: 100%;
+	border-top: 2px solid $primary-color;
+	border-bottom: 2px solid $primary-color;
+	table-layout: fixed;
+	background: $bg;
+	&.auto {
+		table-layout: auto;
+	}
+	th,
+	td {
+		// min-height: 39px;
+		height: 28px;
+		border-bottom: 1px solid $bd-c;
+		background: $bg;
+		color: #666;
+		font-size: 12px;
+
+		.cell {
+			position: relative;
+			@include clearfix;
+			padding: 3px 7px;
+
+			&.pd-0 {
+				padding-top: 0;
+				padding-bottom: 0px;
+			}
+
+			&.necess {
+				background: url("../../img/tick-small-red.png") no-repeat 100% 58%;
+			}
+		}
+	}
+
+	th {
+		height: 33px;
+		border-left: 1px solid $bd-c;
+		overflow: visible;
+		color: #444;
+		text-align: center;
+		.cell {
+			font-weight: 700;
+		}
+
+		.cell.order-ui {
+			cursor: pointer;
+
+			&:after {
+				content: "▼";
+				position: relative;
+				display: none;
+				// position: absolute;
+				// top: -6px;
+				// left: 50%;
+				// margin-left: -5px;
+				margin-left: 2px;
+				font-size: 10px;
+				color: #444;
+			}
+
+			&:hover:after {
+				display: inline;
+			}
+
+			&.ascending:after {
+				content: "▲";
+			}
+		}
+		&:first-child {
+			border-left: 0;
 		}
 	}
 

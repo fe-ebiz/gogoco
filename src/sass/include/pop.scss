@@ -154,10 +154,10 @@
 }
 @mixin pop-contents-base {
 	padding: 20px;
-	padding-bottom: 5px;
 }
 @mixin pop-footer-base {
 	padding: 20px;
+	margin-top: -15px;
 	padding-top: 0;
 	.row-btn {
 		background: #f0f0f0;
@@ -179,31 +179,26 @@
 		}
 		.pop-contents {
 			@include pop-contents-base;
-			padding-top: 40px;
+			// padding-top: 40px;
 			.popcont-container	{
 				@include bx;
-				background: #f0f0f0;
-				padding: 15px;
-				border-radius: 4px;
 				.cont-tit {
-					@include position(absolute, -20px, 15px);
-					color: $fg-legend;
-					font-size: 13px;
-					padding: 5px 10px;
-					background: #f0f0f0;
-					border-radius: 5px;
+					// @include position(absolute, -20px, 15px);
+					// color: $fg-legend;
+					// font-size: 13px;
+					// padding: 5px 10px;
+					// background: #f0f0f0;
+					// border-radius: 5px;
+					@include text-hide;
 					strong, label {
 						font-weight: 700;
 					}
 				}
 				.cont-property {
 					.property-tbl {
-						@include tbl-style-1;
-						border-right: 0;
-						&, th:first-child {
-							border-left: 0;
-						}
+						@include tbl-style-2;
 						td {
+							background: $bg-tblBase-th;
 							.cell {
 								.form-input {
 									&.name {
@@ -271,7 +266,8 @@
 					}
 				}
 				.cont-property {
-					border: 1px solid $bdg-tblBase;
+					border: 1px solid $bor-gray-table;
+					background: #ffffff;
 					padding: 5px;
 					.form-select {
 						&.type {
@@ -648,9 +644,8 @@
 				}
 			}
 			.cont-list {
-				margin-top: 10px;
 				.grid-wrap {
-					@include grid-scr-x(100%, null, 4px);
+					@include grid-scr-x(100%, null);
 					.grid-scrollable-x {
 						overflow-x: auto;
 						&:after {
@@ -696,7 +691,6 @@
 		}
 		.pop-contents {
 			@include pop-contents-base;
-			padding-top: 30px;
 			.row-add {
 				text-align: right;
 				padding-bottom: 15px;
@@ -708,9 +702,6 @@
 			}
 			.cont-property {
 				@include bx;
-				background: #f0f0f0;
-				padding: 15px;
-				border-radius: 4px;
 				.property-tbl {
 					@include tbl-base;
 					td {
@@ -744,11 +735,11 @@
 		.pop-contents {
 			@include pop-contents-base;
 			.cont-property {
-				background: #f0f0f0;
-				padding: 10px;
-				border-radius: 4px;
+				// background: #f0f0f0;
+				// padding: 10px;
+				// border-radius: 4px;
 				.property-tbl {
-					@include tbl-style-1;
+					@include tbl-style-2;
 					td {
 						.cell {
 							.cal-box {
@@ -787,7 +778,7 @@
 			.cont-list {
 				margin-top: 10px;
 				.grid-wrap {
-					@include grid-scr-x(null, 100%, 4px);
+					@include grid-scr-x(null, 100%);
 					$ie8-wth: 956px;
 					.grid-area.grid-head {
 						.grid-tbl {
@@ -878,24 +869,13 @@
 			.popcont-container	{
 				@include bx;
 				.cont-tit {
-					@include position(absolute, -20px, 15px);
-					color: $fg-legend;
-					font-size: 13px;
-					padding: 5px 10px;
-					background: #f0f0f0;
-					border-radius: 5px;
 					strong, label {
 						font-weight: 700;
 					}
 				}
 				.cont-property {
 					.property-tbl {
-						@include tbl-style-1;
-						border-left: 0;
-						border-right: 0;
-						th:first-child {
-							border-left: 0;
-						}
+						@include tbl-style-2;
 						td {
 							.cell {
 								.form-input {
@@ -928,13 +908,6 @@
 					margin-top: 15px;
 					padding-top: 15px;
 					border-top: 1px dashed #ccc;
-					.property-tbl {
-						border-right: 1px solid $bdg-tblBase;
-						border-left: 1px solid $bdg-tblBase;
-						td {
-							background: #fff;
-						}
-					}
 				}
 				.cont-list {
 					margin-top: 10px;
@@ -976,39 +949,7 @@
 		.pop-contents {
 			@include pop-contents-base;
 			.tab-list {
-				> * {
-					position: relative;
-					float: left;
-					color: #444;
-				}
-				.tab {
-					display: inline-block;
-					padding: 5px 12px;
-					border-top-left-radius: 5px;
-					border-top-right-radius: 5px;
-					background: #f7f7f7;
-					border: 1px solid #c5c5c5;
-					font-size: 12px;
-					border-bottom-color: #9f9f9f;
-					cursor: pointer;
-					& + .tab {
-						left: -1px;
-					}
-					&.on {
-						z-index: 1;
-						background: #fff;
-						border-color: #9f9f9f;
-						border-bottom-color: #fff;
-					}
-					.plus {
-						vertical-align: middle;
-					}
-				}
-				label {
-					@include lbl;
-					top: 2px;
-					margin-left: 15px;
-				}
+				@include tab-list(#f7f7f7, #fff);
 			}
 			.item-list {
 				position: relative;
@@ -1021,7 +962,7 @@
 					border: 1px solid #a9a9a9;
 					margin-top: -1px;
 					.grid-wrap.scr-wrap {
-						@include grid-scr-x(null, 100%, 4px);
+						@include grid-scr-x(null, 100%);
 						.grid-area.grid-contents {
 							height: 370px;
 						}
@@ -1034,15 +975,6 @@
 		}
 		.pop-footer {
 			@include pop-footer-base;
-		}
-	}
-}
-
-/* 예약 팝업 */
-.rv-container {
-	.pop-wrapper {
-		.pop-header {
-			// @include 
 		}
 	}
 }
@@ -1157,14 +1089,8 @@
             @include pop-contents-base;
             .popcont-container {
                 .property-tbl {
-					@include tbl-base;
-                    
-                    th {
-                        border-left: 1px dashed #c0b5a6;
-                    }
+					@include tbl-style-2;
 					td {
-						padding-right: 15px;
-						background: #fff;
 						.cell {
 							.form-input {
                                 width: 170px;
@@ -1174,7 +1100,6 @@
 							}
                             //room
                             &.rooms {
-                                width: 100%;
                                 text-align: right;
                                 .form-input {
                                     float: left;
@@ -1220,24 +1145,23 @@
 		.pop-contents {
             @include pop-contents-base;
             .popcont-container {
-                .grid-tbl {
-                    @include tbl-base;
-                    width: 100%;
-                    th, td {
+				.grid-wrap {
+					.grid-tbl {
+						@include tbl-base;
+						th {
+							.cell {
+							}
+						}
+						td {
+							.cell {
+								.form-input {
+									width: 170px;
+								}
+							}
+						}
+					}
 
-                    }
-                    th {
-                        .cell {
-                        }
-                    }
-                    td {
-                        .cell {
-                            .form-input {
-                                width: 170px;
-                            }
-                        }
-                    }
-                }
+				}
                 
                 .scr-wrap {
                     margin-top: 10px;
@@ -1317,34 +1241,7 @@
             padding: 20px 20px 0;
 
             .tab-list {
-                > * {
-                    position: relative;
-                    float: left;
-                    color: #444;
-                }
-                .tab {
-                    display: inline-block;
-                    padding: 5px 12px;
-                    border-top-left-radius: 5px;
-                    border-top-right-radius: 5px;
-                    background: #f7f7f7;
-                    border: 1px solid #c5c5c5;
-                    font-size: 12px;
-                    border-bottom-color: #9f9f9f;
-                    cursor: pointer;
-                    & + .tab {
-                        left: -1px;
-                    }
-                    &.on {
-                        z-index: 1;
-                        background: #fff;
-                        border-color: #9f9f9f;
-                        border-bottom-color: #fff;
-                    }
-                    .plus {
-                        vertical-align: middle;
-                    }
-                }
+				@include tab-list(#f7f7f7, #fff);
                 label {
                     @include lbl;
                     top: 2px;
@@ -1719,7 +1616,7 @@
                     }
                 }
                 .grid-wrap {
-                    @include grid-scr-x(null, 100%, 4px 4px 0 0);
+                    @include grid-scr-x(null, 100%);
                     .grid-tbl {
                         .ie8 & {
                             width: 1440px;
@@ -1822,9 +1719,7 @@
                             }
                             .i-cal {
                                 z-index: 0;
-                                position: absolute;
-                                top: 3px;
-                                right: 3px;
+                                @include position(absolute, 3px, 4px);
                                 background: #fff;
                             }
                         }
@@ -2204,8 +2099,8 @@
 							.tab {
 								display: inline-block;
 								padding: 5px 12px;
-								border-top-left-radius: 5px;
-								border-top-right-radius: 5px;
+								// border-top-left-radius: 5px;
+								// border-top-right-radius: 5px;
 								background: #f7f7f7;
 								border: 1px solid #c5c5c5;
 								font-size: 12px;
@@ -2239,7 +2134,7 @@
 								border: 1px solid #a9a9a9;
 								margin-top: -1px;
 								.grid-wrap.scr-wrap {
-									@include grid-scr-x(null, 100%, 4px);
+									@include grid-scr-x(null, 100%);
 									.grid-tbl {
 										.ie8 & {
 											width: 581px;
@@ -2379,7 +2274,7 @@
 					.cont-rsvList {
 						float: none;
 						.grid-wrap.scr-wrap {
-							@include grid-scr-x(null, 100%, 4px);
+							@include grid-scr-x(null, 100%);
 							.grid-area.grid-contents {
 								background: #fff;
 								height: 200px;
@@ -2603,33 +2498,7 @@
 						height: 200px;
 						@include bdr(#c5c5c5);
 						.tab-list {
-							> * {
-								position: relative;
-								float: left;
-								color: #444;
-							}
-							.tab {
-								display: inline-block;
-								padding: 5px 12px;
-								border-top-left-radius: 5px;
-								border-top-right-radius: 5px;
-								background: #f7f7f7;
-								border: 1px solid #c5c5c5;
-								font-size: 12px;
-								border-bottom-color: #9f9f9f;
-								& + .tab {
-									left: -1px;
-								}
-								&.on {
-									z-index: 1;
-									background: #fff;
-									border-color: #9f9f9f;
-									border-bottom-color: #fff;
-								}
-								.plus {
-									vertical-align: middle;
-								}
-							}
+							@include tab-list(#f7f7f7, #fff);
 							label {
 								@include lbl;
 								top: 2px;
@@ -2646,7 +2515,7 @@
 								border: 1px solid #a9a9a9;
 								margin-top: -1px;
 								.grid-wrap.scr-wrap {
-									@include grid-scr-x(null, 100%, 4px);
+									@include grid-scr-x(null, 100%);
 									.grid-tbl {
 										.ie8 & {
 											width: 581px;
@@ -2763,7 +2632,7 @@
 			}
             .cont-property {
 				.grid-tbl {
-					@include tbl-style-1;
+					@include tbl-style-2;
 					td {
 						.cell {}
 					}
@@ -2835,7 +2704,7 @@
 					@include bx;
 					background: #f0f0f0;
 					padding: 15px;
-					border-radius: 4px;
+					// border-radius: 4px;
 					margin-top: 10px;
 					.scrollbox {
 						height: 565px;
@@ -2843,10 +2712,13 @@
 						overflow: auto;
 						.scrollbar {
 							.list {
-								@include position(relative, null, -15px);
+								@include position(relative, null);
+								padding: 5px 0;
 								.item {
 									float: left;
-									padding: 0 20px;
+									box-sizing: border-box;
+									width: 135px;
+									padding: 0 10px;
 									font-size: 13px;
 								}
 							}
@@ -2871,7 +2743,7 @@
 			@include pop-contents-base;
             .cont-property {
 				.grid-tbl {
-					@include tbl-style-1;
+					@include tbl-style-2;
 					td {
 						.cell {
 							.w-1 {width: 100px;}
@@ -2883,7 +2755,7 @@
 				@include bx;
 				background: #f0f0f0;
 				padding: 15px;
-				border-radius: 4px;
+				// border-radius: 4px;
 				margin-top: 10px;
 				.scrollbox {
 					height: 500px;
@@ -2891,10 +2763,13 @@
 					overflow: auto;
 					.scrollbar {
 						.list {
-							@include position(relative, null, -15px);
+							@include position(relative, null);
+							padding: 5px 0;
 							.item {
 								float: left;
-								padding: 0 20px;
+								box-sizing: border-box;
+								width: 135px;
+								padding: 0 10px;
 								font-size: 13px;
 							}
 						}
@@ -2919,34 +2794,7 @@
             padding: 20px 20px 0;
 
             .tab-list {
-                > * {
-                    position: relative;
-                    float: left;
-                    color: #444;
-                }
-                .tab {
-                    display: inline-block;
-                    padding: 5px 12px;
-                    border-top-left-radius: 5px;
-                    border-top-right-radius: 5px;
-                    background: #f7f7f7;
-                    border: 1px solid #c5c5c5;
-                    font-size: 12px;
-                    border-bottom-color: #9f9f9f;
-                    cursor: pointer;
-                    & + .tab {
-                        left: -1px;
-                    }
-                    &.on {
-                        z-index: 1;
-                        background: #fff;
-                        border-color: #9f9f9f;
-                        border-bottom-color: #fff;
-                    }
-                    .plus {
-                        vertical-align: middle;
-                    }
-                }
+				@include tab-list(#f7f7f7, #fff);
                 label {
                     @include lbl;
                     top: 2px;
@@ -3037,7 +2885,11 @@
                         }
                     }
                 }
-            }
+			}
+			.pop-footer {
+				padding: 0;
+				margin-top: 0;
+			}
         }
         
 		.pop-footer {
@@ -3236,33 +3088,7 @@
 						height: 205px;
 						@include bdr(#c5c5c5);
 						.tab-list {
-							> * {
-								position: relative;
-								float: left;
-								color: #444;
-							}
-							.tab {
-								display: inline-block;
-								padding: 5px 12px;
-								border-top-left-radius: 5px;
-								border-top-right-radius: 5px;
-								background: #f7f7f7;
-								border: 1px solid #c5c5c5;
-								font-size: 12px;
-								border-bottom-color: #9f9f9f;
-								& + .tab {
-									left: -1px;
-								}
-								&.on {
-									z-index: 1;
-									background: #fff;
-									border-color: #9f9f9f;
-									border-bottom-color: #fff;
-								}
-								.plus {
-									vertical-align: middle;
-								}
-							}
+							@include tab-list(#f7f7f7, #fff);
 							label {
 								@include lbl;
 								top: 2px;
@@ -3279,7 +3105,7 @@
 								border: 1px solid #a9a9a9;
 								margin-top: -1px;
 								.grid-wrap.scr-wrap {
-									@include grid-scr-x(null, 100%, 4px);
+									@include grid-scr-x(null, 100%);
 									.grid-tbl {
 										.ie8 & {
 											width: 581px;
@@ -3443,7 +3269,7 @@
 					.cont-rsvList {
 						float: none;
 						.grid-wrap.scr-wrap {
-							@include grid-scr-x(null, 100%, 4px);
+							@include grid-scr-x(null, 100%);
 							.grid-area.grid-contents {
 								background: #fff;
 								height: 80px;
@@ -3496,12 +3322,14 @@
 .pop-container.chkInf-container {
 	.pop-wrapper {
 		width: 950px;
-		margin-top: 35px;
+		margin-top: 25px;
 		.pop-header {
 			@include pop-header-base;
 		}
 		.pop-contents {
 			@include pop-contents-base;
+			padding-top: 10px;
+			padding-bottom: 10px;
 			.grid-tbl {
 				@include tbl-base;
 			}
@@ -3597,7 +3425,7 @@
 			@include pop-contents-base;
             .cont-property {
                 .property-tbl {
-                    @include tbl-style-1;
+                    @include tbl-style-2;
                     .cell {
                         .cal-box {
                             .inp-cal {
@@ -3614,20 +3442,10 @@
             .cont-area {
                 margin-top: 13px;
                 .grid-toolbar {
-                    @include bx;
-                    @include gray-gradient;
-                    width: 100%;
-                    border: 1px solid $bor-gray-table;
-                    border-top-left-radius: 4px;
-                    border-top-right-radius: 4px;
-                    padding: 4px;
-                    margin-bottom: -1px;
-                    p {
-                        font-size: 12px;
-                    }
+                    display: none;
                 }
                 .grid-wrap {
-                    @include grid-scr-x(null, 100%, 4px 4px 0 0);
+                    @include grid-scr-x(null, 100%);
                     .grid-tbl {
                         .ie8 & {
                             width: 1390px;
@@ -3720,7 +3538,7 @@
 			@include pop-contents-base;
             .cont-property {
                 .property-tbl {
-                    @include tbl-style-1;
+                    @include tbl-style-2;
                     .cell {
                         .form-select {
                             &.w-1 {
@@ -3742,20 +3560,10 @@
             .cont-area {
                 margin-top: 13px;
                 .grid-toolbar {
-                    @include bx;
-                    @include gray-gradient;
-                    width: 100%;
-                    border: 1px solid $bor-gray-table;
-                    border-top-left-radius: 4px;
-                    border-top-right-radius: 4px;
-                    padding: 4px;
-                    margin-bottom: -1px;
-                    p {
-                        font-size: 12px;
-                    }
+                    @include grid-toolbar;
                 }
                 .grid-wrap {
-                    @include grid-scr-x(null, 100%, 4px 4px 0 0);
+                    @include grid-scr-x(null, 100%);
                     .grid-tbl {
                         .ie8 & {
                             width: 840px;
@@ -3800,7 +3608,7 @@
 			@include pop-contents-base;
             .cont-property {
 				.grid-tbl {
-					@include tbl-style-1;
+					@include tbl-style-2;
 					td {
 						.cell {
 							.w-1 {
@@ -3827,7 +3635,7 @@
 				@include bx;
 				background: #f0f0f0;
 				padding: 15px;
-				border-radius: 4px;
+				// border-radius: 4px;
 				margin-top: 10px;
 				.scrollbox {
 					height: 500px;
@@ -3835,11 +3643,13 @@
 					overflow: auto;
 					.scrollbar {
 						.list {
-							@include position(relative, null, 0);
+							@include position(relative, null);
+							padding: 5px 0;
 							.item {
 								float: left;
-                                width: 33.3%;
-								//padding: 0 20px;
+								box-sizing: border-box;
+								width: 135px;
+								padding: 0 10px;
 								font-size: 13px;
 							}
 						}
