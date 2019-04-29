@@ -48,7 +48,8 @@
 .contents.resFit-contents {
 	.split-1 {
 		@include float;
-		width: 622px;
+		min-width: 622px;
+		width: 40%;
 		.cont-secondBook {
 			// width: 625px;
 			.cont-tit {
@@ -68,15 +69,19 @@
 					+ .grid-wrap {
 						margin-left: 15px;
 					}
-					.grid-contents {
-					}
+				}
+				.grid-wrap:first-child {
+					width: 51%;
+				}
+				.grid-wrap:first-child + .grid-wrap {
+					width: 46%;
 				}
 			}
 			.grid-tbl {
 				@include tbl-base;
 			}
 			.name-tbl {
-				width: 306px;
+				// width: 306px;
 				th, td {
 
 				}
@@ -129,7 +134,7 @@
 				}
 			}
 			.assign-tbl {
-				width: 270px;
+				// width: 270px;
 				th, td {
 
 				}
@@ -256,7 +261,8 @@
 	}
 	.split-2 {
 		@include float;
-		width: 808px;
+		min-width: 808px;
+		width: 56%;
 		margin-left: 20px;
 		.cont-guestinfo {
 //			width: 805px;
@@ -277,13 +283,18 @@
 					+ .flt-box {
 						margin-left: 15px;
 					}
-					.grid-contents {
-					}
+				}
+				.grid-wrap:first-child {
+					width: 37%;
+				}
+				.grid-wrap:first-child + .flt-box {
+					width: 61%;
 				}
 				.flt-box {
-					width: 464px;
+					// width: 464px;
 					.grid-wrap.scr-wrap {
-						@include grid-scr-brown(580px, 464px);
+						// @include grid-scr-brown(580px, 464px);
+						@include grid-scr-brown(590px, 100%);
 						.grid-tbl {
 							.ie8 & {
 								width: 462px;
@@ -295,7 +306,7 @@
 			// 테이블 내 form 요소 및 기타 관리
 			.guest-tbl {
 				@include tbl-base;
-				width: 295px;
+				// width: 295px;
 				th, td {
 
 				}
@@ -420,7 +431,8 @@
 .contents.rsvGroup-contents {
 	.split-1 {
 		@include float;
-		width: 622px;
+		min-width: 622px;
+		width: 40%;
 		.cont-secondBook {
 			// width: 625px;
 			.cont-tit {
@@ -440,8 +452,12 @@
 					+ .grid-wrap {
 						margin-left: 15px;
 					}
-					.grid-contents {
-					}
+				}
+				.grid-wrap:first-child {
+					width: 51%;
+				}
+				.grid-wrap:first-child + .grid-wrap {
+					width: 46%;
 				}
 			}
 			.grid-tbl {
@@ -450,7 +466,7 @@
 				}
 			}
 			.name-tbl {
-				width: 306px;
+				// width: 306px;
 				th, td {
 
 				}
@@ -503,7 +519,7 @@
 				}
 			}
 			.assign-tbl {
-				width: 270px;
+				// width: 270px;
 				th, td {
 
 				}
@@ -631,7 +647,8 @@
 	}
 	.split-2 {
 		@include float;
-		width: 808px;
+		min-width: 808px;
+		width: 56%;
 		margin-left: 20px;
 		.cont-rsvList {
 			.cont-tit {

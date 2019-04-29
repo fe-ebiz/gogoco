@@ -1078,20 +1078,19 @@
 				.tit {
 					color: #c0b5a6;
 				}
-				.floor.on {
-				}
 				.floor {
 					width:43px;
 					height:28px;
-					background-color: #c0b5a6;
+					background: #fff;
 					border:2px solid #c0b5a6;
-					color:#fff;
+					color: #c0b5a6;
 					padding-top: 10px;
 					margin-bottom: 2px;
 					cursor: pointer;
 					&.on {
-						background: #fff;
-						color: #c0b5a6;
+						background: #c0b5a6;
+						border:2px solid #c0b5a6;
+						color:#fff;
 					}
 				}
 			}
