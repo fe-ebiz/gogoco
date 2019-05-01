@@ -209,6 +209,16 @@
 						}
 					}
 				}
+				.cont-tab {
+					margin-top: 20px;
+					.tab-list {
+						@include tab-list(#f7f7f7, #fff);
+						border-bottom: 1px solid #9f9f9f;
+						.tab {
+							margin-bottom: -1px;
+						}
+					}
+				}
 				.cont-list {
 					margin-top: 10px;
 					.grid-wrap {
