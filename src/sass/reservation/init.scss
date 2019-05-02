@@ -108,7 +108,8 @@
 								width: 55%;
 							}
 							&.rate {
-								width: 70%;
+								width: 90%;
+								float: left;
 							}
 						}
 						.form-select {
@@ -129,6 +130,9 @@
 						}
 						.add-rtxt {
 							// margin-left: 2px;
+						}
+						.txt-won {
+							@include position(relative, 3px);
 						}
 					}
 				}
