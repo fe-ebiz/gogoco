@@ -135,6 +135,14 @@
 							@include position(relative, 3px);
 						}
 					}
+					.row {
+						padding: 1px 0;
+					}
+				}
+				.ht-row-2 {
+					th, td {
+						height: 67px;
+					}
 				}
 			}
 			.assign-tbl {
