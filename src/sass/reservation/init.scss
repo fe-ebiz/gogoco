@@ -184,6 +184,10 @@
 							&.accompany {
 								width: 75%;
 							}
+							&.card {
+								width: 23%;
+								text-align: center;
+							}
 						}
 						.form-select {
 							&.rmType {
@@ -207,6 +211,18 @@
 						.mg- {
 							margin: 0 5px;
 						}
+					}
+				}
+			}
+			.row-btn {
+				&.mt-10 {
+					margin-top: 10px;
+				}
+				button {
+					&.pay {
+						$pd: 28px;
+						padding-left: $pd;
+						padding-right: $pd;
 					}
 				}
 			}

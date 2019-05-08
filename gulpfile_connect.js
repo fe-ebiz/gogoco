@@ -1,145 +1,198 @@
-"use strict";
+'use strict';
 /**
  * 모듈 호출
+ * [del]                - 폴더(디렉토리)/파일 제거
  * [gulp-if]            - 조건 처리
  * [gulp-rename]        - 파일 이름 변경
- * [gulp-connect]       - 웹 서버
- * [gulp-watch]         - 변경된 파일만 처리
+ * [gulp-jade]          - Jade 컴파일
  * [gulp-plumber]       - 오류 발생해도 watch 업무 지속
- * [gulp-open]          - 브라우저 오픈
- * [gulp-ejs]          - ejs 컴파일
+ * [gulp-watch]         - 변경된 파일만 처리
  * [gulp-html-prettify] - HTML 구조 읽기 쉽게 변경
- * [del]                - 폴더(디렉토리)/파일 제거
+ * [gulp-connect-multi] - 웹 서버
  */
-var gulp     = require('gulp'),
-	gulpif   = require('gulp-if'),
-	rename   = require('gulp-rename'),
-	connect  = require('gulp-connect'),
-	watch    = require('gulp-watch'),
+var del      = require('del'),
+	gulp     = require('gulp'),
+	fileinclude = require('gulp-file-include'),
+	sass	 = require('gulp-sass'),
+	sourcemaps = require('gulp-sourcemaps'),
+	autoprefixer = require('gulp-autoprefixer'),
 	plumber  = require('gulp-plumber'),
-	open     = require('gulp-open'),
-	ejs     = require('gulp-ejs'),
-	compass  = require('gulp-compass'),
+	watch    = require('gulp-watch'),
 	prettify = require('gulp-html-prettify'),
-	del      = require('del'),
-	copy	 = require('gulp-copy'),
+	connect  = require('gulp-connect-multi')(),
+	browserSync = require('browser-sync').create(), // browser-sync 호출
 
-	// 환경설정 config.json
-	config   = require('./config.json');
+	config   = require('./config')();
+	
+	sass.compiler = require('node-sass');
+	// compass  = require('gulp-compass'),
+	// gulpif   = require('gulp-if'),
+	// rename   = require('gulp-rename'),
+	// ejs      = require('gulp-ejs'),
+	// jade     = require('gulp-jade'),
+	// preen		 = require('preen'),
+	// 환경설정 ./config.js
 
-// ejs & CSS & JS 경로 설정
-var cssSrc   = config.staticOutput+'/css/**/*.css';
-var jsSrc   = config.staticOutput+'/js/**/*.js';
-// 밑줄 기호(_)가 붙은 파일은 컴파일 대상에서 제외.
-var ejsSrc  = config.input+'/ejs/**/!(_)*.ejs';
-//var ejsSrc  = config.input+'/ejs/**/*.ejs';
-// 부품(Parts) 폴더 _*.ejs 파일 주소
-var ejsPartsSrc = config.input+'/ejs/include/_*.ejs';
-
-/**
- * Gulp 업무(Tasks) 정의
+/*
+ * Gulp 업무(Tasks) 정의 v3.9.1
  */
-// 기본 업무
-gulp.task('default', ['ejs', 'compass', "copy:dist-sass", 'js', 'connect', 'open', 'watch']);
 
-// 관찰 업무
-gulp.task('watch', function () {
-	watch([ejsSrc, ejsPartsSrc], function () {
-		gulp.start('ejs');
+// 기본
+// gulp.task('default', ['template', 'sass', 'js', 'connect', 'watch']);
+// gulp.task('default', ['connect', 'watch']);
+gulp.task('default', ['browserSync', 'watch']);
+gulp.task('mobile', ['browserSync_m', 'watch_m']);
+gulp.task('prepare', ['preen', 'bower:copy']);
+
+gulp.task('connect', connect.server({
+	root: ['dist/'],
+	port: 1337,
+	livereload: true,
+	open: {
+	  browser: 'chrome' // if not working OS X browser: 'Google Chrome'
+	}
+  }));
+gulp.task('browserSync', ['template', 'sass', 'js'], function() {
+	return browserSync.init({
+		server: {
+			baseDir: './dist'
+		}
 	});
-	watch(config.sassSrc, function () {
-		gulp.start('compass');
-		gulp.start('copy:dist-sass');
+});
+gulp.task('browserSync_m', ['template_m', 'sass', 'js'], function() {
+	return browserSync.init({
+		server: {
+			baseDir: './dist'
+		}
 	});
 });
 
-//정리
-gulp.task('arrange', function() {
-	gulp.start('clean:css-map');
-	gulp.start('copy:bak');
-	gulp.start('copy:src-sass');
+// 관찰
+gulp.task('watch', [], function(){
+	// HTML 템플릿 업무 관찰
+	watch([config.template.src, config.template.parts], function() {
+		gulp.start('template');
+	});
+	// Sass 업무 관찰
+	watch(config.sass.src, function() {
+		gulp.start('sass');
+	});
+	// Js 업무 관찰
+	watch(config.js.src, function() {
+		gulp.start('js');
+	});
+});
+gulp.task('watch_m', [], function(){
+	// HTML 템플릿 업무 관찰
+	gulp.watch([config.template.src_m, config.template.parts_m], ['template_m']);
+	// Sass 업무 관찰
+	gulp.watch(config.sass.src, ['sass']);
+	// Js 업무 관찰
+	gulp.watch(config.js.src, ['js']);
 });
 
 // 제거
 gulp.task('clean:all', function(){
-	del(config.output);
-});
-gulp.task('clean:html', function(){
-	del(config.ejsOutput);
+	del(config.dev);
 });
 gulp.task('clean:css', function(){
-	del(config.staticOutput+"/css");
-});
-gulp.task('clean:css-map', function(){
-	del(config.staticOutput+"/css/**/*.css.map");
+	del(config.sass.dest);
 });
 gulp.task('clean:js', function(){
-	del(config.staticOutput+"/js");
+	del(config.js.dest);
 });
 
-// 복사
-gulp.task('copy:bak', function() {
-  return gulp.src('./dist/views/**/')
-    .pipe(gulp.dest('./dist/bak'));
-});
-gulp.task('copy:src-sass', function() {
-  return gulp.src('./dist/static/sass/**/')
-    .pipe(gulp.dest('./src/sass'));
-});
-gulp.task('copy:dist-sass', function() {
-  return gulp.src('./src/sass/**/')
-    .pipe(gulp.dest('./dist/static/sass/'));
-});
-
-// 웹 서버 업무 (LiveReload 사용)
-gulp.task('connect', function() {
-	connect.server({
-		root: config.output,
-		port: config.port,
-		livereload: config.livereload
-	});
-});
-// 브라우저 오픈 업무
-gulp.task('open', function() {
-	var options = {
-		url: 'http://localhost:'+config.port+'/views/',
-		app: config.browser // chrome, firefox, iexplore, opera, safari
-	};
-	gulp.src(config.ejsOutput+'/index.html')
-		.pipe(open('<%file.path%>', options));
+// HTML 템플릿(template)
+gulp.task('template', function(){
+	return gulp.src(config.template.src)
+		.pipe( plumber() )
+		.pipe( fileinclude({
+			prefix: '@@',
+			basepath: '@file'
+		}))
+		.pipe( prettify( config.htmlPrettify) )
+		.pipe( gulp.dest( config.template.dest) )
+		.pipe(browserSync.stream({ match: '**/*.html' }));
+		// .pipe( connect.reload() );
+		// .pipe(browserSync.reload({stream: true}));
+		// .pipe(browserSync.reload());
 });
 
-// CSS 변경 내용, 자동 갱신(업데이트)
-gulp.task('css', function() {
-	gulp.src(cssSrc)
-		.pipe(watch(cssSrc))
-		.pipe(connect.reload());
+gulp.task('sass', function() {
+	return gulp.src( config.sass.src )
+		.pipe( plumber() )
+		.pipe(sourcemaps.init())
+		.pipe( sass({outputStyle: 'compact'}).on('error', sass.logError)) // {outputStyle: nested} expanded, compact, compressed
+        .pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+            cascade: false
+        }))
+		.pipe(sourcemaps.write())
+		.pipe( gulp.dest( config.sass.dest) )
+		.pipe(browserSync.stream({ match: '**/*.css' }));
+		// .pipe( connect.reload() );
+		// .pipe(browserSync.reload({stream: true}));
+		// .pipe(browserSync.reload());
 });
+
+gulp.task('js', function(){
+	return gulp.src(config.js.src)
+		.pipe( plumber() )
+		.pipe( gulp.dest(config.js.dest) )
+		.pipe(browserSync.stream({ match: '**/*.js' }));
+		// .pipe( connect.reload() );
+		// .pipe(browserSync.reload({stream: true}));
+		// .pipe(browserSync.reload());
+});
+
+gulp.task('html', function(){
+	return gulp.src(config.template.src)
+		.pipe( plumber() )
+		.pipe( fileinclude({
+			prefix: '@@',
+			basepath: '@file'
+		}))
+		.pipe( prettify( config.htmlPrettify) )
+		.pipe( gulp.dest( config.template.dest) )
+		.pipe(browserSync.stream({ match: '**/*.html' }));
+		// .pipe( connect.reload() );
+		// .pipe(browserSync.reload());
+});
+////////////////////////////////////////////////
 gulp.task('compass', function() {
-	gulp.src( config.sassSrc )
+	gulp.src( config.sass.src )
 		.pipe( plumber() )
 		.pipe( compass({
-			css : config.sassDest,
-			sass: config.compassSrc,
+			css : config.sass.dest,
+			sass: config.sass.compassSrc,
 			style: 'compact' // nested, expanded, compact, compressed
 		}) )
-		.pipe( gulp.dest( config.sassDest ) )
-		.pipe( connect.reload() );
+		.pipe( gulp.dest( config.sass.dest ) )
+		.pipe(browserSync.reload({stream: true}));
 });
-// JS 변경 내용, 자동 갱신(업데이트)
-gulp.task('js', function() {
-	gulp.src(jsSrc)
-		.pipe(watch(jsSrc))
-		.pipe(connect.reload());
+
+gulp.task('css', function(){
+	gulp.src(config.css.src)
+		.pipe( plumber() )
+		.pipe( gulp.dest(config.css.dest) )
+		.pipe(browserSync.reload({stream: true}));
 });
-// ejs 컴파일
-gulp.task('ejs', function() {
-	gulp.src(ejsSrc)
-		.pipe(plumber())
-		.pipe(ejs({
-			rootPage: 'views',
-			initPage: ''
-		}, {}, { ext: '.html' }))
-		.pipe(gulp.dest(config.ejsOutput))
-		.pipe(connect.reload());
+
+// Bower 패키지에서 필요한 파일만 골라내기(Preen)
+gulp.task('preen', function(cb) {
+	preen.preen({}, cb);
+});
+// Bower 패키지 복사
+gulp.task('bower:copy', function() {
+	// susy
+	gulp.src(config.bower.susy.src)
+		.pipe( gulp.dest(config.bower.susy.dest) );
+	gulp.src(config.bower.breakpoint.src)
+		.pipe( gulp.dest(config.bower.breakpoint.dest) );
+	// fontawesome
+	gulp.src(config.bower.fontawesome.src)
+		.pipe( gulp.dest(config.bower.fontawesome.dest) );
+	// jquery, modernizr, detectizr
+	gulp.src(config.bower.others.src)
+		.pipe( gulp.dest(config.bower.others.dest) );
 });

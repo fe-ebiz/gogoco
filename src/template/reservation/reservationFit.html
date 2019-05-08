@@ -13,7 +13,7 @@
 
 	<div class="cf contents resFit-contents">
 		@@include('../include/_row_h2.html', {
-			"page-title": "예약 조건"
+			"page-title": "예약 (개인)"
 		})
 		<div class="cf cont-container-f fold">
 			<div class="split split-1">
@@ -244,7 +244,7 @@
 												</div>
 											</td>
 										</tr>
-										<tr>
+										<!-- <tr>
 											<th>
 												<div class="cell">Comp / HU</div>
 											</th>
@@ -267,7 +267,7 @@
 													<button type="button" class="btn-gray" disabled>DEPOSIT</button>
 												</div>
 											</td>
-										</tr>
+										</tr> -->
 										<tr>
 											<th>
 												<div class="cell">결제수단</div>
@@ -285,21 +285,25 @@
 										</tr>
 										<tr>
 											<th>
-												<div class="cell">신용카드</div>
+												<div class="cell">카드번호</div>
 											</th>
 											<td>
 												<div class="cell">
+													<input type="text" class="form-input card">
+													<input type="text" class="form-input card">
+													<input type="text" class="form-input card">
 													<input type="text" class="form-input card">
 												</div>
 											</td>
 										</tr>
 										<tr>
 											<th>
-												<div class="cell">카드 주인</div>
+												<div class="cell">카드 구분</div>
 											</th>
 											<td>
 												<div class="cell">
-													<input type="text" class="form-input holder">
+													<span class="rdo-box"><label><input type="radio" name="tax">개인</label></span>
+													<span class="rdo-box"><label><input type="radio" name="tax">법인</label></span>
 												</div>
 											</td>
 										</tr>
@@ -316,7 +320,7 @@
 												</div>
 											</td>
 										</tr>
-										<tr>
+										<!-- <tr>
 											<th>
 												<div class="cell">영세율</div>
 											</th>
@@ -358,10 +362,12 @@
 													<button type="button" class="btn-green" onclick="popFn.show('.accomp-container')">SET</button>
 												</div>
 											</td>
-										</tr>
-										<!--{tr(th>div.cell^+td>div.cell)}-->
+										</tr> -->
 									</tbody>
 								</table>
+								<div class="row-btn mt-10 ta-center">
+									<button type="button" class="btn-orange pay">결제하기</button>
+								</div>
 							</div>
 						</div>
 					</div>

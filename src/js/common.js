@@ -1,5 +1,7 @@
 $(function() {
 
+	// input autocomplete off
+	$('input').attr('autocomplete','off');
 	popClsFn();
 	datePick();
 	ascending();
@@ -38,6 +40,12 @@ var popFn = {
 
 var page = {
 	layer: function(a, b, c) {
+		if(a == 'pkg') {
+			var c = $(c.closest("tr")).index();
+			//var txt = "test" + idx;
+			//$(c.closest("table")).find("tr").eq(idx).find(".form-input.package").val(txt);
+		}
+
 		$.ajax({		
 			type: 'post',
 			url: '/_new/views/layer/',
@@ -46,6 +54,10 @@ var page = {
 				$('#layer').html(e);
 			}
 		});
+	},
+	
+	close: function() {
+		$('.pop-container').hide();
 	}
 }
 
@@ -162,4 +174,13 @@ function depTblClk() {
         }
 
     });
+}
+
+function addCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function removeCommas(x) {
+    if(!x || x.length == 0) return "";
+    else return x.split(",").join("");
 }
