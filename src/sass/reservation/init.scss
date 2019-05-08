@@ -188,6 +188,10 @@
 								width: 23%;
 								text-align: center;
 							}
+							&.rate {
+								width: 85%;
+								float: left;
+							}
 						}
 						.form-select {
 							&.rmType {
@@ -208,9 +212,28 @@
 						.add-rtxt {
 							// margin-left: 2px;
 						}
+						.txt-won {
+							@include position(relative, 3px);
+						}
 						.mg- {
 							margin: 0 5px;
 						}
+						.w-01 {
+							width: 73%;
+						}
+						.row {
+							.col {
+								@include va;
+								&.w-02 {
+									@include position(relative, 1px);
+								}
+							}
+						}
+					}
+				}
+				.ht-row-2 {
+					th, td {
+						height: 67px;
 					}
 				}
 			}
