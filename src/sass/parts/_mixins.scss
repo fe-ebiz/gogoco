@@ -362,6 +362,13 @@ $btn-lh: 1.5;
 	// 	text-shadow: none;
 	// }
 }
+@mixin btn-gray-2($wth: null, $he:null, $fz: null, $pd: null) {
+	@include btn-base(null, null, #ccc, #ccc, #fff);
+	width: $wth;
+	height: $he;
+	font-size: $fz;
+	padding: $pd;
+}
 // 디자인 변경으로 green은 orange로 
 @mixin btn-green($wth: null, $he:null, $fz: null, $pd: null) {
 	@include btn-base(null, null, #f4774d, #e0592c, #fff);

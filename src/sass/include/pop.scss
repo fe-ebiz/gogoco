@@ -42,6 +42,10 @@
 		@include btn-gray(null, null, 12px, 3px 8px 2px);
 		line-height: $btn-lh;
 	}
+	.btn-gray-2 {
+		@include btn-gray-2(null, null, 12px, 3px 8px 2px);
+		line-height: $btn-lh;
+	}
 	.btn-green {
 		@include btn-green(null, null, 12px, 3px 8px 2px);
 		line-height: $btn-lh;
@@ -3684,6 +3688,70 @@
                     padding-right: 15px;
                 }
             }
+		}
+	}
+}
+
+/* 메시지 팝업, 트레이스 팝업 */
+.pop-container.msg-container,
+.pop-container.trace-container {
+	.pop-wrapper {
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+			@include pop-contents-base;
+			// padding-top: 40px;
+			.popcont-container	{
+				@include bx;
+				.row.row-chk {
+					> span {
+						@include dp;
+						font-size: 12px;
+						&.sort {
+							top: 5px;
+						}
+						&.alarm {
+							font-weight: 700;
+							.form-select {
+								margin-left: 5px;
+								min-width: 100px;
+								width: auto;
+							}
+						}
+					}
+				}
+				.cont-list {
+					margin-top: 10px;
+					.grid-toolbar {
+						@include grid-toolbar;
+					}
+					.grid-wrap {
+						@include grid-scr-x(100%, null);
+						border-bottom: none;
+						.grid-scrollable-x {
+							overflow-x: auto;
+						}
+						.grid-area.grid-contents {
+							height: 185px;
+						}
+						td {
+							text-align: center;
+							.cell {
+								button {
+									&.delete {
+										padding-left: 5px;
+										padding-right: 10px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.pop-footer {
+			@include pop-footer-base;
 		}
 	}
 }
