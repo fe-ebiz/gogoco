@@ -12,7 +12,7 @@
 					<span class="txt">관리자 로그인</span>
 				</h1>
 				
-				<fieldset>
+				<fieldset class="fid">
 					<legend>로그인</legend>
 					<p class="row">
 						<input type="text" class="inp id" placeholder="ID">
@@ -24,23 +24,29 @@
 						<button type="button" class="btn-login">LOGIN</button>
 					</p>
 				</fieldset>
+
+				<!-- fail 일 경우 -->
+				<p class="row-fail">
+					입력하신 아이디가 없거나, 비밀번호가 맞지않습니다.
+				</p>
 			</div>
 		</div>
 		
-		<div class="row-forgot">
-			<a href="forgot_id.html" class="btn-forgot">
-				<i class="fa fa-user-o"></i>
-				<span class="lbl">Forgot id?</span>
-			</a>
-			<a href="forgot_pw_1.html" class="btn-forgot">
-				<i class="fa fa-key"></i>
-				<span class="lbl">Forgot pw?</span>
-			</a>
-		</div>
-		
-		<div class="row-copyright">
-			<img src="../../public/img/common/logo_f.png" alt="고코투어 CMS" class="logo-img-f">
-			<small>Copyright <span class="fwe">GOCO Corp.</span> All Rights Reserved.</small>
+		<div class="login-footer">
+			<div class="row-forgot">
+				<a href="forgot_id.html" class="btn-forgot">
+					<img src="../../public/img/icon/login/user.png" alt="아이디찾기" class="ic">
+					<span class="lbl">Forgot id?</span>
+				</a>
+				<a href="forgot_pw_1.html" class="btn-forgot">
+					<img src="../../public/img/icon/login/lock.png" alt="비밀번호찾기" class="ic">
+					<span class="lbl">Forgot pw?</span>
+				</a>
+			</div>
+			
+			<div class="row-copyright">
+				<small>Copyright ⓒ GO.CO.KR Corp. All rights reserved.</small>
+			</div>
 		</div>
 	</div>
 
