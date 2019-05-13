@@ -5,30 +5,32 @@
 <body class="page-member">
 
 	<div class="cf cont-forgot cont-forgot-id">
-		<div class="forgot-area">
-			<h1 class="logo"><a href="../member/login.html"><img src="../../public/img/common/logo.png" alt="고코투어 CMS" class="logo-img"></a></h1>
-			
-			<fieldset>
-				<legend>아이디 찾기</legend>
+		<div class="login-container">
+			<div class="login-area">
+				<h1 class="h-logo">
+					<a href="../member/login.html">
+						<img src="../../public/img/common/logo_mng.png" alt="고코투어 CMS" class="logo-img">
+						<span class="txt">아이디 찾기</span>
+					</a>
+				</h1>
 				
-				<p class="row">
-					<label for="" class="lbl">이름</label>
-					<input type="text" class="inp name">
-				</p>
-				<p class="row">
-					<label for="" class="lbl">본인 확인 이메일</label>
-					<input type="text" class="inp pw">
-				</p>
-				<p class="row">
-					<button type="button" class="btn-login">보내기</button>
-				</p>
-			</fidleset>
+				<fieldset class="fid">
+					<legend>아이디 찾기</legend>
+					
+					<p class="row">
+						<input type="text" class="inp id" placeholder="NAME">
+					</p>
+					<p class="row">
+						<input type="text" class="inp pw" placeholder="E-mail">
+					</p>
+					<p class="row row-btn">
+						<button type="button" class="btn-login">보내기</button>
+					</p>
+				</fidleset>
+			</div>
 		</div>
 		
-		<div class="row-copyright">
-			<img src="../../public/img/common/logo.png" alt="고코투어 CMS" class="logo-img-f">
-			<small>Copyright <span class="fwe">GOCO Corp.</span> All Rights Reserved.</small>
-		</div>
+		@@include('../include/member/_footer.html')
 	</div>
 
 </body>

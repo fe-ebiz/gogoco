@@ -134,6 +134,41 @@
 						.txt-won {
 							@include position(relative, 3px);
 						}
+						.inp-drop-box {
+							position: relative;
+							z-index: 1;
+							.form-input:focus,
+							.form-input:active {
+								& + .drop-menu {
+									display: block;
+								}
+							}
+							.drop-menu {
+								display: none;
+								position: absolute;
+								top: 25px;
+								left: 0px;
+								width: 100%;
+								max-height: 200px;
+								overflow: auto;
+								box-sizing: border-box;
+								border: 1px solid #c7c7c7;
+								background: #fff;
+								> li {
+									padding: 2px 5px;
+									cursor: pointer;
+									&:hover {
+										background: $fg-orange-1;
+										color: #fff;
+									}
+								}
+							}
+							.ic-del {
+								@include position(absolute, 5px, null, null, 3px);
+								margin-left: auto;
+								cursor: pointer;
+							}
+						}
 					}
 					.row {
 						padding: 1px 0;

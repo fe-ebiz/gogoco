@@ -10,9 +10,9 @@
 }
 
 $bg-minHeight: 720px;
+$bg-login: #f0f0f0;
 /* 로그엔 페이지 */
 .cont-login {
-	$bg-login: #f0f0f0;
 	display: table;
 	position: absolute;
 	top: 0;
@@ -32,6 +32,7 @@ $bg-minHeight: 720px;
 			width: 550px;
 			// height: 420px;
 			box-sizing: border-box;
+			background: #fff;
 			.h-logo {
 				box-sizing: border-box;
 				display: inline-block;
@@ -47,15 +48,15 @@ $bg-minHeight: 720px;
 				}
 				.txt {
 					@include va;
+					margin-left: 5px;
 					font-size: 26px;
-					// font-style: italic;
-					transform: skewX(-10deg);
-					top: -3px;
+					transform: skewX(-11deg);
+					letter-spacing: -1px;
+					top: -2px;
 				}
 			}
 			.fid {
 				padding: 60px 0;
-				background: #fff;
 				.inp {
 					@include form-base;
 					display: block;
@@ -65,11 +66,8 @@ $bg-minHeight: 720px;
 					padding-left: 20px;
 					font-size: 16px;
 					letter-spacing: 1px;
-					&.id {
+					&.id, &.name {
 						margin-top: 0px;
-					}
-					&.pw {
-		
 					}
 				}
 				.row-btn {
@@ -88,13 +86,18 @@ $bg-minHeight: 720px;
 						// border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 					}
 				}
+				p:nth-of-type(1) {
+					.inp {
+						margin-top: 0px;
+					}
+				}
 				.inp, .btn-login {
 					width: 350px;
 					height: 60px;
 					border-radius: 3px;
 				}
 			}
-			.row-fail {
+			.row-cmt {
 				position: absolute;
 				width: 100%;
 				bottom: -40px;
@@ -148,6 +151,7 @@ $bg-minHeight: 720px;
 		}
 	}
 	.row-copyright {
+		border-top: 1px solid #dcdcdc;
 		padding: 40px 0;		
 		background: #fff;
 		font-size: 14px;
@@ -168,87 +172,137 @@ $bg-minHeight: 720px;
 
 /* ID , PW 찾기 공통 스타일 */
 .cont-forgot {
+	display: table;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #f5f6f7;
+	background: $bg-login;
 	min-height: $bg-minHeight;
-	.forgot-area {
-		position: relative;
-		text-align: center;
-		padding-top: 230px;
-		width: 460px;
-		margin: 0 auto;
-		fieldset {
-			display: block;
-			margin-top: 30px;
-		}
-		.logo {
-
-		}
-		.row {
-			text-align: left;
-		}
-		.lbl {
-			display: block;
-			margin-bottom: 5px;
-			margin-top: 15px;
-			font-weight: 700;
-		}
-		.inp {
-			@include form-base;
-			width: 100%;
-			font-size: 16px;
-			padding: 0 10px;
-			border: solid 1px #dadada;
-			border-radius: 0;
-		}
-		.btn-login {
-			@include btn-base;
-			width: 100%;
-			padding: 0 30px;
-			margin-top: 20px;
-			background: #ad9779;
-			border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-			color: rgba(255,255,255, 0.9);
-			text-shadow: 0px -1px rgba(0,0,0, 0.3);
-			border-radius: 0;
-			letter-spacing: 0;
-			font-size: 20px;
-		}
-		.inp, .btn-login {
-			height: 51px;
-		}
-		.row-txt {
-			$fg-color: #666;
-			margin-top: 10px;
-			font-size: 12px;
-			color: $fg-color;
-			font-family: $font-dt;
-			> a {
-				margin-left: 3px;
-//				border-bottom: 1px solid $fg-color;
-				text-decoration: underline;
+	font-family: $font-ntss;
+	.login-container {
+		display: table-cell;
+		vertical-align: middle;
+		.login-area {
+			position: relative;
+			margin: 0 auto;
+			margin-top: -70px;
+			width: 550px;
+			// height: 420px;
+			box-sizing: border-box;
+			background: #fff;
+			.h-logo {
+				box-sizing: border-box;
+				display: inline-block;
+				width: 100%;
+				padding-top: 60px;
+				color: #818386;
+				text-align: center;
+				.logo-img {
+					position: relative;
+					// width: 95px;
+				}
+				.txt {
+					@include va;
+					margin-left: 5px;
+					font-size: 26px;
+					// font-style: italic;
+					transform: skewX(-11deg);
+					letter-spacing: -1px;
+					// top: -3px;
+				}
 			}
-			.arr {
-				position: relative;
-				top: -2px;
-				margin-left: 3px;
-				vertical-align: middle;
-				font-size: 10px;
+			.fid {
+				padding: 20px 0 60px;
+				.inp {
+					@include form-base;
+					display: block;
+					margin: 10px auto 0;
+					box-sizing: border-box;
+					border: 1px solid #ddd;
+					padding-left: 20px;
+					font-size: 16px;
+					letter-spacing: 1px;
+				}
+				.row-btn {
+					text-align: center;
+					.btn-login {
+						@include btn-base;
+						margin: 20px auto 0;
+						padding: 0 30px;
+						background: $fg-page-tit;
+						border-color: $fg-page-tit;
+						font-size: 18px;
+						color: #fff;
+						font-family: $font-ntss;
+						letter-spacing: 0;
+						// background: #ad9779;
+						// border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+					}
+				}
+				p:nth-of-type(1) {
+					.inp {
+						margin-top: 0px;
+					}
+				}
+				.inp, .btn-login {
+					width: 350px;
+					height: 60px;
+					border-radius: 3px;
+				}
+			}
+			.row-cmt {
+				position: absolute;
+				width: 100%;
+				bottom: -55px;
+				text-align: center;
+				font-size: 14px;
+				.txt {
+					vertical-align: middle;
+				}
+				.btn-forgot {
+					display: inline-block;
+					vertical-align: middle;
+					margin: 0 10px;
+					border: 1px solid #ddd;
+					border-radius: 4px;
+					background: #fff;
+					font-size: 0;
+					> * {
+						display: inline-block;
+						padding: 0 10px;
+						font-size: 16px;
+						vertical-align: middle;
+					}
+					.ic {
+						width: 12px;
+					}
+					.lbl {
+						height: 32px;
+						line-height: 32px;
+						border-left: 1px solid #ddd;
+						font-size: 13px;
+						color: #666;
+					}
+				}
 			}
 		}
 	}
-	.row-copyright {
+	.login-footer {
 		position: absolute;
-		bottom: 15px;
-		left: 0;
 		width: 100%;
+		left: 0;
+		bottom: 0;
+	}
+	.row-copyright {
+		border-top: 1px solid #dcdcdc;
+		padding: 40px 0;		
+		background: #fff;
+		font-size: 14px;
+		color: #888;
+		font-weight: 300;
 		text-align: center;
-		font-size: 11px;
-		color: #444;
 		letter-spacing: 0;
 		.fwe {
 			font-weight: 800;
