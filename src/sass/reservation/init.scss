@@ -489,6 +489,64 @@
 					}
 				}
 			}
+			.grid-toolbar {
+				@include bx;
+				@include gray-gradient;
+				$btn-lh: 1.5;
+				width: 100%;
+				border: 1px solid $bor-gray-table;
+				// border-top-left-radius: 4px;
+				// border-top-right-radius: 4px;
+				padding: 4px;
+				margin-top: 10px;
+				margin-bottom: -1px;
+				button {
+					.icon {
+					}
+				}
+				.btn-gray {
+					color: #000;
+					&.btn-changes {
+						padding-left: 5px;
+						padding-right: 5px;
+					}
+				}
+			}
+		}
+		.cont-rsvList.rsvGroup {
+			.grid-wrap.scr-wrap.grid-wrap-2 {
+				@include grid-scr-x(1440px, 100%);
+				.grid-area.grid-contents {
+					background: #fff;
+					height: 380px;
+				}
+				$ie8-wth: 1440px;
+				.grid-head {
+					.grid-tbl {
+						.ie8 & {
+							width: $ie8-wth - 17px;
+						}
+					}
+				}
+				.grid-contents {
+					.grid-tbl {
+						.ie8 & {
+							width: $ie8-wth;
+						}
+					}
+				}
+				.grid-tbl {
+					th, td {
+						text-align: center;
+						.cell { }
+					}
+					td:first-child {
+						.cell {
+							line-height: 1;
+						}
+					}
+				}
+			}
 		}
 		.row-btn {
 			margin-top: 10px;
@@ -509,6 +567,9 @@
 
 	.cont-booker, .cont-rsvList {
 		margin-top: 15px;
+	}
+	.cont-rsvList.rsvGroup {
+		margin-top: 0;
 	}
 
 }
@@ -1434,14 +1495,15 @@
 						}
 					}
 					.form-select {
+						width: auto;
 						&.market-1 {
-							width: 280px;
+							min-width: 280px;
 						}
 						&.market-2 {
-							width: 170px;
+							min-width: 170px;
 						}
 						&.search {
-							width: 100px;
+							min-width: 100px;
 						}
 					}
 					.chk-box {
@@ -1565,17 +1627,18 @@
 								}
 							}
 							.form-select {
+								width: auto;
 								&.market-1 {
-									width: 186px;
+									min-width: 186px;
 								}
 								&.grade {
-									width: 156px;
+									min-width: 156px;
 								}
 								&.langCode {
-									width: 185px;
+									min-width: 185px;
 								}
 								&.etc {
-									width: 50px;
+									min-width: 50px;
 								}
 							}
 							.chk-box {
