@@ -137,16 +137,19 @@
 						.inp-drop-box {
 							position: relative;
 							z-index: 1;
-							.form-input:focus,
-							.form-input:active {
-								& + .drop-menu {
-									display: block;
-								}
+							// .form-input:focus,
+							// .form-input:active {
+							// 	& + .drop-menu {
+							// 		display: block;
+							// 	}
+							// }
+							.form-input {
+								z-index: 1;
 							}
 							.drop-menu {
 								display: none;
 								position: absolute;
-								top: 25px;
+								top: 23px;
 								left: 0px;
 								width: 100%;
 								max-height: 200px;
@@ -166,6 +169,7 @@
 							.ic-del {
 								@include position(absolute, 5px, null, null, 3px);
 								margin-left: auto;
+								z-index: 1;
 								cursor: pointer;
 							}
 						}
