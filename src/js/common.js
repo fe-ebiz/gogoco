@@ -5,7 +5,8 @@ $(function() {
 	popClsFn();
 	datePick();
 	ascending();
-	tabFn();
+    tabFn();
+    dropMenu();
 
 });
 
@@ -173,6 +174,29 @@ function depTblClk() {
             }
         }
 
+    });
+}
+
+// drop메뉴 기능
+function dropMenu() {
+    var dropBox = $('.inp-drop-box'),
+        resetBtn = dropBox.find('.ic-del');
+    dropBox.find('.form-input').click(function() {
+        $(this).next().show();
+    });
+    dropBox.find('.drop-menu > li').click(function() {
+        var txtVal = $(this).text();
+        $(this).parent().prev().val(txtVal);
+        $(this).parent().filter('.drop-menu').hide();
+    });
+    resetBtn.click(function() {
+        $(this).siblings().filter('.form-input').val('');
+        $(this).siblings().filter('.drop-menu').hide();
+    });
+    $(document).on('click', function(e){
+        if ( !$(e.target).is('.inp-drop-box .form-input') && !$(e.target).is('.inp-drop-box .drop-menu > li') ) {
+            dropBox.find('.drop-menu').hide();
+        }
     });
 }
 

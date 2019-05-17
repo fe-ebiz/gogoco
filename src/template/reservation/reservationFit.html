@@ -150,24 +150,6 @@
 													</div>
 												</div>
 											</td>
-											<script>
-												dropMenu();
-												function dropMenu() {
-													var dropBox = $('.inp-drop-box'),
-														resetBtn = dropBox.find('.ic-del');
-													dropBox.find('.form-input').click(function() {
-														$(this).next().show();
-													});
-													dropBox.find('.drop-menu > li').click(function() {
-														var txtVal = $(this).text();
-														$(this).parent().prev().val(txtVal);
-														$(this).parent().filter('.drop-menu').hide();
-													});
-													resetBtn.click(function() {
-														$(this).siblings().filter('.form-input').val('');
-													});
-												}
-											</script>
 										</tr>
 										<tr class="ht-row-2">
 											<th><div class="cell necess">요금</div></th>
