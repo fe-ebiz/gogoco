@@ -8,6 +8,11 @@ $(function() {
     tabFn();
     dropMenu();
 
+	// $('#sdate').datepicker({
+	// 	onClose: function() {    
+	// 		$('#edate').datepicker('option', 'minDate', '+0d');
+	// 	}    
+	// });
 });
 
 // 팝업 기능 등록
@@ -63,7 +68,6 @@ var page = {
 }
 
 
-
 // 팝업 닫기 기능
 function popClsFn() {
 	var containerName = ".pop-container",
@@ -93,8 +97,20 @@ function datePick() {
         yearSuffix: '년'
     });
 	$( "input.date-ui" ).datepicker({
-		dateFormat: 'yy-mm-dd'
-	});
+		dateFormat: 'yy-mm-dd',
+		minDate: 0
+    });		
+    // $('#sdate').datepicker();
+    // $('#sdate').datepicker("option", "maxDate", $("#edate").val());
+    $('#sdate').datepicker("option", "onClose", function ( selectedDate ) {
+        $("#edate").datepicker( "option", "minDate", selectedDate );
+    });
+ 
+    // $('#edate').datepicker();
+    // $('#edate').datepicker("option", "minDate", $("#sdate").val());
+    // $('#edate').datepicker("option", "onClose", function ( selectedDate ) {
+    //     $("#sdate").datepicker( "option", "maxDate", selectedDate );
+    // });
 }
 
 // 결과 오름차순 토글

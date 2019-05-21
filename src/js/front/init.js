@@ -42,4 +42,20 @@ function rmAreaFn() {
     rmArea.find(".list-room > li").on("click", function() {
         $(this).toggleClass("on");
     });
+    // 룹 별 마우스 우측 클릭시
+    $(document).on('mousedown', function(e) {
+        if (  (event.button == 2) || (event.which == 3) ) {
+            // console.log('마우스 오른쪽 클릭 사용 x')
+            $(document).on('contextmenu', function() {
+                return false;
+            });
+            var posTop = e.clientY,
+                posLeft = e.clientX;
+            $('.sts-pop').css({
+                "left": posLeft,
+                "top": posTop,
+                "position": "fixed"
+            }).show();
+        }
+    });
 }

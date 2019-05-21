@@ -485,6 +485,49 @@
 }
 
 /* 객실현황 */
+.sts-pop {
+	display: none;
+	@include position(absolute, 45px, 80px);
+	z-index: 1;
+	border: 1px solid #b1b1b1 !important;
+	border-radius: 3px;
+	padding: 0;
+	background: #fff;
+	box-shadow: 0px 0px 5px #ccc;
+	.sts-list {
+		> li {
+			min-width: 120px;
+			box-sizing: border-box;
+			padding: 0 10px;
+			text-align: left;
+			line-height: 30px;
+			color: #777;
+			font-size: 12px;
+			letter-spacing: -0.5px;
+			cursor: pointer;
+			&:first-child {
+				padding: 0 3px;
+				img {
+					margin-right: -2px;
+				}
+			}
+			&:hover {
+				background: #eee;
+			}
+			&.division {
+				@include size(100%, 1px);
+				background: #b1b1b1;
+				padding: 0;
+				cursor: normal;
+			}
+			img {
+				@include dp;
+				margin-right: 5px;
+				top: -1px;
+			}
+		}
+	}
+}
 .rmStatus-contents {
 	width: 100%;
 	min-width: 1650px;
