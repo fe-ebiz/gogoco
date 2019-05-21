@@ -1,14 +1,14 @@
 <!-- 예약 그룹 팝업 -->
-<div class="pop-container chkInGroup-container">
+<div class="pop-container rsvGroup-container">
 	<div class="bg-back"></div>
 
 	<div class="pop-wrapper">
 		<div class="pop-header">
-			<h2>Check In Group</h2>
+			<h2>Reservation In F.I.T</h2>
 			<span class="a-i-x i-x fn-cls"></span>
 		</div>
-		<div class="cf pop-contents rsvGroup-contents">
-            <div class="cf">
+		<div class="cf pop-contents resFit-contents">
+			<div class="cf">
 				<div class="split split-1">
 					<fieldset class="cont-common-1 cont-secondBook">
 						<legend class="cont-tit">
@@ -323,7 +323,7 @@
 												<td>
 													<div class="cell">
 														<input type="text" class="form-input req" disabled>
-														<button type="button" class="btn-green">Req.(0)</button>
+														<button type="button" class="btn-green" onclick="popFn.show('.spReq-container')">Req.(0)</button>
 													</div>
 												</td>
 											</tr>
@@ -346,6 +346,80 @@
 						</div>
 					</fieldset>
 					<!-- //.cont-secondBook -->
+	
+					<fieldset class="cont-common-1 cont-booker">
+						<legend class="cont-tit">
+							<strong>예약자</strong>
+							<button type="button" class="btn-green">Account Detail</button>
+							<span class="co-black fw-b">03/22 06:04, 유남규</span>
+						</legend>
+	
+						<div class="grid-wrap">
+							<div class="grid-contents">
+								<table class="grid-tbl booker-tbl">
+									<colgroup>
+										<col style="width: 90px">
+										<col style="width: 204px">
+										<col style="width: 90px">
+										<col style="width: 204px">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th><div class="cell">이름</div></th>
+											<td>
+												<div class="cell">
+													<input type="text" class="form-input">
+												</div>
+											</td>
+											<th>
+												<div class="cell">이메일</div>
+											</th>
+											<td>
+												<div class="cell">
+													<input type="text" class="form-input">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><div class="cell">연락처</div></th>
+											<td>
+												<div class="cell">
+													<input type="text" class="form-input">
+												</div>
+											</td>
+											<th>
+												<div class="cell">팩스</div>
+											</th>
+											<td>
+												<div class="cell">
+													<input type="text" class="form-input">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><div class="cell">안내자 이름</div></th>
+											<td>
+												<div class="cell">
+													<input type="text" class="form-input">
+												</div>
+											</td>
+											<th>
+												<div class="cell">안내자 번호</div>
+											</th>
+											<td>
+												<div class="cell">
+													<input type="text" class="form-input">
+												</div>
+											</td>
+										</tr>
+										<!--{tr(th>div.cell^+td>div.cell)}-->
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- //.grid-wrap -->
+					</fieldset>
+					<!-- //.cont-common-1 cont-booker -->
 	
 					<div class="cont-message fn-tabShow">
 						<div class="cf tab-list">
@@ -429,25 +503,24 @@
 						</div>
 					</div>
 					<!-- //.cont-message -->
-
-					<div class="row-btn">
-						<span class="pull-right">
-							<button type="button" class="btn-gray" disabled>CANCEL</button>
-							<button type="button" class="btn-gray" disabled>UPDATE</button>
-							<button type="button" class="btn-green">ADD</button>
-						</span>
-					</div>
 				</div>
 				<!-- //.split-1 -->
 	
 				<div class="split split-2">
-					<div class="cont-common-1 cont-rsvList">
-						<h2 class="cont-tit co-black">
-							게스트 이름 : <input type="text" class="form-input name" disabled>
-							<button type="button" disabled class="btn-gray">SEARCH</button>
-							Cnt : 0
+					<div class="cont-common-1 cont-rsvList rsvGroup">
+						<h2 class="cont-tit">
+							<strong>예약 목록</strong>
+							<button type="button" class="btn-red">CANCEL</button>
+							<button type="button" class="btn-blue">CONFIRM</button>
+	
+							<select name="" id="" class="form-select type">
+								<option value="">전체</option>
+								<option value="" selected>REG</option>
+								<option value="">CNL</option>
+							</select>
 						</h2>
-						<div class="grid-wrap scr-wrap grid-wrap-2">
+	
+						<div class="grid-wrap scr-wrap grid-wrap-1">
 							<div class="grid-scrollable-x">
 								<div class="grid-area grid-head">
 									<div class="grid-scrollable">
@@ -455,31 +528,27 @@
 											<colgroup>
 												<col style="width: 32px">
 												<col style="width: 52px">
+												<col style="width: 188px">
 												<col style="width: 85px">
-												<col style="width: 85px">
-												<col style="width: 85px">
-												<col style="width: 85px">
-												<col style="width: 65px">
-												<col style="width: 80px">
-												<col style="width: 60px">
-												<col style="width: 80px">
-												<col style="width: 85px">
-												<col style="">
+												<col style="width: 47px">
+												<col style="width: 72px">
+												<col style="width: 72px">
+												<col style="width: 52px">
+												<col style="width: 82px">
+												<col style="width: 75px">
 											</colgroup>
 											<thead class="rowgroup">
 												<tr>
-													<th><div class="cell"></div></th>
+													<th><div class="cell"><input type="checkbox"></div></th>
 													<th><div class="cell">상태</div></th>
-													<th><div class="cell">이름</div></th>
-													<th><div class="cell">성</div></th>
-													<th><div class="cell">도착 날짜</div></th>
-													<th><div class="cell">출발 날짜</div></th>
+													<th><div class="cell">투숙객</div></th>
+													<th><div class="cell">날짜</div></th>
+													<th><div class="cell">Nts</div></th>
 													<th><div class="cell">객실 유형</div></th>
-													<th><div class="cell">객실#</div></th>
-													<th><div class="cell">할당</div></th>
-													<th><div class="cell">변경</div></th>
-													<th><div class="cell">DoorKey</div></th>
-													<th><div class="cell">Del.</div></th>
+													<th><div class="cell">Rms</div></th>
+													<th><div class="cell">객실</div></th>
+													<th><div class="cell">SVC</div></th>
+													<th><div class="cell">양</div></th>
 												</tr>
 											</thead>
 										</table>
@@ -490,19 +559,132 @@
 										<colgroup>
 											<col style="width: 32px">
 											<col style="width: 52px">
+											<col style="width: 188px">
 											<col style="width: 85px">
-											<col style="width: 85px">
-											<col style="width: 85px">
-											<col style="width: 85px">
+											<col style="width: 47px">
+											<col style="width: 72px">
+											<col style="width: 72px">
+											<col style="width: 52px">
+											<col style="width: 82px">
+											<col style="width: 75px">
+										</colgroup>
+										<tbody class="rowgroup">
+											<tr>
+												<td><div class="cell"><input type="checkbox"></div></td>
+												<td><div class="cell"></div></td>
+												<td><div class="cell"></div></td>
+												<td><div class="cell"></div></td>
+												<td><div class="cell"></div></td>
+												<td><div class="cell"></div></td>
+												<td><div class="cell"></div></td>
+												<td><div class="cell"></div></td>
+												<td><div class="cell"></div></td>
+												<td><div class="cell"></div></td>
+											</tr>
+											<!--tr>(th+td)-->
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<!-- //.grid-wrap-1 -->
+						<div class="grid-toolbar">
+							<button type="button" class="btn-gray btn-changes"><span class="icon ic-check"></span> Save changes</button>
+							<button type="button" class="btn-gray btn-changes"><span class="icon ic-cancel"></span> Cancel changes</button>
+							<button type="button" class="btn-red">CANCEL</button>
+							<button type="button" class="btn-green">NOSHOW</button>
+							<button type="button" class="btn-blue">예약 안내</button>
+							<button type="button" class="btn-brown" onclick="popFn.show('.gp-container')">고객 프로필</button>
+						</div>
+						<!-- /.grid-toolbar -->
+						<div class="grid-wrap scr-wrap grid-wrap-2">
+							<div class="grid-scrollable-x">
+								<div class="grid-area grid-head">
+									<div class="grid-scrollable">
+										<table class="grid-tbl">
+											<colgroup>
+												<col style="width: 32px">
+												<col style="width: 52px">
+												<col style="width: 100px">
+												<col style="width: 100px">
+												<col style="width: 90px">
+												<col style="width: 90px">
+												<col style="width: 65px">
+												<col style="width: 80px">
+												<col style="width: 60px">
+												<col style="width: 80px">
+												<col style="width: 90px">
+												<col style="width: 60px">
+												<col style="width: 65px">
+												<col style="width: 55px">
+												<col style="width: 70px">
+												<col style="width: 70px">
+												<col style="width: 60px">
+												<col style="width: 60px">
+												<col style="width: 70px">
+												<col style="width: 70px">
+											</colgroup>
+											<thead class="rowgroup">
+												<tr>
+													<th><div class="cell"></div></th>
+													<th><div class="cell">상태</div></th>
+													<th><div class="cell">이름</div></th>
+													<th><div class="cell">성</div></th>
+													<th><div class="cell">도착 날짜</div></th>
+													<th><div class="cell">출발 날짜</div></th>
+													<th><div class="cell">객실 유형</div></th>
+													<th><div class="cell">객실</div></th>
+													<th><div class="cell">SVC</div></th>
+													<th><div class="cell">양</div></th>
+													<th><div class="cell">객실#</div></th>
+													<th><div class="cell">할당</div></th>
+													<th><div class="cell">청소</div></th>
+													<th><div class="cell">DNM</div></th>
+													<th><div class="cell">지불</div></th>
+													<th><div class="cell">투숙객</div></th>
+													<th><div class="cell">ACC</div></th>
+													<th><div class="cell">문</div></th>
+													<th><div class="cell">다음날</div></th>
+													<th><div class="cell">메모</div></th>
+												</tr>
+											</thead>
+										</table>
+									</div>
+								</div>
+								<div class="grid-area grid-contents">
+									<table class="grid-tbl">
+										<colgroup>
+											<col style="width: 32px">
+											<col style="width: 52px">
+											<col style="width: 100px">
+											<col style="width: 100px">
+											<col style="width: 90px">
+											<col style="width: 90px">
 											<col style="width: 65px">
 											<col style="width: 80px">
 											<col style="width: 60px">
 											<col style="width: 80px">
-											<col style="width: 85px">
-											<col style="">
+											<col style="width: 90px">
+											<col style="width: 60px">
+											<col style="width: 65px">
+											<col style="width: 55px">
+											<col style="width: 70px">
+											<col style="width: 70px">
+											<col style="width: 60px">
+											<col style="width: 60px">
+											<col style="width: 70px">
+											<col style="width: 70px">
 										</colgroup>
 										<tbody class="rowgroup">
 											<tr>
+												<td><div class="cell"></div></td>
+												<td><div class="cell"></div></td>
+												<td><div class="cell"></div></td>
+												<td><div class="cell"></div></td>
+												<td><div class="cell"></div></td>
+												<td><div class="cell"></div></td>
+												<td><div class="cell"></div></td>
+												<td><div class="cell"></div></td>
 												<td><div class="cell"></div></td>
 												<td><div class="cell"></div></td>
 												<td><div class="cell"></div></td>
@@ -524,89 +706,20 @@
 						</div>
 						<!-- //.grid-wrap-2 -->
 					</div>
-					<!-- //.cont-common-1 cont-rsvlist -->
+					<!-- //.cont-common-1 cont-rsvList -->
 
-					<fieldset class="cont-common-1 cont-booker">
-						<legend class="cont-tit">
-							<strong>예약자</strong>
-							<button type="button" class="btn-green" onclick="popFn.show('.account-container')">Account Detail</button>
-						</legend>
-	
-						<div class="grid-wrap">
-							<div class="grid-contents">
-								<table class="grid-tbl booker-tbl">
-									<colgroup>
-										<col style="width: 90px">
-										<col style="width: 204px">
-										<col style="width: 90px">
-										<col style="width: 204px">
-									</colgroup>
-									<tbody>
-										<tr>
-											<th><div class="cell">이름</div></th>
-											<td>
-												<div class="cell">
-													<input type="text" class="form-input">
-												</div>
-											</td>
-											<th>
-												<div class="cell">이메일</div>
-											</th>
-											<td>
-												<div class="cell">
-													<input type="text" class="form-input">
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th><div class="cell">연락처</div></th>
-											<td>
-												<div class="cell">
-													<input type="text" class="form-input">
-												</div>
-											</td>
-											<th>
-												<div class="cell">팩스</div>
-											</th>
-											<td>
-												<div class="cell">
-													<input type="text" class="form-input">
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th><div class="cell">안내자 이름</div></th>
-											<td>
-												<div class="cell">
-													<input type="text" class="form-input">
-												</div>
-											</td>
-											<th>
-												<div class="cell">안내자 번호</div>
-											</th>
-											<td>
-												<div class="cell">
-													<input type="text" class="form-input">
-												</div>
-											</td>
-										</tr>
-										<!--{tr(th>div.cell^+td>div.cell)}-->
-									</tbody>
-								</table>
-							</div>
-						</div>
-						<!-- //.grid-wrap -->
-					</fieldset>
-					<!-- //.cont-common-1 cont-booker -->
-	
 					<div class="row-btn">
-						<button type="button" class="btn-red">CHECK IN ALL</button>
+						<button type="button" class="btn-gray" disabled>REGISTER</button>
+						<button type="button" class="btn-gray" disabled>UPDATE</button>
+						<button type="button" class="btn-green">NEW</button>
 						<button type="button" class="btn-gray">CLOSE</button>
-						<span class="pull-right">
-							<button type="button" class="btn-blue">ALL</button>
-							<button type="button" class="btn-green">CLEAR</button>
-							<button type="button" class="btn-red">DIRTY</button>
-						</span>
+						<span class="wd-space"></span>
+						<button type="button" class="btn-gray" disabled>Door-Key</button>
+						<button type="button" class="btn-gray" disabled>PRINT</button>
+						<button type="button" class="btn-gray" disabled>DOWN</button>
+						<button type="button" class="btn-gray" disabled>MAIL</button>
+						<button type="button" class="btn-gray" disabled>FAX</button>
+						<button type="button" class="btn-gray" disabled>SMS</button>
 					</div>
 				</div>
 				<!--//.split-2-->
@@ -614,11 +727,7 @@
 			</div>
 			<!-- //.cont-container -->
 		</div>
-		<!-- /.rsvGroup-contents -->
-    </div>
+		<!-- / .resFit-contents -->
+	</div>
 </div>
 <!-- /.rsvGroup-container -->
-
-<style>
-	.pop-container {display: block;}
-</style>

@@ -43,7 +43,7 @@ function rmAreaFn() {
         $(this).toggleClass("on");
     });
     // 룹 별 마우스 우측 클릭시
-    $(document).on('mousedown', function(e) {
+    rmArea.find(".list-room > li").on('mousedown', function(e) {
         if (  (event.button == 2) || (event.which == 3) ) {
             // console.log('마우스 오른쪽 클릭 사용 x')
             $(document).on('contextmenu', function() {
@@ -56,6 +56,19 @@ function rmAreaFn() {
                 "top": posTop,
                 "position": "fixed"
             }).show();
+
+        }
+    });
+    // 상태 팝업 클릭시
+    $('.sts-pop .sts-list > li').on('click', function() {
+        // console.log( $(this).text() );
+        // $(this).closest('.sts-pop').hide();
+    });
+    // 팝업 영역 제외 클릭 시 사라짐
+    $(document).on('click', function(e){
+        if ( !$(e.target).is('.sts-pop .sts-list > li') ) {
+            // console.log('hi');
+            $('.sts-pop').hide();
         }
     });
 }
