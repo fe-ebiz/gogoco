@@ -46,6 +46,8 @@ function rmAreaFn() {
     rmArea.find(".list-room > li").on('mousedown', function(e) {
         if (  (event.button == 2) || (event.which == 3) ) {
             // console.log('마우스 오른쪽 클릭 사용 x')
+            var roomNo = $(this).find('.roomNo .num').text();
+            console.log( roomNo );
             $(document).on('contextmenu', function() {
                 return false;
             });
