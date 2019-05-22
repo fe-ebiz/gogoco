@@ -97,21 +97,20 @@ function datePick() {
         yearSuffix: '년'
     });
 	$( "input.date-ui" ).datepicker({
-		dateFormat: 'yy-mm-dd'
-    });	
-
-
-
-    $('#sdate').datepicker({
-		minDate: 0,
-		onClose: function(selectedDate) {
-			$("#edate").datepicker( "option", "minDate", selectedDate );
-		}
-	});
-
-	$('#edate').datepicker({
+		dateFormat: 'yy-mm-dd',
 		minDate: 0
-	});
+    });		
+    // $('#sdate').datepicker();
+    // $('#sdate').datepicker("option", "maxDate", $("#edate").val());
+    $('#sdate').datepicker("option", "onClose", function ( selectedDate ) {
+        $("#edate").datepicker( "option", "minDate", selectedDate );
+    });
+ 
+    // $('#edate').datepicker();
+    // $('#edate').datepicker("option", "minDate", $("#sdate").val());
+    // $('#edate').datepicker("option", "onClose", function ( selectedDate ) {
+    //     $("#sdate").datepicker( "option", "maxDate", selectedDate );
+    // });
 }
 
 // 결과 오름차순 토글
