@@ -923,7 +923,7 @@
 					.ie8 & {
 						width: $ie8-wth;
 					}
-					th {
+					th, td {
 						&.sat {
 							color: $fg-sat;
 						}
