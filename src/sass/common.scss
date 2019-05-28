@@ -417,6 +417,7 @@ $sidebar-wd: 96px;
 		background: #fff;
 		border: 1px solid $bor-gray-table;
 		// border-radius: 4px;
+		&.mw-auto {min-width: auto;}
 		> * {
 			outline: none;
 		}

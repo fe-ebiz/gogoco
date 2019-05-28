@@ -480,12 +480,12 @@
 		}
 		.cont-rsvList.rsvGroup {
 			.grid-wrap.scr-wrap.grid-wrap-2 {
-				@include grid-scr-x(1440px, 100%);
+				@include grid-scr-x(1455px, 100%);
 				.grid-area.grid-contents {
 					background: #fff;
 					height: 380px;
 				}
-				$ie8-wth: 1440px;
+				$ie8-wth: 1455px;
 				.grid-head {
 					.grid-tbl {
 						.ie8 & {
@@ -645,6 +645,7 @@
 					.cell {
 						$account-wth: 49%;
 						.form-input {
+							&.w-1 {width: 81.5%;}
 							&.assign {
 								width: 30%;
 							}

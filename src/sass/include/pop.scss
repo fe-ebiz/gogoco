@@ -3167,6 +3167,121 @@
 		}
 	}
 }
+/* doorkey 팝업 */
+.pop-container.doorkey-container {
+	.pop-wrapper {
+        width: 600px;
+		.pop-header {
+			@include pop-header-base;
+		}
+
+        .pop-contents {
+            padding: 20px 20px 0;
+
+            .tab-list {
+				@include tab-list(#f7f7f7, #fff);
+                label {
+                    @include lbl;
+                    top: 2px;
+                    margin-left: 15px;
+                }
+            }
+        }
+        
+
+        .item-list {
+            //height: 100%;
+            .common {
+                display: none;
+                padding: 0 20px 20px;
+                background: #fff;
+                &.on {
+                    display: block;
+                }
+                .popcont-container {
+                    margin-top: -1px;
+                    padding: 5px 0 10px;
+                    border-top: 1px solid #a9a9a9;
+                }
+
+                &.form-container {
+                    .grid-tbl {
+                        @include tbl-base;
+                        width: 100%;
+                        th, td {
+
+                        }
+                        th {
+                            .cell {
+                            }
+                        }
+                        td {
+                            .cell {
+                                .form-input {
+                                    width: 112px;
+                                    &.lost {
+                                        width: 310px;
+                                    }
+                                }
+                                .textarea-etc {
+                                    width: 100%;
+                                    height: 52px;
+                                    &.notice {
+                                        height: 130px;
+                                    }
+                                }
+                                .cal-box {
+                                    .inp-cal {
+                                        width: 110px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.history-container {
+                    .scr-wrap {
+                        @include grid-scr-x(880px, 100%, 0 0 4px 4px);
+                        .grid-tbl {
+                            .ie8 & {
+                                width: 862px;
+                            }
+                            th {
+
+                            }
+                        }
+                        .grid-area {
+                            &.grid-contents {
+                                height: 262px;
+                                td {
+                                    padding: 20px 0;
+                                    background: #f4f1ee;
+                                }
+                            }
+                        }
+                    }
+                    .grid-bottom {
+                        @include grid-bottom-page;
+                        .count {
+                            em {
+                                color: $fg-orange-2;
+                            }
+                        }
+                    }
+                }
+			}
+			.pop-footer {
+				padding: 0;
+				margin-top: 0;
+			}
+        }
+        
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
 /* 예약 조건 */
 .pop-container.inhouse-container {
 	.pop-wrapper {
