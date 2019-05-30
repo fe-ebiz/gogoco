@@ -141,6 +141,8 @@ $sidebar-wd: 96px;
 .co-green {
 	color: green !important;
 }
+.sat {color: $fg-sat !important;}
+.sun {color: $fg-sun !important;}
 
 .icon {
 	@include i-sprite-1(url(../img/common/sprite.png) no-repeat);

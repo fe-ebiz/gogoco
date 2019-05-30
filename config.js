@@ -37,7 +37,7 @@ module.exports = function() {
 
 		// HTML 옵션
 		htmlbeautify = {
-			"indentSize": 2
+			"indentSize": 4
 		};
 
 	return {

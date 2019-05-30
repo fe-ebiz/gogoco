@@ -284,6 +284,16 @@
 						font-weight: 700;
 					}
 				}
+				.cont-tab {
+					margin-bottom: 10px;
+					.tab-list {
+						@include tab-list(#f7f7f7, #f0f0f0);
+						border-bottom: 1px solid #9f9f9f;
+						.tab {
+							margin-bottom: -1px;
+						}
+					}
+				}
 				.cont-property {
 					border: 1px solid $bor-gray-table;
 					background: #ffffff;

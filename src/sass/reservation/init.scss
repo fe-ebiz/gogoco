@@ -134,6 +134,16 @@
 						.txt-won {
 							@include position(relative, 3px);
 						}
+
+						.row-split {
+							float: left;
+							&.w-1 {
+								width: 80%;
+							}
+							&.w-2 {
+								width: 20%;
+							}
+						}
 					}
 					.row {
 						padding: 1px 0;
