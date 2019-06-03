@@ -1067,6 +1067,8 @@
 						height: 52px;
 						line-height: 1.2;
 						text-align: center;
+						overflow: hidden;
+						text-overflow: ellipsis;
 						&.checkStatus:after {
 							position: absolute;
 							right: 3px;
@@ -1075,7 +1077,7 @@
 							width: 11px;
 							height: 11px;
 							line-height: 14px;
-							z-index: 1001;
+							// z-index: 1001;
 							border-radius: 6px;
 							text-align: center;
 							font-size: 9px;
