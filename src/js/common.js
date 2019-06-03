@@ -22,21 +22,13 @@ var popFn = {
 	},
 	show_flag: function(obj_name, obj_this, flag) {
         if (flag == false) {
-            console.log('bef');
-            console.log(obj_this);
             $(obj_this).closest(".pop-container").children(".bg-back").hide();
-            console.log('aft');
-
         }
 		$(obj_name).show();
     },
     close_flag: function(obj_name, obj_this, flag) {
         if (flag == true) {
-            console.log('bef');
-            console.log(obj_name);
             $(obj_name).closest(".pop-container").children(".bg-back").show();
-            console.log('aft');
-
         }
         $(obj_name).show();
 		$(obj_this).closest(".pop-container").hide();
@@ -48,8 +40,6 @@ var page = {
 	layer: function(a, b, c) {
 		if(a == 'pkg') {
 			var c = $(c.closest("tr")).index();
-			//var txt = "test" + idx;
-			//$(c.closest("table")).find("tr").eq(idx).find(".form-input.package").val(txt);
 		}
 
 		$.ajax({		
@@ -64,8 +54,26 @@ var page = {
 	
 	close: function() {
 		$('.pop-container').hide();
-	}
+	},
+
+	depth: function() {
+		
+	},
+
+	favorites: function(a, b, c) {
+		$.ajax({		
+			type: 'post',
+			url: '/_new/views/',
+			data: 'mode=favorites&a=' + a + '&b=' + b + '&c=' + c,
+			success: function(r) {
+				//console.log(r);
+				location.reload();
+			}
+		});
+	}	
 }
+
+
 
 
 // 팝업 닫기 기능
@@ -110,7 +118,21 @@ function datePick() {
 	});
 
 	$('#edate').datepicker({
-		minDate: 0
+		minDate: 0,
+		onSelect: function() {
+			$.ajax({
+				type: 'post',
+				url: './inc/',
+				data: 'mode=date&sdate=' + $('#sdate').val() + '&edate=' + this.value,
+				success: function(r) {
+					var data = r.split('|');
+					
+					$('input[name=nights]').val(data[0]);
+					$('#rate').val(addCommas(data[1]));
+					rsv.convert(data[1], 'convert');
+				}
+			});
+		}
 	});
 }
 
@@ -126,11 +148,14 @@ function tabFn() {
 	var box = "";
 	$(".tab-list > .tab").on("click", function() {
 		var idx = $(this).index();
-		box = $(this).closest(".fn-tabShow");
+        box = $(this).closest(".fn-tabShow");
+        
+        if (box.length > 0) {
+            box.find(".item-list > div").eq(idx).addClass("on").siblings().removeClass("on");
+            box.find(".item-list > div").eq(idx).show().siblings().hide();
+        }
 
 		$(this).addClass("on").siblings().removeClass("on");
-		box.find(".item-list > div").eq(idx).addClass("on").siblings().removeClass("on");
-		box.find(".item-list > div").eq(idx).show().siblings().hide();
 	});
 }
 

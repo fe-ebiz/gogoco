@@ -838,6 +838,45 @@ $sidebar-wd: 96px;
 	}
 }
 
+/* 객실현황 */
+.qm-pop {
+	// display: none;
+	@include position(absolute, 145px, 180px);
+	z-index: 1;
+	border: 1px solid #b1b1b1 !important;
+	border-radius: 3px;
+	padding: 0;
+	background: #fff;
+	box-shadow: 0px 0px 5px #ccc;
+	.sts-list {
+		> li {
+			min-width: 120px;
+			box-sizing: border-box;
+			padding: 0 3px;
+			text-align: left;
+			line-height: 30px;
+			color: #777;
+			font-size: 12px;
+			letter-spacing: -0.5px;
+			cursor: pointer;
+			&:hover {
+				background: #eee;
+			}
+			&.division {
+				@include size(100%, 1px);
+				background: #b1b1b1;
+				padding: 0;
+				cursor: normal;
+			}
+			img {
+				@include dp;
+				margin-right: -2px;
+				top: -1px;
+			}
+		}
+	}
+}
+
 /* 푸터 영역 */
 #Footer {
 	background-color: #323232;
