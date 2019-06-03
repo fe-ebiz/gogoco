@@ -2,17 +2,14 @@ $(function() {
 
 	// input autocomplete off
 	$('input').attr('autocomplete','off');
+	$('input[readonly]').css('background', '#efefef');
 	popClsFn();
 	datePick();
 	ascending();
     tabFn();
     dropMenu();
+    quickMenuPop();
 
-	// $('#sdate').datepicker({
-	// 	onClose: function() {    
-	// 		$('#edate').datepicker('option', 'minDate', '+0d');
-	// 	}    
-	// });
 });
 
 // 팝업 기능 등록
@@ -240,6 +237,56 @@ function dropMenu() {
             dropBox.find('.drop-menu').hide();
         }
     });
+}
+
+function quickMenuPop() {
+    // 룹 별 마우스 우측 클릭시
+    var menuIdx = 0,
+        lnb = $('.lnb');
+    lnb.find(".menu > li").on('mousedown', function(e) {
+        if (  (event.button == 2) || (event.which == 3) ) {
+            // console.log('마우스 오른쪽 클릭 사용 x')
+            menuIdx = $(this).index();
+            // console.log(menuIdx);
+            $(document).on('contextmenu', function() {
+                return false;
+            });
+            var posTop = e.clientY,
+                posLeft = e.clientX;
+            if ( (posTop + $('.qm-pop').outerHeight() ) > $(window).height() ) {
+                posTop = posTop - $('.qm-pop').outerHeight();
+                $('.qm-pop').css({
+                    "left": posLeft,
+                    "top": posTop,
+                    "position": "fixed"
+                }).show();
+            } else {
+                $('.qm-pop').css({
+                    "left": posLeft,
+                    "top": posTop,
+                    "position": "fixed"
+                }).show();
+            }
+        }
+    });
+    // 상태 팝업 클릭시
+    $('.qm-pop .qm-list > li').on('click', function(e) {
+        // room.status(roomNo, $(e.target).attr('class'));
+        if( $(this).attr('ref') == 'deleteAll' ) {
+            lnb.find('.menu > li').remove();
+        } else  {
+            lnb.find('.menu > li').eq(menuIdx).remove();
+        }
+        $(this).closest('.qm-pop').hide();
+    });
+   
+    // 팝업 영역 제외 클릭 시 사라짐
+    $(document).on('click', function(e){
+        if ( !$(e.target).is('.qm-pop .qm-list > li') ) {
+            $('.qm-pop').hide();
+        }
+    });
+
 }
 
 function addCommas(x) {
