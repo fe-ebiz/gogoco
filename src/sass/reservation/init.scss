@@ -136,12 +136,14 @@
 						}
 
 						.row-split {
+							position: relative;
 							float: left;
 							&.w-1 {
 								width: 80%;
 							}
 							&.w-2 {
 								width: 20%;
+								top: 2px;
 							}
 						}
 					}
