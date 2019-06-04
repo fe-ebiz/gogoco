@@ -375,6 +375,9 @@
 			}
 			.popcont-container.split-1 {
 				width: 350px;
+				.cont-list .grid-wrap .grid-area.grid-contents {
+					height: 310px;
+				}
 			}
 			.popcont-container.split-2 {
 				width: 790px;
