@@ -1046,7 +1046,7 @@
 						content: '';
 						display: block;
 						@include position(absolute, -2px, -2px);
-						@include sizes(36px);
+						@include size(36px, 26px);
 						border: 2px solid #ff69b4;
 						border-right: 0;
 						border-bottom: 0;
