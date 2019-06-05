@@ -41,6 +41,20 @@ function rmAreaFn() {
     // 룸 클릭시     
     rmArea.find(".list-room > li").on("click", function() {
         $(this).toggleClass("on");
+		var roomNo = $(this).find('.roomNo .num').text();
+/*
+		$.ajax({		
+			type: 'post',
+			url: './inc/',
+			data: 'mode=room-status&a=' + e + '&b=' + i,
+			success: function(r) {
+				alert('저장되었습니다.');
+				$('.sts-pop').hide();
+				$('#r' + e).html(r);
+			}
+		});	
+
+*/
     });
     // 룹 별 마우스 우측 클릭시
     var roomNo = 0;
@@ -86,6 +100,15 @@ function rmAreaFn() {
             $('.sts-pop').hide();
         }
     });
+
+    // 층별 01호 표시
+    rmArea.find('.item-room > .roomNo > .num').each(function(index, item) {
+        var text = $(item).text();
+        var temp = text.substring(text.length - 2, text.length);
+        if ( temp == 01 ) {
+            $(item).closest('.item-room').addClass('floor-fst');
+        }
+    });
 }
 
 
@@ -96,12 +119,47 @@ var room = {
 			url: './inc/',
 			data: 'mode=room-status&a=' + e + '&b=' + i,
 			success: function(r) {
-				console.log(r);
+				alert('저장되었습니다.');
 				$('.sts-pop').hide();
+				$('#r' + e).html(r);
 			}
-		});
+		});	
+	},
 
+	change: function(e, i, k) {
+		$.ajax({		
+			type: 'post',
+			url: './inc/',
+			data: 'mode=room-change&a=' + e + '&b=' + i + '&c=' + k,
+			success: function(r) {
+				$('#change').html(r);
+			}
+		});	
+	},
 
-		
+	assign: function(e) {
+		$.ajax({		
+			type: 'post',
+			url: './inc/',
+			data: 'mode=room-assign&a=' + e + '&b=' + $('input[name=ho]:checked').val(),
+			success: function(r) {
+				alert('저장되었습니다.');
+				location.reload();
+			}
+		});	
+	},
+
+	chkin: function(e) {
+		if(confirm('체크인 하시겠습니까?') == true) {
+			$.ajax({		
+				type: 'post',
+				url: './inc/',
+				data: 'mode=room-chkin&a=' + e,
+				success: function(r) {
+					alert('처리가 완료되었습니다.');
+					$('#s-' + e).html(r);
+				}
+			});
+		} 
 	}
 }

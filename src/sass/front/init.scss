@@ -1029,17 +1029,29 @@
 			.list-room {
 				font-family: $font-nnSquareR;
 				.item-room {
+					float: left;
+					position: relative;
 					margin: 0px 10px 10px 0px;
+					width: 126px;
+					min-height: 126px;
+					background: #fff;
 					border: 2px solid #d5d5d5;
 					border-radius: 2px;
-					background: #fff;
-					width: 126px;
-					float: left;
-					min-height: 126px;
+					box-sizing: border-box;
 					font-size: 13px;
 					font-weight: bold;
 					letter-spacing: -1px;
 					box-shadow: 3px 3px 3px rgba(0,0,0, 0.25);
+					&.floor-fst:after {
+						content: '';
+						display: block;
+						@include position(absolute, -2px, -2px);
+						@include sizes(36px);
+						border: 2px solid #ff69b4;
+						border-right: 0;
+						border-bottom: 0;
+						border-radius: 2px;
+					}
 					> div {
 						@include bx;
 						padding: 0 3px;
