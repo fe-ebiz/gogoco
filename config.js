@@ -46,6 +46,7 @@ module.exports = function() {
 		dev  : development,
 		
 		template : template,
+		css  : css,
 		sass : sass,
 		js   : js,
 
