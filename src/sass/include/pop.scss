@@ -1026,6 +1026,244 @@
 		}
 	}
 }
+/* 객실 목록 카테고리별 유형 3가지 */
+/* 기본 */
+.pop-container.rmInv-container {
+	.pop-wrapper {
+		width: 1900px;
+		min-height: 880px;
+		margin-top: 30px;
+		.pop-header {
+			@include pop-header-base;
+		}
+        .pop-contents {
+			@include pop-contents-base;
+            .cont-property {
+                .property-tbl {
+                    @include tbl-style-2;
+                    .cell {
+                        .form-select {
+							&.name {
+								width: 110px;
+							}
+						}
+                        .form-input {
+                            &.name {
+								width: 150px;
+							}
+						}
+						.stats-box {
+							display: inline-block;
+							margin-left: 250px;
+							.tt {
+								font-weight: 700;
+							}
+							.t {
+								margin-left: 100px;
+							}
+						}
+                    }
+                }
+            }
+            
+            .cont-area {
+                margin-top: 13px;
+                .grid-toolbar {
+                    display: none;
+                }
+                .grid-wrap {
+                    @include grid-scr-x(null, 100%);
+                    .grid-tbl {
+                        .ie8 & {
+                            width: 1390px;
+                        }
+                        th {
+
+                        }
+                    }
+                    .grid-area.grid-contents {
+                        background: #fff;
+                        height: 605px;
+                    }
+                    .grid-tbl {
+                        th, td {
+                            text-align: center;
+                        }
+                        th {
+                            .cell {
+                                text-overflow: inherit;
+                            }
+                        }
+                    }
+                }
+                .grid-bottom {
+                    @include grid-bottom-page;
+                }
+            }
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+/* roomBlock 카테고리 */
+.pop-container.rmInvBlock-container {
+	.pop-wrapper {
+		width: 1900px;
+		min-height: 880px;
+		margin-top: 30px;
+		.pop-header {
+			@include pop-header-base;
+		}
+        .pop-contents {
+			@include pop-contents-base;
+            .cont-property {
+                .property-tbl {
+                    @include tbl-style-2;
+                    .cell {
+                        .form-select {
+							&.name {
+								width: 110px;
+							}
+						}
+                        .form-input {
+                            &.name {
+								width: 150px;
+							}
+						}
+						.stats-box {
+							display: inline-block;
+							margin-left: 250px;
+							.tt {
+								font-weight: 700;
+							}
+							.t {
+								margin-left: 100px;
+							}
+						}
+                    }
+                }
+            }
+            
+            .cont-area {
+                margin-top: 13px;
+                .grid-toolbar {
+                    display: none;
+                }
+                .grid-wrap {
+                    @include grid-scr-x(null, 100%);
+                    .grid-tbl {
+                        .ie8 & {
+                            width: 1390px;
+                        }
+                        th {
+
+                        }
+                    }
+                    .grid-area.grid-contents {
+                        background: #fff;
+                        height: 560px;
+                    }
+                    .grid-tbl {
+                        th, td {
+                            text-align: center;
+                        }
+                        th {
+                            .cell {
+                                text-overflow: inherit;
+                            }
+                        }
+                    }
+                }
+                .grid-bottom {
+                    @include grid-bottom-page;
+                }
+            }
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+/* Out of Order, Out of Service 카테고리 */
+.pop-container.rmInvO-container {
+	.pop-wrapper {
+		width: 1900px;
+		min-height: 880px;
+		margin-top: 30px;
+		.pop-header {
+			@include pop-header-base;
+		}
+        .pop-contents {
+			@include pop-contents-base;
+            .cont-property {
+                .property-tbl {
+                    @include tbl-style-2;
+                    .cell {
+                        .form-select {
+							&.name {
+								width: 110px;
+							}
+						}
+                        .form-input {
+                            &.name {
+								width: 150px;
+							}
+						}
+						.stats-box {
+							display: inline-block;
+							margin-left: 250px;
+							.tt {
+								font-weight: 700;
+							}
+							.t {
+								margin-left: 100px;
+							}
+						}
+                    }
+                }
+            }
+            
+            .cont-area {
+                margin-top: 13px;
+                .grid-toolbar {
+                    display: none;
+                }
+                .grid-wrap {
+                    @include grid-scr-x(null, 100%);
+                    .grid-tbl {
+                        .ie8 & {
+                            width: 1390px;
+                        }
+                        th {
+
+                        }
+                    }
+                    .grid-area.grid-contents {
+                        background: #fff;
+                        height: 560px;
+                    }
+                    .grid-tbl {
+                        th, td {
+                            text-align: center;
+                        }
+                        th {
+                            .cell {
+                                text-overflow: inherit;
+                            }
+                        }
+                    }
+                }
+                .grid-bottom {
+                    @include grid-bottom-page;
+                }
+            }
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
 
 /*
  * 캐셔링
