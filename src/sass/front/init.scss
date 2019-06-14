@@ -729,12 +729,12 @@
 				}
 			}
 			.cont-side.right {
-				// position: fixed;
-				// top: 115px;
-				// right: 10px;
-				position: absolute;
-				top: 10px;
-				right: 0px;
+				position: fixed;
+				top: 115px;
+				right: 10px;
+				// position: absolute;
+				// top: 10px;
+				// right: 0px;
 				z-index: 1;
 				.roominfo-area {
 					position: relative;
@@ -1151,10 +1151,10 @@
 				}
 			}
 			.list-floor {
-				// position: fixed;
-				// top: 175px;
-				position: absolute;
-				top: 0px;
+				position: fixed;
+				top: 165px;
+				// position: absolute;
+				// top: 0px;
 				right: $wth + 20px;
 				font-size: 13px;
 				text-align: center;
