@@ -38,23 +38,31 @@ function rmAreaFn() {
             rmArea.find(".item-floor .floor.total").removeClass("on");
         }
     });
-    // 룸 클릭시     
+    // 룸 클릭시
     rmArea.find(".list-room > li").on("click", function() {
-        $(this).toggleClass("on");
+		$(this).addClass("on").siblings().removeClass("on");
+		
 		var roomNo = $(this).find('.roomNo .num').text();
-/*
+
 		$.ajax({		
 			type: 'post',
 			url: './inc/',
-			data: 'mode=room-status&a=' + e + '&b=' + i,
+			data: 'mode=room-info&a=' + roomNo,
 			success: function(r) {
-				alert('저장되었습니다.');
-				$('.sts-pop').hide();
-				$('#r' + e).html(r);
+				var data = $.parseJSON(r);
+				$('#r-info-floor').empty();
+				$('#r-info-floor').append(data.floor);
+				$('#r-info-num').val(data.ho);
+				$('#r-info-room').empty();
+				$('#r-info-room').append(data.select);
+				$('#r-info-assign').empty();
+				$('#r-info-assign').append(data.select);
+				$('#r-info-chkin').empty();
+				$('#r-info-chkin').append(data.select);
 			}
 		});	
 
-*/
+
     });
     // 룹 별 마우스 우측 클릭시
     var roomNo = 0;
@@ -161,5 +169,24 @@ var room = {
 				}
 			});
 		} 
+	},
+
+	save: function(e) {
+		if(!$('#r-info-num').val()) {
+			alert('호수를 선택하세요');
+			return;
+		}
+
+		$.ajax({		
+			type: 'post',
+			url: './inc/',
+			data: $('#status' + e).serialize(),
+			success: function(r) {
+				alert('저장되었습니다.');
+				var data = r.split('|');
+				$('#r' + data[1]).html(data[0]);
+				//console.log(r);
+			}
+		});
 	}
 }

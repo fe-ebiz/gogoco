@@ -7,6 +7,20 @@
 .ui-widget.ui-widget-content {
 	z-index: 21 !important;
 }
+.ui-datepicker select.ui-datepicker-month, 
+.ui-datepicker select.ui-datepicker-year {
+	width: 40%;
+    font-size: 14px;
+	height: 24px;
+	padding-left: 2px;
+}
+.ui-datepicker select.ui-datepicker-year {
+	margin-right: 2px;
+}
+.ui-datepicker select.ui-datepicker-month {
+	padding-bottom: 2px;
+	margin-left: 10px;
+}
 
 /* 팝업 공통 */
 /* 기본 none */
@@ -1069,13 +1083,13 @@
             .cont-area {
                 margin-top: 13px;
                 .grid-toolbar {
-                    display: none;
+                    @include grid-toolbar;
                 }
                 .grid-wrap {
-                    @include grid-scr-x(null, 100%);
+                    @include grid-scr-x(1917px, 100%);
                     .grid-tbl {
                         .ie8 & {
-                            width: 1390px;
+                            width: 1878px;
                         }
                         th {
 
@@ -1083,17 +1097,17 @@
                     }
                     .grid-area.grid-contents {
                         background: #fff;
-                        height: 605px;
+                        height: 560px;
                     }
                     .grid-tbl {
-                        th, td {
-                            text-align: center;
-                        }
                         th {
                             .cell {
                                 text-overflow: inherit;
                             }
-                        }
+						}
+						td {
+							text-align: left;
+						}
                     }
                 }
                 .grid-bottom {
@@ -1144,17 +1158,24 @@
                     }
                 }
             }
-            
+			
             .cont-area {
                 margin-top: 13px;
                 .grid-toolbar {
-                    display: none;
-                }
-                .grid-wrap {
-                    @include grid-scr-x(null, 100%);
+                    @include grid-toolbar;
+				}
+				.grid-wrap.contract-wrap {
+					@include grid-scr-x(null, 100%);
+					margin-bottom: 13px;
+					.grid-area.grid-contents {
+						height: 175px;
+					}
+				}
+                .grid-wrap.scr-wrap {
+                    @include grid-scr-x(1917px, 100%);
                     .grid-tbl {
                         .ie8 & {
-                            width: 1390px;
+                            width: 1878px;
                         }
                         th {
 
@@ -1162,17 +1183,7 @@
                     }
                     .grid-area.grid-contents {
                         background: #fff;
-                        height: 560px;
-                    }
-                    .grid-tbl {
-                        th, td {
-                            text-align: center;
-                        }
-                        th {
-                            .cell {
-                                text-overflow: inherit;
-                            }
-                        }
+                        height: 335px;
                     }
                 }
                 .grid-bottom {
@@ -4293,8 +4304,8 @@
 								float: left;
 								box-sizing: border-box;
 								width: 135px;
-								padding: 0 10px;
-								font-size: 13px;
+								padding: 2px 10px;
+								font-size: 12px;
 							}
 						}
 					}

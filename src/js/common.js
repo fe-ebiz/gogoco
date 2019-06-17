@@ -109,8 +109,24 @@ function datePick() {
 
     $('#sdate').datepicker({
 		minDate: 0,
+		onSelect: function() {
+			$.ajax({
+				type: 'post',
+				url: './inc/',
+				data: 'mode=date&sdate=' + this.value + '&edate=' + $('#edate').val()+ '&room=' + $('#room').val(),
+				success: function(r) {
+					var data = r.split('|');
+					
+					$('input[name=nights]').val(data[0]);
+					$('#rate').val(addCommas(data[1]));
+					$('input[name=info-r]').val(data[2]);
+					rsv.convert(data[1], 'convert');
+				}
+			});
+		},
+
 		onClose: function(selectedDate) {
-			$("#edate").datepicker( "option", "minDate", selectedDate );
+			$('#edate').datepicker('option', 'minDate', selectedDate);
 		}
 	});
 
@@ -120,16 +136,23 @@ function datePick() {
 			$.ajax({
 				type: 'post',
 				url: './inc/',
-				data: 'mode=date&sdate=' + $('#sdate').val() + '&edate=' + this.value,
+				data: 'mode=date&sdate=' + $('#sdate').val() + '&edate=' + this.value + '&room=' + $('#room').val(),
 				success: function(r) {
 					var data = r.split('|');
 					
 					$('input[name=nights]').val(data[0]);
 					$('#rate').val(addCommas(data[1]));
+					$('input[name=info-r]').val(data[2]);
 					rsv.convert(data[1], 'convert');
 				}
 			});
-		}
+		},
+
+		onClose: function( selectedDate ) {
+			$('#sdate').datepicker('option', 'maxDate', selectedDate);
+		}   
+	
+		
 	});
 }
 
@@ -247,7 +270,7 @@ function quickMenuPop() {
         if (  (event.button == 2) || (event.which == 3) ) {
             // console.log('마우스 오른쪽 클릭 사용 x')
             menuIdx = $(this).index();
-            // console.log(menuIdx);
+			//console.log(menuIdx);
             $(document).on('contextmenu', function() {
                 return false;
             });
@@ -273,9 +296,9 @@ function quickMenuPop() {
     $('.qm-pop .qm-list > li').on('click', function(e) {
         // room.status(roomNo, $(e.target).attr('class'));
         if( $(this).attr('ref') == 'deleteAll' ) {
-            lnb.find('.menu > li').remove();
+            page.favorites(3, '', '');
         } else  {
-            lnb.find('.menu > li').eq(menuIdx).remove();
+			page.favorites(2, menuIdx, '');
         }
         $(this).closest('.qm-pop').hide();
     });
