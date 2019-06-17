@@ -1200,45 +1200,18 @@
 .pop-container.rmInvO-container {
 	.pop-wrapper {
 		width: 1900px;
-		min-height: 880px;
+		// min-height: 880px;
 		margin-top: 30px;
 		.pop-header {
 			@include pop-header-base;
 		}
         .pop-contents {
 			@include pop-contents-base;
-            .cont-property {
-                .property-tbl {
-                    @include tbl-style-2;
-                    .cell {
-                        .form-select {
-							&.name {
-								width: 110px;
-							}
-						}
-                        .form-input {
-                            &.name {
-								width: 150px;
-							}
-						}
-						.stats-box {
-							display: inline-block;
-							margin-left: 250px;
-							.tt {
-								font-weight: 700;
-							}
-							.t {
-								margin-left: 100px;
-							}
-						}
-                    }
-                }
-            }
             
             .cont-area {
-                margin-top: 13px;
+                // margin-top: 13px;
                 .grid-toolbar {
-                    display: none;
+                    @include grid-toolbar;
                 }
                 .grid-wrap {
                     @include grid-scr-x(null, 100%);
@@ -1272,6 +1245,81 @@
 		}
 		.pop-footer {
 			@include pop-footer-base;
+		}
+	}
+}
+/* 객실현황 목록 수정(Edit) */
+.pop-container.chStatus-container {
+	.pop-wrapper {
+        width: 400px;
+		.pop-header {
+			//@include pop-header-base;
+            padding: 8px 15px;
+            color: #313131;
+            background: #f3f2f2;
+            h2 {
+                font-weight: 700;
+                letter-spacing: 0;
+            }
+            .i-x {
+                width: 20px;
+                height: 20px;
+                &:before, &:after {
+                    top: 8px;
+                    background: #807772;
+                    width: 20px;
+                    height: 3px;
+                }
+            }
+            
+		}
+		.pop-contents {
+			@include pop-contents-base;
+		    .popcont-container {
+                .grid-tbl {
+                    @include tbl-base;
+                    width: 100%;
+                    th, td {
+
+                    }
+                    th {
+                        .cell {
+                        }
+                    }
+                    td {
+                        .cell {
+                            label {
+                                margin-right: 8px;
+                            }
+                            .form-select {
+                                width: 150px;
+                            }
+                            .cal-box {
+                                min-width: 100px;
+                                .inp-cal {
+                                    width: 100px;
+                                }
+                            }
+                            .textarea-etc {
+                                width: 100%;
+                                height: 40px;
+                            }
+                            & + .cell {
+                                padding-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+		}
+		.pop-footer {
+			@include pop-footer-base;
+            .row-btn {
+                button[class*='btn-'] {
+                    padding-left: 9px;
+                    padding-right: 15px;
+                }
+            }
 		}
 	}
 }

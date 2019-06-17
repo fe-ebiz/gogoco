@@ -539,7 +539,7 @@
 		}
 		/* 객실관리 - 분류 */
 		.classify-area {
-			%classify-itmBefore {
+			@mixin classify-itmBefore {
 				position: relative;
 				content: "";
 				display: inline-block;
@@ -551,6 +551,13 @@
 				border-radius: 50%;
 				box-sizing: border-box;
 				border: 1px solid #000;
+			}
+			@mixin classify-itmBefore-2 {
+				@include position(absolute, 1px, 0);
+				display: inline-block;
+				font-size: 0;
+				width: 17px;
+				height: 17px;
 			}
 			.list-type {
 				border-bottom: 1px dashed #d5d5d5;
@@ -567,98 +574,185 @@
 						padding-left: 0;
 					}
 					.item {
+						position: relative;
 						display: inline-block;
 						font-size: 12px;
 						letter-spacing: -0.5px;
 						color: #9c9c9c;
-						padding-left: 30px;
+						padding-left: 27px;
+						vertical-align: baseline;
+						line-height: 1.5;
+						input[type=checkbox]:checked + .ic:after {
+							content: '';
+							width: 16px;
+							height: 16px;
+							@include position(absolute, 0, 0px);
+							background: url('../../img/tick-small-red-stroke.png') no-repeat center;
+						}
+						&.chkOut,
+						&.assign,
+						&.chkOut-assign {
+							input[type=checkbox]:checked + .ic:after {
+								top: -2px;
+								left: -2px;
+							}
+						}
 						&.chkOut {
-							&:before {
-								@extend %classify-itmBefore;
+							.ic {
+								@include classify-itmBefore;
 								background: #F00;
 							}
 						}
 						&.assign {
 							margin-left: 15px;
-							&:before {
-								@extend %classify-itmBefore;
+							.ic {
+								@include classify-itmBefore;
 								background: #00FF00;
 							}
 						}
 						&.chkOut-assign {
-							&:before {
-								@extend %classify-itmBefore;
+							.ic {
+								@include classify-itmBefore;
 								background: #FFFF00;
 							}
 						}
 						&.vip {
-							background:  url("../../img/icon/vip.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/vip.png") 0 top no-repeat;
+							}
 						}
 						&.chkIn {
-							background:  url("../../img/icon/checkIn.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/checkIn.png") 0 top no-repeat;
+							}
 						}
 						&.inHouse {
-							background:  url("../../img/icon/inHouse.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/inHouse.png") 0 top no-repeat;
+							}
 						}
 						&.ooo {
-							background:  url("../../img/icon/ooo.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/ooo.png") 0 top no-repeat;
+							}
 						}
 						&.empty {
-							background:  url("../../img/icon/empty.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/empty.png") 0 top no-repeat;
+							}
 						}
 						&.dayUse {
-							background:  url("../../img/icon/dayUse.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/dayUse.png") 0 top no-repeat;
+							}
 						}
 						&.goOut {
-							background:  url("../../img/icon/goOut.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/goOut.png") 0 top no-repeat;
+							}
 						}
 						&.oos {
-							background:  url("../../img/icon/oos.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/oos.png") 0 top no-repeat;
+							}
 						}
 						&.vi {
-							background:  url("../../img/icon/vi.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/vi.png") 0 top no-repeat;
+							}
 						}
 						&.vw {
-							background:  url("../../img/icon/vw.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/vw.png") 0 top no-repeat;
+							}
 						}
 						&.oi {
-							background:  url("../../img/icon/oi.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/oi.png") 0 top no-repeat;
+							}
 						}
 						&.ow {
-							background:  url("../../img/icon/ow.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/ow.png") 0 top no-repeat;
+							}
 						}
 						&.vc {
-							background:  url("../../img/icon/vc.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/vc.png") 0 top no-repeat;
+							}
 						}
 						&.vd {
-							background:  url("../../img/icon/vd.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/vd.png") 0 top no-repeat;
+							}
 						}
 						&.oc {
-							background:  url("../../img/icon/oc.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/oc.png") 0 top no-repeat;
+							}
 						}
 						&.od {
-							background:  url("../../img/icon/od.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/od.png") 0 top no-repeat;
+							}
 						}
 						&.in-r {
-							background:  url("../../img/icon/ebInReq.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/ebInReq.png") 0 top no-repeat;
+							}
 						}
 						&.out-r {
-							background:  url("../../img/icon/ebOutReq.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/ebOutReq.png") 0 top no-repeat;
+							}
 						}
 						&.in {
-							background:  url("../../img/icon/ebIn.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/ebIn.png") 0 top no-repeat;
+							}
 						}
 						&.out {
-							background:  url("../../img/icon/ebOut.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/ebOut.png") 0 top no-repeat;
+							}
 						}
 						&.message {
-							background:  url("../../img/icon/messageIn.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/messageIn.png") 0 top no-repeat;
+							}
 						}
 						&.temperature {
-							background:  url("../../img/icon/temperature.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/temperature.png") 0 top no-repeat;
+							}
 						}
 						&.guests {
-							background:  url("../../img/icon/guests.png") 3px top no-repeat;
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/guests.png") 0 top no-repeat;
+							}
 						}
 
 					}
