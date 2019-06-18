@@ -1124,6 +1124,7 @@
 							text-shadow: 1px 1px #fff;
 						}
 						.guestName {
+							color: #ccc;
 							line-height: 52px;
 						}
 						.info {
@@ -1137,6 +1138,36 @@
 						}
 						border: 2px solid #C0B5A6;
 						background: #E8E4E1;
+						.roomNo {
+							background: #C0B5A6;
+							color: #fff;
+							text-shadow: 1px 1px #000;
+						}
+						.guestName {
+							padding-top: 5px;
+						}
+					}
+					&.vip {
+						> div {
+							border-top: 1px dashed #D1B677;
+						}
+						border: 2px solid #D1B677;
+						background: #fbf4bb;
+						.roomNo {
+							background: #D1B677;
+							color: #fff;
+							text-shadow: 1px 1px #000;
+						}
+						.guestName {
+							padding-top: 5px;
+						}
+					}
+					&.dayuse {
+						> div {
+							border-top: 1px dashed #C0B5A6;
+						}
+						border: 2px solid #C0B5A6;
+						background: #fff;
 						.roomNo {
 							background: #C0B5A6;
 							color: #fff;
