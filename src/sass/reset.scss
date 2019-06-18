@@ -57,7 +57,7 @@ q:before, q:after {content :''}
 
 button::-moz-focus-inner, input::-moz-focus-inner{padding:0; border:0;}
 
-caption, legend{overflow: hidden; position: absolute; border: 0; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px);}
+caption, legend{width:0; height:0; font-size:0; line-height:0; text-indent:-9999px; visibility:hidden;}
 
 label {cursor: pointer;}
 

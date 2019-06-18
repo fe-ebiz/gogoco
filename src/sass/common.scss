@@ -195,7 +195,7 @@ $sidebar-wd: 96px;
 }
 .icon-status {
     @include va;
-    @include sizes(17px);
+    @include sizes(16px);
     .icon-status.won {
         @include sizes(13px);
         top: -1px;
@@ -218,76 +218,30 @@ $sidebar-wd: 96px;
                 background: #FFFF00;
             }
         }
-    }
-    &.vip {
-        background:  url("../img/icon/vip.png") no-repeat;
-    }
-    &.chkIn {
-        background:  url("../img/icon/checkIn.png") no-repeat;
-    }
-    &.inHouse {
-        background:  url("../img/icon/inHouse.png") no-repeat;
-    }
-    &.ooo {
-        background:  url("../img/icon/ooo.png") no-repeat;
-    }
-    &.empty {
-        background:  url("../img/icon/empty.png") no-repeat;
-    }
-    &.dayUse {
-        background:  url("../img/icon/dayUse.png") no-repeat;
-    }
-    &.goOut {
-        background:  url("../img/icon/goOut.png") no-repeat;
-    }
-    &.oos {
-        background:  url("../img/icon/oos.png") no-repeat;
-    }
-    &.vi {
-        background:  url("../img/icon/vi.png") no-repeat;
-    }
-    &.vw {
-        background:  url("../img/icon/vw.png") no-repeat;
-    }
-    &.oi {
-        background:  url("../img/icon/oi.png") no-repeat;
-    }
-    &.ow {
-        background:  url("../img/icon/ow.png") no-repeat;
-    }
-    &.vc {
-        background:  url("../img/icon/vc.png") no-repeat;
-    }
-    &.vd {
-        background:  url("../img/icon/vd.png") no-repeat;
-    }
-    &.oc {
-        background:  url("../img/icon/oc.png") no-repeat;
-    }
-    &.od {
-        background:  url("../img/icon/od.png") no-repeat;
-    }
-    &.in-r {
-        background:  url("../img/icon/ebInReq.png") no-repeat;
-    }
-    &.out-r {
-        background:  url("../img/icon/ebOutReq.png") no-repeat;
-    }
-    &.in {
-        background:  url("../img/icon/ebIn.png") no-repeat;
-    }
-    &.out {
-        background:  url("../img/icon/ebOut.png") no-repeat;
-    }
-    &.message {
-        background:  url("../img/icon/messageIn.png") no-repeat;
-    }
-    &.temperature {
-        background:  url("../img/icon/temperature.png") no-repeat;
-    }
-    &.guests {
-        background:  url("../img/icon/guests.png") no-repeat;
-    }
+	}
+	@each $status in vip, inHouse, ooo, empty, dayUse, goOut, oos, vi, vw, oi, ow, vc, vd, oc, od, temperature, guests {
+		&.#{$status} {
+			background:  url("../../img/icon/#{$status}.png") no-repeat;	
+		}
+	}
+	&.chkIn {
+		background:  url("../../img/icon/checkIn.png") no-repeat;	
+	}
+	&.in {
+		background:  url("../../img/icon/ebIn.png") no-repeat;	
+	}
+	&.out {
+		background:  url("../../img/icon/ebOut.png") no-repeat;	
+	}
+	&.in-r {
+		background:  url("../../img/icon/ebInReq.png") no-repeat;	
+	}
+	&.out-r {
+		background:  url("../../img/icon/ebOutReq.png") no-repeat;	
+	}
+	&.message {
+		background:  url("../../img/icon/messageIn.png") no-repeat;	
+	}
 }
 .icon-trees {
     @include i-sprite-1(url(../img/icon/treeIcons.png) no-repeat);

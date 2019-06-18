@@ -573,6 +573,9 @@
 						border-left: 0;
 						padding-left: 0;
 					}
+					&.type-5 label {
+						cursor: default;
+					}
 					.item {
 						position: relative;
 						display: inline-block;
@@ -616,145 +619,50 @@
 								background: #FFFF00;
 							}
 						}
-						&.vip {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/vip.png") 0 top no-repeat;
+						@each $status in vip, inHouse, ooo, empty, dayUse, goOut, oos, vi, vw, oi, ow, vc, vd, oc, od, temperature, guests {
+							&.#{$status} {
+								.ic {
+									@include classify-itmBefore-2;
+									background:  url("../../img/icon/#{$status}.png") 0 top no-repeat;	
+								}
 							}
 						}
 						&.chkIn {
 							.ic {
 								@include classify-itmBefore-2;
-								background:  url("../../img/icon/checkIn.png") 0 top no-repeat;
-							}
-						}
-						&.inHouse {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/inHouse.png") 0 top no-repeat;
-							}
-						}
-						&.ooo {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/ooo.png") 0 top no-repeat;
-							}
-						}
-						&.empty {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/empty.png") 0 top no-repeat;
-							}
-						}
-						&.dayUse {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/dayUse.png") 0 top no-repeat;
-							}
-						}
-						&.goOut {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/goOut.png") 0 top no-repeat;
-							}
-						}
-						&.oos {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/oos.png") 0 top no-repeat;
-							}
-						}
-						&.vi {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/vi.png") 0 top no-repeat;
-							}
-						}
-						&.vw {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/vw.png") 0 top no-repeat;
-							}
-						}
-						&.oi {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/oi.png") 0 top no-repeat;
-							}
-						}
-						&.ow {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/ow.png") 0 top no-repeat;
-							}
-						}
-						&.vc {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/vc.png") 0 top no-repeat;
-							}
-						}
-						&.vd {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/vd.png") 0 top no-repeat;
-							}
-						}
-						&.oc {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/oc.png") 0 top no-repeat;
-							}
-						}
-						&.od {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/od.png") 0 top no-repeat;
-							}
-						}
-						&.in-r {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/ebInReq.png") 0 top no-repeat;
-							}
-						}
-						&.out-r {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/ebOutReq.png") 0 top no-repeat;
+								background:  url("../../img/icon/checkIn.png") 0 top no-repeat;	
 							}
 						}
 						&.in {
 							.ic {
 								@include classify-itmBefore-2;
-								background:  url("../../img/icon/ebIn.png") 0 top no-repeat;
+								background:  url("../../img/icon/ebIn.png") 0 top no-repeat;	
 							}
 						}
 						&.out {
 							.ic {
 								@include classify-itmBefore-2;
-								background:  url("../../img/icon/ebOut.png") 0 top no-repeat;
+								background:  url("../../img/icon/ebOut.png") 0 top no-repeat;	
+							}
+						}
+						&.in-r {
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/ebInReq.png") 0 top no-repeat;	
+							}
+						}
+						&.out-r {
+							.ic {
+								@include classify-itmBefore-2;
+								background:  url("../../img/icon/ebOutReq.png") 0 top no-repeat;	
 							}
 						}
 						&.message {
 							.ic {
 								@include classify-itmBefore-2;
-								background:  url("../../img/icon/messageIn.png") 0 top no-repeat;
+								background:  url("../../img/icon/messageIn.png") 0 top no-repeat;	
 							}
 						}
-						&.temperature {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/temperature.png") 0 top no-repeat;
-							}
-						}
-						&.guests {
-							.ic {
-								@include classify-itmBefore-2;
-								background:  url("../../img/icon/guests.png") 0 top no-repeat;
-							}
-						}
-
 					}
 					&.type-1 {
 						width: 153px;
