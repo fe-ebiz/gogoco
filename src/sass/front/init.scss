@@ -999,17 +999,23 @@
 									> button {
 										text-transform: uppercase;
 									}
-									.btn-red {
-										@include btn-red;
+									@mixin btn-cmm {
 										font-size: 12px;
 										line-height: 1.3;
+										min-height: 36px;
 										padding: 3px 18px 1px;
 									}
+									.btn-gray {
+										// @include btn-gray;
+										@include btn-cmm;
+									}
+									.btn-red {
+										// @include btn-red;
+										@include btn-cmm;
+									}
 									.btn-blue {
-										@include btn-blue;
-										height: 36px;
-										line-height: 1.3;
-										padding: 3px 18px 1px;
+										// @include btn-blue;
+										@include btn-cmm;
 									}
 								}
 

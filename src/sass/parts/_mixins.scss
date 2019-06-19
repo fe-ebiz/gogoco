@@ -330,16 +330,16 @@ $btn-lh: 1.5;
 // 색상별 버튼
 @mixin btn-gray($wth: null, $he:null, $fz: null, $pd: null) {
 	// @include btn-base(null, null, #f2f0f0, #b9babc, #333);
-	@include btn-base(null, null, #fff, #c7c7c7, #333);
+	@include btn-base(null, null, #f2f0f0, #c7c7c7, #333);
 	width: $wth;
 	height: $he;
 	font-size: $fz;
 	padding: $pd;
 	//	background-color: #f2f0f0;
-	background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .8)), to(rgba(255, 255, 255, 0)));
-	background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .8) 0, rgba(255, 255, 255, 0) 100%);
-	background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .8) 0, rgba(255, 255, 255, 0) 100%);
-	background-position: 50% 50%;
+	// background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .8)), to(rgba(255, 255, 255, 0)));
+	// background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, .8) 0, rgba(255, 255, 255, 0) 100%);
+	// background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, .8) 0, rgba(255, 255, 255, 0) 100%);
+	// background-position: 50% 50%;
 
 	&:hover {
 		// text-shadow: 0px 1px #fff;
