@@ -145,7 +145,7 @@ $sidebar-wd: 96px;
 .sun {color: $fg-sun !important;}
 
 .icon {
-	@include i-sprite-1(url(../img/common/sprite.png) no-repeat);
+	@include i-sprite-1(url("../img/common/sprite.png") no-repeat);
 	&.ic-check {
 		background-position: -32px -32px;
 		top: -1px;
@@ -196,55 +196,48 @@ $sidebar-wd: 96px;
 .icon-status {
     @include va;
     @include sizes(16px);
-    .icon-status.won {
+    &.won {
         @include sizes(13px);
         top: -1px;
         border-radius: 50%;
         box-sizing: border-box;
         border: 1px solid #000;
-        &.chkOut {
-            &:before {
-                background: #F00;
-            }
-        }
-        &.assign {
-            margin-left: 15px;
-            &:before {
-                background: #00FF00;
-            }
-        }
-        &.chkOut-assign {
-            &:before {
-                background: #FFFF00;
-            }
-        }
+		&.chkOut {
+			background: #F00;
+		}
+		&.assign {
+			background: #00FF00;
+		}
+		&.chkOut-assign {
+			background: #FFFF00;
+		}
 	}
 	@each $status in vip, inHouse, ooo, empty, dayUse, goOut, oos, vi, vw, oi, ow, vc, vd, oc, od, temperature, guests {
 		&.#{$status} {
-			background:  url("../../img/icon/#{$status}.png") no-repeat;	
+			background:  url("../img/icon/#{$status}.png") no-repeat;	
 		}
 	}
 	&.chkIn {
-		background:  url("../../img/icon/checkIn.png") no-repeat;	
+		background:  url("../img/icon/checkIn.png") no-repeat;	
 	}
 	&.in {
-		background:  url("../../img/icon/ebIn.png") no-repeat;	
+		background:  url("../img/icon/ebIn.png") no-repeat;	
 	}
 	&.out {
-		background:  url("../../img/icon/ebOut.png") no-repeat;	
+		background:  url("../img/icon/ebOut.png") no-repeat;	
 	}
 	&.in-r {
-		background:  url("../../img/icon/ebInReq.png") no-repeat;	
+		background:  url("../img/icon/ebInReq.png") no-repeat;	
 	}
 	&.out-r {
-		background:  url("../../img/icon/ebOutReq.png") no-repeat;	
+		background:  url("../img/icon/ebOutReq.png") no-repeat;	
 	}
 	&.message {
-		background:  url("../../img/icon/messageIn.png") no-repeat;	
+		background:  url("../img/icon/messageIn.png") no-repeat;	
 	}
 }
 .icon-trees {
-    @include i-sprite-1(url(../img/icon/treeIcons.png) no-repeat);
+    @include i-sprite-1(url("../img/icon/treeIcons.png") no-repeat);
     width: 20px;
     height: 20px;
     &.folder {
@@ -256,7 +249,7 @@ $sidebar-wd: 96px;
     }
 }
 .icon-treeArr {
-    @include i-sprite-1(url(../img/icon/treeArrows.png) no-repeat);
+    @include i-sprite-1(url("../img/icon/treeArrows.png") no-repeat);
     @include position(absolute, null, -20px);
     width: 20px;
     height: 20px;
