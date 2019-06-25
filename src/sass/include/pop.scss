@@ -3603,7 +3603,7 @@
 /* 예약 조건 */
 .pop-container.inhouse-container {
 	.pop-wrapper {
-		width: 1490px;
+		width: 1620px;
 		margin-top: 30px;
 		.pop-header {
 			@include pop-header-base;
@@ -3617,25 +3617,39 @@
             &.resFit-contents {
 				.split-1 {
 					@include float;
-					width: 622px;
+					// width: 622px;
+					width: 47%;
 					.cont-secondBook {
 						// width: 625px;
 						.cont-tit {
 							color: #000;
+							.no {
+								margin-right: 5px;
+								font-size: 16px;
+								font-weight: 700;
+							}
 							label {
 								span + input {
 									top: 1px;
 								}
 							}
 							strong {
+								margin-left: 8px;
 								margin-right: 0;
 							}
 						}
 						.grid-container {
+							background: none;
 							.grid-wrap {
 								@include float;
 								+ .grid-wrap {
 									margin-left: 15px;
+								}
+								&.name-wrap {
+									width: 52%;
+								}
+								&.assign-wrap {
+									width: 45.5%;
 								}
 								.grid-contents {
 								}
@@ -3645,7 +3659,7 @@
 							@include tbl-base;
 						}
 						.name-tbl {
-							width: 306px;
+							// width: 306px;
 							th, td {
 			
 							}
@@ -3698,7 +3712,7 @@
 							}
 						}
 						.assign-tbl {
-							width: 270px;
+							// width: 270px;
 							th, td {
 			
 							}
@@ -3830,7 +3844,8 @@
 				}
 				.split-2 {
 					@include float;
-					width: 808px;
+					// width: 808px;
+					width: 51.5%;
 					margin-left: 20px;
 					.cont-guestinfo {
 			//			width: 805px;
@@ -3851,16 +3866,20 @@
 								+ .flt-box {
 									margin-left: 15px;
 								}
+								&.guest-wrap {
+									width: 38%;
+								}
 								.grid-contents {
 								}
 							}
 							.flt-box {
-								width: 464px;
+								// width: 464px;
+								width: 60%;
 								.grid-wrap.scr-wrap {
-									@include grid-scr-brown(580px, 464px);
+									@include grid-scr-brown(580px, 100%);
 									.grid-tbl {
 										.ie8 & {
-											width: 462px;
+											width: 563px;
 										}
 									}
 								} // .grie-wrap
@@ -3869,7 +3888,7 @@
 						// 테이블 내 form 요소 및 기타 관리
 						.guest-tbl {
 							@include tbl-base;
-							width: 295px;
+							// width: 295px;
 							th, td {
 			
 							}
@@ -4014,6 +4033,62 @@
 					margin-top: 30px;
 				}
 			
+			}
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+/* 체크인 히스토리 영역 */
+/* 게스트 프로필 */
+.pop-container.inhistory-container {
+	.pop-wrapper {
+		width: 840px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+			@include pop-contents-base;
+			.row-add {
+				text-align: right;
+				padding-bottom: 15px;
+				[class*="btn-"] {
+					$pd: 15px;
+					padding-left: $pd;
+					padding-right: $pd;
+				}
+			}
+			.cont-list {
+				.grid-wrap {
+					@include grid-scr-x(null);
+					.grid-scrollable-x {
+						overflow-x: auto;
+						&:after {
+							display: none;
+						}
+					}
+					.grid-area.grid-contents {
+						height: 400px;
+					}
+					.grid-tbl {
+						th {
+						}
+						th, td {
+							.cell {
+								text-align: center;
+							}
+						}
+						[class*="btn-"] {
+							$pd: 15px;
+							padding-left: $pd;
+							padding-right: $pd;
+						}
+					}
+				}
+				.grid-bottom {
+                    @include grid-bottom-page;
+                }
 			}
 		}
 		.pop-footer {

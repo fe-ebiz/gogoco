@@ -579,9 +579,11 @@ $btn-lh: 1.5;
 // grid-bottom
 @mixin grid-bottom($bdg: $bor-gray-table) {
 	@include gray-gradient;
+	min-height: 34px;
 	padding: 5px;
 	border: 1px solid $bdg;
 	border-top: 0;
+	box-sizing: border-box;
 
 	.count {
 		@include float(right);
@@ -598,9 +600,11 @@ $btn-lh: 1.5;
 @mixin grid-bottom-page($bdg: $bor-gray-table) {
 	@include gray-gradient;
 	// @include bdr-r(0, 0, 4px, 4px);
+	min-height: 34px;
 	padding: 5px;
 	border: 1px solid $bdg;
 	border-top: 0;
+	box-sizing: border-box;
 
 	>* {
 		@include va;
@@ -1277,10 +1281,12 @@ $btn-lh: 1.5;
 	box-sizing: border-box;
 	border-radius: $bd-r;
 	$ie8-wth: 1740px;
-
+	
 	.grid-tbl {
-		.ie8 & {
-			width: $ie8-wth;
+		@if $scr-wth != null {
+			.ie8 & {
+				width: $ie8-wth;
+			}
 		}
 
 		width: 100%;
