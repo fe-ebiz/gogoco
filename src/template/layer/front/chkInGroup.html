@@ -22,21 +22,11 @@
 									<table class="grid-tbl name-tbl">
 										<colgroup>
 											<col class="nth-1" style="width: 92px">
-											<col class="nth-2" style="">
+											<col class="nth-2">
 										</colgroup>
 										<tbody>
 											<tr>
 												<th><div class="cell">이름</div></th>
-												<td>
-													<div class="cell">
-														<input type="text" class="form-input">
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<th>
-													<div class="cell">성</div>
-												</th>
 												<td>
 													<div class="cell">
 														<input type="text" class="form-input">
@@ -50,7 +40,7 @@
 												<td>
 													<div class="cell">
 														<span class="cal-box">
-															<input type="text" class="appe-reset inp-cal date-ui">
+															<input type="text" class="appe-reset inp-cal " id="sdate">
 															<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
 														</span>
 														<span class="rdo-box">
@@ -67,7 +57,7 @@
 												<td>
 													<div class="cell">
 														<span class="cal-box">
-															<input type="text" class="appe-reset inp-cal date-ui">
+															<input type="text" class="appe-reset inp-cal " id="edate">
 															<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
 														</span>
 														<span class="rdo-box"><label>
@@ -103,17 +93,73 @@
 												</td>
 											</tr>
 											<tr>
+												<th><div class="cell necess">판매처</div></th>
+												<td>
+													<div class="cell">
+														<select name="options" id="options" class="form-select account" onchange="rsv.category(this.value)">
+														<option value="워크인">워크인</option>
+														<option value="회원">회원</option>
+														<option value="컴프">컴프</option>
+														<option value="중고나라">중고나라</option>
+														<option value="대매사">대매사</option>
+														<option value="B2B">B2B</option>
+														</select>
+				
+														<span id="temp"></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th><div class="cell">판매분류</div></th>
+												<td><div class="cell" id="agency"></div></td>
+											</tr>
+											<tr>
 												<th>
-													<div class="cell necess">계정</div>
+													<div class="cell necess">거래처</div>
 												</th>
 												<td>
 													<div class="cell">
-														<input type="text" class="form-input account" value="individual">
-														<select name="" id="" class="form-select account">
-															<option value=""></option>
-															<option value="">17</option>
-															<option value="">16</option>
-														</select>
+														<div class="inp-drop-box account">
+															<input type="text" class="form-input" value="없음">
+															<ul class="drop-menu">
+																<li>(주) 오네가</li>
+																<li>(주) 동원홈푸드</li>
+																<li>(주) 아이에이치아이(IHI)</li>
+																<li>(주) 오네가</li>
+																<li>(주) 동원홈푸드</li>
+																<li>(주) 아이에이치아이(IHI)</li>
+																<li>(주) 오네가</li>
+																<li>(주) 동원홈푸드</li>
+																<li>(주) 아이에이치아이(IHI)</li>
+																<li>(주) 오네가</li>
+																<li>(주) 동원홈푸드</li>
+																<li>(주) 아이에이치아이(IHI)</li>
+																<li>(주) 오네가</li>
+																<li>(주) 동원홈푸드</li>
+																<li>(주) 아이에이치아이(IHI)</li>
+															</ul>
+	
+															<span class="icon ic-del"></span>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr class="ht-row-2">
+												<th><div class="cell necess">요금</div></th>
+												<td class="ta-right">
+													<div class="cell">
+														<div class="row-split w-1">
+															<div class="row">
+																<input type="text" class="form-input rate ta-right" numberonly value="1,111,000,000"> 
+																<span class="pull-right txt-won">원</span>
+															</div>
+															<div class="row">
+																<span id="convert" class="pull-right">십일일억일천익백만원</span>
+															</div>
+														</div>
+														<div class="row-split w-2">
+															<button type="button" class="btn-green pkg-set">SET</button>
+														</div>
 													</div>
 												</td>
 											</tr>
@@ -129,6 +175,7 @@
 													</div>
 												</td>
 											</tr>
+											<!-- 
 											<tr>
 												<th>
 													<div class="cell necess">세금</div>
@@ -187,8 +234,7 @@
 														</p>
 													</div>
 												</td>
-											</tr>
-											<!--{tr(th>div.cell^+td>div.cell)}-->
+											</tr> -->
 										</tbody>
 									</table>
 								</div>
@@ -198,7 +244,7 @@
 									<table class="grid-tbl assign-tbl">
 										<colgroup>
 											<col class="nth-1" style="width: 83px">
-											<col class="nth-2" style="">
+											<col class="nth-2">
 										</colgroup>
 										<tbody>
 											<tr>
@@ -223,7 +269,7 @@
 													</div>
 												</td>
 											</tr>
-											<tr>
+											<!-- <tr>
 												<th>
 													<div class="cell">Comp / HU</div>
 												</th>
@@ -246,7 +292,7 @@
 														<button type="button" class="btn-gray" disabled>DEPOSIT</button>
 													</div>
 												</td>
-											</tr>
+											</tr> -->
 											<tr>
 												<th>
 													<div class="cell">결제수단</div>
@@ -262,26 +308,93 @@
 													</div>
 												</td>
 											</tr>
+											<tr class="ht-row-2">
+												<th><div class="cell">결제요금</div></th>
+												<td class="ta-right">
+													<div class="cell">
+														<div class="row">
+															<span class="col w-01 pull-left">
+																<input type="text" name="rate" id="rate" class="form-input ta-right rate" value="11,000,000" numberonly=""> 
+																<span class="pull-right txt-won">원</span>
+															</span>
+															<span class="col w-02">
+																<label><input type="checkbox"> 전액</label>
+															</span>
+														</div>
+														<div class="row w-01">
+															<span id="convert" class="pull-right">일천익백만원</span>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr class="credit">
+												<th><div class="cell">카드구분</div></th>
+												<td>
+													<div class="cell" id="card">													
+														<input type="radio" id="c1" name="card" value="1" checked="checked" onclick="pay.card(1)" autocomplete="off"> <label for="c1">개인</label> &nbsp; &nbsp;
+														<input type="radio" id="c2" name="card" value="2" onclick="pay.card(2)" autocomplete="off"> <label for="c2">법인</label>
+													</div>
+												</td>
+											</tr>
 											<tr>
 												<th>
-													<div class="cell">신용카드</div>
+													<div class="cell">카드번호</div>
 												</th>
 												<td>
 													<div class="cell">
 														<input type="text" class="form-input card">
+														<input type="text" class="form-input card">
+														<input type="text" class="form-input card">
+														<input type="text" class="form-input card">
+													</div>
+												</td>
+											</tr>
+											<tr class="credit">
+												<th><div class="cell">비밀번호</div></th>
+												<td><div class="cell"><input type="text" name="nights" class="form-input card" maxlength="2" numberonly="" autocomplete="off"> **</div></td>
+											</tr>
+											<tr>
+												<th><div class="cell">유효기간</div></th>
+												<td>
+													<div class="cell">
+														<input type="text" class="form-input exp none" numberonly="" autocomplete="off"> 월 &nbsp; 
+														<input type="text" class="form-input exp none" numberonly="" autocomplete="off"> 년
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th><div class="cell">생년월일</div></th>
+												<td><div class="cell"><input type="text" class="form-input none" placeholder="주민번호 앞 6자리" maxlength="6" numberonly="" autocomplete="off"></div></td>
+											</tr>
+											<tr>
+												<th><div class="cell">할부기간</div></th>
+												<td>
+													<div class="cell">
+													</div>
+												</td>
+											</tr>
+											<!-- <tr>
+												<th><div class="cell">사업자번호</div></th>
+												<td>
+													<div class="cell">
+														<input type="text" name="card1" class="form-input card none" maxlength="3" numberonly="" autocomplete="off">
+														<input type="text" name="card1" class="form-input card none" maxlength="2" numberonly="" autocomplete="off">
+														<input type="text" name="card1" style="width: 50%" class="form-input card none" maxlength="5" numberonly="" autocomplete="off">
 													</div>
 												</td>
 											</tr>
 											<tr>
 												<th>
-													<div class="cell">카드 주인</div>
+													<div class="cell">카드 구분</div>
 												</th>
 												<td>
 													<div class="cell">
-														<input type="text" class="form-input holder">
+														<span class="rdo-box"><label><input type="radio" name="tax">개인</label></span>
+														<span class="rdo-box"><label><input type="radio" name="tax">법인</label></span>
 													</div>
 												</td>
 											</tr>
+	
 											<tr>
 												<th>
 													<div class="cell">기간 / CVC</div>
@@ -323,7 +436,7 @@
 												<td>
 													<div class="cell">
 														<input type="text" class="form-input req" disabled>
-														<button type="button" class="btn-green">Req.(0)</button>
+														<button type="button" class="btn-green" onclick="popFn.show('.spReq-container')">Req.(0)</button>
 													</div>
 												</td>
 											</tr>
@@ -337,10 +450,12 @@
 														<button type="button" class="btn-green" onclick="popFn.show('.accomp-container')">SET</button>
 													</div>
 												</td>
-											</tr>
-											<!--{tr(th>div.cell^+td>div.cell)}-->
+											</tr> -->
 										</tbody>
 									</table>
+									<div class="row-btn mt-10 ta-center">
+										<button type="button" class="btn-orange pay">결제하기</button>
+									</div>
 								</div>
 							</div>
 						</div>

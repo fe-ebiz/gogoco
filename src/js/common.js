@@ -53,8 +53,15 @@ var page = {
 		$('.pop-container').hide();
 	},
 
-	depth: function() {
-		
+	excel: function(a) {
+		$.ajax({		
+			type: 'post',
+			url: '/_new/views/excel/',
+			data: $('#' + a).serialize(),
+			success: function(e) {
+				console.log(e);
+			}
+		});	
 	},
 
 	favorites: function(a, b, c) {
@@ -67,7 +74,18 @@ var page = {
 				location.reload();
 			}
 		});
-	}	
+	},
+	
+	move: function(e) {
+		$.ajax({		
+			type: 'post',
+			url: '/inc/state.php',
+			data: 'mode=login&log=move&a=' + e,
+			success: function(r) {
+				location.reload();
+			}
+		});
+	}
 }
 
 
@@ -241,7 +259,7 @@ function depTblClk() {
 
 // drop메뉴 기능
 function dropMenu() {
-    var dropBox = $('.inp-drop-box'),
+    var dropBox = $('body .inp-drop-box'),
         resetBtn = dropBox.find('.ic-del');
     dropBox.find('.form-input').click(function() {
         $(this).next().show();

@@ -330,7 +330,7 @@ $btn-lh: 1.5;
 // 색상별 버튼
 @mixin btn-gray($wth: null, $he:null, $fz: null, $pd: null) {
 	// @include btn-base(null, null, #f2f0f0, #b9babc, #333);
-	@include btn-base(null, null, #f2f0f0, #c7c7c7, #333);
+	@include btn-base(null, null, #fafafa, #c7c7c7, #333);
 	width: $wth;
 	height: $he;
 	font-size: $fz;

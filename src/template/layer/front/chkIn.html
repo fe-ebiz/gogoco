@@ -1,10 +1,10 @@
-<!-- inhouse 팝업 -->
-<div class="pop-container inhouse-container">
+<!-- 예약 조건 팝업 -->
+<div class="pop-container rsvFit-container">
 	<div class="bg-back"></div>
 
 	<div class="pop-wrapper">
 		<div class="pop-header">
-			<h2>In House</h2>
+			<h2>Check In F.I.T</h2>
 			<span class="a-i-x i-x fn-cls"></span>
 		</div>
 		<div class="cf pop-contents resFit-contents">
@@ -12,35 +12,21 @@
 				<div class="split split-1">
 					<fieldset class="cont-common-1 cont-secondBook">
 						<legend class="cont-tit">
-							<span class="no">#413</span>
-							<input type="text" class="form-input">
-							<button type="button" class="btn-green">SEARCH</button>
-							<button type="button" class="btn-green">HISTORY</button>
 							<strong>2nd Book #</strong>
 							<input type="text" class="form-input bookingNum">
 							<label><span>DNM</span> <input type="checkbox"></label>
 						</legend>
 						<div class="cf grid-container">
-							<div class="grid-wrap name-wrap">
+							<div class="grid-wrap">
 								<div class="grid-contents">
 									<table class="grid-tbl name-tbl">
 										<colgroup>
 											<col class="nth-1" style="width: 92px">
-											<col class="nth-2" style="">
+											<col class="nth-2">
 										</colgroup>
 										<tbody>
 											<tr>
 												<th><div class="cell">이름</div></th>
-												<td>
-													<div class="cell">
-														<input type="text" class="form-input">
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<th>
-													<div class="cell">성</div>
-												</th>
 												<td>
 													<div class="cell">
 														<input type="text" class="form-input">
@@ -54,7 +40,7 @@
 												<td>
 													<div class="cell">
 														<span class="cal-box">
-															<input type="text" class="appe-reset inp-cal date-ui">
+															<input type="text" class="appe-reset inp-cal " id="sdate">
 															<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
 														</span>
 														<span class="rdo-box">
@@ -71,7 +57,7 @@
 												<td>
 													<div class="cell">
 														<span class="cal-box">
-															<input type="text" class="appe-reset inp-cal date-ui">
+															<input type="text" class="appe-reset inp-cal " id="edate">
 															<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
 														</span>
 														<span class="rdo-box"><label>
@@ -107,17 +93,73 @@
 												</td>
 											</tr>
 											<tr>
+												<th><div class="cell necess">판매처</div></th>
+												<td>
+													<div class="cell">
+														<select name="options" id="options" class="form-select account" onchange="rsv.category(this.value)">
+														<option value="워크인">워크인</option>
+														<option value="회원">회원</option>
+														<option value="컴프">컴프</option>
+														<option value="중고나라">중고나라</option>
+														<option value="대매사">대매사</option>
+														<option value="B2B">B2B</option>
+														</select>
+				
+														<span id="temp"></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th><div class="cell">판매분류</div></th>
+												<td><div class="cell" id="agency"></div></td>
+											</tr>
+											<tr>
 												<th>
-													<div class="cell necess">계정</div>
+													<div class="cell necess">거래처</div>
 												</th>
 												<td>
 													<div class="cell">
-														<input type="text" class="form-input account" value="individual">
-														<select name="" id="" class="form-select account">
-															<option value=""></option>
-															<option value="">17</option>
-															<option value="">16</option>
-														</select>
+														<div class="inp-drop-box account">
+															<input type="text" class="form-input" value="없음">
+															<ul class="drop-menu">
+																<li>(주) 오네가</li>
+																<li>(주) 동원홈푸드</li>
+																<li>(주) 아이에이치아이(IHI)</li>
+																<li>(주) 오네가</li>
+																<li>(주) 동원홈푸드</li>
+																<li>(주) 아이에이치아이(IHI)</li>
+																<li>(주) 오네가</li>
+																<li>(주) 동원홈푸드</li>
+																<li>(주) 아이에이치아이(IHI)</li>
+																<li>(주) 오네가</li>
+																<li>(주) 동원홈푸드</li>
+																<li>(주) 아이에이치아이(IHI)</li>
+																<li>(주) 오네가</li>
+																<li>(주) 동원홈푸드</li>
+																<li>(주) 아이에이치아이(IHI)</li>
+															</ul>
+	
+															<span class="icon ic-del"></span>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr class="ht-row-2">
+												<th><div class="cell necess">요금</div></th>
+												<td class="ta-right">
+													<div class="cell">
+														<div class="row-split w-1">
+															<div class="row">
+																<input type="text" class="form-input rate ta-right" numberonly value="1,111,000,000"> 
+																<span class="pull-right txt-won">원</span>
+															</div>
+															<div class="row">
+																<span id="convert" class="pull-right">십일일억일천익백만원</span>
+															</div>
+														</div>
+														<div class="row-split w-2">
+															<button type="button" class="btn-green pkg-set">SET</button>
+														</div>
 													</div>
 												</td>
 											</tr>
@@ -133,6 +175,7 @@
 													</div>
 												</td>
 											</tr>
+											<!-- 
 											<tr>
 												<th>
 													<div class="cell necess">세금</div>
@@ -191,25 +234,26 @@
 														</p>
 													</div>
 												</td>
-											</tr>
-											<!--{tr(th>div.cell^+td>div.cell)}-->
+											</tr> -->
 										</tbody>
 									</table>
 								</div>
 							</div>
-							<div class="grid-wrap assign-wrap">
+							<div class="grid-wrap">
 								<div class="grid-contents">
 									<table class="grid-tbl assign-tbl">
 										<colgroup>
 											<col class="nth-1" style="width: 83px">
-											<col class="nth-2" style="">
+											<col class="nth-2">
 										</colgroup>
 										<tbody>
 											<tr>
-												<th><div class="cell">그룹명</div></th>
+												<th><div class="cell">객실 지정</div></th>
 												<td>
 													<div class="cell">
-														<input type="text" class="form-input">
+														<input type="text" class="form-input assign" disabled>
+														<button type="button" class="btn-gray" disabled>ASSIGN</button>
+														<button type="button" class="btn-gray">CLEAR</button>
 													</div>
 												</td>
 											</tr>
@@ -225,7 +269,7 @@
 													</div>
 												</td>
 											</tr>
-											<tr>
+											<!-- <tr>
 												<th>
 													<div class="cell">Comp / HU</div>
 												</th>
@@ -248,7 +292,7 @@
 														<button type="button" class="btn-gray" disabled>DEPOSIT</button>
 													</div>
 												</td>
-											</tr>
+											</tr> -->
 											<tr>
 												<th>
 													<div class="cell">결제수단</div>
@@ -264,26 +308,93 @@
 													</div>
 												</td>
 											</tr>
+											<tr class="ht-row-2">
+												<th><div class="cell">결제요금</div></th>
+												<td class="ta-right">
+													<div class="cell">
+														<div class="row">
+															<span class="col w-01 pull-left">
+																<input type="text" name="rate" id="rate" class="form-input ta-right rate" value="11,000,000" numberonly=""> 
+																<span class="pull-right txt-won">원</span>
+															</span>
+															<span class="col w-02">
+																<label><input type="checkbox"> 전액</label>
+															</span>
+														</div>
+														<div class="row w-01">
+															<span id="convert" class="pull-right">일천익백만원</span>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr class="credit">
+												<th><div class="cell">카드구분</div></th>
+												<td>
+													<div class="cell" id="card">													
+														<input type="radio" id="c1" name="card" value="1" checked="checked" onclick="pay.card(1)" autocomplete="off"> <label for="c1">개인</label> &nbsp; &nbsp;
+														<input type="radio" id="c2" name="card" value="2" onclick="pay.card(2)" autocomplete="off"> <label for="c2">법인</label>
+													</div>
+												</td>
+											</tr>
 											<tr>
 												<th>
-													<div class="cell">신용카드</div>
+													<div class="cell">카드번호</div>
 												</th>
 												<td>
 													<div class="cell">
 														<input type="text" class="form-input card">
+														<input type="text" class="form-input card">
+														<input type="text" class="form-input card">
+														<input type="text" class="form-input card">
+													</div>
+												</td>
+											</tr>
+											<tr class="credit">
+												<th><div class="cell">비밀번호</div></th>
+												<td><div class="cell"><input type="text" name="nights" class="form-input card" maxlength="2" numberonly="" autocomplete="off"> **</div></td>
+											</tr>
+											<tr>
+												<th><div class="cell">유효기간</div></th>
+												<td>
+													<div class="cell">
+														<input type="text" class="form-input exp none" numberonly="" autocomplete="off"> 월 &nbsp; 
+														<input type="text" class="form-input exp none" numberonly="" autocomplete="off"> 년
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th><div class="cell">생년월일</div></th>
+												<td><div class="cell"><input type="text" class="form-input none" placeholder="주민번호 앞 6자리" maxlength="6" numberonly="" autocomplete="off"></div></td>
+											</tr>
+											<tr>
+												<th><div class="cell">할부기간</div></th>
+												<td>
+													<div class="cell">
+													</div>
+												</td>
+											</tr>
+											<!-- <tr>
+												<th><div class="cell">사업자번호</div></th>
+												<td>
+													<div class="cell">
+														<input type="text" name="card1" class="form-input card none" maxlength="3" numberonly="" autocomplete="off">
+														<input type="text" name="card1" class="form-input card none" maxlength="2" numberonly="" autocomplete="off">
+														<input type="text" name="card1" style="width: 50%" class="form-input card none" maxlength="5" numberonly="" autocomplete="off">
 													</div>
 												</td>
 											</tr>
 											<tr>
 												<th>
-													<div class="cell">카드 주인</div>
+													<div class="cell">카드 구분</div>
 												</th>
 												<td>
 													<div class="cell">
-														<input type="text" class="form-input holder">
+														<span class="rdo-box"><label><input type="radio" name="tax">개인</label></span>
+														<span class="rdo-box"><label><input type="radio" name="tax">법인</label></span>
 													</div>
 												</td>
 											</tr>
+	
 											<tr>
 												<th>
 													<div class="cell">기간 / CVC</div>
@@ -339,31 +450,33 @@
 														<button type="button" class="btn-green" onclick="popFn.show('.accomp-container')">SET</button>
 													</div>
 												</td>
-											</tr>
-											<!--{tr(th>div.cell^+td>div.cell)}-->
+											</tr> -->
 										</tbody>
 									</table>
+									<div class="row-btn mt-10 ta-center">
+										<button type="button" class="btn-orange pay">결제하기</button>
+									</div>
 								</div>
 							</div>
 						</div>
 					</fieldset>
 					<!-- //.cont-secondBook -->
 	
-					<fieldset class="cont-common-1 cont-billing">
+					<fieldset class="cont-common-1 cont-booker">
 						<legend class="cont-tit">
-							<strong>Billing</strong>
+							<strong>예약자</strong>
+							<button type="button" class="btn-green">Account Detail</button>
+							<span class="co-black fw-b">03/22 06:04, 유남규</span>
 						</legend>
 	
 						<div class="grid-wrap">
 							<div class="grid-contents">
-								<table class="grid-tbl">
+								<table class="grid-tbl booker-tbl">
 									<colgroup>
-										<col style="width: 80px">
-										<col style="width: 116px">
-										<col style="width: 80px">
-										<col style="width: 116px">
-										<col style="width: 80px">
-										<col style="width: 116px">
+										<col style="width: 90px">
+										<col style="width: 204px">
+										<col style="width: 90px">
+										<col style="width: 204px">
 									</colgroup>
 									<tbody>
 										<tr>
@@ -381,21 +494,48 @@
 													<input type="text" class="form-input">
 												</div>
 											</td>
+										</tr>
+										<tr>
 											<th><div class="cell">연락처</div></th>
 											<td>
 												<div class="cell">
 													<input type="text" class="form-input">
 												</div>
 											</td>
+											<th>
+												<div class="cell">팩스</div>
+											</th>
+											<td>
+												<div class="cell">
+													<input type="text" class="form-input">
+												</div>
+											</td>
 										</tr>
+										<tr>
+											<th><div class="cell">안내자 이름</div></th>
+											<td>
+												<div class="cell">
+													<input type="text" class="form-input">
+												</div>
+											</td>
+											<th>
+												<div class="cell">안내자 번호</div>
+											</th>
+											<td>
+												<div class="cell">
+													<input type="text" class="form-input">
+												</div>
+											</td>
+										</tr>
+										<!--{tr(th>div.cell^+td>div.cell)}-->
 									</tbody>
 								</table>
 							</div>
 						</div>
 						<!-- //.grid-wrap -->
 					</fieldset>
-					<!-- //.cont-common-1 cont-billing -->
-					
+					<!-- //.cont-common-1 cont-booker -->
+	
 					<div class="cont-message fn-tabShow">
 						<div class="cf tab-list">
 							<a href="javascript:;" class="tab on">Message <span class="icon ic-plus"></span></a>
@@ -478,10 +618,6 @@
 						</div>
 					</div>
 					<!-- //.cont-message -->
-					<div class="row-btn">
-						<button type="button" class="btn-green">Complain (0)</button>
-						<button type="button" class="btn-red">Door-Key Assign(0)</button>
-					</div>
 				</div>
 				<!-- //.split-1 -->
 	
@@ -493,7 +629,7 @@
 							<button type="button" class="btn-gray" onclick="popFn.show('.gm-container')">MODIFY</button>
 						</legend>
 						<div class="grid-container">
-							<div class="grid-wrap guest-wrap">
+							<div class="grid-wrap">
 								<div class="grid-contents">
 									<table class="grid-tbl guest-tbl">
 										<colgroup>
@@ -715,84 +851,11 @@
 					</fieldset>
 					<!-- //.cont-common-1 cont-guestinfo -->
 	
-					<fieldset class="cont-common-1 cont-booker">
-						<legend class="cont-tit">
-							<strong>예약자</strong>
-						</legend>
-	
-						<div class="grid-wrap">
-							<div class="grid-contents">
-								<table class="grid-tbl booker-tbl">
-									<colgroup>
-										<col style="width: 80px">
-										<col style="width: 116px">
-										<col style="width: 80px">
-										<col style="width: 116px">
-										<col style="width: 80px">
-										<col style="width: 116px">
-									</colgroup>
-									<tbody>
-										<tr>
-											<th><div class="cell">이름</div></th>
-											<td>
-												<div class="cell">
-													<input type="text" class="form-input">
-												</div>
-											</td>
-											<th>
-												<div class="cell">이메일</div>
-											</th>
-											<td>
-												<div class="cell">
-													<input type="text" class="form-input">
-												</div>
-											</td>
-											<th><div class="cell">연락처</div></th>
-											<td>
-												<div class="cell">
-													<input type="text" class="form-input">
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th><div class="cell">안내자 이름</div></th>
-											<td>
-												<div class="cell">
-													<input type="text" class="form-input">
-												</div>
-											</td>
-											<th>
-												<div class="cell">안내자 번호</div>
-											</th>
-											<td>
-												<div class="cell">
-													<input type="text" class="form-input">
-												</div>
-											</td>
-											<th>
-												<div class="cell">팩스</div>
-											</th>
-											<td>
-												<div class="cell">
-													<input type="text" class="form-input">
-												</div>
-											</td>
-										</tr>
-										<!--{tr(th>div.cell^+td>div.cell)}-->
-									</tbody>
-								</table>
-							</div>
-						</div>
-						<!-- //.grid-wrap -->
-					</fieldset>
-					<!-- //.cont-common-1 cont-booker -->
-					
 					<div class="cont-common-1 cont-rsvList">
 						<h2 class="cont-tit">
-							<strong>그룹 목록</strong>
-							<button type="button" class="btn-red">GROUP ADD</button>
-							<button type="button" class="btn-red">GROUP DEL</button>
-							<button type="button" class="btn-blue">GROUP C/OUT</button>
+							<strong>예약 목록</strong>
+							<button type="button" class="btn-red">CANCEL</button>
+							<button type="button" class="btn-blue">CONFIRM</button>
 	
 							<select name="" id="" class="form-select type">
 								<option value="">전체</option>
@@ -872,17 +935,17 @@
 					</div>
 					<!-- //.cont-common-1 cont-rsvList -->
 					<div class="row-btn">
-						<button type="button" class="btn-blue">SAVE</button>
-						<button type="button" class="btn-green">POST</button>
-						<button type="button" class="btn-green">POST</button>
-						<button type="button" class="btn-green">FOLIO</button>
-						<button type="button" class="btn-green">SMS</button>
+						<button type="button" class="btn-gray" disabled>REGISTER</button>
+						<button type="button" class="btn-gray" disabled>UPDATE</button>
+						<button type="button" class="btn-green">NEW</button>
 						<button type="button" class="btn-gray">CLOSE</button>
 						<span class="wd-space"></span>
-						<button type="button" class="btn-gray" disabled>VOID</button>
-						<button type="button" class="btn-red">MOVE</button>
-						<button type="button" class="btn-red">EXTENSION</button>
-						<button type="button" class="btn-red">CHECK OUT</button>
+						<button type="button" class="btn-gray" disabled>Door-Key</button>
+						<button type="button" class="btn-gray" disabled>PRINT</button>
+						<button type="button" class="btn-gray" disabled>DOWN</button>
+						<button type="button" class="btn-gray" disabled>MAIL</button>
+						<button type="button" class="btn-gray" disabled>FAX</button>
+						<button type="button" class="btn-gray" disabled>SMS</button>
 					</div>
 				</div>
 				<!--//.split-2-->
@@ -890,7 +953,7 @@
 			</div>
 			<!-- //.cont-container -->
 		</div>
-		<!-- /.resFit-contents -->
+		<!-- / .resFit-contents -->
     </div>
 </div>
-<!-- /.inhouse-container -->
+<!-- / .rsvFit-container -->
