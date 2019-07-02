@@ -143,7 +143,9 @@ $sidebar-wd: 96px;
 }
 .sat {color: $fg-sat !important;}
 .sun {color: $fg-sun !important;}
-
+.cursor {
+	cursor: pointer !important;
+}
 .icon {
 	@include i-sprite-1(url("../img/common/sprite.png") no-repeat);
 	&.ic-check {
