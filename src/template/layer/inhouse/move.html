@@ -1,16 +1,18 @@
-<!-- extension 팝업-->
-<div class="pop-container extension-container">
+<!-- move 팝업-->
+<div class="pop-container move-container">
         <div class="bg-back"></div>
     
         <div class="pop-wrapper">
             <div class="pop-header">
-                <h2>객실 확장</h2>
+                <h2>객실 이동</h2>
                 <span class="a-i-x i-x fn-cls"></span>
             </div>
             <div class="cf pop-contents">
                 <div class="popcont-container">
                     <h2 class="cont-tit">
                         <strong>Room Num: 415</strong>
+                        <label><img src="../../public/img/icon/vd.png" alt="객실 vd상태"> <input type="radio" name="rc"></label>
+                        <label><img src="../../public/img/icon/vc.png" alt="객실 vc상태"> <input type="radio" name="rc"></label>
                     </h2>
                     <div class="cont-property">
                         <div class="grid-wrap">
@@ -20,17 +22,9 @@
                                         <tr>
                                             <td>
                                                 <div class="cell">
-                                                    <input type="text" class="form-input date-s" value="2019-06-06" readonly>
-                                                    <span>~</span>
-                                                    <span class="cal-box">
-                                                        <input type="text" class="appe-reset inp-cal date-ui" value="">
-                                                        <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
-                                                    </span>
-                                                    <button type="button" class="btn-orange">SET</button>
-
-                                                    <span class="tit">Room</span>
-                                                    <input type="text" class="form-input name">
-                                                    <button type="button" class="btn-blue">APPLY</button>
+                                                    <span class="tit">Change Room</span>
+                                                    <input type="text" class="form-input name" value="415" readonly>
+                                                    <button type="button" class="btn-orange">ASSIGN</button>
                                                     <button type="button" class="btn-gray">RELOAD</button>
                                                 </div>
                                             </td>
@@ -88,4 +82,4 @@
             </div>
         </div>
     </div>
-    <!-- //.extension-container -->
+    <!-- //.move-container -->

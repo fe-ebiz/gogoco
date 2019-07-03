@@ -4923,14 +4923,53 @@
 					.split.cont-data {
 						width: calc(100% - #{$code-wd});
 						padding-left: 10px;
+						.data-status {
+							display: table;
+							width: 100%;
+							> div {
+								display: table-cell;
+							}
+							.data-category {
+								width: 40%;
+								.item {
+									display: inline-block;
+									padding: 5px;
+									border: 1px dashed #cecece;
+									border-radius: 4px;
+									font-size: 13px;
+									font-weight: 700;
+									.mark {
+										display: inline-block;
+										margin-right: 5px;
+										padding: 0 5px;
+										line-height: 28px;
+										border: 1px solid #ccc;
+										border-radius: 4px;
+										color: #fff;
+										&.charge {background: #589ED8;}
+										&.credit {background: #78AC57;}
+										&.balance {background: #AB3C3B;}
+									}
+								}
+							}
+							.data-date {
+								// width: 50%;
+								font-size: 13px;
+								font-weight: 700;
+							}
+							.data-btnbox {
+								text-align: right;
+							}
+						}
 						.grid-wrap.scr-wrap {
 							@include grid-scr-brown(null, 100%, 0);
+							margin-top: 10px;
 							.grid-area.grid-head {
 								th { }
 							}
 							.grid-area.grid-contents {
 								background: #fff;
-								height: 570px;
+								height: 547px;
 								.grid-tbl {
 									td {
 										text-align: center;
@@ -4943,7 +4982,7 @@
 									}
 									tr:last-child {
 										td {
-											border-bottom: 1px solid $bdg-tblBase;
+											border-bottom: 1px solid $bor-gray-table;
 										}
 									}
 								}
@@ -4959,6 +4998,223 @@
 							@include grid-bottom-page;
 							border-radius: 0;
 						}
+					}
+				}
+			}
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+// inhouse - move클릭  팝업
+.pop-container.move-container {
+	.pop-wrapper {
+		width: 700px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+			@include pop-contents-base;
+			padding-top: 40px;
+			.popcont-container	{
+				@include bx;
+				padding: 20px;
+				background: #f0f0f0;
+				.cont-tit {
+					@include position(absolute, -20px, 15px);
+					color: $fg-legend;
+					font-size: 13px;
+					padding: 5px 10px;
+					background: #f0f0f0;
+					border-radius: 5px;
+					// @include text-hide;
+					strong, label {
+						font-weight: 700;
+					}
+					label {
+						margin-left: 5px;
+						> * {
+							@include va;
+						}
+						img {
+							top: -1px;
+							margin-right: 3px;
+						}
+					}
+				}
+				.cont-property {
+					.property-tbl {
+						@include tbl-style-2;
+						td {
+							background: $bg-tblBase-th;
+							border-left: none;
+							.cell {
+								.form-input {
+									&.name {
+										width: 70px;
+									}
+									&[readonly] {
+										color: #fff;
+										background: #ccc !important;
+									}
+								}
+							}
+						}
+					}
+				}
+				.cont-list {
+					margin-top: 10px;
+					.grid-wrap {
+						@include grid-scr-x(100%, null);
+						$ie8-wth: 958px;
+						.grid-area.grid-contents {
+							height: 400px;
+						}
+						.grid-tbl {
+							.ie8 & {
+								width: $ie8-wth;
+							}
+							td {
+								text-align: center;
+								&.co-red {
+									font-weight: 700;
+								}
+							}
+						}
+					}
+					.grid-bottom {
+						@include grid-bottom-page;
+					}
+				}
+			}
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+// inhouse - move - assign 클릭 팝업
+.pop-container.moveAssign-container {
+	.pop-wrapper {
+		width: 350px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+			@include pop-contents-base;
+			.popcont-container	{
+				@include bx;
+				.cont-type {
+					.form-select {
+						&.rmtype {
+							min-width: 100px;
+							width: auto;
+						}
+					}
+				}
+				.cont-list {
+					margin-top: 10px;
+					.grid-wrap {
+						@include grid-scr-x(100%, null);
+						$ie8-wth: 958px;
+						.grid-area.grid-contents {
+							height: 400px;
+						}
+						.grid-tbl {
+							.ie8 & {
+								width: $ie8-wth;
+							}
+							td {
+								text-align: center;
+								&.co-red {
+									font-weight: 700;
+								}
+							}
+						}
+					}
+					.grid-bottom {
+						@include grid-bottom-page;
+					}
+				}
+			}
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+// inhouse - extension클릭  팝업
+.pop-container.extension-container {
+	.pop-wrapper {
+		width: 700px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+			@include pop-contents-base;
+			padding-top: 40px;
+			.popcont-container	{
+				@include bx;
+				padding: 20px;
+				background: #f0f0f0;
+				.cont-tit {
+					@include position(absolute, -20px, 15px);
+					color: $fg-legend;
+					font-size: 13px;
+					padding: 5px 10px;
+					background: #f0f0f0;
+					border-radius: 5px;
+					// @include text-hide;
+					
+				}
+				.cont-property {
+					.property-tbl {
+						@include tbl-style-2;
+						td {
+							background: $bg-tblBase-th;
+							border-left: none;
+							.cell {
+								.form-input {
+									&.date-s {
+										width: 100px;
+									}
+									&.name {
+										width: 70px;
+									}
+								}
+								.tit {
+									margin-left: 10px;
+								}
+								.cal-box {
+									width: 120px;
+								}
+							}
+						}
+					}
+				}
+				.cont-list {
+					margin-top: 10px;
+					.grid-wrap {
+						@include grid-scr-x(100%, null);
+						$ie8-wth: 958px;
+						.grid-area.grid-contents {
+							height: 400px;
+						}
+						.grid-tbl {
+							.ie8 & {
+								width: $ie8-wth;
+							}
+							td {
+								text-align: center;
+								&.co-red {
+									font-weight: 700;
+								}
+							}
+						}
+					}
+					.grid-bottom {
+						@include grid-bottom-page;
 					}
 				}
 			}

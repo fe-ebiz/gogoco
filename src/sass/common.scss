@@ -24,6 +24,9 @@ body {
 img {
 	max-width: 100%;
 }
+input {
+	font-family: $font-stack;
+}
 input[type=password] {
 	font-family: sans-serif;
 }
