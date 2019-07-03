@@ -4985,6 +4985,22 @@
 											border-bottom: 1px solid $bor-gray-table;
 										}
 									}
+									@mixin tr-cmm {
+										color: #222;
+										font-weight: 700;
+									}
+									tr.bill {
+										td {
+											@include tr-cmm;
+											background: #FCF7E2;
+										}
+									}
+									tr.balance {
+										td {
+											@include tr-cmm;
+											background: #CECECE;
+										}
+									}
 								}
 							}
 							.grid-area.grid-total {
