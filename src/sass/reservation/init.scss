@@ -1207,9 +1207,13 @@
 				}
 			}
 		}
+		.search-list {
+			margin-top: 10px;
+			text-align: center;
+		}
 	}
 	.cont-list {
-		margin-top: 10px;
+		margin-top: 20px;
 		.grid-wrap {
 			@include grid-scr-x(4989px, 100%);
 			$ie8-wth: 4989px;
