@@ -199,7 +199,35 @@
                         }
                         .texta-etc {
                             @include texta-base(100%, 35px);
-                        }
+						}
+						.seq {
+							@include dp;
+							width: 80px;
+							> input {
+								width: 100%;
+								background: none;
+								&[readonly] {
+									background: #fff !important;
+								}
+							}
+							.count {
+								@include position(absolute, 0);
+								z-index: 1;
+								display: inline-block;
+								@include size(20px, 100%);
+								line-height: 25px;
+								text-align: center;
+								cursor: pointer;
+								&.plus {
+									left: 0;
+									border-right: 1px solid #c7c7c7;
+								}
+								&.minus {
+									right: 0;
+									border-left: 1px solid #c7c7c7;
+								}
+							}
+						}
                     }
                 }
 			}

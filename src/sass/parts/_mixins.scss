@@ -59,6 +59,18 @@
 		zoom: 1;
 	}
 }
+@mixin cf {
+	&::after {
+		content: '';
+		display: table;
+	}
+	&::after {
+		clear: both;
+	}
+	.ie8 & {
+		zoom: 1;
+	}
+}
 
 // 커스텀 믹스인
 // 노출 리셋

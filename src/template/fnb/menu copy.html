@@ -172,82 +172,119 @@
             <div class="cont-area area-2">
                 <h3>메뉴정보</h3>
                 <div class="grid-wrap">
-					<div class="grid-contents">
-						<form id="aform">
-							<input type="hidden" name="mode" value="add">
-							<input type="hidden" name="type">
-							<input type="hidden" name="num">
-							<table class="grid-tbl">
-								<colgroup>
-									<col style="width: 90px">
-									<col style="width: 250px">
-									<col style="width: 90px">
-									<col style="width: 250px">
-									<col style="width: 90px">
-									<col style="width: 250px">
-									<col style="width: 90px">
-									<col>
-								</colgroup>
-								<tbody class="rowgroup">
-									<tr>
-										<th><div class="cell">업장</div></th>
-										<td>
-											<div class="cell">
-												<select name="snum" id="snum2" class="form-select w-1">
-													<option value="1">객실</option>
-													<option value="2">라바짜</option>
-													<option value="3">한식당</option>
-													<option value="4">바베큐</option>
-													<option value="5">룸서비스</option>
-													<option value="6">노래방</option>
-													<option value="7">오락시설</option>
-													<option value="8">연회장</option>
-													<option value="9">낚시</option>
-													<option value="10">기타</option>
-												</select>
-											</div>
-										</td>
-										<th><div class="cell necess">메뉴명</div></th>
-										<td><div class="cell"><input type="text" name="title" class="form-input"></div></td>
-										<th><div class="cell">가격</div></th>
-										<td colspan="3"><div class="cell"><input type="text" name="rate" class="form-input w-1"></div></td>
-									</tr>
-									<tr>
-										<th><div class="cell">노출순서</div></th>
-										<td>
-											<div class="cell">
-												<div class="seq">
-													<span role="button" class="count plus">+</span>
-													<input type="text" name="sort" class="form-input ta-center" value="1">
-													<span role="button" class="count minus">-</span>
-												</div>
-											</div>
-										</td>
-										<th><div class="cell">판매채널</div></th>
-										<td>
-											<div class="cell">
-												<span class="rdo-box"><label><input type="radio" name="site" value="1" checked="">사이트 + 현장</label></span> &nbsp;
-												<span class="rdo-box"><label><input type="radio" name="site" value="2" class="ta-center">사이트</label></span> &nbsp;
-												<span class="rdo-box"><label><input type="radio" name="site" value="3">현장</label></span>
-											</div>
-										</td>
-										<th><div class="cell">판매여부</div></th>
-										<td colspan="3">
-											<div class="cell">
-												<span class="rdo-box"><label><input type="radio" name="state" value="1" checked="">Yes</label></span> &nbsp;
-												<span class="rdo-box"><label><input type="radio" name="state" value="99">No</label></span>
-											</div>
-										</td>
-									</tr>				
-									<tr>
-										<th><div class="cell">비고</div></th>
-										<td colspan="7"><div class="cell"><textarea name="info" class="texta-etc"></textarea></div></td>
-									</tr>
-								</tbody>
-							</table>
-						</form>
-					</div>
-				</div>
+                    <div class="grid-contents">
+                        <table class="grid-tbl">
+                            <colgroup>
+                                <col style="width: 90px">
+                                <col style="width: 200px">
+                                <col style="width: 90px">
+                                <col style="width: 200px">
+                                <col style="width: 90px">
+                                <col style="width: 200px">
+                                <col style="width: 90px">
+                                <col style="width: *">
+                            </colgroup>
+                            <tbody class="rowgroup">
+                                <tr>
+                                    <th><div class="cell">업장</div></th>
+                                    <td>
+                                        <div class="cell">
+											<select name="" id="" class="form-select w-1" disabled>
+												<option value="">컨퍼런스1-대연회장</option>
+												<option value="">컨퍼런스2-대연회장</option>
+												<option value="">2층-레스토랑</option>
+											</select>
+										</div>
+                                    </td>
+                                    <th><div class="cell necess">메뉴명</div></th>
+                                    <td>
+                                        <div class="cell"><input type="text" class="form-input w-1"></div>
+                                    </td>
+                                    <th><div class="cell">메뉴코드</div></th>
+                                    <td colspan="3">
+										<div class="cell"><input type="text" class="form-input w-1"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+									<th><div class="cell">가격</div></th>
+									<td>
+										<div class="cell"><input type="text" class="form-input w-1"></div>
+									</td>
+                                    <th><div class="cell">좌석수</div></th>
+                                    <td>
+                                        <div class="cell"><input type="number" class="form-input w-2" value="1"></div>
+                                    </td>
+                                    <th><div class="cell">사용유무</div></th>
+                                    <td colspan="3">
+                                        <div class="cell">
+                                            <span class="rdo-box"><label><input type="radio" name="">Yes</label></span>
+                                            <span class="rdo-box"><label><input type="radio" name="">No</label></span>
+                                        </div>
+                                    </td>
+                                </tr>
+								<tr>
+									<th><div class="cell">예약메뉴유무</div></th>
+									<td>
+										<div class="cell">
+                                            <span class="rdo-box"><label><input type="radio" name="">Yes</label></span>
+                                            <span class="rdo-box"><label><input type="radio" name="">No</label></span>
+                                        </div>
+									</td>
+									<th><div class="cell">재고관리유무</div></th>
+									<td>
+										<div class="cell">
+											<select name="" id="" class="form-select w-1">
+												<option value="">NO</option>
+												<option value="">YES</option>
+											</select>
+										</div>
+									</td>
+									<th><div class="cell">룸서비스유무</div></th>
+									<td colspan="3">
+										<div class="cell">
+											<select name="" id="" class="form-select w-1">
+												<option value="">NO</option>
+												<option value="">YES</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+                                <tr>
+                                    <th><div class="cell">스캔코드</div></th>
+                                    <td colspan="3">
+                                        <div class="cell"><input type="text" class="form-input w-3"></div>
+                                    </td>
+                                    <th><div class="cell">원가</div></th>
+                                    <td colspan="3">
+                                        <div class="cell"><input type="text" class="form-input w-1"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">비고</div></th>
+                                    <td colspan="3">
+                                        <div class="cell">
+                                            <textarea name="" id="" cols="30" rows="10" class="texta-etc"></textarea>
+                                        </div>
+                                    </td>
+                                    <th><div class="cell">거래처코드</div></th>
+                                    <td>
+										<div class="cell"><input type="text" class="form-input w-1"></div>
+                                    </td>
+                                    <th><div class="cell">Posting Code</div></th>
+                                    <td>
+                                        <div class="cell">
+											<select name="" id="" class="form-select w-1">
+												<option value="">컨퍼런스1-대연회장</option>
+												<option value="">컨퍼런스2-대연회장</option>
+												<option value="">2층-레스토랑</option>
+											</select>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
                 <!-- /.grid-wrap -->
 
                 <div class="row-btn">

@@ -146,6 +146,25 @@
 								top: 2px;
 							}
 						}
+						.price-receipt {
+							// padding-top: 5px;
+							width: 80%;
+							padding-top: 2px;
+							padding-bottom: 5px;
+							margin-bottom: 5px;
+							border-bottom: 1px solid #c7c7c7;
+							dl {
+								@include cf;
+								dt {
+									float: left;
+								}
+								dd {
+									float: right;
+								}
+							}
+						}
+						.price-total {
+						}
 					}
 					.row {
 						padding: 1px 0;
