@@ -2236,6 +2236,246 @@
 /*
  * 프론트
  */
+/* 공통 */
+ .pop-contents {
+	.cont-secondBook {
+		// width: 625px;
+		.cont-tit {
+			color: #000;
+			label {
+				span + input {
+					top: 1px;
+				}
+			}
+			strong {
+				margin-right: 0;
+			}
+		}
+		.grid-container {
+			background: none;
+			.grid-wrap {
+				@include float;
+				+ .grid-wrap {
+					margin-left: 15px;
+				}
+				.grid-contents {
+				}
+			}
+		}
+		.grid-tbl {
+			@include tbl-base;
+		}
+		.name-tbl {
+			width: 306px;
+			th, td {
+
+			}
+			th {
+				.cell {
+				}
+			}
+			td {
+				// min-width: 206px;
+				.cell {
+					$account-wth: 49%;
+					.form-input {
+						&.nights {
+							width: 30px;
+						}
+						&.pnum {
+							// width: 51px;
+							width: 26%;
+						}
+						&.account {
+							width: $account-wth;
+						}
+						&.package {
+							width: 55%;
+						}
+						&.rate {
+							width: 90%;
+							float: left;
+						}
+					}
+					.form-select {
+						&.rmType {
+							// width: 105px;
+							width: 54%;
+						}
+						&.account {
+							width: $account-wth;
+						}
+					}
+					.cal-box {
+						// width: 105px;
+						width: 54%;
+						+ .rdo-box {
+							margin-left: 10px;
+						}
+					}
+					.add-rtxt {
+						// margin-left: 2px;
+					}
+					.txt-won {
+						@include position(relative, 3px);
+					}
+					.price-receipt {
+						width: 80%;
+						padding-top: 2px;
+						padding-bottom: 5px;
+						margin-bottom: 5px;
+						border-bottom: 1px solid #c7c7c7;
+					}
+					.price-receipt,
+					.price-total {
+						dl {
+							@include cf;
+							margin-top: 3px;
+							@include fst-mt0;
+							> * {
+								position: relative;
+							}
+							dt {
+								float: left;
+								top: 2px;
+							}
+							dd {
+								float: right;
+								width: 65%;
+								input {
+									width: 85%;
+								}
+							}
+						}
+					}
+					.row-split {
+						position: relative;
+						float: left;
+						&.w-1 {
+							width: 80%;
+						}
+						&.w-2 {
+							width: 20%;
+							top: 2px;
+						}
+					}
+				}
+				.row {
+					padding: 1px 0;
+				}
+			}
+			.ht-row-2 {
+				th, td {
+					height: 67px;
+				}
+			}
+		}
+		.assign-tbl {
+			width: 270px;
+			th, td {
+
+			}
+			th {
+				.cell {
+
+				}
+			}
+			td {
+				// min-width: 206px;
+				.cell {
+					$account-wth: 49%;
+					.form-input {
+						&.assign {
+							width: 30%;
+						}
+						&.time {
+							// width: 51px;
+							width: 35%;
+							text-align: center;
+						}
+						&.deposit {
+							width: 65%;
+						}
+						&.exp {
+							width: 23%;
+							text-align: center;
+						}
+						&.sperson {
+							width: 95%;
+						}
+						&.req {
+							width: 67%;
+						}
+						&.accompany {
+							width: 75%;
+						}
+						&.card {
+							width: 23%;
+							text-align: center;
+						}
+						&.rate {
+							width: 85%;
+							float: left;
+						}
+					}
+					.form-select {
+						&.rmType {
+							// width: 105px;
+							width: 54%;
+						}
+						&.account {
+							width: $account-wth;
+						}
+					}
+					.cal-box {
+						// width: 105px;
+						width: 54%;
+						+ .rdo-box {
+							margin-left: 10px;
+						}
+					}
+					.add-rtxt {
+						// margin-left: 2px;
+					}
+					.txt-won {
+						@include position(relative, 3px);
+					}
+					.mg- {
+						margin: 0 5px;
+					}
+					.w-01 {
+						width: 73%;
+					}
+					.row {
+						.col {
+							@include va;
+							&.w-02 {
+								@include position(relative, 1px);
+							}
+						}
+					}
+				}
+			}
+			.ht-row-2 {
+				th, td {
+					height: 67px;
+				}
+			}
+		}
+		.row-btn {
+			&.mt-10 {
+				margin-top: 10px;
+			}
+			button {
+				&.pay {
+					$pd: 28px;
+					padding-left: $pd;
+					padding-right: $pd;
+				}
+			}
+		}
+	}
+ }
 /* 예약 조건 */
 .pop-container.rsvFit-container {
 	.pop-wrapper {
@@ -2273,215 +2513,6 @@
 						}
 						.wd-space {
 							margin-right: 80px;
-						}
-					}
-				}
-				.cont-secondBook {
-					// width: 625px;
-					.cont-tit {
-						color: #000;
-						label {
-							span + input {
-								top: 1px;
-							}
-						}
-						strong {
-							margin-right: 0;
-						}
-					}
-					.grid-container {
-						background: none;
-						.grid-wrap {
-							@include float;
-							+ .grid-wrap {
-								margin-left: 15px;
-							}
-							.grid-contents {
-							}
-						}
-					}
-					.grid-tbl {
-						@include tbl-base;
-					}
-					.name-tbl {
-						width: 306px;
-						th, td {
-		
-						}
-						th {
-							.cell {
-							}
-						}
-						td {
-							// min-width: 206px;
-							.cell {
-								$account-wth: 49%;
-								.form-input {
-									&.nights {
-										width: 30px;
-									}
-									&.pnum {
-										// width: 51px;
-										width: 26%;
-									}
-									&.account {
-										width: $account-wth;
-									}
-									&.package {
-										width: 55%;
-									}
-									&.rate {
-										width: 90%;
-										float: left;
-									}
-								}
-								.form-select {
-									&.rmType {
-										// width: 105px;
-										width: 54%;
-									}
-									&.account {
-										width: $account-wth;
-									}
-								}
-								.cal-box {
-									// width: 105px;
-									width: 54%;
-									+ .rdo-box {
-										margin-left: 10px;
-									}
-								}
-								.add-rtxt {
-									// margin-left: 2px;
-								}
-								.txt-won {
-									@include position(relative, 3px);
-								}
-		
-								.row-split {
-									position: relative;
-									float: left;
-									&.w-1 {
-										width: 80%;
-									}
-									&.w-2 {
-										width: 20%;
-										top: 2px;
-									}
-								}
-							}
-							.row {
-								padding: 1px 0;
-							}
-						}
-						.ht-row-2 {
-							th, td {
-								height: 67px;
-							}
-						}
-					}
-					.assign-tbl {
-						width: 270px;
-						th, td {
-		
-						}
-						th {
-							.cell {
-		
-							}
-						}
-						td {
-							// min-width: 206px;
-							.cell {
-								$account-wth: 49%;
-								.form-input {
-									&.assign {
-										width: 30%;
-									}
-									&.time {
-										// width: 51px;
-										width: 35%;
-										text-align: center;
-									}
-									&.deposit {
-										width: 65%;
-									}
-									&.exp {
-										width: 23%;
-										text-align: center;
-									}
-									&.sperson {
-										width: 95%;
-									}
-									&.req {
-										width: 67%;
-									}
-									&.accompany {
-										width: 75%;
-									}
-									&.card {
-										width: 23%;
-										text-align: center;
-									}
-									&.rate {
-										width: 85%;
-										float: left;
-									}
-								}
-								.form-select {
-									&.rmType {
-										// width: 105px;
-										width: 54%;
-									}
-									&.account {
-										width: $account-wth;
-									}
-								}
-								.cal-box {
-									// width: 105px;
-									width: 54%;
-									+ .rdo-box {
-										margin-left: 10px;
-									}
-								}
-								.add-rtxt {
-									// margin-left: 2px;
-								}
-								.txt-won {
-									@include position(relative, 3px);
-								}
-								.mg- {
-									margin: 0 5px;
-								}
-								.w-01 {
-									width: 73%;
-								}
-								.row {
-									.col {
-										@include va;
-										&.w-02 {
-											@include position(relative, 1px);
-										}
-									}
-								}
-							}
-						}
-						.ht-row-2 {
-							th, td {
-								height: 67px;
-							}
-						}
-					}
-					.row-btn {
-						&.mt-10 {
-							margin-top: 10px;
-						}
-						button {
-							&.pay {
-								$pd: 28px;
-								padding-left: $pd;
-								padding-right: $pd;
-							}
 						}
 					}
 				}
@@ -2737,215 +2768,6 @@
 						}
 					}
 				}
-				.cont-secondBook {
-					// width: 625px;
-					.cont-tit {
-						color: #000;
-						label {
-							span + input {
-								top: 1px;
-							}
-						}
-						strong {
-							margin-right: 0;
-						}
-					}
-					.grid-container {
-						background: none;
-						.grid-wrap {
-							@include float;
-							+ .grid-wrap {
-								margin-left: 15px;
-							}
-							.grid-contents {
-							}
-						}
-					}
-					.grid-tbl {
-						@include tbl-base;
-					}
-					.name-tbl {
-						width: 306px;
-						th, td {
-		
-						}
-						th {
-							.cell {
-							}
-						}
-						td {
-							// min-width: 206px;
-							.cell {
-								$account-wth: 49%;
-								.form-input {
-									&.nights {
-										width: 30px;
-									}
-									&.pnum {
-										// width: 51px;
-										width: 26%;
-									}
-									&.account {
-										width: $account-wth;
-									}
-									&.package {
-										width: 55%;
-									}
-									&.rate {
-										width: 90%;
-										float: left;
-									}
-								}
-								.form-select {
-									&.rmType {
-										// width: 105px;
-										width: 54%;
-									}
-									&.account {
-										width: $account-wth;
-									}
-								}
-								.cal-box {
-									// width: 105px;
-									width: 54%;
-									+ .rdo-box {
-										margin-left: 10px;
-									}
-								}
-								.add-rtxt {
-									// margin-left: 2px;
-								}
-								.txt-won {
-									@include position(relative, 3px);
-								}
-		
-								.row-split {
-									position: relative;
-									float: left;
-									&.w-1 {
-										width: 80%;
-									}
-									&.w-2 {
-										width: 20%;
-										top: 2px;
-									}
-								}
-							}
-							.row {
-								padding: 1px 0;
-							}
-						}
-						.ht-row-2 {
-							th, td {
-								height: 67px;
-							}
-						}
-					}
-					.assign-tbl {
-						width: 270px;
-						th, td {
-		
-						}
-						th {
-							.cell {
-		
-							}
-						}
-						td {
-							// min-width: 206px;
-							.cell {
-								$account-wth: 49%;
-								.form-input {
-									&.assign {
-										width: 30%;
-									}
-									&.time {
-										// width: 51px;
-										width: 35%;
-										text-align: center;
-									}
-									&.deposit {
-										width: 65%;
-									}
-									&.exp {
-										width: 23%;
-										text-align: center;
-									}
-									&.sperson {
-										width: 95%;
-									}
-									&.req {
-										width: 67%;
-									}
-									&.accompany {
-										width: 75%;
-									}
-									&.card {
-										width: 23%;
-										text-align: center;
-									}
-									&.rate {
-										width: 85%;
-										float: left;
-									}
-								}
-								.form-select {
-									&.rmType {
-										// width: 105px;
-										width: 54%;
-									}
-									&.account {
-										width: $account-wth;
-									}
-								}
-								.cal-box {
-									// width: 105px;
-									width: 54%;
-									+ .rdo-box {
-										margin-left: 10px;
-									}
-								}
-								.add-rtxt {
-									// margin-left: 2px;
-								}
-								.txt-won {
-									@include position(relative, 3px);
-								}
-								.mg- {
-									margin: 0 5px;
-								}
-								.w-01 {
-									width: 73%;
-								}
-								.row {
-									.col {
-										@include va;
-										&.w-02 {
-											@include position(relative, 1px);
-										}
-									}
-								}
-							}
-						}
-						.ht-row-2 {
-							th, td {
-								height: 67px;
-							}
-						}
-					}
-					.row-btn {
-						&.mt-10 {
-							margin-top: 10px;
-						}
-						button {
-							&.pay {
-								$pd: 28px;
-								padding-left: $pd;
-								padding-right: $pd;
-							}
-						}
-					}
-				}
 				.cont-booker {
 					// 테이블 내 form 요소 및 기타 관리
 					.booker-tbl {
@@ -3107,217 +2929,6 @@
 						}
 						.wd-space {
 							margin-right: 80px;
-						}
-					}
-				}
-				.cont-secondBook {
-					// width: 625px;
-					.cont-tit {
-						color: #000;
-						label {
-							span + input {
-								top: 1px;
-							}
-						}
-						strong {
-							margin-right: 0;
-						}
-					}
-					.grid-container {
-						background: none;
-						.grid-wrap {
-							@include float;
-							+ .grid-wrap {
-								margin-left: 15px;
-							}
-							.grid-contents {
-							}
-						}
-					}
-					.grid-tbl {
-						@include tbl-base;
-						.cell {
-						}
-					}
-					.name-tbl {
-						width: 306px;
-						th, td {
-		
-						}
-						th {
-							.cell {
-							}
-						}
-						td {
-							// min-width: 206px;
-							.cell {
-								$account-wth: 49%;
-								.form-input {
-									&.nights {
-										width: 30px;
-									}
-									&.pnum {
-										// width: 51px;
-										width: 26%;
-									}
-									&.account {
-										width: $account-wth;
-									}
-									&.package {
-										width: 55%;
-									}
-									&.rate {
-										width: 90%;
-										float: left;
-									}
-								}
-								.form-select {
-									&.rmType {
-										// width: 105px;
-										width: 54%;
-									}
-									&.account {
-										width: $account-wth;
-									}
-								}
-								.cal-box {
-									// width: 105px;
-									width: 54%;
-									+ .rdo-box {
-										margin-left: 10px;
-									}
-								}
-								.add-rtxt {
-									// margin-left: 2px;
-								}
-								.txt-won {
-									@include position(relative, 3px);
-								}
-		
-								.row-split {
-									position: relative;
-									float: left;
-									&.w-1 {
-										width: 80%;
-									}
-									&.w-2 {
-										width: 20%;
-										top: 2px;
-									}
-								}
-							}
-							.row {
-								padding: 1px 0;
-							}
-						}
-						.ht-row-2 {
-							th, td {
-								height: 67px;
-							}
-						}
-					}
-					.assign-tbl {
-						width: 270px;
-						th, td {
-		
-						}
-						th {
-							.cell {
-		
-							}
-						}
-						td {
-							// min-width: 206px;
-							.cell {
-								$account-wth: 49%;
-								.form-input {
-									&.assign {
-										width: 30%;
-									}
-									&.time {
-										// width: 51px;
-										width: 35%;
-										text-align: center;
-									}
-									&.deposit {
-										width: 65%;
-									}
-									&.exp {
-										width: 23%;
-										text-align: center;
-									}
-									&.sperson {
-										width: 95%;
-									}
-									&.req {
-										width: 67%;
-									}
-									&.accompany {
-										width: 75%;
-									}
-									&.card {
-										width: 23%;
-										text-align: center;
-									}
-									&.rate {
-										width: 85%;
-										float: left;
-									}
-								}
-								.form-select {
-									&.rmType {
-										// width: 105px;
-										width: 54%;
-									}
-									&.account {
-										width: $account-wth;
-									}
-								}
-								.cal-box {
-									// width: 105px;
-									width: 54%;
-									+ .rdo-box {
-										margin-left: 10px;
-									}
-								}
-								.add-rtxt {
-									// margin-left: 2px;
-								}
-								.txt-won {
-									@include position(relative, 3px);
-								}
-								.mg- {
-									margin: 0 5px;
-								}
-								.w-01 {
-									width: 73%;
-								}
-								.row {
-									.col {
-										@include va;
-										&.w-02 {
-											@include position(relative, 1px);
-										}
-									}
-								}
-							}
-						}
-						.ht-row-2 {
-							th, td {
-								height: 67px;
-							}
-						}
-					}
-					.row-btn {
-						&.mt-10 {
-							margin-top: 10px;
-						}
-						button {
-							&.pay {
-								$pd: 28px;
-								padding-left: $pd;
-								padding-right: $pd;
-							}
 						}
 					}
 				}

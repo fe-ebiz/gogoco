@@ -26,7 +26,7 @@
 										</colgroup>
 										<tbody>
 											<tr>
-												<th><div class="cell">이름</div></th>
+												<th><div class="cell necess">이름</div></th>
 												<td>
 													<div class="cell">
 														<input type="text" class="form-input">
@@ -35,7 +35,7 @@
 											</tr>
 											<tr>
 												<th>
-													<div class="cell necess">도착 날짜</div>
+													<div class="cell necess">체크인</div>
 												</th>
 												<td>
 													<div class="cell">
@@ -52,7 +52,7 @@
 											</tr>
 											<tr>
 												<th>
-													<div class="cell necess">출발 날짜</div>
+													<div class="cell necess">체크아웃</div>
 												</th>
 												<td>
 													<div class="cell">
@@ -83,35 +83,13 @@
 											</tr>
 											<tr>
 												<th>
-													<div class="cell necess">어른/아이</div>
+													<div class="cell necess">투숙인원</div>
 												</th>
 												<td>
 													<div class="cell">
-														<input type="text" class="form-input pnum">
-														<input type="text" class="form-input pnum">
+														<input type="text" class="form-input pnum"> 명
 													</div>
 												</td>
-											</tr>
-											<tr>
-												<th><div class="cell necess">판매처</div></th>
-												<td>
-													<div class="cell">
-														<select name="options" id="options" class="form-select account" onchange="rsv.category(this.value)">
-														<option value="워크인">워크인</option>
-														<option value="회원">회원</option>
-														<option value="컴프">컴프</option>
-														<option value="중고나라">중고나라</option>
-														<option value="대매사">대매사</option>
-														<option value="B2B">B2B</option>
-														</select>
-				
-														<span id="temp"></span>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<th><div class="cell">판매분류</div></th>
-												<td><div class="cell" id="agency"></div></td>
 											</tr>
 											<tr>
 												<th>
@@ -144,22 +122,16 @@
 													</div>
 												</td>
 											</tr>
-											<tr class="ht-row-2">
-												<th><div class="cell necess">요금</div></th>
-												<td class="ta-right">
+											<tr>
+												<th>
+													<div class="cell">패키지</div>
+												</th>
+												<td>
 													<div class="cell">
-														<div class="row-split w-1">
-															<div class="row">
-																<input type="text" class="form-input rate ta-right" numberonly value="1,111,000,000"> 
-																<span class="pull-right txt-won">원</span>
-															</div>
-															<div class="row">
-																<span id="convert" class="pull-right">십일일억일천익백만원</span>
-															</div>
-														</div>
-														<div class="row-split w-2">
-															<button type="button" class="btn-green pkg-set">SET</button>
-														</div>
+														<input type="text" class="form-input package" readonly>
+														<button type="button" class="btn-green" onclick="popFn.show('.pkg-container')">SET</button>
+														<button type="button" class="btn-gray" onclick="pkg.add()" style="width: 17px">+</button>
+														<button type="button" class="btn-gray">CLR</button>
 													</div>
 												</td>
 											</tr>
@@ -171,70 +143,44 @@
 													<div class="cell">
 														<input type="text" class="form-input package" readonly>
 														<button type="button" class="btn-green" onclick="popFn.show('.pkg-container')">SET</button>
-														<button type="button" class="btn-gray">CLEAR</button>
+														<button type="button" class="btn-gray" onclick="pkg.add()" style="width: 17px">+</button>
+														<button type="button" class="btn-gray del" onclick="pkg.del(this)" style="width: 17px">-</button>
 													</div>
 												</td>
 											</tr>
-											<!-- 
-											<tr>
-												<th>
-													<div class="cell necess">세금</div>
-												</th>
-												<td>
-													<div class="cell pd-0">
-														<input type="text" class="form-input rate" readonly value="0">
-														<button type="button" class="btn-green" onclick="popFn.show('.rate-container')">SET</button>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<th>
-													<div class="cell necess">출처</div>
-												</th>
-												<td>
+											<tr class="ht-row-2" id="tr-price">
+												<th><div class="cell necess">요금</div></th>
+												<td class="ta-right">
 													<div class="cell">
-														<p class="row">
-															<select name="" id="" class="form-select">
-																<option value="">1. Homepage</option>
-																<option value="">2. E-mail</option>
-																<option value="">3. Phone</option>
-																<option value="">4. Fax</option>
-																<option value="">5. Visit</option>
-																<option value="">6. CMS</option>
-																<option value="" selected>9. Others</option>
-															</select>
-														</p>
+														<div class="price-receipt">
+															<dl>
+																<dt>객실료</dt>
+																<dd><input type="text" class="form-input ta-right" id="r-rate1" value="0" readonly> 원</dd>
+															</dl>
+															<dl>
+																<dt>부대시설</dt>
+																<dd><input type="text" class="form-input ta-right w-2" id="r-rate2" value="0" readonly> 원</dd>
+															</dl>
+														</div>
+														<div class="price-total">
+															<div class="row-split w-1">
+																<div class="row">
+																	<dl>
+																		<dt>계</dt>
+																		<dd><input type="text" class="form-input ta-right" id="r-rate1" value="0" readonly> 원</dd>
+																	</dl>
+																</div>
+																<div class="row">
+																	<span id="convert" class="pull-right">십일일억일천익백만원</span>
+																</div>
+															</div>
+															<div class="row-split w-2">
+																<button type="button" class="btn-green pkg-set">SET</button>
+															</div>
+														</div>
 													</div>
 												</td>
 											</tr>
-											<tr>
-												<th>
-													<div class="cell necess">시장</div>
-												</th>
-												<td>
-													<div class="cell">
-														<p class="row">
-															<select name="" id="" class="form-select" disabled>
-																<option value="">DIRECT-FIT</option>
-															</select>
-														</p>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<th>
-													<div class="cell necess">분절</div>
-												</th>
-												<td>
-													<div class="cell">
-														<p class="row">
-															<select name="" id="" class="form-select" disabled>
-																<option value="">Walk IN</option>
-															</select>
-														</p>
-													</div>
-												</td>
-											</tr> -->
 										</tbody>
 									</table>
 								</div>
@@ -248,12 +194,10 @@
 										</colgroup>
 										<tbody>
 											<tr>
-												<th><div class="cell">객실 지정</div></th>
+												<th><div class="cell">객실수</div></th>
 												<td>
 													<div class="cell">
-														<input type="text" class="form-input assign" disabled>
-														<button type="button" class="btn-gray" disabled>ASSIGN</button>
-														<button type="button" class="btn-gray">CLEAR</button>
+														<input type="text" name="cnt" class="form-input none" value="1" numberonly>
 													</div>
 												</td>
 											</tr>

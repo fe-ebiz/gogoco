@@ -22,11 +22,11 @@
 									<table class="grid-tbl name-tbl">
 										<colgroup>
 											<col class="nth-1" style="width: 92px">
-											<col class="nth-2" style="">
+											<col class="nth-2">
 										</colgroup>
 										<tbody>
 											<tr>
-												<th><div class="cell">이름</div></th>
+												<th><div class="cell necess">이름</div></th>
 												<td>
 													<div class="cell">
 														<input type="text" class="form-input">
@@ -35,22 +35,12 @@
 											</tr>
 											<tr>
 												<th>
-													<div class="cell">성</div>
-												</th>
-												<td>
-													<div class="cell">
-														<input type="text" class="form-input">
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<th>
-													<div class="cell necess">도착 날짜</div>
+													<div class="cell necess">체크인</div>
 												</th>
 												<td>
 													<div class="cell">
 														<span class="cal-box">
-															<input type="text" class="appe-reset inp-cal date-ui">
+															<input type="text" class="appe-reset inp-cal " id="sdate">
 															<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
 														</span>
 														<span class="rdo-box">
@@ -62,12 +52,12 @@
 											</tr>
 											<tr>
 												<th>
-													<div class="cell necess">출발 날짜</div>
+													<div class="cell necess">체크아웃</div>
 												</th>
 												<td>
 													<div class="cell">
 														<span class="cal-box">
-															<input type="text" class="appe-reset inp-cal date-ui">
+															<input type="text" class="appe-reset inp-cal " id="edate">
 															<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
 														</span>
 														<span class="rdo-box"><label>
@@ -93,27 +83,42 @@
 											</tr>
 											<tr>
 												<th>
-													<div class="cell necess">어른/아이</div>
+													<div class="cell necess">투숙인원</div>
 												</th>
 												<td>
 													<div class="cell">
-														<input type="text" class="form-input pnum">
-														<input type="text" class="form-input pnum">
+														<input type="text" class="form-input pnum"> 명
 													</div>
 												</td>
 											</tr>
 											<tr>
 												<th>
-													<div class="cell necess">계정</div>
+													<div class="cell necess">거래처</div>
 												</th>
 												<td>
 													<div class="cell">
-														<input type="text" class="form-input account" value="individual">
-														<select name="" id="" class="form-select account">
-															<option value=""></option>
-															<option value="">17</option>
-															<option value="">16</option>
-														</select>
+														<div class="inp-drop-box account">
+															<input type="text" class="form-input" value="없음">
+															<ul class="drop-menu">
+																<li>(주) 오네가</li>
+																<li>(주) 동원홈푸드</li>
+																<li>(주) 아이에이치아이(IHI)</li>
+																<li>(주) 오네가</li>
+																<li>(주) 동원홈푸드</li>
+																<li>(주) 아이에이치아이(IHI)</li>
+																<li>(주) 오네가</li>
+																<li>(주) 동원홈푸드</li>
+																<li>(주) 아이에이치아이(IHI)</li>
+																<li>(주) 오네가</li>
+																<li>(주) 동원홈푸드</li>
+																<li>(주) 아이에이치아이(IHI)</li>
+																<li>(주) 오네가</li>
+																<li>(주) 동원홈푸드</li>
+																<li>(주) 아이에이치아이(IHI)</li>
+															</ul>
+	
+															<span class="icon ic-del"></span>
+														</div>
 													</div>
 												</td>
 											</tr>
@@ -125,70 +130,57 @@
 													<div class="cell">
 														<input type="text" class="form-input package" readonly>
 														<button type="button" class="btn-green" onclick="popFn.show('.pkg-container')">SET</button>
-														<button type="button" class="btn-gray">CLEAR</button>
+														<button type="button" class="btn-gray" onclick="pkg.add()" style="width: 17px">+</button>
+														<button type="button" class="btn-gray">CLR</button>
 													</div>
 												</td>
 											</tr>
 											<tr>
 												<th>
-													<div class="cell necess">세금</div>
-												</th>
-												<td>
-													<div class="cell pd-0">
-														<input type="text" class="form-input rate" readonly value="0">
-														<button type="button" class="btn-green" onclick="popFn.show('.rate-container')">SET</button>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<th>
-													<div class="cell necess">출처</div>
+													<div class="cell">패키지</div>
 												</th>
 												<td>
 													<div class="cell">
-														<p class="row">
-															<select name="" id="" class="form-select">
-																<option value="">1. Homepage</option>
-																<option value="">2. E-mail</option>
-																<option value="">3. Phone</option>
-																<option value="">4. Fax</option>
-																<option value="">5. Visit</option>
-																<option value="">6. CMS</option>
-																<option value="" selected>9. Others</option>
-															</select>
-														</p>
+														<input type="text" class="form-input package" readonly>
+														<button type="button" class="btn-green" onclick="popFn.show('.pkg-container')">SET</button>
+														<button type="button" class="btn-gray" onclick="pkg.add()" style="width: 17px">+</button>
+														<button type="button" class="btn-gray del" onclick="pkg.del(this)" style="width: 17px">-</button>
 													</div>
 												</td>
 											</tr>
-											<tr>
-												<th>
-													<div class="cell necess">시장</div>
-												</th>
-												<td>
+											<tr class="ht-row-2" id="tr-price">
+												<th><div class="cell necess">요금</div></th>
+												<td class="ta-right">
 													<div class="cell">
-														<p class="row">
-															<select name="" id="" class="form-select" disabled>
-																<option value="">DIRECT-FIT</option>
-															</select>
-														</p>
+														<div class="price-receipt">
+															<dl>
+																<dt>객실료</dt>
+																<dd><input type="text" class="form-input ta-right" id="r-rate1" value="0" readonly> 원</dd>
+															</dl>
+															<dl>
+																<dt>부대시설</dt>
+																<dd><input type="text" class="form-input ta-right w-2" id="r-rate2" value="0" readonly> 원</dd>
+															</dl>
+														</div>
+														<div class="price-total">
+															<div class="row-split w-1">
+																<div class="row">
+																	<dl>
+																		<dt>계</dt>
+																		<dd><input type="text" class="form-input ta-right" id="r-rate1" value="0" readonly> 원</dd>
+																	</dl>
+																</div>
+																<div class="row">
+																	<span id="convert" class="pull-right">십일일억일천익백만원</span>
+																</div>
+															</div>
+															<div class="row-split w-2">
+																<button type="button" class="btn-green pkg-set">SET</button>
+															</div>
+														</div>
 													</div>
 												</td>
 											</tr>
-											<tr>
-												<th>
-													<div class="cell necess">분절</div>
-												</th>
-												<td>
-													<div class="cell">
-														<p class="row">
-															<select name="" id="" class="form-select" disabled>
-																<option value="">Walk IN</option>
-															</select>
-														</p>
-													</div>
-												</td>
-											</tr>
-											<!--{tr(th>div.cell^+td>div.cell)}-->
 										</tbody>
 									</table>
 								</div>

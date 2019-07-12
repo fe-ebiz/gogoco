@@ -33,7 +33,7 @@
 									</colgroup>
 									<tbody>
 										<tr>
-											<th><div class="cell">이름</div></th>
+											<th><div class="cell necess">이름</div></th>
 											<td>
 												<div class="cell">
 													<input type="text" class="form-input">
@@ -162,18 +162,20 @@
 													<div class="price-receipt">
 														<dl>
 															<dt>객실료</dt>
-															<dd>10,000원</dd>
+															<dd><input type="text" class="form-input ta-right" id="r-rate1" value="0" readonly> 원</dd>
 														</dl>
 														<dl>
 															<dt>부대시설</dt>
-															<dd>10,000원</dd>
+															<dd><input type="text" class="form-input ta-right w-2" id="r-rate2" value="0" readonly> 원</dd>
 														</dl>
 													</div>
 													<div class="price-total">
 														<div class="row-split w-1">
 															<div class="row">
-																<input type="text" class="form-input rate ta-right" numberonly value="1,111,000,000" readonly> 
-																<span class="pull-right txt-won">원</span>
+																<dl>
+																	<dt>계</dt>
+																	<dd><input type="text" class="form-input ta-right" id="r-rate1" value="0" readonly> 원</dd>
+																</dl>
 															</div>
 															<div class="row">
 																<span id="convert" class="pull-right">십일일억일천익백만원</span>

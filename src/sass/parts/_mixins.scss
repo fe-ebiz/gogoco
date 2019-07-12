@@ -164,6 +164,26 @@
 	position: $type;
 	z-index: $z;
 }
+@mixin fst-pt0 {
+	&:first-child {
+		padding-top: 0;
+	}
+}
+@mixin fst-pl0 {
+	&:first-child {
+		padding-left: 0;
+	}
+}
+@mixin fst-mt0 {
+	&:first-child {
+		margin-top: 0;
+	}
+}
+@mixin fst-ml0 {
+	&:first-child {
+		margin-left: 0;
+	}
+}
 
 @mixin linear-gradient($top, $bottom) {
 	background: $top;
