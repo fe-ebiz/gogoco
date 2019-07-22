@@ -2,7 +2,7 @@
 
 @import "../parts/common";
 
-/* 업장 */
+/* 업장 영역 */
 .outlet-contents {
 	.cont-area {
 		margin-top: 10px;
@@ -108,7 +108,7 @@
 	}
 }
 
-/* 메뉴 */
+/* 메뉴 영역 */
 .menu-contents {
 	.cont-area {
 		margin-top: 10px;
@@ -241,7 +241,7 @@
     }
 }
 
-/* 목록 */
+/* 목록 영역 */
 .inv-contents {
 	.cont-area {
 		margin-top: 10px;
@@ -354,7 +354,7 @@
     }
 }
 
-/* 연회 */
+/* 연회 영역 */
 .bq-contents {
 	.cont-property {
 		.property-tbl {
@@ -413,7 +413,7 @@
 	}
 }
 
-/* 아침 식사 */
+/* 아침 식사 영역 */
 .bf-contents {
 	.cont-property {
 		.property-tbl {
@@ -464,7 +464,7 @@
 	}
 }
 
-/* 연회 일정 */
+/* 연회 일정 영역 */
 .bqCal-contents {
 	.grid-toolbar {
 		@include grid-toolbar;
@@ -662,6 +662,96 @@
 			.grid-toolbar.bottom {
 				// border-top: none;
 			}
+		}
+	}
+}
+
+/* 패키지 체크 영역 */
+.pkgChk-contents {
+	.cont-property {
+		.property-tbl {
+			@include tbl-style-1;
+            border-right: 1px solid $bdg-tblBase;
+            width: 100%;
+			td {
+				.cell {
+					.form-input {
+						&.w-1 {
+							width: 100px;
+						}
+					}
+					.cal-box {
+						width: 135px;
+					}
+					button {
+						letter-spacing: 0;
+						&.search {
+							margin-left: 10px;
+						}
+					}
+					.total-dl {
+						dt, dd {
+							@include dp;
+							color: #444;
+						}
+						dt {
+							font-weight: 700;
+							margin-left: 100px;
+							&:first-child {
+								margin-left: 35px;
+							}
+						}
+						dd {
+							margin-left: 20px;
+						}
+					}
+				}
+			}
+		}
+		.search-list {
+			margin-top: 10px;
+			text-align: center;
+		}
+	}
+	.cont-tab {
+		margin-top: 20px;
+		.tab-list {
+			// @include tab-list(#f7f7f7, #fff);
+			@include tab-list;
+			border-bottom: 1px solid #9f9f9f;
+			.tab {
+				margin-bottom: -1px;
+			}
+		}
+	}
+	.cont-list {
+		margin-top: 10px;
+        .grid-toolbar {
+            @include grid-toolbar;
+        }
+		.grid-wrap {
+			@include grid-scr-x(null, 100%);
+			.grid-area.grid-contents {
+				background: #fff;
+				height: 550px;
+			}
+			.grid-area.grid-total {
+				.grid-tbl {
+					th, td { }
+					td {}
+				}
+			}
+			.grid-tbl {
+				th, td {
+					.cell { }
+				}
+				td {
+					text-align: center;
+				}
+			}
+		}
+		.grid-bottom {
+			@include grid-bottom-page;
 		}
 	}
 }
