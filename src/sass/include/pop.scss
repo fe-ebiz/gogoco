@@ -2833,14 +2833,14 @@
 				.cont-rsvList {
 					float: none;
 					.grid-wrap.scr-wrap {
-						@include grid-scr-x(900px);
+						@include grid-scr-x(950px);
 						.grid-area.grid-contents {
 							background: #fff;
 							height: 300px;
 						}
 						.grid-tbl {
 							.ie8 & {
-								width: 900px;
+								width: 950px;
 							}
 							th, td {
 								text-align: center;
@@ -2851,6 +2851,11 @@
 									line-height: 1;
 								}
 							}
+						}
+					}
+					.grid-wrap.scr-wrap.grid-wrap-1 {
+						.grid-area.grid-contents {
+							height: 247px;
 						}
 					}
 					.grid-toolbar {
