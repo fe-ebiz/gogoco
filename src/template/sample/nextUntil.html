@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery nextUntil</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <div class="grouping-container">
+        <div class="grouping-row" data-group="1">Guest Name: name</div>
+        <div class="grouping-row">Room#: number</div>
+        <div class="grouping-data">데이터 내용</div>
+        <div class="grouping-footer">데이터 합계</div>
+        <div class="grouping-footer">데이터 합계</div>
+
+        <div class="grouping-row" data-group="1">Guest Name: name</div>
+        <div class="grouping-row">Room#: number</div>
+        <div class="grouping-data">데이터 내용</div>
+        <div class="grouping-footer">데이터 합계</div>
+        <div class="grouping-footer">데이터 합계</div>
+    </div>
+
+    <!-- <div class="grouping-container">
+        <div class="grouping-row"></div>
+        <div class="grouping-row"></div>
+        <div class="grouping-data"></div>
+        <div class="grouping-footer"></div>
+        <div class="grouping-footer"></div>
+    </div> -->
+
+    <script>
+        $('.grouping-container .grouping-row').on('click', function() {
+            $(this).nextUntil('.grouping-row[data-group]').toggle();
+        });
+    </script>
+
+    <style>
+        body {
+            padding: 50px;
+        }
+        div {
+            padding: 20px;
+        }
+        .grouping-row {
+            background: orange;
+        }
+        .grouping-row[data-group] {
+            border-top: 3px solid #000;
+        }
+        .grouping-data {
+            background: green;
+        }
+        .grouping-footer {
+            background: red;
+        }
+        .on {
+            display: block;
+        }
+    </style>
+</body>
+
+</html>

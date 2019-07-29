@@ -206,8 +206,13 @@
 			<!-- //.cont-property -->
 
 			<div class="cont-list">
-				<div class="grid-wrap scr-wrap">
+				<div class="grid-wrap scr-wrap draggable-wrap">
 					<div class="grid-scrollable-x">
+						<div class="grid-toolbar  fn-droppable">
+							그룹화할 항목을 끌어다 놓아주세요.
+							<button type="button" class="btn-gray btn-changes"><span class="icon ic-excel"></span> Export to
+								Excel</button>
+						</div>
 						<div class="grid-area grid-head">
 							<div class="grid-scrollable">
 								<table class="grid-tbl">
@@ -249,7 +254,7 @@
 										<col style="width:160px">
 										<col>
 									</colgroup>
-									<thead class="rowgroup">
+									<thead class="rowgroup fn-draggable">
 										<tr>
 											<th><div class="cell">Action</div></th>
 											<th><div class="cell">VIP</div></th>
@@ -463,6 +468,49 @@
 						</div>
 					</div>
 				</div>
+
+				<script>
+					$(".fn-draggable .cell").draggable({
+						revert: "invalid",
+						stack: ".fn-draggable .cell",
+						helper: "clone"
+					});
+					$(".fn-droppable").droppable({
+						accept: ".fn-draggable .cell",
+						drop: function (event, ui) {
+							var dropItem = $('<a href="" class="fn-drag-btn">button</a>');
+							var droppable = $(this);
+							// var draggable = ui.draggable;
+							var draggable = dropItem;
+							// Move draggable into droppable
+							draggable.clone().appendTo(droppable);
+							//draggable.css({top: '5px', left: '5px'});
+						}
+					});
+				</script>
+
+				<style>
+					/* .chkIn-contents .cont-list .grid-wrap,
+					.chkIn-contents .cont-list .grid-wrap * {overflow: auto !important;}
+					.fn-droppable.ui-droppable {
+						z-index: -1 !important;
+					} */
+					.cell.ui-draggable-dragging {
+						/* z-index: 105 !important;
+						position: relative; */
+						display: inline-block;
+						width: 100px;
+						background: green;
+					}
+					.fn-drag-btn {
+						/* z-index: 105; */
+						position: relative;
+						display: inline-block;
+						width: 100px;
+						background: green;
+					}
+				</style>
+				
 				<!-- //.grid-wrap -->
 				<div class="cf grid-bottom">
 					<a href="#" class="prev st">&lt;&lt;</a>

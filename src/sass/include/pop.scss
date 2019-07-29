@@ -27,14 +27,10 @@
 .pop-container-2 {
 	display: none;
 }
+.dialog-container,
 .pop-container-2,
 .pop-container {
 	// display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
 	.bg-back, .pop-wrapper {
 		z-index: 20;
 	}
@@ -188,6 +184,15 @@
 		border: 1px solid #ccc;
 		text-align: left;
 	}
+}
+.pop-container-2,
+.pop-container {
+	// display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 @mixin pop-header-base {
 	// background: $bg-brown-1;
@@ -4854,6 +4859,95 @@
 		}
 		.pop-footer {
 			@include pop-footer-base;
+		}
+	}
+}
+
+/* 대화 메시지 팝업 */
+@mixin dialog-header-base {
+	background: #fefefe;
+	padding: 10px;
+	color: #717171;
+	text-align: center;
+	h2 {
+		font-weight: 700;
+		letter-spacing: 0;
+	}
+}
+@mixin dialog-contents-base {
+	background: #ebebeb;
+	padding: 20px;
+	color: #525252;
+}
+@mixin dialog-footer-base {
+	background: #ebebeb;
+	padding: 20px;
+	padding-top: 0;
+	.row-btn {
+		text-align: center;
+	}
+}
+.dialog-container {
+	z-index: 12;
+	@include position(fixed, 100px, 50%);
+    width: 340px;
+    margin-left: -170px;
+    font-size: 12px;
+	word-break: keep-all;
+	.dialog-wrapper {
+		position: relative;
+		width: 100%;
+		border: 1px solid #000;
+		box-sizing: border-box;
+	}
+	.dialog-header {
+		@include dialog-header-base;
+	}
+	.dialog-contents {
+		@include dialog-contents-base;
+		em {
+			font-weight: 700;
+		}
+		.c-1 {
+			color: #477e47;
+		}
+		.icon-chk {
+			display: inline-block;
+			@include sizes(25px);
+			border-radius: 50%;
+			line-height: 23px;
+			text-align: center;
+		}
+		.icon-chk.green {
+			background: #477E47;
+		}
+		.icon-chk:after {
+			content: '';
+			display: inline-block;
+			@include size(10px, 6px);
+			border: 3px solid #fff;
+			border-top: none;
+			border-right: none;
+			transform: rotate(-45deg);
+		}
+	}
+	.dialog-footer {
+		@include dialog-footer-base;
+
+	}
+}
+
+.dialog-container.dialogMsg-container {
+	.dialog-contents {
+		.content {
+			display: table;
+		}
+		.cell {
+			display: table-cell;
+			vertical-align: middle;
+			&:first-child {
+				padding-right: 15px;
+			}
 		}
 	}
 }
