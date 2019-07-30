@@ -4888,7 +4888,7 @@
 	}
 }
 .dialog-container {
-	z-index: 12;
+	z-index: 99;
 	@include position(fixed, 100px, 50%);
     width: 340px;
     margin-left: -170px;
