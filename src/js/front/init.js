@@ -59,6 +59,25 @@ function rmAreaFn() {
 				$('#r-info-assign').append(data.select);
 				$('#r-info-chkin').empty();
 				$('#r-info-chkin').append(data.select);
+				$('input:radio[name=etc]:input[value=' + data.dd + ']').attr('checked', true);
+				
+				if(data.service == 'ooo' || data.service == 'oos') {
+					$('#ss').val(data.service);
+					$('#f-date').val(data.chkin);
+					$('#t-date').val(data.chkout);
+				} else {
+					$('#ss').val('');
+					$('#f-date').val('');
+					$('#t-date').val('');
+				}
+				
+				if(data.chk == 1) {
+					$('#r-info-btn1').html('<button type=\'button\' class=\'btn-gray\'>MAKE<br>EMPTY</button>');
+					$('#r-info-btn2').html('<button type=\'button\' class=\'btn-gray\'>SAVE</button>');
+				} else {
+					$('#r-info-btn1').html('<button type=\'button\' class=\'btn-red\'>MAKE<br>EMPTY</button>');
+					$('#r-info-btn2').html('<button type=\'button\' class=\'btn-blue\' onclick=\'room.save(1)\'>SAVE</button>');
+				}
 			}
 		});	
 
@@ -69,8 +88,12 @@ function rmAreaFn() {
     rmArea.find(".list-room > li").on('mousedown', function(e) {
         if (  (event.button == 2) || (event.which == 3) ) {
             // console.log('마우스 오른쪽 클릭 사용 x')
-            roomNo = $(this).find('.roomNo .num').text();
-            // console.log( roomNo );
+			roomNo = $(this).find('.roomNo .num').text();
+			status = $('#r' + roomNo).data('value');
+			string = (status > 0) ? 'In House' : 'Walk In';
+            
+			$('#etc').html(string); 
+
             $(document).on('contextmenu', function() {
                 return false;
             });
@@ -96,9 +119,11 @@ function rmAreaFn() {
 
     $('.sts-pop .sts-list > li').on('click', function(e) {
         //console.log( roomNo );
-        //console.log( $(this).text() );
         // $(this).closest('.sts-pop').hide();
-		room.status(roomNo, $(e.target).attr('class'));
+
+		console.log( $(this).attr('class') );
+
+		room.status(roomNo, $(this).attr('class'));
     });
 
     // 팝업 영역 제외 클릭 시 사라짐
@@ -121,24 +146,39 @@ function rmAreaFn() {
 
 
 var room = {
-	status: function(e, i) {
-		$.ajax({		
-			type: 'post',
-			url: './inc/',
-			data: 'mode=room-status&a=' + e + '&b=' + i,
-			success: function(r) {
-				alert('저장되었습니다.');
-				$('.sts-pop').hide();
-				$('#r' + e).html(r);
-			}
-		});	
+	all: function() {
+		var chk		= $('#a-chk').prop('checked');
+
+		if(chk){
+			$('.assign-chk').prop('checked', true);
+		} else {
+			$('.assign-chk').prop('checked', false);
+		}
 	},
 
-	change: function(e, i, k) {
+	status: function(e, i) {
+		console.log(i);
+		if(i == 'walkin') {
+			page.layer("inhouse", "rsv", e + "|inhouse");
+		} else {
+			$.ajax({		
+				type: 'post',
+				url: './inc/',
+				data: 'mode=room-status&a=' + e + '&b=' + i,
+				success: function(r) {
+					alert('저장되었습니다.');
+					$('.sts-pop').hide();
+					$('#r' + e).html(r);
+				}
+			});
+		}
+	},
+
+	change: function(i, k) {
 		$.ajax({		
 			type: 'post',
 			url: './inc/',
-			data: 'mode=room-change&a=' + e + '&b=' + i + '&c=' + k,
+			data: 'mode=room-change&a=' + $('select[name=room]').val() + '&b=' + i + '&c=' + k,
 			success: function(r) {
 				$('#change').html(r);
 			}
@@ -148,11 +188,17 @@ var room = {
 	assign: function(e) {
 		$.ajax({		
 			type: 'post',
-			url: './inc/',
+			url: '/_new/views/front/inc/',
 			data: 'mode=room-assign&a=' + e + '&b=' + $('input[name=ho]:checked').val(),
 			success: function(r) {
+				data = $.parseJSON(r);
 				alert('저장되었습니다.');
-				location.reload();
+				$('#chk').show();
+				$('.as-' + data.idx).html(data.ho);
+				$('input[name=ho]').val(data.ho);
+				page.close();
+				//location.reload();
+				//console.log(r);
 			}
 		});	
 	},
@@ -165,7 +211,7 @@ var room = {
 				data: 'mode=room-chkin&a=' + e,
 				success: function(r) {
 					alert('처리가 완료되었습니다.');
-					$('#s-' + e).html(r);
+					location.reload();
 				}
 			});
 		} 
@@ -185,8 +231,195 @@ var room = {
 				alert('저장되었습니다.');
 				var data = r.split('|');
 				$('#r' + data[1]).html(data[0]);
+				console.log(r);
+			}
+		});
+	},
+
+	ooo: function() {
+		$.ajax({		
+			type: 'post',
+			url: './inc/',
+			data: 'mode=room-ooo&a=' + $('#type').val() + '&b=' + $('#h1').val() + '&c=' + $('#h2').val(),
+			success: function(r) {
+				$('#history').html(r);
+			}
+		});
+	},
+
+	search: function() {
+		$.ajax({		
+			type: 'post',
+			url: './inc/',
+			data: $('#iform').serialize(),
+			success: function(r) {
+				console.log(r);
+				$('#status').html(r);
+			}
+		});
+	},
+
+	clear: function() {
+		$('#iform').find('input[type=checkbox]').each(function(i){
+			$('#iform').find('input[type=checkbox]').eq(i).prop('checked', false);
+		});
+
+		room.search();
+	},
+
+	reload: function(e) {
+		$('#show').val(e);
+		$('input[name=m_ho]').val(e);
+	},
+	
+	move: function() {
+		$.ajax({		
+			type: 'post',
+			url: './inc/',
+			data: $('#iform').serialize(),
+			success: function(r) {
+				alert('변경되었습니다.');
+				location.reload();
+			}
+		});
+	},
+
+	ext1: function(e) {
+		var cont = $('#scroll');
+
+		$.ajax({		
+			type: 'post',
+			url: './inc/',
+			data: 'mode=room-ext1&a=' + $('#cdate').val() + '&b=' + $('#temp1').val() + '&c=' + e,
+			success: function(r) {
+				var data = r.split('|');
+
+				if(data[0] != 'no') {
+					$('#ext').html(r);
+
+					if(e == 1) {
+						$('#temp2').val(data[1]);
+						$('input[name=exp]').val($('#cdate').val());
+					} else {
+						$('#cdate').val(data[1]);
+					}	
+				}
+				$('#temp3').val('');
+			}
+		});
+
+		setTimeout(function(){
+			cont.scrollTop(10000000000000000000000000);
+		}, 500);
+			
+	},
+
+	ext2: function() {
+		$.ajax({		
+			type: 'post',
+			url: './inc/',
+			data: 'mode=room-ext2&a=' + $('#new-rate').val() + '&b=' + $('#temp2').val(),
+			success: function(r) {
+				data = r.split('||');
+				$('#ext').html(data[0]);
+				$('#temp2').val(data[1]);
+				$('#temp3').val($('#rate').val());
+			}
+		});	
+	},
+
+	ext: function() {
+		$.ajax({		
+			type: 'post',
+			url: './inc/',
+			data: $('#ext-save').serialize(),
+			success: function(r) {
+				alert('수정되었습니다.');
+				location.reload();
 				//console.log(r);
+			}
+		});	
+	},
+
+	chkout: function(i, e) {
+		if(i == 80) {
+			if(confirm('체크아웃 하시겠습니까?') == true) {
+				$.ajax({	
+					type: 'post',
+					url: '/_new/views/',
+					data: 'mode=chkout&ho=' + e,
+					success: function(r) {
+						alert('처리되었습니다.');
+						location.reload();
+						//console.log(r);
+					}
+				});
+			}
+		} else {
+			alert('체크아웃을 할 수 없는 날짜입니다.');
+			return;
+		}
+	}
+}
+
+var inhouse = {
+	search: function() {
+		$.ajax({		
+			type: 'post',
+			url: './inc/',
+			data: $('#iform').serialize(),
+			success: function(r) {
+				$('#inhouse').html(r);
 			}
 		});
 	}
 }
+
+
+var chkin = {
+	search: function() {
+		if(!$('input[name=sdate]').val()) {
+			alert('체크인 날짜를 입력해주세요.');
+			$('input[name=sdate]').focus();
+			return;
+		}
+
+		$.ajax({		
+			type: 'post',
+			url: './inc/',
+			data: $('#iform').serialize(),
+			success: function(r) {
+				$('#chkin').html(r);
+			}
+		});
+	},
+
+	revert: function(a) {
+		if(confirm('체크인 전으로 복구하시겠습니까?') == true) {
+			$.ajax({		
+				type: 'post',
+				url: './inc/',
+				data: 'mode=revert&a=' + a,
+				success: function(r) {
+					$('.as-' + a).html('');
+					console.log(r);
+				}
+			});
+		}
+	}
+}
+
+var chkout = {
+	search: function() {
+		$.ajax({		
+			type: 'post',
+			url: './inc/',
+			data: $('#iform').serialize(),
+			success: function(r) {
+				$('#chkout').html(r);
+				console.log(r);
+			}
+		});
+	}
+}
+

@@ -71,9 +71,6 @@
 	}
 	.cont-list {
 		margin-top: 10px;
-		.grid-toolbar {
-			// @include grid-toolbar;
-		}
 		.grid-wrap {
 			@include grid-scr-x(4050px, 100%);
 			$ie8-wth: 4050px;

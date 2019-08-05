@@ -208,10 +208,8 @@
 			<div class="cont-list">
 				<div class="grid-wrap scr-wrap draggable-wrap">
 					<div class="grid-scrollable-x">
-						<div class="grid-toolbar  fn-droppable">
-							그룹화할 항목을 끌어다 놓아주세요.
-							<button type="button" class="btn-gray btn-changes"><span class="icon ic-excel"></span> Export to
-								Excel</button>
+						<div class="grid-toolbar fn-droppable">
+							<!-- <div class="drag-holder-text">그룹화할 항목을 끌어다 놓아주세요.</div> -->
 						</div>
 						<div class="grid-area grid-head">
 							<div class="grid-scrollable">
@@ -470,44 +468,124 @@
 				</div>
 
 				<script>
-					$(".fn-draggable .cell").draggable({
-						revert: "invalid",
-						stack: ".fn-draggable .cell",
-						helper: "clone"
-					});
-					$(".fn-droppable").droppable({
-						accept: ".fn-draggable .cell",
-						drop: function (event, ui) {
-							var dropItem = $('<a href="" class="fn-drag-btn">button</a>');
-							var droppable = $(this);
-							// var draggable = ui.draggable;
-							var draggable = dropItem;
-							// Move draggable into droppable
-							draggable.clone().appendTo(droppable);
-							//draggable.css({top: '5px', left: '5px'});
+					var GroupDraggable = {
+						dragUiText : '',
+						dragBtn : $('.fn-droppable .fn-drag-btn'),
+						dragHolderText : $('.drag-holder-text'),
+						dragFn : function() {
+							$(".fn-draggable .cell").draggable({
+								cursorAt: { left: 5 },
+								revert: "invalid",
+								stack: ".fn-draggable .cell",
+								helper: "clone",
+								widget: true,
+								stop: function (event, ui) {
+									var dragBtnLength = $('.fn-droppable .fn-drag-btn').length;
+									if (dragBtnLength) {
+										GroupDraggable.dragHolderText.hide();
+									}
+									// console.log('현재 내용 : ' + $(this).text());
+									var currentObj = $(this);
+									var currentText = $(this).text();
+									$(".fn-drag-btn").filter(function() {
+										// console.log('버튼 내용 : ' + $(this).text());
+										if ($(this).text() == currentText) {
+											currentObj.draggable('disable');
+										}
+									})
+								}
+							});
+						},
+						dropFn : function() {
+							$(".fn-droppable").droppable({
+								accept: ".fn-draggable .cell",
+								drop: function (event, ui) {
+									GroupDraggable.dragUiText = ui.draggable.text();
+									var dropItem = $('<a href="javascript:;" class="fn-drag-btn">' + GroupDraggable.dragUiText + '<span class="icon ic-x"></span></a>');
+									var droppable = $(this);
+									// var dropItem = ui.draggable;
+									// Move draggable into droppable
+									dropItem.clone().appendTo(droppable);
+								},
+							});
+						},
+						sortableFn : function() {
+							// $('.fn-drag-btn').draggable({
+							// 	containment: '.fn-droppable'
+							// });
+							$('.fn-droppable').sortable({
+								containment: 'parent',
+								forceHelperSize: false,
+								connectWith: ".fn-droppable",
+								start: function(e, ui){
+										ui.placeholder.height(ui.item.height());
+								}
+							}).disableSelection();
+						},
+						removeBtnFn : function() {
+							$('.fn-droppable').on('click', '.fn-drag-btn .ic-x', function() {
+								var dragBtnLength = $('.fn-droppable .fn-drag-btn').length;
+								// console.log(dragBtnLength);
+								if (dragBtnLength == 1) {
+									GroupDraggable.dragHolderText.show();
+									$(".fn-draggable .cell").draggable('enable');
+									// console.log('length = 1, work');
+								} else {
+									GroupDraggable.dragHolderText.hide();
+								}
+								$(".fn-draggable .cell").filter(function() {
+									if ($(this).text() == GroupDraggable.dragUiText) {
+										$(this).draggable('enable');
+									}
+								})
+								$(this).closest('a').remove();
+							});
+						},
+						init : function() {
+							GroupDraggable.dragFn();
+							GroupDraggable.dropFn();
+							// GroupDraggable.sortableFn();
+							GroupDraggable.removeBtnFn();
 						}
-					});
+					}
+					GroupDraggable.init();
+
 				</script>
 
 				<style>
-					/* .chkIn-contents .cont-list .grid-wrap,
-					.chkIn-contents .cont-list .grid-wrap * {overflow: auto !important;}
-					.fn-droppable.ui-droppable {
-						z-index: -1 !important;
-					} */
-					.cell.ui-draggable-dragging {
-						/* z-index: 105 !important;
-						position: relative; */
-						display: inline-block;
-						width: 100px;
-						background: green;
+					.ui-sortable-handle,
+					.ui-sortable-helper {
+						width: auto !important;
+						min-width: 48px !important;
+						/* display: inline-block; */
+						height: 26px !important;
 					}
-					.fn-drag-btn {
-						/* z-index: 105; */
+					.cell.ui-draggable-dragging {
+						z-index: 40;
 						position: relative;
 						display: inline-block;
-						width: 100px;
-						background: green;
+						/* width: 100px; */
+						padding: 3px 8px;
+						line-height: 1.5;
+						background: #ebebeb;
+						border: 1px solid #c7c7c7;
+						box-sizing: border-box;
+						text-align: center;
+						vertical-align: middle;
+					}
+					.fn-drag-btn {
+						position: relative;
+						display: inline-block;
+						padding: 3px 8px;
+						line-height: 1.5;
+						background: #fafafa;
+						border: 1px solid #c7c7c7;
+						box-sizing: border-box;
+						text-align: center;
+						vertical-align: middle;
+					}
+					.fn-drag-btn + .fn-drag-btn {
+						margin-left: 8px;
 					}
 				</style>
 				
