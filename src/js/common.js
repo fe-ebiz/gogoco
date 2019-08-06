@@ -8,7 +8,10 @@ $(function() {
 	ascending();
     tabFn();
     dropMenu();
-    quickMenuPop();
+	quickMenuPop();
+
+	// 클래스 기능 구현
+	var groupDraggable = new GroupDraggable('.fn-draggable .cell:not(.no-drag)', '.fn-droppable');
 
 });
 
@@ -388,6 +391,120 @@ function quickMenuPop() {
 
 }
 
+//  groupDraggable 클래스 기능 구현
+function GroupDraggable(dragItem, dropArea) {
+	this.dragItem = $(dragItem);
+	this.dropArea = $(dropArea);
+	this.dragUiText = '';
+	this.dropHolderHtml = $('<div class="drop-holder-text">그룹화할 항목을 끌어다 놓아주세요.</div>');
+
+	this.init();
+}
+GroupDraggable.prototype = {
+	constructor : GroupDraggable,
+	dragBtnLength : function() {
+		var dragBtnLength  = $('.fn-droppable .fn-drag-btn').length;
+		return dragBtnLength;
+	},
+	dropHolderPrepend : function() {
+		this.dropHolderHtml.prependTo(this.dropArea);
+	},
+	dropHolderFn : function() {
+		var dragBtnLength = this.dragBtnLength();
+		if (!dragBtnLength) {
+			this.dropHolderPrepend();
+		}
+	},
+	dropHolderPrepend: function() {
+		this.dropHolderHtml.prependTo(this.dropArea);
+	},
+	dropHolderRemove: function() {
+		this.dropArea.find('.drop-holder-text').remove();
+	},
+	dragFn : function() {
+		var me = this;
+		me.dragItem.draggable({
+			cursorAt: { left: 5 },
+			revert: "invalid",
+			stack: me.dragItem,
+			helper: "clone",
+			widget: true,
+			start: function (event, ui) {
+				var dragBtnLength = me.dragBtnLength();
+				if (!dragBtnLength) {
+					me.dropHolderHtml.prependTo(me.dropArea);
+				}
+			},
+			stop: function (event, ui) {
+				var dragBtnLength = me.dragBtnLength();
+				if (dragBtnLength) {
+					me.dropHolderRemove();
+				}
+				var currentObj = $(this);
+				var currentText = $(this).text();
+				$(".fn-drag-btn").filter(function() {
+					if ($(this).text() == currentText) {
+						currentObj.draggable('disable');
+					}
+				})
+			}
+		});
+	},
+	dropFn : function() {
+		var me = this;
+		me.dropArea.droppable({
+			accept: me.dragItem,
+			greedy: true,
+			drop: function (event, ui) {
+				me.dragUiText = ui.draggable.text();
+				var dropItem = $('<a href="javascript:;" class="fn-drag-btn">' + me.dragUiText + '<span class="icon ic-x"></span></a>');
+				var droppable = $(this);
+				dropItem.clone().appendTo(droppable);
+			},
+		});
+	},
+	sortableFn : function() {
+		var me = this;
+		me.dropArea.sortable({
+			axis: 'x',
+			cursorAt: {left: 5},
+			containment: 'parent',
+			// start: function(e, ui){
+			// 	ui.placeholder.height(ui.item.outerHeight());
+			// }
+		}).disableSelection();
+	},
+	removeBtnFn : function() {
+		var me  = this;
+		me.dropArea.on('click', '.fn-drag-btn .ic-x', function() {
+			var currentText = $(this).closest('.fn-drag-btn').text();
+			
+			$(this).closest('a').remove();
+			var dragBtnLength = me.dragBtnLength();
+			console.log(dragBtnLength);
+			if (dragBtnLength == 0) {
+				me.dropHolderPrepend();
+				me.dragItem.draggable('enable');
+			} else {
+				me.dropHolderRemove();
+			}
+			me.dragItem.filter(function() {
+				if ($(this).text() == currentText) {
+					$(this).draggable('enable');
+				}
+			})
+		});
+	},
+	init : function() {
+		this.dropHolderFn();
+		this.dragFn();
+		this.dropFn();
+		this.sortableFn();
+		this.removeBtnFn();
+	}
+}
+
+
 function addCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
@@ -473,8 +590,6 @@ var rsv = {
 			url: '/_new/views/',
 			data: 'mode=rsv-nights&date=' + chk + '&night=' + $('input[name=nights]').val() + '&room=' + $('#room').val() + '&rent=' + $('input[name=rent]:checked').val(),
 			success: function(r) {
-				console.log(r);
-
 				var data = r.split('|');
 
 				r_rate1 = data[1];
@@ -910,29 +1025,29 @@ var bill = {
 			$('input[name^=r-]').each(function(e) {
 				if($('input[name^=r-]').eq(e).is(':checked') == true) {
 					if(option == 1) {
-						$('#p-' + e).html(change);
+						$('#z-' + e).html(change);
 					} else if(option == 2) {
-						temp1 = removeCommas($('#p-' + e).text());
+						temp1 = removeCommas($('#z-' + e).text());
 						temp2 = removeCommas(change);
 						temp3 = parseInt(temp1) - (parseInt(temp1) * parseInt(temp2) / 100);
 
-						$('#p-' + e).html(addCommas(temp3));
+						$('#z-' + e).html(addCommas(temp3));
 					} else if(option == 3) {
-						temp1 = removeCommas($('#p-' + e).text());
+						temp1 = removeCommas($('#z-' + e).text());
 						temp2 = removeCommas(change);
 						temp3 = parseInt(temp1) - parseInt(temp2);
 
-						$('#p-' + e).html(addCommas(temp3));
+						$('#z-' + e).html(addCommas(temp3));
 					} else if(option == 4) {
-						temp1 = removeCommas($('#p-' + e).text());
+						temp1 = removeCommas($('#z-' + e).text());
 						temp2 = removeCommas(change);
 						temp3 = parseInt(temp1) + parseInt(temp2);
 
-						$('#p-' + e).html(addCommas(temp3));
+						$('#z-' + e).html(addCommas(temp3));
 					}				
 				}
 
-				price += parseInt(removeCommas($('#p-' + e).text()));
+				price += parseInt(removeCommas($('#z-' + e).text()));
 			});
 
 			$('#r-add-total').html(addCommas(price));
@@ -1072,17 +1187,7 @@ var bill = {
 		if(k > 0) {
 			$('.delete').remove();
 		}
-/*
-		if(k < 1) {
-			$('input[name^=s-]').parent().parent().parent().remove();
-		} else {
-			$('input[name^=s-]').each(function(e) {
-				if($('input[name^=s-]').eq(e).is(':checked') == true) {
-					$('input[name^=s-]').eq(e).parent().parent().parent().remove();
-				}
-			});
-		}
-*/
+
 		bill.comp(2);
 	},
 
@@ -1098,7 +1203,7 @@ var bill = {
 			
 			obj1.day	= $('#d-' + e).text();
 			obj1.comp	= ($('#c-' + e).is(':checked') == true) ? 'Y' : 'N';
-			obj1.rate	= removeCommas($('#p-' + e).text());
+			obj1.rate	= removeCommas($('#z-' + e).text());
 
 			room_price += parseInt(obj1.rate);
 
@@ -1141,8 +1246,6 @@ var bill = {
 
 		$('#rate').val(total);
 		rsv.convert(total, 'convert');
-		//console.log(room);
-
 		page.close();
 	}
 }
@@ -1183,6 +1286,85 @@ var cmt = {
 					}
 				});
 			} 		
+		} else if(e == 3) {
+			$('input[name=a]').val(e);
+			$('input[name=temp]').val(i);
+			$.ajax({		
+				type: 'post',
+				url: '/_new/views/',
+				data: $('#mform').serialize(),
+				success: function(r) {
+					var data = r.split('||');
+
+						$('#list').html(data[0]);
+						$('#message').html(data[1]);
+						alert('수정되었습니다.');
+				}
+			});
 		}
+	}
+}
+
+var global = {
+	cls: function(i, e, k) {
+		$.ajax({		
+			type: 'post',
+			url: '/_new/views/',
+			data: 'mode=acc-market&e=' + e + '&i=' + i + '&k=' + k,
+			success: function(r) {
+				$('#' + i).empty();
+				$('#' + i).append(r);
+				global.combo('');
+			}
+		});
+	},
+
+	combo: function(e) {
+		$.ajax({		
+			type: 'post',
+			url: '/_new/views/',
+			data: 'mode=acc-combo&a=' + e,
+			success: function(r) {
+				$('#s-account').empty();
+				$('#s-account').append(r);
+			}
+		});
+	},
+
+	is_void: function(a) {
+		if(confirm('취소처리 하시겠습니까?') == true) {
+			$.ajax({		
+				type: 'post',
+				url: '/_new/views/',
+				data: 'mode=void&a=' + a,
+				success: function(r) {
+					alert('취소되었습니다.');
+					console.log(r);
+				}
+			});
+		} 
+	},
+
+	change: function(i, k) {
+		$.ajax({		
+			type: 'post',
+			url: '/_new/views/front/inc/',
+			data: 'mode=room-change&a=' + $('select[name=room]').val() + '&b=' + i + '&c=' + k,
+			success: function(r) {
+				$('#change').html(r);
+			}
+		});	
+	},
+
+	guest: function() {
+		$.ajax({		
+			type: 'post',
+			url: '/_new/views/',
+			data: $('#gform').serialize(),
+			success: function(r) {
+				alert('수정되었습니다.')
+				location.reload();
+			}
+		});
 	}
 }

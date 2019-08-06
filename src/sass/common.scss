@@ -501,6 +501,38 @@ $sidebar-wd: 96px;
 .mg-40 {margin: 40px auto !important;}
 .mg-50 {margin: 50px auto !important;}
 
+/* GroupDraggable 스타일 */
+.grid-wrap {
+	.ui-sortable-handle,
+	.ui-sortable-helper {
+		width: auto !important;
+		min-width: 48px !important;
+		height: 26px !important;
+	}
+	@mixin drag-btn {
+		position: relative;
+		display: inline-block;
+		padding: 3px 8px;
+		line-height: 1.5;
+		background: #ebebeb;
+		border: 1px solid #c7c7c7;
+		box-sizing: border-box;
+		text-align: center;
+		vertical-align: middle;
+	}
+	.cell.ui-draggable-dragging {
+		@include drag-btn;
+		z-index: 40;
+		background: #ebebeb;
+	}
+	.fn-drag-btn {
+		@include drag-btn;	
+		background: #fafafa;
+	}
+	.fn-drag-btn + .fn-drag-btn {
+		margin-left: 5px;
+	}
+}
 /* 임시 높이 */
 //body {
 //	height: 1000px;
