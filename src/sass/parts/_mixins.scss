@@ -1308,9 +1308,9 @@ $btn-lh: 1.5;
 // }
 
 // x측 스크롤 테이블 - gray 테마
-@mixin grid-scr-x($scr-wth: null, $wth: 100%, $bd-r: null, $bd-c: $bor-gray-table) {
+@mixin grid-scr-x($scr-wth: 100%, $wth: 100%, $bd-r: null, $bd-c: $bor-gray-table) {
 	// $scr-wth: 580px
-	width: $wth;
+	// width: $wth;
 	$ie8-wth: 1740px;
 	background: #ffffff;
 	border: 1px solid $bd-c;
@@ -1327,7 +1327,7 @@ $btn-lh: 1.5;
 	// }
 	.grid-toolbar {
 		@include grid-toolbar;
-		width: $scr-wth;
+		// width: $scr-wth;
 		border: none;
 		margin-bottom: 0;
 		border-bottom: 1px solid $bd-c;
@@ -1338,11 +1338,11 @@ $btn-lh: 1.5;
 	}
 
 	.grid-tbl {
-		@if $scr-wth != null {
-			.ie8 & {
-				width: $ie8-wth;
-			}
-		}
+		// @if $scr-wth != null {
+		// 	.ie8 & {
+		// 		width: $ie8-wth;
+		// 	}
+		// }
 
 		width: 100%;
 		table-layout: fixed;
@@ -1481,15 +1481,15 @@ $btn-lh: 1.5;
 			}
 
 			.grid-tbl {
-				@if $scr-wth !=null {
+				// @if $scr-wth !=null {
 					width: calc(#{$scr-wth} - 17px);
-				}
+				// }
 
-				@else {
-					width: -webkit-calc(#{$wth} - 17px);
-					width: -moz-calc(#{$wth} - 17px);
-					width: calc(#{$wth} - 17px);
-				}
+				// @else {
+				// 	width: -webkit-calc(#{$wth} - 17px);
+				// 	width: -moz-calc(#{$wth} - 17px);
+				// 	width: calc(#{$wth} - 17px);
+				// }
 
 				th {
 					background: $bg-tblBase-th;
@@ -1568,22 +1568,21 @@ $btn-lh: 1.5;
 					border-top: 0;
 					border-right: 1px solid #c5c5c5;
 	
-					@if $scr-wth !=null {
+					// @if $scr-wth !=null {
 						width: calc(#{$scr-wth} - 17px);
-					}
+					// }
 	
-					@else {
-						width: -webkit-calc(#{$wth} - 17px);
-						width: -moz-calc(#{$wth} - 17px);
-						width: calc(#{$wth} - 17px);
-					}
+					// @else {
+					// 	width: -webkit-calc(#{$wth} - 17px);
+					// 	width: -moz-calc(#{$wth} - 17px);
+					// 	width: calc(#{$wth} - 17px);
+					// }
 				}
 			}
 		}
 	}
 }
 @mixin grid-scr-brown($scr-wth: null, $wth: 100%, $bd-r: null, $bd-c: $bor-gray-table) {
-	// $scr-wth: 580px
 	width: $wth;
 	$ie8-wth: 1740px;
 	background: #ffffff;
@@ -1652,6 +1651,7 @@ $btn-lh: 1.5;
 			text-overflow: ellipsis;
 			white-space: nowrap;
 			font-weight: 700;
+			cursor: default;
 
 			.cell {}
 

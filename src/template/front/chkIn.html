@@ -214,6 +214,9 @@
 							<div class="grid-scrollable">
 								<table class="grid-tbl">
 									<colgroup>
+										<col class="grouping-row">
+										<col class="grouping-row">
+										<col class="grouping-row">
 										<col style="width:125px;">
 										<col style="width:50px">
 										<col style="width:140px">
@@ -253,6 +256,9 @@
 									</colgroup>
 									<thead class="rowgroup fn-draggable">
 										<tr>
+											<th class="grouping-row"></th>
+											<th class="grouping-row"></th>
+											<th class="grouping-row"></th>
 											<th><div class="cell no-drag">Action</div></th>
 											<th><div class="cell">VIP</div></th>
 											<th><div class="cell">이름</div></th>
@@ -297,6 +303,9 @@
 						<div class="grid-area grid-contents">
 							<table class="grid-tbl">
 								<colgroup>
+									<col class="grouping-row">
+									<col class="grouping-row">
+									<col class="grouping-row">
 									<col style="width:125px;">
 									<col style="width:50px">
 									<col style="width:140px">
@@ -335,7 +344,164 @@
 									<col>
 								</colgroup>
 								<tbody class="rowgroup">
+									<style>
+										.grid-wrap .grid-area {
+											width: calc(4050px + (25px * 3)) !important;
+										}
+										.grid-wrap .grouping-row {width: 25px;}
+										.cell .grouping-folder {
+											font-size: 9px;
+
+										}
+										tr[class*=grouping-dep-] td {background: #f0f0f0 !important;}
+										/* tr.grouping-dep-1 {padding-left: 7px;}
+										tr.grouping-dep-2 td .cell {padding-left: 20px !important;}
+										tr.grouping-dep-3 td .cell {padding-left: 33px !important;} */
+									</style>
+									<tr class="grouping-dep-1">
+										<td colspan="39" class="ta-left">
+											<div class="cell">
+												<span class="grouping-folder">▼</span> 이름
+											</div>
+										</td>
+									</tr>
+									<tr class="grouping-dep-2">
+										<td class="grouping-row"></td>
+										<td colspan="38" class="ta-left">
+											<div class="cell">
+												<span class="grouping-folder">▼</span> 객실#
+											</div>
+										</td>
+									</tr>
+									<tr class="grouping-dep-3">
+										<td class="grouping-row"></td>
+										<td class="grouping-row"></td>
+										<td colspan="37" class="ta-left">
+											<div class="cell">
+												<span class="grouping-folder">▼</span> 객실유형
+											</div>
+										</td>
+									</tr>
 									<tr>
+										<td class="grouping-row"></td>
+										<td class="grouping-row"></td>
+										<td class="grouping-row"></td>
+										<td>
+											<div class="cell">
+												<button type="button" class="btn-green action">CI</button>
+												<button type="button" class="btn-green action">RV</button>
+											</div>
+										</td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell">권혁철1</div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell">DTW</div></td>
+										<td><div class="cell">F.I.T</div></td>
+										<td><div class="cell">2019-03-12</div></td>
+										<td><div class="cell">1</div></td>
+										<td><div class="cell">2019-03-13</div></td>
+										<td><div class="cell">2</div></td>
+										<td><div class="cell">0</div></td>
+										<td><div class="cell">RSVN</div></td>
+										<td><div class="cell">N</div></td>
+										<td><div class="cell">고코투어(가자닷컴)</div></td>
+										<td><div class="cell">44,925</div></td>
+										<td><div class="cell">44,925</div></td>
+										<td><div class="cell">N</div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell">대외후불 고코투어 DTW 44 925bs 콘도 턴어웨이건입니다 총2객실입니다</div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell">2019-03-06</div></td>
+										<td><div class="cell">40,841</div></td>
+										<td><div class="cell">KSG1903068230</div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell">G1903060038</div></td>
+										<td><div class="cell">OTA</div></td>
+										<td><div class="cell" title="Domestic Online Travel Agency">Domestic Online Travel Agency</div></td>
+										<td><div class="cell">Others</div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell">고코투어/김예니</div></td>
+										<td><div class="cell">1666-1243</div></td>
+										<td><div class="cell">2019-03-06 17:56:48</div></td>
+										<td><div class="cell">서울예약실</div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+									</tr>
+									<tr>
+										<td class="grouping-row"></td>
+										<td class="grouping-row"></td>
+										<td class="grouping-row"></td>
+										<td>
+											<div class="cell">
+												<button type="button" class="btn-green action">CI</button>
+												<button type="button" class="btn-green action">RV</button>
+											</div>
+										</td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell">권혁철1</div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell">DTW</div></td>
+										<td><div class="cell">F.I.T</div></td>
+										<td><div class="cell">2019-03-12</div></td>
+										<td><div class="cell">1</div></td>
+										<td><div class="cell">2019-03-13</div></td>
+										<td><div class="cell">2</div></td>
+										<td><div class="cell">0</div></td>
+										<td><div class="cell">RSVN</div></td>
+										<td><div class="cell">N</div></td>
+										<td><div class="cell">고코투어(가자닷컴)</div></td>
+										<td><div class="cell">44,925</div></td>
+										<td><div class="cell">44,925</div></td>
+										<td><div class="cell">N</div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell">대외후불 고코투어 DTW 44 925bs 콘도 턴어웨이건입니다 총2객실입니다</div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell">2019-03-06</div></td>
+										<td><div class="cell">40,841</div></td>
+										<td><div class="cell">KSG1903068230</div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell">G1903060038</div></td>
+										<td><div class="cell">OTA</div></td>
+										<td><div class="cell" title="Domestic Online Travel Agency">Domestic Online Travel Agency</div></td>
+										<td><div class="cell">Others</div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell">고코투어/김예니</div></td>
+										<td><div class="cell">1666-1243</div></td>
+										<td><div class="cell">2019-03-06 17:56:48</div></td>
+										<td><div class="cell">서울예약실</div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+									</tr>
+									<tr class="grouping-dep-1">
+										<td colspan="39" class="ta-left">
+											<div class="cell">
+												<span class="grouping-folder">▼</span> 이름
+											</div>
+										</td>
+									</tr>
+									<tr class="grouping-dep-2">
+										<td class="grouping-row"></td>
+										<td colspan="38" class="ta-left">
+											<div class="cell">
+												<span class="grouping-folder">▼</span> 객실#
+											</div>
+										</td>
+									</tr>
+									<tr class="grouping-dep-3">
+										<td class="grouping-row"></td>
+										<td class="grouping-row"></td>
+										<td colspan="37" class="ta-left">
+											<div class="cell">
+												<span class="grouping-folder">▼</span> 객실유형
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="grouping-row"></td>
+										<td class="grouping-row"></td>
+										<td class="grouping-row"></td>
 										<td>
 											<div class="cell">
 												<button type="button" class="btn-green action">CI</button>
@@ -384,6 +550,9 @@
 						<div class="grid-area grid-total">
 							<table class="grid-tbl">
 								<colgroup>
+									<col class="grouping-row">
+									<col class="grouping-row">
+									<col class="grouping-row"> 
 									<col style="width:125px;">
 									<col style="width:50px">
 									<col style="width:140px">
@@ -423,6 +592,9 @@
 								</colgroup>
 								<tbody class="rowgroup">
 									<tr>
+										<td class="grouping-row"></td>
+										<td class="grouping-row"></td>
+										<td class="grouping-row"></td>
 										<td><div class="cell"></div></td>
 										<td><div class="cell"></div></td>
 										<td><div class="cell"></div></td>

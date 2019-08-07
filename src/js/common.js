@@ -422,23 +422,23 @@ GroupDraggable.prototype = {
 		this.dropArea.find('.drop-holder-text').remove();
 	},
 	dragFn : function() {
-		var me = this;
-		me.dragItem.draggable({
+		var _this = this;
+		_this.dragItem.draggable({
 			cursorAt: { left: 5 },
 			revert: "invalid",
-			stack: me.dragItem,
+			stack: _this.dragItem,
 			helper: "clone",
 			widget: true,
 			start: function (event, ui) {
-				var dragBtnLength = me.dragBtnLength();
+				var dragBtnLength = _this.dragBtnLength();
 				if (!dragBtnLength) {
-					me.dropHolderHtml.prependTo(me.dropArea);
+					_this.dropHolderHtml.prependTo(_this.dropArea);
 				}
 			},
 			stop: function (event, ui) {
-				var dragBtnLength = me.dragBtnLength();
+				var dragBtnLength = _this.dragBtnLength();
 				if (dragBtnLength) {
-					me.dropHolderRemove();
+					_this.dropHolderRemove();
 				}
 				var currentObj = $(this);
 				var currentText = $(this).text();
@@ -451,44 +451,44 @@ GroupDraggable.prototype = {
 		});
 	},
 	dropFn : function() {
-		var me = this;
-		me.dropArea.droppable({
-			accept: me.dragItem,
+		var _this = this;
+		_this.dropArea.droppable({
+			accept: _this.dragItem,
 			greedy: true,
 			drop: function (event, ui) {
-				me.dragUiText = ui.draggable.text();
-				var dropItem = $('<a href="javascript:;" class="fn-drag-btn">' + me.dragUiText + '<span class="icon ic-x"></span></a>');
+				_this.dragUiText = ui.draggable.text();
+				var dropItem = $('<a href="javascript:;" class="fn-drag-btn">' + _this.dragUiText + '<span class="icon ic-x"></span></a>');
 				var droppable = $(this);
 				dropItem.clone().appendTo(droppable);
 			},
 		});
 	},
 	sortableFn : function() {
-		var me = this;
-		me.dropArea.sortable({
+		var _this = this;
+		_this.dropArea.sortable({
 			axis: 'x',
 			cursorAt: {left: 5},
-			containment: 'parent',
+			contain_thisnt: 'parent',
 			// start: function(e, ui){
 			// 	ui.placeholder.height(ui.item.outerHeight());
 			// }
 		}).disableSelection();
 	},
 	removeBtnFn : function() {
-		var me  = this;
-		me.dropArea.on('click', '.fn-drag-btn .ic-x', function() {
+		var _this  = this;
+		_this.dropArea.on('click', '.fn-drag-btn .ic-x', function() {
 			var currentText = $(this).closest('.fn-drag-btn').text();
 			
 			$(this).closest('a').remove();
-			var dragBtnLength = me.dragBtnLength();
+			var dragBtnLength = _this.dragBtnLength();
 			console.log(dragBtnLength);
 			if (dragBtnLength == 0) {
-				me.dropHolderPrepend();
-				me.dragItem.draggable('enable');
+				_this.dropHolderPrepend();
+				_this.dragItem.draggable('enable');
 			} else {
-				me.dropHolderRemove();
+				_this.dropHolderRemove();
 			}
-			me.dragItem.filter(function() {
+			_this.dragItem.filter(function() {
 				if ($(this).text() == currentText) {
 					$(this).draggable('enable');
 				}
