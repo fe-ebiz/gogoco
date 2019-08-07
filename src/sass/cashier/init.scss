@@ -387,7 +387,7 @@
 				border-top: 1px dashed $bor-gray-table;
 			}
 			.grid-wrap.scr-wrap-brown {
-				@include grid-scr-brown(null, 100%, 0);
+				@include grid-scr-brown;
 				.grid-area.grid-contents {
 					background: #fff;
 					height: 300px;

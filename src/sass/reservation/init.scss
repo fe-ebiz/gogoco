@@ -1134,7 +1134,7 @@
 		}
 		$bg-hover: #e3ddd7;
 		.grid-wrap {
-			@include grid-scr-brown(null, 100%, 0);
+			@include grid-scr-brown;
 			@include bx;
 			.grid-area.grid-contents {
 				background: #fff;

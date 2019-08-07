@@ -169,7 +169,7 @@
 			width: calc(100% - 400px);
 			padding-left: 10px;
             .grid-wrap.scr-wrap {
-                @include grid-scr-brown(null, 100%, 0);
+                @include grid-scr-brown;
                 .grid-area.grid-head {
                     th { }
                 }
@@ -285,7 +285,7 @@
 			width: calc(100% - 400px);
 			padding-left: 10px;
             .grid-wrap.scr-wrap {
-                @include grid-scr-brown(null, 100%, 0);
+                @include grid-scr-brown;
                 .grid-area.grid-head {
                     th { }
                 }
@@ -401,7 +401,7 @@
 			width: calc(100% - 400px);
 			padding-left: 10px;
             .grid-wrap.scr-wrap {
-                @include grid-scr-brown(null, 100%, 0);
+                @include grid-scr-brown;
                 .grid-area.grid-head {
                     th { }
                 }
@@ -473,7 +473,7 @@
 	.cont-list {
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-x(null, 100%, 0);
+			@include grid-scr-x;
 			.grid-area.grid-head {
 				th {
 					&.bor {
@@ -536,7 +536,7 @@
 	.cont-list {
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-brown(null, 100%, 0);
+			@include grid-scr-brown;
 			.grid-area.grid-head {
 				th {
 					&.bor {
@@ -670,7 +670,7 @@
 		}
 		.cont-name {
 			.grid-wrap {
-				@include grid-scr-brown(null, 100%, 0);
+				@include grid-scr-brown;
 				border-top-width: 1px;
 				.grid-area.grid-head {
 					th {

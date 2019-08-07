@@ -41,7 +41,7 @@
         .cont-list {
             margin-top: 10px;
             .grid-wrap {
-                @include grid-scr-brown(null, 100%, 0);
+                @include grid-scr-brown;
                 .grid-area.grid-head {
                     th {
                         &.bor {
@@ -142,7 +142,7 @@
         .cont-list {
             margin-top: 10px;
             .grid-wrap {
-                @include grid-scr-brown(null, 100%, 0);
+                @include grid-scr-brown;
                 .grid-area.grid-head {
                     th { }
                 }
@@ -275,7 +275,7 @@
         .cont-list {
             margin-top: 10px;
             .grid-wrap {
-                @include grid-scr-brown(null, 100%, 0);
+                @include grid-scr-brown;
                 .grid-area.grid-head {
                     th { }
                 }
@@ -315,7 +315,7 @@
         .cont-list {
             margin-top: 10px;
             .grid-wrap {
-                @include grid-scr-brown(null, 100%, 0);
+                @include grid-scr-brown;
                 .grid-area.grid-head {
                     th { }
                 }

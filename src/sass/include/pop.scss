@@ -1013,7 +1013,7 @@
 				.cont-list {
 					margin-top: 10px;
 					.grid-wrap {
-						@include grid-scr-brown(100%, null);
+						@include grid-scr-brown;
 //						@include grid-scr-x(100%, null);
 						$ie8-wth: 958px;
 						.grid-area.grid-contents {
@@ -1496,7 +1496,7 @@
 
                 .scr-wrap {
                     margin-top: 10px;
-                    @include grid-scr-x(null, 100%, 0);
+                    @include grid-scr-x;
                     .grid-tbl {
                         .ie8 & {
                             width: 740px;
@@ -1549,7 +1549,7 @@
                 
                 .scr-wrap {
                     margin-top: 10px;
-                    @include grid-scr-x(null, 100%, 0);
+                    @include grid-scr-x;
                     .grid-tbl {
                         .ie8 & {
                             width: 740px;
@@ -1595,7 +1595,7 @@
                 
                 .scr-wrap {
                     margin-top: 5px;
-                    @include grid-scr-x(null, 100%, 0);
+                    @include grid-scr-x;
                     td {
                         text-align: center;
                     }
@@ -3081,7 +3081,7 @@
 				.cont-list {
 					margin-top: 10px;
 					.grid-wrap {
-						@include grid-scr-x(null, 100%, 0);
+						@include grid-scr-x;
 						.grid-tbl {
 							td {
 								text-align: center;
@@ -4583,7 +4583,7 @@
 							}
 						}
 						.grid-wrap.scr-wrap {
-							@include grid-scr-brown(null, 100%, 0);
+							@include grid-scr-brown;
 							margin-top: 10px;
 							.grid-area.grid-head {
 								th { }

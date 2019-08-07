@@ -34,7 +34,7 @@
 	}
 	.cont-list {
 		.grid-container {
-			@include grid-scr-x2(245px, null, 100%);
+			@include grid-scr-x2(245px);
 			.scr-wrap {
 				.grid-tbl {
 					th {
