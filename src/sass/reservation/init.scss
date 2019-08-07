@@ -332,7 +332,7 @@
 				border: 1px solid #a9a9a9;
 				margin-top: -1px;
 				.grid-wrap.scr-wrap {
-					@include grid-scr-x(null, 100%);
+					@include grid-scr-x;
 					.grid-tbl {
 						.ie8 & {
 							width: 581px;
@@ -477,7 +477,7 @@
 		.cont-rsvList {
 			float: none;
 			.grid-wrap.scr-wrap {
-				@include grid-scr-x(null, 100%);
+				@include grid-scr-x;
 				.grid-area.grid-contents {
 					background: #fff;
 					height: 200px;
@@ -609,7 +609,7 @@
 			}
 			float: none;
 			.grid-wrap.scr-wrap.grid-wrap-1 {
-				@include grid-scr-x(null, 100%);
+				@include grid-scr-x;
 				.grid-area.grid-contents {
 					background: #fff;
 					height: 200px;
@@ -942,7 +942,7 @@
 	.cont-list {
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-x(null, 100%);
+			@include grid-scr-x;
 			.grid-area.grid-contents {
 				background: #fff;
 				height: 700px;
@@ -1503,7 +1503,7 @@
 					}
 				}
 				.grid-wrap.scr-wrap {
-					@include grid-scr-x(null, 100%);
+					@include grid-scr-x;
 					.grid-tbl {
 						.ie8 & {
 							width: 581px;
@@ -1615,7 +1615,7 @@
 			.cont-list {
 				margin-top: 10px;
 				.grid-wrap {
-					@include grid-scr-x(null, 100%);
+					@include grid-scr-x;
 					.grid-area.grid-contents {
 						background: #fff;
 						height: 630px;

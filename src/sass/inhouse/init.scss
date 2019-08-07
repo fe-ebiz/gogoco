@@ -98,7 +98,7 @@
     .cont-list {
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-x(null, 100%);
+			@include grid-scr-x;
 			.grid-area.grid-contents {
 				background: #fff;
 				height: 650px;
@@ -154,7 +154,7 @@
     .cont-list {
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-x(null, 100%);
+			@include grid-scr-x;
 			.grid-area.grid-contents {
 				background: #fff;
 				height: 620px;
@@ -213,7 +213,7 @@
     .cont-list {
 		margin-top: 10px;
 		.grid-wrap {
-			@include grid-scr-x(null, 100%);
+			@include grid-scr-x;
 			.grid-area.grid-contents {
 				background: #fff;
 				height: 620px;

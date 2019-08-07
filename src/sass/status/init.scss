@@ -111,7 +111,7 @@
 					display: block;
 				}
 				.grid-wrap {
-					@include grid-scr-x(null, 100%);
+					@include grid-scr-x;
 					.grid-tbl {
 						th, td {
 							text-align: center;

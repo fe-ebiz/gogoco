@@ -565,7 +565,7 @@
 		.cont-list {
 			margin-top: 10px;
 			.grid-wrap {
-				@include grid-scr-x(null, 100%);
+				@include grid-scr-x;
 				.grid-area.grid-contents {
 					height: 500px;
 				}

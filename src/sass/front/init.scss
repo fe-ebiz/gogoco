@@ -1437,7 +1437,7 @@
 			@include grid-toolbar;
 		}
 		.grid-wrap {
-			@include grid-scr-x(null, 100%);
+			@include grid-scr-x;
 			.grid-tbl {
 				th, td {
 					text-align: center;
@@ -1526,7 +1526,7 @@
 			@include grid-toolbar;
 		}
 		.grid-wrap {
-			@include grid-scr-x(null, 100%);
+			@include grid-scr-x;
 			.grid-area.grid-contents {
 				background: #fff;
 				height: 650px;
@@ -1705,7 +1705,7 @@
 		}
 		.cont-rmStay {
 			.grid-wrap {
-				@include grid-scr-x(null, 100%);
+				@include grid-scr-x;
 				.grid-area.grid-contents {
 					background: #fff;
 					height: 150px;
