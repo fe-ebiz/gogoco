@@ -1,0 +1,413 @@
+@charset "utf-8";
+
+@import './variables';
+@import './mixins';
+
+/* 공통 요소 */
+// button 
+@mixin btn-color($bg: null) {
+    background: $bg;
+    border-color: darken($bg, 10%);
+    &:hover {
+        background: darken($bg, 5%);
+        border-color: darken($bg, 15%);
+    }
+    &:not(.btn-default) .badge {
+        background: invert($bg);
+    }
+    &.btn-default .badge {
+        background: darken($bg, 50%);
+        color: #fff;
+    }
+}
+@mixin btn-size($pd: null, $fz: null) {
+    padding: $pd;
+    font-size: $fz;
+}
+.btn {
+    @include btn-base;
+    color: #fff;
+    &.btn-default {
+        @include btn-color(#fff);
+        color: #333;
+    }
+    &.btn-primary {
+        @include btn-color($primary-color);
+	}
+    &.btn-blue {
+		@include btn-color($btn-blue);
+	}
+    &.btn-green {
+        @include btn-color($btn-green);
+	}
+    &.btn-aqua {
+        @include btn-color($btn-aqua);
+	}
+    &.btn-orange {
+        @include btn-color($btn-orange);
+	}
+    &.btn-red {
+        @include btn-color($btn-red);
+    }
+    &.btn-gray {
+        @include btn-color($btn-gray);
+    }
+    &.outline {
+        background: none;
+        color: #333;
+        border: 1px solid #333;
+    }
+    &.no-bd {
+        &,
+        &:hover {
+            border-color: transparent;
+        }
+    }
+    .btn-group-lg &,
+    &.lg {
+        @include btn-size(10px 16px, 18px);
+    }
+    .btn-group-md &,
+    &.md {
+        @include btn-size(6px 12px, 14px);
+    }
+    .btn-group-sm &,
+    &.sm {
+        @include btn-size(5px 10px, 12px);
+        line-height: 1.5;
+    }
+    .btn-group-xs &,
+    &.xs {
+        @include btn-size(1px 15px, 12px);
+        line-height: 1.5;
+    }
+}
+
+body.page-housekeeper {
+    font-family: $font-stack;
+    color: $font-color;
+    line-height: 1;
+}
+.page-housekeeper .wrapper {
+    position: relative;
+    max-width: 360px;
+    height: 1080px;
+    margin: 0 auto;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+/* 해더 영역 */
+.page-housekeeper .header {
+    background: #fff;
+    .cont-header {
+        border-bottom: 1px solid #ddd;
+        .sta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px;
+            .btn-group,
+            .ulevel {
+                width: 100px;
+            }
+            .btn-allSts {
+                // @include pos(absolute, 5px, 10px);
+            }
+            .logo-a {
+                .logo-img {
+                    width: 100px;
+                }
+            }
+            .ulevel {
+                position: relative;
+                padding-right: 5px;
+                box-sizing: border-box;
+                font-size: 13px;
+                color: #888;
+                text-align: right;
+            }
+        }
+    }
+}
+.allstatus-contents {
+    .allstatus-sec {
+        .allstatus-title {
+            padding: 20px 0 10px;
+            text-align: center;
+            letter-spacing: 1px;
+            font-weight: 500;
+            &:after {
+                content: "";
+                display: block;
+                // font-size: 24px;
+                @include size(8px, 2px);
+                background: #333;
+                margin: 10px auto 0;
+                // margin-top: 10px;
+            }
+        }
+        .allstatus-count {
+            width: 100%;
+            font-size: 14px;
+            color: #444;
+            tr {
+                .cell {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    padding: 3px 0;
+                    margin: 2px 5px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    // margin: 3px 5px;
+                    .dot {
+                        font-size: 9px;
+                    }
+                    .item {
+                        flex: 1;
+                        text-align: center;
+                        &:first-child {
+                            flex: 0.8;
+                        }
+                    }
+                    .btn {
+                        margin: 0 5px;
+                    }
+                    .btn-fake {
+                        margin: 0 5px;
+                        @include size(65px , 1px);
+                    }
+                }
+                &:first-child th .cell {
+                    margin-bottom: 5px;
+                    border-color: transparent;
+                }
+                th, td {
+                    
+                }
+                td {
+                    
+                }
+            }
+        }
+    }
+}
+
+.floorstatus-contents {
+    // background: #f7f7f7;
+    .floorstatus-sec {
+        .floorstatus-total {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px 0;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+            color: #444;
+            .dot {
+                font-size: 9px;
+            }
+            .item {
+                flex: 1;
+                text-align: center;
+            }
+        }
+        .floorstatus-listbox {
+            // $c-inspect: #00b700;
+            // $c-clean: #0073f5;
+            // $c-working: #ffd751;
+            // $c-dirty: #ff0000;
+            $c-inspect: $btn-green;
+            $c-clean: $btn-blue;
+            $c-working: $btn-orange;
+            $c-dirty: $btn-red;
+            $c-ooo: #444;
+            @mixin roombox-color($c: null, $fg: #fff) {
+                // background: adjust-color($c, $alpha: -0.8);
+                .btn-status {
+                    background: $c;
+                    color: $fg;
+                }
+            }
+            .floorstatus-list > li {
+                $bg-inhouse: #C0B5A6;
+                $bg-checkout: #c5c5c5;
+                .roombox {
+                    position: relative;
+                    margin: 10px;
+                    background: #fff;
+                    // border: 1px solid #ddd;
+                    border: 2px solid #ddd;
+                    box-shadow:  0px 2px 4px rgba(0,0,0, .1);
+                    // padding: 5px;
+                    // border: 5px solid #d5d5d5;
+                    border-radius: 4px;
+                    overflow: hidden;
+                    &[data-roomchk=inhouse] {
+                        // border-color: $bg-inhouse;
+                        .rm-chk {
+                            .badge-rmchk {
+                                background: $bg-inhouse;
+                                // color: invert($bg-inhouse);
+                                color: #fff;
+                            }
+                        }
+                    }
+                    &[data-roomchk=checkout] {
+                        // border-color: $bg-checkout;
+                        .rm-chk {
+                            .badge-rmchk {
+                                background: $bg-checkout;
+                                // color: invert($bg-checkout);
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .roombox-header {
+                        display: flex;
+                        // align-items: flex-start;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 10px;
+                        // border-radius: 4px;
+                        background: rgba(0,0,0, 0.3);
+                        color: #fff;
+                        // padding: 10px 5px;
+                        // border-top-left-radius: 4px;
+                        // border-top-right-radius: 4px;
+                        // background: rgba(0,0,0, 0.05);
+                        // color: #444;
+                        .rm {
+                            flex: 1;
+                            display: inline-block;
+                            text-align: center;
+                        }
+                        .rm-no {
+                            font-size: 24px;
+                            text-align: left;
+                        }
+                        .rm-chk {
+                            text-align: right;
+                            .badge-rmchk {
+                                @include simple-btn(25px, 0 5px);
+                                border: 1px solid #ccc;
+                                border-radius: 4px;
+                            }
+                            
+                        }
+                    }
+                    .roombox-body {
+                        padding: 20px 0;
+                        .btn-status {
+                            display: block;
+                            width: 50%;
+                            margin: 0 auto;
+                            line-height: 2;
+                            text-transform: uppercase;
+                        }
+                    }
+                    .roombox-footer {
+                        padding: 0px 10px 10px;
+                        .btn {
+                            .badge {
+                                @include simple-badge(18px);
+                                margin-left: 2px;
+                                font-size: 12px;
+                                border-radius: 50%; 
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+                .roombox.inspect {
+                    @include roombox-color($c-inspect);
+                }
+                .roombox.clean {
+                    @include roombox-color($c-clean);
+                }
+                .roombox.working {
+                    @include roombox-color($c-working);
+                }
+                .roombox.dirty {
+                    @include roombox-color($c-dirty);
+                }
+                .roombox.ooo,
+                .roombox.oos {
+                    @include roombox-color($c-ooo);
+                }
+            }
+        }
+    }
+}
+
+.popup-layer {
+    z-index: 20;
+    @include pos(absolute, 0, 0);
+}
+.bg-back {
+    @include p0-w100;
+}
+.bg-back {
+    background: #000;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+.popup-mask {
+    z-index: 20;
+    @include p0-w100(fixed);
+    display: table;
+    background-color: rgba(0,0,0, .5);
+    transition: opacity .3s ease;
+}
+.popup-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    .popup-container {
+        position: relative;
+        width: 300px;
+        margin: 0 auto;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    }
+}
+
+.rmstatus-wrapper {
+    .popup-header {
+        .popup-title {
+            padding: 15px 0 10px;
+            text-align: center;
+            font-size: 24px;
+        }
+    }
+    .popup-body {
+        padding-bottom: 10px;
+        .rmstatus-listbox {
+            .rmstatus-list > li {
+                margin: 5px 10px;
+                .btn-status {
+                    @include center;
+                    width: 90%;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    .popup-footer {
+        padding: 10px;
+        background-color: lightgray;
+        border-top: 1px solid #ddd;
+        text-align: center;
+        .btn-group {
+            // font-size: 0;
+        }
+        .btn {
+            width: 44%;
+            // margin: 0 10px;
+            & + .btn {
+                // margin-left: 2%;
+            }
+        }
+    }
+}

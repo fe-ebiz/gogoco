@@ -1,0 +1,126 @@
+@@include('../include/_head.html', {
+	"page": "housekeeper"
+})
+
+<body class="page-housekeeper">
+
+<div class="wrapper">
+    @@include('../include/housekeeper/_header.html')
+
+    <div class="cf contents floorstatus-contents">
+        <div class="contents-container">
+            <section class="sec floorstatus-sec">
+                <h1 class="skip">층별현황</h1>
+                <div class="floorstatus-total">
+                    <span class="item">총 10</span> <span class="dot">|</span> <span class="item">2</span> <span class="dot">|</span> <span class="item">3</span> <span class="dot">|</span> <span class="item">4</span> <span class="dot">|</span> <span class="item">1</span>
+                </div>
+                <div class="floorstatus-listbox">
+                    <ul class="floorstatus-list">
+                        <li>
+                            <div class="roombox inspect" data-roomchk="inhouse">
+                                <div class="roombox-header">
+                                    <span class="rm rm-no">1203호</span>
+                                    <span class="rm rm-type">DTW</span>
+                                    <span class="rm rm-chk"><span class="badge-rmchk">inhouse</span></span>
+                                </div>
+                                <div class="roombox-body">
+                                    <button type="button" class="btn btn-default lg btn-status" onclick="housekeeperPopup.display(true, '.rmstatus-mask')">injection</button>
+                                </div>
+                                <div class="roombox-footer">
+                                    <button type="button" class="btn btn-default">메모</button>
+                                    <!-- 메모 있을 경우 표시 -->
+                                    <button type="button" class="btn btn-default">알림 <span class="badge">5</span></button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="roombox dirty" data-roomchk="checkout">
+                                <div class="roombox-header">
+                                    <span class="rm rm-no">1204호</span>
+                                    <span class="rm rm-type">DTW</span>
+                                    <span class="rm rm-chk"><span class="badge-rmchk">checkout</span></span>
+                                </div>
+                                <div class="roombox-body">
+                                    <button type="button" class="btn btn-default lg btn-status" onclick="housekeeperPopup.display(true, '.rmstatus-mask')">dirty</button>
+                                </div>
+                                <div class="roombox-footer">
+                                    <button type="button" class="btn btn-default">메모</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="roombox clean" data-roomchk="checkout">
+                                <div class="roombox-header">
+                                    <span class="rm rm-no">1205호</span>
+                                    <span class="rm rm-type">DTW</span>
+                                    <span class="rm rm-chk"><span class="badge-rmchk">checkout</span></span>
+                                </div>
+                                <div class="roombox-body">
+                                    <button type="button" class="btn btn-default lg btn-status" onclick="housekeeperPopup.display(true, '.rmstatus-mask')">clean</button>
+                                </div>
+                                <div class="roombox-footer">
+                                    <button type="button" class="btn btn-default">메모</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="roombox working" data-roomchk="checkout">
+                                <div class="roombox-header">
+                                    <span class="rm rm-no">1206호</span>
+                                    <span class="rm rm-type">DTW</span>
+                                    <span class="rm rm-chk"><span class="badge-rmchk">checkout</span></span>
+                                </div>
+                                <div class="roombox-body">
+                                    <button type="button" class="btn btn-default lg btn-status" onclick="housekeeperPopup.display(true, '.rmstatus-mask')">working</button>
+                                </div>
+                                <div class="roombox-footer">
+                                    <button type="button" class="btn btn-default">메모</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    @@include('../include/housekeeper/_footer.html')
+</div>
+
+<div class="popup-layer">
+    <div class="popup-mask rmstatus-mask" style="display: none;">
+        <div class="popup-wrapper rmstatus-wrapper">
+            <div class="popup-container">
+                <div class="popup-header"><h2 class="popup-title">1203호 상태설정</h2></div>
+                <div class="popup-body">
+                    <div class="rmstatus-listbox">
+                        <ul class="rmstatus-list">
+                            <!-- 관리자의 경우만 inspect, ooo, oos 노출 -->
+                            <li><button type="button" class="btn btn-green lg btn-status">inspect</button></li>
+                            <li><button type="button" class="btn btn-blue lg btn-status">clean</button></li>
+                            <li><button type="button" class="btn btn-orange lg btn-status">working</button></li>
+                            <li><button type="button" class="btn btn-red lg btn-status">dirty</button></li>
+                            <li><button type="button" class="btn btn-gray lg btn-status">out of order</button></li>
+                            <li><button type="button" class="btn btn-gray lg btn-status">out of service</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup-footer">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default lg btn-ok">확인</button>
+                        <button type="button" class="btn btn-default lg btn-cancel" onclick="housekeeperPopup.display(false, '.rmstatus-mask')">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function() {
+
+    });
+</script>
+
+</body>
+</html>

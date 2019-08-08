@@ -185,6 +185,7 @@
 
 @mixin btn-base($wd: auto, $ht: auto, $pd: 6px 12px, $bdr-c: transparent) {
 	display: inline-block;
+	font-family: $font-stack;
     width: $wd;
     height: $ht;
 	padding: $pd;
@@ -213,4 +214,31 @@
 		color: #fff;
 		cursor: default;
 	}
+}
+
+@mixin simple-btn($ht: 30px, $pd: null, $fz: null) {
+	display: inline-block;
+	height: $ht;
+	line-height: $ht;
+	padding: $pd;
+	font-size: $fz;
+}
+
+@mixin simple-badge($ht: 30px) {
+	display: inline-block;
+	width: $ht;
+	height: $ht;
+	line-height: $ht;
+}
+
+@mixin p0-w100($type: absolute) {
+	position: $type;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+@mixin center {
+	display: block;
+	margin: 0 auto;
 }

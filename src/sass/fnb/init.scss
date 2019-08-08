@@ -413,7 +413,7 @@
 	}
 }
 
-/* 아침 식사 영역 */
+/* 아침 식사 영역, 일별판매 */
 .bf-contents {
 	.cont-property {
 		.property-tbl {
@@ -461,7 +461,56 @@
 		.grid-bottom {
 			@include grid-bottom-page;
 		}
-	}
+	} // cont-list
+	.cont-market {
+		margin-top: 10px;
+		.tab-list {
+			@include tab-list;
+		}
+		.item-list {
+			border-top: 1px solid #9f9f9f;
+			padding-top: 10px;
+			margin-top: -1px;
+			.item {
+				display: none;
+				&.on {
+					display: block;
+				}
+				.grid-wrap {
+					@include grid-scr-x;
+					.grid-tbl {
+						th, td {
+							text-align: center;
+							letter-spacing: -0.5px;
+						}
+					}
+					.grid-area.grid-contents {
+						height: 270px;
+						tr {
+							td {
+								background: #fff !important;
+							}
+							&.sat {
+								td {
+									background: $bg-sat-td !important;
+								}
+							}
+							&.sun {
+								td {
+									background: $bg-sun-td !important;
+								}
+							}
+							&:hover {
+								td {
+									background: #f8f8f8 !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	} // cont-market
 }
 
 /* 연회 일정 영역 */
