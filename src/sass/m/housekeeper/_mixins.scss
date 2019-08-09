@@ -128,6 +128,10 @@
 	font-weight: $w;
 	font-family: $fm;
 }
+@mixin ft-lh($s: 13px, $lh: 1.43) {
+	font-size: $s;
+	line-height: $lh;
+}
 
 @mixin zidx($z: 1, $type: relative) {
 	z-index: $z;
@@ -238,7 +242,8 @@
 	width: 100%;
 	height: 100%;
 }
-@mixin center {
+@mixin center-block($w: null) {
 	display: block;
+	width: $w;
 	margin: 0 auto;
 }

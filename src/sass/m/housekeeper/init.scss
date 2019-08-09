@@ -4,26 +4,68 @@
 @import './mixins';
 
 /* 공통 요소 */
+textarea {
+    border-color: #ddd;
+    border-radius: 0;
+    resize: none;
+    padding: 0;
+    margin: 0 auto;
+    color: $font-color;
+    font-family: $font-stack;
+    letter-spacing: normal;
+}
+textarea::placeholder {
+    // color: lighten($font-color, 30%);
+    color: gray
+}
 // button 
-@mixin btn-color($bg: null) {
-    background: $bg;
-    border-color: darken($bg, 10%);
+@mixin btn-outline-color($c: null) {
+    background-color: #fff;
+    border-color: $c;
+    color: $c;
     &:hover {
-        background: darken($bg, 5%);
-        border-color: darken($bg, 15%);
+        background-color: darken(#fff, 5%);
+        border-color: darken($c, 15%);
     }
-    &:not(.btn-default) .badge {
-        background: invert($bg);
+    & .badge {
+        background-color: $c;
+        color: #fff;
+    }
+}
+@mixin btn-color($c: null) {
+    background-color: $c;
+    border-color: darken($c, 10%);
+    &:not(.outline):hover {
+        background-color: darken($c, 5%);
+        border-color: darken($c, 15%);
+    }
+    &:not(.btn-default):not(.outline) .badge {
+        background-color: #fff;
+        color: $c;
     }
     &.btn-default .badge {
-        background: darken($bg, 50%);
+        background-color: darken($c, 50%);
         color: #fff;
+    }
+    &.outline {
+        background: #fff;
+        border-color: $c;
+        color: $c;
+        &:hover {
+            background-color: darken(#fff, 5%);
+            border-color: darken($c, 15%);
+        }
+        .badge {
+            background-color: $c;
+            color: #fff;    
+        }
     }
 }
 @mixin btn-size($pd: null, $fz: null) {
     padding: $pd;
     font-size: $fz;
 }
+
 .btn {
     @include btn-base;
     color: #fff;
@@ -51,11 +93,6 @@
     }
     &.btn-gray {
         @include btn-color($btn-gray);
-    }
-    &.outline {
-        background: none;
-        color: #333;
-        border: 1px solid #333;
     }
     &.no-bd {
         &,
@@ -168,15 +205,11 @@ body.page-housekeeper {
                         flex: 1;
                         text-align: center;
                         &:first-child {
-                            flex: 0.8;
+                            flex: 1.2;
                         }
                     }
                     .btn {
-                        margin: 0 5px;
-                    }
-                    .btn-fake {
-                        margin: 0 5px;
-                        @include size(65px , 1px);
+                        width: 85%;
                     }
                 }
                 &:first-child th .cell {
@@ -225,10 +258,13 @@ body.page-housekeeper {
             $c-dirty: $btn-red;
             $c-ooo: #444;
             @mixin roombox-color($c: null, $fg: #fff) {
-                // background: adjust-color($c, $alpha: -0.8);
+                background-color: $c;
+                border-color: $c;
                 .btn-status {
-                    background: $c;
-                    color: $fg;
+                    position: relative;
+                    background-color: #fff;
+                    border-bottom: 5px solid darken(#fff, 10%);
+                    color: $c;
                 }
             }
             .floorstatus-list > li {
@@ -236,11 +272,12 @@ body.page-housekeeper {
                 $bg-checkout: #c5c5c5;
                 .roombox {
                     position: relative;
-                    margin: 10px;
+                    margin: 15px;
                     background: #fff;
-                    // border: 1px solid #ddd;
-                    border: 2px solid #ddd;
-                    box-shadow:  0px 2px 4px rgba(0,0,0, .1);
+                    border: 1px solid #ededed;
+                    // border: 2px solid #aaa;
+                    // box-shadow:  0px 2px 4px rgba(0,0,0, .1);
+                    box-shadow:  0px 2px 8px rgba(0,0,0, .22);
                     // padding: 5px;
                     // border: 5px solid #d5d5d5;
                     border-radius: 4px;
@@ -249,7 +286,8 @@ body.page-housekeeper {
                         // border-color: $bg-inhouse;
                         .rm-chk {
                             .badge-rmchk {
-                                background: $bg-inhouse;
+                                background: darken($bg-inhouse, 20%);
+                                border: 1px solid darken($bg-inhouse, 10%);
                                 // color: invert($bg-inhouse);
                                 color: #fff;
                             }
@@ -259,7 +297,8 @@ body.page-housekeeper {
                         // border-color: $bg-checkout;
                         .rm-chk {
                             .badge-rmchk {
-                                background: $bg-checkout;
+                                background: darken($bg-checkout, 20%);
+                                border: 1px solid darken($bg-checkout, 10%);
                                 // color: invert($bg-checkout);
                                 color: #fff;
                             }
@@ -272,8 +311,10 @@ body.page-housekeeper {
                         justify-content: space-between;
                         padding: 10px;
                         // border-radius: 4px;
-                        background: rgba(0,0,0, 0.3);
-                        color: #fff;
+                        // background: rgba(0,0,0, 0.5);
+                        border-bottom: 1px solid #ededed;
+                        background: #fff;
+                        // color: #fff;
                         // padding: 10px 5px;
                         // border-top-left-radius: 4px;
                         // border-top-right-radius: 4px;
@@ -288,11 +329,13 @@ body.page-housekeeper {
                             font-size: 24px;
                             text-align: left;
                         }
+                        .rm-type {
+                            font-size: 18px;
+                        }
                         .rm-chk {
                             text-align: right;
                             .badge-rmchk {
                                 @include simple-btn(25px, 0 5px);
-                                border: 1px solid #ccc;
                                 border-radius: 4px;
                             }
                             
@@ -303,13 +346,19 @@ body.page-housekeeper {
                         .btn-status {
                             display: block;
                             width: 50%;
+                            // padding: 20px 0;
+                            padding: 10px 0;
                             margin: 0 auto;
                             line-height: 2;
+                            font-size: 24px;
                             text-transform: uppercase;
                         }
                     }
                     .roombox-footer {
-                        padding: 0px 10px 10px;
+                        // padding: 0px 10px 10px;
+                        padding: 10px;
+                        background: #fff;
+                        border-top: 1px solid #ededed;
                         .btn {
                             .badge {
                                 @include simple-badge(18px);
@@ -322,19 +371,24 @@ body.page-housekeeper {
                     }
                 }
                 .roombox.inspect {
+                    // background-color: lighten($c-inspect, 30%);
                     @include roombox-color($c-inspect);
                 }
                 .roombox.clean {
+                    // background-color: lighten($c-clean, 30%);
                     @include roombox-color($c-clean);
                 }
                 .roombox.working {
+                    // background-color: lighten($c-working, 30%);
                     @include roombox-color($c-working);
                 }
                 .roombox.dirty {
+                    // background-color: lighten($c-dirty, 30%);
                     @include roombox-color($c-dirty);
                 }
                 .roombox.ooo,
                 .roombox.oos {
+                    // background-color: lighten($c-ooo, 30%);
                     @include roombox-color($c-ooo);
                 }
             }
@@ -361,42 +415,35 @@ body.page-housekeeper {
     background-color: rgba(0,0,0, .5);
     transition: opacity .3s ease;
 }
-.popup-wrapper {
-    display: table-cell;
-    vertical-align: middle;
-    .popup-container {
-        position: relative;
-        width: 300px;
-        margin: 0 auto;
-        background: #fff;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+.popup-mask.type-1 {
+    $c-red: #FF3648;
+    $c-blue: #4385F5;
+    .popup-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+        .popup-container {
+            position: relative;
+            width: 300px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+        }
     }
-}
-
-.rmstatus-wrapper {
     .popup-header {
+        border-bottom: 1px solid #ddd;
         .popup-title {
-            padding: 15px 0 10px;
+            padding: 15px 0;
             text-align: center;
             font-size: 24px;
         }
     }
     .popup-body {
-        padding-bottom: 10px;
-        .rmstatus-listbox {
-            .rmstatus-list > li {
-                margin: 5px 10px;
-                .btn-status {
-                    @include center;
-                    width: 90%;
-                    text-transform: uppercase;
-                }
-            }
-        }
+        padding: 10px 0;
+        max-height: 300px;
+        overflow: auto;
     }
     .popup-footer {
         padding: 10px;
-        background-color: lightgray;
         border-top: 1px solid #ddd;
         text-align: center;
         .btn-group {
@@ -407,6 +454,52 @@ body.page-housekeeper {
             // margin: 0 10px;
             & + .btn {
                 // margin-left: 2%;
+            }
+            &.btn-ok {
+                @include btn-color($c-blue);
+            }
+            &.btn-cancel {
+                @include btn-outline-color($c-blue);
+                border-width: 2px;
+            }
+        }
+    }
+}
+
+.rmstatus-wrapper {
+    .popup-body {
+        .rmstatus-listbox {
+            .rmstatus-list > li {
+                margin: 5px 10px;
+                .btn-status {
+                    @include center-block(90%);
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+.memo-wrapper.write {
+    .popup-body {
+        .writebox {
+            display: block;
+            @include size(90%, 200px);
+            padding: 5px;
+        }
+    }
+}
+.memo-wrapper.read {
+    .popup-body {
+        .textbox {
+            @include center(90%);
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            @include ft-lh(16px);
+            font-size: 16px;
+            word-break: keep-all;
+            & + .textbox {
+                margin-top: 5px;
             }
         }
     }
