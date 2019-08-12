@@ -348,8 +348,7 @@ $wrapper-max-wd: 768px;
                         .rm-chk {
                             .badge-rmchk {
                                 background-color: darken($bg-inhouse, 20%);
-                                border: 1px solid darken($bg-inhouse, 5%);
-                                // color: invert($bg-inhouse);
+                                border: 1px solid darken($bg-inhouse, 15%);
                                 color: #fff;
                             }
                         }
@@ -359,8 +358,7 @@ $wrapper-max-wd: 768px;
                         .rm-chk {
                             .badge-rmchk {
                                 background-color: darken($bg-checkout, 20%);
-                                border: 1px solid darken($bg-checkout, 5%);
-                                // color: invert($bg-checkout);
+                                border: 1px solid darken($bg-checkout, 15%);
                                 color: #fff;
                             }
                         }
@@ -398,6 +396,7 @@ $wrapper-max-wd: 768px;
                             .badge-rmchk {
                                 @include simple-btn(25px, 0 5px);
                                 border-radius: 4px;
+                                letter-spacing: -1px;
                             }
                             
                         }
