@@ -247,3 +247,9 @@
 	width: $w;
 	margin: 0 auto;
 }
+
+@mixin media($queryString){
+    @media #{$queryString} {
+      @content;
+    }
+}

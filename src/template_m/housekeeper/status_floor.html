@@ -12,11 +12,19 @@
             <section class="sec floorstatus-sec">
                 <h1 class="skip">층별현황</h1>
                 <div class="floorstatus-count">
-                    <div class="floorstatus-count-tit">
-                        <span class="item">총 수</span> <span class="dot">|</span> <span class="item">Ins</span> <span class="dot">|</span> <span class="item">Dirty</span> <span class="dot">|</span> <span class="item">Work</span> <span class="dot">|</span> <span class="item">Cln</span> <span class="dot">|</span> <span class="item">Oo</span> <span class="dot">|</span> <span class="item">Os</span>
+                    <div class="floorstatus-count-container">
+                        <!-- 관리자 로그인 시 Oo, Os 노출 -->
+                        <div class="floorstatus-count-no">
+                            <span class="item">총 수<br>12</span> <span class="dot">|</span> <span class="item">Ins<br>2</span> <span class="dot">|</span> <span class="item">Dirty<br>3</span> <span class="dot">|</span> <span class="item">Work<br>4</span> <span class="dot">|</span> <span class="item">Cln<br>1</span> <span class="dot">|</span> <span class="item">Oo<br>1</span> <span class="dot">|</span> <span class="item">Os<br>1</span>
+                        </div>
                     </div>
-                    <div class="floorstatus-count-no">
-                        <span class="item">10</span> <span class="dot">|</span> <span class="item">2</span> <span class="dot">|</span> <span class="item">3</span> <span class="dot">|</span> <span class="item">4</span> <span class="dot">|</span> <span class="item">1</span> <span class="dot">|</span> <span class="item">1</span> <span class="dot">|</span> <span class="item">1</span>
+                </div>
+                <div class="floorstatus-count">
+                    <div class="floorstatus-count-container">
+                        <!-- 관리자 로그인 시 Oo, Os 노출 -->
+                        <div class="floorstatus-count-no">
+                            <span class="item">총 수<br>12</span> <span class="dot">|</span> <span class="item">Ins<br>2</span> <span class="dot">|</span> <span class="item">Dirty<br>3</span> <span class="dot">|</span> <span class="item">Work<br>4</span> <span class="dot">|</span> <span class="item">Cln<br>1</span> <span class="dot">|</span> <span class="item">Oo<br>1</span> <span class="dot">|</span> <span class="item">Os<br>1</span>
+                        </div>
                     </div>
                 </div>
                 <div class="floorstatus-listbox">
@@ -26,7 +34,7 @@
                                 <div class="roombox-header">
                                     <span class="rm rm-no">1203호</span>
                                     <span class="rm rm-type">DTW</span>
-                                    <span class="rm rm-chk"><span class="badge-rmchk">inhouse</span></span>
+                                    <span class="rm rm-chk"><span class="badge-rmchk">InHouse</span></span>
                                 </div>
                                 <div class="roombox-body">
                                     <button type="button" class="btn lg btn-status" onclick="housekeeperPopup.display(true, 'rmstatus')">inspect</button>
@@ -43,7 +51,7 @@
                                 <div class="roombox-header">
                                     <span class="rm rm-no">1204호</span>
                                     <span class="rm rm-type">DTW</span>
-                                    <span class="rm rm-chk"><span class="badge-rmchk">checkout</span></span>
+                                    <span class="rm rm-chk"><span class="badge-rmchk">CheckOut</span></span>
                                 </div>
                                 <div class="roombox-body">
                                     <button type="button" class="btn lg btn-status" onclick="housekeeperPopup.display(true, 'rmstatus')">dirty</button>
@@ -58,7 +66,7 @@
                                 <div class="roombox-header">
                                     <span class="rm rm-no">1205호</span>
                                     <span class="rm rm-type">DTW</span>
-                                    <span class="rm rm-chk"><span class="badge-rmchk">checkout</span></span>
+                                    <span class="rm rm-chk"><span class="badge-rmchk">CheckOut</span></span>
                                 </div>
                                 <div class="roombox-body">
                                     <button type="button" class="btn lg btn-status" onclick="housekeeperPopup.display(true, 'rmstatus')">clean</button>
@@ -73,7 +81,22 @@
                                 <div class="roombox-header">
                                     <span class="rm rm-no">1206호</span>
                                     <span class="rm rm-type">DTW</span>
-                                    <span class="rm rm-chk"><span class="badge-rmchk">checkout</span></span>
+                                    <span class="rm rm-chk"><span class="badge-rmchk">CheckOut</span></span>
+                                </div>
+                                <div class="roombox-body">
+                                    <button type="button" class="btn lg btn-status" onclick="housekeeperPopup.display(true, 'rmstatus')">working</button>
+                                </div>
+                                <div class="roombox-footer">
+                                    <button type="button" class="btn btn-default" onclick="housekeeperPopup.display(true, 'memo-write')">메모</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="roombox ooo" data-roomchk="checkout">
+                                <div class="roombox-header">
+                                    <span class="rm rm-no">1206호</span>
+                                    <span class="rm rm-type">DTW</span>
+                                    <span class="rm rm-chk"><span class="badge-rmchk">CheckOut</span></span>
                                 </div>
                                 <div class="roombox-body">
                                     <button type="button" class="btn lg btn-status" onclick="housekeeperPopup.display(true, 'rmstatus')">working</button>
@@ -161,16 +184,8 @@
 
 <script>
     $(function() {
-        // $('body').on("scroll touchmove mousewheel", function(e) {
-        //     return false;
-        // });
-        // $('body').on('scroll touchmove mousewheel DOMMouseScroll', function(e){ return false});
 
     });
-    // $(document).on("mousewheel.disableScroll DOMMouseScroll.disableScroll touchmove.disableScroll", function(e) {
-    //     // e.preventDefault();
-    //     return;
-    // });
 </script>
 
 </body>

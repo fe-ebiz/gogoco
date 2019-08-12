@@ -48,7 +48,7 @@ textarea::placeholder {
         color: #fff;
     }
     &.outline {
-        background: #fff;
+        background-color: #fff;
         border-color: $c;
         color: $c;
         &:hover {
@@ -120,23 +120,60 @@ textarea::placeholder {
     }
 }
 
-body.page-housekeeper {
+$wrapper-max-wd: 768px;
+.page-housekeeper {
+    $wrapper-max-wd: 768px;
     font-family: $font-stack;
     color: $font-color;
     line-height: 1;
 }
-.page-housekeeper .wrapper {
+
+.page-housekeeper {
+    @include media("(min-width: 768px)") {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+}
+
+.page-housekeeper {
     position: relative;
-    max-width: 360px;
-    height: 1080px;
+    max-width: $wrapper-max-wd;
     margin: 0 auto;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
+    // border-left: 1px solid #ddd;
+    // border-right: 1px solid #ddd;
+    // overflow: hidden;
+}
+
+/* 스크롤 이동시 트랜지션 */
+.page-housekeeper {
+    .header,
+    .floorstatus-count {
+        max-width: $wrapper-max-wd;
+        transition: all 0.8s;
+    }
+
+}
+
+.page-housekeeper.affix {
+    .header,
+    .floorstatus-count {
+        @include pos(fixed, 0);
+        z-index: 10;
+    }
+    .header {
+        z-index: 11;
+    }
+    /* 스크롤 높이 오버시 */
+    .header.over, 
+    .floorstatus-count.over {
+        box-shadow: 0 4px 8px rgba(0,0,0, .08);
+    }
 }
 
 /* 해더 영역 */
 .page-housekeeper .header {
-    background: #fff;
+    background-color: #fff;
+    width: 100%;
     .cont-header {
         border-bottom: 1px solid #ddd;
         .sta {
@@ -179,7 +216,7 @@ body.page-housekeeper {
                 display: block;
                 // font-size: 24px;
                 @include size(8px, 2px);
-                background: #333;
+                background-color: #333;
                 margin: 10px auto 0;
                 // margin-top: 10px;
             }
@@ -228,35 +265,44 @@ body.page-housekeeper {
 }
 
 .floorstatus-contents {
-    // background: #f7f7f7;
+    // background-color: #f7f7f7;
     .floorstatus-sec {
         .floorstatus-count {
-            padding: 10px 0;
+            width: 100%;
+            padding: 5px 0;
+            background-color: #fff;
             border-bottom: 1px solid #ddd;
-            .floorstatus-count-tit,
+            .floorstatus-count-container {
+                padding: 5px 0;
+                margin: 0 5px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
             .floorstatus-count-no {
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
-                background: #fff;
                 font-size: 14px;
                 color: #444;
+                line-height: 1.25;
                 .dot {
-                    font-size: 12px;
+                    @include pos(relative, 1px);
+                    font: 0/0 sans-serif;
+                    &:before {
+                        content: '';
+                        display: inline-block;
+                        // @include pos(absolute, -2px, 0);
+                        @include pos(absolute, 50%);
+                        transform: translateY(-50%);
+                        width: 1px;
+                        height: 24px;
+                        // background-color: #aaa;
+                        background-color: #ddd;
+                    }
                 }
                 .item {
                     flex: 1;
                     text-align: center;
-                }
-            }
-            .floorstatus-count-tit {
-                .dot {
-                    @include pos(relative, 2px);
-                }
-            }
-            .floorstatus-count-no {
-                .dot {
-                    @include pos(relative, -2px);
                 }
             }
         }
@@ -276,17 +322,19 @@ body.page-housekeeper {
                 .btn-status {
                     position: relative;
                     background-color: #fff;
-                    border-bottom: 5px solid darken(#fff, 10%);
+                    border-bottom: 3px solid darken(#fff, 10%);
                     color: $c;
                 }
             }
             .floorstatus-list > li {
                 $bg-inhouse: #C0B5A6;
                 $bg-checkout: #c5c5c5;
+                // $bg-inhouse: #C0B5b6;
+                // $bg-checkout: #c5c5cc;
                 .roombox {
                     position: relative;
                     margin: 15px;
-                    background: #fff;
+                    background-color: #fff;
                     border: 1px solid #ededed;
                     // border: 2px solid #aaa;
                     // box-shadow:  0px 2px 4px rgba(0,0,0, .1);
@@ -299,8 +347,8 @@ body.page-housekeeper {
                         // border-color: $bg-inhouse;
                         .rm-chk {
                             .badge-rmchk {
-                                background: darken($bg-inhouse, 20%);
-                                border: 1px solid darken($bg-inhouse, 10%);
+                                background-color: darken($bg-inhouse, 20%);
+                                border: 1px solid darken($bg-inhouse, 5%);
                                 // color: invert($bg-inhouse);
                                 color: #fff;
                             }
@@ -310,8 +358,8 @@ body.page-housekeeper {
                         // border-color: $bg-checkout;
                         .rm-chk {
                             .badge-rmchk {
-                                background: darken($bg-checkout, 20%);
-                                border: 1px solid darken($bg-checkout, 10%);
+                                background-color: darken($bg-checkout, 20%);
+                                border: 1px solid darken($bg-checkout, 5%);
                                 // color: invert($bg-checkout);
                                 color: #fff;
                             }
@@ -324,14 +372,14 @@ body.page-housekeeper {
                         justify-content: space-between;
                         padding: 10px;
                         // border-radius: 4px;
-                        // background: rgba(0,0,0, 0.5);
+                        // background-color: rgba(0,0,0, 0.5);
                         border-bottom: 1px solid #ededed;
-                        background: #fff;
+                        background-color: #fff;
                         // color: #fff;
                         // padding: 10px 5px;
                         // border-top-left-radius: 4px;
                         // border-top-right-radius: 4px;
-                        // background: rgba(0,0,0, 0.05);
+                        // background-color: rgba(0,0,0, 0.05);
                         // color: #444;
                         .rm {
                             flex: 1;
@@ -370,7 +418,7 @@ body.page-housekeeper {
                     .roombox-footer {
                         // padding: 0px 10px 10px;
                         padding: 10px;
-                        background: #fff;
+                        background-color: #fff;
                         border-top: 1px solid #ededed;
                         .btn {
                             .badge {
@@ -417,7 +465,7 @@ body.page-housekeeper {
     @include p0-w100;
 }
 .bg-back {
-    background: #000;
+    background-color: #000;
     opacity: 0.7;
     filter: alpha(opacity=70);
 }
@@ -438,7 +486,7 @@ body.page-housekeeper {
             position: relative;
             width: 300px;
             margin: 0 auto;
-            background: #fff;
+            background-color: #fff;
             box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
         }
     }
