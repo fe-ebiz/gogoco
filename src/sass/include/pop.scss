@@ -65,137 +65,14 @@
 		margin: 65px auto 0;
 		box-shadow: 0px 0px 1px 1px rgba(0,0,0, 0.15);
 	}
-	$btn-lh: 1.5;
-	.btn-gray {
-		@include btn-gray(null, null, 12px, 3px 8px 2px);
-		line-height: $btn-lh;
-	}
-	.btn-gray-2 {
-		@include btn-gray-2(null, null, 12px, 3px 8px 2px);
-		line-height: $btn-lh;
-	}
-	.btn-green {
-		@include btn-green(null, null, 12px, 3px 8px 2px);
-		line-height: $btn-lh;
-	}
-	.btn-red {
-		@include btn-red(null, null, 12px, 3px 8px 2px);
-		line-height: $btn-lh;
-	}
-	.btn-blue {
-		@include btn-blue(null, null, 12px, 3px 8px 2px);
-		line-height: $btn-lh;
-	}
-	.btn-brown {
-		@include btn-brown(null, null, 12px, 3px 8px 2px);
-		line-height: $btn-lh;
-	}
+	.btn-gray,
+	.btn-gray-2,
+	.btn-green,
+	.btn-red,
+	.btn-blue, 
+	.btn-brown,
 	.btn-orange {
-		@include btn-orange(null, null, 12px, 3px 8px 2px);
-		line-height: $btn-lh;
-	}
-
-	.form-select {
-		@include slt-base(100%);
-	}
-	.form-input {
-		@include form-base(100%);
-	}
-	.inp-drop-box {
-		position: relative;
-		// z-index: 1;
-		.form-input {
-			// z-index: 1;
-		}
-		.drop-menu {
-			display: none;
-			position: absolute;
-			z-index: 9;
-			top: 24px;
-			left: 0px;
-			width: 100%;
-			max-height: 200px;
-			overflow: auto;
-			box-sizing: border-box;
-			border: 1px solid #c7c7c7;
-			background: #fff;
-			> li {
-				padding: 2px 5px;
-				cursor: pointer;
-				&:hover {
-					background: $fg-orange-1;
-					color: #fff;
-				}
-			}
-		}
-		.ic-del {
-			@include position(absolute, 5px, null, null, 3px);
-			margin-left: auto;
-			z-index: 1;
-			cursor: pointer;
-		}
-	}
-
-	.hSpace-5 {
-		font-size: 1px;
-		line-height: 1px;
-		height: 5px;
-	}
-	.cal-box {
-		@include va;
-		min-width: 105px;
-		height: 25px;
-		box-sizing: border-box;
-		background: #fff;
-		border: 1px solid $bor-gray-table;
-		// border-radius: 4px;
-		> * {
-			outline: none;
-		}
-		.inp-cal {
-			@include form-base(100%, null, 4px);
-			box-shadow: none;
-			border: none;
-			background: none;
-			text-align: left;
-			position: relative;
-			top: -1px;
-			z-index: 1;
-		}
-		.i-cal {
-			@include dp;
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 24px;
-			height: 100%;
-			// border-radius: 4px;
-			border-top-left-radius: 0;
-			border-bottom-left-radius: 0;
-			text-align: center;
-			cursor: pointer;
-			border-left: 1px solid $bor-gray-table;
-			// background-image: none,-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.6)),to(rgba(255,255,255,0)));
-			// background-image: none,-webkit-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
-			// background-image: none,linear-gradient(to bottom,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
-			// background-position: 50% 50%;
-			// background-color: #eae8e8;
-			background: #ebebeb;
-			img {
-				@include position(absolute, 3px, 4px);
-			}
-		}
-		.inp-cal[disabled] + .i-cal {
-			z-index: 1;
-		}
-        .mg- {
-            vertical-align: middle;
-        }
-	}
-	.textarea-etc {
-		@include texta-base(150px, 80px, vertical);
-		border: 1px solid #ccc;
-		text-align: left;
+		padding-bottom: 2px;
 	}
 }
 @mixin pop-header-base {
@@ -317,7 +194,7 @@
 /* 세금 설정 */
 .pop-container.rate-container {
 	.pop-wrapper {
-		width: 1190px;
+		width: 1250px;
 		.pop-header {
 			@include pop-header-base;
 		}
@@ -431,13 +308,15 @@
 				}
 			}
 			.popcont-container.split-1 {
-				width: 350px;
+				// width: 350px;
+				width: 31%;
 				.cont-list .grid-wrap .grid-area.grid-contents {
 					height: 310px;
 				}
 			}
 			.popcont-container.split-2 {
-				width: 790px;
+				// width: 790px;
+				width: 68.1%;
 				margin-left: 10px;
 			}
 		}

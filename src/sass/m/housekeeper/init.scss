@@ -230,21 +230,34 @@ body.page-housekeeper {
 .floorstatus-contents {
     // background: #f7f7f7;
     .floorstatus-sec {
-        .floorstatus-total {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
+        .floorstatus-count {
             padding: 10px 0;
-            background: #fff;
             border-bottom: 1px solid #ddd;
-            font-size: 14px;
-            color: #444;
-            .dot {
-                font-size: 9px;
+            .floorstatus-count-tit,
+            .floorstatus-count-no {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                background: #fff;
+                font-size: 14px;
+                color: #444;
+                .dot {
+                    font-size: 12px;
+                }
+                .item {
+                    flex: 1;
+                    text-align: center;
+                }
             }
-            .item {
-                flex: 1;
-                text-align: center;
+            .floorstatus-count-tit {
+                .dot {
+                    @include pos(relative, 2px);
+                }
+            }
+            .floorstatus-count-no {
+                .dot {
+                    @include pos(relative, -2px);
+                }
             }
         }
         .floorstatus-listbox {
