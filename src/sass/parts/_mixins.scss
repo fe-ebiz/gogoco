@@ -1488,6 +1488,13 @@ $btn-lh: 1.5;
 						border-bottom: 1px solid $bd-c;
 					}
 				}
+				td {
+					color: #444;
+					font-weight: 700;
+					&:not(.bor)	{
+						border-bottom: none;
+					}
+				}
 			}
 		}
 
@@ -1727,6 +1734,13 @@ $btn-lh: 1.5;
 
 					&.bor {
 						border-bottom: 1px solid $bd-c;
+					}
+				}
+				td {
+					color: #444;
+					font-weight: 700;
+					&:not(.bor)	{
+						border-bottom: none;
 					}
 				}
 			}

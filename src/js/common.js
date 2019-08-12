@@ -391,12 +391,17 @@ function quickMenuPop() {
 
 }
 
-//  groupDraggable 클래스 기능 구현
+//  groupDraggable 클래스 UI 기능 구현
 function GroupDraggable(dragItem, dropArea) {
 	this.dragItem = $(dragItem);
 	this.dropArea = $(dropArea);
 	this.dragUiText = '';
 	this.dropHolderHtml = $('<div class="drop-holder-text">그룹화할 항목을 끌어다 놓아주세요.</div>');
+	this.addGroup_col = $('.draggable-wrap .grid-tbl > colgroup');
+	this.addGroup_tr = $('.draggable-wrap .grid-tbl .rowgroup > tr');
+	this.addGroup_contents = $('.draggable-wrap .grid-contents .grid-tbl .rowgroup > tr');
+	this.addItem_col = $('<col class="grouping-row">');
+	this.addItem_tr = $('<td class="grouping-row"></td>');
 
 	this.init();
 }
@@ -442,6 +447,11 @@ GroupDraggable.prototype = {
 				}
 				var currentObj = $(this);
 				var currentText = $(this).text();
+				console.log(currentText);
+				console.log(_this.addGroup_col);
+				console.log(_this.addGroup_tr);
+				_this.addItem_col.prependTo(_this.addGroup_col);
+				_this.addItem_tr.prependTo(_this.addGroup_tr);
 				$(".fn-drag-btn").filter(function() {
 					if ($(this).text() == currentText) {
 						currentObj.draggable('disable');
