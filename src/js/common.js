@@ -397,16 +397,44 @@ function GroupDraggable(dragItem, dropArea) {
 	this.dropArea = $(dropArea);
 	this.dragUiText = '';
 	this.dropHolderHtml = $('<div class="drop-holder-text">그룹화할 항목을 끌어다 놓아주세요.</div>');
-	this.addGroup_col = $('.draggable-wrap .grid-tbl > colgroup');
-	this.addGroup_tr = $('.draggable-wrap .grid-tbl .rowgroup > tr');
-	this.addGroup_contents = $('.draggable-wrap .grid-contents .grid-tbl .rowgroup > tr');
-	this.addItem_col = $('<col class="grouping-row">');
-	this.addItem_tr = $('<td class="grouping-row"></td>');
+	this.addGroup_wrap = $(
+		'.draggable-wrap .grid-toolbar' +
+		', ' +
+		'.draggable-wrap .grid-head' +
+		', ' +
+		'.draggable-wrap .grid-contents' + 
+		', ' +
+		'.draggable-wrap .grid-total'
+	);
+	this.dragWrap = $('.draggable-wrap');
+	this.addGroup_hdTbl = this.dragWrap.find('.grid-head .grid-tbl');
+	this.addGroup_col = this.dragWrap.find('.grid-tbl > colgroup');
+	this.addGroup_tr = this.dragWrap.find('.rowgroup > tr');
+	this.addItem_wd = 25;
+	this.addItem_col = '<col class="grouping-row" style="width: ' + this.addItem_wd + 'px">';
+	this.addItem_tr = '<td class="grouping-row"></td>';
+	this.addGroup_contents = this.dragWrap.find('.grid-contents .grid-tbl');
+	this.contentColgroup = this.addGroup_contents.find('> colgroup');
+	this.contentRowgroup = this.addGroup_contents.find('> .rowgroup');
 
 	this.init();
 }
 GroupDraggable.prototype = {
 	constructor : GroupDraggable,
+	folderFn : function() {
+		var _this = this;
+		_this.dragWrap.on('click', '.grouping-folder', function() {
+			var grouping_point = $(this).closest('tr').nextUntil('tr.grouping-dep-1');
+			$(this).toggleClass('fold');
+			if ($(this).hasClass('fold')) {
+				grouping_point.find('.grouping-folder').addClass('fold');
+				grouping_point.hide();
+			} else {
+				grouping_point.find('.grouping-folder').removeClass('fold');
+				grouping_point.show();
+			}
+		});
+	},
 	dragBtnLength : function() {
 		var dragBtnLength  = $('.fn-droppable .fn-drag-btn').length;
 		return dragBtnLength;
@@ -447,12 +475,9 @@ GroupDraggable.prototype = {
 				}
 				var currentObj = $(this);
 				var currentText = $(this).text();
-				console.log(currentText);
-				console.log(_this.addGroup_col);
-				console.log(_this.addGroup_tr);
-				_this.addItem_col.prependTo(_this.addGroup_col);
-				_this.addItem_tr.prependTo(_this.addGroup_tr);
-				$(".fn-drag-btn").filter(function() {
+				// console.log(currentText);
+				var dragBtn = $(".fn-drag-btn");
+				dragBtn.filter(function() {
 					if ($(this).text() == currentText) {
 						currentObj.draggable('disable');
 					}
@@ -470,6 +495,52 @@ GroupDraggable.prototype = {
 				var dropItem = $('<a href="javascript:;" class="fn-drag-btn">' + _this.dragUiText + '<span class="icon ic-x"></span></a>');
 				var droppable = $(this);
 				dropItem.clone().appendTo(droppable);
+
+				_this.addGroup_col.prepend(_this.addItem_col);
+				_this.addGroup_tr.prepend(_this.addItem_tr);
+				_this.addGroup_wrap.css({ width: '+=' + _this.addItem_wd })
+				var wrapWd = _this.addGroup_wrap.outerWidth();
+				_this.addGroup_hdTbl.css({ width: (wrapWd - 17) })
+
+				var dragBtn = $(".fn-drag-btn");
+				var colLength = _this.contentColgroup.children('col').length;
+				var dragBtnLength = dragBtn.length;
+				// 드래그 전 colLength - 1
+				// console.log(colLength);
+				// console.log(dragBtnLength);
+
+				if (dragBtnLength == 1) {
+					var addGroup_dep = 
+					'<tr class="grouping-dep-' + dragBtnLength + '">' +
+					'<td class="ta-left dep-item" colspan="' + colLength + '">' +
+					'<div class="cell">' +
+					'<span class="grouping-folder"></span>' + _this.dragUiText +
+					'</div>' +
+					'</td>' +
+					'</tr>';
+					_this.contentRowgroup.prepend(addGroup_dep);
+				} else {
+					var addItem_td = '';
+					for (var i = 1; i < dragBtnLength ; i++) {
+						addItem_td += _this.addItem_tr;
+					}
+					var addGroup_dep = 
+					'<tr class="grouping-dep-' + dragBtnLength + '">' +
+					addItem_td +
+					'<td class="ta-left dep-item" colspan="' + (colLength-(dragBtnLength-1)) + '">' +
+					'<div class="cell">' +
+					'<span class="grouping-folder"></span>' + _this.dragUiText +
+					'</div>' +
+					'</td>' +
+					'</tr>';
+					
+					_this.contentRowgroup.find('tr[class*=grouping-dep] > td.dep-item').each(function(index, item) {
+						var itemColspan = parseInt($(item).attr('colspan'), 10);
+						$(item).attr('colspan', itemColspan+1);
+					});
+					_this.contentRowgroup.find('tr.grouping-dep-' + (dragBtnLength-1)).after(addGroup_dep);
+
+				}
 			},
 		});
 	},
@@ -479,6 +550,9 @@ GroupDraggable.prototype = {
 			axis: 'x',
 			cursorAt: {left: 5},
 			contain_thisnt: 'parent',
+			update: function(event, ui) {
+				console.log('순서 변경 이벤트 발생');
+			}
 			// start: function(e, ui){
 			// 	ui.placeholder.height(ui.item.outerHeight());
 			// }
@@ -488,11 +562,28 @@ GroupDraggable.prototype = {
 		var _this  = this;
 		_this.dropArea.on('click', '.fn-drag-btn .ic-x', function() {
 			var currentText = $(this).closest('.fn-drag-btn').text();
+			var dragBtnLength = _this.dragBtnLength();
+
+			_this.addGroup_col.each(function(index, item) {
+				$(item).find('col').eq(0).remove();
+			});
+			_this.addGroup_tr.each(function(index, item) {
+				$(item).find('td.grouping-row').eq(0).remove();
+			});
+			_this.addGroup_wrap.css({ width: '-=' + _this.addItem_wd })
+			var wrapWd = _this.addGroup_wrap.outerWidth();
+			_this.addGroup_hdTbl.css({ width: (wrapWd - 17) })
+
+			_this.contentRowgroup.find('tr.grouping-dep-' + dragBtnLength).remove();
+
+			_this.contentRowgroup.find('tr[class*=grouping-dep] > td.dep-item').each(function(index, item) {
+				var itemColspan = parseInt($(item).attr('colspan'), 10);
+				$(item).attr('colspan', itemColspan-1);
+			});
 			
 			$(this).closest('a').remove();
-			var dragBtnLength = _this.dragBtnLength();
-			console.log(dragBtnLength);
-			if (dragBtnLength == 0) {
+			var dragBtnLength_after = _this.dragBtnLength();
+			if (dragBtnLength_after == 0) {
 				_this.dropHolderPrepend();
 				_this.dragItem.draggable('enable');
 			} else {
@@ -506,6 +597,7 @@ GroupDraggable.prototype = {
 		});
 	},
 	init : function() {
+		this.folderFn();
 		this.dropHolderFn();
 		this.dragFn();
 		this.dropFn();

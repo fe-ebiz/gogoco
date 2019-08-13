@@ -1326,7 +1326,7 @@ $btn-lh: 1.5;
 	// }
 	.grid-toolbar {
 		@include grid-toolbar;
-		width: calc(#{$scr-wth} - 17px);
+		width: $scr-wth;
 		border: none;
 		margin-bottom: 0;
 		border-bottom: 1px solid $bd-c;
@@ -1343,6 +1343,29 @@ $btn-lh: 1.5;
 		border: none;
 		border-right: 1px solid $bd-c;
 
+		col.grouping-row {
+			width: 25px;
+		}
+		tr[class*=grouping-dep] {
+			th, td {
+				background: #e8e8e8 !important;
+				.cell {
+					.grouping-folder {
+						font-size: 9px;
+						margin-right: 3px;
+						cursor: pointer;
+						&:after {
+							content: '▼';
+							display: inline-block;
+						}
+						&.fold:after {
+							content: '▶';
+						}
+					}
+				}
+			}
+		}
+		
 		th,
 		td {
 			// min-height: 39px;
@@ -1441,15 +1464,8 @@ $btn-lh: 1.5;
 		@if $scr-wth != 100% {
 			overflow-x: scroll;
 
-			&:after {
-				content: "";
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				display: block;
-				height: 1px;
-				width: $scr-wth;
-				background: $bd-c;
+			.grid-total {
+				border-bottom: 1px solid $bor-gray-table;
 			}
 		}
 		@else {
@@ -1463,7 +1479,7 @@ $btn-lh: 1.5;
 
 		&.grid-head {
 			.grid-scrollable {
-				width: $scr-wth;
+				width: 100%;
 				background: $bg-tblBase-th;
 				border-bottom: 1px solid $bd-c;
 				// background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
@@ -1553,7 +1569,7 @@ $btn-lh: 1.5;
 				}
 			}
 			.grid-scrollable {
-				width: $scr-wth;
+				width: 100%;
 				background-color: #f5f5f5;
 				border-top: 1px solid #c5c5c5;
 				.grid-tbl {
@@ -1593,6 +1609,29 @@ $btn-lh: 1.5;
 		border: none;
 		border-right: 1px solid $bd-c;
 
+		col.grouping-row {
+			width: 25px;
+		}
+		tr[class*=grouping-dep] {
+			th, td {
+				background: #e8e8e8 !important;
+				.cell {
+					.grouping-folder {
+						font-size: 9px;
+						margin-right: 3px;
+						cursor: pointer;
+						&:after {
+							content: '▼';
+							display: inline-block;
+						}
+						&.fold:after {
+							content: '▶';
+						}
+					}
+				}
+			}
+		}
+		
 		th,
 		td {
 			// min-height: 39px;
@@ -1691,15 +1730,8 @@ $btn-lh: 1.5;
 		@if $scr-wth != 100% {
 			overflow-x: scroll;
 
-			&:after {
-				content: "";
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				display: block;
-				height: 1px;
-				width: $scr-wth;
-				background: $bd-c;
+			.grid-total {
+				border-bottom: 1px solid $bor-gray-table;
 			}
 		}
 	}
@@ -1710,7 +1742,7 @@ $btn-lh: 1.5;
 
 		&.grid-head {
 			.grid-scrollable {
-				width: $scr-wth;
+				width: 100%;
 				background: $bg-tblBase-th;
 				border-bottom: 1px solid $bd-c;
 				// background-image: none, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .6)), to(rgba(255, 255, 255, 0)));
@@ -1756,7 +1788,7 @@ $btn-lh: 1.5;
 
 					th,
 					td {
-						background: #fbfbfb;
+						// background: #fbfbfb;
 						background: #f1f1f1;
 					}
 				}
@@ -1800,7 +1832,7 @@ $btn-lh: 1.5;
 				}
 			}
 			.grid-scrollable {
-				width: $scr-wth;
+				width: 100%;
 				background-color: #f5f5f5;
 				border-top: 1px solid #c5c5c5;
 				.grid-tbl {
@@ -1944,15 +1976,8 @@ $btn-lh: 1.5;
 		@if $scr-wth != 100% {
 			overflow-x: scroll;
 
-			&:after {
-				content: "";
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				display: block;
-				height: 1px;
-				width: $scr-wth;
-				background: $bd-c;
+			.grid-total {
+				border-bottom: 1px solid $bor-gray-table;
 			}
 		}
 

@@ -344,30 +344,18 @@
 									<col>
 								</colgroup>
 								<tbody class="rowgroup">
-									<style>
-										/* .grid-wrap .grid-toolbar, */
-										.grid-wrap .grid-area {
-											width: calc(4050px + (25px * 3)) !important;
-										}
-										.grid-wrap .grouping-row {width: 25px;}
-										.cell .grouping-folder {
-											font-size: 9px;
-
-										}
-										tr[class*=grouping-dep] td {background: #f0f0f0 !important;}
-									</style>
 									<tr class="grouping-dep-1">
 										<td colspan="39" class="ta-left">
-											<div class="cell">
-												<span class="grouping-folder">▼</span> 이름
+											<div class="cell dep-item">
+												<span class="grouping-folder"></span> 이름
 											</div>
 										</td>
 									</tr>
 									<tr class="grouping-dep-2">
 										<td class="grouping-row"></td>
 										<td colspan="38" class="ta-left">
-											<div class="cell">
-												<span class="grouping-folder">▼</span> 객실#
+											<div class="cell dep-item">
+												<span class="grouping-folder"></span> 객실#
 											</div>
 										</td>
 									</tr>
@@ -375,8 +363,8 @@
 										<td class="grouping-row"></td>
 										<td class="grouping-row"></td>
 										<td colspan="37" class="ta-left">
-											<div class="cell">
-												<span class="grouping-folder">▼</span> 객실유형
+											<div class="cell dep-item">
+												<span class="grouping-folder"></span> 객실유형
 											</div>
 										</td>
 									</tr>
@@ -475,7 +463,7 @@
 									<tr class="grouping-dep-1">
 										<td colspan="39" class="ta-left">
 											<div class="cell">
-												<span class="grouping-folder">▼</span> 이름
+												<span class="grouping-folder"></span> 이름
 											</div>
 										</td>
 									</tr>
@@ -483,7 +471,7 @@
 										<td class="grouping-row"></td>
 										<td colspan="38" class="ta-left">
 											<div class="cell">
-												<span class="grouping-folder">▼</span> 객실#
+												<span class="grouping-folder"></span> 객실#
 											</div>
 										</td>
 									</tr>
@@ -492,7 +480,7 @@
 										<td class="grouping-row"></td>
 										<td colspan="37" class="ta-left">
 											<div class="cell">
-												<span class="grouping-folder">▼</span> 객실유형
+												<span class="grouping-folder"></span> 객실유형
 											</div>
 										</td>
 									</tr>
@@ -634,6 +622,15 @@
 							</table>
 						</div>
 					</div>
+					<style>
+						.draggable-wrap .grid-toolbar,
+						.draggable-wrap .grid-area {
+							width: calc(4050px + (25px * 3)) !important;
+						}
+						.draggable-wrap .grid-area.grid-head .grid-tbl {
+							width: calc(4050px + (25px * 3) - 17px) !important;
+						}
+					</style>
 				</div>
 
 				<!-- //.grid-wrap -->
