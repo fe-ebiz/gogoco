@@ -1,0 +1,183 @@
+@@include('../include/_head.html', {
+	"page": "report"
+})
+
+<body class="page-report">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="cf contents report-contents sales-dailyBk">
+
+		@@include('../include/_row_h2.html', {
+			"page-title": "일별 예약"
+		})
+
+		<div class="cf cont-container-f">
+			<div class="cont-property">
+				<div class="grid-wrap">
+					<div class="grid-contents">
+						<table class="grid-tbl property-tbl">
+							<colgroup>
+								<col style="width: 100px">
+								<col style="width: 220px">
+								<col style="width: 100px">
+								<col>
+							</colgroup>	
+							<tbody>
+								<tr>
+									<th><div class="cell">속성</div></th>
+									<td>
+										<div class="cell">
+											<select name="" id="" class="form-select gray">
+												<option value="">Ramada pt</option>
+											</select>
+										</div>
+									</td>
+									<th><div class="cell">날짜</div></th>
+									<td>
+										<div class="cell">
+											<span class="cal-box">
+												<input type="text" class="appe-reset inp-cal date-ui">
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+											</span>
+											<span class="mg-">~</span>
+											<span class="cal-box">
+												<input type="text" class="appe-reset inp-cal date-ui">
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+											</span>
+											<button type="button" class="btn-gray"><span class="prev">◀</span></button>
+											<button type="button" class="btn-gray"><span class="next">▶</span></button>
+											<span class="chk-box">
+												<label><input type="checkbox"><span>O.O.O</span></label>
+												<label><input type="checkbox"><span>House Use</span></label>
+												<label><input type="checkbox"><span>Comp</span></label>
+											</span>
+											<button type="button" class="btn-brown">SEARCH</button>
+											<button type="button" class="btn-gray"><span class="icon ic-excel"></span> Excel</button>
+											<button type="button" class="btn-gray"><span class="icon ic-pdf"></span> PDF</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- /.cont-property -->
+
+			<div class="cont-list">
+				<div class="grid-wrap scr-wrap">
+					<div class="grid-scrollable-x">
+						<div class="grid-area grid-head">
+							<div class="grid-scrollable">
+								<table class="grid-tbl">
+									<colgroup>
+										<col style="width:158px">
+										<col style="width:79px">
+										<col style="width:111px">
+										<col style="width:63px">
+										<col style="width:63px">
+										<col style="width:71px">
+										<col style="width:111px">
+										<col style="width:111px">
+										<col style="width:78px">
+										<col style="width:78px">
+										<col style="width:78px">
+										<col style="width:78px">
+										<col style="width:78px">
+										<col style="width:78px">
+										<col style="width:125px">
+										<col style="width:188px">
+										<col style="width:110px">
+										<col>
+									</colgroup>
+									<thead class="rowgroup">
+										<tr>
+											<th rowspan="2"><div class="cell">날짜</div></th>
+											<th rowspan="2"><div class="cell">요일</div></th>
+											<th rowspan="2"><div class="cell">합계</div></th>
+											<th rowspan="2"><div class="cell">OOO</div></th>
+											<th rowspan="2"><div class="cell">H/U</div></th>
+											<th rowspan="2"><div class="cell">Comp</div></th>
+											<th rowspan="2"><div class="cell">Sold</div></th>
+											<th rowspan="2"><div class="cell">Avail</div></th>
+											<th colspan="2" class="bor"><div class="cell">Arrival</div></th>
+											<th colspan="2" class="bor"><div class="cell">Stayover</div></th>
+											<th colspan="2" class="bor"><div class="cell">Departure</div></th>
+											<th rowspan="2"><div class="cell">ADR</div></th>
+											<th rowspan="2"><div class="cell">Revenue</div></th>
+											<th rowspan="2"><div class="cell">Rev.Par</div></th>
+											<th rowspan="2"><div class="cell">Occ(%)</div></th>
+										</tr>
+										<tr>
+											<th><div class="cell">FIT</div></th>
+											<th><div class="cell">Group</div></th>
+											<th><div class="cell">FIP</div></th>
+											<th><div class="cell">Group</div></th>
+											<th><div class="cell">FIP</div></th>
+											<th><div class="cell">Group</div></th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div class="grid-area grid-contents">
+							<table class="grid-tbl">
+								<colgroup>
+									<col style="width:158px">
+									<col style="width:79px">
+									<col style="width:111px">
+									<col style="width:63px">
+									<col style="width:63px">
+									<col style="width:71px">
+									<col style="width:111px">
+									<col style="width:111px">
+									<col style="width:78px">
+									<col style="width:78px">
+									<col style="width:78px">
+									<col style="width:78px">
+									<col style="width:78px">
+									<col style="width:78px">
+									<col style="width:125px">
+									<col style="width:188px">
+									<col style="width:110px">
+									<col>
+								</colgroup>
+								<tbody class="rowgroup">
+									<tr>
+										<td><div class="cell"></div></td>
+										<td class="co-blue"><div class="cell">Sat</div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td class="ta-right"><div class="cell"></div></td>
+										<td class="ta-right"><div class="cell"></div></td>
+										<td class="ta-right"><div class="cell"></div></td>
+										<td class="ta-right"><div class="cell"></div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //.grid-wrap -->
+			</div>
+			<!--//.cont-rmBlock-->
+		</div>
+	</div>
+	<!--//.contents-->
+	
+	@@include('../include/status/_right_notice.html')
+</div>
+</body>
+</html>

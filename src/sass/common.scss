@@ -158,7 +158,9 @@ $sidebar-wd: 96px;
 .sun {background-color: $bg-sun-td !important;}
 .sat *,
 .sat {background-color: $bg-sat-td !important;}
+.co-sun,
 .sun {color: $fg-sun !important;}
+.co-sat,
 .sat {color: $fg-sat !important;}
 .cursor {
 	cursor: pointer !important;

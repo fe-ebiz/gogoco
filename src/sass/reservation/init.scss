@@ -1534,32 +1534,6 @@
 			padding: 5px 20px;
 		}
 	}
-	// .tab-list {
-	// 	> * {
-	// 		position: relative;
-	// 		float: left;
-	// 		color: #444;
-	// 	}
-	// 	.tab {
-	// 		display: inline-block;
-	// 		padding: 5px 20px;
-	// 		// border-top-left-radius: 5px;
-	// 		// border-top-right-radius: 5px;
-	// 		background: #f7f7f7;
-	// 		border: 1px solid #c5c5c5;
-	// 		font-size: 12px;
-	// 		border-bottom-color: #9f9f9f;
-	// 		& + .tab {
-	// 			left: -1px;
-	// 		}
-	// 		&.on {
-	// 			z-index: 1;
-	// 			background: #fff;
-	// 			border-color: #9f9f9f;
-	// 			border-bottom-color: #fff;
-	// 		}
-	// 	}
-	// }
 	.item-list {
 		position: relative;
 		.item-container {
@@ -1571,11 +1545,6 @@
 				padding-top: 10px;
 				.property-tbl {
 					@include tbl-style-1;
-					// border-left: 0;
-					// border-right: 0;
-					// th:first-child {
-					// 	border-left: 0;
-					// }
 					td {
 						.cell {
 							.form-input {

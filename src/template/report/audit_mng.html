@@ -1,0 +1,75 @@
+@@include('../include/_head.html', {
+	"page": "report"
+})
+
+<body class="page-report">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="cf contents report-contents audit-mng">
+
+		@@include('../include/_row_h2.html', {
+			"page-title": "관리자 보고"
+		})
+
+		<div class="cf cont-container-f">
+			<div class="cont-property">
+				<div class="grid-wrap">
+					<div class="grid-contents">
+						<table class="grid-tbl property-tbl">
+							<colgroup>
+								<col style="width: 100px">
+								<col style="width: 220px">
+								<col style="width: 100px">
+								<col style="width: 125px">
+								<col style="width: 500px">
+								<col>
+							</colgroup>	
+							<tbody>
+								<tr>
+									<th><div class="cell">속성</div></th>
+									<td>
+										<div class="cell">
+											<select name="" id="" class="form-select gray">
+												<option value="">Ramada pt</option>
+											</select>
+										</div>
+									</td>
+									<th><div class="cell">날짜</div></th>
+									<td>
+										<div class="cell">
+											<span class="cal-box">
+												<input type="text" class="appe-reset inp-cal date-ui">
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+											</span>
+										</div>
+									</td>
+									<td>
+										<div class="cell">
+											<span class="notice">마감된 실적 조회만 가능합니다.</span>
+										</div>
+									</td>
+									<td>
+										<div class="cell">
+											<button type="button" class="btn-brown">SEARCH</button>
+											<button type="button" class="btn-brown">CLEAR</button>
+											<button type="button" class="btn-gray"><span class="icon ic-excel"></span> Excel</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- /.cont-property -->
+
+		</div>
+	</div>
+	<!--//.contents-->
+	
+	@@include('../include/status/_right_notice.html')
+</div>
+</body>
+</html>

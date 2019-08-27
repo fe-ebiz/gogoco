@@ -9,9 +9,7 @@ $(function() {
     tabFn();
     dropMenu();
 	quickMenuPop();
-
-	// 클래스 기능 구현
-	var groupDraggable = new GroupDraggable('.fn-draggable .cell:not(.no-drag)', '.fn-droppable');
+	folderFn();
 
 });
 
@@ -87,7 +85,6 @@ var page = {
 			url: '/_new/views/excel/',
 			data: $('#' + a).serialize(),
 			success: function(e) {
-				console.log(e);
 				$('#excel_download').attr('src', path + e);
 			}
 		});	
@@ -391,10 +388,11 @@ function quickMenuPop() {
 
 }
 
+// 그룹화
 //  groupDraggable 클래스 UI 기능 구현
 function GroupDraggable(dragItem, dropArea) {
-	this.dragItem = $(dragItem);
-	this.dropArea = $(dropArea);
+	this.dragItem = $(dragItem) || null;
+	this.dropArea = $(dropArea) || null;
 	this.dragUiText = '';
 	this.dropHolderHtml = $('<div class="drop-holder-text">그룹화할 항목을 끌어다 놓아주세요.</div>');
 	this.addGroup_wrap = $(
@@ -421,20 +419,6 @@ function GroupDraggable(dragItem, dropArea) {
 }
 GroupDraggable.prototype = {
 	constructor : GroupDraggable,
-	folderFn : function() {
-		var _this = this;
-		_this.dragWrap.on('click', '.grouping-folder', function() {
-			var grouping_point = $(this).closest('tr').nextUntil('tr.grouping-dep-1');
-			$(this).toggleClass('fold');
-			if ($(this).hasClass('fold')) {
-				grouping_point.find('.grouping-folder').addClass('fold');
-				grouping_point.hide();
-			} else {
-				grouping_point.find('.grouping-folder').removeClass('fold');
-				grouping_point.show();
-			}
-		});
-	},
 	dragBtnLength : function() {
 		var dragBtnLength  = $('.fn-droppable .fn-drag-btn').length;
 		return dragBtnLength;
@@ -597,7 +581,6 @@ GroupDraggable.prototype = {
 		});
 	},
 	init : function() {
-		this.folderFn();
 		this.dropHolderFn();
 		this.dragFn();
 		this.dropFn();
@@ -606,6 +589,19 @@ GroupDraggable.prototype = {
 	}
 }
 
+function folderFn() {
+	$('.grid-wrap').on('click', '.grouping-folder', function() {
+		var grouping_point = $(this).closest('tr').nextUntil('tr.grouping-dep-1');
+		$(this).toggleClass('fold');
+		if ($(this).hasClass('fold')) {
+			grouping_point.find('.grouping-folder').addClass('fold');
+			grouping_point.hide();
+		} else {
+			grouping_point.find('.grouping-folder').removeClass('fold');
+			grouping_point.show();
+		}
+	});
+}
 
 function addCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -624,7 +620,6 @@ var winpop = {
 			data: 'mode=room-change&a=' + $('select[name=room]').val() + '&b=' + i + '&c=' + k,
 			success: function(r) {
 				$('#change').html(r);
-				console.log(r);
 			}
 		});		
 	},
@@ -820,8 +815,6 @@ var rsv = {
 			success: function(r) {
 				alert('수정되었습니다.');
 				$('#reserve').html(r);
-
-				console.log(r);
 
 				if($('input[name=type]').val() == '단체') {
 					rsv.group($('input[name=rsvn]').val());
@@ -1116,6 +1109,69 @@ var bill = {
 
 		k = $('input[name^=r-]:checked').length;
 
+		option	= $('#opts').val();
+			change	= $('#r-change').val();
+			price	= 0;
+
+		if(k < 1) {
+			$('input[name^=r-]').each(function(e) {
+				if(option == 1) {
+					$('#z-' + e).html(change);
+				} else if(option == 2) {
+					temp1 = removeCommas($('#z-' + e).text());
+					temp2 = removeCommas(change);
+					temp3 = parseInt(temp1) - (parseInt(temp1) * parseInt(temp2) / 100);
+
+					$('#z-' + e).html(addCommas(temp3));
+				} else if(option == 3) {
+					temp1 = removeCommas($('#z-' + e).text());
+					temp2 = removeCommas(change);
+					temp3 = parseInt(temp1) - parseInt(temp2);
+
+					$('#z-' + e).html(addCommas(temp3));
+				} else if(option == 4) {
+					temp1 = removeCommas($('#z-' + e).text());
+					temp2 = removeCommas(change);
+					temp3 = parseInt(temp1) + parseInt(temp2);
+
+					$('#z-' + e).html(addCommas(temp3));
+				}
+
+				price += parseInt(removeCommas($('#z-' + e).text()));
+			});
+		} else {				
+			$('input[name^=r-]').each(function(e) {
+				if($('input[name^=r-]').eq(e).is(':checked') == true) {
+					if(option == 1) {
+						$('#z-' + e).html(change);
+					} else if(option == 2) {
+						temp1 = removeCommas($('#z-' + e).text());
+						temp2 = removeCommas(change);
+						temp3 = parseInt(temp1) - (parseInt(temp1) * parseInt(temp2) / 100);
+
+						$('#z-' + e).html(addCommas(temp3));
+					} else if(option == 3) {
+						temp1 = removeCommas($('#z-' + e).text());
+						temp2 = removeCommas(change);
+						temp3 = parseInt(temp1) - parseInt(temp2);
+
+						$('#z-' + e).html(addCommas(temp3));
+					} else if(option == 4) {
+						temp1 = removeCommas($('#z-' + e).text());
+						temp2 = removeCommas(change);
+						temp3 = parseInt(temp1) + parseInt(temp2);
+
+						$('#z-' + e).html(addCommas(temp3));
+					}				
+				}
+
+				price += parseInt(removeCommas($('#z-' + e).text()));
+			});			
+		}
+
+		$('#r-add-total').html(addCommas(price));
+
+/*
 		if(k < 1) {
 			alert('적용할 날짜를 선택해주세요.');
 			return;
@@ -1154,6 +1210,7 @@ var bill = {
 
 			$('#r-add-total').html(addCommas(price));
 		}
+*/
 	},
 
 	comp: function(k) {
@@ -1441,7 +1498,6 @@ var global = {
 				data: 'mode=void&a=' + a,
 				success: function(r) {
 					alert('취소되었습니다.');
-					console.log(r);
 				}
 			});
 		} 
@@ -1455,14 +1511,33 @@ var global = {
 			success: function(r) {
 				$('#change').html(r);
 			}
-		});	
+		});
 	},
 
-	guest: function() {
+	guest: function(e) {
 		$.ajax({		
 			type: 'post',
 			url: '/_new/views/',
-			data: $('#gform').serialize(),
+			data: $('#gform' + e).serialize(),
+			success: function(r) {
+				alert('수정되었습니다.')
+				page.close();
+				page.close();
+
+				if(e == 1) {
+					page.layer('inhouse', 'rsv', r + '|ih');
+				} else {
+					page.layer('ci-1', 'front', r + '|ci');
+				}
+			}
+		});
+	},
+
+	inhouse: function() {
+		$.ajax({		
+			type: 'post',
+			url: '/_new/views/',
+			data: $('#in-house').serialize(),
 			success: function(r) {
 				alert('수정되었습니다.')
 				location.reload();
