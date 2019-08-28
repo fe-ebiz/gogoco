@@ -64,7 +64,7 @@ label {cursor: pointer;}
 a {text-decoration: none; color: inherit;}
 
 /* hidden_class */
-.hide {display: none;}
+.hide {display: none !important;}
 .hidden, .skip {overflow: hidden; position: absolute; border: 0; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px);}
 
 .clr:before, .clr:after, .cf:after {content: ""; display: table;}
