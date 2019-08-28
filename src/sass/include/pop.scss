@@ -4255,7 +4255,6 @@
 		}
 	}
 }
-
 /* 메시지 팝업, 트레이스 팝업 */
 .pop-container.msg-container,
 .pop-container.trace-container {
@@ -4319,7 +4318,25 @@
 		}
 	}
 }
-
+@mixin data-item {
+	display: inline-block;
+	border-radius: 4px;
+	font-size: 13px;
+	font-weight: 700;
+	.mark {
+		display: inline-block;
+		margin-right: 5px;
+		padding: 0 5px;
+		border: 1px solid #ccc;
+		line-height: 28px;
+		border-radius: 4px;
+		color: #fff;
+		&.charge {background: #589ED8;}
+		&.credit {background: #78AC57;}
+		&.balance {background: #AB3C3B;}
+		&.gray {background: #666;}
+	}
+}
 // inhouse - post클릭 cashier 팝업
 .pop-container.cashier-container {
 	.pop-wrapper {
@@ -4437,24 +4454,9 @@
 							.data-category {
 								width: 40%;
 								.item {
-									display: inline-block;
+									@include data-item;
 									padding: 5px;
 									border: 1px dashed #cecece;
-									border-radius: 4px;
-									font-size: 13px;
-									font-weight: 700;
-									.mark {
-										display: inline-block;
-										margin-right: 5px;
-										padding: 0 5px;
-										line-height: 28px;
-										border: 1px solid #ccc;
-										border-radius: 4px;
-										color: #fff;
-										&.charge {background: #589ED8;}
-										&.credit {background: #78AC57;}
-										&.balance {background: #AB3C3B;}
-									}
 								}
 							}
 							.data-date {
@@ -4521,6 +4523,54 @@
 						}
 					}
 				}
+			}
+		}
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
+// cashier - posting클릭 payment 팝업
+.pop-container.payment-container {
+	.pop-wrapper {
+		width: 850px;
+		.pop-header {
+			@include pop-header-base;
+		}
+		.pop-contents {
+			@include pop-contents-base;
+			// .row-add {
+			// 	text-align: right;
+			// 	padding-bottom: 15px;
+			// 	[class*="btn-"] {
+			// 		$pd: 15px;
+			// 		padding-left: $pd;
+			// 		padding-right: $pd;
+			// 	}
+			// }
+			.cont-property {
+				@include bx;
+				.property-tbl {
+					@include tbl-base;
+					td {
+						background: #fff;
+						.cell {
+							.w-1, .cal-box {
+								width: 150px;
+							}
+							.w-2 {
+								width: 250px;
+							}
+							.data-item {
+								@include data-item;
+								margin-left: 25px;
+							}
+						}
+					}
+				}
+			}
+			.form-texta {
+
 			}
 		}
 		.pop-footer {
