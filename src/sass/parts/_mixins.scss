@@ -763,6 +763,103 @@ $btn-lh: 1.5;
 }
 
 // 테이블
+// 투명 테이블
+@mixin tbl-opc0($bd-c: null, $th-bg: null, $td-bg: null) {
+	width: 100%;
+	// border: 1px solid $bd-c;
+	// border-top: 2px solid $bdg-tblTop;
+	// border-bottom: none;
+	border: none;
+	table-layout: fixed;
+	&.auto {
+		table-layout: auto;
+	}
+	th,
+	td {
+		// min-height: 39px;
+		// height: 28px;
+		// border-bottom: 1px solid $bd-c;
+		border: none;
+		color: #666;
+		font-size: 12px;
+
+		.cell {
+			position: relative;
+			@include clearfix;
+			padding: 3px 7px;
+
+			&.pd-0 {
+				padding-top: 0;
+				padding-bottom: 0px;
+			}
+
+			&.necess {
+				background: url("../../img/tick-small-red.png") no-repeat 100% 58%;
+			}
+		}
+	}
+
+	th {
+		// height: 33px;
+		// background: $bg-tblBase-th;
+		// background: $th-bg;
+		//		background: $bg-tblBase-th;
+		//		background: $bg-tblBase;
+		// text-align: center;
+		overflow: visible;
+		color: #444;
+		.cell {
+			font-weight: 700;
+		}
+
+		.cell.order-ui {
+			cursor: pointer;
+
+			&:after {
+				content: "▼";
+				position: relative;
+				display: none;
+				// position: absolute;
+				// top: -6px;
+				// left: 50%;
+				// margin-left: -5px;
+				margin-left: 2px;
+				font-size: 10px;
+				color: #444;
+			}
+
+			&:hover:after {
+				display: inline;
+			}
+
+			&.ascending:after {
+				content: "▲";
+			}
+		}
+	}
+
+	td {
+		// background: $td-bg;
+		//		background: #fff;
+		// border-left: 1px solid $bd-c;
+
+		.cell {
+
+			.chk-box,
+			.rdo-box {
+				input {
+					margin-right: 3px;
+				}
+
+				&+.chk-box,
+				&+.rdo-box {
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+}
+
 // @mixin tbl-base($bd-c: $bdg-tblBase, $th-bg: $bg-tblBase-th, $td-bg: #fff) {
 @mixin tbl-base($bd-c: $bor-gray-table, $th-bg: $bg-tblBase-th, $td-bg: #fff) {
 	width: 100%;
@@ -1342,6 +1439,9 @@ $btn-lh: 1.5;
 		table-layout: fixed;
 		border: none;
 		border-right: 1px solid $bd-c;
+		&.auto {
+			table-layout: auto;
+		}
 
 		.grouping-row {
 			width: 25px;
@@ -1608,6 +1708,9 @@ $btn-lh: 1.5;
 		table-layout: fixed;
 		border: none;
 		border-right: 1px solid $bd-c;
+		&.auto {
+			table-layout: auto;
+		}
 
 		.grouping-row {
 			width: 25px;

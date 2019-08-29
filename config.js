@@ -24,7 +24,8 @@ module.exports = function() {
 
 		// Sass 경로
 		sass = {
-			src : source + '/sass/**/*.{scss,sass}',
+			src : source + '/sass/**/!(_)*.{scss,sass}',
+			parts : source + '/sass/**/_*.{scss,sass}',
 			// src       : source + '/sass/**',
 			dest: development + '/public/css'
 		},

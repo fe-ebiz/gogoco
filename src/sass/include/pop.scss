@@ -77,8 +77,8 @@
 }
 @mixin pop-header-base {
 	// background: $bg-brown-1;
-	background: $primary-color;
 	padding: 15px;
+	background: $primary-color;
 	color: #fff;
 	h2 {
 		font-weight: 700;
@@ -95,13 +95,32 @@
 		}
 	}
 }
+@mixin pop-header-base2 {
+	padding: 8px 15px;
+	background: #f3f2f2;
+	color: #313131;
+	h2 {
+		font-weight: 700;
+		letter-spacing: 0;
+	}
+	.i-x {
+		width: 20px;
+		height: 20px;
+		&:before, &:after {
+			top: 8px;
+			background: #807772;
+			width: 20px;
+			height: 3px;
+		}
+	}
+}
 @mixin pop-contents-base {
 	padding: 20px;
 }
 @mixin pop-footer-base {
 	padding: 20px;
-	margin-top: -15px;
 	padding-top: 0;
+	margin-top: -15px;
 	.row-btn {
 		background: #f0f0f0;
 		padding: 15px 0;
@@ -113,15 +132,34 @@
 		}
 	}
 }
+.pop-container:not(.chStatus-container):not(.rmListEdit-container) {
+	.pop-wrapper {
+		.pop-header {
+			@include pop-header-base;
+		}
+	}
+}
+.pop-container {
+	.pop-wrapper {
+		.pop-contents {
+			@include pop-contents-base;
+		}
+	}
+}
+.pop-container {
+	.pop-wrapper {
+		.pop-footer {
+			@include pop-footer-base;
+		}
+	}
+}
 
 /* 패키지 설정 */
 .pop-container.pkg-container {
 	.pop-wrapper {
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			// padding-top: 40px;
 			.popcont-container	{
 				@include bx;
@@ -186,7 +224,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -196,10 +233,9 @@
 	.pop-wrapper {
 		width: 1250px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
+			padding: 0;
 			padding-top: 40px;
 			.popcont-container	{
 				@include float;
@@ -321,7 +357,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -331,10 +366,8 @@
 	.pop-wrapper {
 		width: 350px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			.grid-tbl {
 				@include tbl-base;
 				width: 306px;
@@ -386,7 +419,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -396,10 +428,9 @@
 	.pop-wrapper {
 		width: 1100px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
+			padding: 0;
 			padding-top: 30px;
 			.row-add {
 				text-align: right;
@@ -482,7 +513,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -492,10 +522,8 @@
 	.pop-wrapper {
 		width: 1100px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			.row-add {
 				text-align: right;
 				padding-bottom: 15px;
@@ -559,7 +587,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -569,10 +596,8 @@
 	.pop-wrapper {
 		width: 1000px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			.row-add {
 				text-align: right;
 				padding-bottom: 15px;
@@ -653,7 +678,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -663,10 +687,8 @@
 	.pop-wrapper {
 		width: 850px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			.row-add {
 				text-align: right;
 				padding-bottom: 15px;
@@ -695,7 +717,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -706,10 +727,8 @@
 		margin-top: 60px;
 		width: 1000px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			.cont-property {
 				// background: #f0f0f0;
 				// padding: 10px;
@@ -829,7 +848,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -838,10 +856,8 @@
 .pop-container.chGrade-container {
 	.pop-wrapper {
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			.popcont-container	{
 				@include bx;
 				.cont-tit {
@@ -918,7 +934,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -928,10 +943,8 @@
 	.pop-wrapper {
 		width: 500px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			.tab-list {
 				@include tab-list(#f7f7f7, #fff);
 			}
@@ -958,7 +971,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -970,10 +982,8 @@
 		min-height: 880px;
 		margin-top: 30px;
 		.pop-header {
-			@include pop-header-base;
 		}
         .pop-contents {
-			@include pop-contents-base;
             .cont-property {
                 .property-tbl {
                     @include tbl-style-2;
@@ -1038,7 +1048,6 @@
             }
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -1049,10 +1058,8 @@
 		min-height: 880px;
 		margin-top: 30px;
 		.pop-header {
-			@include pop-header-base;
 		}
         .pop-contents {
-			@include pop-contents-base;
             .cont-property {
                 .property-tbl {
                     @include tbl-style-2;
@@ -1114,7 +1121,6 @@
             }
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -1125,11 +1131,8 @@
 		// min-height: 880px;
 		margin-top: 30px;
 		.pop-header {
-			@include pop-header-base;
 		}
         .pop-contents {
-			@include pop-contents-base;
-            
             .cont-area {
                 // margin-top: 13px;
                 .grid-toolbar {
@@ -1166,7 +1169,6 @@
             }
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -1175,28 +1177,9 @@
 	.pop-wrapper {
         width: 400px;
 		.pop-header {
-			//@include pop-header-base;
-            padding: 8px 15px;
-            color: #313131;
-            background: #f3f2f2;
-            h2 {
-                font-weight: 700;
-                letter-spacing: 0;
-            }
-            .i-x {
-                width: 20px;
-                height: 20px;
-                &:before, &:after {
-                    top: 8px;
-                    background: #807772;
-                    width: 20px;
-                    height: 3px;
-                }
-            }
-            
+			@include pop-header-base2;
 		}
 		.pop-contents {
-			@include pop-contents-base;
 		    .popcont-container {
                 .grid-tbl {
                     @include tbl-base;
@@ -1235,11 +1218,13 @@
             }
 		}
 		.pop-footer {
-			@include pop-footer-base;
             .row-btn {
                 button[class*='btn-'] {
-                    padding-left: 9px;
-                    padding-right: 15px;
+                    padding-left: 15px;
+					padding-right: 15px;
+					.icon {
+						margin-left: -6px;
+					}
                 }
             }
 		}
@@ -1254,10 +1239,8 @@
 	.pop-wrapper {
         width: 850px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-            @include pop-contents-base;
             .popcont-container {
                 .grid-tbl {
                     @include tbl-base;
@@ -1302,7 +1285,6 @@
             }
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -1311,10 +1293,8 @@
 	.pop-wrapper {
         width: 800px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-            @include pop-contents-base;
             .popcont-container {
                 .grid-tbl {
                     @include tbl-base;
@@ -1341,7 +1321,6 @@
             }
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -1350,10 +1329,8 @@
 	.pop-wrapper {
         width: 800px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-            @include pop-contents-base;
             .popcont-container {
                 .property-tbl {
 					@include tbl-style-2;
@@ -1398,7 +1375,6 @@
             }
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -1407,10 +1383,8 @@
 	.pop-wrapper {
         width: 800px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-            @include pop-contents-base;
             .popcont-container {
 				.grid-wrap {
 					.grid-tbl {
@@ -1453,7 +1427,6 @@
             }
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -1466,10 +1439,8 @@
 	.pop-wrapper {
         width: 850px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-            @include pop-contents-base;
             .popcont-container {
                 .pop-cont-date {
                     font-size: 15px; 
@@ -1491,7 +1462,6 @@
             }
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -1500,12 +1470,9 @@
 	.pop-wrapper {
         width: 600px;
 		.pop-header {
-			@include pop-header-base;
 		}
-
         .pop-contents {
-            padding: 20px 20px 0;
-
+			padding-bottom: 0;
             .tab-list {
 				@include tab-list(#f7f7f7, #fff);
                 label {
@@ -1515,8 +1482,6 @@
                 }
             }
         }
-        
-
         .item-list {
             //height: 100%;
             .common {
@@ -1600,7 +1565,6 @@
                 }
             }
 			.pop-footer {
-				@include pop-footer-base;
 				padding: 0;
 				margin-top: 0px;
 			}
@@ -1617,10 +1581,8 @@
 	.pop-wrapper {
         width: 1600px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
             .popcont-container {
 				@include bx;
                 margin-top: 15px;
@@ -1763,7 +1725,6 @@
             
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -1772,10 +1733,8 @@
 	.pop-wrapper {
         width: 850px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
             
             .tab-list {
                 @include tab-list(#f7f7f7, #fff);
@@ -1813,7 +1772,6 @@
             }
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -1822,10 +1780,8 @@
 	.pop-wrapper {
         width: 1500px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
             .cont-property {
                 .property-tbl {
                     @include tbl-style-2;
@@ -1876,7 +1832,6 @@
             }
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -1884,27 +1839,8 @@
 .pop-container.bqCalEvent-container {
 	.pop-wrapper {
 		.pop-header {
-			@include pop-header-base;
-            // padding: 8px 15px;
-            // color: #313131;
-            // background: #f3f2f2;
-            // h2 {
-            //     font-weight: 700;
-            //     letter-spacing: 0;
-            // }
-            // .i-x {
-            //     width: 20px;
-            //     height: 20px;
-            //     &:before, &:after {
-            //         top: 8px;
-            //         background: #807772;
-            //         width: 20px;
-            //         height: 3px;
-            //     }
-            // }
 		}
 		.pop-contents {
-			@include pop-contents-base;
             .grid-tbl {
                 @include tbl-base;
                 td {
@@ -1953,7 +1889,6 @@
             }
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -1966,10 +1901,8 @@
 	.pop-wrapper {
         width: 950px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
             .grid-area {
                 & + .grid-area {
                     margin-top: 5px;
@@ -2021,7 +1954,6 @@
             }
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -2030,10 +1962,8 @@
 	.pop-wrapper {
         width: 640px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
             .grid-tbl {
                 @include tbl-base;
                 td {
@@ -2049,7 +1979,6 @@
             }
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -2058,10 +1987,8 @@
 	.pop-wrapper {
         width: 640px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
             .grid-tbl {
                 @include tbl-base;
             }
@@ -2076,7 +2003,6 @@
              }
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -2124,7 +2050,7 @@
 /*
  * 프론트
  */
-/* 공통 */
+/* secondBook 공통 */
  .pop-contents {
 	.cont-secondBook {
 		// width: 625px;
@@ -2370,13 +2296,11 @@
 		width: 1490px;
 		margin-top: 30px;
 		.pop-header {
-			@include pop-header-base;
 			padding-top: 5px;
 			padding-bottom: 5px;
 			.i-x {top: 0;}
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			padding-top: 10px;
             &.resFit-contents {
 				.split-1 {
@@ -2613,7 +2537,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -2623,13 +2546,11 @@
 		width: 1490px;
 		margin-top: 30px;
 		.pop-header {
-			@include pop-header-base;
 			padding-top: 5px;
 			padding-bottom: 5px;
 			.i-x {top: 0;}
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			padding-top: 10px;
             &.resFit-contents {
 				.split-1 {
@@ -2778,7 +2699,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -2789,13 +2709,11 @@
         width: $wh-full;
 		margin-top: 30px;
 		.pop-header {
-			@include pop-header-base;
 			padding-top: 5px;
 			padding-bottom: 5px;
 			.i-x {top: 0;}
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			padding-top: 10px;
             &.rsvGroup-contents {
 				$wh-split: 620px;
@@ -2926,7 +2844,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -2935,10 +2852,8 @@
 	.pop-wrapper {
         width: 1800px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			.split {
 				@include float;
 			}
@@ -3029,7 +2944,7 @@
 								.item {
 									float: left;
 									box-sizing: border-box;
-									width: 135px;
+									width: 130px;
 									padding: 2px 10px;
 									font-size: 12px;
 								}
@@ -3040,7 +2955,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -3050,10 +2964,8 @@
 	.pop-wrapper {
         width: 500px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
             .cont-property {
 				.grid-tbl {
 					@include tbl-style-2;
@@ -3091,7 +3003,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -3105,12 +3016,9 @@
 	.pop-wrapper {
         width: 600px;
 		.pop-header {
-			@include pop-header-base;
 		}
-
         .pop-contents {
-            padding: 20px 20px 0;
-
+            padding-bottom: 0;
             .tab-list {
 				@include tab-list(#f7f7f7, #fff);
                 label {
@@ -3120,7 +3028,6 @@
                 }
             }
         }
-        
 
         .item-list {
             //height: 100%;
@@ -3219,9 +3126,7 @@
 				margin-top: 0;
 			}
         }
-        
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -3230,12 +3135,9 @@
 	.pop-wrapper {
         width: 600px;
 		.pop-header {
-			@include pop-header-base;
 		}
-
         .pop-contents {
-            padding: 20px 20px 0;
-
+            padding-bottom: 0;
             .tab-list {
 				@include tab-list(#f7f7f7, #fff);
                 label {
@@ -3245,8 +3147,6 @@
                 }
             }
         }
-        
-
         .item-list {
             //height: 100%;
             .common {
@@ -3334,9 +3234,7 @@
 				margin-top: 0;
 			}
         }
-        
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -3346,13 +3244,11 @@
 		width: 1620px;
 		margin-top: 30px;
 		.pop-header {
-			@include pop-header-base;
 			padding-top: 5px;
 			padding-bottom: 5px;
 			.i-x {top: 0;}
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			padding-top: 10px;
             &.resFit-contents {
 				.split-1 {
@@ -3776,7 +3672,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -3786,10 +3681,8 @@
 	.pop-wrapper {
 		width: 840px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			.row-add {
 				text-align: right;
 				padding-bottom: 15px;
@@ -3832,7 +3725,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -3842,10 +3734,8 @@
 		width: 950px;
 		margin-top: 25px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			padding-top: 10px;
 			padding-bottom: 10px;
 			.grid-tbl {
@@ -3898,7 +3788,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -3937,10 +3826,8 @@
 		width: 1450px;
 		margin-top: 60px;
 		.pop-header {
-			@include pop-header-base;
 		}
         .pop-contents {
-			@include pop-contents-base;
             .cont-property {
                 .property-tbl {
                     @include tbl-style-2;
@@ -4000,7 +3887,6 @@
         width: 785px;
         font-family: "Nanum Gothic", Dotum, Sans-serif;
 		.pop-header {
-			@include pop-header-base;
             h2 {
                 margin-top: 0;
                 margin-bottom: 0;
@@ -4008,8 +3894,6 @@
             }
 		}
 		.pop-contents {
-			@include pop-contents-base;
-            
 		    .popcont-container {
                 .grid-tbl {
                     @include tbl-base;
@@ -4041,7 +3925,6 @@
             }
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -4050,10 +3933,8 @@
 	.pop-wrapper {
         width:900px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
             .cont-property {
                 .property-tbl {
                     @include tbl-style-2;
@@ -4111,7 +3992,6 @@
             }
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -4120,10 +4000,8 @@
 	.pop-wrapper {
         width: 500px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
             .cont-property {
 				.grid-tbl {
 					@include tbl-style-2;
@@ -4176,7 +4054,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -4185,28 +4062,9 @@
 	.pop-wrapper {
         width: 400px;
 		.pop-header {
-			//@include pop-header-base;
-            padding: 8px 15px;
-            color: #313131;
-            background: #f3f2f2;
-            h2 {
-                font-weight: 700;
-                letter-spacing: 0;
-            }
-            .i-x {
-                width: 20px;
-                height: 20px;
-                &:before, &:after {
-                    top: 8px;
-                    background: #807772;
-                    width: 20px;
-                    height: 3px;
-                }
-            }
-            
+			@include pop-header-base2;
 		}
 		.pop-contents {
-			@include pop-contents-base;
 		    .popcont-container {
                 .grid-tbl {
                     @include tbl-base;
@@ -4245,11 +4103,13 @@
             }
 		}
 		.pop-footer {
-			@include pop-footer-base;
             .row-btn {
                 button[class*='btn-'] {
-                    padding-left: 9px;
-                    padding-right: 15px;
+                    padding-left: 15px;
+					padding-right: 15px;
+					.icon {
+						margin-left: -6px;
+					}
                 }
             }
 		}
@@ -4260,10 +4120,8 @@
 .pop-container.trace-container {
 	.pop-wrapper {
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			// padding-top: 40px;
 			.popcont-container	{
 				@include bx;
@@ -4314,7 +4172,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -4337,217 +4194,385 @@
 		&.gray {background: #666;}
 	}
 }
+
+@mixin cashier-contents {
+	padding-top: 40px;
+	.popcont-container	{
+		@include bx;
+		padding: 20px;
+		background: #f0f0f0;
+		.cont-tit {
+			@include position(absolute, -20px, 15px);
+			color: $fg-legend;
+			font-size: 13px;
+			padding: 5px 10px;
+			background: #f0f0f0;
+			border-radius: 5px;
+			// @include text-hide;
+			strong, label {
+				font-weight: 700;
+			}
+			.no {
+				width: 100px;
+				margin-left: 5px;
+			}
+		}
+		.row-cont {
+			.split {
+				@include float;
+				box-sizing: border-box;
+				// margin-top: 10px;
+				h3 {
+					padding: 5px;
+					margin-bottom: 0px;
+					background: #c0b5a6;
+					font-size: 12px;
+					font-weight: 700;
+					color: #fff;
+				}
+			}
+			$code-wd: 240px;
+			.split.cont-code {
+				width: $code-wd;
+				h3 {
+					margin-bottom: 0;
+					border: 1px solid #c0b5a6;
+					border-bottom: 0;
+				}
+				.scrollbar {
+					height: 600px;
+					overflow-y: auto;
+					border: 1px solid #c0b5a6;
+				}
+				.code-list {
+					font-size: 12px;
+					li {
+						position: relative;
+						> a {
+							@include dp(block);
+							padding: 5px 0;
+							&:hover {
+								background: #e7f1fa;
+							}
+							&.on {
+								background: #d2d9df;
+							}
+							> .d {
+								position: relative;
+								.icon-treeArr.indent,
+								.icon-treeArr.expand {
+									position: relative;
+									left: auto;
+								}
+								.icon-treeArr.expand {
+								}
+							}
+						}
+						[class*=dep-] {
+							display: none;
+						}
+						[class*=dep-].expand {
+							display: block;
+							background-color: #efefef;
+						}
+					}
+				}
+				$total: 5;
+				@for $i from 1 to $total {
+					.dep-#{$i} {
+						> li > a {
+							padding-left: (15px * $i) + 5px;
+						}
+					}
+				}
+				.dep-1 {
+					> li > a {
+						padding-left: 15px;
+					}
+				}
+			}
+			.split.cont-data {
+				width: calc(100% - #{$code-wd});
+				padding-left: 10px;
+				.data-status {
+					display: table;
+					width: 100%;
+					> div {
+						display: table-cell;
+					}
+					.data-select {
+						width: 40%;
+						font-size: 12px;
+						.w-1 {
+							width: 150px;
+						}
+					}
+					.data-category {
+						width: 40%;
+						.item {
+							@include data-item;
+							padding: 5px;
+							border: 1px dashed #cecece;
+						}
+					}
+					.data-date {
+						// width: 50%;
+						font-size: 13px;
+						font-weight: 700;
+					}
+					.data-btnbox {
+						text-align: right;
+						button.w-1 {
+							width: 100px;
+						}
+					}
+				}
+				.grid-wrap.scr-wrap {
+					@include grid-scr-brown;
+					margin-top: 10px;
+					.grid-area.grid-contents {
+						background: #fff;
+						height: 547px;
+						.grid-tbl {
+							td {
+								text-align: center;
+								border-bottom: none;
+							}
+							tr.depth-2 {
+								td:first-child {
+									padding-left: 35px;
+								}
+							}
+							tr:last-child {
+								td {
+									border-bottom: 1px solid $bor-gray-table;
+								}
+							}
+							tr.bill,
+							tr.balance {
+								td {
+									color: #222;
+									font-weight: 700;
+								}
+							}
+							tr.bill {
+								td {
+									background: #FCF7E2;
+								}
+							}
+							tr.balance {
+								td {
+									background: #CECECE;
+								}
+							}
+						}
+					}
+					.grid-area.grid-total {
+						.grid-tbl {
+							th, td { }
+							td { }
+						}
+					}
+				}
+				.grid-bottom {
+					@include grid-bottom-page;
+					border-radius: 0;
+				}
+			}
+		}
+	}		
+}
 // inhouse - post클릭 cashier 팝업
 .pop-container.cashier-container {
 	.pop-wrapper {
 		width: 1590px;
 		margin-top: 50px;
-		.pop-header {
-			@include pop-header-base;
-		}
 		.pop-contents {
-			@include pop-contents-base;
-			padding-top: 40px;
-			.popcont-container	{
-				@include bx;
-				padding: 20px;
-				background: #f0f0f0;
-				.cont-tit {
-					@include position(absolute, -20px, 15px);
-					color: $fg-legend;
-					font-size: 13px;
-					padding: 5px 10px;
-					background: #f0f0f0;
-					border-radius: 5px;
-					// @include text-hide;
-					strong, label {
-						font-weight: 700;
-					}
-					.no {
-						width: 100px;
-						margin-left: 5px;
-					}
-				}
+			@include cashier-contents;
+		}
+	}
+}
+// cashier - virtual클릭 팝업
+.pop-container.virtual-container {
+	.pop-wrapper {
+		width: 1330px;
+		.pop-contents {
+			@include cashier-contents;
+			padding-top: 20px;
+			.popcont-container {
 				.row-cont {
-					.split {
-						@include float;
-						box-sizing: border-box;
-						// margin-top: 10px;
-						h3 {
-							padding: 5px;
-							margin-bottom: 0px;
-							background: #c0b5a6;
-							font-size: 12px;
-							font-weight: 700;
-							color: #fff;
-						}
-					}
-					$code-wd: 240px;
 					.split.cont-code {
-						width: $code-wd;
-						h3 {
-							margin-bottom: 0;
-							border: 1px solid #c0b5a6;
-							border-bottom: 0;
-						}
 						.scrollbar {
-							height: 600px;
-							overflow-y: auto;
-							border: 1px solid #c0b5a6;
-						}
-						.code-list {
-							font-size: 12px;
-							li {
-								position: relative;
-								> a {
-									@include dp(block);
-									padding: 5px 0;
-									&:hover {
-										background: #e7f1fa;
-									}
-									&.on {
-										background: #d2d9df;
-									}
-									> .d {
-										position: relative;
-										.icon-treeArr.indent,
-										.icon-treeArr.expand {
-											position: relative;
-											left: auto;
-										}
-										.icon-treeArr.expand {
-										}
-									}
-								}
-								[class*=dep-] {
-									display: none;
-								}
-								[class*=dep-].expand {
-									display: block;
-									background-color: #efefef;
-								}
-							}
-						}
-						$total: 5;
-						@for $i from 1 to $total {
-							.dep-#{$i} {
-								> li > a {
-									padding-left: (15px * $i) + 5px;
-								}
-							}
-						}
-						.dep-1 {
-							> li > a {
-								padding-left: 15px;
-							}
+							height: 480px;
 						}
 					}
 					.split.cont-data {
-						width: calc(100% - #{$code-wd});
-						padding-left: 10px;
-						.data-status {
-							display: table;
-							width: 100%;
-							> div {
-								display: table-cell;
-							}
-							.data-category {
-								width: 40%;
-								.item {
-									@include data-item;
-									padding: 5px;
-									border: 1px dashed #cecece;
-								}
-							}
-							.data-date {
-								// width: 50%;
-								font-size: 13px;
-								font-weight: 700;
-							}
-							.data-btnbox {
-								text-align: right;
-							}
-						}
 						.grid-wrap.scr-wrap {
-							@include grid-scr-brown;
-							margin-top: 10px;
-							.grid-area.grid-head {
-								th { }
-							}
 							.grid-area.grid-contents {
-								background: #fff;
-								height: 547px;
-								.grid-tbl {
-									td {
-										text-align: center;
-										border-bottom: none;
-									}
-									tr.depth-2 {
-										td:first-child {
-											padding-left: 35px;
-										}
-									}
-									tr:last-child {
-										td {
-											border-bottom: 1px solid $bor-gray-table;
-										}
-									}
-									@mixin tr-cmm {
-										color: #222;
-										font-weight: 700;
-									}
-									tr.bill {
-										td {
-											@include tr-cmm;
-											background: #FCF7E2;
-										}
-									}
-									tr.balance {
-										td {
-											@include tr-cmm;
-											background: #CECECE;
-										}
-									}
-								}
-							}
-							.grid-area.grid-total {
-								.grid-tbl {
-									th, td { }
-									td { }
-								}
+								height: 355px;
 							}
 						}
-						.grid-bottom {
-							@include grid-bottom-page;
-							border-radius: 0;
+						.data-form {
+							.data-form-tbl {
+								@include tbl-opc0;
+								margin-top: 10px;
+								td {
+									.cell {
+										.cal-box {
+											width: 150px;
+										}
+										.w-1 {
+											width: 400px;
+										}
+									}
+								}
+							}
 						}
 					}
 				}
 			}
 		}
-		.pop-footer {
-			@include pop-footer-base;
+	}
+}
+// folio 팝업
+.pop-container.folio-container {
+	.pop-wrapper {
+		width: 1590px;
+		margin-top: 30px;
+		.pop-contents {
+			@include cashier-contents;
+			.popcont-container {
+				+ .popcont-container {
+					margin-top: 30px;
+				}
+				.row-cont {
+					.split.cont-code {
+						.scrollbar {
+							height: 270px;
+						}
+					}
+					.split.cont-data {
+						.grid-wrap.scr-wrap {
+							.grid-area.grid-contents {
+								height: 233px;
+							}
+						}
+						.data-form {
+							.data-form-tbl {
+								@include tbl-opc0;
+								margin-top: 10px;
+								td {
+									.cell {
+										.cal-box {
+											width: 150px;
+										}
+										.w-1 {
+											width: 400px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
-// cashier - posting클릭 payment 팝업
+// folio - gbill 클릭 팝업
+.pop-container.gbill-container {
+	.pop-wrapper {
+		width: 500px;
+		margin-top: 150px;
+		.pop-contents {
+			.cont-property {
+				@include bx;
+				.property-tbl {
+					@include tbl-style-1;
+					td {
+						background: #fff;
+						.cell {
+							.w-1, .cal-box {
+								width: 150px;
+							}
+							.w-2 {
+								width: 250px;
+							}
+							.data-item {
+								@include data-item;
+								margin-left: 25px;
+							}
+						}
+					}
+				}
+			}
+			.cont-list {
+				.grid-wrap.scr-wrap {
+					@include grid-scr-x;
+					.grid-area.grid-contents {
+						height: 300px;
+					}
+				}
+			}
+		}
+	}
+}
+// folio - h/a 클릭 팝업
+.pop-container.gbill-container.ha-container {
+	.cont-list {
+		.grid-wrap.scr-wrap {
+			.grid-area.grid-contents {
+				td {
+					text-align: center;
+				}
+			}
+
+		}
+	}
+
+}
+// folio - split 클릭 팝업
+.pop-container.split-container {
+	.pop-wrapper {
+		width: 850px;
+		margin-top: 150px;
+		.pop-contents {
+			.cont-property {
+				@include bx;
+				.property-tbl {
+					@include tbl-base;
+					td {
+						background: #fff;
+						.cell {
+							.w-1 {
+								width: 100px;
+							}
+							.form-input {
+								+ span {
+									@include va;
+								}
+							}
+							.rdo-box {
+								margin-right: 30px;
+								label + label {
+									margin-left: 5px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// cashier - 내부 버튼 클릭 팝업
+// .pop-container.refund-container,
+.pop-container.print-container,
+.pop-container.posting-container,
 .pop-container.payment-container {
 	.pop-wrapper {
 		width: 850px;
-		.pop-header {
-			@include pop-header-base;
-		}
 		.pop-contents {
-			@include pop-contents-base;
-			// .row-add {
-			// 	text-align: right;
-			// 	padding-bottom: 15px;
-			// 	[class*="btn-"] {
-			// 		$pd: 15px;
-			// 		padding-left: $pd;
-			// 		padding-right: $pd;
-			// 	}
-			// }
 			.cont-property {
 				@include bx;
 				.property-tbl {
@@ -4569,24 +4594,77 @@
 					}
 				}
 			}
-			.form-texta {
-
-			}
-		}
-		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
-// inhouse - move클릭  팝업
+// cashier - payment 클릭 팝업
+.pop-container.payment-container {
+	.pop-wrapper {
+		.pop-contents {
+			.cont-property {
+				.property-tbl {
+					td {
+						.cell {
+							// .w-1, .cal-box {
+							// 	width: 150px;
+							// }
+							// .w-2 {
+							// 	width: 250px;
+							// }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// cashier - posting 클릭 팝업
+.pop-container.posting-container {
+	.pop-wrapper {
+		.pop-contents {
+			.cont-property {
+				.property-tbl {
+					td {
+						.cell {
+							.w-1, .cal-box {
+								width: 120px;
+							}
+							.w-2 {
+								width: 80px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// cashier - print 클릭 팝업
+.pop-container.print-container {
+	.pop-wrapper {
+		.pop-contents {
+			.cont-property {
+				.property-tbl {
+					td {
+						.cell {
+							label + label {
+								margin-left: 5px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// inhouse - move클릭 팝업
 .pop-container.move-container {
 	.pop-wrapper {
 		width: 700px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			padding-top: 40px;
 			.popcont-container	{
 				@include bx;
@@ -4661,7 +4739,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -4670,10 +4747,8 @@
 	.pop-wrapper {
 		width: 350px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			.popcont-container	{
 				@include bx;
 				.cont-type {
@@ -4711,7 +4786,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
@@ -4720,10 +4794,8 @@
 	.pop-wrapper {
 		width: 700px;
 		.pop-header {
-			@include pop-header-base;
 		}
 		.pop-contents {
-			@include pop-contents-base;
 			padding-top: 40px;
 			.popcont-container	{
 				@include bx;
@@ -4792,7 +4864,6 @@
 			}
 		}
 		.pop-footer {
-			@include pop-footer-base;
 		}
 	}
 }
