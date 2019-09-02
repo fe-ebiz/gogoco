@@ -34,6 +34,7 @@
 .pop-container-2 {
 	display: none;
 }
+.pop-container-3,
 .pop-container-2,
 .pop-container,
 .bg-back {
@@ -75,8 +76,23 @@
 		padding-bottom: 2px;
 	}
 }
+.pop-container-3 {
+	display: table;
+	.pop-cell {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.pop-wrapper {
+		position: relative;
+		width: 500px;
+		margin: 0 auto;
+		padding: 100px;
+		background-color: #fff;
+	}
+}
 @mixin pop-header-base {
 	// background: $bg-brown-1;
+	position: relative;
 	padding: 15px;
 	background: $primary-color;
 	color: #fff;
@@ -87,8 +103,10 @@
 	.i-x {
 		width: 30px;
 		height: 30px;
+		top: 50%;
+		margin-top: -15px;
 		&:before, &:after {
-			top: 16px;
+			top: 14px;
 			background: #fff;
 			width: 30px;
 			height: 3px;
@@ -96,6 +114,7 @@
 	}
 }
 @mixin pop-header-base2 {
+	position: relative;
 	padding: 8px 15px;
 	background: #f3f2f2;
 	color: #313131;
@@ -106,6 +125,8 @@
 	.i-x {
 		width: 20px;
 		height: 20px;
+		top: 50%;
+		margin-top: -10px;
 		&:before, &:after {
 			top: 8px;
 			background: #807772;
@@ -115,9 +136,11 @@
 	}
 }
 @mixin pop-contents-base {
+	position: relative;
 	padding: 20px;
 }
 @mixin pop-footer-base {
+	position: relative;
 	padding: 20px;
 	padding-top: 0;
 	margin-top: -15px;
@@ -4605,12 +4628,15 @@
 				.property-tbl {
 					td {
 						.cell {
-							// .w-1, .cal-box {
-							// 	width: 150px;
-							// }
-							// .w-2 {
-							// 	width: 250px;
-							// }
+							.form-select {
+								width: auto;
+								&.w-1 {
+									min-width: 150px;
+								}
+								&.w-2 {
+									min-width: 250px;
+								}
+							}
 						}
 					}
 				}
