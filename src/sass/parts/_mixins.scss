@@ -146,11 +146,8 @@
 
 @mixin appear($type: none, $bd-c: #ddd) {
 	appearance: $type;
-	-webkit-appearance: $type;
-	-moz-appearance: $type;
 	border: 1px solid $bd-c;
 	border-radius: 0;
-	-webkit-border-radius: 0;
 }
 
 @mixin ft($s: 13px, $c: #333, $w: null, $fm: null) {
@@ -182,6 +179,18 @@
 @mixin fst-ml0 {
 	&:first-child {
 		margin-left: 0;
+	}
+}
+@mixin va-after {
+	text-align: center;
+	&,
+	&:after {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&:after {
+		content: '';
+		height: 100%;
 	}
 }
 

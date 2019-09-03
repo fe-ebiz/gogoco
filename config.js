@@ -26,21 +26,18 @@ module.exports = function() {
 		sass = {
 			src : source + '/sass/**/!(_)*.{scss,sass}',
 			parts : source + '/sass/**/_*.{scss,sass}',
-			// src       : source + '/sass/**',
 			dest: development + '/public/css'
 		},
 
 		// Css 경로
 		css = {
 			src : source + '/css/**/*.css',
-			// src : source + '/css/**',
 			dest: development + '/public/css'
 		},
 
 		// JS 경로
 		js = {
 			src : source + '/js/**/*.js',
-			// src : source + '/js/**',
 			dest: development + '/public/js'
 		},
 

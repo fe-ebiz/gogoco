@@ -1,0 +1,57 @@
+<div class="pop-container-3 favorite-menu" id="favoriteMenu">
+    <div class="pop-cell">
+        <div class="pop-wrapper">
+            <div class="pop-header">
+                <h2 class="hidden">즐겨찾기메뉴</h2>
+            </div>
+            <div class="pop-contents">
+                <div class="lnb">
+                    <ul class="menu cf">
+                        <!-- 메뉴 dep-1 카테고리별 이미지(캐셔링, 미수금 - front 이미지사용)-->
+                        <!-- <img src="../../public/img/icon/quick/reservation.png" alt="예약">
+                        <img src="../../public/img/icon/quick/front.png" alt="프론트">
+                        <img src="../../public/img/icon/quick/cash.png" alt="캐셔링">
+                        <img src="../../public/img/icon/quick/gold.png" alt="미수금">
+                        <img src="../../public/img/icon/quick/housekeep.png" alt="시설관리">
+                        <img src="../../public/img/icon/quick/fnb.png" alt="음식료품">
+                        <img src="../../public/img/icon/quick/report.png" alt="현황">
+                        <img src="../../public/img/icon/quick/analysis.png" alt="분석">
+                        <img src="../../public/img/icon/quick/basic.png" alt="기본">
+                        <img src="../../public/img/icon/quick/adm.png" alt="관리자"> -->
+                        <li class="item">
+                            <a href="javascrtip:;" class="btn-plus">
+                                <span class="s-i"><img src="../../public/img/icon/quick/quickMenuPlus.png" alt="즐겨찾기 메뉴 추가"></span>
+                                <span class="lbl">현재 페이지 즐겨찾기 추가</span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:;">
+                                <span class="s-i"><img src="../../public/img/icon/quick/front.png" alt="프론트"></span>
+                                <span class="lbl">체크인</span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:;">
+                                <span class="s-i"><img src="../../public/img/icon/quick/status.png" alt="보고서"></span>
+                                <span class="lbl">전년대비 매출액 현황</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    $(function() {
+        $('#gnb .btn-menupop.category-favorite').on('click', function() {
+            $(this).toggleClass('on');
+            if ($(this).hasClass('on')) {
+                $('#favoriteMenu').show();
+            } else {
+                $('#favoriteMenu').hide();
+            }
+        });
+    });
+    </script>
+</div>
+<!--/.favorite-menu-->

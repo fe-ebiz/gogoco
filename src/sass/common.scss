@@ -809,13 +809,33 @@ $btn-lh: 1.5;
 					&.category-favorite {
 						background-color: $fg-orange-1;
 						color: #fff;
-						&.on,
-						&:hover {
+						outline: none;
+						&.on {
 							background-color: darken($fg-orange-1, 5%);
 						}
-						i {
+						// background: none;
+						// border: 1px solid #666;
+						// color: #666;
+						// outline: none;
+						// &.on,
+						// &:hover {}
+						.fas.fa-star,
+						.far.fa-star {
 							@include position(relative, -1px);
 						}
+						.fas.fa-star {
+							display: none;
+							color: $fg-orange-1;
+						}
+						// &.on {
+						// 	border-color: $fg-orange-1;
+						// 	.far.fa-star {
+						// 		display: none;
+						// 	}
+						// 	.fas.fa-star {
+						// 		display: inline-block;
+						// 	}
+						// }
 						// .bar {
 						// 	@include dp(block);
 						// 	margin: 0 auto;
@@ -828,36 +848,6 @@ $btn-lh: 1.5;
 						// 		transform: rotate(-90deg);
 						// 	}
 						// }
-					}
-				}
-				.lnb {
-					@include position(absolute, 32px);
-					.menu {
-						padding-top: 5px;
-						padding-bottom: 5px;
-						background-color: #333;
-						> li {
-							display: block;
-							min-width: 200px;
-							color: #e2e3ea;
-							a {
-								// line-height: 40px;
-								// padding: 0 15px;
-								display: block;
-								padding: 0px 10px;
-							    height: 30px;
-							    line-height: 30px;
-								> * {
-									@include va;
-								}
-								> img {
-									height: 25px;
-								}
-								&:hover {
-									background: #555;
-								}
-							}
-						}
 					}
 				}
 			}
