@@ -94,7 +94,7 @@ function rmAreaFn() {
             
 			$('#etc').html(string); 
 
-            $(document).on('contextmenu', function() {
+            rmArea.on('contextmenu', function () {
                 return false;
             });
             var posTop = e.clientY,

@@ -11,6 +11,9 @@ $(function() {
 	quickMenuPop();
 	folderFn();
 
+	// $('.lnb').on('contextmenu', function () {
+	// 	return false;
+	// });
 });
 
 // 팝업 기능 등록
@@ -341,33 +344,35 @@ function dropMenu() {
 function quickMenuPop() {
     // 룹 별 마우스 우측 클릭시
     var menuIdx = 0,
-        lnb = $('.lnb');
+		lnb = $('.lnb');
+	
     lnb.find(".menu > li").on('mousedown', function(e) {
         if (  (event.button == 2) || (event.which == 3) ) {
             // console.log('마우스 오른쪽 클릭 사용 x')
             menuIdx = $(this).index();
-			//console.log(menuIdx);
-            $(document).on('contextmenu', function() {
-                return false;
-            });
+			// console.log(e.target);
+			lnb.on('contextmenu', function () {
+				return false;
+			});
             var posTop = e.clientY,
-                posLeft = e.clientX;
+				posLeft = e.clientX;
             if ( (posTop + $('.qm-pop').outerHeight() ) > $(window).height() ) {
                 posTop = posTop - $('.qm-pop').outerHeight();
                 $('.qm-pop').css({
-                    "left": posLeft,
-                    "top": posTop,
-                    "position": "fixed"
-                }).show();
+                    left: posLeft,
+                    top: posTop,
+                    position: "fixed"
+				});
             } else {
                 $('.qm-pop').css({
-                    "left": posLeft,
-                    "top": posTop,
-                    "position": "fixed"
-                }).show();
-            }
-        }
-    });
+                    left: posLeft,
+                    top: posTop,
+                    position: "fixed"
+				});
+			}
+			$('.qm-pop').show();
+		} 
+	});
     // 상태 팝업 클릭시
     $('.qm-pop .qm-list > li').on('click', function(e) {
         // room.status(roomNo, $(e.target).attr('class'));

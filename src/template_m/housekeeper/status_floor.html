@@ -24,12 +24,14 @@
                         <li>
                             <div class="roombox inspect" data-roomchk="inhouse">
                                 <div class="roombox-header">
-                                    <span class="rm rm-no">1203호</span>
+                                    <span class="rm rm-no">1203</span>
                                     <span class="rm rm-type">DTW</span>
-                                    <span class="rm rm-chk"><span class="badge-rmchk">InHouse</span></span>
+                                    <!-- <span class="rm rm-chk"><span class="badge-rmchk">InHouse</span></span> -->
+                                    <!-- <span class="rm rm-chk"><i class="fas fa-door-open"></i></span> -->
+                                    <span class="rm rm-chk"><img src="../../public/img/m/icon/icon_empty.png" alt="빈방"></span>
                                 </div>
                                 <div class="roombox-body">
-                                    <button type="button" class="btn lg btn-status" onclick="housekeeperPopup.display(true, 'rmstatus')">inspect</button>
+                                    <button type="button" class="btn lg btn-status" onclick="housekeeperPopup.display(true, 'rmstatus')">inspect<br>검수완료</button>
                                 </div>
                                 <div class="roombox-footer">
                                     <button type="button" class="btn btn-default" onclick="housekeeperPopup.display(true, 'memo-write')">메모</button>
@@ -41,12 +43,13 @@
                         <li>
                             <div class="roombox dirty" data-roomchk="checkout">
                                 <div class="roombox-header">
-                                    <span class="rm rm-no">1204호</span>
+                                    <span class="rm rm-no">1204</span>
                                     <span class="rm rm-type">DTW</span>
-                                    <span class="rm rm-chk"><span class="badge-rmchk">CheckOut</span></span>
+                                    <!-- <span class="rm rm-chk"><span class="badge-rmchk">CheckOut</span></span> -->
+                                    <span class="rm rm-chk"><img src="../../public/img/m/icon/icon_full.png" alt="재실"></span>
                                 </div>
                                 <div class="roombox-body">
-                                    <button type="button" class="btn lg btn-status" onclick="housekeeperPopup.display(true, 'rmstatus')">dirty</button>
+                                    <button type="button" class="btn lg btn-status" onclick="housekeeperPopup.display(true, 'rmstatus')">dirty<br>청소전</button>
                                 </div>
                                 <div class="roombox-footer">
                                     <button type="button" class="btn btn-default" onclick="housekeeperPopup.display(true, 'memo-write')">메모</button>
@@ -56,12 +59,13 @@
                         <li>
                             <div class="roombox clean" data-roomchk="checkout">
                                 <div class="roombox-header">
-                                    <span class="rm rm-no">1205호</span>
+                                    <span class="rm rm-no">1205</span>
                                     <span class="rm rm-type">DTW</span>
-                                    <span class="rm rm-chk"><span class="badge-rmchk">CheckOut</span></span>
+                                    <span class="rm rm-chk"><img src="../../public/img/m/icon/icon_full.png" alt="재실"></span>
                                 </div>
                                 <div class="roombox-body">
-                                    <button type="button" class="btn lg btn-status" onclick="housekeeperPopup.display(true, 'rmstatus')">clean</button>
+                                    <button type="button" class="btn lg btn-status"
+                                        onclick="housekeeperPopup.display(true, 'rmstatus')">clean<br>청소완료</button>
                                 </div>
                                 <div class="roombox-footer">
                                     <button type="button" class="btn btn-default" onclick="housekeeperPopup.display(true, 'memo-write')">메모</button>
@@ -71,12 +75,13 @@
                         <li>
                             <div class="roombox working" data-roomchk="checkout">
                                 <div class="roombox-header">
-                                    <span class="rm rm-no">1206호</span>
+                                    <span class="rm rm-no">1206</span>
                                     <span class="rm rm-type">DTW</span>
-                                    <span class="rm rm-chk"><span class="badge-rmchk">CheckOut</span></span>
+                                    <span class="rm rm-chk"><img src="../../public/img/m/icon/icon_full.png" alt="재실"></span>
                                 </div>
                                 <div class="roombox-body">
-                                    <button type="button" class="btn lg btn-status" onclick="housekeeperPopup.display(true, 'rmstatus')">working</button>
+                                    <button type="button" class="btn lg btn-status"
+                                        onclick="housekeeperPopup.display(true, 'rmstatus')">working<br>청소중</button>
                                 </div>
                                 <div class="roombox-footer">
                                     <button type="button" class="btn btn-default" onclick="housekeeperPopup.display(true, 'memo-write')">메모</button>
@@ -86,12 +91,29 @@
                         <li>
                             <div class="roombox ooo" data-roomchk="checkout">
                                 <div class="roombox-header">
-                                    <span class="rm rm-no">1206호</span>
+                                    <span class="rm rm-no">1206</span>
                                     <span class="rm rm-type">DTW</span>
-                                    <span class="rm rm-chk"><span class="badge-rmchk">CheckOut</span></span>
+                                    <span class="rm rm-chk"><img src="../../public/img/m/icon/icon_full.png" alt="재실"></span>
                                 </div>
                                 <div class="roombox-body">
-                                    <button type="button" class="btn lg btn-status" onclick="housekeeperPopup.display(true, 'rmstatus')">o.o.o</button>
+                                    <button type="button" class="btn lg btn-status"
+                                        onclick="housekeeperPopup.display(true, 'rmstatus')">o.o.o<br>하자</button>
+                                </div>
+                                <div class="roombox-footer">
+                                    <button type="button" class="btn btn-default" onclick="housekeeperPopup.display(true, 'memo-write')">메모</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="roombox oos" data-roomchk="checkout">
+                                <div class="roombox-header">
+                                    <span class="rm rm-no">1207</span>
+                                    <span class="rm rm-type">DTW</span>
+                                    <span class="rm rm-chk"><img src="../../public/img/m/icon/icon_full.png" alt="재실"></span>
+                                </div>
+                                <div class="roombox-body">
+                                    <button type="button" class="btn lg btn-status"
+                                        onclick="housekeeperPopup.display(true, 'rmstatus')">o.o.s<br>하자</button>
                                 </div>
                                 <div class="roombox-footer">
                                     <button type="button" class="btn btn-default" onclick="housekeeperPopup.display(true, 'memo-write')">메모</button>
@@ -112,17 +134,17 @@
     <div class="popup-mask type-1" data-target="rmstatus" style="display: none;">
         <div class="popup-wrapper rmstatus-wrapper">
             <div class="popup-container">
-                <div class="popup-header"><h2 class="popup-title">1203호 상태설정</h2></div>
+                <div class="popup-header"><h2 class="popup-title">1203 상태설정</h2></div>
                 <div class="popup-body">
                     <div class="rmstatus-listbox">
                         <ul class="rmstatus-list">
                             <!-- 관리자의 경우만 inspect, ooo, oos 노출 -->
-                            <li><button type="button" class="btn btn-green lg btn-status">inspect</button></li>
-                            <li><button type="button" class="btn btn-blue lg btn-status">clean</button></li>
-                            <li><button type="button" class="btn btn-orange lg btn-status">working</button></li>
-                            <li><button type="button" class="btn btn-red lg btn-status">dirty</button></li>
-                            <li><button type="button" class="btn btn-gray lg btn-status">out of order</button></li>
-                            <li><button type="button" class="btn btn-gray lg btn-status">out of service</button></li>
+                            <li><button type="button" class="btn btn-green lg btn-status">inspect(검수완료)</button></li>
+                            <li><button type="button" class="btn btn-blue lg btn-status">clean(청소완료)</button></li>
+                            <li><button type="button" class="btn btn-orange lg btn-status">working(청소중)</button></li>
+                            <li><button type="button" class="btn btn-red lg btn-status">dirty(청소전)</button></li>
+                            <li><button type="button" class="btn btn-gray lg btn-status">out of order(하자)</button></li>
+                            <li><button type="button" class="btn btn-gray lg btn-status">out of service(하자)</button></li>
                         </ul>
                     </div>
                 </div>
