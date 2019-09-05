@@ -364,3 +364,105 @@
 		}
 	}
 }
+
+/* 객실 청소 현황 */
+.rmClnStatus-contents {
+	width: 100%;
+	min-width: 1650px;
+
+	$inspect: #5cb85c;
+	$clean: #337ab7;
+	$working: #f0ad4e;
+	$dirty: #d9534f;
+	$ooo: #444;
+
+	.cont-roomStatus {
+		$wth: 300px;
+
+		.area {
+			// padding: 10px 50px 10px 0px;
+			padding-right: $wth + 20px;
+		}
+
+		/* 객실관리 - 분류 */
+		.classify-area {
+			.list-type {
+				border-bottom: 1px dashed #d5d5d5;
+				padding-bottom: 5px;
+				margin-bottom: 5px;
+				font-size: 0;
+
+				> li {
+					@include va;
+				}
+				.division {
+					@include size(1px, 12px);
+					margin: 0 10px;
+					background-color: #d5d5d5;
+				}
+				.item {
+					> * {
+						@include va;
+					}
+					.s-i {
+						@include sizes(18px);
+						border: 1px solid #d5d5d5;
+						box-sizing: border-box;
+						margin-right: 5px;
+						&.inhouse {
+							// background-color: red;
+							background-color: #FF5400;
+						}
+						&.chkout {
+
+						}
+						&.inspec {}
+						&.clean {}
+						&.working {}
+						&.dirty {}
+						&.ooo {}
+					}
+					.lbl {
+
+					}
+					padding: 0 3px;
+					font-size: 12px;
+				}
+			}
+		}
+
+		/* 객실관리 - 룸현황 */
+		.room-area {
+			margin-top: 5px;
+			padding-top: 0px;
+			padding-bottom: 0px;
+			width: 100%;
+			padding-right: $wth + 80px;
+			box-sizing: border-box;
+
+			.list-room {
+				font-family: $font-nnSquareR;
+
+				.item-room {
+					float: left;
+					position: relative;
+					margin: 0px 10px 10px 0px;
+					width: 126px;
+					min-height: 126px;
+					background: #fff;
+					border: 2px solid #d5d5d5;
+					border-radius: 2px;
+					box-sizing: border-box;
+					font-size: 13px;
+					font-weight: bold;
+					letter-spacing: -1px;
+					box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+
+					&.on {
+						border-color: #666 !important;
+					}
+				}
+			}
+		}
+	}
+}

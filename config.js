@@ -25,6 +25,7 @@ module.exports = function() {
 		// Sass 경로
 		sass = {
 			src : source + '/sass/**/!(_)*.{scss,sass}',
+			src_sprite : source + '/sass/sprite',
 			parts : source + '/sass/**/_*.{scss,sass}',
 			dest: development + '/public/css'
 		},
@@ -44,15 +45,15 @@ module.exports = function() {
 		// Img 경로
 		img = {
 			// src : source + '/assets/img/**/*.{gif,jpg,png,ico}',
-			src : source + '/assets/img/**/!(sprite)*/*',
-			src_sprite : source + '/assets/img/**/sprite*/*',
-			dest: development + '/assets/img',
+			src : source + '/img/**/!(sprite)*/*',
+			src_sprite : source + '/img/**/sprite*/*',
+			dest: development + '/public/img',
 		},
 
 		// etc 경로
 		etc = {
-			src : source + '/assets/etc/**',
-			dest: development + '/assets/etc',
+			src : source + '/etc/**',
+			dest: development + '/public/etc',
 		},
 
 		// HTML 옵션

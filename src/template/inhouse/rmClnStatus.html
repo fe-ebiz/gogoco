@@ -1,0 +1,60 @@
+@@include('../include/_head.html', {
+"page": "inhouse"
+})
+
+<!-- 페이지 전용 -->
+
+<body class="page-inhouse">
+
+    <div class="wrapper">
+        @@include('../include/_header.html')
+
+        <div class="cf contents rmClnStatus-contents">
+
+            @@include('../include/_row_h2.html', {
+            "page-title": "객실 청소 현황"
+            })
+
+            <div class="cont-container-f">
+                <section class="cont-roomStatus">
+                    <div class="area classify-area">
+                        <div class="cont-center">
+                            <h3 class="hidden">분류 리스트</h3>
+                            <ul class="cf list-type">
+                                <li class="item"><span class="s-i inhouse"></span><span class="lbl">재실</span></li>
+                                <li class="item"><span class="s-i chkout"></span><span class="lbl">빈방</span></li>
+                                <li class="division"></li>
+                                <li class="item"><span class="s-i inspect"></span><span class="lbl">검수완료</span></li>
+                                <li class="item"><span class="s-i clean"></span><span class="lbl">청소완료</span></li>
+                                <li class="item"><span class="s-i working"></span><span class="lbl">청소중</span></li>
+                                <li class="item"><span class="s-i dirty"></span><span class="lbl">청소전</span></li>
+                                <li class="item"><span class="s-i ooo"></span><span class="lbl">하자</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--//.classify-area-->
+
+                    <div class="area room-area" id="roomArea">
+                        <div class="cont-center">
+                            <ul class="cf list-room">
+                                <li class="item">
+
+                                </li>
+                            </ul>
+                            <!--//.list-room-->
+                        </div>
+                        <!--//.cont-center-->
+                    </div>
+                    <!--//.room-area-->
+                </section>
+                <!--//.cont-roomStatus-->
+            </div>
+        </div>
+        <!--//.contents-->
+
+    </div>
+    <div class="cf"></div>
+
+</body>
+
+</html>
