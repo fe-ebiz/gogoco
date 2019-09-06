@@ -30,6 +30,13 @@
                                 <li class="item"><span class="s-i dirty"></span><span class="lbl">청소전</span></li>
                                 <li class="item"><span class="s-i ooo"></span><span class="lbl">하자</span></li>
                             </ul>
+                            <span class="term-box">
+                                <select name="" id="" class="form-select gray term">
+                                    <option value="" selected>1분간격</option>
+                                    <option value="">5분간격</option>
+                                    <option value="">새로고침안함</option>
+                                </select>
+                            </span>
                         </div>
                     </div>
                     <!--//.classify-area-->
@@ -37,9 +44,27 @@
                     <div class="area room-area" id="roomArea">
                         <div class="cont-center">
                             <ul class="cf list-room">
-                                <li class="item">
-
-                                </li>
+                                <!-- <li class="item inspect"><span class="s-i inhouse"></span><span class="lbl">1701</span></li>
+                                <li class="item clean"><span class="s-i chkout"></span><span class="lbl">1702</span></li>
+                                <li class="item working"><span class="s-i inhouse"></span><span class="lbl">1703</span></li>
+                                <li class="item dirty"><span class="s-i inhouse"></span><span class="lbl">1704</span></li>
+                                <li class="item ooo"><span class="s-i inhouse"></span><span class="lbl">1705</span></li> -->
+                                @@for (var i=10; i <= 40; i++) {
+                                    <li class="item inspect"><span class="s-i inhouse"></span><span class="lbl">13`+ [i] +`</span></li>
+                                }
+                                <li class="division"></li>
+                                @@for (var i=10; i <= 40; i++) {
+                                    <li class="item inspect"><span class="s-i inhouse"></span><span class="lbl">12`+ [i] +`</span></li>
+                                }
+                                <li class="division"></li>
+                                @@for (var i=10; i <= 40; i++) {
+                                    <li class="item inspect"><span class="s-i inhouse"></span><span class="lbl">11`+ [i] +`</span></li>
+                                }
+                                <li class="division"></li>
+                                @@for (var i=10; i <= 40; i++) {
+                                    <li class="item inspect"><span class="s-i inhouse"></span><span class="lbl">10`+ [i] +`</span></li>
+                                }
+                                <li class="division"></li>
                             </ul>
                             <!--//.list-room-->
                         </div>

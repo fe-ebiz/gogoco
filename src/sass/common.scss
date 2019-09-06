@@ -807,18 +807,15 @@ $btn-lh: 1.5;
 						}
 					}
 					&.category-favorite {
+						z-index: 100;
+						margin-right: 5px;
 						background-color: $fg-orange-1;
 						color: #fff;
 						outline: none;
-						&.on {
+						// &.on,
+						&:hover {
 							background-color: darken($fg-orange-1, 5%);
 						}
-						// background: none;
-						// border: 1px solid #666;
-						// color: #666;
-						// outline: none;
-						// &.on,
-						// &:hover {}
 						.fas.fa-star,
 						.far.fa-star {
 							@include position(relative, -1px);
@@ -853,20 +850,22 @@ $btn-lh: 1.5;
 			}
 			.menu.dep-1 {
 				// background: url("../img/common/topMenuSplit.png") no-repeat 100% center;
+				font-size: 0;
 				> li {
 					position: relative;
 					display: inline-block;
 					vertical-align: top;
 					// background: url("../img/common/topMenuSplit.png") no-repeat 0 center;
+					font-size: 11px;
 					> a {
 						display: block;
 						height: 40px;
 						line-height: 40px;
 						font-size: 11px;
 						padding: 0px 15px;
-						padding-left: 33px;
-						// color: $fg-gnb;
-						&:hover, &.on {
+						padding-left: 35px;
+						&:hover, 
+						&.on {
 							color: $fg-gnb-hover;
 							// background-position: 10px -40px;
 						}
@@ -875,10 +874,10 @@ $btn-lh: 1.5;
 							&.ic-#{$item} {
 								background: url("../img/icon//menu/menuIcons_#{$item}.png");
 								background-repeat: no-repeat;
-								background-position: 8px 0px;
+								background-position: 10px 0px;
 							}
 							&.ic-#{$item}:hover, &.ic-#{$item}.on {
-								background-position: 8px -40px;
+								background-position: 10px -40px;
 							}
 						}
 					}

@@ -5081,32 +5081,72 @@
 */
 /* 즐겨찾기 메뉴 팝업 */
 .pop-container-3.favorite-menu {
-	// display: block;
+	display: block;
 	top: 40px;
-	left: 125px;
+	// left: 125px;
+	.bg-back {
+		background-color: transparent;
+	}
 	.pop-cell {
 		vertical-align: baseline;
 	}
 	.pop-wrapper {
+		background-color: transparent;
+		$menu-pd: 0 12px;
 		.lnb {
-			display: inline-block;
-			// @include position(absolute, 32px);
-			.menu {
-				padding-top: 5px;
-				padding-bottom: 5px;
-				background-color: #333;
+			display: block;
+			min-width: 205px;
+			padding: 10px 0;
+			background-color: $fg-orange-1;
+			.btn-box {
+				padding: $menu-pd;
+				margin-bottom: 5px;
+				.btn-plus {
+					display: block;
+					width: 100%;
+					height: 33px;
+					line-height: 25px;
+					background: transparent;
+					// background: #cbcbcb;
+					border: 1px solid #fff;
+					color: #fff;
+					font-size: 12px;
+					&:hover {
+						background-color: darken($fg-orange-1, 3%);
+					}
+
+					i,
+					.lbl {
+						@include va;
+						// @include dp;
+					}
+					.lbl {
+						margin-left: 3px;
+					}
+					i {
+						font-size: 15px;
+					}
+				}
+			}
+			.menu-list {
+				// background-color: #333;
 				> li {
+					position: relative;
 					display: block;
 					// min-width: 200px;
-					color: #e2e3ea;
+					// color: #e2e3ea;
+					color: #fff;
+					&:hover {
+						background-color: darken($fg-orange-1, 3%);
+					}
 					a {
 						// line-height: 40px;
 						// padding: 0 15px;
 						display: block;
-						padding: 0px 10px;
+						padding: $menu-pd;
 						font-size: 12px;
 						height: 30px;
-						line-height: 30px;
+						line-height: 28px;
 						> * {
 							@include va;
 						}
@@ -5118,16 +5158,23 @@
 							}
 						}
 						> .lbl {
-							margin-left: 3px;
-						}
-						&:hover {
-							background: #555;
+							// margin-left: 3px;
 						}
 						&.btn-plus {
 							img {
 								height: 22px;
 							}
 						}
+					}
+					.i-box {
+						@include dp;
+						@include position(absolute, 8px, null, null, 12px);
+						text-align: right;
+						cursor: pointer;
+						line-height: 1;
+					}
+					i {
+						font-size: 15px;
 					}
 				}
 			}
@@ -5138,125 +5185,142 @@
 /* 전체 메뉴 팝업 */
 .pop-container-3.all-menu {
 	$menu-bg: #b29b7a;
-	.bg-back {
-		background-color: rgba(255,255,255, .8);
-	}
 	.pop-wrapper {
-		width: 1150px;
+		width: 1380px;
 		background-color: transparent;
 		.pop-header {
-			$ph-wd: 200px;
-			$ph-wd-half: $ph-wd / 2;
-			&:before {
-				content: '';
-				display: block;
-				@include sizes($ph-wd);
-				@include position(fixed, -$ph-wd-half, null, null, -$ph-wd-half);
-				background-color: $menu-bg;
-				transform: rotate(-45deg);
-
-			}
 			.cls-btn {
 				display: block;
 				@include appear(none, transparent);
-				@include sizes(40px);
-				@include position(fixed, 15px, null, null, 15px);
-				// background-color: #fff;
-				background: none;
-				border: none;
-				.i-x {
-					@include sizes(100%);
-					top: 0;
-					right: 0;
-					&:before,
-					&:after {
-						width: 40px;
-						height: 2px;
-						top: 19px;
-						left: 0px;
-						background-color: #fff;
-					}
-				}
+				@include sizes(90px);
+				@include position(absolute, 0px, null, null, -90px);
+				background-color: #1f1f1f;
 			}
 		}
 		.pop-contents {
-			border-radius: 15px;
 			overflow: hidden;
 			box-shadow: 0 4px 8px rgba(0, 0, 0, .32);
-			height: 570px;
-			background-color: $menu-bg;
-			color: #fff;
+			height: 720px;
+			background-color: #fff;
 			.panel-list {
 				height: 100%;
 				.panel-item {
 					height: 100%;
 					@include float;
-					width: calc(100%/7);
+					width: 200px;
 					box-sizing: border-box;
 					&:not(:first-child):not(.rsv-panel) {
-						border-left: 1px solid rgba(255,255,255, .35);
+						border-left: 1px solid #c7c7c7;
+					}
+					&:first-child {
+						width: 180px;
 					}
 					.panel-title {
-						padding: 12px 0;
-						padding-left: 15px;
-						// background-color: #dcdcdc;
-						background-color: darken(#b29b7a, 10%);
-						// box-shadow: 0 1px 2px rgba(0,0,0, .15);
+						height: 90px;
+						padding: 20px;
+						padding-right: 0;
+						box-sizing: border-box;
+						background-color: #333;
+						color: #efefef;
 						.s-i {
 							@include sizes(50px);
-							border-radius: 50%;
-							// background-color: #1f1f1f;
-							background-color: rgba(0,0,0, .35);
-							// border: 1px solid #dcdcdc;
-							// background: #fff;
-							// border: 1px solid #1f1f1f;
-							@include va-after;
 						}
 						.lbl {
 							@include va;
 							margin-left: 8px;
+							font-size: 18px;
+							line-height: 1.4;
+							.en {
+								font-size: 14px;
+								color: #bbb;
+							}
 						}
 					}
 					.panel-contents {
 						// padding: 12px 0;
-						padding-left: 15px;
-						font-size: 13px;
+						font-size: 15px;
 						overflow: hidden;
 						.scroll {
 							width: calc(100% + 20px);
-							max-height: 426px;
-							padding-bottom: 12px;
+							max-height: 630px;
 							box-sizing: border-box;
 							overflow: auto;
 						}
 						.menu-list {
 							>.item {
-								padding-right: 20px;
-								&:first-child {
-									margin-top: 12px;
+								a {
+									&:hover {
+										color: #ff6632;
+										.s-i:before,
+										.s-i:after {
+											background-color: #ff6632 !important;
+										}
+									}
 								}
+								>a  {
+									position: relative;
+									display: block;
+									padding: 12px 0;
+									padding-left: 35px;
+									line-height: 1.3;
+									.s-i {
+										display: inline-block;
+										@include sizes(10px);
+										@include position(absolute, 20px, 15px);
+										// margin-right: 10px;
 
-								&:not(:first-child) {
-									margin-top: 5px;
+										&:after,
+										&:before {
+											content: '';
+											position: absolute;
+											display: inline-block;
+											@include size(10px, 2px);
+											background-color: #333;
+										}
+
+										&:after {
+											transform: rotate(-90deg);
+										}
+									}
+									.en {
+										font-size: 14px;
+									}
 								}
+							}
+							>.item:first-child {
+								margin-top: 5px;
 							}
 						}
 					}
 					&:not(.favorite-panel) .panel-contents {
 						.menu-list {
 							> .item {
-								&:before {
-									content: '·';
-									font-weight: 700;
-									margin-right: 3px;
-								}
 								.menu-list2 {
-									padding-top: 5px;
-									padding-left: 7px;
+									background-color: #f0f0f0;
+									padding: 11px 0;
 									> .item {
-										&:before {
-											content: '-';
-											margin-right: 3px;
+										>a {
+											position: relative;
+											display: block;
+											padding-left: 52px;
+											font-size: 14px;
+											.s-i {
+												display: inline-block;
+												@include sizes(10px);
+												@include position(absolute, 9px, 37px);
+												// margin-right: 10px;
+
+												&:before {
+													content: '';
+													position: absolute;
+													display: inline-block;
+													@include size(7px, 2px);
+													background-color: #333;
+												}
+											}
+										}
+										&:not(:first-child) > a {
+											margin-top: 5px;
 										}
 									}
 								}
@@ -5264,32 +5328,46 @@
 						}
 					}
 					&.favorite-panel {
+						color: #fff;
 						&,
 						.panel-title {
-							background-color: darken(#b29b7a, 30%);
+							background-color: #1f1f1f;
 						}
 						.panel-title {
-							.s-i {
-								// color: #dcdcdc;
-								// background-color: darken(#b29b7a, 10%);
-								// color: $fg-orange-1;
-								background-color: $fg-orange-1;
-								color: #fff;
-								font-size: 25px;
-								i {
-									@include position(relative, 2px);
-								}
+							padding-left: 30px;
+							> img {
+								padding: 12px 0;
 							}
 						}
 						.panel-contents {
 							font-size: 15px;
 							.menu-list {
 								>.item {
-									line-height: 1.8;
-									&:before {
-										content: '·';
-										font-weight: 700;
-										margin-right: 3px;
+									position: relative;
+									padding-right: 55px;
+									&:first-child {
+										margin-top: 7px;
+									}
+									>a {
+										display: inline-block;
+										padding: 10px 0;
+										padding-left: 50px;
+										.s-i {
+											top: 18px;
+											left: 30px;
+											&:after,
+											&:before {
+												background-color: #fff;
+											}
+										}
+									}
+									.i-box {
+										cursor: pointer;
+										@include position(absolute, 13px, 150px);
+										line-height: 1;
+										i {
+											font-size: 15px;
+										}
 									}
 								}
 							}
