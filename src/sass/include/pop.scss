@@ -271,7 +271,6 @@
 		.pop-header {
 		}
 		.pop-contents {
-			padding: 0;
 			padding-top: 40px;
 			.popcont-container	{
 				@include float;
@@ -4923,7 +4922,7 @@
 				.cont-list {
 					margin-top: 10px;
 					.grid-wrap {
-						@include grid-scr-x(100%, null);
+						@include grid-scr-x;
 						$ie8-wth: 958px;
 						.grid-area.grid-contents {
 							height: 400px;
@@ -4942,6 +4941,95 @@
 					}
 					.grid-bottom {
 						@include grid-bottom-page;
+					}
+				}
+			}
+		}
+	}
+}
+/* deposit 팝업 */
+.pop-container.deposit-container {
+	.pop-wrapper {
+		width: 1500px;
+		.pop-contents {
+			.popcont-container {
+				@include float;
+				@include bx;
+				padding: 20px;
+				background: #f0f0f0;
+				border-radius: 4px;
+			}
+			.popcont-container.split-1 {
+				width: 69%;
+				margin-top: 20px;
+				.cont-tit {
+					@include position(absolute, -20px, 15px);
+					color: $fg-legend;
+					font-size: 13px;
+					padding: 5px 10px;
+					background: #f0f0f0;
+					border-radius: 5px;
+
+					strong {
+						font-weight: 700;
+					}
+
+					button {
+						&.reload {
+							margin-left: 5px;
+						}
+					}
+				}
+				.cont-list {
+					.grid-wrap.scr-wrap {
+						@include grid-scr-x;
+						.grid-tbl {
+							td {
+								text-align: center;
+							}
+						}
+
+						.grid-area.grid-contents {
+							height: 450px;
+						}
+					}
+				}
+				// cont-list
+			}
+
+			.popcont-container.split-2 {
+				width: 30%;
+				margin-left: 1%;
+				margin-top: 20px;
+				.cont-info {
+					@include bx;
+
+					.info-tbl {
+						@include tbl-base;
+
+						td {
+							background: #fff;
+
+							.cell {
+
+								.w-1,
+								.cal-box {
+									width: 150px;
+								}
+
+								.w-2 {
+									width: 250px;
+								}
+
+								.form-texta {
+									height: 100px;
+								}
+							}
+						}
+					}
+					.row-btn {
+						margin-top: 10px;
+						text-align: center;
 					}
 				}
 			}
@@ -5037,45 +5125,6 @@
 		}
 	}
 }
-
-.pop-container.menupop {
-	.pop-cell {
-		vertical-align: baseline;
-	}
-	.pop-wrapper {
-		.lnb {
-			@include position(absolute, 32px);
-			.menu {
-				padding-top: 5px;
-				padding-bottom: 5px;
-				background-color: #333;
-				> li {
-					display: block;
-					min-width: 200px;
-					color: #e2e3ea;
-					a {
-						// line-height: 40px;
-						// padding: 0 15px;
-						display: block;
-						padding: 0px 10px;
-						height: 30px;
-						line-height: 30px;
-						> * {
-							@include va;
-						}
-						> img {
-							height: 25px;
-						}
-						&:hover {
-							background: #555;
-						}
-					}
-				}
-			}
-			
-		}
-	}
-}
 /*
 	pop-container-3 스타일
 */
@@ -5147,6 +5196,7 @@
 						font-size: 12px;
 						height: 30px;
 						line-height: 28px;
+						padding-right: 35px;
 						> * {
 							@include va;
 						}
