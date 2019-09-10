@@ -505,3 +505,110 @@
 	}
 }
 
+/* 즐겨찾기 메뉴 윈도우팝업 */
+.wpop-container.favorite-menu {
+	$menu-bg: #b29b7a;
+
+	.pop-wrapper {
+		@include size(300px, 540px);
+		margin: 10px;
+		background-color: transparent;
+
+		.pop-contents {
+			overflow: hidden;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, .32);
+			height: 520px;
+			background-color: #fff;
+
+			.panel-list {
+				height: 100%;
+
+				.panel-item {
+					height: 100%;
+					box-sizing: border-box;
+					color: #fff;
+					background-color: #1f1f1f;
+
+					.panel-title {
+						height: 90px;
+						padding: 20px 0;
+						margin: 0 30px;
+						padding-right: 0;
+						box-sizing: border-box;
+						border-bottom: 1px solid #fff;
+						.lbl {
+							@include va;
+							margin-left: 8px;
+							font-size: 18px;
+							line-height: 1.4;
+						}
+
+						> img {
+							padding: 12px 0;
+						}
+					}
+
+					.panel-contents {
+						font-size: 15px;
+						overflow: hidden;
+
+						.menu-list {
+							>.item {
+								position: relative;
+								padding-right: 55px;
+
+								&:first-child {
+									margin-top: 7px;
+								}
+								>a {
+									position: relative;
+									display: block;
+									padding: 10px 0;
+									padding-left: 50px;
+									line-height: 1.3;
+
+									.s-i {
+										display: inline-block;
+										@include sizes(10px);
+										@include position(absolute, 18px, 30px);
+
+										&:after,
+										&:before {
+											content: '';
+											position: absolute;
+											display: inline-block;
+											@include size(10px, 2px);
+											// background-color: #333;
+											background-color: #fff;
+										}
+
+										&:after {
+											transform: rotate(-90deg);
+										}
+									}
+
+									.en {
+										font-size: 14px;
+									}
+								}
+								.i-box {
+									cursor: pointer;
+									@include position(absolute, 13px, null, null, 30px);
+									line-height: 1;
+
+									i {
+										font-size: 15px;
+									}
+								}
+							}
+
+							>.item:first-child {
+								margin-top: 5px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

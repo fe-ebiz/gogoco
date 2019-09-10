@@ -1,0 +1,75 @@
+@@include('../include/_head.html', {
+    "page": "etc"
+})
+
+<body class="page-etc">
+
+<div class="wrapper wpop">
+
+    <div class="wpop-container favorite-menu" id="favoriteMenu">
+        <div class="pop-cell">
+            <div class="pop-wrapper">
+                <div class="pop-header">
+                    <h2 class="hidden">전체 메뉴</h2>
+                </div>
+                <div class="pop-contents">
+                    <div class="panel-list cf">
+                        <div class="panel-item favorite-panel">
+                            <h3 class="panel-title"><img src="../../public/img/icon/menupop/plus.png" alt="즐겨찾기"><span
+                                    class="lbl">즐겨찾기</span></h3>
+                            <div class="panel-contents">
+                                <div class="scroll">
+                                    <ul class="menu-list">
+                                        <li class="item">
+                                            <a href="../reservation/form.php" class="link" target="_blank"><span
+                                                    class="s-i"></span>개인 예약</a>
+                                            <span class="i-box"><i class="fas far fa-times-circle"></i></span>
+                                        </li>
+                                        <li class="item">
+                                            <a href="../reservation/reservationList.php" class="link"
+                                                target="_blank"><span class="s-i"></span>예약 리스트</a>
+                                            <span class="i-box"><i class="fas far fa-times-circle"></i></span>
+                                        </li>
+                                        <li class="item">
+                                            <a href="../reservation/room.php" class="link" target="_blank"><span
+                                                    class="s-i"></span>객실현황</a>
+                                            <span class="i-box"><i class="fas far fa-times-circle"></i></span>
+                                        </li>
+                                        @@for (var i=0; i < 6 ; i++) {
+                                            <li class="item">
+                                                <a href="../reservation/room.php" class="link" target="_blank"><span
+                                                        class="s-i"></span>객실현황</a>
+                                                <span class="i-box"><i class="fas far fa-times-circle"></i></span>
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(function () {
+                $('#gnb .btn-menupop.category-all').on('click', function () {
+                    $('#favoriteMenu').toggle();
+                });
+
+                var menuIdx = 0,
+                    menu = $('#favoriteMenu .favorite-panel');
+                menu.find(".menu-list > li").on('click', function () {
+                    menuIdx = $(this).index();
+                });
+                menu.find(".menu-list > li .i-box").on('click', function (e) {
+                    // page.favorites(2, menuIdx, '');
+                    // location.reload();
+                });
+            });
+        </script>
+    </div>
+    <!--/.all-menu-->
+
+</div>
+
+</body>
