@@ -512,6 +512,7 @@
 	.pop-wrapper {
 		@include size(300px, 540px);
 		margin: 10px;
+		margin-bottom: 0;
 		background-color: transparent;
 
 		.pop-contents {
