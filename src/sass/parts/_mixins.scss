@@ -796,7 +796,9 @@ $btn-lh: 1.5;
 			position: relative;
 			@include clearfix;
 			padding: 3px 7px;
-
+            &.ipt {
+                min-height: 25px;
+            }
 			&.pd-0 {
 				padding-top: 0;
 				padding-bottom: 0px;
@@ -1487,7 +1489,19 @@ $btn-lh: 1.5;
 				position: relative;
 				@include clearfix;
 				padding: 3px 7px;
-
+                &.ipt {
+                    min-height: 25px;
+                    .form-input {
+                        text-align: center;
+                        background-color: transparent;
+                        border-color: transparent;
+                    }
+                    &.editable .form-input {
+                        text-align: left;
+                        background-color: #fff;
+                        border-color: #c7c7c7;
+                    }
+                }
 				&.pd-0 {
 					padding-top: 0;
 					padding-bottom: 0px;
@@ -1755,8 +1769,20 @@ $btn-lh: 1.5;
 			.cell {
 				position: relative;
 				@include clearfix;
-				padding: 3px 7px;
-
+                padding: 3px 7px;
+                &.ipt {
+                    min-height: 25px;
+                    .form-input {
+                        text-align: center;
+                        background-color: transparent;
+                        border-color: transparent;
+                    }
+                    &.editable .form-input {
+                        text-align: left;
+                        background-color: #fff;
+                        border-color: #c7c7c7;
+                    }
+                }
 				&.pd-0 {
 					padding-top: 0;
 					padding-bottom: 0px;
@@ -1987,7 +2013,10 @@ $btn-lh: 1.5;
 				padding: 3px 7px;
 				white-space: nowrap;
 				overflow: hidden;
-				text-overflow: ellipsis;
+                text-overflow: ellipsis;
+                &.ipt {
+                    min-height: 25px;
+                }
 			}
 
 		}
@@ -2277,7 +2306,10 @@ $btn-lh: 1.5;
 					padding: 3px 7px;
 					white-space: nowrap;
 					overflow: hidden;
-					text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                    &.ipt {
+                        min-height: 25px;
+                    }
 				}
 
 			}

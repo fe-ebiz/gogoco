@@ -358,7 +358,47 @@
 										<td><div class="cell">44,925</div></td>
 										<td><div class="cell">44,925</div></td>
 										<td><div class="cell">N</div></td>
-										<td><div class="cell"></div></td>
+										<td><div class="cell ipt">
+                                        </div></td>
+                                        <!-- <style>
+                                            .cell.ipt .form-input {
+                                                background-color: transparent;
+                                                border-color: transparent;
+                                            }
+                                            .cell.ipt.editable .form-input {
+                                                background-color: #fff;
+                                                border-color: #c7c7c7;
+                                            }
+                                        </style> -->
+                                        <script>
+                                            $(function() {
+                                                $('body').on('click', '.cell.ipt', function() {
+                                                    
+                                                    var _this = $(this),
+                                                        el = '<input type="text" class="form-input">';
+
+                                                    _this.addClass('editable');
+                                                    
+                                                    if ( !(_this.html().trim().length) ) {
+                                                        _this.html(el);
+                                                    }
+                                                    _this.find('.form-input').focus();
+                                                    _this.find('.form-input').on('blur', function() {
+                                                        $(this).closest('.cell.ipt').removeClass('editable');
+                                                    });
+                                                });
+
+                                                document.querySelector('.cell.ipt').addEventListener('click', function() {
+                                                    console.log(this.value);
+                                                    // if ( !(this.value.trim() = '') ) {
+                                                        // this.setSelectionRange(0, 0);
+                                                        // console.log(this);
+
+                                                    // }
+                                                });
+                                            });
+                                            
+                                        </script>
 										<td><div class="cell">대외후불 고코투어 DTW 44 925bs 콘도 턴어웨이건입니다 총2객실입니다</div></td>
 										<td><div class="cell"></div></td>
 										<td><div class="cell">2019-03-06</div></td>
