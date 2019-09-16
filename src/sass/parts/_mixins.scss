@@ -798,6 +798,7 @@ $btn-lh: 1.5;
 			padding: 3px 7px;
             &.ipt {
                 min-height: 25px;
+                line-height: 26px;
             }
 			&.pd-0 {
 				padding-top: 0;
@@ -1491,16 +1492,7 @@ $btn-lh: 1.5;
 				padding: 3px 7px;
                 &.ipt {
                     min-height: 25px;
-                    .form-input {
-                        text-align: center;
-                        background-color: transparent;
-                        border-color: transparent;
-                    }
-                    &.editable .form-input {
-                        text-align: left;
-                        background-color: #fff;
-                        border-color: #c7c7c7;
-                    }
+                    line-height: 26px;
                 }
 				&.pd-0 {
 					padding-top: 0;
@@ -1772,16 +1764,7 @@ $btn-lh: 1.5;
                 padding: 3px 7px;
                 &.ipt {
                     min-height: 25px;
-                    .form-input {
-                        text-align: center;
-                        background-color: transparent;
-                        border-color: transparent;
-                    }
-                    &.editable .form-input {
-                        text-align: left;
-                        background-color: #fff;
-                        border-color: #c7c7c7;
-                    }
+                    line-height: 26px;
                 }
 				&.pd-0 {
 					padding-top: 0;
@@ -2016,6 +1999,7 @@ $btn-lh: 1.5;
                 text-overflow: ellipsis;
                 &.ipt {
                     min-height: 25px;
+                    line-height: 26px;
                 }
 			}
 
@@ -2309,6 +2293,7 @@ $btn-lh: 1.5;
                     text-overflow: ellipsis;
                     &.ipt {
                         min-height: 25px;
+                        line-height: 26px;
                     }
 				}
 

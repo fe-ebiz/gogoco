@@ -5239,7 +5239,7 @@
 	$menu-bg: #b29b7a;
 	.pop-wrapper {
 		// width: 1380px;
-		width: 1180px;
+		width: 1200px;
 		background-color: transparent;
 		.pop-header {
 			.cls-btn {
@@ -5265,7 +5265,7 @@
 					&:not(:first-child):not(.rsv-panel) {
 						border-left: 1px solid #c7c7c7;
 					}
-					&:first-child {
+					&.favorite-panel {
 						width: 180px;
 					}
 					.panel-title {

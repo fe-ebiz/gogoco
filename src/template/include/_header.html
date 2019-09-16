@@ -17,12 +17,12 @@
 						<span class="bar"></span>
 					</button>
 				</div>
-				<div class="btn-box">
+				<!-- <div class="btn-box">
 					<button type="button" class="btn-menupop category-favorite">
 						<i class="far fa-star"></i>
 						<i class="fas fa-star"></i>
 					</button>
-				</div>
+				</div> -->
 				<ul class="menu dep-1">
 					<li>
 						<a href="" class="ic-reservation">예약</a>
@@ -267,7 +267,7 @@
 	</header>
 	<!--//.header-->
 
-	<!-- <aside class="sidebar left">
+	<aside class="sidebar left">
 		<h2 class="hidden">사이드 네비게이션</h2>
 		<div class="lnb">
 			<a href="javascrtip:;" class="btna quick-plus">
@@ -297,7 +297,7 @@
 				</ul>
 			</div>
 		</div>
-	</aside> -->
+	</aside>
 	<!--/.sidebar.left-->
 
 	<div class="pop-container-3 favorite-menu" id="favoriteMenu" style="display: none;">
@@ -395,28 +395,24 @@
 							</div>
 						</div> -->
 						<div class="panel-item rsv-panel">
-							<h3 class="panel-title"><span class="s-i"><img
-										src="../../public/img/icon/menupop/reservation.png" alt="예약"></span><span
-									class="lbl">예약<br><span class="en">Reservation</span></g4></span></h3>
-							<div class="panel-contents">
-								<div class="scroll">
-									<ul class="menu-list">
-										<li class="item"><a href="../reservation/form.php" class="link"
-												target="_blank"><span class="s-i"></span>개인 예약<br><span
-													class="en">(Reservation FIT)</span></a></li>
-										<li class="item"><a href="../reservation/form.php?t=group" class="link"
-												target="_blank"><span class="s-i"></span>단체 예약<br><span
-													class="en">(Reservation Group)</span></a></li>
-										<li class="item"><a href="../reservation/reservationList.php" class="link"
-												target="_blank"><span class="s-i"></span>예약 리스트<br><span class="en">(Room
-													Inventory)</span></a>
-										</li>
-										<li class="item"><a href="../reservation/account.php" class="link"
-												target="_blank"><span class="s-i"></span>판매처<br><span
-													class="en">(Account)</span></a></li>
-									</ul>
-								</div>
-							</div>
+						    <h3 class="panel-title"><span class="s-i"><img src="../../public/img/icon/menupop/reservation.png"
+						                alt="예약"></span><span class="lbl">예약<br><span class="en">Reservation</span></g4></span></h3>
+						    <div class="panel-contents">
+						        <div class="scroll">
+						            <ul class="menu-list">
+						                <li class="item"><a href="../reservation/form.php" class="link" target="_blank"><span
+						                            class="s-i"></span>개인 예약<br><span class="en">(Reservation FIT)</span></a></li>
+						                <li class="item"><a href="../reservation/form.php?t=group" class="link" target="_blank"><span
+						                            class="s-i"></span>단체 예약<br><span class="en">(Reservation Group)</span></a></li>
+						                <li class="item"><a href="../reservation/reservationList.php" class="link" target="_blank"><span
+						                            class="s-i"></span>예약 리스트<br><span class="en">(Room
+						                            Inventory)</span></a>
+						                </li>
+						                <li class="item"><a href="../reservation/account.php" class="link" target="_blank"><span
+						                            class="s-i"></span>판매처<br><span class="en">(Account)</span></a></li>
+						            </ul>
+						        </div>
+						    </div>
 						</div>
 						<div class="panel-item front-panel">
 							<h3 class="panel-title"><span class="s-i"><img src="../../public/img/icon/menupop/front.png"
@@ -559,7 +555,12 @@
 		<script>
 			$(function () {
 				$('#gnb .btn-menupop.category-all').on('click', function () {
-					$('#allMenu').toggle();
+                    $('#allMenu').toggle();
+                    var itemWd = $('#allMenu .panel-item').width(),
+                        itemLength = $('#allMenu .panel-item').length;
+                    $('#allMenu .pop-wrapper').css({
+                        width: (200 *  itemLength) + 'px'
+                    });
 				});
 				$('#allMenu .cls-btn, #allMenu .bg-back').on('click', function() {
 					$('#allMenu').hide();
