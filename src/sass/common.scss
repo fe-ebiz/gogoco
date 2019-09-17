@@ -187,6 +187,19 @@ $sidebar-wd: 96px;
 		}
 	}
 }
+
+.grid-tbl {
+    th,
+    td {
+        .cell {
+            &.ipt {
+                min-height: 25px;
+                line-height: 26px;
+            }
+        }
+    }
+}
+
 .icon {
 	@include i-sprite-1(url("../img/common/sprite.png") no-repeat);
 	&.ic-check {
