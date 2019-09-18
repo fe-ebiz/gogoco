@@ -11,7 +11,7 @@ $(function() {
             _this.find('.form-input').remove();
         });
         _this.find('.form-input').on('keydown', function(e) {
-            var code = e.keyCode || e.which;
+            var code = e.which? e.which : e.keyCode;
             if ( code == 13 ) {
                 $(this).blur();
             }
