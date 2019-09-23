@@ -1,40 +1,60 @@
 @@include('../include/_head.html', {
-	"page": "reservation"
+"page": "reservation"
 })
 
 <body class="page-reservation">
 
-<div class="wrapper">
-	@@include('../include/_header.html')
-
-	
-	
-	<div class="cf contents name-contents">
-		
-		@@include('../include/_row_h2.html', {
-			"page-title": "샘필 및 팝업 테스트 페이지"
-		})
-		
-		<div class="cf cont-container-f">
+    <div class="wrapper">
+        @@include('../include/_header.html')
 
 
-			
-		</div>
-	</div>
-	<!--//.contents-->
-	
-	<div id="layer">
-		<!-- @@include('../layer/front/chkIn_02.html') -->
-		@@include('../layer/inhouse/cashier_virtual.html')
-		<!-- @@include('../layer/inhouse/extension.html') -->
-		<!-- @@include('../layer/inhouse/grpChkout.html') -->
-	</div>
-	<!-- /#layer -->
 
-</div>
-<!-- /.wrapper -->
+        <div class="cf contents name-contents">
 
-<!-- @@include('../include/_bottom.html') -->
+            @@include('../include/_row_h2.html', {
+            "page-title": "샘필 및 팝업 테스트 페이지"
+            })
+
+            <div class="cf cont-container-f">
+
+                <button type="button" id="layerBtn">팝업가져오기</button>
+
+
+            </div>
+        </div>
+        <!--//.contents-->
+
+        <div id="layer">
+            <!-- @@include('../layer/front/chkIn_02.html') -->
+            <!-- @@include('../layer/inhouse/cashier_virtual.html') -->
+            <!-- @@include('../layer/inhouse/extension.html') -->
+            <!-- @@include('../layer/inhouse/grpChkout.html') -->
+        </div>
+        <!-- /#layer -->
+
+    </div>
+    <!-- /.wrapper -->
+
+    <script>
+        layerAjax();
+
+        function layerAjax() {
+            console.log('hi');
+
+            $('#layerBtn').on('click', function () {
+                console.log('work');
+                $('#layer').load('../layer/inhouse/cashier_virtual.html');
+                // $.ajax({
+                //     url: '../layer/inhouse/cashier_virtual.html',
+                //     sucess: function (result) {
+                //         $('#layer').html(result);
+                //     }
+                // })
+            })
+        }
+    </script>
+    <!-- @@include('../include/_bottom.html') -->
 
 </body>
+
 </html>

@@ -40,6 +40,11 @@ label {
 		@include va;
 	}
 }
+input.date-ui,
+input#sdate,
+input#edate {
+    cursor: pointer;
+}
 .show-reset {
 	@include show-reset;
 }
