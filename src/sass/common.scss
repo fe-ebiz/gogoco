@@ -13,7 +13,7 @@
 //@import url(//cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
 //@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 // @import url(https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css);
-@import url(../fonts/nanumsquareround/nanumsquareround.css);
+@import url('../fonts/nanumsquareround/nanumsquareround.css');
 
 body {
 	font-display: swap;
@@ -162,6 +162,16 @@ $sidebar-wd: 96px;
 .co-green {
 	color: green !important;
 }
+.co-gray-child,
+.co-gray-child *,
+.co-gray {
+	color: #f5f5f5 !important;
+}
+.co-white-child,
+.co-white-child *,
+.co-white {
+	color: #fff !important;
+}
 // sat, sun 만 별도로 child * 적용, 나머지는 -child 들어가야 하위 적용
 .sun *,
 .sun {background-color: $bg-sun-td !important;}
@@ -174,13 +184,26 @@ $sidebar-wd: 96px;
 .cursor {
 	cursor: pointer !important;
 }
+.bg-gray-child,
+.bg-gray-child *,
+.bg-gray {
+    background-color: #f5f5f5 !important;
+}
+
+.bg-white-child,
+.bg-white-child *,
+.bg-white {
+    background-color: #fff !important;
+}
 .bg-bill-child,
-.bg-bill-child * {
+.bg-bill-child *,
+.bg-bill {
 	background-color: #fcf7e2 !important;
 }
 
 .bg-balance-child,
-.bg-balance-child * {
+.bg-balance-child *,
+.bg-balance {
 	background-color: #cecece !important;
 }
 .grid-tbl.no-bg,
