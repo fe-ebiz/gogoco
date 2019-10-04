@@ -1,0 +1,220 @@
+<!-- 분실물 팝업 - 추가, 리스트 -->
+<div class="pop-container lostFound-container">
+    <div class="bg-back"></div>
+
+    <div class="pop-wrapper">
+        <div class="pop-header">
+            <h2>분실물</h2>
+            <span class="a-i-x i-x fn-cls"></span>
+        </div>
+        <div class="fn-tabShow">
+            <div class="cf pop-contents">
+                <div class="cf tab-list">
+                    <a class="tab on">상세</a>
+                    <a class="tab">히스토리</a>
+                </div>
+                <!--//.tab-list-->
+            </div>
+            <div class="item-list">
+                <div class="common form-container on">
+                    <div class="cf popcont-container">
+                        <div class="grid-wrap">
+                            <table class="grid-tbl">
+                                <colgroup>
+                                    <col class="nth-1" style="width: 120px">
+                                    <col class="nth-2">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <div class="cell">방 # / 장소</div>
+                                        </th>
+                                        <td>
+                                            <div class="cell">
+                                                <input type="text" class="form-input" placeholder="방 / 장소">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="cell">분실물</div>
+                                        </th>
+                                        <td>
+                                            <div class="cell">
+                                                <input type="text" class="form-input lost">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="cell necess">내용</div>
+                                        </th>
+                                        <td>
+                                            <div class="cell">
+                                                <textarea name="" id="" cols="30" rows="10" class="textarea-etc notice"></textarea>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="cell necess">접수일</div>
+                                        </th>
+                                        <td>
+                                            <div class="cell">
+                                                <span class="cal-box">
+                                                    <input type="text" class="appe-reset inp-cal date-ui" value="">
+                                                    <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- 리스트 클릭시 -->
+                                    <tr>
+                                        <th>
+                                            <div class="cell">접수자</div>
+                                        </th>
+                                        <td>
+                                            <div class="cell">한애순 / </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="cell">상태</div>
+                                        </th>
+                                        <td>
+                                            <div class="cell">
+                                                <span class="rdo-box"><label><input type="radio" name="status" checked="checked"> 접수</label></span>
+                                                <span class="rdo-box"><label><input type="radio" name="status"> 처리</label></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="cell">처리일</div>
+                                        </th>
+                                        <td>
+                                            <div class="cell">
+                                                <span class="cal-box">
+                                                    <input type="text" class="appe-reset inp-cal date-ui" value="">
+                                                    <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="cell">처리결과</div>
+                                        </th>
+                                        <td>
+                                            <div class="cell">
+                                                <textarea name="" id="" cols="30" rows="10" class="textarea-etc"></textarea>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="cell">처리자</div>
+                                        </th>
+                                        <td>
+                                            <div class="cell"> / </div>
+                                        </td>
+                                    </tr>
+                                    <!-- // 리스트 클릭시 -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="pop-footer">
+                        <div class="row-btn">
+                            <!-- 리스트 클릭시 나타나는 팝업에서는 save del disabled 없음 -->
+                            <button type="button" class="btn-blue fn-cls" disabled>SAVE</button>
+                            <button type="button" class="btn-red fn-cls" disabled>DEL</button>
+                            <button type="button" class="btn-orange fn-cls">NEW</button>
+                            <button type="button" class="btn-gray fn-cls">CLOSE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="common history-container">
+                    <div class="cf popcont-container">
+                        <div class="scr-wrap">
+                            <div class="grid-scrollable-x">
+                                <div class="grid-area grid-head">
+                                    <div class="grid-scrollable">
+                                        <table class="grid-tbl">
+                                            <colgroup>
+                                                <col style="width: 50px">
+                                                <col style="width: *">
+                                                <col style="width: 45px">
+                                                <col style="width: 100px">
+                                                <col style="width: 90px">
+                                                <col style="width: 70px">
+                                                <col style="width: 92px">
+                                                <col style="width: 70px">
+                                            </colgroup>
+                                            <thead class="rowgroup">
+                                                <tr>
+                                                    <th>
+                                                        <div class="cell order-ui">No</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell order-ui">내용</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell order-ui">상태</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell order-ui">결과</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell order-ui">접수일</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell order-ui">접수자</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell order-ui">처리일</div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="cell order-ui">처리자</div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="grid-area grid-contents">
+                                    <table class="grid-tbl">
+                                        <colgroup>
+                                            <col style="width: 50px">
+                                            <col style="width: *">
+                                            <col style="width: 45px">
+                                            <col style="width: 100px">
+                                            <col style="width: 90px">
+                                            <col style="width: 70px">
+                                            <col style="width: 92px">
+                                            <col style="width: 70px">
+                                        </colgroup>
+                                        <tbody class="rowgroup">
+                                            <tr>
+                                                <td colspan="8">
+                                                    <div class="cell"></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //.scr-wrap-->
+                        <div class="cf grid-bottom">
+                            <span class="count">전체 <em>0</em>개의 목록이 있습니다.</span>
+                        </div>
+                        <!-- //.grid-bottom-->
+                    </div>
+                </div>
+            </div>
+            <!-- //.item-list -->
+        </div>
+    </div>
+</div>
+<!-- //.lostFound-container-->
