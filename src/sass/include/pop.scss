@@ -2295,6 +2295,73 @@
 }
 
 /*
+ * 보고서
+ */
+
+/* report - 판매 세부 사항 - 리스트 클릭시 */
+.pop-container.prdAccDetail-container {
+    .pop-wrapper {
+        width: 1550px;
+        margin-top: 30px;
+
+        .pop-contents {
+            .cont-property {
+                .property-tbl {
+                    @include tbl-style-2;
+
+                    .cell {
+                        .cal-box {
+                            .inp-cal {
+                                width: 95px;
+                            }
+                        }
+
+                        .form-input {
+                            width: 108px;
+                        }
+                    }
+                }
+            }
+
+            .cont-list {
+                margin-top: 13px;
+
+                .grid-toolbar {
+                    display: none;
+                }
+
+                .grid-wrap {
+                    @include grid-scr-x(1880px);
+
+                    .grid-area.grid-contents {
+                        background: #fff;
+                        height: 560px;
+                    }
+
+                    .grid-tbl {
+
+                        th,
+                        td {
+                            text-align: center;
+                        }
+
+                        th {
+                            .cell {
+                                text-overflow: inherit;
+                            }
+                        }
+                    }
+                }
+
+                .grid-bottom {
+                    @include grid-bottom-page;
+                }
+            }
+        }
+    }
+}
+
+/*
  * 관리자
  */
 /* 사용자 관리등록 */
@@ -4740,7 +4807,7 @@
     }
 }
 
-/* inhouse팝업 - GROUP ADD 클릭시 */
+/* inhouse팝업 - GROUP C/OUT 클릭시 */
 .pop-container.grpChkout-container {
     .pop-wrapper {
         width: 1450px;

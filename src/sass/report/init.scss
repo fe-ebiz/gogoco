@@ -130,6 +130,24 @@
 
 .sales-rsvCc {}
 
+.prd-accDetail {
+    .cont-property {
+        .property-tbl {
+            .cell {
+                .form-select {
+                    &.w-1 {
+                        width: 280px;
+                    }
+
+                    &.w-2 {
+                        width: 180px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* 심사 영역 */
 .contents[class*=audit-] {}
 
