@@ -1638,7 +1638,13 @@ $btn-lh: 1.5;
 						// background: #dad3d0;
 						background: #fde9d9;
 					}
-				}
+                }
+                tr.active {
+                    td {
+                        background: $bg-blue-2;
+                        color: #fff;
+                    }
+                }
 			}
 		}
 
@@ -1903,7 +1909,12 @@ $btn-lh: 1.5;
 					td {
 						background: #fde9d9;
 					}
-				}
+                }
+                tr.active {
+                    td {
+                        background: $bg-blue-2;
+                    }
+                }
 			}
 		}
 
