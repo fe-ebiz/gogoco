@@ -77,14 +77,17 @@
 			@include tbl-base;
 		}
 		.name-tbl {
-			// width: 306px;
-			th, td {
-
-			}
-			th {
-				.cell {
-				}
-			}
+            // width: 306px;
+            .pkg-wrapper {
+                .lbl {
+                    display: inline-block;
+                    // height: 100%;
+                    border-bottom: 1px solid #c7c7c7;
+                    font-size: 12px;
+                    height: 33px;
+                    background: #ebebeb;
+                }
+            }
 			td {
 				// min-width: 206px;
 				.cell {

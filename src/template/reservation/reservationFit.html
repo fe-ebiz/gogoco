@@ -143,6 +143,17 @@
 											</td>
 										</tr>
 										<tr>
+                                            <td colspan="2">
+                                                <div class="cell pkg-wrapper">
+                                                    <span class="lbl">패키지</span>
+                                                    <input type="text" class="form-input package" readonly>
+													<button type="button" class="btn-green" onclick="popFn.show('.pkg-container')">SET</button>
+													<button type="button" class="btn-gray" onclick="pkg.add()" style="width: 17px">+</button>
+													<button type="button" class="btn-gray del" onclick="pkg.del(this)" style="width: 17px">-</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- <tr data-tr-name="pkg-item">
 											<th>
 												<div class="cell">패키지</div>
 											</th>
@@ -154,7 +165,17 @@
 													<button type="button" class="btn-gray del" onclick="pkg.del(this)" style="width: 17px">-</button>
 												</div>
 											</td>
-										</tr>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <button id="pkgDeleteBtn">패키지 삭제 버튼</button>
+                                            </td>
+                                        </tr>
+                                        <script>
+                                            $('#pkgDeleteBtn').on('click', function() {
+                                                $('[data-tr-name="pkg-item"]').remove();
+                                            });
+                                        </script> -->
 										<tr class="ht-row-2" id="tr-price">
 											<th><div class="cell necess">요금</div></th>
 											<td class="ta-right">
