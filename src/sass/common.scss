@@ -206,6 +206,7 @@ $sidebar-wd: 96px;
 .bg-balance {
 	background-color: #cecece !important;
 }
+
 .grid-tbl.no-bg,
 .grid-tbl.statistics {
 	tr:nth-child(2n) {
@@ -220,6 +221,7 @@ $sidebar-wd: 96px;
     th,
     td {
         .cell {
+            overflow: hidden;
             &.ipt {
                 min-height: 25px;
                 line-height: 26px;
