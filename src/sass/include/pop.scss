@@ -3296,7 +3296,8 @@
                     float: none;
 
                     .grid-wrap.scr-wrap {
-                        @include grid-scr-x(950px);
+                        // @include grid-scr-x(950px);
+                        @include grid-scr-x(1060px);
 
                         .grid-area.grid-contents {
                             background: #fff;
@@ -3305,7 +3306,7 @@
 
                         .grid-tbl {
                             .ie8 & {
-                                width: 950px;
+                                width: 1060px;
                             }
 
                             th,
