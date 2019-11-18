@@ -227,6 +227,20 @@ $sidebar-wd: 96px;
                 line-height: 26px;
             }
         }
+        &.checkmark {
+            position: relative;
+            &:before {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border: 5px solid transparent;
+                border-top-color: red;
+                border-left-color: red;
+                // background-color: red;
+            }
+        }
     }
 }
 
