@@ -1991,7 +1991,7 @@ $btn-lh: 1.5;
 			.cell {
 				padding: 3px 7px;
 				white-space: nowrap;
-				overflow: hidden;
+				// overflow: hidden;
                 text-overflow: ellipsis;
 			}
 
@@ -2281,7 +2281,7 @@ $btn-lh: 1.5;
 				.cell {
 					padding: 3px 7px;
 					white-space: nowrap;
-					overflow: hidden;
+					// overflow: hidden;
                     text-overflow: ellipsis;
                     &.ipt {
                         min-height: 25px;

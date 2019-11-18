@@ -221,8 +221,8 @@ $sidebar-wd: 96px;
     th,
     td {
         .cell {
-            overflow: hidden;
             &.ipt {
+                word-wrap: break-all;
                 min-height: 25px;
                 line-height: 26px;
             }
