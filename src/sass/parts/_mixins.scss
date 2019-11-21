@@ -1983,7 +1983,7 @@ $btn-lh: 1.5;
 		th,
 		td {
 			font-size: 12px;
-			box-sizing: border-box;
+			// box-sizing: border-box;
 			border-left: 1px solid $bd-c;
 			border-bottom: 1px solid $bd-c;
 			text-align: center;
@@ -2118,7 +2118,7 @@ $btn-lh: 1.5;
 							border-bottom: 1px solid $bd-c;
 
 							&.locked {
-								height: 66px;
+								height: 67px;
 							}
 						}
 					}
@@ -2187,7 +2187,7 @@ $btn-lh: 1.5;
 						border-bottom: 1px solid $bd-c;
 
 						&.locked {
-							height: 66px;
+							height: 67px;
 						}
 					}
 				}
