@@ -145,17 +145,17 @@ $sidebar-wd: 96px;
 	color: black !important;
 }
 .co-blue-child,
-.co-blue-child *,
+.co-blue-child *:not(button),
 .co-blue {
 	color: blue !important;
 }
 .co-red-child,
-.co-red-child *,
+.co-red-child *:not(button),
 .co-red {
 	color: red !important;
 }
 .co-orange-child,
-.co-orange-child *,
+.co-orange-child *:not(button),
 .co-orange {
 	color: orange !important;
 }
@@ -163,12 +163,12 @@ $sidebar-wd: 96px;
 	color: green !important;
 }
 .co-gray-child,
-.co-gray-child *,
+.co-gray-child *:not(button),
 .co-gray {
 	color: #f5f5f5 !important;
 }
 .co-white-child,
-.co-white-child *,
+.co-white-child *:not(button),
 .co-white {
 	color: #fff !important;
 }

@@ -746,10 +746,10 @@
 	}
 	.cont-roomInv {
 		.grid-container {
-			@include grid-scr-x2(180px, 2000px, 100%);
+			@include grid-scr-x2(150px, 2000px, 100%);
 			$ie8-wth: 1583px;
 			.ie8 .grid-area.grid-locked {
-				width: 180px;
+				width: 150px;
 			}
 			.scr-wrap {
 				.ie8 & {
