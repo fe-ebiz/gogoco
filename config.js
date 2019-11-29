@@ -24,35 +24,35 @@ module.exports = function() {
 
 		// Sass 경로
 		sass = {
-			src : source + '/sass/**/!(_)*.{scss,sass}',
-			src_sprite : source + '/sass/sprite',
-			parts : source + '/sass/**/_*.{scss,sass}',
+			src : source + '/assets/sass/**/!(_)*.{scss,sass}',
+			src_sprite : source + '/assets/sass/sprite',
+			parts : source + '/assets/sass/**/_*.{scss,sass}',
 			dest: development + '/public/css'
 		},
 
 		// Css 경로
 		css = {
-			src : source + '/css/**/*.css',
+			src : source + '/assets/css/**/*.css',
 			dest: development + '/public/css'
 		},
 
 		// JS 경로
 		js = {
-			src : source + '/js/**/*.js',
+			src : source + '/assets/js/**/*.js',
 			dest: development + '/public/js'
 		},
 
 		// Img 경로
 		img = {
-			// src : source + '/assets/img/**/*.{gif,jpg,png,ico}',
-			src : source + '/img/**/!(sprite)*/*',
-			src_sprite : source + '/img/**/sprite*/*',
+			src : source + '/assets/img/**/*.{gif,jpg,png,ico}',
+			// src : source + '/assets/img/**/!(sprite)*/*',
+			src_sprite : source + '/assets/img/**/sprite*/*',
 			dest: development + '/public/img',
 		},
 
 		// etc 경로
 		etc = {
-			src: source + '/!(css|sass|js|img)/**/*',
+			src: source + '/assets/!(css|sass|js|img)/**/*',
 			dest: development + '/public/',
 		},
 

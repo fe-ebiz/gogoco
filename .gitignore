@@ -1,33 +1,6 @@
 y.pub
 y
 
-#etc
-_bak/
-_document/
-_draft/
-_work/
-_media/
-_tmp/
-img/
-dist/
-.sass-cache/
-
-#fontFile
-*.ttf
-*.woff
-*.woff2
-*.eot
-*.otf
-
-#sftpFile, zip
-*.json
-*.zip
-
-# ImeageFile
-*.jpg
-*.png
-*.gif
-
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -76,4 +49,14 @@ Network Trash Folder
 Temporary Items
 .apdisk
 node_modules
-gulpfile.js
+
+#etc
+_bak/
+_document/
+_draft/
+_work/
+_media/
+_tmp/
+img/
+dist/
+.sass-cache/
