@@ -67,7 +67,7 @@ function templateM() {
 		.pipe(browserSync.stream({ match: '**/*.html' }));
 };
 function templateMAll() {
-	return src([config.template.src_m, config.template.src_m])
+	return src([config.template.src_m, config.template.parts_m])
 		.pipe(fileinclude({
 			prefix: '@@',
 			basepath: '@file'
