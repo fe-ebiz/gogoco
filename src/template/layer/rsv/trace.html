@@ -1,0 +1,125 @@
+<!-- 메시지 팝업 : trace + 버튼 클릭시 등장-->
+<div class="pop-container trace-container">
+    <div class="bg-back"></div>
+
+    <div class="pop-wrapper">
+        <div class="pop-header">
+            <h2>기록 메모</h2>
+            <span class="a-i-x i-x fn-cls"></span>
+        </div>
+        <div class="cf pop-contents">
+            <div class="popcont-container">
+                <div class="cont-list">
+                    <div class="grid-toolbar">
+                        <button type="button" class="btn-gray"><span class="icon ic-plus"></span> 새 레코드 추가</button>
+                    </div>
+                    <!-- /.grid-toolbar -->
+                    <div class="grid-wrap">
+                        <div class="grid-scrollable-x">
+                            <div class="grid-area grid-head">
+                                <div class="grid-scrollable">
+                                    <table class="grid-tbl list-tbl">
+                                        <colgroup>
+                                            <col style="width: 245px">
+                                            <col style="width: 136px">
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col style="width: 90px">
+                                        </colgroup>
+                                        <thead class="rowgroup">
+                                            <tr>
+                                                <th class="ta-left"><div class="cell">메시지</div></th>
+                                                <th><div class="cell">부서</div></th>
+                                                <th><div class="cell">생성자</div></th>
+                                                <th><div class="cell">도착일</div></th>
+                                                <th><div class="cell">출발일</div></th>
+                                                <th><div class="cell">생성일</div></th>
+                                                <th><div class="cell">Resolve</div></th>
+                                                <th><div class="cell">unResolve</div></th>
+                                                <th><div class="cell"></div></th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="grid-area grid-contents">
+                                <table class="grid-tbl list-tbl">
+                                    <colgroup>
+                                        <col style="width: 245px">
+                                        <col style="width: 136px">
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col style="width: 90px">
+                                    </colgroup>
+                                    <tbody class="rowgroup">
+                                        <!-- 새 레코드 클릭 시 추가 -->
+                                        <tr>
+                                            <td class="ta-left">
+                                                <div class="cell">
+                                                    <input type="text" class="form-input">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="cell">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">Sales Team</option>
+                                                        <option value="">House Team</option>
+                                                        <option value="">Facilities Team</option>
+                                                        <option value="">Food &amp; Beverage</option>
+                                                        <option value="">Team</option>
+                                                        <option value="">Others</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td><div class="cell"></div></td>
+                                            <td>
+                                                <div class="cell">
+                                                    <input type="text" class="form-input date-ui">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="cell">
+                                                    <input type="text" class="form-input date-ui">
+                                                </div>
+                                            </td>
+                                            <td class="ta-left">
+                                                <div class="cell">
+                                                    <input type="text" class="form-input">
+                                                </div>
+                                            </td>
+                                            <td><div class="cell"><button type="button" class="btn-gray-2">CF</button></div></td>
+                                            <td><div class="cell"><button type="button" class="btn-gray-2">CF</button></div></td>
+                                            <td>
+                                                <div class="cell">
+                                                    <button type="button" class="btn-gray delete" onclick="$(this).closest('tr').hide()"><span class="icon ic-delete"></span> 삭제</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //.grid-wrap -->
+                </div>
+                <!-- //.cont-list -->
+            </div>
+        </div>
+        <!-- //.pop-contents-->
+        <div class="pop-footer">
+            <div class="row-btn">
+                <button type="button" class="btn-brown fn-cls">DONE</button>
+                <button type="button" class="btn-gray fn-cls">CLOSE</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //.trace-container -->

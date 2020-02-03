@@ -1,0 +1,133 @@
+@@include('../include/_head.html', {
+	"page": "adm"
+})
+
+<body class="page-adm">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="cf contents roleCode-contents">
+
+		<div class="row-top-btn">
+			<button type="button" class="btn-red" onclick="popFn.show('.authCodeRegt-container')">새로만들기</button>
+			<button type="button" class="btn-red">새로고침</button>
+		</div>
+
+		@@include('../include/_row_h2.html', {
+			"page-title": "권한코드"
+		})
+
+		<div class="cf cont-container-f">
+			<div class="cont-property">
+				<div class="grid-wrap">
+					<div class="grid-contents">
+						<table class="grid-tbl property-tbl">
+							<colgroup>
+								<col style="width:100px">
+								<col style="width:120px">
+								<col style="width:100px">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th><div class="cell">권한코드</div></th>
+									<td>
+										<div class="cell">
+											<input type="text" class="form-input">
+										</div>
+									</td>
+									<th><div class="cell">검색옵션</div></th>
+									<td>
+										<div class="cell">
+											<select name="" id="" class="form-select gray option">
+												<option value="">설명</option>
+												<option value="">권한명</option>
+												<option value="">설명</option>
+											</select>
+											<input type="text" class="form-input option">
+											<button type="button" class="btn-brown">SEARCH</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- //.cont-property -->
+
+			<div class="cont-list">
+				<div class="grid-wrap scr-wrap">
+					<div class="grid-scrollable-x">
+						<div class="grid-area grid-head">
+							<div class="grid-scrollable">
+								<table class="grid-tbl">
+									<colgroup>
+										<col style="width:100px">
+										<col style="width:250px">
+										<col style="width:300px">
+										<col style="width:80px">
+										<col>
+									</colgroup>
+									<thead class="rowgroup">
+										<tr>
+											<th><div class="cell">권한코드</div></th>
+											<th><div class="cell">권한명</div></th>
+											<th><div class="cell">설명</div></th>
+											<th><div class="cell">권한</div></th>
+											<th><div class="cell"></div></th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div class="grid-area grid-contents">
+							<table class="grid-tbl">
+								<colgroup>
+									<col style="width:100px">
+									<col style="width:250px">
+									<col style="width:300px">
+									<col style="width:80px">
+									<col>
+								</colgroup>
+								<tbody class="rowgroup">
+									<tr>
+										<td><div class="cell">ADMIN</div></td>
+										<td class="ta-left"><div class="cell">업무관리자</div></td>
+										<td class="ta-left"><div class="cell">업무관리자</div></td>
+										<td><div class="cell">2</div></td>
+										<td><div class="cell"></div></td>
+									</tr>
+									<tr>
+										<td><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+				</div>
+				<!-- //.grid-wrap -->
+				<div class="cf grid-bottom">
+					<a href="#" class="prev st">&lt;&lt;</a>
+					<a href="#" class="prev">&lt;</a>
+					<span class="num">0</span>
+					<a href="#" class="next">&gt;</a>
+					<a href="#" class="next st">&gt;&gt;</a>
+					<span class="count"><span class="co">7</span> Count</span>
+				</div>
+				<!-- //.grid-bottom-->
+			</div>
+			<!-- //.cont-list -->
+		</div>
+	</div>
+	<!--//.contents-->
+
+</div>
+</body>
+</html>

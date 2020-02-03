@@ -1,0 +1,224 @@
+@@include('../include/_head.html', {
+	"page": "fnb"
+})
+
+<!-- 페이지 전용 -->
+
+<body class="page-fnb">
+
+<!-- @@include('../include/pop/pop_rsv.html') -->
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="cf contents pkgChk-contents">
+
+		@@include('../include/_row_h2.html', {
+			"page-title": "패키지 확인"
+		})
+
+		<div class="cf cont-container-f">
+			<div class="cont-property">
+				<div class="grid-wrap">
+					<div class="grid-contents">
+						<table class="grid-tbl property-tbl">
+							<colgroup>
+								<col style="width:120px">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th><div class="cell">날짜</div></th>
+									<td>
+										<div class="cell">
+											<span class="cal-box">
+												<input type="text" class="appe-reset inp-cal date-ui">
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+											</span>
+											<span class="mg-">~</span>
+											<span class="cal-box">
+												<input type="text" class="appe-reset inp-cal date-ui">
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+											</span>
+											<button type="button" class="btn-brown search">SEARCH</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th><div class="cell">합계</div></th>
+									<td>
+										<div class="cell">
+											<dl class="cf total-dl">
+												<dt>건수</dt>
+												<dd>3</dd>
+												<dt>객실수</dt>
+												<dd>7</dd>
+												<dt>박수</dt>
+												<dd>17</dd>
+												<dt>인원</dt>
+												<dd>6</dd>
+												<dt>결제금액</dt>
+												<dd>10,000,000</dd>
+											</dl>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="search-list">
+							<button type="button" class="btn-blue" onclick="reserve.search()">오늘</button>
+							<button type="button" class="btn-blue" onclick="reserve.search()">어제</button>
+							<button type="button" class="btn-blue" onclick="reserve.search()">7일</button>
+							<button type="button" class="btn-blue" onclick="reserve.search()">30일</button>
+							<button type="button" class="btn-blue" onclick="reserve.search()">지난달</button>
+							<button type="button" class="btn-blue" onclick="reserve.search()">이번달</button>
+							<button type="button" class="btn-brown" onclick="reserve.search()">SEARCH</button>
+							<button type="button" class="btn-brown" onclick="location.href=&quot;reservationList.php&quot;">CLEAR</button>
+							<button type="button" class="btn-gray btn-i"><span class="icon ic-excel"></span>Excel</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--//.cont-property-->
+			<div class="cont-tab">
+				<div class="cf tab-list">
+					<a class="tab on">객실</a>
+					<a class="tab">라바짜</a>
+					<a class="tab">한식당</a>
+					<a class="tab">바베큐</a>
+					<a class="tab">룸서비스</a>
+					<a class="tab">노래방</a>
+					<a class="tab">오락시설</a>
+					<a class="tab">연회장</a>
+					<a class="tab">낚시</a>
+				</div>
+			</div>
+			<!-- /.cont-tab -->
+			<div class="cont-list">
+				<div class="grid-wrap scr-wrap">
+					<div class="grid-scrollable-x">
+						<div class="grid-area grid-head">
+							<div class="grid-scrollable">
+								<table class="grid-tbl">
+									<colgroup>
+										<col style="width: 60px">
+										<col style="width: 80px">
+										<col style="width: 145px">
+										<col style="width: 190px">
+										<col style="width: 110px">
+										<col style="width: 230px">
+										<col style="width: 535px">
+										<col style="width: 80px">
+										<col style="width: 95px">
+										<col style="width: 95px">
+										<col>
+									</colgroup>
+									<thead class="rowgroup">
+										<tr>
+											<th><div class="cell">번호</div></th>
+											<th><div class="cell">고객명</div></th>
+											<th><div class="cell">전화번호</div></th>
+											<th><div class="cell">결제일</div></th>
+											<th><div class="cell">이용일</div></th>
+											<th><div class="cell">부대시설</div></th>
+											<th><div class="cell">상세옵션</div></th>
+											<th><div class="cell">총 개수</div></th>
+											<th><div class="cell">결제금액</div></th>
+											<th><div class="cell">판매구분</div></th>
+											<th><div class="cell">관리</div></th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div class="grid-area grid-contents">
+							<table class="grid-tbl">
+								<colgroup>
+									<col style="width: 60px">
+									<col style="width: 80px">
+									<col style="width: 145px">
+									<col style="width: 190px">
+									<col style="width: 110px">
+									<col style="width: 230px">
+									<col style="width: 535px">
+									<col style="width: 80px">
+									<col style="width: 95px">
+									<col style="width: 95px">
+									<col>
+								</colgroup>
+								<tbody class="rowgroup">
+									<tr>
+										<td><div class="cell">10</div></td>
+										<td><div class="cell">유진용</div></td>
+										<td><div class="cell">010-5566-6566</div></td>
+										<td><div class="cell">2019-07-21 21:10:17</div></td>
+										<td><div class="cell">2019-07-22</div></td>
+										<td class="ta-left"><div class="cell">조식 패키지</div></td>
+										<td class="ta-left"><div class="cell">뷔페 조식 소인(13세 미만) 1인</div></td>
+										<td><div class="cell">1</div></td>
+										<td><div class="cell">8,900</div></td>
+										<td><div class="cell">이벤트</div></td>
+										<td>
+											<div class="cell">
+												<button type="button" class="btn-gray">상세</button>
+												<button type="button" class="btn-gray">미사용</button>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="grid-area grid-total">
+							<table class="grid-tbl">
+								<colgroup>
+									<col style="width: 60px">
+									<col style="width: 80px">
+									<col style="width: 145px">
+									<col style="width: 190px">
+									<col style="width: 110px">
+									<col style="width: 230px">
+									<col style="width: 535px">
+									<col style="width: 80px">
+									<col style="width: 95px">
+									<col style="width: 95px">
+									<col>
+								</colgroup>
+								<tbody class="rowgroup">
+									<tr>
+										<td colspan="2"><div class="cell">합계</div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell">10</div></td>
+										<td><div class="cell">89,000</div></td>
+										<td><div class="cell"></div></td>
+										<td class="last"><div class="cell inBl"></div><span class="square"></span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //.grid-wrap -->				
+				<div class="cf grid-bottom">
+					<a href="#" class="prev st">&lt;&lt;</a>
+					<a href="#" class="prev">&lt;</a>
+					<span class="num">0</span>
+					<a href="#" class="next">&gt;</a>
+  					<a href="#" class="next st">&gt;&gt;</a>
+					<span class="count">1 - 100 of 158 items</span>
+				</div>
+				<!-- //.grid-bottom-->
+			</div>
+			<!-- //.cont-list -->
+		</div>
+	</div>
+	<!-- //.contents -->
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+@@include('../include/_head.html', {
+	"page": "report"
+})
+
+<body class="page-report">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="cf contents report-contents cashier-pay">
+
+		@@include('../include/_row_h2.html', {
+			"page-title": "일일 결제 목록"
+		})
+
+		<div class="cf cont-container-f">
+			<div class="cont-property">
+				<div class="grid-wrap">
+					<div class="grid-contents">
+						<table class="grid-tbl property-tbl">
+							<colgroup>
+								<col style="width: 100px">
+								<col style="width: 220px">
+								<col style="width: 100px">
+								<col style="width: 250px">
+								<col style="width: 100px">
+								<col style="width: 150px">
+								<col style="width: 100px">
+								<col style="width: 150px">
+								<col style="width: 150px">
+								<col>
+							</colgroup>	
+							<tbody>
+								<tr>
+									<th><div class="cell">속성</div></th>
+									<td>
+										<div class="cell">
+											<select name="" id="" class="form-select gray">
+												<option value="">Ramada pt</option>
+											</select>
+										</div>
+									</td>
+									<th><div class="cell">날짜</div></th>
+									<td colspan="7">
+										<div class="cell">
+											<span class="cal-box">
+												<input type="text" class="appe-reset inp-cal date-ui">
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+											</span>
+											<span class="mg-">~</span>
+											<span class="cal-box">
+												<input type="text" class="appe-reset inp-cal date-ui">
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+											</span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th><div class="cell">항목</div></th>
+									<td>
+										<div class="cell">
+											<select name="" id="" class="form-select gray">
+												<option value=""></option>
+											</select>
+										</div>
+									</td>
+									<th><div class="cell">결제</div></th>
+									<td>
+										<div class="cell">
+											<select name="" id="" class="form-select gray">
+												<option value=""></option>
+											</select>
+										</div>
+									</td>
+									<th><div class="cell">결제 번호</div></th>
+									<td>
+										<div class="cell">
+											<input type="text" class="form-input">
+										</div>
+									</td>
+									<th><div class="cell">승인 번호</div></th>
+									<td>
+										<div class="cell">
+											<input type="text" class="form-input">
+										</div>
+									</td>
+									<td class="ta-center">
+										<div class="cell">
+											<label><input type="checkbox"><span>Summary</span></label>
+											<label><input type="checkbox"><span>Detail</span></label>
+										</div>
+									</td>
+									<td>
+										<div class="cell">
+											<button type="button" class="btn-brown">SEARCH</button>
+											<button type="button" class="btn-brown">CLEAR</button>
+											<button type="button" class="btn-gray"><span class="icon ic-excel"></span> Excel</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- /.cont-property -->
+
+			<div class="cont-list">
+				<div class="grid-wrap scr-wrap">
+					<div class="grid-scrollable-x">
+						<div class="grid-area grid-head">
+							<div class="grid-scrollable">
+								<table class="grid-tbl">
+									<colgroup>
+										<col class="grouping-row">
+										<col class="grouping-row">
+										<col class="grouping-row">
+										<col style="width:84px">
+										<col style="width:105px">
+										<col style="width:105px">
+										<col style="width:126px">
+										<col style="width:74px">
+										<col style="width:105px">
+										<col style="width:63px">
+										<col style="width:189px">
+										<col style="width:158px">
+										<col style="width:158px">
+										<col style="width:94px">
+										<col style="width:146px">
+										<col style="width:125px">
+										<col style="width:104px">
+										<col>
+									</colgroup>
+									<thead class="rowgroup">
+										<tr>
+											<td class="grouping-row"></td>
+											<td class="grouping-row"></td>
+											<td class="grouping-row"></td>
+											<th><div class="cell">날짜</div></th>
+											<th><div class="cell">항목</div></th>
+											<th><div class="cell">결제</div></th>
+											<th><div class="cell">Method</div></th>
+											<th><div class="cell">기업</div></th>
+											<th><div class="cell">Acct#</div></th>
+											<th><div class="cell">Room#</div></th>
+											<th><div class="cell">손님이름</div></th>
+											<th><div class="cell">Agent</div></th>
+											<th><div class="cell">결제정보</div></th>
+											<th><div class="cell">승인번호</div></th>
+											<th><div class="cell">승인시간</div></th>
+											<th><div class="cell">비고</div></th>
+											<th><div class="cell">금액</div></th>
+											<th><div class="cell">Cashier</div></th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div class="grid-area grid-contents">
+							<table class="grid-tbl">
+								<colgroup>
+									<col class="grouping-row">
+									<col class="grouping-row">
+									<col class="grouping-row">
+									<col style="width:84px">
+									<col style="width:105px">
+									<col style="width:105px">
+									<col style="width:126px">
+									<col style="width:74px">
+									<col style="width:105px">
+									<col style="width:63px">
+									<col style="width:189px">
+									<col style="width:158px">
+									<col style="width:158px">
+									<col style="width:94px">
+									<col style="width:146px">
+									<col style="width:125px">
+									<col style="width:104px">
+									<col>
+								</colgroup>
+								<tbody class="rowgroup">
+									<tr class="grouping-dep-1"><td class="ta-left dep-item" colspan="18"><div class="cell"><span class="grouping-folder"></span>2019-08-26: 4,961,483</div></td></tr>
+									<tr class="grouping-dep-2">
+										<td class="grouping-row"></td>
+										<td class="ta-left dep-item" colspan="17"><div class="cell"><span class="grouping-folder"></span>Guest Ledger</div></td>
+									</tr>
+									<tr class="grouping-dep-3">
+										<td class="grouping-row"></td>
+										<td class="grouping-row"></td>
+										<td class="ta-left dep-item" colspan="16"><div class="cell"><span class="grouping-folder"></span>City Ledger</div></td>
+									</tr>
+									<tr>
+										<td class="grouping-row"></td>
+										<td class="grouping-row"></td>
+										<td class="grouping-row"></td>
+										<td><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-right"><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="grid-area grid-total">
+							<table class="grid-tbl">
+								<colgroup>
+									<col class="grouping-row">
+									<col class="grouping-row">
+									<col class="grouping-row">
+									<col style="width:84px">
+									<col style="width:105px">
+									<col style="width:105px">
+									<col style="width:126px">
+									<col style="width:74px">
+									<col style="width:105px">
+									<col style="width:63px">
+									<col style="width:189px">
+									<col style="width:158px">
+									<col style="width:158px">
+									<col style="width:94px">
+									<col style="width:146px">
+									<col style="width:125px">
+									<col style="width:104px">
+									<col>
+								</colgroup>
+								<tbody class="rowgroup">
+									<tr>
+										<td class="grouping-row"></td>
+										<td class="grouping-row"></td>
+										<td class="grouping-row"></td>
+										<td><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td class="ta-right"><div class="cell"></div></td>
+										<td class="last"><div class="cell inBl"></div><span class="square"></span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //.grid-wrap -->
+			</div>
+			<!--//.cont-rmBlock-->
+		</div>
+	</div>
+	<!--//.contents-->
+	
+	@@include('../include/status/_right_notice.html')
+</div>
+</body>
+</html>

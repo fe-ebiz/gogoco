@@ -1,0 +1,162 @@
+<!-- 룸 서비스 상태 팝업  -->
+<div class="pop-container rmSvcStus-container">
+	<div class="bg-back"></div>
+
+	<div class="pop-wrapper">
+		<div class="pop-header">
+			<h2>룸 서비스 상태</h2>
+			<span class="a-i-x i-x fn-cls"></span>
+		</div>
+		<div class="cf pop-contents">
+			<div class="cf popcont-container">
+                <div class="cont-property">
+                    <div class="grid-wrap">
+                        <div class="grid-contents">
+                            <table class="grid-tbl property-tbl">
+                                <colgroup>
+                                    <col style="width: 100px">
+                                    <col style="width: 160px">
+                                    <col style="width: 100px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th><div class="cell">속성</div></th>
+                                        <td>
+                                            <div class="cell">
+                                                <select name="" id="" class="form-select w-1">
+                                                    <option value=""></option>
+                                                    <option value="">1. 루미아</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <th><div class="cell">서비스</div></th>
+                                        <td>
+                                            <div class="cell">
+                                                <select name="" id="" class="form-select w-2">
+                                                    <option value=""></option>
+                                                    <option value="">O.O.O</option>
+                                                    <option value="">O.O.S</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><div class="cell">날짜</div></th>
+                                        <td colspan="3">
+                                            <div class="cell">
+                                                <span class="cal-box">
+                                                    <input type="text" class="appe-reset inp-cal date-ui">
+                                                    <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                                </span>
+                                                <span>~</span>
+                                                <span class="cal-box">
+                                                    <input type="text" class="appe-reset inp-cal date-ui">
+                                                    <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                                </span>
+                                                <button type="button" class="btn-brown">SEARCH</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cont-area">
+					<div class="grid-toolbar">
+						<button type="button" class="btn-gray"><span class="icon ic-excel"></span> Export to Excel</button>
+						<button type="button" class="btn-gray"><span class="icon ic-pdf"></span> Export to PDF</button>
+					</div>
+                    <!-- /.grid-toolbar -->
+					<div class="grid-wrap scr-wrap">
+						<div class="grid-scrollable-x">
+							<div class="grid-area grid-head">
+								<div class="grid-scrollable">
+									<table class="grid-tbl">
+										<colgroup>
+											<col style="width: 100px">
+											<col style="width: 70px">
+											<col style="width: 60px">
+											<col style="width: *">
+											<col style="width: 97px">
+											<col style="width: 97px">
+											<col style="width: 170px">
+											<col style="width: 95px">
+										</colgroup>
+										<thead class="rowgroup">
+											<tr>
+												<th><div class="cell order-ui">Svc.Date</div></th>
+												<th><div class="cell order-ui">객실#</div></th>
+												<th><div class="cell order-ui">서비스</div></th>
+												<th><div class="cell order-ui">이유</div></th>
+												<th><div class="cell order-ui">From</div></th>
+												<th><div class="cell order-ui">To</div></th>
+												<th><div class="cell order-ui">수정시간</div></th>
+												<th><div class="cell order-ui">수정자</div></th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+							</div>
+							<div class="grid-area grid-contents">
+								<table class="grid-tbl">
+									<colgroup>
+                                        <col style="width: 100px">
+                                        <col style="width: 70px">
+                                        <col style="width: 60px">
+                                        <col style="width: *">
+                                        <col style="width: 97px">
+                                        <col style="width: 97px">
+                                        <col style="width: 170px">
+                                        <col style="width: 95px">
+									</colgroup>
+									<tbody class="rowgroup">
+									    <tr>
+									        <td><div class="cell">2019-04-12</div></td>
+									        <td><div class="cell">0301</div></td>
+									        <td><div class="cell">O.O.O</div></td>
+									        <td class="ta-left"><div class="cell">F&B 알바 사용</div></td>
+									        <td><div class="cell">2018-11-05</div></td>
+									        <td><div class="cell">2019-12-31</div></td>
+									        <td><div class="cell">2019-03-28 15:33:12</div></td>
+									        <td><div class="cell">한애순</div></td>
+									    </tr>
+									    <tr>
+									        <td><div class="cell">2019-04-12</div></td>
+									        <td><div class="cell">1311</div></td>
+									        <td><div class="cell">O.O.O</div></td>
+									        <td class="ta-left"><div class="cell">히터 고장으로 인한 판매 불가 정비 완료</div></td>
+									        <td><div class="cell">2019-02-03</div></td>
+									        <td><div class="cell">2019-04-30</div></td>
+									        <td><div class="cell">2019-03-23 14:59:10</div></td>
+									        <td><div class="cell">한애순</div></td>
+									    </tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- //.grid-wrap -->
+                    <div class="cf grid-bottom">
+                        <a href="#" class="prev st">&lt;&lt;</a>
+                        <a href="#" class="prev">&lt;</a>
+                        <span class="num">0</span>
+                        <a href="#" class="next">&gt;</a>
+                        <a href="#" class="next st">&gt;&gt;</a>
+                        <span class="count">1 - 127 of 127 items</span>
+                    </div>
+                    <!-- //.grid-bottom-->
+                </div>
+			</div>
+			<!-- /.popcont-container -->
+		</div>
+        <div class="pop-footer">
+			<div class="row-btn">
+				<button type="button" class="btn-gray fn-cls">CLOSE</button>
+			</div>
+        </div>
+	</div>
+</div>
+<!-- / .rmSvcStus-container -->		

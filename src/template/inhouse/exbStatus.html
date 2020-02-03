@@ -1,0 +1,118 @@
+@@include('../include/_head.html', {
+	"page": "inhouse"
+})
+
+<body class="page-inhouse">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="cf contents exb-contents">
+		@@include('../include/_row_h2.html', {
+			"page-title": "EX-B Status"
+		})
+		<div class="cf cont-container-f">
+			<div class="cont-property">
+				<div class="grid-wrap">
+					<div class="grid-contents">
+						<table class="grid-tbl property-tbl">
+							<colgroup>
+								<col style="width: 120px">
+								<col style="width: 150px">
+								<col style="width: *">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th><div class="cell">날짜</div></th>
+									<td>
+										<div class="cell">
+											<span class="cal-box">
+												<input type="text" class="appe-reset inp-cal date-ui" value="2019-03-20">
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+											</span>
+										</div>
+									</td>
+									<td>
+										<div class="cell">
+											<span class="pull-right">
+												<button type="button" class="btn-brown">SEARCH</button>
+												<button type="button" class="btn-gray btn-i"><span class="icon ic-excel"></span> Excel</button>
+											</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="cont-list">
+				<div class="grid-wrap scr-wrap">
+					<div class="grid-scrollable-x">
+						<div class="grid-area grid-head">
+							<div class="grid-scrollable">
+								<table class="grid-tbl">
+									<colgroup>
+										<col style="width: 225px">
+										<col style="width: 225px">
+										<col style="width: 340px">
+										<col style="width: 140px">
+										<col style="width: 225px">
+										<col style="width: 225px">
+										<col style="width: 110px">
+										<col style="width: *">
+									</colgroup>
+									<thead class="rowgroup">
+										<tr>
+											<th><div class="cell">유형</div></th>
+											<th><div class="cell">예약 번호</div></th>
+											<th><div class="cell">게스트 이름</div></th>
+											<th><div class="cell">객실#</div></th>
+											<th><div class="cell">도착 날짜</div></th>
+											<th><div class="cell">출발 날짜</div></th>
+											<th><div class="cell">Nts</div></th>
+											<th><div class="cell">상태</div></th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div class="grid-area grid-contents">
+							<table class="grid-tbl">
+								<colgroup>
+									<col style="width: 225px">
+									<col style="width: 225px">
+									<col style="width: 340px">
+									<col style="width: 140px">
+									<col style="width: 225px">
+									<col style="width: 225px">
+									<col style="width: 110px">
+									<col style="width: *">
+								</colgroup>
+								<tbody class="rowgroup">
+									<tr>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //.grid-wrap -->
+			</div>
+			<!-- //.cont-list -->
+		</div>
+	</div>
+	<!-- //.contents -->
+
+
+</div>
+</body>
+</html>

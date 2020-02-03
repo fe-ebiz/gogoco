@@ -1,0 +1,615 @@
+@charset "utf-8";
+
+// common
+@import "../parts/common";
+
+/* 서브 - 공통 */
+.wpop-contents {
+	.btn-gray,
+	.btn-gray-2,
+	.btn-green,
+	.btn-red,
+	.btn-blue, 
+	.btn-brown,
+	.btn-orange {
+		padding-bottom: 2px;
+	}
+}
+
+.wrapper.wpop {
+	min-width: auto;
+}
+
+.wpop-contents {
+	@include bx;
+	min-width: 1800px;
+//	width: 1800px;
+//	height: 900px;
+}
+/* 윈도우 팝업 - 객실 목록 */
+@mixin wpop-hd{
+	background: $bg-brown-1;
+	padding: 15px;
+	color: $fg-brown-popHd;
+	h2 {
+		font-weight: 700;
+		letter-spacing: 0;
+	}
+}
+/* 윈도우 팝업 해더 */
+.wpop-header {
+	@include wpop-hd;
+}
+/* 윈도우 팝업 콘텐츠 영역 */
+/* 공통 스타일 */
+.wpop-contents .cont-common-1 {
+	@include float;
+	box-sizing: border-box;
+	background: #f0f0f0;
+	padding: 20px 15px 15px 15px;
+	margin-top: 20px;
+	border-radius: 5px;
+	.cont-tit {
+		@include position(absolute, -20px, 15px);
+		@include show-reset;
+		color: $fg-legend;
+		font-size: 13px;
+		padding: 5px 10px;
+		background: #f0f0f0;
+		border-radius: 5px;
+		strong, label {
+			font-weight: 700;
+		}
+		strong {
+//			margin-right: 10px;
+		}
+		.form-input {
+			@include form-base(120px);
+			&.bookingNum {
+				margin-right: 10px;
+			}
+		}
+		.form-select {
+			@include slt-base(60px);
+			margin-left: 30px;
+		}
+		.btn-gray, .btn-green, .btn-green, .btn-red, .btn-blue {
+			font-size: 11px;
+			padding: 2px 4px;
+		}
+	}
+}
+/* 객실 목록 */
+.wpop-contents.roomInv-contents {
+	padding: 20px;
+	.cont-property {
+		.property-tbl {
+			@include tbl-style-1;
+			td {
+				.cell {
+					.rdo-box {
+						padding: 0 8px;
+						label {
+							margin-right: 5px;
+						}
+					}
+					.cal-box {
+						.inp-cal {
+							width: 150px;
+						}
+					}
+					.btn-gray {
+						.prev, .next {
+							position: relative;
+							top: -1px;
+							color: #6E7A86;
+							padding: 0 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.cont-roomInv {
+		.grid-container {
+//			@include grid-scr-x2(180px, null, 100%, 4px);
+			@include grid-scr-x2(180px, 2000px, 100%);
+			$ie8-wth: 1583px;
+			.ie8 .grid-area.grid-locked {
+				width: 180px;
+			}
+			.scr-wrap {
+				.ie8 & {
+					width: $ie8-wth;
+				}
+				.grid-tbl {
+					.ie8 & {
+						width: $ie8-wth;
+					}
+					th {
+						&.sat {
+							color: $fg-sat;
+						}
+						&.sun {
+							color: $fg-sun;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* 품목 재고 */
+.wpop-contents.itemInv-contents {
+	padding: 20px;
+	.cont-property {
+		.property-tbl {
+			@include tbl-style-1;
+			td {
+				.cell {
+					.rdo-box {
+						padding: 0 8px;
+						label {
+							margin-right: 5px;
+						}
+					}
+					.cal-box {
+						.inp-cal {
+							width: 150px;
+						}
+					}
+					.btn-gray {
+						.prev, .next {
+							position: relative;
+							top: -1px;
+							color: #6E7A86;
+							padding: 0 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.cont-itemInv {
+		.grid-container {
+//			@include grid-scr-x2(180px, null, 100%, 4px);
+			@include grid-scr-x2(180px, 2000px, 100%);
+			$ie8-wth: 1583px;
+			.ie8 .grid-area.grid-locked {
+				width: 180px;
+			}
+			.scr-wrap {
+				.ie8 & {
+					width: $ie8-wth;
+				}
+				.grid-tbl {
+					.ie8 & {
+						width: $ie8-wth;
+					}
+					th {
+						&.sat {
+							color: $fg-sat;
+						}
+						&.sun {
+							color: $fg-sun;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* 자취 */
+.wpop-contents.trace-contents {
+	padding: 20px;
+	.cont-property {
+		.property-tbl {
+			@include tbl-style-1;
+			td {
+				.cell {
+					.form-input {
+						&.departments {
+							width: 300px;
+						}
+					}
+					.rdo-box {
+						padding: 0 8px;
+						label {
+							margin-right: 5px;
+						}
+					}
+					.cal-box {
+						.inp-cal {
+							width: 110px;
+						}
+					}
+					.btn-gray {
+						.prev, .next {
+							position: relative;
+							top: -1px;
+							color: #6E7A86;
+							padding: 0 5px;
+						}
+					}
+					.btn-brown {
+						&.search {
+						}
+					}
+				}
+			}
+		}
+	}
+	.cont-trace {
+		margin-top: 10px;
+		.grid-wrap.scr-wrap {
+			@include grid-scr-x(100%, 100%, 4px);
+			.grid-area.grid-contents {
+				background: #fff;
+				height: 730px;
+			}
+			.grid-tbl {
+				.ie8 & {
+					width: 777px;
+				}
+				th, td {
+					.cell {
+						text-align: center;
+					}
+				}
+				td:first-child {
+					.cell {
+						line-height: 1;
+					}
+				}
+			}
+		}
+	}
+}
+/* 객실 상태 : 수색, 방 요약, 객실 청소실 상태, 활동, 하루의 끝 예측 */
+.wpop-contents.houseSt-contents {
+	min-width: 1000px;
+	padding: 20px;
+	.cont-common-1 {
+		background: #fff;
+		.cont-tit {
+			background: #fff;
+		}
+	}
+	.cont-search {
+		.cont-property {
+			.property-tbl {
+				@include tbl-style-1;
+				td {
+					background: #fff;
+					.cell {
+						.form-input {
+							&.departments {
+								width: 300px;
+							}
+						}
+						.rdo-box {
+							padding: 0 8px;
+							label {
+								margin-right: 5px;
+							}
+						}
+						.cal-box {
+							.inp-cal {
+								width: 110px;
+							}
+						}
+						.btn-gray {
+							.prev, .next {
+								position: relative;
+								top: -1px;
+								color: #6E7A86;
+								padding: 0 5px;
+							}
+						}
+						.btn-brown {
+							&.search {
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.contents-container .cont-common-1 {
+		margin-top: 35px;
+		.grid-tbl {
+			@include tbl-base;
+			width: 100%;
+			table-layout: fixed;
+			th, td {
+
+			}
+			th {
+				&.bg-none {
+					background: #fff;
+				}
+				.cell {
+					&.necess {
+						background: url("../../img/tick-small-red.png") no-repeat 100% 58%;
+					}
+				}
+				+ td {
+					border-left: 1px dashed #c0b5a6;
+				}
+			}
+			td {
+				border-left: none;
+				.cell {
+					padding-left: 7px;
+					padding-right: 0px;
+					.form-input {
+						text-align: right;
+					}
+					.form-select {
+						&.lang {
+							width: 65%;
+						}
+					}
+					.cal-box {
+						// width: 105px;
+						width: 54%;
+						+ .rdo-box {
+							margin-left: 10px;
+						}
+					}
+					.add-rtxt {
+						// margin-left: 2px;
+					}
+					.mg- {
+						margin: 0 5px;
+					}
+				}
+				&.last {
+					.cell {
+//						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+	.contents-container .cont-common-1.left {
+		width: 44%;
+	}
+	.contents-container .cont-common-1.right {
+		float: right;
+		width: 54%;
+	}
+	.contents-container .cont-roomSummary {
+		.grid-tbl {
+			td {
+				.cell {
+					.form-input {
+						width: 110px;
+					}
+				}
+			}
+		}
+	}
+	.contents-container .cont-housekeeping {
+		.grid-tbl {
+			td {
+				.cell {
+					.form-input {
+						text-shadow: 0px 1px #fff;
+						&.inspected {
+							background: #00E676;
+						}
+						&.clean {
+							background: #84FFFF;
+						}
+						&.dirty {
+							background: #EF5350;
+						}
+						&.working {
+							background: #FFF59D;
+						}
+					}
+				}
+			}
+		}
+	}
+	.contents-container .cont-activity {
+		.grid-tbl {
+			td {
+
+			}
+		}
+	}
+	.contents-container .cont-projection {
+
+	}
+}
+
+/* 청소날짜상태 */
+.wpop-contents.maidSt-contents {
+    min-width: 1600px;
+    width: 100%;
+    padding: 20px;
+    .cont-property {
+		.property-tbl {
+			@include tbl-style-1;
+        }
+    }
+	.cont-area {
+		.grid-container {
+			@include grid-scr-x2(80px, 5000px, 100%);
+            .grid-area {
+                &.grid-contents {
+                    height: 350px;
+                }
+                .grid-tbl {
+                    th {
+                        .cell {
+                            text-overflow: inherit;
+                        }
+                    }
+                }
+            }
+			.scr-wrap {
+				.grid-tbl {
+					th {
+                        min-width: 50px;
+						&.sat {
+							color: blue;
+						}
+						&.sun {
+							color: red;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* 객실 이동 할당 영역 */
+.wpop-contents.roomMove-contents {
+	min-width: 500px;
+	.popcont-container	{
+		@include bx;
+		padding: 0 15px;
+		.cont-type {
+			margin-top: 20px;
+			.form-select {
+				&.rmtype {
+					min-width: 100px;
+					width: auto;
+				}
+			}
+		}
+		.cont-list {
+			margin-top: 10px;
+			.grid-wrap {
+				@include grid-scr-x;
+				.grid-area.grid-contents {
+					height: 500px;
+				}
+				.grid-tbl {
+					td {
+						text-align: center;
+						&.co-red {
+							font-weight: 700;
+						}
+					}
+				}
+			}
+			.grid-bottom {
+				@include grid-bottom-page;
+			}
+		}
+	}
+}
+
+/* 즐겨찾기 메뉴 윈도우팝업 */
+.wpop-container.favorite-menu {
+	$menu-bg: #b29b7a;
+
+	.pop-wrapper {
+		@include size(300px, 540px);
+		margin: 10px;
+		margin-bottom: 0;
+		background-color: transparent;
+
+		.pop-contents {
+			overflow: hidden;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, .32);
+			height: 520px;
+			background-color: #fff;
+
+			.panel-list {
+				height: 100%;
+
+				.panel-item {
+					height: 100%;
+					box-sizing: border-box;
+					color: #fff;
+					background-color: #1f1f1f;
+
+					.panel-title {
+						height: 90px;
+						padding: 20px 0;
+						margin: 0 30px;
+						padding-right: 0;
+						box-sizing: border-box;
+						border-bottom: 1px solid #fff;
+						.lbl {
+							@include va;
+							margin-left: 8px;
+							font-size: 18px;
+							line-height: 1.4;
+						}
+
+						> img {
+							padding: 12px 0;
+						}
+					}
+
+					.panel-contents {
+						font-size: 15px;
+						overflow: hidden;
+
+						.menu-list {
+							>.item {
+								position: relative;
+								padding-right: 55px;
+
+								&:first-child {
+									margin-top: 7px;
+								}
+								>a {
+									position: relative;
+									display: block;
+									padding: 10px 0;
+									padding-left: 50px;
+									line-height: 1.3;
+
+									.s-i {
+										display: inline-block;
+										@include sizes(10px);
+										@include position(absolute, 18px, 30px);
+
+										&:after,
+										&:before {
+											content: '';
+											position: absolute;
+											display: inline-block;
+											@include size(10px, 2px);
+											// background-color: #333;
+											background-color: #fff;
+										}
+
+										&:after {
+											transform: rotate(-90deg);
+										}
+									}
+
+									.en {
+										font-size: 14px;
+									}
+								}
+								.i-box {
+									cursor: pointer;
+									@include position(absolute, 13px, null, null, 30px);
+									line-height: 1;
+
+									i {
+										font-size: 15px;
+									}
+								}
+							}
+
+							>.item:first-child {
+								margin-top: 5px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

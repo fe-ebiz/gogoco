@@ -1,0 +1,79 @@
+<!-- 팝업 위 팝업 노출 비노출 샘플 -->
+<div class="pop-container pkg-container pop-1" style="display: block">
+    <div class="bg-back"></div>
+
+    <div class="pop-wrapper">
+        <div class="pop-header">
+            <h2>pop-1</h2>
+            <span class="a-i-x i-x fn-cls"></span>
+        </div>
+        <div class="cf pop-contents">
+            <div class="popcont-container">
+                <h2 class="cont-tit">
+                    <strong>패키지</strong>
+                </h2>
+            </div>
+        </div>
+        <!-- //.pop-contents-->
+        <div class="pop-footer">
+            <div class="row-btn">
+                <button type="button" class="btn-green" onclick="popFn.show_flag('.pop-2', this, false)">ADD</button>
+                <button type="button" class="btn-gray fn-cls">CLOSE</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pop-container pkg-container pop-2">
+    <div class="bg-back"></div>
+
+    <div class="pop-wrapper" style="top: 100px">
+        <div class="pop-header">
+            <h2>pop-2</h2>
+            <span class="a-i-x i-x fn-cls"></span>
+        </div>
+        <div class="cf pop-contents">
+            <div class="popcont-container">
+                <h2 class="cont-tit">
+                    <strong>패키지</strong>
+                </h2>
+            </div>
+        </div>
+        <!-- //.pop-contents-->
+        <div class="pop-footer">
+            <div class="row-btn">
+                <button type="button" class="btn-green" onclick="popFn.show_flag('.pop-3', this, false)">ADD</button>
+                <button type="button" class="btn-gray" onclick="popFn.close_flag('.pop-1', this, true)">CLOSE</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pop-container pkg-container pop-3">
+    <div class="bg-back"></div>
+
+    <div class="pop-wrapper" style="top: 200px">
+        <div class="pop-header">
+            <h2>pop-3</h2>
+            <span class="a-i-x i-x fn-cls"></span>
+        </div>
+        <div class="cf pop-contents">
+            <div class="popcont-container">
+                <h2 class="cont-tit">
+                    <strong>패키지</strong>
+                </h2>
+            </div>
+        </div>
+        <!-- //.pop-contents-->
+        <div class="pop-footer">
+            <div class="row-btn">
+                <button type="button" class="btn-green">ADD</button>
+                <button type="button" class="btn-gray" onclick="popFn.close_flag('.pop-2', this, true)">CLOSE</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .pop-container {display: none;}
+</style>

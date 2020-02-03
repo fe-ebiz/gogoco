@@ -1,0 +1,196 @@
+@@include('../include/_head.html', {
+	"page": "fnb"
+})
+
+<!-- 페이지 전용 -->
+
+<body class="page-fnb">
+
+<!-- @@include('../include/pop/pop_rsv.html') -->
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="cf contents bf-contents">
+
+		@@include('../include/_row_h2.html', {
+			"page-title": "아침 식사"
+		})
+
+		<div class="cf cont-container-f">
+			<div class="cont-property">
+				<div class="grid-wrap">
+					<div class="grid-contents">
+						<table class="grid-tbl property-tbl">
+							<colgroup>
+								<col style="width:120px">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th><div class="cell">날짜</div></th>
+									<td>
+										<div class="cell">
+											<span class="cal-box">
+												<input type="text" class="appe-reset inp-cal date-ui">
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+											</span>
+											<span class="mg-">~</span>
+											<span class="cal-box">
+												<input type="text" class="appe-reset inp-cal date-ui">
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+											</span>
+											<button type="button" class="btn-brown search">SEARCH</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- //.cont-property -->
+
+			<div class="cont-list">
+				<div class="grid-wrap scr-wrap">
+					<div class="grid-scrollable-x">
+						<div class="grid-area grid-head">
+							<div class="grid-scrollable">
+								<table class="grid-tbl">
+									<colgroup>
+										<col style="width:135px">
+										<col style="width:70px">
+										<col style="width:100px">
+										<col style="width:130px">
+										<col style="width:100px">
+										<col style="width:130px">
+										<col style="width:100px">
+										<col style="width:130px">
+										<col style="width:100px">
+										<col style="width:130px">
+										<col style="width:115px">
+										<col style="width:130px">
+										<col style="width:130px">
+										<col style="width:165px">
+										<col>
+									</colgroup>
+									<thead class="rowgroup">
+										<tr>
+											<th rowspan="2"><div class="cell">날짜</div></th>
+											<th rowspan="2"><div class="cell">요일</div></th>
+											<th class="bor" colspan="4"><div class="cell">FIT</div></th>
+											<th class="bor" colspan="4"><div class="cell">그룹</div></th>
+											<th class="bor" colspan="4"><div class="cell">합계</div></th>
+											<th rowspan="2"><div class="cell">세부사항</div></th>
+										</tr>
+										<tr>
+											<th><div class="cell">성인 수</div></th>
+											<th><div class="cell">성인 가격</div></th>
+											<th><div class="cell">아동 수</div></th>
+											<th><div class="cell">아동 가격</div></th>
+											<th><div class="cell">성인 수</div></th>
+											<th><div class="cell">성인 가격</div></th>
+											<th><div class="cell">아동 수</div></th>
+											<th><div class="cell">아동 가격</div></th>
+											<th><div class="cell">수량</div></th>
+											<th><div class="cell">Net.</div></th>
+											<th><div class="cell">Vat</div></th>
+											<th><div class="cell">Amount</div></th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div class="grid-area grid-contents">
+							<table class="grid-tbl">
+								<colgroup>
+									<col style="width:135px">
+									<col style="width:70px">
+									<col style="width:100px">
+									<col style="width:130px">
+									<col style="width:100px">
+									<col style="width:130px">
+									<col style="width:100px">
+									<col style="width:130px">
+									<col style="width:100px">
+									<col style="width:130px">
+									<col style="width:115px">
+									<col style="width:130px">
+									<col style="width:130px">
+									<col style="width:165px">
+									<col>
+								</colgroup>
+								<tbody class="rowgroup">
+									<tr onclick="popFn.show('.bkfastDtil-container')">
+										<td><div class="cell">2019-03-25</div></td>
+										<td><div class="cell">Mon</div></td>
+										<td><div class="cell">2</div></td>
+										<td class="ta-right"><div class="cell">0</div></td>
+										<td><div class="cell">0</div></td>
+										<td class="ta-right"><div class="cell">0</div></td>
+										<td><div class="cell">0</div></td>
+										<td class="ta-right"><div class="cell">0</div></td>
+										<td><div class="cell">0</div></td>
+										<td class="ta-right"><div class="cell">0</div></td>
+										<td><div class="cell">2</div></td>
+										<td class="ta-right"><div class="cell">0</div></td>
+										<td class="ta-right"><div class="cell">0</div></td>
+										<td class="ta-right"><div class="cell">0</div></td>
+										<td><div class="cell"></div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="grid-area grid-total">
+							<table class="grid-tbl">
+								<colgroup>
+									<col style="width:135px">
+									<col style="width:70px">
+									<col style="width:100px">
+									<col style="width:130px">
+									<col style="width:100px">
+									<col style="width:130px">
+									<col style="width:100px">
+									<col style="width:130px">
+									<col style="width:100px">
+									<col style="width:130px">
+									<col style="width:115px">
+									<col style="width:130px">
+									<col style="width:130px">
+									<col style="width:165px">
+									<col>
+								</colgroup>
+								<tbody class="rowgroup">
+									<tr>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td class="ta-left fw-b"><div class="cell">합계 : 97</div></td>
+										<td class="ta-left fw-b"><div class="cell">합계 : 499,200</div></td>
+										<td class="ta-left fw-b"><div class="cell">합계 : 4</div></td>
+										<td class="ta-left fw-b"><div class="cell">합계 : 27,600</div></td>
+										<td class="ta-left fw-b"><div class="cell">합계 : 17</div></td>
+										<td class="ta-left fw-b"><div class="cell">합계 : 153,000</div></td>
+										<td class="ta-left fw-b"><div class="cell">합계 : 0</div></td>
+										<td class="ta-left fw-b"><div class="cell">합계 : 0</div></td>
+										<td class="ta-left fw-b"><div class="cell">합계 : 118</div></td>
+										<td class="ta-left fw-b"><div class="cell">합계 : 618,000</div></td>
+										<td class="ta-left fw-b"><div class="cell">합계 : 61,800</div></td>
+										<td class="ta-left fw-b"><div class="cell">합계 : 679,800</div></td>
+										<td class="last"><div class="cell inBl"></div><span class="square"></span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //.grid-wrap -->
+			</div>
+			<!-- //.cont-list -->
+		</div>
+	</div>
+	<!-- //.contents -->
+
+</div>
+
+</body>
+</html>

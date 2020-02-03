@@ -1,0 +1,195 @@
+@@include('../include/_head.html', {
+	"page": "basic"
+})
+
+<body class="page-basic">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="cf contents cmCode-contents">
+
+		@@include('../include/_row_h2.html', {
+			"page-title": "특별 코드"
+		})
+
+		<div class="cf cont-container-f">
+			<div class="cont-property">
+				<div class="grid-wrap">
+					<div class="grid-contents">
+						<table class="grid-tbl property-tbl">
+							<colgroup>
+								<col style="width:100px">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th><div class="cell">검색옵션</div></th>
+									<td>
+                                        <div class="cell">
+											<select name="" id="" class="form-select gray w-1">
+												<option value="">선택</option>
+												<option value="">코드</option>
+												<option value="">코드데이터</option>
+											</select>
+											<input type="text" class="form-input option">
+											<button type="button" class="btn-brown">SEARCH</button>
+											<button type="button" class="btn-brown">RELOAD</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- //.cont-property -->
+
+			<div class="row row-cont">
+				<div class="split cont-code">
+					<h3>코드</h3>
+					<div class="scrollbar">
+						<ul class="dep-1 code-list">
+							<li>
+								<a href="javascript:;" class="on">
+									<div class="d">
+										<span class="icon-trees folder"></span>
+										<span class="fw-b">REQ01</span>
+										: Room Assignment (KSG)
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<div class="d">
+										<span class="icon-trees folder"></span>
+										<span class="fw-b">REQ02</span>
+										: Front (KSG)
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<div class="d">
+										<span class="icon-trees folder"></span>
+										<span class="fw-b">REQ03</span>
+										: Front goods (KSG)
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<!-- /.cont-code -->
+				<div class="split cont-data">
+					<h3>코드 데이터</h3>
+					<div class="grid-wrap scr-wrap">
+						<div class="grid-scrollable-x">
+							<div class="grid-area grid-head">
+								<div class="grid-scrollable">
+									<table class="grid-tbl">
+										<colgroup>
+											<col style="width:120px">
+											<col style="width:150px">
+											<col style="width:300px">
+											<col style="width:40px">
+											<col style="width:80px">
+											<col style="width:80px">
+											<col style="width:50px">
+											<col style="width:50px">
+											<col style="width:70px">
+											<col style="width:85px">
+											<col style="width:85px">
+											<col>
+										</colgroup>
+										<thead class="rowgroup">
+											<tr>
+												<th><div class="cell">데이터코드</div></th>
+												<th><div class="cell">데이터명</div></th>
+												<th><div class="cell">설명</div></th>
+												<th><div class="cell">순서</div></th>
+												<th><div class="cell">사용여부</div></th>
+												<th><div class="cell">알람여부</div></th>
+												<th><div class="cell">수량</div></th>
+												<th><div class="cell">구분</div></th>
+												<th><div class="cell">세탁가격</div></th>
+												<th><div class="cell">드라이가격</div></th>
+												<th><div class="cell">다림질가격</div></th>
+												<th><div class="cell"></div></th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+							</div>
+							<div class="grid-area grid-contents">
+								<table class="grid-tbl">
+									<colgroup>
+										<col style="width:120px">
+										<col style="width:150px">
+										<col style="width:300px">
+										<col style="width:40px">
+										<col style="width:80px">
+										<col style="width:80px">
+										<col style="width:50px">
+										<col style="width:50px">
+										<col style="width:70px">
+										<col style="width:85px">
+										<col style="width:85px">
+										<col>
+									</colgroup>
+									<tbody class="rowgroup">
+										<tr>
+											<td><div class="cell">NS</div></td>
+											<td class="ta-left"><div class="cell">Non Smoking</div></td>
+											<td class="ta-left"><div class="cell"></div></td>
+											<td><div class="cell">1</div></td>
+											<td><div class="cell">Y</div></td>
+											<td><div class="cell">N</div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell">1</div></td>
+											<td class="ta-right"><div class="cell">0</div></td>
+											<td class="ta-right"><div class="cell">0</div></td>
+											<td class="ta-right"><div class="cell">0</div></td>
+											<td><div class="cell"></div></td>
+										</tr>
+										<tr>
+											<td><div class="cell"></div></td>
+											<td class="ta-left"><div class="cell"></div></td>
+											<td class="ta-left"><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+											<td class="ta-right"><div class="cell"></div></td>
+											<td class="ta-right"><div class="cell"></div></td>
+											<td class="ta-right"><div class="cell"></div></td>
+											<td><div class="cell"></div></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+						</div>
+					</div>
+					<!-- //.grid-wrap -->
+					<div class="cf grid-bottom">
+						<a href="#" class="prev st">&lt;&lt;</a>
+						<a href="#" class="prev">&lt;</a>
+						<span class="num">0</span>
+						<a href="#" class="next">&gt;</a>
+	  					<a href="#" class="next st">&gt;&gt;</a>
+						<span class="count"><span class="co">0</span> Count</span>
+					</div>
+					<!-- /.grid-bottom -->
+				</div>
+				<!-- /.cont-cdData -->
+			</div>
+		</div>
+	</div>
+	<!--//.contents-->
+
+</div>
+</body>
+</html>

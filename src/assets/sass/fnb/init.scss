@@ -1,0 +1,802 @@
+@charset "utf-8";
+
+@import "../parts/common";
+
+/* 업장 영역 */
+.outlet-contents {
+	.cont-area {
+		margin-top: 10px;
+        h3 {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0;
+            margin-bottom: 10px;
+        }
+	}
+    .cont-property {
+        .property-tbl {
+            @include tbl-style-1;
+            td {
+                .cell {
+                    .form-select { }
+                    .rdo-box {
+                        @include va;
+                        padding: 0 3px;
+                        label {
+                            margin-right: 0px;
+                        }
+                        &.n {
+                            margin-right: 15px;
+                        }
+                    }
+                    button {
+                        letter-spacing: 0;
+                    }
+                }
+            }
+        }
+    }
+    .cont-area.area-1 {
+        margin-top: 0;
+        .cont-list {
+            margin-top: 10px;
+            .grid-wrap {
+                @include grid-scr-brown;
+                .grid-area.grid-head {
+                    th {
+                        &.bor {
+                            border-bottom: 1px solid $bor-gray-table;
+                        }
+                    }
+                }
+                .grid-area.grid-contents {
+                    background: #fff;
+                    height: 350px;
+                    .grid-tbl {
+                        td {
+                            text-align: center;
+                        }
+                    }
+                }
+                .grid-area.grid-total {
+                    .grid-tbl {
+                        th, td { }
+                        td { }
+                    }
+                }
+            }
+            .grid-bottom {
+                @include grid-bottom-page;
+                border-radius: 0;
+            }
+        }
+    }
+	.cont-area.area-2 {
+        h3 {
+            margin-top: 10px;
+            padding: 15px 0 0px;
+            border-top: 1px dashed #c5c5c5;
+        }
+		.grid-wrap {
+			.grid-tbl {
+                @include tbl-base;
+                td {
+                    .cell {
+                        .form-input, .form-select {
+                            &.w-1 {
+                                width: 150px;
+                            }
+                        }
+                        .form-input {
+                            &.w-2 {
+                                width: 50px;
+                            }
+                        }
+                        .texta-etc {
+                            @include texta-base(100%, 55px);
+                        }
+                    }
+                }
+			}
+		}
+	}
+	.row-btn {
+		margin-top: 10px;
+		button {
+			@include btn-pd-lr(20px, 20px, 0);
+		}
+	}
+}
+
+/* 메뉴 영역 */
+.menu-contents {
+	.cont-area {
+		margin-top: 10px;
+        h3 {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0;
+            margin-bottom: 10px;
+        }
+	}
+    .cont-property {
+        .property-tbl {
+            @include tbl-style-1;
+            td {
+                .cell {
+                    .form-select {
+                        &.outlet {
+                            width: auto;
+                            margin-right: 15px;
+                        }
+                    }
+                    button {
+                        letter-spacing: 0;
+                    }
+                }
+            }
+        }
+    }
+    .cont-area.area-1 {
+        margin-top: 0;
+        .cont-list {
+            margin-top: 10px;
+            .grid-wrap {
+                @include grid-scr-brown;
+                .grid-area.grid-head {
+                    th { }
+                }
+                .grid-area.grid-contents {
+                    background: #fff;
+                    height: 350px;
+                    .grid-tbl {
+                        td {
+                            text-align: center;
+                        }
+                        tr.depth-2 {
+                            td:first-child {
+                                padding-left: 35px;
+                            }
+                        }
+                    }
+                }
+                .grid-area.grid-total {
+                    .grid-tbl {
+                        th, td { }
+                        td { }
+                    }
+                }
+            }
+            .grid-bottom {
+                @include grid-bottom-page;
+                border-radius: 0;
+            }
+        }
+    }
+	.cont-area.area-2 {
+        h3 {
+            margin-top: 10px;
+            padding: 15px 0 0px;
+            border-top: 1px dashed #c5c5c5;
+        }
+		.grid-wrap {
+			.grid-tbl {
+                @include tbl-base;
+                td {
+                    .cell {
+                        .form-input, .form-select {
+                            &.w-1 {
+                                width: 150px;
+                            }
+                        }
+                        .form-input {
+                            &.w-2 {
+                                width: 50px;
+                            }
+                            &.w-3 {
+                                width: 320px;
+                            }
+                        }
+                        .texta-etc {
+                            @include texta-base(100%, 35px);
+						}
+						.seq {
+							@include dp;
+							width: 80px;
+							> input {
+								width: 100%;
+								background: none;
+								&[readonly] {
+									background: #fff !important;
+								}
+							}
+							.count {
+								@include position(absolute, 0);
+								z-index: 1;
+								display: inline-block;
+								@include size(20px, 100%);
+								line-height: 25px;
+								text-align: center;
+								cursor: pointer;
+								&.plus {
+									left: 0;
+									border-right: 1px solid #c7c7c7;
+								}
+								&.minus {
+									right: 0;
+									border-left: 1px solid #c7c7c7;
+								}
+							}
+						}
+                    }
+                }
+			}
+		}
+	}
+	.row-btn {
+		margin-top: 10px;
+		button {
+			@include btn-pd-lr(20px, 20px, 0);
+		}
+    }
+}
+
+/* 목록 영역 */
+.inv-contents {
+	.cont-area {
+		margin-top: 10px;
+        h3 {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0;
+            margin-bottom: 10px;
+        }
+	}
+    .cont-area.area-1 {
+        margin-top: 0;
+        .cont-property {
+            .property-tbl {
+                @include tbl-style-1;
+                td {
+                    .cell {
+                        .form-input {
+                            &.name {
+                                width: 125px;
+                                margin-right: 15px;
+                            }
+                        }
+                        button {
+                            letter-spacing: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .cont-list {
+            margin-top: 10px;
+            .grid-wrap {
+                @include grid-scr-brown;
+                .grid-area.grid-head {
+                    th { }
+                }
+                .grid-area.grid-contents {
+                    background: #fff;
+                    height: 250px;
+                    .grid-tbl {
+                        td {
+                            text-align: center;
+                        }
+                        tr.depth-2 {
+                            td:first-child {
+                                padding-left: 35px;
+                            }
+                        }
+                    }
+                }
+                .grid-area.grid-total {
+                    .grid-tbl {
+                        th, td { }
+                        td { }
+                    }
+                }
+            }
+            .grid-bottom {
+                @include grid-bottom-page;
+                border-radius: 0;
+            }
+        }
+    }
+	.cont-area.area-2 {
+        h3 {
+            margin-top: 10px;
+            padding: 15px 0 0px;
+            border-top: 1px dashed #c5c5c5;
+        }
+        .cont-list {
+            margin-top: 10px;
+            .grid-wrap {
+                @include grid-scr-brown;
+                .grid-area.grid-head {
+                    th { }
+                }
+                .grid-area.grid-contents {
+                    background: #fff;
+                    height: 250px;
+                    .grid-tbl {
+                        td {
+                            text-align: center;
+                        }
+                        tr.depth-2 {
+                            td:first-child {
+                                padding-left: 35px;
+                            }
+                        }
+                    }
+                }
+                .grid-area.grid-total {
+                    .grid-tbl {
+                        th, td { }
+                        td { }
+                    }
+                }
+            }
+            .grid-bottom {
+                @include grid-bottom-page;
+                border-radius: 0;
+            }
+        }
+	}
+	.row-btn {
+		margin-top: 10px;
+		button {
+			@include btn-pd-lr(20px, 20px, 0);
+		}
+    }
+}
+
+/* 연회 영역 */
+.bq-contents {
+	.cont-property {
+		.property-tbl {
+			@include tbl-style-1;
+            border-right: 1px solid $bdg-tblBase;
+            width: 100%;
+			td {
+				.cell {
+					.w-1 {
+						width: 150px;
+					}
+					.form-select {
+						&.property {
+							width: 145px;
+						}
+					}
+					.cal-box {
+						width: 100px;
+					}
+					button {
+						letter-spacing: 0;
+						&.search {
+							margin-left: 50px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.cont-list {
+		margin-top: 10px;
+        .grid-toolbar {
+            @include grid-toolbar;
+        }
+		.grid-wrap {
+			@include grid-scr-x(2800px, 0);
+			.grid-area.grid-contents {
+				background: #fff;
+				height: 650px;
+			}
+			.grid-area.grid-total {
+				.grid-tbl {
+					th, td { }
+					td { }
+				}
+			}
+			.grid-tbl {
+				th, td {
+					.cell { }
+				}
+			}
+		}
+		.grid-bottom {
+			@include grid-bottom-page;
+		}
+	}
+}
+
+/* 아침 식사 영역, 일별판매 */
+.bf-contents {
+	.cont-property {
+		.property-tbl {
+			@include tbl-style-1;
+            border-right: 1px solid $bdg-tblBase;
+            width: 100%;
+			td {
+				.cell {
+					.cal-box {
+						width: 135px;
+					}
+					button {
+						letter-spacing: 0;
+						&.search {
+							margin-left: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.cont-list {
+		margin-top: 10px;
+        .grid-toolbar {
+            @include grid-toolbar;
+        }
+		.grid-wrap {
+			@include grid-scr-x;
+			.grid-area.grid-contents {
+				background: #fff;
+				height: 650px;
+			}
+			.grid-area.grid-total {
+				.grid-tbl {
+					th, td { }
+					td { }
+				}
+			}
+			.grid-tbl {
+				th, td {
+					.cell { }
+				}
+			}
+		}
+		.grid-bottom {
+			@include grid-bottom-page;
+		}
+	} // cont-list
+	.cont-market {
+		margin-top: 10px;
+		.tab-list {
+			@include tab-list;
+		}
+		.item-list {
+			border-top: 1px solid #9f9f9f;
+			padding-top: 10px;
+			margin-top: -1px;
+			.item {
+				display: none;
+				&.on {
+					display: block;
+				}
+				.grid-wrap {
+					@include grid-scr-x;
+					.grid-tbl {
+						th, td {
+							text-align: center;
+							letter-spacing: -0.5px;
+						}
+					}
+					.grid-area.grid-contents {
+						height: 270px;
+						tr {
+							td {
+								background: #fff !important;
+							}
+							&.sat {
+								td {
+									background: $bg-sat-td !important;
+								}
+							}
+							&.sun {
+								td {
+									background: $bg-sun-td !important;
+								}
+							}
+							&:hover {
+								td {
+									background: #f8f8f8 !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	} // cont-market
+}
+
+/* 연회 일정 영역 */
+.bqCal-contents {
+	.grid-toolbar {
+		@include grid-toolbar;
+		border-radius: 0;
+		font-size: 0;
+		padding: 6px;
+		* {
+			font-size: 12px;
+			vertical-align: middle;
+			letter-spacing: 0;
+		}
+		button {
+			&.today, &.m {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+			&.prev, &.next {
+				span {
+					@include position(relative, -1px);
+					font-size: 10px;
+				}
+			}
+			&.prev {
+				border-radius: 0;
+				border-left: 0;
+				border-right: 0;
+			}
+			&.next, &.d {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}
+		.date {
+			margin: 0 12px;
+			img.cal {
+				@include position(relative, -2px);
+				margin-right: 2px;
+			}
+		}
+		.tab-list {
+			font-size: 0;
+			button {
+				&.m {
+					border-right: 0;
+				}
+				&.d {
+					border-left: 0;
+				}
+				&.on {
+					color: #fff;
+					background: $fg-orange-1;
+					border-color: #dd4c06;
+				}
+			}
+		}
+	}
+	.cont-area {
+		> div {
+			display: none;
+			&.on {
+				display: block;
+			}
+		}
+		.cont-month {
+			.month-tbl {
+				position: relative;
+				width: 100%;
+				table-layout: fixed;
+				border-collapse: collapse;
+				background: #fff;
+				th, td {
+					font-size: 12px;
+					border: 1px solid $bor-gray-table;
+					.cell {
+						position: relative;
+						height: 100%;
+					}
+				}
+				th {
+					font-weight: 700;
+					text-align: center;
+					height: 26px;
+					letter-spacing: 0;
+				}
+				td {
+					height: 100px;
+					.cell {
+						padding: 5px;
+						.row {
+							margin-top: 2px;
+							&:first-child {
+								margin-top: 0;
+							}
+						}
+						.row-1 {
+							text-align: right;
+						}
+						.row-item {
+							@include bx;
+							height: 20px;
+							overflow: auto;
+							background: #FF9D67;
+							padding: 0 20px 0 3px;
+							border-radius: 4px;
+							cursor: default;
+							// white-space: nowrap;
+							// overflow: hidden;
+							// text-overflow: ellipsis;
+							.ic-x {
+								display: none;
+								@include position(absolute, 2px, null, null, 1px);
+								cursor: pointer;
+							}
+							&:hover .ic-x {
+								display: block;
+							}
+						}
+					}
+				}
+				td.out {
+					.cell {
+						.row-1 {
+							color: #c3c3c3;
+						}
+					}
+				}
+				td.today {
+					.cell {
+						// background: #f8f8f8;
+						// background: #fffcf0;
+						background: #ffdfdf;
+					}
+				}
+			}
+		}
+		.cont-day {
+			.scrollbar {
+				&.top {
+					padding-right: 17px;
+					border-right: 1px solid $bor-gray-table;
+				}
+				&.body {
+					overflow-y: scroll;
+					border-right: 1px solid $bor-gray-table;
+				}
+				.body-cont {
+					height: 650px;
+				}
+			}
+			.tbl {
+				position: relative;
+				table-layout: fixed;
+				width: 100%;
+				th, td {
+					@include ft(12px, null, 700);
+					border: 1px solid $bor-gray-table;
+					text-align: center;
+					box-sizing: border-box;
+				}
+				th {
+					height: 26px;
+					padding: 3px 5px;
+					text-align: right;
+					border-right: 1px solid $bor-gray-table;
+				}
+				td {
+					background: #f8f8f8;
+					.cell {
+						box-sizing: border-box;
+						min-height: 26px;
+						padding: 5px 5px;
+						&:first-child {
+							border-bottom: 1px dotted #c5c5c5;
+						}
+					}
+				}
+			}
+			.top-tbl {
+				td {
+					background: #f8f8f8;
+					.cell:first-child {
+						border-bottom: none;
+					}
+				}
+			}
+			.body-tbl {
+				height: 10px;
+				th, td {
+					border-top: none;
+				}
+				th {
+					vertical-align: top;
+				}
+			}
+			.grid-toolbar.bottom {
+				// border-top: none;
+			}
+		}
+	}
+}
+
+/* 패키지 체크 영역 */
+.pkgChk-contents {
+	.cont-property {
+		.property-tbl {
+			@include tbl-style-1;
+            border-right: 1px solid $bdg-tblBase;
+            width: 100%;
+			td {
+				.cell {
+					.form-input {
+						&.w-1 {
+							width: 100px;
+						}
+					}
+					.cal-box {
+						width: 135px;
+					}
+					button {
+						letter-spacing: 0;
+						&.search {
+							margin-left: 10px;
+						}
+					}
+					.total-dl {
+						dt, dd {
+							@include dp;
+							color: #444;
+						}
+						dt {
+							font-weight: 700;
+							margin-left: 100px;
+							&:first-child {
+								margin-left: 35px;
+							}
+						}
+						dd {
+							margin-left: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.cont-tab {
+		margin-top: 20px;
+		.tab-list {
+			// @include tab-list(#f7f7f7, #fff);
+			@include tab-list;
+			border-bottom: 1px solid #9f9f9f;
+			.tab {
+				margin-bottom: -1px;
+			}
+		}
+	}
+	.cont-list {
+		margin-top: 10px;
+        .grid-toolbar {
+            @include grid-toolbar;
+        }
+		.grid-wrap {
+			@include grid-scr-x(1950px);
+			.grid-area.grid-contents {
+				background: #fff;
+				height: 550px;
+			}
+			.grid-area.grid-total {
+				.grid-tbl {
+					th, td { }
+					td {}
+				}
+			}
+			.grid-tbl {
+				th, td {
+					.cell { }
+				}
+				td {
+					text-align: center;
+				}
+			}
+		}
+		.grid-bottom {
+			@include grid-bottom-page;
+		}
+	}
+}

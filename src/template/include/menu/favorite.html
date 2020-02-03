@@ -1,0 +1,73 @@
+<!-- <div class="pop-container-3 favorite-menu" id="favoriteMenu" style="display: none;"> -->
+<div class="pop-container-3 favorite-menu" id="favoriteMenu">
+    <div class="bg-back"></div>
+    <div class="pop-cell">
+        <div class="pop-wrapper">
+            <div class="pop-header">
+                <h2 class="hidden">즐겨찾기메뉴</h2>
+            </div>
+            <div class="pop-contents">
+                <div class="lnb">
+                    <div class="btn-box">
+                        <button type="button" class="btn-plus">
+                            <i class="fas fas fa-plus-square"></i>
+                            <span class="lbl">현재 페이지 즐겨찾기 추가</span>
+                        </button>
+                    </div>
+                    <ul class="menu-list cf">
+                        <li class="item">
+                        </li>
+                        <li class="item">
+                            <a href="javascript:;">
+                                <span class="lbl">개인 예약</span>
+                            </a>
+                            <span class="i-box"><i class="fas far fa-times-circle"></i></span>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:;">
+                                <span class="lbl">예약 리스트</span>
+                            </a>
+                            <span class="i-box"><i class="fas far fa-times-circle"></i></span>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:;">
+                                <span class="lbl">객실현황</span>
+                            </a>
+                            <span class="i-box"><i class="fas far fa-times-circle"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $('#gnb .btn-menupop.category-favorite').on('click', function () {
+                $(this).toggleClass('on');
+                var posLeft = $(this).offset().left;
+                $('#favoriteMenu .bg-back').on('click', function () {
+                    $('#favoriteMenu').hide();
+                    $('#gnb .btn-menupop.category-favorite').removeClass('on');
+                });
+                if ($(this).hasClass('on')) {
+                    $('#favoriteMenu').css({
+                        left: posLeft
+                    }).show();
+                } else {
+                    $('#favoriteMenu').hide();
+                }
+            });
+
+            var menuIdx = 0,
+                menu = $('#favoriteMenu');
+            menu.find(".menu-list > li").on('click', function () {
+                menuIdx = $(this).index();
+            });
+            menu.find(".menu-list > li .i-box").on('click', function (e) {
+                // page.favorites(2, menuIdx, '');
+                // location.reload();
+            });
+        });
+    </script>
+</div>
+<!--/.favorite-menu-->

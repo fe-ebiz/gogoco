@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+@import "../parts/common";
+@import "../include/snb_notice";
+
+.contents {
+    min-width: 1900px;
+}
+
+.cont-container {}
+
+/*
+	공통 스타일 설정
+*/
+.report-contents {
+    .cont-property {
+        .property-tbl {
+            @include tbl-style-1;
+
+            td {
+                .cell {
+                    label+label {
+                        margin-left: 5px;
+                    }
+
+                    .rdo-box {
+                        padding: 0 8px;
+
+                        label {
+                            margin-right: 5px;
+                        }
+                    }
+
+                    .cal-box {
+                        .inp-cal {
+                            width: 105px;
+                        }
+                    }
+
+                    .btn-gray {
+
+                        .prev,
+                        .next {
+                            position: relative;
+                            top: -1px;
+                            color: #6E7A86;
+                            padding: 0 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .cont-list {
+        margin-top: 10px;
+
+        .grid-toolbar {
+            @include grid-toolbar;
+        }
+
+        .grid-wrap.scr-wrap {
+            @include grid-scr-x;
+
+            .grid-area.grid-contents {
+                background: #fff;
+                height: 650px;
+            }
+
+            .grid-tbl {
+
+                th,
+                td {
+                    text-align: center;
+
+                    .cell {}
+                }
+
+                td:first-child {
+                    .cell {
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+
+        .grid-bottom {
+            @include grid-bottom-page;
+        }
+    }
+}
+
+
+.page-report {
+    .grid-area {
+        &.grid-contents {
+            overflow-y: scroll;
+            height: 100px;
+            background: #fff;
+
+            .grid-tbl {
+                tr:nth-child(2n) {
+
+                    th,
+                    td {
+                        background-color: transparent !important;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+/* 프론트 영역 */
+.front-rmChg {}
+
+.front-noShow {}
+
+/* 세일 영역 */
+.sales-dailyBk {
+    .cont-property {
+        .property-tbl {
+            .chk-box {
+                margin: 0px 40px 0 30px;
+            }
+        }
+    }
+}
+
+.sales-rsvCc {}
+
+.prd-accDetail {
+    .cont-property {
+        .property-tbl {
+            .cell {
+                .form-select {
+                    &.w-1 {
+                        width: 280px;
+                    }
+
+                    &.w-2 {
+                        width: 180px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 심사 영역 */
+.contents[class*=audit-] {}
+
+.audit-mng {}
+
+/* 캐셔링 영역 */
+.cashier-bill {}
+
+.cashier-pay {}

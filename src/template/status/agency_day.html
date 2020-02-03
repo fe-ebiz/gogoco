@@ -1,0 +1,1095 @@
+@@include('../include/_head.html', {
+	"page": "status"
+})
+
+<body class="page-status">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="cf contents agencyday-contents">
+
+		@@include('../include/_row_h2.html', {
+			"page-title": "판매채널 일별"
+		})
+
+		<div class="cf cont-container-f">
+			<div class="cont-property">
+				<div class="grid-wrap">
+					<div class="grid-contents">
+						<table class="grid-tbl property-tbl">
+							<colgroup>
+								<col style="width: 100px">
+								<col style="width: 250px">
+								<col style="width: 100px">
+								<col style="width: 150px">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th><div class="cell">날짜</div></th>
+									<td>
+										<div class="cell">
+											<span class="cal-box">
+												<input type="text" class="appe-reset inp-cal date-ui">
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+											</span>
+											<span class="mg-">~</span>
+											<span class="cal-box">
+												<input type="text" class="appe-reset inp-cal date-ui">
+												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+											</span>
+										</div>
+									</td>
+									<th><div class="cell">날짜 유형</div></th>
+									<td>
+										<div class="cell">
+											<select name="" id="" class="form-select gray">
+												<option value="">결제일</option>
+												<option value="">체크인</option>
+												<option value="">객실수</option>
+											</select>
+										</div>
+									</td>
+									<td>
+										<div class="cell">
+											<button type="button" class="btn-gray">오늘</button>
+											<button type="button" class="btn-gray">어제</button>
+											<button type="button" class="btn-gray">7일</button>
+											<button type="button" class="btn-gray">30일</button>
+											<button type="button" class="btn-gray">지난달</button>
+											<button type="button" class="btn-gray">이번달</button>
+											<button type="button" class="btn-brown">SEARCH</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- /.cont-property -->
+
+			<div class="cont-list">
+				<div class="grid-wrap scr-wrap">
+					<div class="grid-scrollable-x">
+						<div class="grid-area grid-head">
+							<div class="grid-scrollable">
+								<table class="grid-tbl">
+									<colgroup>
+										<col style="width: 55px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col>
+									</colgroup>
+									<thead class="rowgroup">
+										<tr>
+											<th rowspan="2"><div class="cell">날짜</div></th>
+											<th colspan="2" class="bor"><div class="cell">고코투어</div></th>
+											<th colspan="2" class="bor"><div class="cell">이벤트</div></th>
+											<th colspan="2" class="bor"><div class="cell">워크인</div></th>
+											<th colspan="2" class="bor"><div class="cell">회원/회원이벤트</div></th>
+											<th colspan="2" class="bor"><div class="cell">단체</div></th>
+											<th colspan="2" class="bor"><div class="cell">오픈마켓</div></th>
+											<th colspan="2" class="bor"><div class="cell">소셜</div></th>
+											<th colspan="2" class="bor"><div class="cell">당일앱</div></th>
+											<th colspan="2" class="bor"><div class="cell">해외OTA</div></th>
+											<th colspan="2" class="bor"><div class="cell">폐쇄몰</div></th></th>
+											<th colspan="2" class="bor"><div class="cell">여행사</div></th></th>
+											<th colspan="2" class="bor"><div class="cell">포털</div></th></th>
+											<th colspan="2" class="bor"><div class="cell">계</div></th></th>
+										</tr>
+										<tr>
+											<th><div class="cell">건수</div></th></th>
+											<th><div class="cell">금액</div></th></th>
+											<th><div class="cell">건수</div></th></th>
+											<th><div class="cell">금액</div></th></th>
+											<th><div class="cell">건수</div></th></th>
+											<th><div class="cell">금액</div></th></th>
+											<th><div class="cell">건수</div></th></th>
+											<th><div class="cell">금액</div></th></th>
+											<th><div class="cell">건수</div></th></th>
+											<th><div class="cell">금액</div></th></th>
+											<th><div class="cell">건수</div></th></th>
+											<th><div class="cell">금액</div></th></th>
+											<th><div class="cell">건수</div></th></th>
+											<th><div class="cell">금액</div></th></th>
+											<th><div class="cell">건수</div></th></th>
+											<th><div class="cell">금액</div></th></th>
+											<th><div class="cell">건수</div></th></th>
+											<th><div class="cell">금액</div></th></th>
+											<th><div class="cell">건수</div></th></th>
+											<th><div class="cell">금액</div></th></th>
+											<th><div class="cell">건수</div></th></th>
+											<th><div class="cell">금액</div></th></th>
+											<th><div class="cell">건수</div></th></th>
+											<th><div class="cell">금액</div></th></th>
+											<th><div class="cell">건수</div></th></th>
+											<th><div class="cell">금액</div></th></th>
+										</tr>	
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div class="grid-area grid-contents">
+							<table class="grid-tbl">
+								<colgroup>
+									<col style="width: 55px">
+									<col style="width: 50px">
+									<col style="width: 82px">
+									<col style="width: 50px">
+									<col style="width: 82px">
+									<col style="width: 50px">
+									<col style="width: 82px">
+									<col style="width: 50px">
+									<col style="width: 82px">
+									<col style="width: 50px">
+									<col style="width: 82px">
+									<col style="width: 50px">
+									<col style="width: 82px">
+									<col style="width: 50px">
+									<col style="width: 82px">
+									<col style="width: 50px">
+									<col style="width: 82px">
+									<col style="width: 50px">
+									<col style="width: 82px">
+									<col style="width: 50px">
+									<col style="width: 82px">
+									<col style="width: 50px">
+									<col style="width: 82px">
+									<col style="width: 50px">
+									<col style="width: 82px">
+									<col style="width: 50px">
+									<col>
+								</colgroup>
+								<tbody class="rowgroup">
+									<!-- tr클래스 추가 - 토요일: sat, 일요일: sun -->
+									<tr>
+										<td><div class="cell">04/05</div></td></td>
+										<td><div class="cell">7</div></td></td>
+										<td class="ta-right"><div class="cell">737,153</div></td></td>
+										<td><div class="cell">1</div></td></td>
+										<td class="ta-right"><div class="cell">170,909</div></td></td>
+										<td><div class="cell">0</div></td></td>
+										<td class="ta-right"><div class="cell">0</div></td></td>
+										<td><div class="cell">5</div></td></td>
+										<td class="ta-right"><div class="cell">575,455</div></td></td>
+										<td><div class="cell">0</div></td></td>
+										<td class="ta-right"><div class="cell">0</div></td></td>
+										<td><div class="cell">1</div></td></td>
+										<td class="ta-right"><div class="cell">41,735</div></td></td>
+										<td><div class="cell">23</div></td></td>
+										<td class="ta-right"><div class="cell">1,670,648</div></td></td>
+										<td><div class="cell">7</div></td></td>
+										<td class="ta-right"><div class="cell">464,978</div></td></td>
+										<td><div class="cell">8</div></td></td>
+										<td class="ta-right"><div class="cell">893,930</div></td></td>
+										<td><div class="cell">0</div></td></td>
+										<td class="ta-right"><div class="cell">0</div></td></td>
+										<td><div class="cell">0</div></td></td></td></td>
+										<td class="ta-right"><div class="cell">0</div></td></td>
+										<td><div class="cell">0</div></td></td>
+										<td class="ta-right"><div class="cell">0</div></td></td>
+										<td><div class="cell">52</div></td></td>
+										<td class="ta-right"><div class="cell">4,554,807</div></td></td>
+									</tr>
+									<tr class="sat">
+										<td><div class="cell">04/06</div></td></td>
+										<td><div class="cell">7</div></td></td>
+										<td class="ta-right"><div class="cell">737,153</div></td></td>
+										<td><div class="cell">1</div></td></td>
+										<td class="ta-right"><div class="cell">170,909</div></td></td>
+										<td><div class="cell">0</div></td></td>
+										<td class="ta-right"><div class="cell">0</div></td></td>
+										<td><div class="cell">5</div></td></td>
+										<td class="ta-right"><div class="cell">575,455</div></td></td>
+										<td><div class="cell">0</div></td></td>
+										<td class="ta-right"><div class="cell">0</div></td></td>
+										<td><div class="cell">1</div></td></td>
+										<td class="ta-right"><div class="cell">41,735</div></td></td>
+										<td><div class="cell">23</div></td></td>
+										<td class="ta-right"><div class="cell">1,670,648</div></td></td>
+										<td><div class="cell">7</div></td></td>
+										<td class="ta-right"><div class="cell">464,978</div></td></td>
+										<td><div class="cell">8</div></td></td>
+										<td class="ta-right"><div class="cell">893,930</div></td></td>
+										<td><div class="cell">0</div></td></td>
+										<td class="ta-right"><div class="cell">0</div></td></td>
+										<td><div class="cell">0</div></td></td></td></td>
+										<td class="ta-right"><div class="cell">0</div></td></td>
+										<td><div class="cell">0</div></td></td>
+										<td class="ta-right"><div class="cell">0</div></td></td>
+										<td><div class="cell">52</div></td></td>
+										<td class="ta-right"><div class="cell">4,554,807</div></td></td>
+									</tr>
+									<tr class="sun">
+										<td><div class="cell">04/07</div></td></td>
+										<td><div class="cell">7</div></td></td>
+										<td class="ta-right"><div class="cell">737,153</div></td></td>
+										<td><div class="cell">1</div></td></td>
+										<td class="ta-right"><div class="cell">170,909</div></td></td>
+										<td><div class="cell">0</div></td></td>
+										<td class="ta-right"><div class="cell">0</div></td></td>
+										<td><div class="cell">5</div></td></td>
+										<td class="ta-right"><div class="cell">575,455</div></td></td>
+										<td><div class="cell">0</div></td></td>
+										<td class="ta-right"><div class="cell">0</div></td></td>
+										<td><div class="cell">1</div></td></td>
+										<td class="ta-right"><div class="cell">41,735</div></td></td>
+										<td><div class="cell">23</div></td></td>
+										<td class="ta-right"><div class="cell">1,670,648</div></td></td>
+										<td><div class="cell">7</div></td></td>
+										<td class="ta-right"><div class="cell">464,978</div></td></td>
+										<td><div class="cell">8</div></td></td>
+										<td class="ta-right"><div class="cell">893,930</div></td></td>
+										<td><div class="cell">0</div></td></td>
+										<td class="ta-right"><div class="cell">0</div></td></td>
+										<td><div class="cell">0</div></td></td></td></td>
+										<td class="ta-right"><div class="cell">0</div></td></td>
+										<td><div class="cell">0</div></td></td>
+										<td class="ta-right"><div class="cell">0</div></td></td>
+										<td><div class="cell">52</div></td></td>
+										<td class="ta-right"><div class="cell">4,554,807</div></td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="grid-area grid-total">
+							<div class="grid-scrollable">
+								<table class="grid-tbl">
+									<colgroup>
+										<col style="width: 55px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col style="width: 82px">
+										<col style="width: 50px">
+										<col>
+									</colgroup>
+									<tbody class="rowgroup">
+										<tr>
+											<td><div class="cell">계</div></td></td>
+											<td><div class="cell">57</div></td></td>
+											<td class="ta-right"><div class="cell">5,701,551</div></td></td>
+											<td><div class="cell">2</div></td></td>
+											<td class="ta-right"><div class="cell">242,727</div></td></td>
+											<td><div class="cell">38</div></td></td>
+											<td class="ta-right"><div class="cell">3,481,818</div></td></td>
+											<td><div class="cell">13</div></td></td>
+											<td class="ta-right"><div class="cell">1,403,635</div></td></td>
+											<td><div class="cell">2</div></td></td>
+											<td class="ta-right"><div class="cell">4,009,091</div></td></td>
+											<td><div class="cell">1</div></td></td>
+											<td class="ta-right"><div class="cell">41,735</div></td></td>
+											<td><div class="cell">112</div></td></td>
+											<td class="ta-right"><div class="cell">8,709,953</div></td></td>
+											<td><div class="cell">58</div></td></td>
+											<td class="ta-right"><div class="cell">4,323,876</div></td></td>
+											<td><div class="cell">27</div></td>
+											<td class="ta-right"><div class="cell">2,580,375</div></td></td>
+											<td><div class="cell">0</div></td>
+											<td class="ta-right"><div class="cell">0</div></td>
+											<td><div class="cell">7</div></td>
+											<td class="ta-right"><div class="cell">344,109</div></td>
+											<td><div class="cell">1</div></td></td>
+											<td class="ta-right"><div class="cell">87,422</div></td>
+											<td><div class="cell">318</div></td></td>
+											<td class="ta-right"><div class="cell">30,926,293</div></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //.grid-wrap -->				
+			</div>
+			<!-- /.cont-list -->
+			
+			<div class="cont-market fn-tabShow">
+				<div class="cf tab-list">
+					<a href="javascript:;" class="tab on">오픈마켓</a>
+					<a href="javascript:;" class="tab">소셜</a>
+					<a href="javascript:;" class="tab">당일앱</a>
+					<a href="javascript:;" class="tab">해외OTA</a>
+					<a href="javascript:;" class="tab">폐쇄몰</a>
+					<a href="javascript:;" class="tab">여행사</a>
+					<a href="javascript:;" class="tab">포털</a>
+				</div>
+				<div class="item-list">
+					<div class="item on">
+						<div class="grid-wrap scr-wrap">
+							<div class="grid-scrollable-x">
+								<div class="grid-area grid-head">
+									<div class="grid-scrollable">
+										<table class="grid-tbl">
+											<colgroup>
+												<col style="width: 115px">
+												<col style="">
+												<col style="">
+												<col style="">
+												<col>
+											</colgroup>
+											<thead class="rowgroup">
+												<tr>
+													<th rowspan="2"><div class="cell">날짜</div></th>
+													<th colspan="2" class="bor"><div class="cell">지마켓</div></th>
+													<th colspan="2" class="bor"><div class="cell">계</div></th>
+												</tr>
+												<tr>
+													<th><div class="cell">건수</div></th></th>
+													<th><div class="cell">금액</div></th></th>
+													<th><div class="cell">건수</div></th></th>
+													<th><div class="cell">금액</div></th></th>
+												</tr>	
+											</thead>
+										</table>
+									</div>
+								</div>
+								<div class="grid-area grid-contents">
+									<table class="grid-tbl">
+										<colgroup>
+											<col style="width: 115px">
+											<col style="">
+											<col style="">
+											<col style="">
+											<col>
+										</colgroup>
+										<tbody class="rowgroup">
+											<tr>
+												<td><div class="cell">2019-04-05</div></td></td>
+												<td><div class="cell">1</div></td></td>
+												<td class="ta-right"><div class="cell">41,735</div></td></td>
+												<td><div class="cell">1</div></td></td>
+												<td class="ta-right"><div class="cell">41,735</div></td></td>
+											</tr>
+											<tr class="sat">
+												<td><div class="cell">2019-04-06</div></td></td>
+												<td><div class="cell">1</div></td></td>
+												<td class="ta-right"><div class="cell">41,735</div></td></td>
+												<td><div class="cell">1</div></td></td>
+												<td class="ta-right"><div class="cell">41,735</div></td></td>
+											</tr>
+											<tr class="sun">
+												<td><div class="cell">2019-04-07</div></td></td>
+												<td><div class="cell">1</div></td></td>
+												<td class="ta-right"><div class="cell">41,735</div></td></td>
+												<td><div class="cell">1</div></td></td>
+												<td class="ta-right"><div class="cell">41,735</div></td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="grid-area grid-total">
+									<div class="grid-scrollable">
+										<table class="grid-tbl">
+											<colgroup>
+												<col style="width: 115px">
+												<col style="">
+												<col style="">
+												<col style="">
+												<col>
+											</colgroup>
+											<tbody class="rowgroup">
+												<tr class="fw-b">
+													<td><div class="cell">계</div></td></td>
+													<td><div class="cell">1</div></td></td>
+													<td class="ta-right"><div class="cell">41,735</div></td></td>
+													<td><div class="cell">1</div></td></td>
+													<td class="ta-right"><div class="cell">41,735</div></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //.grid-wrap -->				
+					</div>
+					<div class="item">
+						<div class="grid-wrap scr-wrap">
+							<div class="grid-scrollable-x">
+								<div class="grid-area grid-head">
+									<div class="grid-scrollable">
+										<table class="grid-tbl">
+											<colgroup>
+												<col style="width: 115px">
+												<col style="width: 130px">
+												<col style="">
+												<col style="width: 130px">
+												<col style="">
+												<col style="width: 130px">
+												<col style="">
+												<col style="width: 130px">
+												<col>
+											</colgroup>
+											<thead class="rowgroup">
+												<tr>
+													<th rowspan="2"><div class="cell">날짜</div></th></th>
+													<th colspan="2" class="bor"><div class="cell">쿠팡</div></th></th>
+													<th colspan="2" class="bor"><div class="cell">티켓몬스터</div></th></th>
+													<th colspan="2" class="bor"><div class="cell">위메이크프라이스</div></th></th>
+													<th colspan="2" class="bor"><div class="cell">계</div></th></th>
+												</tr>
+												<tr>
+													<th><div class="cell">건수</div></th></th>
+													<th><div class="cell">금액</div></th></th>
+													<th><div class="cell">건수</div></th></th>
+													<th><div class="cell">금액</div></th></th>
+													<th><div class="cell">건수</div></th>
+													<th><div class="cell">금액</div></th></th>
+													<th><div class="cell">건수</div></th></th>
+													<th><div class="cell">금액</div></th></th>
+												</tr>	
+											</thead>
+										</table>
+									</div>
+								</div>
+								<div class="grid-area grid-contents">
+									<table class="grid-tbl">
+										<colgroup>
+											<col style="width: 115px">
+											<col style="width: 130px">
+											<col style="">
+											<col style="width: 130px">
+											<col style="">
+											<col style="width: 130px">
+											<col style="">
+											<col style="width: 130px">
+											<col>
+										</colgroup>
+										<tbody class="rowgroup">
+											<tr>
+												<td><div class="cell">2019-04-05</div></td></td>
+												<td><div class="cell">2</div></td></td>
+												<td class="ta-right"><div class="cell">257,425</div></td></td>
+												<td><div class="cell">0</div></td></td>
+												<td class="ta-right"><div class="cell">0</div></td></td>
+												<td><div class="cell">17</div></td>
+												<td class="ta-right"><div class="cell">1,066,713</div></td></td>
+												<td><div class="cell">18</div></td></td>
+												<td class="ta-right"><div class="cell">1,324,138</div></td></td>
+											</tr>
+											<tr class="sat">
+												<td><div class="cell">2019-04-06</div></td></td>
+												<td><div class="cell">2</div></td></td>
+												<td class="ta-right"><div class="cell">257,425</div></td></td>
+												<td><div class="cell">0</div></td></td>
+												<td class="ta-right"><div class="cell">0</div></td></td>
+												<td><div class="cell">17</div></td>
+												<td class="ta-right"><div class="cell">1,066,713</div></td></td>
+												<td><div class="cell">18</div></td></td>
+												<td class="ta-right"><div class="cell">1,324,138</div></td></td>
+											</tr>
+											<tr class="sun">
+												<td><div class="cell">2019-04-07</div></td></td>
+												<td><div class="cell">2</div></td></td>
+												<td class="ta-right"><div class="cell">257,425</div></td></td>
+												<td><div class="cell">0</div></td></td>
+												<td class="ta-right"><div class="cell">0</div></td></td>
+												<td><div class="cell">17</div></td>
+												<td class="ta-right"><div class="cell">1,066,713</div></td></td>
+												<td><div class="cell">18</div></td></td>
+												<td class="ta-right"><div class="cell">1,324,138</div></td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="grid-area grid-total">
+									<div class="grid-scrollable">
+										<table class="grid-tbl">
+											<colgroup>
+												<col style="width: 115px">
+												<col style="width: 130px">
+												<col style="">
+												<col style="width: 130px">
+												<col style="">
+												<col style="width: 130px">
+												<col style="">
+												<col style="width: 130px">
+												<col>
+											</colgroup>
+											<tbody class="rowgroup">
+												<tr class="fw-b">
+													<td><div class="cell">계</div></td></td>
+													<td><div class="cell">7</div></td></td>
+													<td class="ta-right"><div class="cell">581,267</div></td></td>
+													<td><div class="cell">21</div></td></td>
+													<td class="ta-right"><div class="cell">1,750,995</div></td></td>
+													<td><div class="cell">95</div></td></td>
+													<td class="ta-right"><div class="cell">7,208,149</div></td></td>
+													<td><div class="cell">123</div></td></td>
+													<td class="ta-right"><div class="cell">9,540,411</div></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //.grid-wrap -->				
+					</div>
+					<div class="item">
+						<div class="grid-wrap scr-wrap">
+							<div class="grid-scrollable-x">
+								<div class="grid-area grid-head">
+									<div class="grid-scrollable">
+										<table class="grid-tbl">
+											<colgroup>
+												<col style="width: 115px">
+												<col style="width: 65px">
+												<col style="">
+												<col style="width: 65px">
+												<col style="">
+												<col style="width: 65px">
+												<col style="">
+												<col style="width: 65px">
+												<col style="">
+												<col style="width: 65px">
+												<col style="">
+												<col style="width: 65px">
+												<col style="">
+												<col style="width: 65px">
+												<col style="">
+												<col style="width: 65px">
+												<col>
+											</colgroup>
+											<thead class="rowgroup">
+												<tr>
+													<th rowspan="2"><div class="cell">날짜</div></th></th>
+													<th colspan="2" class="bor"><div class="cell">데일리호텔</div></th></th>
+													<th colspan="2" class="bor"><div class="cell">호텔나우</div></th></th>
+													<th colspan="2" class="bor"><div class="cell">호텔타임</div></th></th>
+													<th colspan="2" class="bor"><div class="cell">여기어때</div></th></th>
+													<th colspan="2" class="bor"><div class="cell">야놀자</div></th></th>
+													<th colspan="2" class="bor"><div class="cell">야놀자(모텔)</div></th></th>
+													<th colspan="2" class="bor"><div class="cell">여기어때(모텔)</div></th></th>
+													<th colspan="2" class="bor"><div class="cell">계</div></th></th>
+												</tr>
+												<tr>
+													<th><div class="cell">건수</div></th></th>
+													<th><div class="cell">금액</div></th></th>
+													<th><div class="cell">건수</div></th></th>
+													<th><div class="cell">금액</div></th></th>
+													<th><div class="cell">건수</div></th></th>
+													<th><div class="cell">금액</div></th></th>
+													<th><div class="cell">건수</div></th></th>
+													<th><div class="cell">금액</div></th></th>
+													<th><div class="cell">건수</div></th></th>
+													<th><div class="cell">금액</div></th></th>
+													<th><div class="cell">건수</div></th></th>
+													<th><div class="cell">금액</div></th></th>
+													<th><div class="cell">건수</div></th></th>
+													<th><div class="cell">금액</div></th></th>
+													<th><div class="cell">건수</div></th></th>
+													<th><div class="cell">금액</div></th></th>
+												</tr>	
+											</thead>
+										</table>
+									</div>
+								</div>
+								<div class="grid-area grid-contents">
+									<table class="grid-tbl">
+										<colgroup>
+											<col style="width: 115px">
+											<col style="width: 65px">
+											<col style="">
+											<col style="width: 65px">
+											<col style="">
+											<col style="width: 65px">
+											<col style="">
+											<col style="width: 65px">
+											<col style="">
+											<col style="width: 65px">
+											<col style="">
+											<col style="width: 65px">
+											<col style="">
+											<col style="width: 65px">
+											<col style="">
+											<col style="width: 65px">
+											<col>
+										</colgroup>
+										<tbody class="rowgroup">
+											<tr>
+												<td><div class="cell">2019-04-05</div></td></td>
+												<td><div class="cell">0</div></td></td>
+												<td class="ta-right"><div class="cell">0</div></td></td>
+												<td><div class="cell">0</div></td></td>
+												<td class="ta-right"><div class="cell">0</div></td></td>
+												<td><div class="cell">1</div></td></td>
+												<td class="ta-right"><div class="cell">77,182</div></td></td>
+												<td><div class="cell">0</div></td></td>
+												<td class="ta-right"><div class="cell">0</div></td></td>
+												<td><div class="cell">2</div></td></td>
+												<td class="ta-right"><div class="cell">191,760</div></td></td>
+												<td><div class="cell">3</div></td></td>
+												<td class="ta-right"><div class="cell">155,209</div></td></td>
+												<td><div class="cell">0</div></td></td>
+												<td class="ta-right"><div class="cell">0</div></td></td>
+												<td><div class="cell">6</div></td></td>
+												<td class="ta-right"><div class="cell">424,151</div></td></td>
+											</tr>
+											<tr class="sat">
+												<td><div class="cell">2019-04-06</div></td></td>
+												<td><div class="cell">0</div></td></td>
+												<td class="ta-right"><div class="cell">0</div></td></td>
+												<td><div class="cell">0</div></td></td>
+												<td class="ta-right"><div class="cell">0</div></td></td>
+												<td><div class="cell">1</div></td></td>
+												<td class="ta-right"><div class="cell">77,182</div></td></td>
+												<td><div class="cell">0</div></td></td>
+												<td class="ta-right"><div class="cell">0</div></td></td>
+												<td><div class="cell">2</div></td></td>
+												<td class="ta-right"><div class="cell">191,760</div></td></td>
+												<td><div class="cell">3</div></td></td>
+												<td class="ta-right"><div class="cell">155,209</div></td></td>
+												<td><div class="cell">0</div></td></td>
+												<td class="ta-right"><div class="cell">0</div></td></td>
+												<td><div class="cell">6</div></td></td>
+												<td class="ta-right"><div class="cell">424,151</div></td></td>
+											</tr>
+											<tr class="sun">
+												<td><div class="cell">2019-04-07</div></td></td>
+												<td><div class="cell">0</div></td></td>
+												<td class="ta-right"><div class="cell">0</div></td></td>
+												<td><div class="cell">0</div></td></td>
+												<td class="ta-right"><div class="cell">0</div></td></td>
+												<td><div class="cell">1</div></td></td>
+												<td class="ta-right"><div class="cell">77,182</div></td></td>
+												<td><div class="cell">0</div></td></td>
+												<td class="ta-right"><div class="cell">0</div></td></td>
+												<td><div class="cell">2</div></td></td>
+												<td class="ta-right"><div class="cell">191,760</div></td></td>
+												<td><div class="cell">3</div></td></td>
+												<td class="ta-right"><div class="cell">155,209</div></td></td>
+												<td><div class="cell">0</div></td></td>
+												<td class="ta-right"><div class="cell">0</div></td></td>
+												<td><div class="cell">6</div></td></td>
+												<td class="ta-right"><div class="cell">424,151</div></td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="grid-area grid-total">
+									<div class="grid-scrollable">
+										<table class="grid-tbl">
+											<colgroup>
+												<col style="width: 115px">
+												<col style="width: 65px">
+												<col style="">
+												<col style="width: 65px">
+												<col style="">
+												<col style="width: 65px">
+												<col style="">
+												<col style="width: 65px">
+												<col style="">
+												<col style="width: 65px">
+												<col style="">
+												<col style="width: 65px">
+												<col style="">
+												<col style="width: 65px">
+												<col style="">
+												<col style="width: 65px">
+												<col>
+											</colgroup>
+											<tbody class="rowgroup">
+												<tr class="fw-b">
+													<td><div class="cell">계</div></td></td>
+													<td><div class="cell">13</div></td></td>
+													<td class="ta-right"><div class="cell">1,243,646</div></td></td>
+													<td><div class="cell">1</div></td></td>
+													<td class="ta-right"><div class="cell">105,364</div></td></td>
+													<td><div class="cell">2</div></td></td>
+													<td class="ta-right"><div class="cell">115,727</div></td></td>
+													<td><div class="cell">15</div></td></td>
+													<td class="ta-right"><div class="cell">1,989,918</div></td></td>
+													<td><div class="cell">10</div></td>
+													<td class="ta-right"><div class="cell">835,713</div></td></td>
+													<td><div class="cell">16</div></td></td>
+													<td class="ta-right"><div class="cell">616,082</div></td></td>
+													<td><div class="cell">21</div></td></td>
+													<td class="ta-right"><div class="cell">1,268,200</div></td>
+													<td><div class="cell">78</div></td>
+													<td class="ta-right"><div class="cell">6,174,640</div></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //.grid-wrap -->				
+					</div>
+					<div class="item">
+						<div class="grid-wrap scr-wrap">
+							<div class="grid-scrollable-x">
+								<div class="grid-area grid-head">
+									<div class="grid-scrollable">
+										<table class="grid-tbl">
+											<colgroup>
+												<col style="width: 115px">
+												<col style="width: 130px">
+												<col style="">
+												<col style="width: 130px">
+												<col style="">
+												<col style="width: 130px">
+												<col style="">
+												<col style="width: 130px">
+												<col>
+											</colgroup>
+											<thead class="rowgroup">
+												<tr>
+													<th rowspan="2">날짜</th>
+													<th colspan="2" class="bor">아고다</th>
+													<th colspan="2" class="bor">부킹닷컴</th>
+													<th colspan="2" class="bor">익스피디아</th>
+													<th colspan="2" class="bor">계</th>
+												</tr>
+												<tr>
+													<th>건수</th>
+													<th>금액</th>
+													<th>건수</th>
+													<th>금액</th>
+													<th>건수</th>
+													<th>금액</th>
+													<th>건수</th>
+													<th>금액</th>
+												</tr>	
+											</thead>
+										</table>
+									</div>
+								</div>
+								<div class="grid-area grid-contents">
+									<table class="grid-tbl">
+										<colgroup>
+											<col style="width: 115px">
+											<col style="width: 130px">
+											<col style="">
+											<col style="width: 130px">
+											<col style="">
+											<col style="width: 130px">
+											<col style="">
+											<col style="width: 130px">
+											<col>
+										</colgroup>
+										<tbody class="rowgroup">
+											<tr>
+												<td><div class="cell">2019-04-05</div></td>
+												<td><div class="cell">2</div></td>
+												<td class="ta-right"><div class="cell">257,425</div></td>
+												<td><div class="cell">0</div></td>
+												<td class="ta-right"><div class="cell">0</div></td>
+												<td><div class="cell">17</div></td>
+												<td class="ta-right"><div class="cell">1,066,713</div></td>
+												<td><div class="cell">18</div></td>
+												<td class="ta-right"><div class="cell">1,324,138</div></td>
+											</tr>
+											<tr class="sat">
+												<td><div class="cell">2019-04-06</div></td>
+												<td><div class="cell">1</div></td>
+												<td class="ta-right"><div class="cell">39,375</div></td>
+												<td><div class="cell">1</div></td>
+												<td class="ta-right"><div class="cell">106,756</div></td>
+												<td><div class="cell">12</div></td>
+												<td class="ta-right"><div class="cell">712,764</div></td>
+												<td><div class="cell">14</div></td>
+												<td class="ta-right"><div class="cell">858,895</div></td>
+											</tr>
+											<tr class="sun">
+												<td><div class="cell">2019-04-07</div></td>
+												<td><div class="cell">1</div></td>
+												<td class="ta-right"><div class="cell">39,375</div></td>
+												<td><div class="cell">3</div></td>
+												<td class="ta-right"><div class="cell">176,675</div></td>
+												<td><div class="cell">12</div></td>
+												<td class="ta-right"><div class="cell">1,253,855</div></td>
+												<td><div class="cell">16</div></td>
+												<td class="ta-right"><div class="cell">1,469,905</div></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="grid-area grid-total">
+									<div class="grid-scrollable">
+										<table class="grid-tbl">
+											<colgroup>
+												<col style="width: 115px">
+												<col style="width: 130px">
+												<col style="">
+												<col style="width: 130px">
+												<col style="">
+												<col style="width: 130px">
+												<col style="">
+												<col style="width: 130px">
+												<col>
+											</colgroup>
+											<tbody class="rowgroup">
+												<tr class="fw-b">
+													<td><div class="cell">계</div></td>
+													<td><div class="cell">7</div></td>
+													<td class="ta-right"><div class="cell">581,267</div></td>
+													<td><div class="cell">21</div></td>
+													<td class="ta-right"><div class="cell">1,750,995</div></td>
+													<td><div class="cell">95</div></td>
+													<td class="ta-right"><div class="cell">7,208,149</div></td>
+													<td><div class="cell">123</div></td>
+													<td class="ta-right"><div class="cell">9,540,411</div></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //.grid-wrap -->				
+					</div>
+					<div class="item">
+						<div class="grid-wrap scr-wrap">
+							<div class="grid-scrollable-x">
+								<div class="grid-area grid-head">
+									<div class="grid-scrollable">
+										<table class="grid-tbl">
+											<thead class="rowgroup">
+												<tr>
+													<th>통계가 존재하지 않습니다.</th>
+												</tr>	
+											</thead>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //.grid-wrap -->				
+					</div>
+					<div class="item">
+						<div class="grid-wrap scr-wrap">
+							<div class="grid-scrollable-x">
+								<div class="grid-area grid-head">
+									<div class="grid-scrollable">
+										<table class="grid-tbl">
+											<colgroup>
+												<col style="width: 115px">
+												<col style="">
+												<col style="">
+												<col style="">
+												<col>
+											</colgroup>
+											<thead class="rowgroup">
+												<tr>
+													<th rowspan="2">날짜</th>
+													<th colspan="2" class="bor">인터파크</th>
+													<th colspan="2" class="bor">계</th>
+												</tr>
+												<tr>
+													<th>건수</th>
+													<th>금액</th>
+													<th>건수</th>
+													<th>금액</th>
+												</tr>	
+											</thead>
+										</table>
+									</div>
+								</div>
+								<div class="grid-area grid-contents">
+									<table class="grid-tbl">
+										<colgroup>
+											<col style="width: 115px">
+											<col style="">
+											<col style="">
+											<col style="">
+											<col>
+										</colgroup>
+										<tbody class="rowgroup">
+											<tr>
+												<td><div class="cell">2019-04-05</div></td>
+												<td><div class="cell">1</div></td>
+												<td class="ta-right"><div class="cell">41,735</div></td>
+												<td><div class="cell">1</div></td>
+												<td class="ta-right"><div class="cell">41,735</div></td>
+											</tr>
+											<tr class="sat">
+												<td><div class="cell">2019-04-06</div></td>
+												<td><div class="cell">1</div></td>
+												<td class="ta-right"><div class="cell">41,735</div></td>
+												<td><div class="cell">1</div></td>
+												<td class="ta-right"><div class="cell">41,735</div></td>
+											</tr>
+											<tr class="sun">
+												<td><div class="cell">2019-04-07</div></td>
+												<td><div class="cell">1</div></td>
+												<td class="ta-right"><div class="cell">41,735</div></td>
+												<td><div class="cell">1</div></td>
+												<td class="ta-right"><div class="cell">41,735</div></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="grid-area grid-total">
+									<div class="grid-scrollable">
+										<table class="grid-tbl">
+											<colgroup>
+												<col style="width: 115px">
+												<col style="">
+												<col style="">
+												<col style="">
+												<col>
+											</colgroup>
+											<tbody class="rowgroup">
+												<tr class="fw-b">
+													<td><div class="cell">계</div></td>
+													<td><div class="cell">1</div></td>
+													<td class="ta-right"><div class="cell">41,735</div></td>
+													<td><div class="cell">1</div></td>
+													<td class="ta-right"><div class="cell">41,735</div></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //.grid-wrap -->	
+					</div>
+					<div class="item">
+						<div class="grid-wrap scr-wrap">
+							<div class="grid-scrollable-x">
+								<div class="grid-area grid-head">
+									<div class="grid-scrollable">
+										<table class="grid-tbl">
+											<colgroup>
+												<col style="width: 115px">
+												<col style="">
+												<col style="">
+												<col style="">
+												<col>
+											</colgroup>
+											<thead class="rowgroup">
+												<tr>
+													<th rowspan="2">날짜</th>
+													<th colspan="2" class="bor">네이버</th>
+													<th colspan="2" class="bor">계</th>
+												</tr>
+												<tr>
+													<th>건수</th>
+													<th>금액</th>
+													<th>건수</th>
+													<th>금액</th>
+												</tr>	
+											</thead>
+										</table>
+									</div>
+								</div>
+								<div class="grid-area grid-contents">
+									<table class="grid-tbl">
+										<colgroup>
+											<col style="width: 115px">
+											<col style="">
+											<col style="">
+											<col style="">
+											<col>
+										</colgroup>
+										<tbody class="rowgroup">
+											<tr>
+												<td><div class="cell">2019-04-05</div></td>
+												<td><div class="cell">1</div></td>
+												<td class="ta-right"><div class="cell">41,735</div></td>
+												<td><div class="cell">1</div></td>
+												<td class="ta-right"><div class="cell">41,735</div></td>
+											</tr>
+											<tr class="sat">
+												<td><div class="cell">2019-04-06</div></td>
+												<td><div class="cell">1</div></td>
+												<td class="ta-right"><div class="cell">41,735</div></td>
+												<td><div class="cell">1</div></td>
+												<td class="ta-right"><div class="cell">41,735</div></td>
+											</tr>
+											<tr class="sun">
+												<td><div class="cell">2019-04-07</div></td>
+												<td><div class="cell">1</div></td>
+												<td class="ta-right"><div class="cell">41,735</div></td>
+												<td><div class="cell">1</div></td>
+												<td class="ta-right"><div class="cell">41,735</div></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="grid-area grid-total">
+									<div class="grid-scrollable">
+										<table class="grid-tbl">
+											<colgroup>
+												<col style="width: 115px">
+												<col style="">
+												<col style="">
+												<col style="">
+												<col>
+											</colgroup>
+											<tbody class="rowgroup">
+												<tr class="fw-b">
+													<td><div class="cell">계</div></td>
+													<td><div class="cell">1</div></td>
+													<td class="ta-right"><div class="cell">41,735</div></td>
+													<td><div class="cell">1</div></td>
+													<td class="ta-right"><div class="cell">41,735</div></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //.grid-wrap -->	
+					</div>
+				</div>
+			</div>
+			<!-- /.cont-market -->
+		</div>
+	</div>
+	<!--//.contents-->
+	
+	@@include('../include/status/_right_notice.html')
+</div>
+</body>
+</html>

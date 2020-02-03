@@ -1,0 +1,113 @@
+<!-- 객실 상태 변경 (Change Room Status) 팝업 -->
+<div class="pop-container chStatus-container">
+	<div class="bg-back"></div>
+
+	<div class="pop-wrapper">
+		<div class="pop-header">
+			<h2>Change Room Status</h2>
+			<span class="a-i-x i-x fn-cls"></span>
+		</div>
+		<div class="cf pop-contents">
+		    <div class="cf popcont-container">
+                <div class="grid-wrap">
+                    <div class="grid-contents">
+                        <table class="grid-tbl">
+                            <colgroup>
+                                <col class="nth-1" style="width: 120px">
+                                <col class="nth-2">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <div class="cell">객실 상태</div>
+                                    </th>
+                                    <td>
+                                        <div class="cell">
+                                            <label><input type="radio" name="roomStatus" value="goOut"> <span
+                                                    class="icon-status goOut"></span></label>
+                                            <label><input type="radio" name="roomStatus" value="inHouse"> <span
+                                                    class="icon-status inHouse"></span></label>
+                                            <label><input type="radio" name="roomStatus" value="empty"> <span
+                                                    class="icon-status empty"></span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">청소 상태</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <label><input type="radio" name="cleanStatus" value="vd"> <span class="icon-status vd"></span></label>
+                                            <label><input type="radio" name="cleanStatus" value="vw"> <span class="icon-status vw"></span></label>
+                                            <label><input type="radio" name="cleanStatus" value="vc"> <span class="icon-status vc"></span></label>
+                                            <label><input type="radio" name="cleanStatus" value="vi"> <span class="icon-status vi"></span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">Ex-Bad 상태</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <label><input type="radio" name="ExBadStatus" value="in-r"> <span class="icon-status in-r"></span></label>
+                                            <label><input type="radio" name="ExBadStatus" value="in"> <span class="icon-status in"></span></label>
+                                            <label><input type="radio" name="ExBadStatus" value="out-r"> <span class="icon-status out-r"></span></label>
+                                            <label><input type="radio" name="ExBadStatus" value="out"> <span class="icon-status out"></span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">Do Not Disturb</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <label><input type="radio" name="doNotDisturb" value="yes"> <span class="txt">Y</span></label>
+                                            <label><input type="radio" name="doNotDisturb" value="no"> <span class="txt">N</span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">서비스 상태</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <select name="" id="" class="form-select gray">
+                                                <option value=""></option>
+                                                <option value="">O.O.O</option>
+                                                <option value="">O.O.S</option>
+                                            </select>
+                                        </div>
+                                        <div class="cell">
+                                            <span class="cal-box">
+                                                <input type="text" class="appe-reset inp-cal date-ui">
+                                                <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                            </span>
+                                            <span>~</span>
+                                            <span class="cal-box">
+                                                <input type="text" class="appe-reset inp-cal date-ui">
+                                                <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div class="cell">비고</div></th>
+                                    <td>
+                                        <div class="cell">
+                                            <textarea name="" id="" cols="30" rows="10" class="textarea-etc"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- //.grid-wrap -->
+		    </div>
+		</div>
+		<!-- / .assBl-contents -->
+		<div class="pop-footer">
+			<div class="row-btn">
+				<button type="button" class="btn-orange fn-cls"><span class="icon ic-check"></span>UPDATE</button>
+				<button type="button" class="btn-gray fn-cls"><span class="icon ic-cancel"></span>CLOSE</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- / .chStatus-container -->		

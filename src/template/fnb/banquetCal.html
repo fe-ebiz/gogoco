@@ -1,0 +1,311 @@
+@@include('../include/_head.html', {
+	"page": "fnb"
+})
+
+<!-- 페이지 전용 -->
+
+<body class="page-fnb">
+
+<!-- @@include('../include/pop/pop_rsv.html') -->
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="cf contents bqCal-contents">
+
+		@@include('../include/_row_h2.html', {
+			"page-title": "연회 일정"
+		})
+
+		<div class="cf cont-container-f">
+			<div class="grid-toolbar top">
+				<button type="button" class="btn-gray today">Today</button>
+				<button type="button" class="btn-gray prev"><span>◀</span></button>
+				<button type="button" class="btn-gray next"><span>▶</span></button>
+				<span class="date"><img class="cal" src="../../public/img/icon/cal.png" alt="달력"> March, 2019</span>
+				<button type="button" class="btn-gray"><span class="icon ic-pdf"></span> Export to PDF</button>
+
+				<span class="pull-right tab-list">
+					<button type="button" class="btn-gray m on">Month</button>
+					<button type="button" class="btn-gray d">Day</button>
+				</span>
+			</div>
+			<!-- /.grid-toolbar -->
+			<div class="cont-area item-list">
+				<div class="cont-month on">
+					<table class="month-tbl">
+						<colgroup>
+							<col style="width:14.28%;">
+							<col style="width:14.28%;">
+							<col style="width:14.28%;">
+							<col style="width:14.28%;">
+							<col style="width:14.28%;">
+							<col style="width:14.28%;">
+							<col style="width:14.28%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>Sunday</th>
+								<th>Monday</th>
+								<th>Tuesday</th>
+								<th>Wednseday</th>
+								<th>Thursday</th>
+								<th>Friday</th>
+								<th>Saturday</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- 그 달에 쉬는, 벗어난 날 : out 클래스 추가, 당일 : today  -->
+							<tr>
+								<td class="out"><div class="cell"><p class="row row-1">24</p></div></td>
+								<td class="out"><div class="cell"><p class="row row-1">25</p></div></td>
+								<td class="out"><div class="cell"><p class="row row-1">26</p></div></td>
+								<td class="out"><div class="cell"><p class="row row-1">27</p></div></td>
+								<td class="out"><div class="cell"><p class="row row-1">28</p></div></td>
+								<td><div class="cell"><p class="row row-1">01</p></div></td>
+								<td><div class="cell"><p class="row row-1">02</p></div></td>
+							</tr>
+							<tr>
+								<td><div class="cell"><p class="row row-1">03</p></div></td>
+								<td><div class="cell"><p class="row row-1">04</p></div></td>
+								<td><div class="cell"><p class="row row-1">05</p></div></td>
+								<td><div class="cell"><p class="row row-1">06</p></div></td>
+								<td><div class="cell"><p class="row row-1">07</p></div></td>
+								<!-- 예시 팝업 1 -->
+								<td onclick="popFn.show('.bqCalEvent-container')"><div class="cell"><p class="row row-1">08</p></div></td>
+								<td>
+									<div class="cell">
+										<p class="row row-1">09</p>
+								        <!-- 예시 팝업 2 - 생성된 일정을 수정할 때는 DELETE도 나타남 -->
+										<p class="row row-item" onclick="popFn.show('.bqCalEvent-container')">12:00 AM ~ 12:00 AM 내쇼날모터스 <span class="icon ic-x"></span></p>
+										<p class="row row-item">12:00 AM ~ 12:00 AM 내쇼날모터스 <span class="icon ic-x"></span></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><div class="cell"><p class="row row-1">05</p></div></td>
+								<td class="today"><div class="cell"><p class="row row-1">06</p></div></td>
+								<td><div class="cell"><p class="row row-1">07</p></div></td>
+								<td><div class="cell"><p class="row row-1">08</p></div></td>
+								<td><div class="cell"><p class="row row-1">09</p></div></td>
+								<td><div class="cell"><p class="row row-1">10</p></div></td>
+								<td><div class="cell"><p class="row row-1">11</p></div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //.cont-month -->
+				<div class="cont-day">
+					<div class="scrollbar top">
+						<table class="tbl top-tbl">
+							<colgroup>
+								<col style="width: 70px">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th></th>
+									<td><div class="cell">Tue 3/26</div></td>
+								</tr>
+								<tr>
+									<th>all day</th>
+									<td><div class="cell"></div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="scrollbar body">
+						<div class="body-cont">
+							<table class="tbl body-tbl">
+								<colgroup>
+									<col style="width: 70px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>12:00 AM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>1:00 AM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>2:00 AM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>3:00 AM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>4:00 AM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>5:00 AM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>6:00 AM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>7:00 AM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>8:00 AM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>9:00 AM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>10:00 AM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>11:00 AM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>12:00 PM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>1:00 PM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>2:00 PM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>3:00 PM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>4:00 PM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>5:00 PM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>6:00 PM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>7:00 PM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>8:00 PM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>9:00 PM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>10:00 PM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+									<tr>
+										<th>11:00 PM</th>
+										<td>
+											<div class="cell"></div>
+											<div class="cell"></div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="grid-toolbar bottom">
+						<!-- <button type="button" class="btn-gray"><span class="icon ic-clock"></span> Show business hours</button> -->
+					</div>
+				</div>
+				<!-- /.cont-day -->
+			</div>
+			<!-- /.cont-area -->
+		</div>
+	</div>
+	<!-- //.contents -->
+
+</div>
+
+</body>
+</html>

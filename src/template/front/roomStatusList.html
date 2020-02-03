@@ -1,0 +1,214 @@
+@@include('../include/_head.html', {
+	"page": "front"
+})
+
+<!-- 페이지 전용 -->
+
+<body class="page-front">
+
+<!-- @@include('../include/pop/pop_rsv.html') -->
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="cf contents rmStaList-contents">
+
+		@@include('../include/_row_h2.html', {
+			"page-title": "객실 현황 목록"
+		})
+
+		<div class="cont-container-f">
+			<section class="cont-roomStatus">
+				<div class="area classify-area">
+					<div class="cont-center">
+						<h3 class="hidden">분류 리스트</h3>
+						<ul class="cf list-type">
+							<li class="item-type type-1">
+								<label class="item chkOut"><input type="checkbox" class="hidden"><span class="ic"></span>Check out</label>
+								<label class="item assign"><input type="checkbox" class="hidden"><span class="ic"></span>Assign</label>
+								<label class="item chkOut-assign"><input type="checkbox" class="hidden"><span class="ic"></span>Check out + Assign</label>
+							</li>
+							<li class="item-type type-2">
+								<label class="item wd-1 vip"><input type="checkbox" class="hidden"><span class="ic"></span>VIP</label>
+								<label class="item wd-2 chkIn"><input type="checkbox" class="hidden"><span class="ic"></span>Check-in</label>
+								<label class="item wd-3 inHouse"><input type="checkbox" class="hidden"><span class="ic"></span>In House</label>
+								<label class="item wd-4 ooo"><input type="checkbox" class="hidden"><span class="ic"></span>Out Of Order</label>
+								<label class="item wd-1 empty"><input type="checkbox" class="hidden"><span class="ic"></span>Empty</label>
+								<label class="item wd-2 dayUse"><input type="checkbox" class="hidden"><span class="ic"></span>Day Use</label>
+								<label class="item wd-3 goOut"><input type="checkbox" class="hidden"><span class="ic"></span>Go Out</label>
+								<label class="item wd-4 oos"><input type="checkbox" class="hidden"><span class="ic"></span>Out Of Service</label>
+							</li>
+							<li class="item-type type-3">
+								<label class="item wd-1 vi"><input type="checkbox" class="hidden"><span class="ic"></span>VI</label>
+								<label class="item wd-2 vw"><input type="checkbox" class="hidden"><span class="ic"></span>VW</label>
+								<label class="item wd-3 oi"><input type="checkbox" class="hidden"><span class="ic"></span>OI</label>
+								<label class="item wd-4 ow"><input type="checkbox" class="hidden"><span class="ic"></span>OW</label>
+								<label class="item wd-1 vc"><input type="checkbox" class="hidden"><span class="ic"></span>VC</label>
+								<label class="item wd-2 vd"><input type="checkbox" class="hidden"><span class="ic"></span>VD</label>
+								<label class="item wd-3 oc"><input type="checkbox" class="hidden"><span class="ic"></span>OC</label>
+								<label class="item wd-4 od"><input type="checkbox" class="hidden"><span class="ic"></span>OD</label>
+							</li>
+							<li class="item-type type-4">
+								<label class="item wd-1 in-r"><input type="checkbox" class="hidden"><span class="ic"></span>IN/R</label>
+								<label class="item wd-2 in"><input type="checkbox" class="hidden"><span class="ic"></span>IN</label>
+								<label class="item wd-1 out-r"><input type="checkbox" class="hidden"><span class="ic"></span>OUT/R</label>
+								<label class="item wd-2 out"><input type="checkbox" class="hidden"><span class="ic"></span>OUT</label>
+							</li>
+							<li class="item-type type-5">
+								<label class="item wd-1 message"><span class="ic"></span>Message</label>
+								<label class="item wd-2 guests"><span class="ic"></span>Guests</label>
+								<label class="item wd-1 temperature"><span class="ic"></span>Temperature</label>
+							</li>
+						</ul>
+						<div class="row-chk">
+							<button type="button" class="btn-clear">Clear<span class="hidden">체크해제</span></button>
+							<span class="mg-l"></span>
+							<span class="chk-box"><label><input type="checkbox" id="">RST</label></span>
+							<span class="chk-box"><label><input type="checkbox" id="">DDB</label></span>
+							<span class="chk-box"><label><input type="checkbox" id="">TTW</label></span>
+							<span class="chk-box"><label><input type="checkbox" id="">DTW</label></span>
+							<span class="chk-box"><label><input type="checkbox" id="">FTW</label></span>
+							<span class="chk-box"><label><input type="checkbox" id="">TRP</label></span>
+							<span class="chk-box"><label><input type="checkbox" id="">FDB</label></span>
+							<span class="chk-box"><label><input type="checkbox" id="">FKD</label></span>
+						</div>
+						<span class="slt-box floor">
+							<span class="t">Floor :</span>
+							<select name="" id="" class="form-select floor">
+								<option value="">17</option>
+								<option value="">16</option>
+								<option value="">15</option>
+								<option value="">14</option>
+								<option value="">13</option>
+								<option value="">12</option>
+								<option value="">11</option>
+								<option value="">10</option>
+								<option value="">9</option>
+								<option value="">8</option>
+								<option value="">7</option>
+								<option value="">6</option>
+								<option value="">5</option>
+								<option value="">4</option>
+								<option value="">3</option>
+								<option value="">2</option>
+								<option value="">1</option>
+							</select>
+						</span>
+					</div>
+				</div>
+				<!--//.classify-area-->
+			</section>
+
+			<div class="cont-list">
+				<div class="grid-toolbar">
+					<button type="button" class="btn-gray btn-changes"><span class="icon ic-excel"></span> Export to excel</button>
+				</div>
+				<!-- /.grid-toolbar -->
+				<div class="grid-wrap scr-wrap">
+					<div class="grid-scrollable-x">
+						<div class="grid-area grid-head">
+							<div class="grid-scrollable">
+								<table class="grid-tbl">
+									<colgroup>
+										<col style="width:95px">
+										<col style="width:95px">
+										<col style="width:95px">
+										<col style="width:95px">
+										<col style="width:95px">
+										<col style="width:380px">
+										<col>
+										<col style="width:125px">
+									</colgroup>
+									<thead class="rowgroup">
+										<tr>
+											<th><div class="cell">객실 번호</div></th>
+											<th><div class="cell">객실 유형</div></th>
+											<th><div class="cell">In/Out</div></th>
+											<th><div class="cell">CI.Status</div></th>
+											<th><div class="cell">Extra Bad</div></th>
+											<th><div class="cell">이름</div></th>
+											<th><div class="cell">비고</div></th>
+											<th><div class="cell"></div></th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div class="grid-area grid-contents">
+							<table class="grid-tbl">
+								<colgroup>
+									<col style="width:95px">
+									<col style="width:95px">
+									<col style="width:95px">
+									<col style="width:95px">
+									<col style="width:95px">
+									<col style="width:380px">
+									<col>
+									<col style="width:125px">
+								</colgroup>
+								<tbody class="rowgroup">
+									<!-- In/Out 상태 아이콘 : vip, chkIn, inHouse, ooo, empty,  dayUse, goOut, oos -->
+									<!-- Cl.Status 상태 아이콘 : vi, vw, vc, vd, oi, ow, oc, od -->
+									<!-- Extra Bad 상태 아이콘 : in, in-r, out, out-r -->
+									<!-- 상태별 tr 색상 지정 : base, chkIn, vip, dayuse -->
+									<!-- 객실 번호 아이콘 추가 상태: chkOut, assign, chkOut-assign-->
+									<!-- ex. <td><div class="cell">1701 <span class="icon-status won chkOut"></span></div></td> -->
+									<tr class="base">
+										<td><div class="cell">1701 <span class="icon-status won chkOut"></span></div></td>
+										<td><div class="cell">RST</div></td>
+										<td><div class="cell"><span class="icon-status empty"></span></div></td>
+										<td><div class="cell"><span class="icon-status vi"></span></div></td>
+										<td><div class="cell"><span class="icon-status in"></span></div></td>
+										<td class="ta-left"><div class="cell">안성범</div></td>
+										<td class="ta-left"><div class="cell">러기지렉</div></td>
+										<!-- 팝업 예시 -->
+										<td><div class="cell"><button type="button" class="btn-gray" onclick="popFn.show('.rmListEdit-container')"><span class="icon ic-edit"></span> Edit</button></div></td>
+									</tr>
+									<tr class="chkIn">
+										<td><div class="cell">1701 <span class="icon-status won assign"></span></div></td>
+										<td><div class="cell">RST</div></td>
+										<td><div class="cell"><span class="icon-status ooo"></span></div></td>
+										<td><div class="cell"><span class="icon-status vw"></span></div></td>
+										<td><div class="cell"><span class="icon-status out"></span></div></td>
+										<td class="ta-left"><div class="cell">안성범</div></td>
+										<td class="ta-left"><div class="cell">러기지렉</div></td>
+										<td><div class="cell"><button type="button" class="btn-gray"><span class="icon ic-edit"></span> Edit</button></div></td>
+									</tr>
+									<tr class="vip">
+										<td><div class="cell">1701 <span class="icon-status won chkOut-assign"></span></div></td>
+										<td><div class="cell">RST</div></td>
+										<td><div class="cell"><span class="icon-status goOut"></span></div></td>
+										<td><div class="cell"><span class="icon-status vc"></span></div></td>
+										<td><div class="cell"><span class="icon-status in-r"></span></div></td>
+										<td class="ta-left"><div class="cell">안성범</div></td>
+										<td class="ta-left"><div class="cell">러기지렉</div></td>
+										<td><div class="cell"><button type="button" class="btn-gray"><span class="icon ic-edit"></span> Edit</button></div></td>
+									</tr>
+									<tr class="dayuse">
+										<td><div class="cell">1701</div></td>
+										<td><div class="cell">RST</div></td>
+										<td><div class="cell"><span class="icon-status goOut"></span></div></td>
+										<td><div class="cell"><span class="icon-status vc"></span></div></td>
+										<td><div class="cell"><span class="icon-status in-r"></span></div></td>
+										<td class="ta-left"><div class="cell">안성범</div></td>
+										<td class="ta-left"><div class="cell">러기지렉</div></td>
+										<td><div class="cell"><button type="button" class="btn-gray"><span class="icon ic-edit"></span> Edit</button></div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //.grid-wrap -->
+			</div>
+			<!-- //.cont-list -->
+		</div>
+		<!--//.cont-roomStatus-->
+	</div>
+	<!--//.contents-->
+
+</div>
+<div class="cf"></div>
+
+</body>
+</html>

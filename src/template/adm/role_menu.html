@@ -1,0 +1,205 @@
+@@include('../include/_head.html', {
+	"page": "adm"
+})
+
+<body class="page-adm">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="cf contents roleMenu-contents">
+
+		<div class="row-top-btn">
+			<button type="button" class="btn-red" onclick="popFn.show('.userMgmRegt-container')">새로만들기</button>
+			<button type="button" class="btn-red">새로고침</button>
+		</div>
+		
+		@@include('../include/_row_h2.html', {
+			"page-title": "메뉴권한"
+		})
+
+		<div class="cf cont-container-f">
+			<div class="split cont-code">
+				<div class="grid-wrap scr-wrap">
+					<div class="grid-scrollable-x">
+						<div class="grid-area grid-head">
+							<div class="grid-scrollable">
+								<table class="grid-tbl">
+									<colgroup>
+										<col style="width:100px">
+										<col style="width:250px">
+										<col style="width:60px">
+										<col>
+									</colgroup>
+									<thead class="rowgroup">
+										<tr>
+											<th><div class="cell">권한코드</div></th>
+											<th class="ta-left"><div class="cell">권한명</div></th>
+											<th><div class="cell">권한</div></th>
+											<th><div class="cell"></div></th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div class="grid-area grid-contents">
+							<table class="grid-tbl">
+								<colgroup>
+									<col style="width:100px">
+									<col style="width:250px">
+									<col style="width:60px">
+									<col>
+								</colgroup>
+								<tbody class="rowgroup">
+									<tr>
+										<td><div class="cell">ADMIN</div></td>
+										<td class="ta-left"><div class="cell">업무관리자</div></td>
+										<td><div class="cell">2</div></td>
+										<td><div class="cell"></div></td>
+									</tr>
+									<tr>
+										<td><div class="cell"></div></td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+	
+					</div>
+				</div>
+				<!-- //.grid-wrap -->
+				<div class="cf grid-bottom">
+					<a href="#" class="prev st">&lt;&lt;</a>
+					<a href="#" class="prev">&lt;</a>
+					<span class="num">0</span>
+					<a href="#" class="next">&gt;</a>
+					<a href="#" class="next st">&gt;&gt;</a>
+					<span class="count"><span class="co">7</span> Count</span>
+				</div>
+				<!-- //.grid-bottom-->
+			</div>
+
+			<div class="split cont-list">
+				<div class="grid-wrap scr-wrap">
+					<div class="grid-scrollable-x">
+						<div class="grid-area grid-head">
+							<div class="grid-scrollable">
+								<table class="grid-tbl">
+									<colgroup>
+										<col style="width:30px">
+										<col style="width:300px">
+										<col style="width:400px">
+										<col>
+									</colgroup>
+									<thead class="rowgroup">
+										<tr>
+											<th><div class="cell"><input type="checkbox"></div></th>
+											<th class="ta-left"><div class="cell">제목</div></th>
+											<th class="ta-left"><div class="cell">경로</div></th>
+											<th><div class="cell"></div></th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div class="grid-area grid-contents">
+							<table class="grid-tbl fn-fold">
+								<colgroup>
+									<col style="width:30px">
+									<col style="width:300px">
+									<col style="width:400px">
+									<col>
+								</colgroup>
+								<tbody class="rowgroup">
+									<tr class="dep-1" ref="line20">
+										<td><div class="cell"><input type="checkbox"></div></td>
+										<td class="ta-left">
+											<div class="cell">
+												<span class="icon-treeArr indent"></span><span class="icon-trees folder"></span>
+												<span class="fw-b">20</span> : Reservation
+											</div>
+										</td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+									</tr>
+									<tr class="dep-2" ref="line20-0">
+										<td><div class="cell"><input type="checkbox"></div></td>
+										<td class="ta-left">
+											<div class="cell">
+												<span class="icon-trees folder"></span>
+												<span class="fw-b">2010</span> : Reservation Fit
+											</div>
+										</td>
+										<td class="ta-left"><div class="cell">/hms/report/reservationForm2.jsp</div></td>
+										<td><div class="cell"></div></td>
+									</tr>
+									<tr class="dep-2" ref="line20-0">
+										<td><div class="cell"><input type="checkbox"></div></td>
+										<td class="ta-left">
+											<div class="cell">
+												<span class="icon-trees folder"></span>
+												<span class="fw-b">2010</span> : Reservation Fit
+											</div>
+										</td>
+										<td class="ta-left"><div class="cell">/hms/report/reservationForm2.jsp</div></td>
+										<td><div class="cell"></div></td>
+									</tr>
+									<tr class="dep-1" ref="line30">
+										<td><div class="cell"><input type="checkbox"></div></td>
+										<td class="ta-left">
+											<div class="cell">
+												<span class="icon-treeArr indent"></span><span class="icon-trees folder"></span>
+												<span class="fw-b">30</span> : Front
+											</div>
+										</td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+									</tr>
+									<tr class="dep-2" ref="line30-0">
+										<td><div class="cell"><input type="checkbox"></div></td>
+										<td class="ta-left">
+											<div class="cell">
+												<span class="icon-treeArr indent"></span><span class="icon-trees folder"></span>
+												<span class="fw-b">3100</span> : Report
+											</div>
+										</td>
+										<td class="ta-left"><div class="cell"></div></td>
+										<td><div class="cell"></div></td>
+									</tr>
+									<tr class="dep-3" ref="line30-0-0">
+										<td><div class="cell"><input type="checkbox"></div></td>
+										<td class="ta-left">
+											<div class="cell">
+												<span class="icon-trees folder"></span>
+												<span class="fw-b">3101</span> : Arrival List
+											</div>
+										</td>
+										<td class="ta-left"><div class="cell">/hms/report/3101.jsp</div></td>
+										<td><div class="cell"></div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //.grid-wrap -->
+				<div class="cf grid-bottom">
+					<a href="#" class="prev st">&lt;&lt;</a>
+					<a href="#" class="prev">&lt;</a>
+					<span class="num">0</span>
+					<a href="#" class="next">&gt;</a>
+					<a href="#" class="next st">&gt;&gt;</a>
+					<span class="count"><span class="co">7</span> Count</span>
+				</div>
+				<!-- //.grid-bottom-->
+			</div>
+			<!-- /.cont-list -->
+		</div>
+	</div>
+	<!--//.contents-->
+
+</div>
+</body>
+</html>

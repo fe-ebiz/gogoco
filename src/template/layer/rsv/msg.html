@@ -1,0 +1,145 @@
+<!-- 메시지 팝업 : message + 버튼 클릭시 등장-->
+<div class="pop-container msg-container" style="display: block">
+    <div class="bg-back"></div>
+
+    <div class="pop-wrapper">
+        <div class="pop-header">
+            <h2>메시지</h2>
+            <span class="a-i-x i-x fn-cls"></span>
+        </div>
+        <div class="cf pop-contents">
+            <div class="popcont-container">
+                <div class="row row-chk">
+                    <span class="pull-left sort"><label>Sort by latest <input type="checkbox"></label></span>
+                    <span class="pull-right alarm">
+                        Alarm All 
+                        <select name="" id="" class="form-select gray">
+                            <option value=""></option>
+                            <option value="">Yes</option>
+                            <option value="">No</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="cont-list">
+                    <div class="grid-toolbar">
+                        <button type="button" class="btn-gray"><span class="icon ic-plus"></span> 새 레코드 추가</button>
+                    </div>
+                    <!-- /.grid-toolbar -->
+                    <div class="grid-wrap">
+                        <div class="grid-scrollable-x">
+                            <div class="grid-area grid-head">
+                                <div class="grid-scrollable">
+                                    <table class="grid-tbl list-tbl">
+                                        <colgroup>
+                                            <col style="width: 380px">
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col style="width: 145px">
+                                            <col style="width: 90px">
+                                        </colgroup>
+                                        <thead class="rowgroup">
+                                            <tr>
+                                                <th class="ta-left"><div class="cell">메시지</div></th>
+                                                <th><div class="cell">예약</div></th>
+                                                <th><div class="cell">체크인</div></th>
+                                                <th><div class="cell">I/H</div></th>
+                                                <th><div class="cell">체크아웃</div></th>
+                                                <th><div class="cell">생성자</div></th>
+                                                <th><div class="cell">생성일</div></th>
+                                                <th><div class="cell"></div></th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="grid-area grid-contents">
+                                <table class="grid-tbl list-tbl">
+                                    <colgroup>
+                                        <col style="width: 380px">
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col style="width: 145px">
+                                        <col style="width: 90px">
+                                    </colgroup>
+                                    <tbody class="rowgroup">
+                                        <!-- 새 레코드 클릭 시 추가 -->
+                                        <tr>
+                                            <td class="ta-left">
+                                                <div class="cell">
+                                                    <input type="text" class="form-input">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="cell">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">Yes</option>
+                                                        <option value="">No</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="cell">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">Yes</option>
+                                                        <option value="">No</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="cell">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">Yes</option>
+                                                        <option value="">No</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="cell">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">Yes</option>
+                                                        <option value="">No</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="cell">
+                                                    <input type="text" class="form-input">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="cell">
+                                                    <input type="text" class="form-input">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="cell">
+                                                    <button type="button" class="btn-gray delete" onclick="$(this).closest('tr').hide()"><span class="icon ic-delete"></span> 삭제</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //.grid-wrap -->
+                </div>
+                <!-- //.cont-list -->
+            </div>
+        </div>
+        <!-- //.pop-contents-->
+        <div class="pop-footer">
+            <div class="row-btn">
+                <button type="button" class="btn-brown fn-cls">DONE</button>
+                <button type="button" class="btn-gray fn-cls">CLOSE</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //.msg-container -->

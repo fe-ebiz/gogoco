@@ -1,0 +1,85 @@
+<!-- move 팝업-->
+<div class="pop-container move-container">
+        <div class="bg-back"></div>
+    
+        <div class="pop-wrapper">
+            <div class="pop-header">
+                <h2>객실 이동</h2>
+                <span class="a-i-x i-x fn-cls"></span>
+            </div>
+            <div class="cf pop-contents">
+                <div class="popcont-container">
+                    <h2 class="cont-tit">
+                        <strong>Room Num: 415</strong>
+                        <label><img src="../../public/img/icon/vd.png" alt="객실 vd상태"> <input type="radio" name="rc"></label>
+                        <label><img src="../../public/img/icon/vc.png" alt="객실 vc상태"> <input type="radio" name="rc"></label>
+                    </h2>
+                    <div class="cont-property">
+                        <div class="grid-wrap">
+                            <div class="grid-area grid-contents">
+                                <table class="grid-tbl property-tbl">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="cell">
+                                                    <span class="tit">Change Room</span>
+                                                    <input type="text" class="form-input name" value="415" readonly>
+                                                    <button type="button" class="btn-orange" onclick="window.open('../winpop/room-move.html', 'winpop', 'width=500, height=660')">ASSIGN</button>
+                                                    <button type="button" class="btn-gray">RELOAD</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//.cont-property-->
+                    <div class="cont-list">
+                        <div class="grid-wrap">
+                            <div class="grid-area grid-head">
+                                <div class="grid-scrollable">
+                                    <table class="grid-tbl list-tbl">
+                                        <thead class="rowgroup">
+                                            <tr>
+                                                <th><div class="cell">날짜</div></th>
+                                                <th><div class="cell">번호</div></th>
+                                                <th><div class="cell">Comp</div></th>
+                                                <th><div class="cell">객실</div></th>
+                                                <th><div class="cell">합계</div></th>
+                                                <th><div class="cell">상태</div></th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="grid-area grid-contents">
+                                <table class="grid-tbl list-tbl">
+                                    <tbody class="rowgroup">
+                                        <tr>
+                                            <td class="co-red"><div class="cell">2019-05-20</div></td>
+                                            <td class="co-red"><div class="cell">1319</div></td>
+                                            <td><div class="cell">N</div></td>
+                                            <td class="ta-right"><div class="cell">15,000</div></td>
+                                            <td class="ta-right"><div class="cell">15,000</div></td>
+                                            <td class="co-red"><div class="cell">CLOSED</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- //.grid-wrap -->
+                    </div>
+                    <!-- //.cont-list -->
+                </div>
+            </div>
+            <!-- //.pop-contents-->
+            <div class="pop-footer">
+                <div class="row-btn">
+                    <button type="button" class="btn-brown fn-cls">SAVE</button>
+                    <button type="button" class="btn-gray fn-cls">CLOSE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //.move-container -->
