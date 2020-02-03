@@ -1,120 +1,113 @@
-@@include('../include/_head.html', {
-	"page": "analysis"
-})
-
-<script src="../../public/js/analysis/overYearChart.js"></script>
+@@include('../include/_head.html', { "page": "analysis" })
 
 <body class="page-analysis">
 
-<div class="wrapper">
-	@@include('../include/_header.html')
+    <div class="wrapper">
+        @@include('../include/_header.html')
 
-	<div class="cf contents lastYear-contents">
-		@@include('../include/_row_h2.html', {
-			"page-title": "작년도 매출 비교"
-		})
-		<div class="cf cont-container-f">
-			<div class="cont-property">
-				<div class="grid-wrap">
-					<div class="grid-contents">
-						<table class="grid-tbl tbl-property">
-							<colgroup>
-								<col style="width: 90px">
-								<col style="width: 250px">
-								<col style="width: 90px">
-								<col>
-							</colgroup>
-							<tbody>
-								<tr>
-									<th><div class="cell">자산</div></th>
-									<td>
-                                        <div class="cell">
-                                            <select name="" id="" class="form-select property">
-                                                <option value=""></option>
-                                                <option value="">1. 루미아</option>
-                                            </select>
-                                        </div>
-                                    </td>
-									<th><div class="cell">년도</div></th>
-									<td>
-										<div class="cell">
-											<span class="cal-box">
-											    <!-- 멀티클래스 date-ui 제거 type-year 추가 -->
-												<input type="text" class="appe-reset inp-cal type-year">
-												<span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
-											</span>
-										    <button type="button" class="btn-brown">SEARCH</button>
-										</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-			
-			<div class="cont-list">
-                <!-- 표 -->
-				<div class="grid-tbl-container">
+        <div class="cf contents lastYear-contents">
+            @@include('../include/_row_h2.html', { "page-title": "작년도 매출 비교" })
+            <div class="cf cont-container-f">
+                <div class="cont-property">
                     <div class="grid-wrap">
-                        <div class="grid-area grid-head">
-							<div class="grid-scrollable">
-                                <table class="grid-tbl">
-                                    <colgroup>
-                                        <col style="width:52px">
-                                        <col style="width:81px">
-                                        <col style="width:81px">
-                                    </colgroup>
-                                    <thead class="rowgroup">
-
-                                    </thead>
-                                </table>
-                            </div>
+                        <div class="grid-contents">
+                            <table class="grid-tbl tbl-property">
+                                <colgroup>
+                                    <col style="width: 90px">
+                                    <col style="width: 250px">
+                                    <col style="width: 90px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <div class="cell">자산</div>
+                                        </th>
+                                        <td>
+                                            <div class="cell">
+                                                <select name="" id="" class="form-select property">
+                                                    <option value=""></option>
+                                                    <option value="">1. 루미아</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <th>
+                                            <div class="cell">년도</div>
+                                        </th>
+                                        <td>
+                                            <div class="cell">
+                                                <span class="cal-box">
+                                                    <!-- 멀티클래스 date-ui 제거 type-year 추가 -->
+                                                    <input type="text" class="appe-reset inp-cal type-year">
+                                                    <span class="i-cal"><img src="../../public/img/icon/cal.png" alt="달력"></span>
+                                                </span>
+                                                <button type="button" class="btn-brown">SEARCH</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="grid-area grid-contents">
-							<div class="grid-scrollable">
-                                <table class="grid-tbl">
-                                    <colgroup>
-                                        <col style="width:52px">
-                                        <col style="width:81px">
-                                        <col style="width:81px">
-                                    </colgroup>
-                                    <tbody class="rowgroup">
-                                    
-                                    </tbody>
-                                </table>
+                    </div>
+                </div>
+
+                <div class="cont-list">
+                    <!-- 표 -->
+                    <div class="grid-tbl-container">
+                        <div class="grid-wrap">
+                            <div class="grid-area grid-head">
+                                <div class="grid-scrollable">
+                                    <table class="grid-tbl">
+                                        <colgroup>
+                                            <col style="width:52px">
+                                            <col style="width:81px">
+                                            <col style="width:81px">
+                                        </colgroup>
+                                        <thead class="rowgroup"></thead>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="grid-area grid-contents">
+                                <div class="grid-scrollable">
+                                    <table class="grid-tbl">
+                                        <colgroup>
+                                            <col style="width:52px">
+                                            <col style="width:81px">
+                                            <col style="width:81px">
+                                        </colgroup>
+                                        <tbody class="rowgroup"></tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
-			    </div>
-			    
-                <!-- 차트 -->
-				<div class="grid-chart-container">
-                   <div class="grid-wrap">
-                        <p class="tit-chart">
-                            Over Last Year Chart
-                        </p>
-                        <!-- chart graph -->
-                        <div class="grid-chart-area">
-                            <canvas id="chart"></canvas>
+
+                    <!-- 차트 -->
+                    <div class="grid-chart-container">
+                        <div class="grid-wrap">
+                            <p class="tit-chart">
+                                Over Last Year Chart
+                            </p>
+                            <!-- chart graph -->
+                            <div class="grid-chart-area">
+                                <canvas id="chart"></canvas>
+                            </div>
                         </div>
-                   </div>
-				</div>
-			</div>
-			<!--//.cont-name-->
-		</div>
-	</div>
-	<!-- //.contents -->
+                    </div>
+                </div>
+                <!--//.cont-name-->
+            </div>
+        </div>
+        <!-- //.contents -->
 
+    </div>
+    <!-- 달력 스크립트 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
 
-</div>
-<!-- 달력 스크립트 -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
-
-<!-- 차트 스크립트 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script> 
-<script src="../../public/js/analysis/overYearChart.js"></script> 
+    <!-- 차트 스크립트 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="../../public/js/analysis/overYearChart.js"></script>
 </body>
 </html>
