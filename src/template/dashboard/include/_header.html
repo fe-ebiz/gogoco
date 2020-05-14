@@ -1,0 +1,101 @@
+<header class="header" id="header">
+    <div class="group cont-utils">
+        유틸리티
+    </div>
+    <div class="group cont-header">
+        <h1 class="logo">
+            <a href="/" class="logo-a">
+                <!-- 사이트 별 로고 -->
+                <img src="../../public/img/common/logo_mng.png" alt="고코투어 CMS" class="logo-img">
+                <!-- <img src="../../public/img/common/logo_ocean.jpg" alt="고코투어 CMS" class="logo-img"> -->
+                <!-- <img src="../../public/img/common/logo_bsdogo.jpg" alt="고코투어 CMS" class="logo-img"> -->
+                <!-- <img src="../../public/img/common/logo_ramada.png" alt="고코투어 CMS" class="logo-img"> -->
+            </a>
+        </h1>
+        <nav class="cf gnb" id="gnb">
+            <ul class="menu dep-1">
+                <li>
+                    <a href="javascript:;" class="ic-report">판매기록</a>
+                    <ul class="dep-2">
+                        <li><a href="">판매목록</a></li>
+                        <li><a href="">이벤트 판매목록</a></li>
+                        <li><a href="">입금대기</a></li>
+                        <li><a href="">투숙자 리스트</a></li>
+                        <li><a href="">부대시설 현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="ic-front">객실관리</a>
+                    <ul class="dep-2">
+                        <li><a href="">요금</a></li>
+                        <li><a href="">현황</a></li>
+                        <li><a href="">관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="ic-report">판매현황</a>
+                    <ul class="dep-2">
+                        <li><a href="">전체 일별</a></li>
+                        <li><a href="">전체 월별</a></li>
+                        <li><a href="">판매채널 일별(결제)</a></li>
+                        <li><a href="">판매채널 월별(결제)</a></li>
+                        <li><a href="">판매채널 일별(투숙)</a></li>
+                        <li><a href="">판매채널 월별(투숙)</a></li>
+                        <li><a href="">판매채널 일별(객실)</a></li>
+                        <li><a href="">부대시설 일별</a></li>
+                        <li><a href="">부대시설 월별</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="ic-reservation">호텔정보</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="user-bar">
+            <div class="using-user">
+                <a href="javascript:;" class="toggle-btn" onclick="$(this).next().toggle()">접속멤버 110명</a>
+                <div class="using-member-area" style="display: none">
+                    <ul class="list">
+                        <li>OOO, 123.123.12.12, 2020-04-16 05:10:10 </li>
+                        <li>OOO, 123.123.12.12, 2020-04-16 05:10:10 </li>
+                        <li>OOO, 123.123.12.12, 2020-04-16 05:10:10 </li>
+                        <li>OOO, 123.123.12.12, 2020-04-16 05:10:10 </li>
+                        <li>OOO, 123.123.12.12, 2020-04-16 05:10:10 </li>
+                        <li>OOO, 123.123.12.12, 2020-04-16 05:10:10 </li>
+                        <li>OOO, 123.123.12.12, 2020-04-16 05:10:10 </li>
+                        <li>OOO, 123.123.12.12, 2020-04-16 05:10:10 </li>
+                        <li>OOO, 123.123.12.12, 2020-04-16 05:10:10 </li>
+                        <li>OOO, 123.123.12.12, 2020-04-16 05:10:10 </li>
+                    </ul>
+                </div>
+            </div>
+            <span class="user">2018-12-13 관리자님 <i class="fa fa-user-circle"></i></span>
+            <ul class="menu cf">
+                <li class="item item-1"><a href="/"><i class="icon-menu ic-home"></i> <span class="hidden">홈</span></a></li>
+                <li class="item item-2"><a href=""><i class="icon-menu ic-explore"></i> <span class="hidden">바로가기</span></a></li>
+                <li class="item item-2"><a href=""><i class="icon-menu ic-out"></i> <span class="hidden">로그아웃</span></a></li>
+                <li class="item item-1"><a href="javascript:;" onclick="popFn.show('.pop-profile')"><i class="icon-menu ic-gear"></i> <span class="hidden">정보수정</span></a></li>
+            </ul>
+            <div class="site-info">
+                <!-- <span class="siteName">오션투유리조트속초설악비치호텔앤콘도</span> -->
+
+                <select name="" id="" class="slt-site">
+                    <option value="">오션투유리조트속초설악비치호텔앤콘도</option>
+                    <option value="">연호리조트</option>
+                    <option value="">BS콘도도고온천호텔앤리조트</option>
+                    <option value="">라마다앙코르평택</option>
+                    <option value="">지리산남원중앙하이츠콘도</option>
+                </select>
+
+            </div>
+        </nav>
+    </div>
+</header>
+<!--//.header-->
+
+<script>
+    $('#gnb .dep-1 > li > a').on('click', function () {
+        $(this).closest('li').siblings().find('> a').next().slideUp(100);
+        $(this).next().slideToggle(100);
+    });
+</script>

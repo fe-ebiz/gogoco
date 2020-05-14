@@ -45,7 +45,7 @@ function template() {
 		.pipe(browserSync.stream({ match: '**/*.html' }));
 };
 function templateAll() {
-	return src([config.template.src, config.template.parts])
+	return src([config.template.src])
 		.pipe(fileinclude({
 			prefix: '@@',
 			basepath: '@file'
@@ -67,7 +67,7 @@ function templateM() {
 		.pipe(browserSync.stream({ match: '**/*.html' }));
 };
 function templateMAll() {
-	return src([config.template.src_m, config.template.parts_m])
+	return src([config.template.src_m])
 		.pipe(fileinclude({
 			prefix: '@@',
 			basepath: '@file'
@@ -80,18 +80,18 @@ function templateMAll() {
 // {outputStyle: nested} expanded, compact, compressed
 // return src(config.sass.src, {since: lastRun(sass), sourcemaps: true})
 function sassDev() {
-	return src(config.sass.src, {sourcemaps: true})
+	return src(config.sass.src, {since: lastRun(sassDev), sourcemaps: true})
 		.pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(csso())
+        .pipe(autoprefixer())
+        .pipe(csso())
 		.pipe(dest(config.sass.dest, {sourcemaps: true}))
 		.pipe(browserSync.stream({ match: '**/*.css' }));
 };
 function sassDevAll() {
-	return src([config.sass.src, config.sass.parts], {sourcemaps: true})
+	return src([config.sass.src])
 		.pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(csso())
+        .pipe(autoprefixer())
+        .pipe(csso())
 		.pipe(dest(config.sass.dest, {sourcemaps: true}))
 		.pipe(browserSync.stream({ match: '**/*.css' }));
 };
@@ -143,7 +143,8 @@ function watching(cb) {
 	watch([config.template.parts], templateAll);
 	watch([config.template.src_m], templateM);
 	watch([config.template.parts_m], templateMAll);
-	watch(config.sass.src, sassDev)
+	watch([config.sass.src], sassDev)
+	watch([config.sass.parts], sassDevAll)
 	watch(config.css.src, css)
 	watch(config.js.src, js)
 	watch(config.img.src, img);

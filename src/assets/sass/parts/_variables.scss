@@ -3,17 +3,30 @@
 // Scss변수
 // --------------
 // 폰트
-//$nnSquare: "Nanum Square", "NanumSquare", Dotum, Sans-serif;
-$font-stack: "Nanum Gothic", Dotum, Sans-serif;
-// $font-stack: "Noto Sans KR", Dotum, Sans-serif;
-//$font-stack: "NanumSquareRound", Dotum, Sans-serif;
-$font-nnGothic: "Nanum Gothic", Dotum, Sans-serif;
-$font-nnSquareR: "NanumSquareRound", Dotum, Sans-serif;
-$font-ntss: "Noto Sans KR", Dotum, Sans-serif;
-$font-dt: Dotum, Sans-serif;
+//$nnSquare: ("Nanum Square", "NanumSquare", Dotum, Sans-serif);
+$font-stack: ("Nanum Gothic", Dotum, Sans-serif);
+// $font-stack: ("Noto Sans KR", Dotum, Sans-serif);
+//$font-stack: ("NanumSquareRound", Dotum, Sans-serif);
+$font-nnGothic: ("Nanum Gothic", Dotum, Sans-serif);
+$font-nnSquareR: ("NanumSquareRound", Dotum, Sans-serif);
+$font-ntss: ("Noto Sans KR", Dotum, Sans-serif);
+$font-dt: (Dotum, Sans-serif);
 $header-ht: 40px;
+$header-ht-m: 80px;
 
+// 그리드
 $contents-minwth: 1695px;
+
+$vertical-scroll: 20px;
+$screen-xxs-width: 320px;
+$screen-xs-width: 576px;
+$screen-sm-width: 768px;
+$screen-md-width: 992px;
+// $screen-lg-pd: 20px;
+$screen-lg-width: 1780px;
+
+// $hd-ht-m: 45px;
+// $hd-ht-pc: 80px;
 
 // 색상
 $primary-color: #333;

@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import './variables';
 
 // 전달인자 설징이 없는 믹스인
 @mixin reset-box {
@@ -516,6 +517,93 @@ $btn-lh: 1.5;
 	width: $wth;
 	height: $he;
 	resize: $type;
+}
+
+// media
+// $screen-lg-width		: 1200px;
+// $screen-md-width		: 992px;
+// $screen-sm-width		: 768px;
+// $screen-xxs-width		: 320px;
+
+// mobile & tablet sm-and-down
+@mixin screen-md-and-down {
+    @media (max-width: $screen-md-width -1px) {
+        @content;
+    }
+}
+@mixin screen-sm-and-down {
+    @media (max-width: $screen-sm-width -1px) {
+        @content;
+    }
+}
+
+// mobile xs
+@mixin screen-xs {
+    @media (max-width: $screen-sm-width -1px) {
+        @content;
+    }
+}
+
+// mobile xxs
+@mixin screen-xxs {
+    @media (max-width: $screen-xxs-width) {
+        @content;
+    }
+}
+
+// table sm
+@mixin screen-sm {
+    @media (min-width: $screen-sm-width) and (max-width: $screen-md-width - 1px) {
+        @content;
+    }
+}
+
+// pc md & lg md-and-up
+@mixin screen-md-and-up {
+    @media (min-width: $screen-md-width) {
+        @content;
+    }
+}
+
+// pc md
+@mixin screen-md {
+    @media (min-width: $screen-md-width) and (max-width: $screen-lg-width + $vertical-scroll - 1px) {
+        @content;
+    }
+}
+
+// pc lg
+@mixin screen-lg {
+    @media (min-width: $screen-lg-width + $vertical-scroll) {
+        @content;
+    }
+}
+
+// max-width
+@mixin screen-max($w: null) {
+    @media (max-width: #{$w}) {
+        @content;
+    }
+}
+
+// min-width
+@mixin screen-min($w: null) {
+    @media (min-width: #{$w}) {
+        @content;
+    }
+}
+
+// min-max
+@mixin screen-min-max($w: null, $w2: null) {
+    @media (min-width: #{$w}) and (max-width: #{$w2}) {
+        @content;
+    }
+}
+
+@mixin media($queryString) {
+    @media #{$queryString} {
+        @content;
+    }
 }
 
 @mixin page-title($fz: 20px, $pd: 0 10px) {
