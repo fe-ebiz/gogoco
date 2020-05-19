@@ -18,7 +18,7 @@
 
         .cont-container-f {
             margin-top: 0;
-            background: #f2f2f2;
+            // background: #f2f2f2;
 
             .cont-list {
 
@@ -67,7 +67,7 @@
                         .row-tit {
                             padding: 20px 15px 10px;
                             font-size: 17px;
-                            line-height: 1;
+                            line-height: 1.2;
                             font-weight: bold;
                             // color: $fg-brown-2; 
                             color: $fg-legend;
@@ -109,6 +109,7 @@
                         }
 
                         /* Revenue */
+                        &.cont-status,
                         &.cont-rvn {
                             .grid-area {
                                 .grid-tbl {
@@ -156,6 +157,14 @@
                                     }
                                 }
 
+                            }
+                        }
+
+                        &.cont-status {
+                            .grid-area {
+                                .grid-tbl {
+                                    width: 100%;
+                                }
                             }
                         }
 
@@ -276,13 +285,16 @@
 
         .cont-container-f {
             margin-top: 0;
-            background: #f2f2f2;
+            // background: #f2f2f2;
 
             .cont-list {
                 .row-contents {
-                    @include clearfix;
-                    margin-top: 10px;
+                    // @include clearfix;
+                    // margin-top: 10px;
                     padding-bottom: 10px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
 
                     //높이
                     &.row-1 {
@@ -305,21 +317,25 @@
 
                     .row-cont {
                         @include bx;
-                        float: left;
-                        width: 49.5%;
-                        margin-left: 1%;
+                        width: calc(50% - 5px);
+                        // float: left;
+                        // width: 49.5%;
+                        // margin-left: 1%;
                         background: #ffffff;
-
+                        margin-top: 10px;
                         // border: 1px solid $bor-gray-table;
-                        &:first-child {
-                            margin-left: 0;
-                        }
+                        // &:first-child {
+                        //     margin-left: 0;
+                        // }
+                        // &:nth-child(2)~.row-cont {
+                        //     margin-top: 10px;
+                        // }
 
                         /* row 타이틀 */
                         .row-tit {
                             padding: 20px 15px 10px;
                             font-size: 17px;
-                            line-height: 1;
+                            line-height: 1.2;
                             font-weight: bold;
                             // color: $fg-brown-2; 
                             color: $fg-legend;
@@ -349,6 +365,7 @@
                         }
 
                         /* Revenue */
+                        &.cont-status,
                         &.cont-rvn {
                             .grid-area {
                                 .grid-tbl {

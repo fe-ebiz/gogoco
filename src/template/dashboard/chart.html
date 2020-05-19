@@ -1,0 +1,758 @@
+@@include('../dashboard/include/_head.html', {
+"page": "dashboard"
+})
+
+
+<body class="page-dashboard">
+
+    <div class="wrapper">
+        @@include('../dashboard/include/_header.html')
+
+        <div class="cf contents dboard-contents">
+            <div class="cf cont-container-f">
+                <div class="cont-list">
+                    <div class="row-1 row-contents">
+                        <!-- Revenue -->
+                        <div class="row-cont cont-rvn">
+                            <p class="row-tit">수익</p>
+
+                            <div class="cont-area">
+                                <div class="grid-area grid-head">
+                                    <table class="grid-tbl">
+                                        <colgroup>
+                                            <col style="*">
+                                            <col style="width:12%">
+                                            <col style="width:12%">
+                                            <col style="width:12%">
+                                            <col style="width:12%">
+                                            <col style="width:12%">
+                                            <col style="width:12%">
+                                            <col style="width:12%">
+                                        </colgroup>
+                                        <thead class="rowgroup">
+                                            <tr>
+                                                <th>
+                                                    <div class="cell"></div>
+                                                </th>
+                                                <th class="tbg-gray">
+                                                    <div class="cell">04/01(월)</div>
+                                                </th>
+                                                <th class="tbg-yellow">
+                                                    <div class="cell">04/02(화)</div>
+                                                </th>
+                                                <th>
+                                                    <div class="cell">04/03(수)</div>
+                                                </th>
+                                                <th>
+                                                    <div class="cell">04/04(목)</div>
+                                                </th>
+                                                <th>
+                                                    <div class="cell">04/05(금)</div>
+                                                </th>
+                                                <th>
+                                                    <div class="cell">04/06(토)</div>
+                                                </th>
+                                                <th>
+                                                    <div class="cell">04/07(일)</div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="grid-area grid-contents">
+                                    <table class="grid-tbl">
+                                        <colgroup>
+                                            <col style="*">
+                                            <col style="width:12%">
+                                            <col style="width:12%">
+                                            <col style="width:12%">
+                                            <col style="width:12%">
+                                            <col style="width:12%">
+                                            <col style="width:12%">
+                                            <col style="width:12%">
+                                        </colgroup>
+                                        <tbody class="rowgroup">
+                                            <tr>
+                                                <td>
+                                                    <div class="cell">점유율(%)</div>
+                                                </td>
+                                                <td class="tbg-gray">
+                                                    <div class="cell">29.4</div>
+                                                </td>
+                                                <td class="tbg-yellow">
+                                                    <div class="cell">19.6</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">17.4</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">15.1</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">15.5</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">19.9</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">8.1</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="cell">판매된 객실 수</div>
+                                                </td>
+                                                <td class="tbg-gray">
+                                                    <div class="cell">78</div>
+                                                </td>
+                                                <td class="tbg-yellow">
+                                                    <div class="cell">53</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">47</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">41</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">42</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">54</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">22</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="cell">예상 도착 횟수</div>
+                                                </td>
+                                                <td class="tbg-gray">
+                                                    <div class="cell">0</div>
+                                                </td>
+                                                <td class="tbg-yellow">
+                                                    <div class="cell">13</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">15</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">14</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">20</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">33</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">3</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="cell">숙박 횟수</div>
+                                                </td>
+                                                <td class="tbg-gray">
+                                                    <div class="cell">23</div>
+                                                </td>
+                                                <td class="tbg-yellow">
+                                                    <div class="cell">40</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">32</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">27</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">22</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">21</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">19</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="cell">예상 출발 횟수</div>
+                                                </td>
+                                                <td class="tbg-gray">
+                                                    <div class="cell">0</div>
+                                                </td>
+                                                <td class="tbg-yellow">
+                                                    <div class="cell">18</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">11</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">17</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">12</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">16</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">35</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="cell">총 수익</div>
+                                                </td>
+                                                <td class="tbg-gray">
+                                                    <div class="cell">3,432,088</div>
+                                                </td>
+                                                <td class="tbg-yellow">
+                                                    <div class="cell">2,603,367</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">2,407,541</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">2,161,279</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">2,015,338</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">2,317,065</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">2,166,493</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="cell">평균 객실 단가</div>
+                                                </td>
+                                                <td class="tbg-gray">
+                                                    <div class="cell">44,001</div>
+                                                </td>
+                                                <td class="tbg-yellow">
+                                                    <div class="cell">49,120</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">51,224</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">52,714</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">47,984</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">42,909</div>
+                                                </td>
+                                                <td>
+                                                    <div class="cell">53,022</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notice -->
+                        <div class="row-cont cont-notice">
+                            <p class="row-tit">공지사항</p>
+
+                            <div class="cont-area">
+                                <div class="grid-wrap scr-wrap">
+                                    <div class="grid-scrollable-x">
+                                        <div class="grid-area grid-contents">
+                                            <table class="grid-tbl">
+                                                <colgroup>
+                                                    <col style="width: 33px">
+                                                    <col>
+                                                    <col style="width: 100px">
+                                                </colgroup>
+                                                <thead class="rowgroup">
+                                                    <tr>
+                                                        <th>
+                                                            <div class="cell">No</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="cell">제목</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="cell">생성일</div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="rowgroup">
+                                                    <tr>
+                                                        <td>
+                                                            <div class="cell">1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="cell">제목</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="cell">20.05.14</div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid-wrap scr-wrap scr-wrap-2">
+                                    <div class="grid-scrollable-x">
+                                        <div class="grid-area grid-contents">
+                                            <table class="grid-tbl">
+                                                <colgroup>
+                                                    <col style="width: 33px">
+                                                    <col style="width: *">
+                                                    <col style="width: 100px">
+                                                </colgroup>
+                                                <thead class="rowgroup">
+                                                    <tr>
+                                                        <th>
+                                                            <div class="cell">No</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="cell">개인메모</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="cell">생성일</div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="rowgroup">
+                                                    <tr>
+                                                        <td>
+                                                            <div class="cell">1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="cell">제목</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="cell">20.05.14</div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-2 row-contents">
+                        <!-- Room Analysis -->
+                        <div class="row-cont cont-anls">
+                            <p class="row-tit">객실 분석</p>
+
+                            <div class="cont-area">
+                                <ul class="anls-list">
+                                    <li class="item-1 li-arr">
+                                        <p class="list-tit">도착</p>
+                                        <div class="svg-box hidden-sm-and-down">
+                                            <svg style="width: 100%; height: 100%; overflow: hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                                                <defs></defs>
+                                                <g>
+                                                    <path d="M0 0 L 170 0 170 150 0 150Z" stroke="none" fill="none"></path>
+                                                    <g>
+                                                        <g>
+                                                            <path d="M24.378 110 L 37.369 102.5" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.027972,18.35975)"></path>
+                                                            <path d="M16.063 62.845 L 30.836 65.449" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.168967,19.15937)"></path>
+                                                            <path d="M40.005 21.377 L 49.647 32.868" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.762989,19.862545)"></path>
+                                                            <path d="M85 5 L 85 20" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0,20.14025)"></path>
+                                                            <path d="M129.995 21.377 L 120.353 32.868" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.762989,19.862545)"></path>
+                                                            <path d="M153.937 62.845 L 139.164 65.449" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.168967,19.15937)"></path>
+                                                            <path d="M145.622 110 L 132.631 102.5" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.027972,18.35975)"></path>
+                                                        </g>
+                                                        <g>
+                                                            <path d="M20.097 101.222 L 29.369 97.476" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.100567,18.508592)"></path>
+                                                            <path d="M17.079 91.935 L 26.782 89.515" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.151741,18.666089)"></path>
+                                                            <path d="M15.383 82.317 L 25.329 81.272" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.180497,18.829175)"></path>
+                                                            <path d="M15.043 72.557 L 25.037 72.906" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.186277,18.994676)"></path>
+                                                            <path d="M18.426 53.369 L 27.937 56.459" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.128904,19.320053)"></path>
+                                                            <path d="M22.084 44.314 L 31.072 48.698" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.066869,19.473597)"></path>
+                                                            <path d="M26.967 35.856 L 35.258 41.448" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.984068,19.617012)"></path>
+                                                            <path d="M32.98 28.161 L 40.411 34.852" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.882113,19.747508)"></path>
+                                                            <path d="M47.906 15.637 L 53.205 24.117" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.629014,19.959883)"></path>
+                                                            <path d="M56.528 11.052 L 60.596 20.187" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.482796,20.037628)"></path>
+                                                            <path d="M65.705 7.712 L 68.462 17.324" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.327182,20.094268)"></path>
+                                                            <path d="M75.258 5.681 L 76.65 15.584" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.165198,20.128698)"></path>
+                                                            <path d="M94.742 5.681 L 93.35 15.584" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.165198,20.128698)"></path>
+                                                            <path d="M104.295 7.712 L 101.538 17.324" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.327182,20.094268)"></path>
+                                                            <path d="M113.472 11.052 L 109.404 20.187" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.482796,20.037628)"></path>
+                                                            <path d="M122.094 15.637 L 116.795 24.117" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.629014,19.959883)"></path>
+                                                            <path d="M137.02 28.161 L 129.589 34.852" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.882113,19.747508)"></path>
+                                                            <path d="M143.033 35.856 L 134.742 41.448" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.984068,19.617012)"></path>
+                                                            <path d="M147.916 44.314 L 138.928 48.698" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.066869,19.473597)"></path>
+                                                            <path d="M151.574 53.369 L 142.063 56.459" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.128904,19.320053)"></path>
+                                                            <path d="M154.957 72.557 L 144.963 72.906" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.186277,18.994676)"></path>
+                                                            <path d="M154.617 82.317 L 144.671 81.272" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.180497,18.829175)"></path>
+                                                            <path d="M152.921 91.935 L 143.218 89.515" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.151741,18.666089)"></path>
+                                                            <path d="M149.903 101.222 L 140.631 97.476" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.100567,18.508592)"></path>
+                                                        </g>
+                                                    </g>
+                                                    <g>
+                                                        <path d="M19.344 131.86 C 10.523 116.581 7.275 98.163 10.339 80.788 13.402 63.414 22.753 47.217 36.268 35.877 49.783 24.537 67.358 18.14 85 18.14 102.642 18.14 120.217 24.537 133.732 35.877 147.247 47.217 156.598 63.414 159.661 80.788" stroke="#dedede" stroke-width="7" fill="none"></path>
+                                                        <path d="M159.661 80.788 C 162.725 98.163 159.477 116.581 150.656 131.86" stroke="#c20000" stroke-width="7" fill="none"></path>
+                                                    </g>
+                                                    <g transform="matrix(-0.942057,0.335452,-0.335452,-0.942057,196.591649,153.949226)">
+                                                        <path d="M143.813 93.953 L 85 92.453 85 95.453Z" stroke="#ea7001" stroke-width="0.5" fill="#ea7001"></path>
+                                                        <circle cx="85.00000000000001" cy="93.95325" r="3" stroke="#ea7001" fill="#ea7001"></circle>
+                                                    </g>
+                                                    <g>
+                                                        <g transform="matrix(1,0,0,1,-8.065295,23.60975)">
+                                                            <path d="M47.457 82.75 L 58.457 82.75 58.457 100.75 47.457 100.75Z" stroke="none" fill="none"></path>
+                                                            <path d="M47.457 82.75 L 58.457 82.75 58.457 100.75 47.457 100.75Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="49.45706005997577" y="95.75" stroke="none" fill="#2e2e2e">0</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,-9.171515,17.336065)">
+                                                            <path d="M43.017 60.183 L 60.017 60.183 60.017 78.183 43.017 78.183Z" stroke="none" fill="none"></path>
+                                                            <path d="M43.017 60.183 L 60.017 60.183 60.017 78.183 43.017 78.183Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="45.01653639758493" y="73.18278604815782" stroke="none" fill="#2e2e2e">50</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,-5.986281,11.819078)">
+                                                            <path d="M53.395 40.338 L 77.395 40.338 77.395 58.338 53.395 58.338Z" stroke="none" fill="none"></path>
+                                                            <path d="M53.395 40.338 L 77.395 40.338 77.395 58.338 53.395 58.338Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="55.39497790456055" y="53.33751115551424" stroke="none" fill="#2e2e2e">100</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,0,9.64025)">
+                                                            <path d="M73 32.5 L 97 32.5 97 50.5 73 50.5Z" stroke="none" fill="none"></path>
+                                                            <path d="M73 32.5 L 97 32.5 97 50.5 73 50.5Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="74.99999999999999" y="45.5" stroke="none" fill="#2e2e2e">150</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,5.986281,11.819078)">
+                                                            <path d="M92.605 40.338 L 116.605 40.338 116.605 58.338 92.605 58.338Z" stroke="none" fill="none"></path>
+                                                            <path d="M92.605 40.338 L 116.605 40.338 116.605 58.338 92.605 58.338Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="94.60502209543945" y="53.337511155514235" stroke="none" fill="#2e2e2e">200</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,9.171515,17.336065)">
+                                                            <path d="M103.037 60.183 L 127.037 60.183 127.037 78.183 103.037 78.183Z" stroke="none" fill="none"></path>
+                                                            <path d="M103.037 60.183 L 127.037 60.183 127.037 78.183 103.037 78.183Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="105.03663646687235" y="73.18278604815782" stroke="none" fill="#2e2e2e">250</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,8.065295,23.60975)">
+                                                            <path d="M99.414 82.75 L 123.414 82.75 123.414 100.75 99.414 100.75Z" stroke="none" fill="none"></path>
+                                                            <path d="M99.414 82.75 L 123.414 82.75 123.414 100.75 99.414 100.75Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="101.41377481542537" y="95.75" stroke="none" fill="#2e2e2e">300</text>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="list-txt-box">
+                                            <span class="s-1">13/13</span>
+                                            <span class="s-2">rooms</span>
+                                        </div>
+                                    </li>
+                                    <li class="item-2 li-ihs">
+                                        <p class="list-tit">시설 관리</p>
+                                        <div class="svg-box hidden-sm-and-down">
+                                            <svg style="width: 100%; height: 100%; overflow: hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                                                <defs></defs>
+                                                <g>
+                                                    <path d="M0 0 L 170 0 170 150 0 150Z" stroke="none" fill="none"></path>
+                                                    <g>
+                                                        <g>
+                                                            <path d="M24.378 110 L 37.369 102.5" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.027972,18.35975)"></path>
+                                                            <path d="M16.063 62.845 L 30.836 65.449" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.168967,19.15937)"></path>
+                                                            <path d="M40.005 21.377 L 49.647 32.868" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.762989,19.862545)"></path>
+                                                            <path d="M85 5 L 85 20" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0,20.14025)"></path>
+                                                            <path d="M129.995 21.377 L 120.353 32.868" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.762989,19.862545)"></path>
+                                                            <path d="M153.937 62.845 L 139.164 65.449" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.168967,19.15937)"></path>
+                                                            <path d="M145.622 110 L 132.631 102.5" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.027972,18.35975)"></path>
+                                                        </g>
+                                                        <g>
+                                                            <path d="M20.097 101.222 L 29.369 97.476" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.100567,18.508592)"></path>
+                                                            <path d="M17.079 91.935 L 26.782 89.515" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.151741,18.666089)"></path>
+                                                            <path d="M15.383 82.317 L 25.329 81.272" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.180497,18.829175)"></path>
+                                                            <path d="M15.043 72.557 L 25.037 72.906" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.186277,18.994676)"></path>
+                                                            <path d="M18.426 53.369 L 27.937 56.459" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.128904,19.320053)"></path>
+                                                            <path d="M22.084 44.314 L 31.072 48.698" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.066869,19.473597)"></path>
+                                                            <path d="M26.967 35.856 L 35.258 41.448" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.984068,19.617012)"></path>
+                                                            <path d="M32.98 28.161 L 40.411 34.852" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.882113,19.747508)"></path>
+                                                            <path d="M47.906 15.637 L 53.205 24.117" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.629014,19.959883)"></path>
+                                                            <path d="M56.528 11.052 L 60.596 20.187" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.482796,20.037628)"></path>
+                                                            <path d="M65.705 7.712 L 68.462 17.324" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.327182,20.094268)"></path>
+                                                            <path d="M75.258 5.681 L 76.65 15.584" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.165198,20.128698)"></path>
+                                                            <path d="M94.742 5.681 L 93.35 15.584" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.165198,20.128698)"></path>
+                                                            <path d="M104.295 7.712 L 101.538 17.324" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.327182,20.094268)"></path>
+                                                            <path d="M113.472 11.052 L 109.404 20.187" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.482796,20.037628)"></path>
+                                                            <path d="M122.094 15.637 L 116.795 24.117" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.629014,19.959883)"></path>
+                                                            <path d="M137.02 28.161 L 129.589 34.852" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.882113,19.747508)"></path>
+                                                            <path d="M143.033 35.856 L 134.742 41.448" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.984068,19.617012)"></path>
+                                                            <path d="M147.916 44.314 L 138.928 48.698" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.066869,19.473597)"></path>
+                                                            <path d="M151.574 53.369 L 142.063 56.459" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.128904,19.320053)"></path>
+                                                            <path d="M154.957 72.557 L 144.963 72.906" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.186277,18.994676)"></path>
+                                                            <path d="M154.617 82.317 L 144.671 81.272" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.180497,18.829175)"></path>
+                                                            <path d="M152.921 91.935 L 143.218 89.515" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.151741,18.666089)"></path>
+                                                            <path d="M149.903 101.222 L 140.631 97.476" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.100567,18.508592)"></path>
+                                                        </g>
+                                                    </g>
+                                                    <g>
+                                                        <path d="M19.344 131.86 C 10.523 116.581 7.275 98.163 10.339 80.788 13.402 63.414 22.753 47.217 36.268 35.877 49.783 24.537 67.358 18.14 85 18.14 102.642 18.14 120.217 24.537 133.732 35.877 147.247 47.217 156.598 63.414 159.661 80.788" stroke="#dedede" stroke-width="7" fill="none"></path>
+                                                        <path d="M159.661 80.788 C 162.725 98.163 159.477 116.581 150.656 131.86" stroke="#c20000" stroke-width="7" fill="none"></path>
+                                                    </g>
+                                                    <g transform="matrix(-0.959314,-0.282341,0.282341,-0.959314,140.01479,208.08294)">
+                                                        <path d="M143.813 93.953 L 85 92.453 85 95.453Z" stroke="#ea7001" stroke-width="0.5" fill="#ea7001"></path>
+                                                        <circle cx="85.00000000000001" cy="93.95325" r="3" stroke="#ea7001" fill="#ea7001"></circle>
+                                                    </g>
+                                                    <g>
+                                                        <g transform="matrix(1,0,0,1,-8.065295,23.60975)">
+                                                            <path d="M47.457 82.75 L 58.457 82.75 58.457 100.75 47.457 100.75Z" stroke="none" fill="none"></path>
+                                                            <path d="M47.457 82.75 L 58.457 82.75 58.457 100.75 47.457 100.75Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="49.45706005997577" y="95.75" stroke="none" fill="#2e2e2e">0</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,-9.171515,17.336065)">
+                                                            <path d="M43.017 60.183 L 60.017 60.183 60.017 78.183 43.017 78.183Z" stroke="none" fill="none"></path>
+                                                            <path d="M43.017 60.183 L 60.017 60.183 60.017 78.183 43.017 78.183Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="45.01653639758493" y="73.18278604815782" stroke="none" fill="#2e2e2e">50</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,-5.986281,11.819078)">
+                                                            <path d="M53.395 40.338 L 77.395 40.338 77.395 58.338 53.395 58.338Z" stroke="none" fill="none"></path>
+                                                            <path d="M53.395 40.338 L 77.395 40.338 77.395 58.338 53.395 58.338Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="55.39497790456055" y="53.33751115551424" stroke="none" fill="#2e2e2e">100</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,0,9.64025)">
+                                                            <path d="M73 32.5 L 97 32.5 97 50.5 73 50.5Z" stroke="none" fill="none"></path>
+                                                            <path d="M73 32.5 L 97 32.5 97 50.5 73 50.5Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="74.99999999999999" y="45.5" stroke="none" fill="#2e2e2e">150</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,5.986281,11.819078)">
+                                                            <path d="M92.605 40.338 L 116.605 40.338 116.605 58.338 92.605 58.338Z" stroke="none" fill="none"></path>
+                                                            <path d="M92.605 40.338 L 116.605 40.338 116.605 58.338 92.605 58.338Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="94.60502209543945" y="53.337511155514235" stroke="none" fill="#2e2e2e">200</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,9.171515,17.336065)">
+                                                            <path d="M103.037 60.183 L 127.037 60.183 127.037 78.183 103.037 78.183Z" stroke="none" fill="none"></path>
+                                                            <path d="M103.037 60.183 L 127.037 60.183 127.037 78.183 103.037 78.183Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="105.03663646687235" y="73.18278604815782" stroke="none" fill="#2e2e2e">250</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,8.065295,23.60975)">
+                                                            <path d="M99.414 82.75 L 123.414 82.75 123.414 100.75 99.414 100.75Z" stroke="none" fill="none"></path>
+                                                            <path d="M99.414 82.75 L 123.414 82.75 123.414 100.75 99.414 100.75Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="101.41377481542537" y="95.75" stroke="none" fill="#2e2e2e">300</text>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="list-txt-box">
+                                            <span class="s-1">58</span>
+                                            <span class="s-2">rooms</span>
+                                        </div>
+                                    </li>
+                                    <li class="item-3 li-dpt">
+                                        <p class="list-tit">출발</p>
+                                        <div class="svg-box hidden-sm-and-down">
+                                            <svg style="width: 100%; height: 100%; overflow: hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                                                <defs></defs>
+                                                <g>
+                                                    <path d="M0 0 L 170 0 170 150 0 150Z" stroke="none" fill="none"></path>
+                                                    <g>
+                                                        <g>
+                                                            <path d="M24.378 110 L 37.369 102.5" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.027972,18.35975)"></path>
+                                                            <path d="M16.063 62.845 L 30.836 65.449" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.168967,19.15937)"></path>
+                                                            <path d="M40.005 21.377 L 49.647 32.868" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.762989,19.862545)"></path>
+                                                            <path d="M85 5 L 85 20" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0,20.14025)"></path>
+                                                            <path d="M129.995 21.377 L 120.353 32.868" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.762989,19.862545)"></path>
+                                                            <path d="M153.937 62.845 L 139.164 65.449" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.168967,19.15937)"></path>
+                                                            <path d="M145.622 110 L 132.631 102.5" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.027972,18.35975)"></path>
+                                                        </g>
+                                                        <g>
+                                                            <path d="M20.097 101.222 L 29.369 97.476" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.100567,18.508592)"></path>
+                                                            <path d="M17.079 91.935 L 26.782 89.515" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.151741,18.666089)"></path>
+                                                            <path d="M15.383 82.317 L 25.329 81.272" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.180497,18.829175)"></path>
+                                                            <path d="M15.043 72.557 L 25.037 72.906" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.186277,18.994676)"></path>
+                                                            <path d="M18.426 53.369 L 27.937 56.459" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.128904,19.320053)"></path>
+                                                            <path d="M22.084 44.314 L 31.072 48.698" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,1.066869,19.473597)"></path>
+                                                            <path d="M26.967 35.856 L 35.258 41.448" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.984068,19.617012)"></path>
+                                                            <path d="M32.98 28.161 L 40.411 34.852" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.882113,19.747508)"></path>
+                                                            <path d="M47.906 15.637 L 53.205 24.117" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.629014,19.959883)"></path>
+                                                            <path d="M56.528 11.052 L 60.596 20.187" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.482796,20.037628)"></path>
+                                                            <path d="M65.705 7.712 L 68.462 17.324" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.327182,20.094268)"></path>
+                                                            <path d="M75.258 5.681 L 76.65 15.584" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,0.165198,20.128698)"></path>
+                                                            <path d="M94.742 5.681 L 93.35 15.584" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.165198,20.128698)"></path>
+                                                            <path d="M104.295 7.712 L 101.538 17.324" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.327182,20.094268)"></path>
+                                                            <path d="M113.472 11.052 L 109.404 20.187" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.482796,20.037628)"></path>
+                                                            <path d="M122.094 15.637 L 116.795 24.117" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.629014,19.959883)"></path>
+                                                            <path d="M137.02 28.161 L 129.589 34.852" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.882113,19.747508)"></path>
+                                                            <path d="M143.033 35.856 L 134.742 41.448" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-0.984068,19.617012)"></path>
+                                                            <path d="M147.916 44.314 L 138.928 48.698" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.066869,19.473597)"></path>
+                                                            <path d="M151.574 53.369 L 142.063 56.459" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.128904,19.320053)"></path>
+                                                            <path d="M154.957 72.557 L 144.963 72.906" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.186277,18.994676)"></path>
+                                                            <path d="M154.617 82.317 L 144.671 81.272" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.180497,18.829175)"></path>
+                                                            <path d="M152.921 91.935 L 143.218 89.515" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.151741,18.666089)"></path>
+                                                            <path d="M149.903 101.222 L 140.631 97.476" stroke="#2e2e2e" stroke-width="0.5" fill="none" transform="matrix(1,0,0,1,-1.100567,18.508592)"></path>
+                                                        </g>
+                                                    </g>
+                                                    <g>
+                                                        <path d="M19.344 131.86 C 10.523 116.581 7.275 98.163 10.339 80.788 13.402 63.414 22.753 47.217 36.268 35.877 49.783 24.537 67.358 18.14 85 18.14 102.642 18.14 120.217 24.537 133.732 35.877 147.247 47.217 156.598 63.414 159.661 80.788" stroke="#dedede" stroke-width="7" fill="none"></path>
+                                                        <path d="M159.661 80.788 C 162.725 98.163 159.477 116.581 150.656 131.86" stroke="#c20000" stroke-width="7" fill="none"></path>
+                                                    </g>
+                                                    <g transform="matrix(-0.963163,0.26892,-0.26892,-0.963163,192.134709,161.587319)">
+                                                        <path d="M143.813 93.953 L 85 92.453 85 95.453Z" stroke="#ea7001" stroke-width="0.5" fill="#ea7001"></path>
+                                                        <circle cx="85.00000000000001" cy="93.95325" r="3" stroke="#ea7001" fill="#ea7001"></circle>
+                                                    </g>
+                                                    <g>
+                                                        <g transform="matrix(1,0,0,1,-8.065295,23.60975)">
+                                                            <path d="M47.457 82.75 L 58.457 82.75 58.457 100.75 47.457 100.75Z" stroke="none" fill="none"></path>
+                                                            <path d="M47.457 82.75 L 58.457 82.75 58.457 100.75 47.457 100.75Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="49.45706005997577" y="95.75" stroke="none" fill="#2e2e2e">0</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,-9.171515,17.336065)">
+                                                            <path d="M43.017 60.183 L 60.017 60.183 60.017 78.183 43.017 78.183Z" stroke="none" fill="none"></path>
+                                                            <path d="M43.017 60.183 L 60.017 60.183 60.017 78.183 43.017 78.183Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="45.01653639758493" y="73.18278604815782" stroke="none" fill="#2e2e2e">50</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,-5.986281,11.819078)">
+                                                            <path d="M53.395 40.338 L 77.395 40.338 77.395 58.338 53.395 58.338Z" stroke="none" fill="none"></path>
+                                                            <path d="M53.395 40.338 L 77.395 40.338 77.395 58.338 53.395 58.338Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="55.39497790456055" y="53.33751115551424" stroke="none" fill="#2e2e2e">100</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,0,9.64025)">
+                                                            <path d="M73 32.5 L 97 32.5 97 50.5 73 50.5Z" stroke="none" fill="none"></path>
+                                                            <path d="M73 32.5 L 97 32.5 97 50.5 73 50.5Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="74.99999999999999" y="45.5" stroke="none" fill="#2e2e2e">150</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,5.986281,11.819078)">
+                                                            <path d="M92.605 40.338 L 116.605 40.338 116.605 58.338 92.605 58.338Z" stroke="none" fill="none"></path>
+                                                            <path d="M92.605 40.338 L 116.605 40.338 116.605 58.338 92.605 58.338Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="94.60502209543945" y="53.337511155514235" stroke="none" fill="#2e2e2e">200</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,9.171515,17.336065)">
+                                                            <path d="M103.037 60.183 L 127.037 60.183 127.037 78.183 103.037 78.183Z" stroke="none" fill="none"></path>
+                                                            <path d="M103.037 60.183 L 127.037 60.183 127.037 78.183 103.037 78.183Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="105.03663646687235" y="73.18278604815782" stroke="none" fill="#2e2e2e">250</text>
+                                                        </g>
+                                                        <g transform="matrix(1,0,0,1,8.065295,23.60975)">
+                                                            <path d="M99.414 82.75 L 123.414 82.75 123.414 100.75 99.414 100.75Z" stroke="none" fill="none"></path>
+                                                            <path d="M99.414 82.75 L 123.414 82.75 123.414 100.75 99.414 100.75Z" stroke="none" fill="none"></path><text style="font:12px Arial,Helvetica,sans-serif;" x="101.41377481542537" y="95.75" stroke="none" fill="#2e2e2e">300</text>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="list-txt-box">
+                                            <span class="s-1">18/36</span>
+                                            <span class="s-2">rooms</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- VIP -->
+                        <div class="row-cont cont-vip">
+                            <p class="row-tit">VIP</p>
+
+                            <div class="cont-area">
+                                <div class="grid-wrap scr-wrap">
+                                    <div class="grid-scrollable-x">
+                                        <div class="grid-area grid-contents">
+                                            <table class="grid-tbl">
+                                                <colgroup>
+                                                    <col style="width: 47px">
+                                                    <col style="width: 64px">
+                                                    <col style="width: 69x">
+                                                    <col style="width: 138px">
+                                                    <col style="width: 103px">
+                                                    <col style="width: 103px">
+                                                    <col style="width: 92px">
+                                                    <col>
+                                                </colgroup>
+                                                <thead class="rowgroup">
+                                                    <tr>
+                                                        <th>
+                                                            <div class="cell order-ui">수치</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="cell order-ui">상태</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="cell order-ui">방#</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="cell order-ui">이름</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="cell order-ui">도착 데이터</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="cell order-ui">출발 데이터</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="cell order-ui">객실요금</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="cell order-ui">Rmk</div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="rowgroup">
+                                                    <tr>
+                                                        <td>
+                                                            <div class="cell"></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="cell"></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="cell"></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="cell"></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="cell"></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="cell"></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="cell"></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="cell"></div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-3 row-contents">
+                        <!-- Revenue Statistics -->
+                        <div class="row-cont cont-rst">
+                            <p class="row-tit">수익 통계</p>
+                            <div class="btn-box">
+                                <button type="button" class="btn-gray prev">이전 달</button>
+                                <button type="button" class="btn-gray now">이번 달</button>
+                                <button type="button" class="btn-gray next">다음 달</button>
+                            </div>
+                            <!-- chart graph -->
+                            <div class="chart-area">
+                                <canvas id="chart-rst" class="chart-rst"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Occupancy Statistics -->
+                        <div class="row-cont cont-ost">
+                            <p class="row-tit">점유율 통계</p>
+                            <div class="btn-box">
+                                <button type="button" class="btn-gray nation">국적</button>
+                                <button type="button" class="btn-gray account">계정</button>
+                                <button type="button" class="btn-gray market">시장</button>
+                                <button type="button" class="btn-gray source">출처</button>
+                            </div>
+                            <!-- chart graph -->
+                            <div class="chart-area">
+                                <canvas id="chart-ost"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--//.cont-name-->
+            </div>
+        </div>
+        <!-- //.contents -->
+
+    </div>
+
+    <!-- 차트 스크립트 -->
+    <script src="../../public/js/libs/Chart.min.js"></script>
+    <script src="../../public/js/dashboard/init.js"></script>
+</body>
+
+</html>
