@@ -104,7 +104,11 @@ input#edate {
 // wrapper, container 너비
 @include screen-max(1480px) {
     .header .cont-header .user-bar {
+<<<<<<< HEAD
         //display: none;
+=======
+        display: none;
+>>>>>>> d1bd27c3462580fad35fb65b6e90b97428837455
     }
 }
 
